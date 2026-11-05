@@ -172,6 +172,12 @@ def load_graph(root: Path) -> KnowledgeGraph:
             if not isinstance(doc.get("topics"), list):
                 raise ValueError("expected a 'topics' list")
             topics = [Topic.model_validate(item) for item in doc["topics"]]
+            stray = [t.id for t in topics if t.course_id != doc["course"]]
+            if stray:
+                raise ValueError(
+                    f"file declares course {doc['course']} but holds topics of other courses: "
+                    + ", ".join(stray)
+                )
         except Exception as exc:  # noqa: BLE001
             problems.append((path, _describe(exc)))
             continue

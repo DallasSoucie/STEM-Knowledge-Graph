@@ -1,12 +1,9 @@
 import pytest
+from conftest import edge
 
 from kg.graph import GraphIndex, KnowledgeGraph, build_digraph, lineage, shortest_path
 from kg.limits import course_closure, is_near_limits
-from kg.model import Course, Edge, KnowledgePoint, Topic
-
-
-def edge(target: str) -> Edge:
-    return Edge(topic=target, encompassing=0.5, confidence="high")
+from kg.model import Course, KnowledgePoint, Topic
 
 
 def chain_graph(ids: list[str], extra: dict[str, list[str]] | None = None) -> KnowledgeGraph:

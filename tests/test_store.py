@@ -1,16 +1,11 @@
-import shutil
 from pathlib import Path
 
 import pytest
 
 from kg.graph import KnowledgeGraph
 from kg.model import Course, Topic
+from conftest import stub
 from kg.store import GraphLoadError, load_graph, write_course, write_graph
-
-FIXTURE = Path(__file__).parent / "fixtures" / "sample"
-
-
-# --- helpers (T4 moves the shared ones to conftest.py) ---
 
 
 def snapshot(root: Path) -> dict[str, bytes]:
@@ -21,10 +16,6 @@ def read_any_course(root: Path) -> str:
     return (root / "math" / "alg1.yaml").read_text(encoding="utf-8")
 
 
-def stub(topic_id: str, name: str = "X") -> Topic:
-    return Topic(id=topic_id, name=name, status="stub")
-
-
 def write_topic_named(root: Path, name: str) -> None:
     write_course(root, "math.a", [stub("math.a.x", name)])
 
@@ -32,29 +23,6 @@ def write_topic_named(root: Path, name: str) -> None:
 def only_topic(kg: KnowledgeGraph) -> Topic:
     (topic,) = kg.topics.values()
     return topic
-
-
-@pytest.fixture
-def sample_copy(tmp_path):
-    dest = tmp_path / "graph"
-    shutil.copytree(FIXTURE, dest)
-    return dest
-
-
-@pytest.fixture
-def tmp_graph(tmp_path):
-    (tmp_path / "math").mkdir()
-    return tmp_path
-
-
-@pytest.fixture
-def tmp_graph_with_duplicate(tmp_graph):
-    write_course(tmp_graph, "math.a", [stub("math.a.x")])
-    # same id again, from a second file that claims the same course
-    (tmp_graph / "math" / "a2.yaml").write_text(
-        "course: math.a\ntopics:\n- {id: math.a.x, name: Again, status: stub}\n", encoding="utf-8"
-    )
-    return tmp_graph
 
 
 # --- tests ---
@@ -69,9 +37,9 @@ def test_round_trip_is_byte_identical(sample_copy):
 def test_fixture_loads_with_expected_shape(sample_copy):
     kg = load_graph(sample_copy)
     assert len(kg.topics) == 15
-    assert list(kg.courses) == ["math.arith", "math.alg1", "physics.mech"]
+    assert list(kg.courses) == ["math.arith", "math.alg1", "physics.mech", "math.trig"]
     assert [t.is_stub for t in kg.topics.values()].count(True) == 1
-    assert sum(1 for t in kg.topics.values() if t.encompassed) == 1
+    assert sum(1 for t in kg.topics.values() if t.encompassed) == 5
     assert kg.duplicate_ids == []
     assert kg.history == []
     # insertion order follows courses.yaml, then unlisted course files
@@ -112,6 +80,18 @@ def test_unknown_level_is_a_load_error_naming_the_file(tmp_graph):
     problems = {p.name: msg for p, msg in e.value.problems}
     assert "g99" in problems["a.yaml"]
     assert "grade5" in problems["courses.yaml"]
+
+
+def test_topic_in_a_file_of_another_course_is_a_load_error(tmp_graph):
+    (tmp_graph / "math/a.yaml").write_text(
+        "course: math.a\ntopics:\n- {id: math.a.x, name: X, status: stub}\n"
+        "- {id: math.b.y, name: Y, status: stub}\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(GraphLoadError) as e:
+        load_graph(tmp_graph)
+    ((path, msg),) = e.value.problems
+    assert path.name == "a.yaml" and "math.b.y" in msg and "math.a.x" not in msg
 
 
 def test_missing_root_is_a_load_error(tmp_path):
