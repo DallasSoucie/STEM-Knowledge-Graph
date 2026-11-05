@@ -11,6 +11,7 @@ dependencies = ["pydantic>=2", "networkx", "typer", "pyyaml"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
+map = ["pytest-playwright"]
 
 [project.scripts]
 kg = "kg.cli:app"
@@ -20,6 +21,8 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# pytest-playwright's base_url fixture trips a pytest 10 deprecation; not our code
+filterwarnings = ["ignore:Session-scoped fixtures defined as instance methods:pytest.PytestRemovedIn10Warning"]
 
 [tool.setuptools.package-data]
 "kg.map" = ["template.html", "app.js", "vendor/*"]
