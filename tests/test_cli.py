@@ -42,6 +42,8 @@ def test_validate_malformed_yaml_names_file_without_traceback(tmp_path):
 def test_validate_missing_root_exits_1_without_traceback(tmp_path):
     result = run("validate", "--root", str(tmp_path / "nope"))
     assert result.exit_code == 1 and "Traceback" not in result.output
+    assert "graph directory not found" in result.output
+    assert result.exception is None or isinstance(result.exception, SystemExit)
 
 
 def test_unknown_topic_query_exits_1_with_message():
