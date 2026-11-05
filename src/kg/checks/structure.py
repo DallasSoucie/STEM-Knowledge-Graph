@@ -31,8 +31,15 @@ def id_format(kg: KnowledgeGraph, index: GraphIndex):
 @rule("unknown-course", "error")
 def unknown_course(kg: KnowledgeGraph, index: GraphIndex):
     for tid, t in kg.topics.items():
-        if t.course_id not in kg.courses:
+        course = kg.courses.get(t.course_id)
+        if course is None:
             yield issue("unknown-course", f"course {t.course_id} is not in {COURSES_FILE_NAME}", tid)
+        elif course.is_view:
+            yield issue(
+                "unknown-course",
+                f"{t.course_id} is a view course; view courses own no topics",
+                tid,
+            )
 
 
 @rule("dangling-reference", "error")

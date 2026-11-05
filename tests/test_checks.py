@@ -73,7 +73,7 @@ def key_prereq_limit():
     keys = ["math.a.three", *ids]
     _replace(kg, "math.b.four", prerequisites=[edge(k) for k in keys])
     kg.topics["math.b.four"].justification = "five on purpose"
-    kg.topics["math.b.four"].knowledge_points[0].key_prerequisites = keys + ["math.a.three"]
+    kg.topics["math.b.four"].knowledge_points[0].key_prerequisites = keys
     return kg
 
 
@@ -150,8 +150,7 @@ def congested_topic():
 
 def no_prereq_above_gk():
     kg = valid_graph()
-    _replace(kg, "math.a.two", prerequisites=[], encompassed=[])
-    kg.topics["math.a.two"].knowledge_points[0].key_prerequisites = []
+    _replace(kg, "math.a.one", level="g4")
     return kg
 
 
@@ -260,19 +259,35 @@ def test_ancestor_rules_skip_when_prerequisites_cycle():
     assert not fired & {"key-prereq-not-ancestor", "encompassed-not-ancestor", "redundant-edge"}
 
 
-def test_five_prereqs_pass_with_justification_and_six_never_pass():
+@pytest.mark.parametrize(
+    "n_prereqs,justification,fires",
+    [
+        (4, None, False),
+        (5, None, True),
+        (5, "bridges five areas", False),
+        (6, "bridges six areas", True),
+    ],
+)
+def test_direct_prereq_limit_boundaries(n_prereqs, justification, fires):
     kg = valid_graph()
-    ids = _stubs(kg, 4)
+    ids = _stubs(kg, n_prereqs - 1)
     _replace(
         kg,
         "math.b.four",
         prerequisites=[edge(i) for i in ["math.a.three", *ids]],
-        justification="bridges five areas",
+        justification=justification,
     )
-    assert "direct-prereq-limit" not in rules_fired(kg)
-    more = _stubs(kg, 6)
-    _replace(kg, "math.b.four", prerequisites=[edge(i) for i in ["math.a.three", *more]])
-    assert "direct-prereq-limit" in rules_fired(kg)
+    assert ("direct-prereq-limit" in rules_fired(kg)) is fires
+
+
+@pytest.mark.parametrize("n_keys,fires", [(4, False), (5, True)])
+def test_key_prereq_limit_boundaries(n_keys, fires):
+    kg = valid_graph()
+    ids = _stubs(kg, n_keys - 1)
+    keys = ["math.a.three", *ids]
+    _replace(kg, "math.b.four", prerequisites=[edge(k) for k in keys], justification="wide")
+    kg.topics["math.b.four"].knowledge_points[0].key_prerequisites = keys
+    assert ("key-prereq-limit" in rules_fired(kg)) is fires
 
 
 def test_dangling_reference_covers_every_reference_kind():
@@ -349,12 +364,16 @@ def test_course_following_a_view_gets_the_views_topics():
     assert not rules_fired(kg) & {"course-gap", "learner-walk"}
 
 
-def test_budget_variance_threshold_is_twenty_percent():
-    kg = valid_graph()
-    kg.courses["math.a"] = course("math.a", 4)  # 3 vs 4 is 25% off
-    assert "budget-variance" in rules_fired(kg)
-    kg.courses["math.a"] = course("math.a", 3)
-    assert "budget-variance" not in rules_fired(kg)
+@pytest.mark.parametrize(
+    "budget,extra,fires",
+    [(5, 0, True), (5, 3, False), (5, 4, True), (4, 2, True), (6, 3, False)],
+)
+def test_budget_variance_threshold_is_twenty_percent(budget, extra, fires):
+    kg = valid_graph()  # math.a starts with 3 topics: actual is 3 + extra
+    kg.courses["math.a"] = course("math.a", budget)
+    for i in range(extra):
+        add(kg, topic(f"math.a.x{i}", ["math.a.one"], keys=["math.a.one"]))
+    assert ("budget-variance" in rules_fired(kg)) is fires
 
 
 def test_weight_clustering_needs_twenty_weights():
@@ -366,7 +385,52 @@ def test_weight_clustering_needs_twenty_weights():
     assert "weight-clustering" not in rules_fired(kg)
 
 
-def test_kp_with_no_key_prerequisites_does_not_trigger_congestion():
+def _clustered(counts: list[int]):
+    """math.a holds one weight per entry, `counts[k]` of them on the k-th distinct value."""
+    values = [round(0.05 + 0.04 * k, 2) for k in range(len(counts))]
+    kg = KnowledgeGraph()
+    kg.courses["math.a"] = course("math.a", 1)
+    weights = [v for v, n in zip(values, counts) for _ in range(n)]
+    prev = "math.a.c0"
+    add(kg, stub(prev))
+    for i, w in enumerate(weights, start=1):
+        tid = f"math.a.c{i}"
+        add(kg, stub(tid))
+        kg.topics[tid].prerequisites.append(edge(prev, w))
+        prev = tid
+    return kg
+
+
+@pytest.mark.parametrize(
+    "counts,fires",
+    [
+        ([6, 5, 5, 1, 1, 1, 1], False),  # 16 of 20 is exactly 80%
+        ([6, 6, 5, 1, 1, 1], True),  # 17 of 20
+        ([8, 8, 3, 1], True),  # fires only if the third value is counted: top two are 16/20
+        ([5, 5, 5, 1, 1, 1, 1, 1], False),  # 15 of 20
+    ],
+)
+def test_weight_clustering_threshold(counts, fires):
+    assert sum(counts) == 20
+    assert ("weight-clustering" in rules_fired(_clustered(counts))) is fires
+
+
+def test_kp_with_no_key_prerequisites_does_not_make_a_topic_congested():
     kg = valid_graph()
-    kg.topics["math.a.one"].knowledge_points.append(KnowledgePoint(id="kp9", can_do="Extra"))
+    (s0,) = _stubs(kg, 1)
+    _replace(kg, "math.a.three", prerequisites=[edge("math.a.two"), edge(s0)])
+    kps = kg.topics["math.a.three"].knowledge_points
+    kps[0].key_prerequisites = ["math.a.two", "math.a.one", s0]
+    kps[1].key_prerequisites = ["math.a.two", "math.a.one", s0]
+    kps[2].key_prerequisites = []
     assert "congested-topic" not in rules_fired(kg)
+
+
+def test_topic_filed_under_a_view_course_is_an_unknown_course():
+    kg = valid_graph()
+    kg.courses["math.v"] = Course(
+        id="math.v", subject="math", levels=("g4", "g5"), budget=1, view_topics=["math.a.one"]
+    )
+    add(kg, stub("math.v.x"))
+    (found,) = [i for i in run_checks(kg) if i.rule == "unknown-course"]
+    assert found.topic == "math.v.x" and "view" in found.message
