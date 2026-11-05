@@ -145,12 +145,25 @@ def _read_course_doc(root: Path, path: Path) -> Any:
     return doc
 
 
+def _empty_vacated_course_files(root: Path, written: set[str]) -> None:
+    """A course file whose topics are all gone becomes `topics: []`, so a reload cannot revive them."""
+    for path in sorted(Path(root).glob("*/*.yaml")):
+        try:
+            doc = _read_yaml(path)
+            course_id, topics = doc["course"], doc["topics"]
+        except Exception:  # noqa: BLE001 - unreadable files are load's problem, not ours
+            continue
+        if course_id not in written and topics:
+            write_course(root, course_id, [])
+
+
 def write_graph(kg: KnowledgeGraph) -> None:
     by_course: dict[str, list[Topic]] = {}
     for t in kg.topics.values():
         by_course.setdefault(t.course_id, []).append(t)
     for course_id, topics in by_course.items():
         write_course(kg.root, course_id, topics)
+    _empty_vacated_course_files(kg.root, set(by_course))
     _write_if_changed(
         Path(kg.root) / COURSES_FILE,
         _dump({"courses": [_course(c) for c in kg.courses.values()]}),

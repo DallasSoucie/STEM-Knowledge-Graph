@@ -5,6 +5,7 @@ from pathlib import Path
 import typer
 
 from kg.checks import run_checks
+from kg.edits import EditError, apply_edit, rename_id, split_topic
 from kg.graph import GraphIndex, KnowledgeGraph, shortest_path
 from kg.map.export import export_map
 from kg.store import GraphLoadError, load_graph, write_graph
@@ -104,3 +105,45 @@ def export_map_command(
             typer.echo(f"error {i.rule} {i.file or '-'} {i.topic or '-'}: {i.message}")
         raise _fail(f"{len(errors)} errors; map not written")
     typer.echo(f"wrote {export_map(kg, out)}")
+
+
+def _commit(new_kg: KnowledgeGraph) -> None:
+    """Validate then write; on errors print them, write nothing and exit 1."""
+    errors = apply_edit(new_kg)
+    if errors:
+        for i in errors:
+            typer.echo(f"error {i.rule} {i.file or '-'} {i.topic or '-'}: {i.message}")
+        raise _fail(f"{len(errors)} errors; nothing written")
+
+
+@app.command("rename-id")
+def rename_id_command(old: str, new: str, root: Path = RootOption) -> None:
+    """Rename a topic ID and every reference to it, recording the change in id-history."""
+    kg = _load(root)
+    try:
+        edited = rename_id(kg, old, new)
+    except EditError as exc:
+        raise _fail(str(exc)) from exc
+    _commit(edited)
+    typer.echo(f"renamed {old} -> {new}")
+
+
+@app.command("split-topic")
+def split_topic_command(
+    topic_id: str,
+    new_id: str = typer.Option(..., "--new-id", help="ID of the new topic."),
+    new_name: str = typer.Option(..., "--new-name", help="Name of the new topic."),
+    move_kps: str = typer.Option(..., "--move-kps", help="Comma-separated KP ids to move."),
+    keep_kp: list[str] = typer.Option([], "--keep-kp", help="New KP text added to the original."),
+    new_kp: list[str] = typer.Option([], "--new-kp", help="New KP text added to the new topic."),
+    root: Path = RootOption,
+) -> None:
+    """Split a topic in two. The new topic follows the original and takes the moved KPs."""
+    kg = _load(root)
+    moved = [k.strip() for k in move_kps.split(",") if k.strip()]
+    try:
+        edited = split_topic(kg, topic_id, new_id, new_name, moved, keep_kp, new_kp)
+    except EditError as exc:
+        raise _fail(str(exc)) from exc
+    _commit(edited)
+    typer.echo(f"split {topic_id} -> {topic_id}, {new_id}")
