@@ -119,3 +119,25 @@ def test_real_manifest_and_synthetic_fit_lanes():
     assert all(lane < ROW_LANES for _, lane in lane_of(big).values())
     pos = compute_positions(big)
     assert len(pos) == len(big.topics)
+
+
+def _width(kg, level):
+    lo, hi = column_bounds(kg)[level]
+    return hi - lo
+
+
+def test_column_width_follows_budget_share_above_minimum():
+    kg = _graph(course("math.a", 100, levels=("g4", "g4")))
+    assert _width(kg, "g4") == 100 * 0.5
+
+
+def test_smaller_course_does_not_change_column_width():
+    big = _graph(course("math.a", 100, levels=("g4", "g4")))
+    both = _graph(course("math.a", 100, levels=("g4", "g4")), course("physics.p", 10, levels=("g4", "g4")))
+    assert _width(both, "g4") == _width(big, "g4")
+
+
+def test_larger_share_widens_column():
+    small = _graph(course("math.a", 60, levels=("g4", "g4")))
+    large = _graph(course("math.a", 60, levels=("g4", "g4")), course("physics.p", 100, levels=("g4", "g4")))
+    assert _width(large, "g4") > _width(small, "g4")

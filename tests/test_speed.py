@@ -35,7 +35,7 @@ def test_synthetic_is_deterministic_and_sized():
     assert a.topics == b.topics and a.courses == b.courses
     assert len(a.topics) == 500
     assert {c.subject for c in a.courses.values()} == {
-        "math", "physics", "chemistry", "biology", "engineering"
+        "math", "physics", "chem", "bio", "engr"
     }
     for c in a.courses.values():
         assert c.budget == sum(1 for t in a.topics.values() if t.course_id == c.id)

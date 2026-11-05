@@ -6,6 +6,7 @@ import typer
 
 from kg.checks import run_checks
 from kg.graph import GraphIndex, KnowledgeGraph, shortest_path
+from kg.map.export import export_map
 from kg.store import GraphLoadError, load_graph, write_graph
 from kg.synthetic import generate
 
@@ -88,3 +89,18 @@ def synth(
         raise _fail("--topics must be at least 5")
     write_graph(generate(topics, seed=seed, root=out))
     typer.echo(f"wrote {topics} topics to {out}")
+
+
+@app.command("export-map")
+def export_map_command(
+    root: Path = RootOption,
+    out: Path = typer.Option(Path("build/map.html"), "--out", help="HTML file to write."),
+) -> None:
+    """Write the offline curriculum map. Exit 1, writing nothing, if validation has errors."""
+    kg = _load(root)
+    errors = [i for i in run_checks(kg) if i.severity == "error"]
+    if errors:
+        for i in errors:
+            typer.echo(f"error {i.rule} {i.file or '-'} {i.topic or '-'}: {i.message}")
+        raise _fail(f"{len(errors)} errors; map not written")
+    typer.echo(f"wrote {export_map(kg, out)}")

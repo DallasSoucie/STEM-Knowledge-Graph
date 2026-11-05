@@ -6,7 +6,7 @@ from pathlib import Path
 from kg.graph import KnowledgeGraph
 from kg.model import LEVELS, Course, Edge, KnowledgePoint, Topic
 
-SUBJECTS = ("math", "physics", "chemistry", "biology", "engineering")
+SUBJECTS = ("math", "physics", "chem", "bio", "engr")
 _MAX_COURSES_PER_SUBJECT = 30
 _TOPICS_PER_COURSE = 120
 
