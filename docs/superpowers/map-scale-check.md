@@ -9,19 +9,19 @@ exposed (per-node and per-edge draw cost) are real in kind but will be far small
 
 ## Result
 
-| | First attempt | After fallbacks |
-|---|---|---|
-| File size | 18.2 MB | 18.2 MB (13.9 MB topics and knowledge points, 4.0 MB edges) |
-| Seconds to first render | 2.9 | 0.4 to 0.8 (three runs: 0.41, 0.41, 0.42; one full measure: 0.79) |
-| Pan, zoomed out (median / worst frame) | 17 ms / 1150 ms | 16 ms / 24 ms |
-| Zoom in with wheel (median / worst) | 640 ms / 930 ms | 17 ms / 22 ms |
-| Pan, zoomed in (median / worst) | 17 ms / 660 ms | 16 ms / 27 ms |
-| Zoom out (median / worst) | 640 ms / 970 ms | 17 ms / 50 ms |
-| Subject filter (to second painted frame) | 1.4 s | 0.27 s |
-| Lineage filter, both directions, no limit (4,293 topics) | 1.5 s | 0.27 s |
-| Lineage filter, 2 steps | 1.0 s | 0.08 s |
+| | First attempt | After fallbacks | After layout fix (two runs) |
+|---|---|---|---|
+| File size | 18.2 MB | 18.2 MB (13.9 MB topics and knowledge points, 4.0 MB edges) | 18.3 MB |
+| Seconds to first render | 2.9 | 0.4 to 0.8 (three runs: 0.41, 0.41, 0.42; one full measure: 0.79) | 0.42, 0.45 |
+| Pan, zoomed out (median / worst frame) | 17 ms / 1150 ms | 16 ms / 24 ms | 17 ms / 24 ms |
+| Zoom in with wheel (median / worst) | 640 ms / 930 ms | 17 ms / 22 ms | 17 ms / 25 ms |
+| Pan, zoomed in (median / worst) | 17 ms / 660 ms | 16 ms / 27 ms | 17 ms / 25 ms |
+| Zoom out (median / worst) | 640 ms / 970 ms | 17 ms / 50 ms | 17 ms / 44 ms |
+| Subject filter (to second painted frame) | 1.4 s | 0.27 s | 0.26 s |
+| Lineage filter, both directions, no limit (4,293 topics) | 1.5 s | 0.27 s | 0.20 s, 0.21 s |
+| Lineage filter, 2 steps | 1.0 s | 0.08 s | 0.05 s |
 
-Frames over 100 ms during any gesture: 0 after the fallbacks (the first attempt did not count them; most zoom frames were over 500 ms).
+Frames over 100 ms during any gesture: 0 after the fallbacks and 0 after the layout fix (the first attempt did not count them; most zoom frames were over 500 ms).
 
 Method note: the first-attempt "median 17 ms" for pans only looks fine because Playwright sends the
 mouse events in a burst and the page then idles; the worst-frame column is the honest one. A second
@@ -45,14 +45,10 @@ Fixes in `src/kg/map/app.js`, all applying only to big maps so small ones are un
 
 1. Edges (brief's fallback). Past 10,000 edges they are removed from the sigma graph, not hidden.
    They are added back (a) when a filter is on, only those touching a matching topic, and (b) when
-   zoomed in past camera ratio 0.15 (above the 0.12 that selecting a topic zooms to), only those with
+   zoomed in past camera ratio 0.08 (above the 0.06 that selecting a topic zooms to), only those with
    an end near the view, refreshed after 120 ms without camera movement. All topics stay drawn.
 2. Nodes. Past 5,000 topics, topics draw as plain points when zoomed out; those near the view draw as
-   circles once zoomed in past ratio 0.3. Circles for off-screen topics were the cost.
-3. Zoom growth. Sigma's default sqrt growth turned topics into overlapping discs and, in point mode,
-   a solid block when zoomed in, since topics sit about half a unit apart. Big maps now grow
-   discs as ratio^-0.2, and label from a rendered size of 6 instead of 9.
-
+   circles once zoomed in past ratio 0.1. Circles for off-screen topics were the cost.
 Data size was not the cause, so the keys were not shortened. At 18 MB it opens fine from disk; it
 would be slow to download. Knowledge-point text is 13.9 MB of it, if size ever matters.
 
@@ -60,40 +56,63 @@ Also fixed in this task (controller rulings): the `both` lineage is now the unio
 down, with `maxSteps` per direction, in `kg.graph.lineage` and `app.js`; before, one walk went both
 ways from every node and pulled in an ancestor's other dependents.
 
-## What it looks like, honestly
+## Layout fix: readable at real scale
 
-Screenshots in `build/`: `synth-final-zoomout.png`, `synth-final-zoom1.png` to `zoom3.png`,
-`synth-final-filter-subject.png`, `synth-final-filter-lineage.png`, `synth-final-lineage-zoomed.png`,
-and for the real manifest layout `realfull-zoomout.png`, `realfull-final-zoom1.png` to `zoom3.png`.
+The first layout failed at the real manifest's size: a 7:1 band using a sixth of the window, each course
+a solid bar, course and subject labels colliding, topic labels overprinting. That was the layout, so it changed:
 
-What works: pans and zooms are smooth, filters respond at once, faded topics stay in place, selecting a
-topic shows its edges.
+- A course's topics at a level now wrap into a block of 8 lines inside its column, with line length
+  from its budget. Growing within budget only fills its own block; past budget, its lines tighten
+  instead of growing taller, so no other course ever moves.
+- Lanes are one fixed height, and rows have fixed capacities: math 12, physics 8, chem 8, bio 12, engr 30.
+  `ROW_LANES` is gone. Filled to budget, the real manifest is 1044 by 697 units, a ratio of 1.50.
+- Dots scale with how dense the map is, down to radius 1 px at full zoom-out, and grow as zoom
+  increases. Big maps no longer need the slower growth curve from the earlier fallback.
+- Subject labels moved to their own gutter left of the map, as colour strips spanning each row. The name stays
+  at the top of the strip's visible part.
+- Course labels are placed greedily each frame, nearest the view centre first, skipping any that would
+  overlap. Level labels sit above the map and stick to the top of the window when zoomed in.
+- Topic labels share that list of claimed space, after the selected topic and course labels, so none
+  overprint. A hovered topic's label is drawn on top in an opaque box, and may cover a neighbour's.
+- Point and edge gates tightened for the new density: circles past ratio 0.1, edges past 0.08.
 
-What looks bad, and was not fixed because it comes from the layout rather than the renderer:
+### What I saw
 
-- At full zoom-out the whole map is a thin band, about 1,000 units wide and 150 tall, so it uses
-  roughly a sixth of the window height and most of the window is blank. Rows are about 22 px apart.
-- Lanes inside a row are under 1 px apart at full zoom-out, so the courses in a row read as one
-  coloured bar. Subject labels sit on top of course labels, and course labels pile up in the two
-  university columns, where most of the topics are.
-- Every course's topics lie on one line about half a unit apart. Zoomed in until discs separate,
-  topic labels on that line overlap each other (sigma's label grid does not keep a line of labels
-  apart); zooming further clears it. Faded edges under a lineage filter add a lot of faint lines.
-- Under a subject filter at full zoom-out the match is a thin line; fine, but easy to miss.
+Screenshots in `build/`, viewports 1400x850 unless noted. `t11r-*` is the real manifest filled to budget
+(15,680 topics, synthetic names and chain-like edges), `t11s-*` the 20,000-topic synthetic graph. Each set
+has `-a-zoomout`, `-b-zoom1` to `zoom4` and `-c-selected`. Also `t11x-1920-zoomout.png`, `-selected`, `-hover`, `-lineage`
+at 1920x1080, and `t11x-dark.png`.
 
-## Real manifest layout (ROW_LANES ruling)
+- Full zoom-out, real manifest: reads as a table. All 15 level labels are shown, the five subject strips
+  line up with their rows, and about 40 course labels show with no overlaps. At 1400x850 the map fills
+  about 60 percent of the window height because the map area is 750 px wide; at 1920x1080 about 80 percent.
+- Mid zoom: course names fill in as you zoom in, one per block, and the current subject and level stay visible.
+- Zoomed in: topic names are readable and none printed over another. At lines about 20 px apart most topics
+  in view are named. Selecting a topic from anywhere lands at a zoom where neighbouring names show.
+- Lineage filter when zoomed in: matched names stand out against faded dots. Dark theme at zoom-out looks the same.
 
-Checked with every manifest course filled with synthetic chain topics at its real budget
-(15,680 topics), in a scratch directory. With 30-lane rows, math uses 8 lanes, physics 4, chem 5,
-bio 7, engr 26, so rows are partly empty, as the ruling anticipated.
+What still looks weak:
 
-I did not replace `ROW_LANES` with per-subject capacities. At full zoom-out the scale is set by the
-width, so a lane is under 1 px either way, and capacities of 12, 8, 8, 12, 30 would pack the rows to
-about 9 px apart and make the label collisions above worse. The blankness and the label pile-up come
-from the band's aspect ratio (about 7 to 1) and from one-line courses. The likely fixes, not made
-because they change the layout design: stretch y in the layout (or draw lanes taller than columns
-are wide), and spread a course's topics over several lines. Owner decision at the final sign-off.
-Real-manifest performance is like the synthetic run: worst frame 36 ms, filters 0.15 to 0.19 s.
+- The engr row is 30 lanes that are only used in the two university columns, so about a third of the map's
+  area, lower left, is blank. It comes from the manifest and fixed capacities.
+- Small school science courses (`physics.elem`, 40 topics over 6 levels) are sparse ticks at zoom-out.
+  They are visible and labelled but look thin next to math.
+- At full zoom-out a block's lines merge, so a block reads as hatching rather than separate dots.
+- At the zoom where topic labels first appear (lines about 6 px apart), labels sit over neighbouring dots.
+  The halo keeps them legible, but it is busy until you zoom further.
+- Real edges are unknown: the fill uses synthetic edges, so edge clutter on the real graph is unmeasured.
+
+### Timings on the real manifest (two runs, same method)
+
+First render 0.35 s and 0.36 s. Worst frame: pan zoomed out 24 ms, zoom in 25 ms, pan zoomed in 45 ms, zoom
+out 54 ms, none over 100 ms. Before this fix it was a worst frame of 36 ms, on the old layout's views, so this
+worst case is higher. Subject filter 0.08 to 0.10 s (was 0.15 to 0.19 s), lineage 0.04 to 0.05 s.
+
+A second method moves the camera every frame at a fixed ratio, centred on a dense topic, under software GL.
+The worst frames were at ratios 0.09 to 0.06, where circles and nearby edges both draw: real 70 ms and synthetic 66 ms
+at most, and 35 ms or less at every ratio above 0.1. The earlier concern of about 190 ms at ratio 0.15 to 0.1 is gone.
+Removing labels and course labels in turn did not make frames measurably faster, so the label work is not
+the cost; drawing dots and edges under software GL is. None of this has been measured on a real GPU.
 
 ## Reproduce
 

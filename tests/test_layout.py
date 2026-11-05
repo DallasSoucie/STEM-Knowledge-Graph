@@ -1,10 +1,12 @@
+from collections import defaultdict
+from itertools import combinations
 from pathlib import Path
 
 import pytest
 
 from conftest import add, course, stub, topic
 from kg.graph import KnowledgeGraph
-from kg.map.layout import ROW_LANES, column_bounds, compute_positions, lane_of
+from kg.map.layout import LANE_CAPACITY, LINES_PER_LANE, column_bounds, compute_positions, lane_of, row_bounds
 from kg.model import LEVELS
 from kg.store import load_graph
 from kg.synthetic import generate
@@ -47,7 +49,15 @@ def test_lower_levels_are_left_of_higher():
 
 def test_subjects_occupy_separate_rows():
     pos = compute_positions(_two_course_graph())
-    assert pos["math.a.t1"][1] < ROW_LANES <= pos["physics.p.u1"][1] < 2 * ROW_LANES
+    rows = row_bounds(_two_course_graph())
+    assert rows["math"][0] <= pos["math.a.t1"][1] < rows["math"][1]
+    assert rows["physics"][0] <= pos["physics.p.u1"][1] < rows["physics"][1]
+    assert rows["math"][1] <= rows["physics"][0]
+
+
+def test_rows_ignore_what_the_other_subjects_hold():
+    empty = row_bounds(_graph())
+    assert row_bounds(_two_course_graph())["physics"] == empty["physics"]
 
 
 def test_same_level_courses_get_separate_lanes():
@@ -77,7 +87,7 @@ def test_adding_topic_moves_only_its_course():
     add(kg, topic("math.a.t5", level="g5"))
     after = compute_positions(kg)
     changed = {t for t in before if before[t] != after[t]}
-    assert changed == {"math.a.t2", "math.a.t3"}
+    assert changed <= {"math.a.t1", "math.a.t2", "math.a.t3", "math.a.t4"}
     assert "math.a.t5" in after
 
 
@@ -105,7 +115,7 @@ def test_stub_without_level_gets_position():
 
 
 def test_too_many_lanes_raises_clear_error():
-    kg = _graph(*(course(f"math.c{i}", 1) for i in range(ROW_LANES + 1)))
+    kg = _graph(*(course(f"math.c{i}", 1) for i in range(LANE_CAPACITY["math"] + 1)))
     with pytest.raises(ValueError, match="math"):
         lane_of(kg)
 
@@ -114,9 +124,9 @@ def test_real_manifest_and_synthetic_fit_lanes():
     root = Path(__file__).parent.parent / "graph"
     kg = load_graph(root)
     lanes = lane_of(kg)
-    assert all(lane < ROW_LANES for _, lane in lanes.values())
+    assert all(lane < LANE_CAPACITY[subject] for subject, lane in lanes.values())
     big = generate(20000, seed=1)
-    assert all(lane < ROW_LANES for _, lane in lane_of(big).values())
+    assert all(lane < LANE_CAPACITY[subject] for subject, lane in lane_of(big).values())
     pos = compute_positions(big)
     assert len(pos) == len(big.topics)
 
@@ -141,3 +151,81 @@ def test_larger_share_widens_column():
     small = _graph(course("math.a", 60, levels=("g4", "g4")))
     large = _graph(course("math.a", 60, levels=("g4", "g4")), course("physics.p", 100, levels=("g4", "g4")))
     assert _width(large, "g4") > _width(small, "g4")
+
+
+# ---- the real manifest, filled to budget ---------------------------------------------------------
+
+
+def _filled_manifest(skew=False):
+    """graph/courses.yaml with every course at its budget. Topics spread evenly over the course's
+    levels, or with skew=True all sit at its lowest level (the worst case for one block)."""
+    kg = load_graph(Path(__file__).parent.parent / "graph")
+    kg.topics = {}
+    for c in kg.courses.values():
+        if c.is_view:
+            continue
+        lo, hi = (LEVELS.index(x) for x in c.levels)
+        span = hi - lo + 1
+        add(kg, *[
+            topic(f"{c.id}.t{i}", level=LEVELS[lo if skew else lo + i * span // c.budget])
+            for i in range(c.budget)
+        ])
+    return kg
+
+
+def _bbox(points):
+    xs, ys = zip(*points)
+    return min(xs), max(xs), min(ys), max(ys)
+
+
+def test_real_manifest_aspect_ratio():
+    x0, x1, y0, y1 = _bbox(compute_positions(_filled_manifest()).values())
+    assert 1.4 <= (x1 - x0) / (y1 - y0) <= 2.2
+
+
+@pytest.mark.parametrize("skew", [False, True])
+def test_course_blocks_do_not_overlap(skew):
+    kg = _filled_manifest(skew)
+    pos = compute_positions(kg)
+    points = defaultdict(list)
+    for tid, p in pos.items():
+        points[kg.topics[tid].course].append(p)
+    boxes = {cid: _bbox(pts) for cid, pts in points.items()}
+    for a, b in combinations(boxes, 2):
+        ax0, ax1, ay0, ay1 = boxes[a]
+        bx0, bx1, by0, by1 = boxes[b]
+        assert ax1 < bx0 or bx1 < ax0 or ay1 < by0 or by1 < ay0, (a, b)
+
+
+@pytest.mark.parametrize("skew", [False, True])
+def test_no_two_topics_share_a_position(skew):
+    pos = compute_positions(_filled_manifest(skew))
+    assert len(set(pos.values())) == len(pos)
+
+
+def test_course_wraps_onto_multiple_lines():
+    kg = _graph(course("math.a", 200, levels=("g4", "g4")))
+    add(kg, *[topic(f"math.a.t{i}", level="g4") for i in range(200)])
+    assert len({y for _, y in compute_positions(kg).values()}) > 1
+
+
+def test_growing_a_course_within_budget_moves_only_its_topics():
+    kg = _filled_manifest()
+    grown = "math.g5"
+    for tid in [t for t in kg.topics if t.startswith(grown + ".") and int(t.rsplit("t", 1)[1]) >= 80]:
+        del kg.topics[tid]
+    before = compute_positions(kg)
+    add(kg, *[topic(f"{grown}.t{i}", level="g5") for i in range(80, 160)])
+    after = compute_positions(kg)
+    moved = {t for t in before if before[t] != after[t]}
+    assert all(t.startswith(grown + ".") for t in moved)
+
+
+def test_course_past_its_budget_stays_inside_its_lane_and_column():
+    kg = _graph(course("math.a", 10, levels=("g4", "g4")))
+    add(kg, *[topic(f"math.a.t{i}", level="g4") for i in range(500)])
+    pos = compute_positions(kg)
+    x0, x1 = column_bounds(kg)["g4"]
+    assert len(set(pos.values())) == 500
+    assert all(x0 <= x <= x1 for x, _ in pos.values())
+    assert len({y for _, y in pos.values()}) == LINES_PER_LANE

@@ -1,6 +1,8 @@
 """Browser tests: open the real exported map page and drive it through window.kgMap."""
 
 import json
+from itertools import combinations, product
+from pathlib import Path
 from urllib.parse import quote
 
 import pytest
@@ -9,6 +11,7 @@ from conftest import add, course, edge, stub, topic
 from kg.graph import KnowledgeGraph, lineage
 from kg.map.export import export_map
 from kg.model import Topic
+from kg.store import load_graph
 
 pytest.importorskip("playwright")
 
@@ -390,3 +393,93 @@ def test_big_map_draws_edges_only_when_zoomed_in_or_filtered(page, tmp_path):
     assert page.evaluate("window.kgMap.edgeCount()") == 0
     page.evaluate("window.kgMap.selectTopic('math.a.t02500')")  # zooms in on it
     page.wait_for_function("window.kgMap.edgeCount() > 0")
+
+
+# ---- labels at real scale ------------------------------------------------------------------------
+
+
+def manifest_graph(per_course=8):
+    """The real manifest's courses, with a few topics each."""
+    kg = load_graph(Path(__file__).parent.parent / "graph")
+    kg.topics = {}
+    for c in kg.courses.values():
+        if not c.is_view:
+            add(kg, *[topic(f"{c.id}.t{i}", level=c.levels[0]) for i in range(per_course)])
+    return kg
+
+
+def visible_rects(page, selector):
+    return page.evaluate(
+        """s => [...document.querySelectorAll(s)]
+            .filter(e => e.style.display !== 'none')
+            .map(e => { const r = e.getBoundingClientRect();
+                        return {text: e.textContent, x0: r.left, x1: r.right, y0: r.top, y1: r.bottom}; })""",
+        selector,
+    )
+
+
+def assert_no_overlap(rects, other=None):
+    pairs = combinations(rects, 2) if other is None else product(rects, other)
+    for a, b in pairs:
+        apart = a["x1"] <= b["x0"] or b["x1"] <= a["x0"] or a["y1"] <= b["y0"] or b["y1"] <= a["y0"]
+        assert apart, (a, b)
+
+
+def zoom_in(page, steps, around=None):
+    box = page.locator("#map").bounding_box()
+    at = page.evaluate("id => window.kgMap.nodeViewport(id)", around) if around else {"x": box["width"] / 2, "y": box["height"] / 2}
+    page.mouse.move(box["x"] + at["x"], box["y"] + at["y"])
+    for _ in range(steps):
+        page.mouse.wheel(0, -300)
+        page.wait_for_timeout(60)
+    page.wait_for_timeout(500)
+
+
+def test_course_labels_never_overlap_at_any_zoom(page, tmp_path):
+    kg = manifest_graph()
+    open_map(page, kg, tmp_path)
+    n_courses = sum(not c.is_view for c in kg.courses.values())
+    seen = []
+    for steps in (0, 3, 6):  # full zoom-out, then mid zooms
+        zoom_in(page, steps, around="math.g6.t3")
+        rects = visible_rects(page, ".lbl-course")
+        assert rects, f"no course labels after {steps} more zoom steps"
+        assert_no_overlap(rects)
+        assert_no_overlap(rects, visible_rects(page, ".lbl-subject"))
+        assert_no_overlap(page.evaluate("window.kgMap.labelRects()"))  # topic labels stay clear of them too
+        seen.append(len(rects))
+    assert seen[0] < n_courses  # culled, not piled up
+
+
+def test_the_course_being_looked_at_gets_its_label(page, tmp_path):
+    open_map(page, manifest_graph(), tmp_path)
+    select(page, "engr.networks.t3")
+    page.wait_for_timeout(600)
+    assert "engr.networks" in [r["text"] for r in visible_rects(page, ".lbl-course")]
+
+
+def dense_course_graph():
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 300, levels=("g4", "g4"))}
+    add(kg, *[topic(f"math.a.a-rather-long-topic-name-{i:03d}", level="g4") for i in range(300)])
+    return kg
+
+
+@pytest.mark.parametrize("steps", [0, 3, 8])
+def test_topic_labels_never_overprint(page, tmp_path, steps):
+    open_map(page, dense_course_graph(), tmp_path)
+    zoom_in(page, steps)
+    rects = page.evaluate("window.kgMap.labelRects()")
+    assert_no_overlap(rects)
+    if steps == 8:
+        assert len(rects) > 1
+
+
+def test_selected_topic_always_shows_its_name(page, tmp_path):
+    open_map(page, dense_course_graph(), tmp_path)
+    wanted = "math.a.a-rather-long-topic-name-137"
+    select(page, wanted)
+    page.wait_for_timeout(600)
+    rects = page.evaluate("window.kgMap.labelRects()")
+    assert wanted in [r["text"] for r in rects]
+    assert_no_overlap(rects)

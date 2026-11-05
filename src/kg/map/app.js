@@ -8,20 +8,28 @@
   };
   const FALLBACK_COLOUR = "#888780";
   const MAX_RESULTS = 20;
-  const SELECT_RATIO = 0.12; // camera zoom (smaller is closer) that selecting a topic zooms to
-  const NODE_SIZE = 3.5;
+  const SELECT_RATIO = 0.06; // camera zoom (smaller is closer) that selecting a topic zooms to
+  const MAX_DOT = 3.5; // topic radius in pixels at full zoom-out; dense maps use less, down to MIN_DOT
+  const MIN_DOT = 1;
+  const LINE_SPACING = 1; // graph units between a course block's lines, from layout.py
+  const LABEL_LINE_PX = 6; // topic labels start once a block's lines are this many pixels apart
+  const COURSE_LABEL_HEIGHT = 16;
+  // Sigma's grid only limits which topics may try for a label, and picks them by ID within a cell, so
+  // it is kept loose once labels are on: drawLabel below does the real work of keeping them apart.
+  const LABEL_GRID_CELL = 24;
+  const LABEL_GRID_DENSITY = 3;
   // Big maps keep edges out of the graph until they are wanted: while zoomed in past EDGE_ZOOM (a
   // camera ratio, smaller is closer), and then only those near the view, or while a filter is on
   // (only edges touching a matching topic). Every topic stays drawn. Small maps always draw all edges.
   // Edges are removed from sigma, not just hidden: hidden edges still cost a draw call each.
   const EDGE_LIMIT = 10000;
-  const EDGE_ZOOM = 0.15; // above SELECT_RATIO, so selecting a topic shows its edges
+  const EDGE_ZOOM = 0.08; // above SELECT_RATIO, so selecting a topic shows its edges
   const EDGE_IDLE_MS = 120;
   // Big maps draw topics as plain points, and only those near the view as smooth circles once zoomed
   // in past POINT_ZOOM: every node costs a draw call in the circle shader whether or not it is on
   // screen, and with 20,000 of them that dominates every frame.
   const POINT_LIMIT = 5000;
-  const POINT_ZOOM = 0.3;
+  const POINT_ZOOM = 0.1;
 
   const data = JSON.parse(document.getElementById("kg-data").textContent);
   const topics = data.topics;
@@ -161,6 +169,7 @@
 
   const mapEl = document.getElementById("map");
   const labelsEl = document.getElementById("labels");
+  const gutterEl = document.getElementById("gutter");
   const panelEl = document.getElementById("panel");
   const searchEl = document.getElementById("search");
   const resultsEl = document.getElementById("results");
@@ -187,7 +196,7 @@
     const base = SUBJECT_COLOURS[t.subject] || FALLBACK_COLOUR;
     // sigma draws filled dots only, so a stub is a pale tint of its subject colour
     const colour = t.status === "stub" ? mix(base, theme().bg, 0.7) : base;
-    return { color: colour, size: NODE_SIZE, label: t.name };
+    return { color: colour, size: dotSize, label: t.name };
   }
 
   // ---- search ----------------------------------------------------------
@@ -318,6 +327,21 @@
   }
 
   // ---- graph and sigma -------------------------------------------------
+  // frame the topics that exist, with a margin; empty columns and rows would only waste space
+  const span = (pick, pad) => {
+    if (!topics.length) return [0, 1];
+    const [lo, hi] = minMax(topics, pick);
+    return [lo - pad, hi + pad];
+  };
+  const frameX = span((t) => t.x, 8);
+  const frameY = span((t) => t.y, 4);
+  const lineSpacingPx =
+    LINE_SPACING * Math.min(mapEl.clientWidth / (frameX[1] - frameX[0]), mapEl.clientHeight / (frameY[1] - frameY[0]));
+  // Dots stay small enough at full zoom-out that a course reads as a block, not a smear; sigma grows them on zoom.
+  const dotSize = Math.min(MAX_DOT, Math.max(MIN_DOT, lineSpacingPx * 0.45));
+  // Dots grow as 1 / sqrt(ratio), so this is the size they reach when lines are LABEL_LINE_PX apart.
+  const labelThreshold = dotSize * 0.99 * Math.max(1, Math.sqrt(LABEL_LINE_PX / lineSpacingPx));
+
   const GraphCtor = window.graphology.Graph || window.graphology;
 
   const graph = new GraphCtor({ type: "directed" });
@@ -461,67 +485,193 @@
     context.fillText(d.label, d.x + d.size + 7, d.y + size / 3);
   }
 
-  function drawLabel(context, d, settings) {
-    context.font = settings.labelWeight + " " + settings.labelSize + "px " + settings.labelFont;
-    context.fillStyle = theme().fg;
-    context.fillText(d.label, d.x + d.size + 3, d.y + settings.labelSize / 3);
+  // ---- labels share one list of claimed space, per frame: the selected topic, then course labels
+  // nearest the view centre, then topic labels. First to claim its space wins. ----
+  let labelRects = [];
+  let labelsClaimed = false;
+  const labelWidths = new Map();
+
+  function labelRect(context, key, label, x, y, size, settings) {
+    let width = labelWidths.get(key);
+    if (width === undefined) {
+      context.font = settings.labelWeight + " " + settings.labelSize + "px " + settings.labelFont;
+      width = context.measureText(label).width;
+      labelWidths.set(key, width);
+    }
+    const half = settings.labelSize / 2 + 2;
+    return { text: key, x0: x + size + 2, x1: x + size + width + 12, y0: y - half, y1: y + half };
   }
 
-  // ---- HTML label layer: subjects, courses and levels, positioned from the camera ----
-  const overlay = [];
-  function addOverlay(cls, text, colour, place) {
+  const rectsOverlap = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+
+  // Runs once a frame, as late as possible: sigma updates its camera matrix after "beforeRender", so
+  // this waits for the first topic label of the frame, or for the end of a frame without any.
+  function claimLabels() {
+    if (labelsClaimed) return;
+    labelsClaimed = true;
+    labelRects = [];
+    if (selected !== undefined) {
+      const t = topics[selected];
+      const p = sigma.graphToViewport(graph.getNodeAttributes(t.id));
+      const size = sigma.scaleSize(dotSize * 1.6);
+      const context = sigma.getCanvases().labels.getContext("2d");
+      labelRects.push(labelRect(context, t.id, t.name, p.x, p.y, size, sigma.getSettings()));
+    }
+    updateOverlay();
+  }
+
+  function drawLabel(context, d, settings) {
+    if (!d.label) return;
+    claimLabels();
+    const isSelected = selected !== undefined && topics[selected].id === d.key;
+    if (!isSelected) {
+      const rect = labelRect(context, d.key, d.label, d.x, d.y, d.size, settings);
+      if (labelRects.some((other) => rectsOverlap(rect, other))) return;
+      labelRects.push(rect);
+    }
+    context.font = settings.labelWeight + " " + settings.labelSize + "px " + settings.labelFont;
+    const x = d.x + d.size + 3, y = d.y + settings.labelSize / 3;
+    // a halo in the background colour keeps the text readable over the dots of the lines around it
+    context.lineJoin = "round";
+    context.lineWidth = 3;
+    context.strokeStyle = theme().bg;
+    context.strokeText(d.label, x, y);
+    context.fillStyle = theme().fg;
+    context.fillText(d.label, x, y);
+  }
+
+  // ---- HTML label layers: subjects in the gutter; levels and courses over the map ----
+  const subjectLabels = [];
+  const levelLabels = [];
+  const courseLabels = [];
+
+  function addLabel(parent, cls, text) {
     const span = el("span", text, cls);
-    labelsEl.appendChild(span);
-    overlay.push({ span, place, colour });
+    parent.appendChild(span);
+    return { span, shown: true, moved: "" };
+  }
+
+  // Style writes are skipped when nothing changed, so a frame touches only what moved.
+  function place(label, x, y) {
+    if (!label.shown) {
+      label.span.style.display = "";
+      label.shown = true;
+    }
+    const moved = "translate(" + Math.round(x) + "px," + Math.round(y) + "px)";
+    if (moved !== label.moved) {
+      label.span.style.transform = moved;
+      label.moved = moved;
+    }
+  }
+
+  function hide(label) {
+    if (label.shown) {
+      label.span.style.display = "none";
+      label.shown = false;
+    }
+  }
+
+  const subjectColour = (id) => {
+    const colour = SUBJECT_COLOURS[id] || FALLBACK_COLOUR;
+    return theme().lift ? mix(colour, theme().lift, 0.3) : colour;
+  };
+
+  function paintSubject(s) {
+    s.span.style.color = s.span.style.borderLeftColor = subjectColour(s.id);
   }
 
   function buildOverlay() {
     for (const s of data.subjects) {
-      // pinned to the left edge, just above the subject's first (topmost) topic
-      const own = topics.filter((t) => t.subject === s.id);
-      const top = own.length ? minMax(own, (t) => t.y)[0] : s.y0;
-      addOverlay("lbl-subject", s.id, SUBJECT_COLOURS[s.id] || FALLBACK_COLOUR, () => ({
-        x: 8, y: sigma.graphToViewport({ x: 0, y: -top }).y - 44, show: true,
-      }));
+      const label = { ...addLabel(gutterEl, "lbl-subject", s.id), id: s.id, y0: s.y0, y1: s.y1 };
+      paintSubject(label);
+      subjectLabels.push(label);
+    }
+    for (const col of data.columns) {
+      const label = addLabel(labelsEl, "lbl-level", col.level);
+      levelLabels.push({ ...label, x0: col.x0, x1: col.x1, width: label.span.offsetWidth });
     }
     const extent = new Map();
     for (const t of topics) {
-      const c = extent.get(t.course) || { minX: Infinity, maxX: -Infinity, ySum: 0, n: 0 };
-      if (t.x < c.minX) c.minX = t.x;
-      if (t.x > c.maxX) c.maxX = t.x;
-      c.ySum += t.y;
-      c.n += 1;
+      const c = extent.get(t.course) || { x0: Infinity, x1: -Infinity, y0: Infinity, y1: -Infinity };
+      if (t.x < c.x0) c.x0 = t.x;
+      if (t.x > c.x1) c.x1 = t.x;
+      if (t.y < c.y0) c.y0 = t.y;
+      if (t.y > c.y1) c.y1 = t.y;
       extent.set(t.course, c);
     }
     for (const [course, c] of extent) {
-      const gy = -(c.ySum / c.n);
-      addOverlay("lbl-course", course, null, (w) => {
-        const left = sigma.graphToViewport({ x: c.minX, y: gy });
-        const right = sigma.graphToViewport({ x: c.maxX, y: gy });
-        return { x: Math.max(left.x, 4), y: left.y - 20, show: right.x > 0 && left.x < w };
-      });
+      const label = addLabel(labelsEl, "lbl-course", course);
+      courseLabels.push({ ...label, ...c, width: label.span.offsetWidth, order: courseLabels.length });
     }
-    for (const col of data.columns) {
-      addOverlay("lbl-level", col.level, null, () => {
-        const a = sigma.graphToViewport({ x: col.x0, y: 0 }).x;
-        const b = sigma.graphToViewport({ x: col.x1, y: 0 }).x;
-        return { x: (a + b) / 2, y: 2, show: b - a > col.level.length * 7 + 6, center: true };
-      });
+  }
+
+  const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), Math.max(lo, hi));
+
+  function placeSubjects(h) {
+    for (const s of subjectLabels) {
+      // the row's strip, cut to the window: its name stays at the top of what is visible
+      const top = sigma.graphToViewport({ x: 0, y: -s.y0 }).y;
+      const bottom = sigma.graphToViewport({ x: 0, y: -s.y1 }).y;
+      if (bottom <= 0 || top >= h) {
+        hide(s);
+        continue;
+      }
+      const y = Math.max(top, 0);
+      place(s, 0, y);
+      s.span.style.height = Math.round(Math.min(bottom, h) - y) + "px";
+    }
+  }
+
+  // Levels sit just above the map, sticking to the top of the window once zoomed in. Returns the y
+  // below which course labels have to stay.
+  function placeLevels(w) {
+    const firstTopic = frameY[0] + 4;
+    const y = Math.max(2, sigma.graphToViewport({ x: 0, y: -firstTopic }).y - COURSE_LABEL_HEIGHT * 2);
+    for (const col of levelLabels) {
+      const a = sigma.graphToViewport({ x: col.x0, y: 0 }).x;
+      const b = sigma.graphToViewport({ x: col.x1, y: 0 }).x;
+      // centred on the part of the column in view, so a zoomed-in view still names its level
+      const left = Math.max(a, 0), right = Math.min(b, w);
+      if (right - left > col.width) place(col, (left + right) / 2 - col.width / 2, y);
+      else hide(col);
+    }
+    return y + COURSE_LABEL_HEIGHT;
+  }
+
+  // Greedy: courses nearest the view centre claim space first, so more appear as you zoom in.
+  function placeCourses(w, h, top) {
+    const wanted = [];
+    for (const c of courseLabels) {
+      const a = sigma.graphToViewport({ x: c.x0, y: -c.y0 });
+      const b = sigma.graphToViewport({ x: c.x1, y: -c.y1 });
+      if (b.x < 0 || a.x > w || b.y < top || a.y > h) {
+        hide(c);
+        continue;
+      }
+      const dx = Math.max(a.x - w / 2, w / 2 - b.x, 0);
+      const dy = Math.max(a.y - h / 2, h / 2 - b.y, 0);
+      c.dist = dx * dx + dy * dy;
+      // above its block, or kept in view while the block fills the window
+      c.px = clamp(a.x, 4, w - c.width - 4);
+      c.py = clamp(a.y - COURSE_LABEL_HEIGHT - 1, top, b.y - COURSE_LABEL_HEIGHT);
+      wanted.push(c);
+    }
+    wanted.sort((p, q) => p.dist - q.dist || p.order - q.order);
+    for (const c of wanted) {
+      const rect = { text: c.span.textContent, x0: c.px, x1: c.px + c.width + 1, y0: c.py, y1: c.py + COURSE_LABEL_HEIGHT };
+      if (labelRects.some((other) => rectsOverlap(rect, other))) {
+        hide(c);
+      } else {
+        labelRects.push(rect);
+        place(c, c.px, c.py);
+      }
     }
   }
 
   function updateOverlay() {
     const w = mapEl.clientWidth, h = mapEl.clientHeight;
-    for (const o of overlay) {
-      const p = o.place(w, h);
-      const visible = p.show && p.y > -20 && p.y < h;
-      o.span.style.display = visible ? "" : "none";
-      if (o.colour) o.span.style.color = theme().lift ? mix(o.colour, theme().lift, 0.3) : o.colour;
-      if (visible) {
-        const dx = p.center ? -o.span.offsetWidth / 2 : 0;
-        o.span.style.transform = "translate(" + Math.round(p.x + dx) + "px," + Math.round(p.y) + "px)";
-      }
-    }
+    placeSubjects(h);
+    placeCourses(w, h, placeLevels(w));
   }
 
   function showNoWebGL() {
@@ -529,29 +679,19 @@
     message.id = "nowebgl";
     mapEl.replaceChildren(message);
     labelsEl.replaceChildren();
+    gutterEl.replaceChildren();
   }
 
   function start() {
-    // frame the topics that exist, with a margin; empty columns and rows would only waste space
-    const span = (pick, pad) => {
-      if (!topics.length) return [0, 1];
-      const [lo, hi] = minMax(topics, pick);
-      return [lo - pad, hi + pad];
-    };
-    const xs = span((t) => t.x, 8);
-    const ys = span((t) => t.y, 4);
     try {
       // when the browser has no WebGL, sigma's own script fails to load and leaves no global
       if (!window.Sigma) throw new Error("sigma did not load");
       const SigmaCtor = window.Sigma.Sigma || window.Sigma.default || window.Sigma;
       sigma = new SigmaCtor(graph, mapEl, {
-        customBBox: { x: xs, y: [-ys[1], -ys[0]] },
-        // big maps: topics sit about half a unit apart, so discs may only grow slowly when zooming in
-        // (sigma's default sqrt growth turns them into overlapping blobs), and labels appear earlier
-        labelRenderedSizeThreshold: pointGated ? 6 : 9,
-        ...(pointGated ? { zoomToSizeRatioFunction: (ratio) => Math.pow(ratio, 0.2) } : {}),
-        labelDensity: 0.7,
-        labelGridCellSize: 90,
+        customBBox: { x: frameX, y: [-frameY[1], -frameY[0]] },
+        labelRenderedSizeThreshold: labelThreshold,
+        labelDensity: LABEL_GRID_DENSITY,
+        labelGridCellSize: LABEL_GRID_CELL,
         labelSize: 12,
         labelColor: { color: theme().fg },
         defaultDrawNodeLabel: drawLabel,
@@ -568,7 +708,8 @@
       return Promise.resolve();
     }
     sigma.on("clickNode", ({ node }) => selectTopic(node));
-    sigma.on("afterRender", updateOverlay);
+    sigma.on("beforeRender", () => { labelsClaimed = false; });
+    sigma.on("afterRender", claimLabels);
     sigma.getCamera().on("updated", () => {
       // zooming out past the threshold must drop the circles at once; everything else waits for a pause
       if (pointGated && sigma.getCamera().ratio >= POINT_ZOOM && anyCircle) syncEdges();
@@ -579,12 +720,13 @@
       for (const t of topics) graph.mergeNodeAttributes(t.id, topicStyle(t));
       graph.forEachEdge((e) => graph.setEdgeAttribute(e, "color", theme().edge));
       sigma.setSetting("labelColor", { color: theme().fg });
+      for (const s of subjectLabels) paintSubject(s);
       sigma.refresh();
     });
     buildOverlay();
     syncEdges();
     return new Promise((resolve) => {
-      sigma.once("afterRender", () => { updateOverlay(); resolve(); });
+      sigma.once("afterRender", resolve);
       sigma.refresh();
     });
   }
@@ -785,5 +927,7 @@
     edgeDisplay: (from, to) => sigma.getEdgeDisplayData(graph.directedEdge(from, to)),
     // pixel position of a topic inside the map area (test hook for centring)
     nodeViewport: (id) => sigma.graphToViewport(graph.getNodeAttributes(id)),
+    // the selected, course and topic labels of the last frame, in map pixels (test hook for overprinting)
+    labelRects: () => labelRects,
   };
 })();

@@ -1,14 +1,28 @@
 """Repeatable curriculum-bands layout: levels run left to right, subjects stack in rows."""
 
 from collections import defaultdict
+from math import ceil
 
 from kg.graph import KnowledgeGraph
 from kg.model import LEVELS, level_rank
 
 SUBJECT_ORDER = ("math", "physics", "chem", "bio", "engr")
-ROW_LANES = 30
+# Lanes each subject's row can hold. Fixed, so one subject's courses never move another's row.
+LANE_CAPACITY = {"math": 12, "physics": 8, "chem": 8, "bio": 12, "engr": 30}
+DEFAULT_LANE_CAPACITY = 12  # for a subject outside SUBJECT_ORDER
+
+# A course's topics at one level form a block: left to right, then down, like lines of text.
+LINES_PER_LANE = 8
+LINE_SPACING = 1.0
+TOPIC_SPACING = 4.0  # least spacing along a line at budget; wider than LINE_SPACING since names are wide
+LANE_GAP = 2.0
+LANE_HEIGHT = LINES_PER_LANE * LINE_SPACING + LANE_GAP
+ROW_GAP = LANE_HEIGHT
+COLUMN_PADDING = 2.0
+
 MIN_COLUMN_WIDTH = 20.0
-WIDTH_PER_TOPIC = 0.5  # column width units per budgeted topic of the largest per-level share
+# Column width per budgeted topic of the largest per-level share, whose block gets TOPIC_SPACING.
+WIDTH_PER_TOPIC = TOPIC_SPACING / LINES_PER_LANE
 
 
 def _subject_rows(kg: KnowledgeGraph) -> dict[str, int]:
@@ -17,6 +31,20 @@ def _subject_rows(kg: KnowledgeGraph) -> dict[str, int]:
     subjects += [t.id.split(".")[0] for t in kg.topics.values()]
     extra = list(dict.fromkeys(s for s in subjects if s not in SUBJECT_ORDER))
     return {s: i for i, s in enumerate((*SUBJECT_ORDER, *extra))}
+
+
+def _capacity(subject: str) -> int:
+    return LANE_CAPACITY.get(subject, DEFAULT_LANE_CAPACITY)
+
+
+def row_bounds(kg: KnowledgeGraph) -> dict[str, tuple[float, float]]:
+    """subject -> (y_start, y_end), each row as tall as its subject's lane capacity."""
+    bounds: dict[str, tuple[float, float]] = {}
+    y = 0.0
+    for subject in _subject_rows(kg):
+        bounds[subject] = (y, y + _capacity(subject) * LANE_HEIGHT)
+        y = bounds[subject][1] + ROW_GAP
+    return bounds
 
 
 def lane_of(kg: KnowledgeGraph) -> dict[str, tuple[str, int]]:
@@ -36,9 +64,9 @@ def lane_of(kg: KnowledgeGraph) -> dict[str, tuple[str, int]]:
         else:
             lane = len(lanes)
             lanes.append([(lo, hi)])
-        if lane >= ROW_LANES:
+        if lane >= _capacity(c.subject):
             raise ValueError(
-                f"subject {c.subject!r} needs more than {ROW_LANES} lanes (course {c.id})"
+                f"subject {c.subject!r} needs more than {_capacity(c.subject)} lanes (course {c.id})"
             )
         result[c.id] = (c.subject, lane)
     return result
@@ -64,8 +92,12 @@ def column_bounds(kg: KnowledgeGraph) -> dict[str, tuple[float, float]]:
 
 
 def compute_positions(kg: KnowledgeGraph) -> dict[str, tuple[float, float]]:
-    """topic id -> (x, y). Lane y is the row start plus lane plus 0.5."""
-    rows = _subject_rows(kg)
+    """topic id -> (x, y). Each course and level is a block of lines across its column, in its lane.
+
+    Line length comes from the course's budget, so at budget a block fills its lane and a course
+    growing within budget only fills its own block. Past that, its lines tighten, never grow taller.
+    """
+    rows = row_bounds(kg)
     lanes = lane_of(kg)
     bounds = column_bounds(kg)
 
@@ -79,11 +111,25 @@ def compute_positions(kg: KnowledgeGraph) -> dict[str, tuple[float, float]]:
     for t in kg.topics.values():
         groups[(t.course_id, level_of(t))].append(t.id)
 
+    def budget_share(cid: str) -> float:
+        c = kg.courses.get(cid)
+        if c is None:
+            return 0.0
+        lo, hi = sorted(level_rank(x) for x in c.levels)
+        return c.budget / (hi - lo + 1)
+
     positions: dict[str, tuple[float, float]] = {}
     for (cid, level), ids in groups.items():
         subject, lane = lanes.get(cid, (cid.split(".")[0], 0))
         start, end = bounds[level]
-        y = rows[subject] * ROW_LANES + lane + 0.5
+        width = end - start
+        line_length = max(1, ceil(max(budget_share(cid), len(ids)) / LINES_PER_LANE))
+        pitch = (width - COLUMN_PADDING) / line_length
+        top = rows[subject][0] + lane * LANE_HEIGHT
         for i, tid in enumerate(ids):
-            positions[tid] = (start + (i + 0.5) / len(ids) * (end - start), y)
+            line, along = divmod(i, line_length)
+            positions[tid] = (
+                start + COLUMN_PADDING / 2 + (along + 0.5) * pitch,
+                top + (line + 0.5) * LINE_SPACING,
+            )
     return positions

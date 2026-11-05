@@ -2,7 +2,7 @@
 
 from kg.graph import KnowledgeGraph
 from kg.limits import is_near_limits
-from kg.map.layout import ROW_LANES, _subject_rows, column_bounds, compute_positions, lane_of
+from kg.map.layout import _subject_rows, column_bounds, compute_positions, lane_of, row_bounds
 from kg.model import LEVELS
 
 
@@ -19,9 +19,10 @@ def build_map_data(kg: KnowledgeGraph) -> dict:
     bounds = column_bounds(kg)
     lanes = lane_of(kg)
     rows = _subject_rows(kg)
+    row_ys = row_bounds(kg)
     used = {t.id.split(".")[0] for t in kg.topics.values()} | {c.subject for c in kg.courses.values()}
     subjects = [
-        {"id": s, "row": r, "y0": r * ROW_LANES, "y1": (r + 1) * ROW_LANES}
+        {"id": s, "row": r, "y0": row_ys[s][0], "y1": row_ys[s][1]}
         for s, r in sorted(rows.items(), key=lambda kv: kv[1])
         if s in used
     ]
