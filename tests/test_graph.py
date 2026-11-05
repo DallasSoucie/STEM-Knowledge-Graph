@@ -57,6 +57,18 @@ def test_lineage_respects_max_steps():
     assert lineage(kg, "nope", "both", None) == set()
 
 
+def test_lineage_both_is_ancestors_plus_dependents_only():
+    # a -> b -> c -> d, and x also requires a: x is an ancestor's other dependent, not c's relative
+    kg = chain_graph(["a", "b", "c", "d"])
+    kg.topics["x"] = Topic(id="x", name="x", status="stub", prerequisites=[edge("a")])
+    assert lineage(kg, "c", "both", None) == {"a", "b", "d"}
+    assert "x" not in lineage(kg, "c", "both", None)
+    # maxSteps applies per direction
+    assert lineage(kg, "b", "both", 1) == {"a", "c"}
+    assert lineage(kg, "c", "both", 2) == {"a", "b", "d"}
+    assert lineage(kg, "a", "both", 1) == {"b", "x"}
+
+
 def test_shortest_path():
     kg = chain_graph(["a", "b", "c", "d"], {"d": ["a"]})
     assert shortest_path(kg, "a", "d") == ["a", "d"]

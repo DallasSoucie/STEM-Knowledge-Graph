@@ -226,6 +226,40 @@ def test_lineage_direction_and_step_limit(fpage):
     ]
 
 
+def test_lineage_both_excludes_an_ancestors_other_dependents(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 5, levels=("g4", "g8"))}
+    add(
+        kg,
+        topic("math.a.a", level="g4"),
+        topic("math.a.b", ["math.a.a"], level="g5"),
+        topic("math.a.c", ["math.a.b"], level="g6"),
+        topic("math.a.d", ["math.a.c"], level="g7"),
+        topic("math.a.x", ["math.a.a"], level="g8"),  # another dependent of the ancestor a
+    )
+    open_map(page, kg, tmp_path)
+    for steps in (None, 1, 2):
+        got = matched(page, {"lineage": {"topic": "math.a.c", "direction": "both", "maxSteps": steps}})
+        assert got == sorted(lineage(kg, "math.a.c", "both", steps)), steps
+        assert "math.a.x" not in got
+
+
+def test_edge_is_drawn_normally_only_when_both_ends_match(fpage):
+    def colour(a, b):
+        return fpage.evaluate("([a, b]) => window.kgMap.edgeDisplay(a, b).color", [a, b])
+
+    normal = colour("math.a.t3", "math.a.t4")
+    assert colour("math.a.t3", "physics.p.f1") == normal  # no filter: everything normal
+    fpage.evaluate("window.kgMap.setFilters({courses: ['math.a']})")
+    assert colour("math.a.t3", "math.a.t4") == normal  # both ends match
+    faded = colour("math.a.t4", "math.b.u")  # one end matches
+    assert faded != normal
+    assert colour("math.a.t3", "physics.p.f1") == faded
+    fpage.evaluate("window.kgMap.setFilters({subjects: ['physics']})")
+    assert colour("math.a.t1", "math.a.t2") == faded  # neither end matches
+    assert colour("math.a.t3", "physics.p.f1") == faded  # only one end matches
+
+
 def test_filters_combine_as_and(fpage):
     both = {"lineage": {"topic": "math.a.t2", "direction": "dependents"}, "levelMin": "g7", "statuses": ["draft"]}
     assert matched(fpage, both) == ["math.a.t4", "math.b.u"]
@@ -329,3 +363,30 @@ def test_filtered_view_screenshot(fpage, tmp_path):
     shot = tmp_path / "filters.png"
     fpage.screenshot(path=str(shot))
     assert shot.stat().st_size > 0
+
+
+# ---- big maps ----------------------------------------------------------------------------------
+
+
+def test_big_map_draws_edges_only_when_zoomed_in_or_filtered(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 5200, levels=("g4", "g8"))}
+    n = 5200  # past the point limit; 4 prerequisites each puts the edges past the edge limit
+    add(
+        kg,
+        *[
+            topic(f"math.a.t{i:05d}", [f"math.a.t{j:05d}" for j in range(max(0, i - 4), i)], level="g8" if i >= 4000 else "g5")
+            for i in range(n)
+        ],
+    )
+    open_map(page, kg, tmp_path)
+    assert page.evaluate("window.kgMap.topicCount()") == n  # every topic is drawn at full zoom-out
+    assert page.evaluate("window.kgMap.edgeCount()") == 0
+    page.evaluate("window.kgMap.setFilters({levelMin: 'g8'})")
+    filtered = page.evaluate("window.kgMap.edgeCount()")
+    assert 0 < filtered < page.evaluate("window.kgMap.totalEdges()")  # only edges touching a match
+    assert page.evaluate("window.kgMap.topicCount()") == n
+    page.evaluate("window.kgMap.setFilters({})")
+    assert page.evaluate("window.kgMap.edgeCount()") == 0
+    page.evaluate("window.kgMap.selectTopic('math.a.t02500')")  # zooms in on it
+    page.wait_for_function("window.kgMap.edgeCount() > 0")

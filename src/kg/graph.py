@@ -96,22 +96,27 @@ def lineage(
     g = build_digraph(kg)
     if topic_id not in g:
         return set()
-    seen = {topic_id}
-    queue = deque([(topic_id, 0)])
+    result: set[str] = set()
+    if direction in ("prerequisites", "both"):
+        result |= _walk(g, topic_id, g.predecessors, max_steps)
+    if direction in ("dependents", "both"):
+        result |= _walk(g, topic_id, g.successors, max_steps)
+    return result - {topic_id}
+
+
+def _walk(g: nx.DiGraph, start: str, step, max_steps: int | None) -> set[str]:
+    """Nodes reached from start in one direction within max_steps edges."""
+    seen = {start}
+    queue = deque([(start, 0)])
     while queue:
         node, depth = queue.popleft()
         if max_steps is not None and depth >= max_steps:
             continue
-        nxt: list[str] = []
-        if direction in ("prerequisites", "both"):
-            nxt += g.predecessors(node)
-        if direction in ("dependents", "both"):
-            nxt += g.successors(node)
-        for n in nxt:
+        for n in step(node):
             if n not in seen:
                 seen.add(n)
                 queue.append((n, depth + 1))
-    return seen - {topic_id}
+    return seen
 
 
 def shortest_path(kg: KnowledgeGraph, a: str, b: str) -> list[str] | None:

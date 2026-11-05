@@ -10,6 +10,18 @@
   const MAX_RESULTS = 20;
   const SELECT_RATIO = 0.12; // camera zoom (smaller is closer) that selecting a topic zooms to
   const NODE_SIZE = 3.5;
+  // Big maps keep edges out of the graph until they are wanted: while zoomed in past EDGE_ZOOM (a
+  // camera ratio, smaller is closer), and then only those near the view, or while a filter is on
+  // (only edges touching a matching topic). Every topic stays drawn. Small maps always draw all edges.
+  // Edges are removed from sigma, not just hidden: hidden edges still cost a draw call each.
+  const EDGE_LIMIT = 10000;
+  const EDGE_ZOOM = 0.15; // above SELECT_RATIO, so selecting a topic shows its edges
+  const EDGE_IDLE_MS = 120;
+  // Big maps draw topics as plain points, and only those near the view as smooth circles once zoomed
+  // in past POINT_ZOOM: every node costs a draw call in the circle shader whether or not it is on
+  // screen, and with 20,000 of them that dominates every frame.
+  const POINT_LIMIT = 5000;
+  const POINT_ZOOM = 0.3;
 
   const data = JSON.parse(document.getElementById("kg-data").textContent);
   const topics = data.topics;
@@ -77,9 +89,9 @@
   }
 
   // Breadth-first over direct prerequisite edges, like kg.graph.lineage: the topic itself is excluded.
-  function lineageMask(rootIndex, direction, maxSteps) {
+  // "both" is the union of two walks, one up and one down, each with its own step limit.
+  function walkMask(mask, rootIndex, edgesOf, end, maxSteps) {
     const n = topics.length;
-    const mask = new Uint8Array(n);
     const seen = new Uint8Array(n);
     const depth = new Int32Array(n);
     const queue = new Int32Array(n);
@@ -89,21 +101,23 @@
     while (head < tail) {
       const node = queue[head++];
       if (maxSteps !== null && depth[node] >= maxSteps) continue;
-      const lists = [];
-      if (direction !== "dependents") lists.push([incoming[node], "src"]);
-      if (direction !== "prerequisites") lists.push([outgoing[node], "dst"]);
-      for (const [edges, end] of lists) {
-        for (const e of edges) {
-          if (e.kind !== "direct") continue;
-          const next = e[end];
-          if (seen[next]) continue;
-          seen[next] = 1;
-          mask[next] = 1;
-          depth[next] = depth[node] + 1;
-          queue[tail++] = next;
-        }
+      for (const e of edgesOf[node]) {
+        if (e.kind !== "direct") continue;
+        const next = e[end];
+        if (seen[next]) continue;
+        seen[next] = 1;
+        mask[next] = 1;
+        depth[next] = depth[node] + 1;
+        queue[tail++] = next;
       }
     }
+  }
+
+  function lineageMask(rootIndex, direction, maxSteps) {
+    const mask = new Uint8Array(topics.length);
+    if (direction !== "dependents") walkMask(mask, rootIndex, incoming, "src", maxSteps);
+    if (direction !== "prerequisites") walkMask(mask, rootIndex, outgoing, "dst", maxSteps);
+    mask[rootIndex] = 0;
     return mask;
   }
 
@@ -311,11 +325,12 @@
     // sigma's y axis points up, the map's rows run downward
     graph.addNode(t.id, { x: t.x, y: -t.y, idx: byId.get(t.id), ...topicStyle(t) });
   }
-  for (const e of data.edges) {
+  function addEdge(e) {
     const from = topics[e[0]].id, to = topics[e[1]].id;
     // a pair can be linked as both a direct and an encompassed edge; one drawn line is enough
     if (!graph.hasDirectedEdge(from, to)) graph.addDirectedEdge(from, to, { size: 0.5, color: theme().edge, si: e[0], di: e[1] });
   }
+  if (data.edges.length <= EDGE_LIMIT) for (const e of data.edges) addEdge(e);
 
   let sigma = null;
   let selected; // index of the selected topic, or undefined
@@ -340,7 +355,14 @@
   }
 
   // Filters fade topics here, and never move or hide them.
+  const pointGated = topics.length > POINT_LIMIT;
+  let anyCircle = false;
+  let circleMask = pointGated ? new Uint8Array(topics.length) : null; // 1: draw as a circle
+
   function reduceNode(id, attrs) {
+    if (circleMask !== null && circleMask[attrs.idx] === 0 && !(selected !== undefined && topics[selected].id === id)) {
+      attrs = { ...attrs, type: "point" };
+    }
     if (selected !== undefined && topics[selected].id === id) {
       return { ...attrs, size: attrs.size * 1.6, highlighted: true, forceLabel: true, zIndex: 2 };
     }
@@ -349,6 +371,74 @@
     }
     return attrs;
   }
+
+  const edgeGated = data.edges.length > EDGE_LIMIT;
+  let drawnEdges = null; // Uint8Array over data.edges while gated: 1 when the edge is in the graph
+  let edgeTimer = 0;
+
+  // The graph-space rectangle on screen, padded a quarter on every side; null when zoomed out past `zoom`.
+  function viewRect(zoom) {
+    if (sigma.getCamera().ratio >= zoom) return null;
+    const a = sigma.viewportToGraph({ x: 0, y: 0 });
+    const b = sigma.viewportToGraph({ x: mapEl.clientWidth, y: mapEl.clientHeight });
+    const padX = Math.abs(b.x - a.x) * 0.25, padY = Math.abs(b.y - a.y) * 0.25;
+    return {
+      x0: Math.min(a.x, b.x) - padX, x1: Math.max(a.x, b.x) + padX,
+      y0: Math.min(a.y, b.y) - padY, y1: Math.max(a.y, b.y) + padY,
+    };
+  }
+
+  const inRect = (r, i) => topics[i].x >= r.x0 && topics[i].x <= r.x1 && -topics[i].y >= r.y0 && -topics[i].y <= r.y1;
+
+  function wantedEdges() {
+    const want = new Uint8Array(data.edges.length);
+    const r = viewRect(EDGE_ZOOM);
+    if (matches !== null) {
+      for (let k = 0; k < data.edges.length; k++) want[k] = isShown(data.edges[k][0]) || isShown(data.edges[k][1]) ? 1 : 0;
+    } else if (r !== null) {
+      for (let k = 0; k < data.edges.length; k++) want[k] = inRect(r, data.edges[k][0]) || inRect(r, data.edges[k][1]) ? 1 : 0;
+    }
+    return want;
+  }
+
+  // Which topics are drawn as circles. Returns true when that changed, so sigma needs a refresh.
+  function syncCircles() {
+    if (!pointGated) return false;
+    const r = viewRect(POINT_ZOOM);
+    const next = new Uint8Array(topics.length);
+    if (r !== null) for (let i = 0; i < topics.length; i++) next[i] = inRect(r, i) ? 1 : 0;
+    let same = true;
+    for (let i = 0; same && i < next.length; i++) if (next[i] !== circleMask[i]) same = false;
+    circleMask = next;
+    anyCircle = r !== null;
+    return !same;
+  }
+
+  function syncEdges() {
+    clearTimeout(edgeTimer);
+    if (!sigma) return;
+    const circlesChanged = syncCircles();
+    if (!edgeGated) {
+      if (circlesChanged) sigma.refresh();
+      return;
+    }
+    const want = wantedEdges();
+    let same = drawnEdges !== null;
+    for (let k = 0; same && k < want.length; k++) if (want[k] !== drawnEdges[k]) same = false;
+    if (same) {
+      if (circlesChanged) sigma.refresh();
+      return;
+    }
+    drawnEdges = want;
+    graph.clearEdges();
+    for (let k = 0; k < want.length; k++) if (want[k]) addEdge(data.edges[k]);
+    if (circlesChanged) sigma.refresh();
+  }
+
+  const syncEdgesSoon = () => {
+    clearTimeout(edgeTimer);
+    edgeTimer = setTimeout(syncEdges, EDGE_IDLE_MS);
+  };
 
   // An edge is drawn normally only when both of its ends are.
   function reduceEdge(id, attrs) {
@@ -456,13 +546,17 @@
       const SigmaCtor = window.Sigma.Sigma || window.Sigma.default || window.Sigma;
       sigma = new SigmaCtor(graph, mapEl, {
         customBBox: { x: xs, y: [-ys[1], -ys[0]] },
-        labelRenderedSizeThreshold: 9,
+        // big maps: topics sit about half a unit apart, so discs may only grow slowly when zooming in
+        // (sigma's default sqrt growth turns them into overlapping blobs), and labels appear earlier
+        labelRenderedSizeThreshold: pointGated ? 6 : 9,
+        ...(pointGated ? { zoomToSizeRatioFunction: (ratio) => Math.pow(ratio, 0.2) } : {}),
         labelDensity: 0.7,
         labelGridCellSize: 90,
         labelSize: 12,
         labelColor: { color: theme().fg },
         defaultDrawNodeLabel: drawLabel,
         defaultDrawNodeHover: drawHoverLabel,
+        nodeProgramClasses: { point: window.Sigma.rendering.NodePointProgram },
         nodeReducer: reduceNode,
         edgeReducer: reduceEdge,
         zIndex: true,
@@ -475,6 +569,11 @@
     }
     sigma.on("clickNode", ({ node }) => selectTopic(node));
     sigma.on("afterRender", updateOverlay);
+    sigma.getCamera().on("updated", () => {
+      // zooming out past the threshold must drop the circles at once; everything else waits for a pause
+      if (pointGated && sigma.getCamera().ratio >= POINT_ZOOM && anyCircle) syncEdges();
+      else syncEdgesSoon();
+    });
     darkQuery.addEventListener("change", () => {
       fadeCache.clear();
       for (const t of topics) graph.mergeNodeAttributes(t.id, topicStyle(t));
@@ -483,6 +582,7 @@
       sigma.refresh();
     });
     buildOverlay();
+    syncEdges();
     return new Promise((resolve) => {
       sigma.once("afterRender", () => { updateOverlay(); resolve(); });
       sigma.refresh();
@@ -634,6 +734,7 @@
     updateLineageHint();
     updateCount();
     writeHash();
+    syncEdges();
     if (sigma) sigma.refresh();
   }
 
@@ -677,6 +778,11 @@
       return out;
     },
     topicCount: () => (sigma ? graph.filterNodes((id) => !sigma.getNodeDisplayData(id).hidden).length : 0),
+    // edges currently in the graph, and in the data (they differ on big maps)
+    edgeCount: () => graph.size,
+    totalEdges: () => data.edges.length,
+    // sigma's display data for the edge between two topics (test hook for edge fading)
+    edgeDisplay: (from, to) => sigma.getEdgeDisplayData(graph.directedEdge(from, to)),
     // pixel position of a topic inside the map area (test hook for centring)
     nodeViewport: (id) => sigma.graphToViewport(graph.getNodeAttributes(id)),
   };
