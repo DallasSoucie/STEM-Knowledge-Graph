@@ -1,0 +1,658 @@
+courses:
+  - id: math.k
+    subject: math
+    levels: [gk, gk]
+    budget: 60
+  - id: math.g1
+    subject: math
+    levels: [g1, g1]
+    budget: 80
+    follows:
+      - math.k
+  - id: math.g2
+    subject: math
+    levels: [g2, g2]
+    budget: 100
+    follows:
+      - math.g1
+  - id: math.g3
+    subject: math
+    levels: [g3, g3]
+    budget: 120
+    follows:
+      - math.g2
+  - id: math.g4
+    subject: math
+    levels: [g4, g4]
+    budget: 150
+    follows:
+      - math.g3
+  - id: math.g5
+    subject: math
+    levels: [g5, g5]
+    budget: 160
+    follows:
+      - math.g4
+  - id: math.g6
+    subject: math
+    levels: [g6, g6]
+    budget: 170
+    follows:
+      - math.g5
+  - id: math.g7
+    subject: math
+    levels: [g7, g7]
+    budget: 180
+    follows:
+      - math.g6
+  - id: math.g8
+    subject: math
+    levels: [g8, g8]
+    budget: 200
+    follows:
+      - math.g7
+  - id: math.alg1
+    subject: math
+    levels: [g8, g9]
+    budget: 240
+    follows:
+      - math.g8
+  - id: math.geom
+    subject: math
+    levels: [g9, g10]
+    budget: 200
+    follows:
+      - math.alg1
+  - id: math.alg2
+    subject: math
+    levels: [g10, g11]
+    budget: 240
+    follows:
+      - math.alg1
+  - id: math.precalc
+    subject: math
+    levels: [g11, g12]
+    budget: 260
+    follows:
+      - math.alg2
+      - math.geom
+  - id: math.stats
+    subject: math
+    levels: [g11, g12]
+    budget: 120
+    follows:
+      - math.alg1
+  - id: math.calc1
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - math.precalc
+  - id: math.calc2
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - math.calc1
+  - id: math.calc3
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - math.calc2
+  - id: math.linalg
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - math.precalc
+  - id: math.diffeq
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - math.calc2
+  - id: math.discrete
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 170
+    follows:
+      - math.precalc
+  - id: math.probstat
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - math.calc2
+  - id: math.proofs
+    subject: math
+    levels: [uni-lower, uni-lower]
+    budget: 110
+    follows:
+      - math.precalc
+  - id: math.analysis
+    subject: math
+    levels: [uni-upper, uni-upper]
+    budget: 160
+    follows:
+      - math.proofs
+      - math.calc2
+  - id: math.abstract
+    subject: math
+    levels: [uni-upper, uni-upper]
+    budget: 160
+    follows:
+      - math.proofs
+      - math.linalg
+  - id: math.numerical
+    subject: math
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - math.calc2
+      - math.linalg
+  - id: math.pde
+    subject: math
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - math.diffeq
+      - math.calc3
+  - id: math.complex
+    subject: math
+    levels: [uni-upper, uni-upper]
+    budget: 120
+    follows:
+      - math.calc3
+  - id: physics.elem
+    subject: physics
+    levels: [gk, g5]
+    budget: 40
+  - id: physics.ms
+    subject: physics
+    levels: [g6, g8]
+    budget: 80
+    follows:
+      - physics.elem
+      - math.g7
+  - id: physics.hs1
+    subject: physics
+    levels: [g9, g11]
+    budget: 200
+    follows:
+      - physics.ms
+      - math.alg1
+  - id: physics.hs2
+    subject: physics
+    levels: [g11, g12]
+    budget: 200
+    follows:
+      - physics.hs1
+      - math.alg2
+  - id: physics.mechanics
+    subject: physics
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - math.calc1
+  - id: physics.em
+    subject: physics
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - physics.mechanics
+      - math.calc2
+  - id: physics.waves-thermo-optics
+    subject: physics
+    levels: [uni-lower, uni-lower]
+    budget: 170
+    follows:
+      - physics.mechanics
+  - id: physics.modern
+    subject: physics
+    levels: [uni-lower, uni-lower]
+    budget: 150
+    follows:
+      - physics.em
+      - physics.waves-thermo-optics
+  - id: physics.classical
+    subject: physics
+    levels: [uni-upper, uni-upper]
+    budget: 160
+    follows:
+      - physics.mechanics
+      - math.diffeq
+  - id: physics.em-theory
+    subject: physics
+    levels: [uni-upper, uni-upper]
+    budget: 170
+    follows:
+      - physics.em
+      - math.calc3
+  - id: physics.quantum
+    subject: physics
+    levels: [uni-upper, uni-upper]
+    budget: 180
+    follows:
+      - physics.modern
+      - math.linalg
+      - math.diffeq
+  - id: physics.stat-thermal
+    subject: physics
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - physics.waves-thermo-optics
+      - math.probstat
+  - id: chem.elem
+    subject: chem
+    levels: [gk, g5]
+    budget: 30
+  - id: chem.ms
+    subject: chem
+    levels: [g6, g8]
+    budget: 70
+    follows:
+      - chem.elem
+  - id: chem.hs1
+    subject: chem
+    levels: [g9, g11]
+    budget: 180
+    follows:
+      - chem.ms
+      - math.alg1
+  - id: chem.hs2
+    subject: chem
+    levels: [g11, g12]
+    budget: 180
+    follows:
+      - chem.hs1
+      - math.alg2
+  - id: chem.gen1
+    subject: chem
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - chem.hs2
+  - id: chem.gen2
+    subject: chem
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - chem.gen1
+  - id: chem.org1
+    subject: chem
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - chem.gen2
+  - id: chem.org2
+    subject: chem
+    levels: [uni-upper, uni-upper]
+    budget: 190
+    follows:
+      - chem.org1
+  - id: chem.analytical
+    subject: chem
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - chem.gen2
+  - id: chem.inorganic
+    subject: chem
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - chem.gen2
+  - id: chem.pchem1
+    subject: chem
+    levels: [uni-upper, uni-upper]
+    budget: 170
+    follows:
+      - chem.gen2
+      - math.calc2
+      - physics.mechanics
+  - id: chem.pchem2
+    subject: chem
+    levels: [uni-upper, uni-upper]
+    budget: 170
+    follows:
+      - chem.pchem1
+      - math.linalg
+  - id: bio.elem
+    subject: bio
+    levels: [gk, g5]
+    budget: 50
+  - id: bio.ms
+    subject: bio
+    levels: [g6, g8]
+    budget: 90
+    follows:
+      - bio.elem
+  - id: bio.hs1
+    subject: bio
+    levels: [g9, g11]
+    budget: 180
+    follows:
+      - bio.ms
+  - id: bio.hs2
+    subject: bio
+    levels: [g11, g12]
+    budget: 180
+    follows:
+      - bio.hs1
+      - chem.hs1
+  - id: bio.intro1
+    subject: bio
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - bio.hs1
+  - id: bio.intro2
+    subject: bio
+    levels: [uni-lower, uni-lower]
+    budget: 190
+    follows:
+      - bio.intro1
+  - id: bio.cell-mol
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 170
+    follows:
+      - bio.intro1
+      - chem.gen1
+  - id: bio.genetics
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 170
+    follows:
+      - bio.intro1
+  - id: bio.biochem
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 180
+    follows:
+      - bio.cell-mol
+      - chem.org1
+  - id: bio.ecology
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - bio.intro2
+      - math.stats
+  - id: bio.evolution
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 120
+    follows:
+      - bio.intro2
+      - bio.genetics
+  - id: bio.micro
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 160
+    follows:
+      - bio.cell-mol
+  - id: bio.anat-phys1
+    subject: bio
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - bio.intro1
+  - id: bio.anat-phys2
+    subject: bio
+    levels: [uni-lower, uni-lower]
+    budget: 180
+    follows:
+      - bio.anat-phys1
+  - id: bio.neuro
+    subject: bio
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - bio.cell-mol
+  - id: engr.programming
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 170
+    follows:
+      - math.alg2
+  - id: engr.data-structures
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 170
+    follows:
+      - engr.programming
+  - id: engr.statics
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 130
+    follows:
+      - physics.mechanics
+  - id: engr.dynamics
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 140
+    follows:
+      - engr.statics
+  - id: engr.mech-materials
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 150
+    follows:
+      - engr.statics
+  - id: engr.thermo
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 160
+    follows:
+      - physics.waves-thermo-optics
+      - math.calc2
+  - id: engr.fluids
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 150
+    follows:
+      - engr.dynamics
+      - math.calc3
+  - id: engr.circuits
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 170
+    follows:
+      - physics.em
+      - math.diffeq
+  - id: engr.materials
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 120
+    follows:
+      - chem.gen1
+      - engr.mech-materials
+  - id: engr.digital-logic
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 130
+    follows:
+      - math.discrete
+  - id: engr.signals
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 140
+    follows:
+      - engr.circuits
+      - math.diffeq
+  - id: engr.structural-analysis
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - engr.statics
+      - engr.mech-materials
+  - id: engr.soil-mechanics
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - engr.mech-materials
+      - engr.fluids
+  - id: engr.hydraulics
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - engr.fluids
+  - id: engr.concrete-design
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - engr.structural-analysis
+  - id: engr.transportation
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 130
+    follows:
+      - math.probstat
+  - id: engr.mass-energy-balances
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - chem.gen1
+      - math.calc2
+  - id: engr.transport
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.mass-energy-balances
+      - engr.fluids
+  - id: engr.separations
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.transport
+      - engr.thermo
+  - id: engr.reactors
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.mass-energy-balances
+      - chem.pchem1
+  - id: engr.process-control
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.mass-energy-balances
+      - math.diffeq
+  - id: engr.heat-transfer
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.thermo
+      - engr.fluids
+  - id: engr.machine-design
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.mech-materials
+      - engr.dynamics
+  - id: engr.vibrations
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.dynamics
+      - math.diffeq
+  - id: engr.controls
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.signals
+      - engr.dynamics
+  - id: engr.manufacturing
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.materials
+  - id: engr.electronics
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - engr.circuits
+  - id: engr.em-fields
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - physics.em
+      - math.calc3
+  - id: engr.power
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - engr.circuits
+      - engr.em-fields
+  - id: engr.communications
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - engr.signals
+      - math.probstat
+  - id: engr.control-systems
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 150
+    follows:
+      - engr.signals
+  - id: engr.algorithms
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.data-structures
+      - math.discrete
+  - id: engr.architecture
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.digital-logic
+      - engr.programming
+  - id: engr.operating-systems
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.architecture
+      - engr.data-structures
+  - id: engr.databases
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.data-structures
+  - id: engr.networks
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.operating-systems
+  - id: engr.software-engineering
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 140
+    follows:
+      - engr.data-structures
