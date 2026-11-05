@@ -234,3 +234,7 @@ def find_duplicates_command(
     """Topic pairs in different courses that look like the same skill."""
     for a, b, score in find_duplicates(_load(root), threshold, course):
         typer.echo(f"{score:.2f} {a} {b}")
+
+
+if __name__ == "__main__":
+    app()

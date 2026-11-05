@@ -1,0 +1,11 @@
+#!/bin/sh
+# Blocks the commit unless the graph validates. KG_PYTHON overrides the interpreter (used by tests).
+PY="${KG_PYTHON:-.venv/Scripts/python}"
+if [ ! -x "$PY" ] && ! command -v "$PY" >/dev/null 2>&1; then
+    echo "pre-commit: $PY not found. Create the venv and run: pip install -e .[dev,map]" >&2
+    exit 1
+fi
+"$PY" -m kg.cli validate || {
+    echo "pre-commit: graph validation failed; commit blocked." >&2
+    exit 1
+}

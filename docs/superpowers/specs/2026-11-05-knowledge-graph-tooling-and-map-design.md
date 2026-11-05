@@ -98,9 +98,9 @@ A topic is **near the limits** if it has 4 or more direct prerequisites, has a K
 Positions are computed in Python and are repeatable.
 
 - **Columns:** the x axis has one column per level, from `gk` to `uni-upper`. Column width comes from the topic budgets in the manifest, not from current topic counts, so a growing course doesn't shift the columns.
-- **Rows:** the y axis has one row per subject: math, physics, chemistry, biology, engineering.
-- **Lanes:** each row is divided into lanes, assigned to courses in manifest order. Courses with non-overlapping level ranges can share a lane. Courses at the same level get separate lanes, which keeps them from piling up.
-- **Topic position:** a topic sits in its level's column and its course's lane, spaced by its order among that course's topics at that level.
+- **Rows:** the y axis has one row per subject: math, physics, chemistry, biology, engineering. Each row has a fixed lane capacity (math 12, physics 8, chem 8, bio 12, engr 30), so rows never move each other. A subject needing more lanes is an error.
+- **Lanes:** lanes have one fixed height and are assigned to courses in manifest order. Courses with non-overlapping level ranges can share a lane. Courses at the same level get separate lanes, which keeps them from piling up.
+- **Topic position:** a course's topics at one level form a block inside its column and lane, wrapped into 8 lines like text, in listed order. Line length comes from the course's budget; past budget the lines tighten and never grow taller.
 
 Adding a topic respaces only its own course. Adding a course can shift lanes within its own subject row, but not other rows. View courses add no positions.
 

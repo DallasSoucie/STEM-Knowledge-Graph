@@ -109,7 +109,7 @@ These weights are what make the task-selection model work: Math Academy reported
 `CLAUDE.md` lists the required commands and validation rules. Math Academy's first tools were validators, and they grew to about 100 checks after hand edits broke production with cycles and bad IDs. Treat these as requirements on top of that list:
 
 - **Keep `validate` fast.** It should finish in under 10 seconds on a synthetic 20,000-topic graph, because it runs on every batch. Test this.
-- **Gate every commit.** Add a pre-commit hook that runs `validate`. The folder isn't a git repo yet, so run `git init` in Phase 1.
+- **Gate every commit.** Add a pre-commit hook that runs `validate`. The hook is `.githooks/pre-commit`; enable it with `git config core.hooksPath .githooks`.
 - **Test the consumer's path.** Math Academy runs the real model build against each change. Until we have a model, `validate` should simulate a learner: starting from nothing, walk each course sequence in order and confirm every topic becomes reachable.
 - **Prefer CLI tools.** Each tool does one job, with useful options and readable output. Build a new tool whenever a repeated edit is error-prone.
 - **Add `export-weights` and `import-weights`.** Round-trip all weights through CSV, so that recalibrating from student data is one bulk operation.
@@ -129,16 +129,16 @@ Math Academy's author spent about a month, full time, on weights for 1,500 topic
 
 Each phase ends at a stop. Wait for my approval before moving on.
 
-**Phase 0: Plan.** Write no content yet. Propose the repo layout, any schema details `CLAUDE.md` leaves open, catalog revisions, and build order. Done when I've approved it.
+**Phase 0: Plan. (Done.)** Write no content yet. Propose the repo layout, any schema details `CLAUDE.md` leaves open, catalog revisions, and build order. Done when I've approved it.
 
-**Phase 1: Tooling.** Build the schema, the CLI, the manifest, and a tiny sample graph. Done when `pytest` passes, the 20,000-topic speed test passes, and a test shows each validation rule failing on a deliberately broken graph.
+**Phase 1: Tooling. (Done.)** Build the schema, the CLI, the manifest, and a tiny sample graph. Done when `pytest` passes, the 20,000-topic speed test passes, and a test shows each validation rule failing on a deliberately broken graph.
 
 **Phase 2: Courses.** Build math first, in spine order, then physics, chemistry, biology, and engineering. On starting any session, run `stats` and read the manifest to find where things stand. For each course:
 
 1. **Plan the course.** Present its topic list with the count, level range, cross-course dependencies, and scope survey results. Stop for approval.
 2. **Write it.** Add topics in course order, in batches of 20-40. Create stubs for prerequisites in unbuilt courses. Run `validate` after each batch and commit it.
 3. **Self-review it.** Check every topic against the authoring heuristics. Hunt for overloaded topics, large jumps, duplicates, missing prerequisites, invented links, and clustered weights. Fix what you find.
-4. **Present it.** Run `review-report`, `find-duplicates`, and `stats`, then show me the results, the budget variance, and your uncertainties. The course is done when `validate` is green and I've accepted it.
+4. **Present it.** Run `review-report`, `find-duplicates`, and `stats`, then regenerate the map with `export-map` and show me it along with the results, the budget variance, and your uncertainties. The course is done when `validate` is green and I've accepted it.
 
 When a course fills in stubs that others point at, recheck those edges.
 

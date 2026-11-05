@@ -288,10 +288,10 @@ def test_validate_under_10_seconds_on_20000_topics(tmp_path):
 
 **Pinned rules:**
 - Subject row order: math, physics, chem, bio, engr.
-- Each row has a fixed height of `ROW_LANES = 30` lanes, so a new lane can't move other rows. Raise a clear error if a subject needs more.
+- Each row has a fixed height from its subject's lane capacity (`LANE_CAPACITY`: math 12, physics 8, chem 8, bio 12, engr 30; originally a single `ROW_LANES = 30`), so a new lane can't move other rows. Raise a clear error if a subject needs more.
 - Lanes are first-fit in manifest order, sharing a lane only when level ranges don't overlap. View courses get no lane.
 - Column width is proportional to the largest per-level budget share at that level, where share = budget ÷ the number of levels the course spans, with a minimum width. Budgets, not counts, so growing a course moves nothing else.
-- Topic x: `col_start + (i + 0.5) / n * col_width`, where `i` and `n` count that course's topics at that level, in listed order.
+- Topic position (revised): a course's topics at one level wrap into a block of 8 lines inside its column and lane, in listed order, with line length from the course budget. (Originally x = `col_start + (i + 0.5) / n * col_width`.)
 - A stub without a level takes its course's first level.
 
 **Spec note:** adding a course whose budget share exceeds its level's current maximum widens that column, which shifts x positions across all rows. The stability test covers courses within the current maximum, which is the usual case.

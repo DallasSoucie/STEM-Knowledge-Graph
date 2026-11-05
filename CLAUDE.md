@@ -68,17 +68,30 @@ knowledge_points:
 
 Python 3.11+, pydantic (schema), PyYAML (with LibYAML), networkx (graph logic), typer (CLI), pytest. If the plan proposes a better fit, get approval before switching, then update this section.
 
+## Setup
+
+```
+python -m venv .venv
+.venv/Scripts/python -m pip install -e .[dev,map]
+.venv/Scripts/python -m playwright install chromium
+git config core.hooksPath .githooks
+```
+
+The `.githooks/pre-commit` hook runs `kg validate` and blocks the commit on failure. Run commands as `.venv/Scripts/kg <command>` or `.venv/Scripts/python -m kg.cli <command>`. Every graph command takes `--root` (default `graph`).
+
 ## Commands
 
-Update this section as the tooling is built, and keep it accurate.
-
 - `validate` - the gate for all content changes (see below)
-- `stats` - counts by subject/course/level, prerequisite-count and depth distributions
+- `stats` - counts by subject/course/level, prerequisite, KP and weight distributions, depth
 - `ancestors` / `descendants` / `path` - graph queries
-- `split-topic`, `rename-id` - safe structural edits (rename updates every reference)
-- `export` - Graphviz or interactive HTML view
+- `split-topic`, `rename-id` - safe structural edits (rename updates every reference and records `id-history.yaml`)
+- `export-weights` / `import-weights` - round-trip edge weights and confidences through CSV
 - `review-report` - low-confidence edges, topics near limits, all cross-subject edges
-- `pytest` - run tests
+- `review-queue` - prerequisite edges ranked by review risk
+- `find-duplicates` - topic pairs in different courses that look like the same skill
+- `export-map` - write the offline curriculum map to `build/map.html` (not committed; refuses if validation fails)
+- `synth` - write a synthetic valid graph, for testing only
+- `pytest` - run tests (`.venv/Scripts/python -m pytest`)
 
 ## Validation (must stay green)
 
