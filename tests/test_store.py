@@ -144,3 +144,11 @@ def test_files_are_lf_utf8(sample_copy):
     data = (sample_copy / "math" / "a.yaml").read_bytes()
     assert b"\r" not in data
     assert "π".encode("utf-8") in data
+
+
+def test_parse_cache_follows_file_edits(sample_copy):
+    first = load_graph(sample_copy)  # primes the cache
+    path = next((sample_copy / "math").glob("*.yaml"))
+    tid = next(t for t in first.topics.values() if t.course_id.endswith(path.stem)).id
+    path.write_bytes(path.read_bytes().replace(f"name: {first.topics[tid].name}".encode(), b"name: Edited", 1))
+    assert load_graph(sample_copy).topics[tid].name == "Edited"

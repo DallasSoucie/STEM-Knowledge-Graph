@@ -1,5 +1,7 @@
 """Canonical YAML store. All graph YAML reads and writes go through this module."""
 
+import hashlib
+import json
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +13,7 @@ from kg.model import Course, Edge, HistoryEntry, KnowledgePoint, Topic
 
 COURSES_FILE = "courses.yaml"
 HISTORY_FILE = "id-history.yaml"
+CACHE_DIR = ".kg-cache"  # parsed course files keyed on content hash; safe to delete
 
 _Loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
@@ -99,9 +102,47 @@ def _write_if_changed(path: Path, data: bytes) -> None:
     path.write_bytes(data)
 
 
+def _cache_path(root: Path, course_file: Path) -> Path:
+    return Path(root) / CACHE_DIR / f"{course_file.parent.name}__{course_file.stem}.json"
+
+
+def _cache_put(root: Path, course_file: Path, raw: bytes, doc: Any) -> None:
+    """Best effort: a cache that cannot be written is simply absent."""
+    try:
+        path = _cache_path(root, course_file)
+        path.parent.mkdir(exist_ok=True)
+        path.write_text(
+            json.dumps({"sha256": hashlib.sha256(raw).hexdigest(), "doc": doc}), encoding="utf-8"
+        )
+    except (OSError, TypeError, ValueError):
+        pass
+
+
+def _cache_get(root: Path, course_file: Path, raw: bytes) -> Any | None:
+    try:
+        entry = json.loads(_cache_path(root, course_file).read_text(encoding="utf-8"))
+        if entry["sha256"] == hashlib.sha256(raw).hexdigest():
+            return entry["doc"]
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return None
+
+
 def write_course(root: Path, course_id: str, topics: list[Topic]) -> None:
-    data = _dump({"course": course_id, "topics": [_topic(t) for t in topics]})
-    _write_if_changed(_course_path(root, course_id), data)
+    doc = {"course": course_id, "topics": [_topic(t) for t in topics]}
+    data = _dump(doc)
+    path = _course_path(root, course_id)
+    _write_if_changed(path, data)
+    _cache_put(root, path, data, doc)
+
+
+def _read_course_doc(root: Path, path: Path) -> Any:
+    raw = path.read_bytes()
+    doc = _cache_get(root, path, raw)
+    if doc is None:
+        doc = yaml.load(raw.decode("utf-8"), Loader=_Loader)
+        _cache_put(root, path, raw, doc)
+    return doc
 
 
 def write_graph(kg: KnowledgeGraph) -> None:
@@ -166,7 +207,7 @@ def load_graph(root: Path) -> KnowledgeGraph:
     per_course: dict[str, list[Topic]] = {}
     for path in sorted(root.glob("*/*.yaml")):
         try:
-            doc = _read_yaml(path)
+            doc = _read_course_doc(root, path)
             if not isinstance(doc, dict) or not isinstance(doc.get("course"), str):
                 raise ValueError("expected a mapping with a 'course' id")
             if not isinstance(doc.get("topics"), list):
