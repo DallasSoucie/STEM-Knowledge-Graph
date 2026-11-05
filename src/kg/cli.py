@@ -8,6 +8,7 @@ from kg.checks import run_checks
 from kg.edits import EditError, apply_edit, rename_id, split_topic
 from kg.graph import GraphIndex, KnowledgeGraph, shortest_path
 from kg.map.export import export_map
+from kg.reports import find_duplicates, review_queue, review_report, stats as compute_stats
 from kg.store import GraphLoadError, load_graph, write_graph
 from kg.synthetic import generate
 
@@ -147,3 +148,64 @@ def split_topic_command(
         raise _fail(str(exc)) from exc
     _commit(edited)
     typer.echo(f"split {topic_id} -> {topic_id}, {new_id}")
+
+
+CourseOption = typer.Option(None, "--course", help="Limit to one course ID.")
+
+
+def _counts(title: str, counts: dict) -> None:
+    typer.echo(f"{title}: " + (", ".join(f"{k}={v}" for k, v in counts.items()) or "-"))
+
+
+@app.command()
+def stats(root: Path = RootOption, course: str | None = CourseOption) -> None:
+    """Counts and distributions: subjects, courses, levels, prerequisites, KPs, weights, depth."""
+    s = compute_stats(_load(root), course)
+    typer.echo(f"topics: {s['topics']}")
+    for key in ("by_subject", "by_course", "by_level", "prerequisite_count", "kp_count", "depth"):
+        _counts(key.replace("_", " "), s[key])
+    w = s["weight"]
+    typer.echo(
+        f"weights: n={w['count']} mean={w['mean']:.2f} min={w['min']:.2f} max={w['max']:.2f}"
+    )
+    for cid, mix in s["confidence_by_course"].items():
+        _counts(f"confidence {cid}", mix)
+    _counts("budget variance (actual - budget)", s["budget_variance"])
+
+
+@app.command("review-report")
+def review_report_command(root: Path = RootOption, course: str | None = CourseOption) -> None:
+    """Low-confidence edges, topics near limits, and cross-subject edges."""
+    r = review_report(_load(root), course)
+    typer.echo(f"low-confidence edges ({len(r['low_confidence'])}):")
+    for t, p in r["low_confidence"]:
+        typer.echo(f"  {t} <- {p}")
+    typer.echo(f"topics near limits ({len(r['near_limits'])}):")
+    for t in r["near_limits"]:
+        typer.echo(f"  {t}")
+    typer.echo(f"cross-subject edges ({len(r['cross_subject'])}):")
+    for t, p in r["cross_subject"]:
+        typer.echo(f"  {t} <- {p}")
+
+
+@app.command("review-queue")
+def review_queue_command(
+    root: Path = RootOption,
+    limit: int | None = typer.Option(None, "--limit", help="Show only the first N edges."),
+    course: str | None = CourseOption,
+) -> None:
+    """Prerequisite edges in the order a human should review them."""
+    for q in review_queue(_load(root), limit, course):
+        cross = " cross-subject" if q.cross_subject else ""
+        typer.echo(f"{q.confidence} {q.descendants} {q.topic} <- {q.prerequisite}{cross}")
+
+
+@app.command("find-duplicates")
+def find_duplicates_command(
+    root: Path = RootOption,
+    threshold: float = typer.Option(0.8, "--threshold", help="Minimum Jaccard similarity."),
+    course: str | None = CourseOption,
+) -> None:
+    """Topic pairs in different courses that look like the same skill."""
+    for a, b, score in find_duplicates(_load(root), threshold, course):
+        typer.echo(f"{score:.2f} {a} {b}")
