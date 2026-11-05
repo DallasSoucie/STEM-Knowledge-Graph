@@ -1,4 +1,4 @@
-// Map page: renders the kg-data graph with sigma.js, plus search and the topic panel.
+// Map page: renders the kg-data graph with sigma.js, plus search, the topic panel and filters.
 // All user text goes through textContent. Read-only.
 (function () {
   "use strict";
@@ -22,11 +22,136 @@
     outgoing[src].push(e);
   }
 
+  // ---- filters: pure functions over the data, no sigma and no DOM ------------------------
+  const LEVELS = data.levels;
+  const LEVEL_RANK = new Map(LEVELS.map((l, i) => [l, i]));
+  const STATUSES = ["stub", "draft", "reviewed"];
+  const CONFIDENCES = ["high", "medium", "low"];
+  const DIRECTIONS = ["prerequisites", "dependents", "both"];
+  const SUBJECT_IDS = new Set(topics.map((t) => t.subject));
+  const COURSE_IDS = new Set(topics.map((t) => t.course));
+  for (const c of data.courses) COURSE_IDS.add(c.id);
+  const topicRank = Int16Array.from(topics, (t) => (LEVEL_RANK.has(t.level) ? LEVEL_RANK.get(t.level) : -1));
+
+  const known = (values, allowed) =>
+    Array.isArray(values)
+      ? Array.from(new Set(values.filter((v) => typeof v === "string" && allowed.has(v))))
+      : [];
+
+  // Anything that isn't a recognised, still-existing value is dropped, so a stale or hand-edited
+  // link degrades to "no constraint" instead of an empty map. Always returns the full shape.
+  function normalizeFilters(raw) {
+    const r = raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
+    const level = (v) => (typeof v === "string" && LEVEL_RANK.has(v) ? v : null);
+    let lineage = null;
+    const l = r.lineage;
+    if (l && typeof l === "object" && byId.has(l.topic) && DIRECTIONS.includes(l.direction)) {
+      const steps = Number.isInteger(l.maxSteps) && l.maxSteps >= 1 ? l.maxSteps : null;
+      lineage = { topic: l.topic, direction: l.direction, maxSteps: steps };
+    }
+    return {
+      subjects: known(r.subjects, SUBJECT_IDS),
+      courses: known(r.courses, COURSE_IDS),
+      levelMin: level(r.levelMin),
+      levelMax: level(r.levelMax),
+      statuses: known(r.statuses, new Set(STATUSES)),
+      confidences: known(r.confidences, new Set(CONFIDENCES)),
+      nearLimits: r.nearLimits === true,
+      lineage,
+    };
+  }
+
+  const isActive = (f) =>
+    f.subjects.length > 0 || f.courses.length > 0 || f.levelMin !== null || f.levelMax !== null ||
+    f.statuses.length > 0 || f.confidences.length > 0 || f.nearLimits || f.lineage !== null;
+
+  // Only the fields that are set, so the URL stays short.
+  function compactFilters(f) {
+    const out = {};
+    for (const k of ["subjects", "courses", "statuses", "confidences"]) if (f[k].length) out[k] = f[k];
+    if (f.levelMin !== null) out.levelMin = f.levelMin;
+    if (f.levelMax !== null) out.levelMax = f.levelMax;
+    if (f.nearLimits) out.nearLimits = true;
+    if (f.lineage) out.lineage = f.lineage;
+    return out;
+  }
+
+  // Breadth-first over direct prerequisite edges, like kg.graph.lineage: the topic itself is excluded.
+  function lineageMask(rootIndex, direction, maxSteps) {
+    const n = topics.length;
+    const mask = new Uint8Array(n);
+    const seen = new Uint8Array(n);
+    const depth = new Int32Array(n);
+    const queue = new Int32Array(n);
+    let head = 0, tail = 0;
+    queue[tail++] = rootIndex;
+    seen[rootIndex] = 1;
+    while (head < tail) {
+      const node = queue[head++];
+      if (maxSteps !== null && depth[node] >= maxSteps) continue;
+      const lists = [];
+      if (direction !== "dependents") lists.push([incoming[node], "src"]);
+      if (direction !== "prerequisites") lists.push([outgoing[node], "dst"]);
+      for (const [edges, end] of lists) {
+        for (const e of edges) {
+          if (e.kind !== "direct") continue;
+          const next = e[end];
+          if (seen[next]) continue;
+          seen[next] = 1;
+          mask[next] = 1;
+          depth[next] = depth[node] + 1;
+          queue[tail++] = next;
+        }
+      }
+    }
+    return mask;
+  }
+
+  // One pass over the topics. Returns { mask, count }, or null when no filter is set.
+  function computeMatches(f) {
+    if (!isActive(f)) return null;
+    const subjects = f.subjects.length ? new Set(f.subjects) : null;
+    const courses = f.courses.length ? new Set(f.courses) : null;
+    const statuses = f.statuses.length ? new Set(f.statuses) : null;
+    const confidences = f.confidences.length ? new Set(f.confidences) : null;
+    const lo = f.levelMin === null ? -1 : LEVEL_RANK.get(f.levelMin);
+    const hi = f.levelMax === null ? LEVELS.length : LEVEL_RANK.get(f.levelMax);
+    const limitLevels = f.levelMin !== null || f.levelMax !== null;
+    const lineage = f.lineage ? lineageMask(byId.get(f.lineage.topic), f.lineage.direction, f.lineage.maxSteps) : null;
+    const mask = new Uint8Array(topics.length);
+    let count = 0;
+    for (let i = 0; i < topics.length; i++) {
+      const t = topics[i];
+      if (subjects && !subjects.has(t.subject)) continue;
+      if (courses && !courses.has(t.course)) continue;
+      if (limitLevels && (topicRank[i] < lo || topicRank[i] > hi)) continue;
+      if (statuses && !statuses.has(t.status)) continue;
+      if (f.nearLimits && !t.near_limits) continue;
+      if (lineage && !lineage[i]) continue;
+      if (confidences && !incoming[i].some((e) => confidences.has(e.confidence))) continue;
+      mask[i] = 1;
+      count++;
+    }
+    return { mask, count };
+  }
+
+  function minMax(items, pick) {
+    let lo = Infinity, hi = -Infinity;
+    for (const item of items) {
+      const v = pick(item);
+      if (v < lo) lo = v;
+      if (v > hi) hi = v;
+    }
+    return [lo, hi];
+  }
+
   const mapEl = document.getElementById("map");
   const labelsEl = document.getElementById("labels");
   const panelEl = document.getElementById("panel");
   const searchEl = document.getElementById("search");
   const resultsEl = document.getElementById("results");
+  const countEl = document.getElementById("match-count");
+  const clearEl = document.getElementById("clear-filters");
 
   // ---- theme -----------------------------------------------------------
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -184,21 +309,51 @@
   const graph = new GraphCtor({ type: "directed" });
   for (const t of topics) {
     // sigma's y axis points up, the map's rows run downward
-    graph.addNode(t.id, { x: t.x, y: -t.y, ...topicStyle(t) });
+    graph.addNode(t.id, { x: t.x, y: -t.y, idx: byId.get(t.id), ...topicStyle(t) });
   }
   for (const e of data.edges) {
     const from = topics[e[0]].id, to = topics[e[1]].id;
     // a pair can be linked as both a direct and an encompassed edge; one drawn line is enough
-    if (!graph.hasDirectedEdge(from, to)) graph.addDirectedEdge(from, to, { size: 0.5, color: theme().edge });
+    if (!graph.hasDirectedEdge(from, to)) graph.addDirectedEdge(from, to, { size: 0.5, color: theme().edge, si: e[0], di: e[1] });
   }
 
   let sigma = null;
   let selected; // index of the selected topic, or undefined
 
-  // The one reducer. Task 10 filters extend this, fading topics rather than moving or hiding them.
+  // ---- filter state and fading ----
+  let filters = normalizeFilters(null);
+  let matches = null; // { mask, count } while any filter is set, else null
+  const fadeCache = new Map();
+
+  // The lineage's starting topic always stays drawn: it is the thing being looked at.
+  const isShown = (i) =>
+    matches === null || matches.mask[i] === 1 || (filters.lineage !== null && i === byId.get(filters.lineage.topic));
+
+  function faded(colour) {
+    const key = (darkQuery.matches ? "d" : "l") + colour;
+    let out = fadeCache.get(key);
+    if (out === undefined) {
+      out = mix(colour, theme().bg, 0.86);
+      fadeCache.set(key, out);
+    }
+    return out;
+  }
+
+  // Filters fade topics here, and never move or hide them.
   function reduceNode(id, attrs) {
     if (selected !== undefined && topics[selected].id === id) {
       return { ...attrs, size: attrs.size * 1.6, highlighted: true, forceLabel: true, zIndex: 2 };
+    }
+    if (matches !== null && !isShown(attrs.idx)) {
+      return { ...attrs, color: faded(attrs.color), label: null, zIndex: 0 };
+    }
+    return attrs;
+  }
+
+  // An edge is drawn normally only when both of its ends are.
+  function reduceEdge(id, attrs) {
+    if (matches !== null && !(isShown(attrs.si) && isShown(attrs.di))) {
+      return { ...attrs, color: faded(attrs.color), zIndex: 0 };
     }
     return attrs;
   }
@@ -234,7 +389,7 @@
     for (const s of data.subjects) {
       // pinned to the left edge, just above the subject's first (topmost) topic
       const own = topics.filter((t) => t.subject === s.id);
-      const top = own.length ? Math.min(...own.map((t) => t.y)) : s.y0;
+      const top = own.length ? minMax(own, (t) => t.y)[0] : s.y0;
       addOverlay("lbl-subject", s.id, SUBJECT_COLOURS[s.id] || FALLBACK_COLOUR, () => ({
         x: 8, y: sigma.graphToViewport({ x: 0, y: -top }).y - 44, show: true,
       }));
@@ -242,8 +397,8 @@
     const extent = new Map();
     for (const t of topics) {
       const c = extent.get(t.course) || { minX: Infinity, maxX: -Infinity, ySum: 0, n: 0 };
-      c.minX = Math.min(c.minX, t.x);
-      c.maxX = Math.max(c.maxX, t.x);
+      if (t.x < c.minX) c.minX = t.x;
+      if (t.x > c.maxX) c.maxX = t.x;
       c.ySum += t.y;
       c.n += 1;
       extent.set(t.course, c);
@@ -288,9 +443,13 @@
 
   function start() {
     // frame the topics that exist, with a margin; empty columns and rows would only waste space
-    const span = (values, pad) => (values.length ? [Math.min(...values) - pad, Math.max(...values) + pad] : [0, 1]);
-    const xs = span(topics.map((t) => t.x), 8);
-    const ys = span(topics.map((t) => t.y), 4);
+    const span = (pick, pad) => {
+      if (!topics.length) return [0, 1];
+      const [lo, hi] = minMax(topics, pick);
+      return [lo - pad, hi + pad];
+    };
+    const xs = span((t) => t.x, 8);
+    const ys = span((t) => t.y, 4);
     try {
       // when the browser has no WebGL, sigma's own script fails to load and leaves no global
       if (!window.Sigma) throw new Error("sigma did not load");
@@ -305,6 +464,7 @@
         defaultDrawNodeLabel: drawLabel,
         defaultDrawNodeHover: drawHoverLabel,
         nodeReducer: reduceNode,
+        edgeReducer: reduceEdge,
         zIndex: true,
         enableEdgeEvents: false,
       });
@@ -316,6 +476,7 @@
     sigma.on("clickNode", ({ node }) => selectTopic(node));
     sigma.on("afterRender", updateOverlay);
     darkQuery.addEventListener("change", () => {
+      fadeCache.clear();
       for (const t of topics) graph.mergeNodeAttributes(t.id, topicStyle(t));
       graph.forEachEdge((e) => graph.setEdgeAttribute(e, "color", theme().edge));
       sigma.setSetting("labelColor", { color: theme().fg });
@@ -334,8 +495,11 @@
     if (i === undefined) return Promise.resolve();
     selected = i;
     renderPanel(i);
+    // an active lineage follows the selection; that call refreshes sigma itself
+    if (lineageOn()) applyFilters(readControls(), { fromControls: true });
+    else if (sigma) sigma.refresh();
+    updateLineageHint();
     if (!sigma) return Promise.resolve();
-    sigma.refresh();
     const d = sigma.getNodeDisplayData(id);
     const camera = sigma.getCamera();
     return camera.animate(
@@ -344,7 +508,152 @@
     );
   }
 
+  // ---- filter controls --------------------------------------------------------------------
+  const ctl = {
+    subjects: document.getElementById("f-subjects"),
+    courses: document.getElementById("f-courses"),
+    statuses: document.getElementById("f-statuses"),
+    confidences: document.getElementById("f-confidences"),
+    levelMin: document.getElementById("f-level-min"),
+    levelMax: document.getElementById("f-level-max"),
+    direction: document.getElementById("f-direction"),
+    steps: document.getElementById("f-steps"),
+    near: document.getElementById("f-near"),
+    hint: document.getElementById("f-lineage-topic"),
+  };
+
+  function checkbox(container, value, text) {
+    const label = el("label");
+    const box = document.createElement("input");
+    box.type = "checkbox";
+    box.value = value;
+    label.append(box, document.createTextNode(text));
+    container.appendChild(label);
+  }
+
+  function buildControls() {
+    for (const s of data.subjects) checkbox(ctl.subjects, s.id, s.id);
+    for (const c of Array.from(COURSE_IDS).sort()) checkbox(ctl.courses, c, c);
+    for (const s of STATUSES) checkbox(ctl.statuses, s, s[0].toUpperCase() + s.slice(1));
+    for (const c of CONFIDENCES) checkbox(ctl.confidences, c, c[0].toUpperCase() + c.slice(1));
+    for (const sel of [ctl.levelMin, ctl.levelMax]) {
+      const any = el("option", "Any");
+      any.value = "";
+      sel.appendChild(any);
+      for (const l of LEVELS) {
+        const o = el("option", l);
+        o.value = l;
+        sel.appendChild(o);
+      }
+    }
+  }
+
+  const checkedValues = (container) =>
+    Array.from(container.querySelectorAll("input:checked"), (b) => b.value);
+
+  const lineageOn = () => ctl.direction.value !== "";
+
+  function readControls() {
+    const steps = parseInt(ctl.steps.value, 10);
+    return {
+      subjects: checkedValues(ctl.subjects),
+      courses: checkedValues(ctl.courses),
+      levelMin: ctl.levelMin.value || null,
+      levelMax: ctl.levelMax.value || null,
+      statuses: checkedValues(ctl.statuses),
+      confidences: checkedValues(ctl.confidences),
+      nearLimits: ctl.near.checked,
+      lineage:
+        lineageOn() && selected !== undefined
+          ? { topic: topics[selected].id, direction: ctl.direction.value, maxSteps: Number.isNaN(steps) ? null : steps }
+          : null,
+    };
+  }
+
+  function syncControls() {
+    const set = (container, values) => {
+      for (const b of container.querySelectorAll("input")) b.checked = values.includes(b.value);
+    };
+    set(ctl.subjects, filters.subjects);
+    set(ctl.courses, filters.courses);
+    set(ctl.statuses, filters.statuses);
+    set(ctl.confidences, filters.confidences);
+    ctl.levelMin.value = filters.levelMin || "";
+    ctl.levelMax.value = filters.levelMax || "";
+    ctl.near.checked = filters.nearLimits;
+    ctl.direction.value = filters.lineage ? filters.lineage.direction : "";
+    ctl.steps.value = filters.lineage && filters.lineage.maxSteps !== null ? String(filters.lineage.maxSteps) : "";
+  }
+
+  function updateLineageHint() {
+    ctl.hint.textContent =
+      selected === undefined ? "Select a topic on the map, then choose a direction." : "From: " + topics[selected].name;
+  }
+
+  function updateCount() {
+    const total = topics.length;
+    const n = matches === null ? total : matches.count;
+    countEl.textContent = n + " of " + total + " topics";
+    countEl.classList.toggle("none", matches !== null && n === 0);
+    clearEl.hidden = !isActive(filters);
+  }
+
+  function writeHash() {
+    const base = location.pathname + location.search;
+    const hash = isActive(filters) ? "#f=" + encodeURIComponent(JSON.stringify(compactFilters(filters))) : "";
+    try {
+      history.replaceState(null, "", base + hash);
+    } catch (err) {
+      // a browser that refuses replaceState still filters correctly, the link just isn't shareable
+    }
+  }
+
+  function readHash() {
+    if (!location.hash.startsWith("#f=")) return null;
+    try {
+      return JSON.parse(decodeURIComponent(location.hash.slice(3)));
+    } catch (err) {
+      return null;
+    }
+  }
+
+  // The one entry point for changing filters. fromControls skips rewriting the controls, so a
+  // half-typed step limit is left alone.
+  function applyFilters(raw, opts) {
+    filters = normalizeFilters(raw);
+    matches = computeMatches(filters);
+    if (filters.lineage) {
+      // the lineage always starts from the selected topic
+      const i = byId.get(filters.lineage.topic);
+      if (selected !== i) {
+        selected = i;
+        renderPanel(i);
+      }
+    }
+    if (!(opts && opts.fromControls)) syncControls();
+    updateLineageHint();
+    updateCount();
+    writeHash();
+    if (sigma) sigma.refresh();
+  }
+
+  function matchedIds() {
+    if (matches === null) return topics.map((t) => t.id);
+    const out = [];
+    for (let i = 0; i < topics.length; i++) if (matches.mask[i]) out.push(topics[i].id);
+    return out;
+  }
+
+  buildControls();
+  for (const node of document.querySelectorAll("#filters input, #filters select")) {
+    node.addEventListener("change", () => applyFilters(readControls(), { fromControls: true }));
+  }
+  ctl.steps.addEventListener("input", () => applyFilters(readControls(), { fromControls: true }));
+  clearEl.addEventListener("click", () => applyFilters(null));
+  window.addEventListener("hashchange", () => applyFilters(readHash()));
   renderPanel(undefined);
+  applyFilters(readHash());
+
   const ready = new Promise((resolve) => {
     // wait for layout, so the container has a size before sigma measures it
     requestAnimationFrame(() => start().then(resolve));
@@ -359,6 +668,14 @@
       return runSearch(text);
     },
     panelText: () => panelEl.innerText,
+    setFilters: (raw) => applyFilters(raw),
+    matchCount: () => (matches === null ? topics.length : matches.count),
+    matchedIds,
+    positions: () => {
+      const out = {};
+      graph.forEachNode((id, a) => { out[id] = { x: a.x, y: a.y }; });
+      return out;
+    },
     topicCount: () => (sigma ? graph.filterNodes((id) => !sigma.getNodeDisplayData(id).hidden).length : 0),
     // pixel position of a topic inside the map area (test hook for centring)
     nodeViewport: (id) => sigma.graphToViewport(graph.getNodeAttributes(id)),

@@ -1,9 +1,12 @@
 """Browser tests: open the real exported map page and drive it through window.kgMap."""
 
+import json
+from urllib.parse import quote
+
 import pytest
 
-from conftest import add, course, topic
-from kg.graph import KnowledgeGraph
+from conftest import add, course, edge, stub, topic
+from kg.graph import KnowledgeGraph, lineage
 from kg.map.export import export_map
 from kg.model import Topic
 
@@ -136,3 +139,193 @@ def test_webgl_failure_shows_message(page, sample_graph, tmp_path):
     page.goto(out.as_uri())
     page.evaluate("window.kgMap.ready")
     assert "This map needs WebGL, which your browser couldn't start." in page.inner_text("#map")
+
+
+# ---- filters ---------------------------------------------------------------------------------
+
+
+def filter_graph() -> KnowledgeGraph:
+    """A chain t1 -> t2 -> t3 -> t4 in math.a, a low-confidence physics link, a stub and a reviewed topic."""
+    kg = KnowledgeGraph()
+    kg.courses = {
+        "math.a": course("math.a", 4, levels=("g4", "g7")),
+        "math.b": course("math.b", 2, ["math.a"], levels=("g8", "g8")),
+        "physics.p": course("physics.p", 1, ["math.a"], levels=("g11", "g11")),
+    }
+    f1 = topic("physics.p.f1", ["math.a.t3"], level="g11")
+    f1 = f1.model_copy(update={"prerequisites": [edge("math.a.t3", 0.5, "low")], "status": "reviewed"})
+    add(
+        kg,
+        topic("math.a.t1", level="g4"),
+        topic("math.a.t2", ["math.a.t1"], level="g5"),
+        topic("math.a.t3", ["math.a.t2"], level="g6"),
+        topic("math.a.t4", ["math.a.t3"], level="g7", n_kps=5),  # five KPs: near the limits
+        f1,
+        stub("math.b.stub"),
+        topic("math.b.u", ["math.b.stub", "math.a.t4"], level="g8"),
+    )
+    return kg
+
+
+@pytest.fixture
+def fpage(page, tmp_path):
+    kg = filter_graph()
+    page.kg = kg
+    page.errors = open_map(page, kg, tmp_path)
+    return page
+
+
+def matched(page, filters):
+    return sorted(page.evaluate("f => { window.kgMap.setFilters(f); return window.kgMap.matchedIds(); }", filters))
+
+
+def ids(kg, pred):
+    return sorted(t.id for t in kg.topics.values() if pred(t))
+
+
+def test_no_filters_matches_everything(fpage):
+    everything = sorted(fpage.kg.topics)
+    assert matched(fpage, {}) == everything
+    assert fpage.evaluate("window.kgMap.matchCount()") == len(everything)
+    assert fpage.locator("#match-count").inner_text() == f"{len(everything)} of {len(everything)} topics"
+    assert matched(fpage, {"subjects": [], "courses": [], "statuses": [], "lineage": None}) == everything
+    assert fpage.locator("#clear-filters").is_hidden()
+
+
+def test_subject_course_and_level_filters(fpage):
+    kg = fpage.kg
+    assert matched(fpage, {"subjects": ["physics"]}) == ["physics.p.f1"]
+    assert matched(fpage, {"courses": ["math.b"]}) == ids(kg, lambda t: t.id.startswith("math.b."))
+    assert matched(fpage, {"levelMin": "g5", "levelMax": "g7"}) == ["math.a.t2", "math.a.t3", "math.a.t4"]
+    # a stub has no level of its own; it takes the one at its layout column
+    assert matched(fpage, {"levelMin": "g8"}) == ["math.b.stub", "math.b.u", "physics.p.f1"]
+    assert matched(fpage, {"levelMax": "g4"}) == ["math.a.t1"]
+
+
+def test_status_confidence_and_near_limit_filters(fpage):
+    assert matched(fpage, {"statuses": ["stub"]}) == ["math.b.stub"]
+    assert matched(fpage, {"statuses": ["reviewed"]}) == ["physics.p.f1"]
+    assert matched(fpage, {"statuses": ["stub", "reviewed"]}) == ["math.b.stub", "physics.p.f1"]
+    # confidence matches a topic when any of its incoming edges has it
+    assert matched(fpage, {"confidences": ["low"]}) == ["physics.p.f1"]
+    assert matched(fpage, {"confidences": ["medium"]}) == []
+    assert matched(fpage, {"confidences": ["high"]}) == ["math.a.t2", "math.a.t3", "math.a.t4", "math.b.u"]
+    assert matched(fpage, {"nearLimits": True}) == ["math.a.t4"]
+
+
+def test_lineage_direction_and_step_limit(fpage):
+    kg = fpage.kg
+    for direction in ("prerequisites", "dependents", "both"):
+        for steps in (None, 1, 2):
+            want = sorted(lineage(kg, "math.a.t3", direction, steps))
+            got = matched(fpage, {"lineage": {"topic": "math.a.t3", "direction": direction, "maxSteps": steps}})
+            assert got == want, (direction, steps)
+    assert matched(fpage, {"lineage": {"topic": "math.a.t3", "direction": "prerequisites"}}) == [
+        "math.a.t1",
+        "math.a.t2",
+    ]
+
+
+def test_filters_combine_as_and(fpage):
+    both = {"lineage": {"topic": "math.a.t2", "direction": "dependents"}, "levelMin": "g7", "statuses": ["draft"]}
+    assert matched(fpage, both) == ["math.a.t4", "math.b.u"]
+    assert matched(fpage, {**both, "nearLimits": True}) == ["math.a.t4"]
+    assert matched(fpage, {**both, "subjects": ["physics"]}) == []
+    assert matched(fpage, {"subjects": ["math"], "courses": ["physics.p"]}) == []
+
+
+def test_filtering_never_moves_topics(fpage):
+    before = fpage.evaluate("window.kgMap.positions()")
+    assert len(before) == len(fpage.kg.topics)
+    fpage.evaluate("window.kgMap.setFilters({subjects: ['physics'], nearLimits: true})")
+    fpage.evaluate("window.kgMap.selectTopic('math.a.t2')")
+    assert fpage.evaluate("window.kgMap.positions()") == before
+    assert fpage.evaluate("window.kgMap.topicCount()") == len(fpage.kg.topics)  # faded, never hidden
+
+
+def test_zero_matches_shows_count_and_clear(fpage):
+    total = len(fpage.kg.topics)
+    assert matched(fpage, {"subjects": ["physics"], "nearLimits": True}) == []
+    assert fpage.locator("#match-count").inner_text() == f"0 of {total} topics"
+    clear = fpage.get_by_role("button", name="Clear filters")
+    clear.click()
+    assert fpage.evaluate("window.kgMap.matchCount()") == total
+    assert fpage.locator("#match-count").inner_text() == f"{total} of {total} topics"
+    assert clear.is_hidden()
+    assert fpage.evaluate("location.hash") in ("", "#")
+
+
+def test_controls_drive_the_filters(fpage):
+    fpage.get_by_label("physics", exact=True).check()
+    assert fpage.evaluate("window.kgMap.matchedIds()") == ["physics.p.f1"]
+    assert fpage.locator("#match-count").inner_text() == f"1 of {len(fpage.kg.topics)} topics"
+    fpage.get_by_role("button", name="Clear filters").click()
+    fpage.get_by_label("Near the size limits").check()
+    assert fpage.evaluate("window.kgMap.matchedIds()") == ["math.a.t4"]
+    fpage.get_by_role("button", name="Clear filters").click()
+    fpage.get_by_label("Stub", exact=True).check()
+    assert fpage.evaluate("window.kgMap.matchedIds()") == ["math.b.stub"]
+    fpage.get_by_role("button", name="Clear filters").click()
+    fpage.get_by_label("Lowest level").select_option("g8")
+    assert sorted(fpage.evaluate("window.kgMap.matchedIds()")) == ["math.b.stub", "math.b.u", "physics.p.f1"]
+
+
+def test_lineage_controls_follow_the_selected_topic(fpage):
+    select(fpage, "math.a.t3")
+    fpage.get_by_label("Direction").select_option("prerequisites")
+    assert sorted(fpage.evaluate("window.kgMap.matchedIds()")) == ["math.a.t1", "math.a.t2"]
+    fpage.get_by_label("Step limit").fill("1")
+    assert fpage.evaluate("window.kgMap.matchedIds()") == ["math.a.t2"]
+    select(fpage, "math.a.t4")  # the lineage re-anchors on the new selection
+    assert fpage.evaluate("window.kgMap.matchedIds()") == ["math.a.t3"]
+
+
+def test_url_restores_filters(page, tmp_path):
+    kg = filter_graph()
+    out = export_map(kg, tmp_path / "map.html")
+    filters = {"subjects": ["math"], "levelMin": "g6", "lineage": {"topic": "math.a.t3", "direction": "dependents"}}
+    page.goto(out.as_uri() + "#f=" + quote(json.dumps(filters)))
+    page.evaluate("window.kgMap.ready")
+    assert sorted(page.evaluate("window.kgMap.matchedIds()")) == ["math.a.t4", "math.b.u"]
+    assert page.locator("#match-count").inner_text() == f"2 of {len(kg.topics)} topics"
+    assert page.get_by_label("math", exact=True).is_checked()
+    # changing a filter writes the state back to the URL, and that link round-trips
+    page.evaluate("window.kgMap.setFilters({statuses: ['stub']})")
+    url = page.evaluate("location.href")
+    page.goto("about:blank")
+    page.goto(url)
+    page.evaluate("window.kgMap.ready")
+    assert page.evaluate("window.kgMap.matchedIds()") == ["math.b.stub"]
+
+
+@pytest.mark.parametrize(
+    "bad",
+    [
+        "#f=" + quote(json.dumps({"lineage": {"topic": "math.a.gone", "direction": "both"}})),
+        "#f=" + quote(json.dumps({"courses": ["math.zzz"], "subjects": ["nope"], "statuses": ["bogus"]})),
+        "#f=" + quote("{not json"),
+        "#f=%E0%A4%A",
+        "#f=" + quote("[1,2]"),
+        "#f=" + quote("null"),
+        "#unrelated",
+    ],
+)
+def test_stale_hash_shows_whole_graph(page, tmp_path, bad):
+    kg = filter_graph()
+    errors = []
+    page.on("pageerror", lambda e: errors.append(str(e)))
+    out = export_map(kg, tmp_path / "map.html")
+    page.goto(out.as_uri() + bad)
+    page.evaluate("window.kgMap.ready")
+    assert page.evaluate("window.kgMap.matchCount()") == len(kg.topics)
+    assert page.locator("#match-count").inner_text() == f"{len(kg.topics)} of {len(kg.topics)} topics"
+    assert errors == []
+
+
+def test_filtered_view_screenshot(fpage, tmp_path):
+    select(fpage, "math.a.t3")
+    fpage.get_by_label("Direction").select_option("both")
+    fpage.wait_for_timeout(400)
+    shot = tmp_path / "filters.png"
+    fpage.screenshot(path=str(shot))
+    assert shot.stat().st_size > 0
