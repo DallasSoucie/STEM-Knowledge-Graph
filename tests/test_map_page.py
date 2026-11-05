@@ -483,3 +483,93 @@ def test_selected_topic_always_shows_its_name(page, tmp_path):
     rects = page.evaluate("window.kgMap.labelRects()")
     assert wanted in [r["text"] for r in rects]
     assert_no_overlap(rects)
+
+
+# ---- partly built graphs -------------------------------------------------------------------------
+
+
+def small_graph(*sizes):
+    kg = KnowledgeGraph()
+    for c, n in enumerate(sizes):
+        cid = f"math.c{c}"
+        kg.courses[cid] = course(cid, n, levels=("g4", "g4"))
+        add(kg, *[topic(f"{cid}.t{i:03d}", level="g4") for i in range(n)])
+    return kg
+
+
+@pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
+@pytest.mark.parametrize("sizes", [(1,), (8,), (60,), (150,), (60, 80)])
+def test_small_graph_opens(page, tmp_path, sizes, size):
+    # labels show at once on these, so sigma draws one while it is still being constructed
+    page.set_viewport_size({"width": size[0], "height": size[1]})
+    errors = open_map(page, small_graph(*sizes), tmp_path)
+    assert page.locator("#nowebgl").count() == 0
+    assert page.evaluate("window.kgMap.topicCount()") == sum(sizes)
+    assert errors == []
+
+
+def test_startup_failure_is_reported_as_itself(page, tmp_path):
+    out = export_map(small_graph(4), tmp_path / "map.html")
+    source = out.read_text(encoding="utf-8")
+    broken = source.replace("sigma = new SigmaCtor(", 'throw new Error("boom"); sigma = new SigmaCtor(')
+    assert broken != source
+    out.write_text(broken, encoding="utf-8")
+    logged = []
+    page.on("console", lambda m: logged.append(m.text) if m.type == "error" else None)
+    page.goto(out.as_uri())
+    page.evaluate("window.kgMap.ready")
+    assert page.locator("#nowebgl").count() == 0
+    assert "boom" in page.inner_text("#map")
+    assert any("boom" in text for text in logged)
+
+
+def test_hovering_a_faded_topic_shows_its_name(page, tmp_path):
+    page.add_init_script(
+        """window.__painted = [];
+           const fill = CanvasRenderingContext2D.prototype.fillText;
+           CanvasRenderingContext2D.prototype.fillText = function (text, x, y) {
+             window.__painted.push(String(text));
+             return fill.call(this, text, x, y);
+           };"""
+    )
+    kg = small_graph(4)
+    kg.courses["physics.p"] = course("physics.p", 1, levels=("g4", "g4"))
+    add(kg, topic("physics.p.other", level="g4"))
+    open_map(page, kg, tmp_path)
+    page.evaluate("window.kgMap.setFilters({subjects: ['physics']})")  # math.c0.* fades
+    page.wait_for_timeout(200)
+    page.evaluate("window.__painted = []")
+    box = page.locator("#map").bounding_box()
+    at = page.evaluate("window.kgMap.nodeViewport('math.c0.t001')")
+    page.mouse.move(box["x"] + at["x"], box["y"] + at["y"])
+    page.wait_for_function("window.__painted.includes('math.c0.t001')", timeout=3000)
+    assert "null" not in page.evaluate("window.__painted")
+
+
+def in_view(page, kg):
+    return page.evaluate(
+        """ids => { const r = document.querySelector('#map').getBoundingClientRect();
+            return ids.filter(id => { const p = window.kgMap.nodeViewport(id);
+              return p.x >= 0 && p.x <= r.width && p.y >= 0 && p.y <= r.height; }).length; }""",
+        list(kg.topics),
+    )
+
+
+# 8 topics stack in one column at full-map zoom, and centring on one pushes the far end half a line off
+@pytest.mark.parametrize("n, wanted", [(8, 7), (150, 30)])
+def test_selecting_on_a_sparse_graph_keeps_neighbours_in_view(page, tmp_path, n, wanted):
+    kg = small_graph(n)
+    open_map(page, kg, tmp_path)
+    page.evaluate("id => window.kgMap.selectTopic(id)", f"math.c0.t{n // 2:03d}")
+    page.wait_for_timeout(500)
+    assert in_view(page, kg) >= wanted
+
+
+def test_selecting_on_a_dense_graph_separates_lines(page, tmp_path):
+    kg = manifest_graph(per_course=40)
+    open_map(page, kg, tmp_path)
+    a, b = "math.g6.t0", "math.g6.t22"  # 170-budget course: 22 topics to a line, so one line apart
+    page.evaluate("id => window.kgMap.selectTopic(id)", a)
+    page.wait_for_timeout(500)
+    gap = page.evaluate("([a, b]) => window.kgMap.nodeViewport(b).y - window.kgMap.nodeViewport(a).y", [a, b])
+    assert 15 <= gap <= 30

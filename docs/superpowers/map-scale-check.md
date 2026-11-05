@@ -45,7 +45,7 @@ Fixes in `src/kg/map/app.js`, all applying only to big maps so small ones are un
 
 1. Edges (brief's fallback). Past 10,000 edges they are removed from the sigma graph, not hidden.
    They are added back (a) when a filter is on, only those touching a matching topic, and (b) when
-   zoomed in past camera ratio 0.08 (above the 0.06 that selecting a topic zooms to), only those with
+   zoomed in past camera ratio 0.08 (selecting a topic always zooms past it on such a map), only those with
    an end near the view, refreshed after 120 ms without camera movement. All topics stay drawn.
 2. Nodes. Past 5,000 topics, topics draw as plain points when zoomed out; those near the view draw as
    circles once zoomed in past ratio 0.1. Circles for off-screen topics were the cost.
@@ -88,7 +88,11 @@ at 1920x1080, and `t11x-dark.png`.
   about 60 percent of the window height because the map area is 750 px wide; at 1920x1080 about 80 percent.
 - Mid zoom: course names fill in as you zoom in, one per block, and the current subject and level stay visible.
 - Zoomed in: topic names are readable and none printed over another. At lines about 20 px apart most topics
-  in view are named. Selecting a topic from anywhere lands at a zoom where neighbouring names show.
+  in view are named. Selecting a topic zooms until lines are about 20 px apart, capped at the full map, so
+  a sparse map keeps the neighbours in view. Tests cover that on one course of 8 (at least 7 in view) and of 150 topics (at least 30
+  in view), and the line gap on the real manifest with 40 topics per course. I looked at the result on `t11p-*`
+  (one course of 150) and `t11r-c-selected` (filled manifest). It does not promise neighbouring names on every
+  graph: labels are still culled, and on a dense map only the ones that fit show.
 - Lineage filter when zoomed in: matched names stand out against faded dots. Dark theme at zoom-out looks the same.
 
 What still looks weak:

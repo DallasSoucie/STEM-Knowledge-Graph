@@ -8,7 +8,7 @@
   };
   const FALLBACK_COLOUR = "#888780";
   const MAX_RESULTS = 20;
-  const SELECT_RATIO = 0.06; // camera zoom (smaller is closer) that selecting a topic zooms to
+  const SELECT_LINE_PX = 20; // selecting a topic zooms until a block's lines are this many pixels apart
   const MAX_DOT = 3.5; // topic radius in pixels at full zoom-out; dense maps use less, down to MIN_DOT
   const MIN_DOT = 1;
   const LINE_SPACING = 1; // graph units between a course block's lines, from layout.py
@@ -23,7 +23,7 @@
   // (only edges touching a matching topic). Every topic stays drawn. Small maps always draw all edges.
   // Edges are removed from sigma, not just hidden: hidden edges still cost a draw call each.
   const EDGE_LIMIT = 10000;
-  const EDGE_ZOOM = 0.08; // above SELECT_RATIO, so selecting a topic shows its edges
+  const EDGE_ZOOM = 0.08;
   const EDGE_IDLE_MS = 120;
   // Big maps draw topics as plain points, and only those near the view as smooth circles once zoomed
   // in past POINT_ZOOM: every node costs a draw call in the circle shader whether or not it is on
@@ -474,15 +474,16 @@
 
   function drawHoverLabel(context, d, settings) {
     const size = settings.labelSize;
+    const name = topics[byId.get(d.key)].name; // not d.label: a faded topic has none, and still names itself on hover
     context.font = settings.labelWeight + " " + size + "px " + settings.labelFont;
-    const width = context.measureText(d.label).width + 10;
+    const width = context.measureText(name).width + 10;
     context.fillStyle = theme().bg;
     context.shadowColor = "rgba(0,0,0,0.35)";
     context.shadowBlur = 6;
     context.fillRect(d.x + d.size + 2, d.y - size / 2 - 4, width, size + 8);
     context.shadowBlur = 0;
     context.fillStyle = theme().fg;
-    context.fillText(d.label, d.x + d.size + 7, d.y + size / 3);
+    context.fillText(name, d.x + d.size + 7, d.y + size / 3);
   }
 
   // ---- labels share one list of claimed space, per frame: the selected topic, then course labels
@@ -507,7 +508,7 @@
   // Runs once a frame, as late as possible: sigma updates its camera matrix after "beforeRender", so
   // this waits for the first topic label of the frame, or for the end of a frame without any.
   function claimLabels() {
-    if (labelsClaimed) return;
+    if (labelsClaimed || !sigma) return; // sigma draws its first frame inside its constructor
     labelsClaimed = true;
     labelRects = [];
     if (selected !== undefined) {
@@ -674,9 +675,16 @@
     placeCourses(w, h, placeLevels(w));
   }
 
-  function showNoWebGL() {
-    const message = el("div", "This map needs WebGL, which your browser couldn't start.", "empty");
-    message.id = "nowebgl";
+  function webglAvailable() {
+    const canvas = document.createElement("canvas");
+    return Boolean(canvas.getContext("webgl2") || canvas.getContext("webgl"));
+  }
+
+  function showStartFailure(err) {
+    const noWebGL = !webglAvailable();
+    const text = noWebGL ? "This map needs WebGL, which your browser couldn't start." : "The map couldn't start: " + err.message;
+    const message = el("div", text, "empty");
+    if (noWebGL) message.id = "nowebgl";
     mapEl.replaceChildren(message);
     labelsEl.replaceChildren();
     gutterEl.replaceChildren();
@@ -703,8 +711,9 @@
         enableEdgeEvents: false,
       });
     } catch (err) {
+      console.error(err);
       sigma = null;
-      showNoWebGL();
+      showStartFailure(err);
       return Promise.resolve();
     }
     sigma.on("clickNode", ({ node }) => selectTopic(node));
@@ -732,6 +741,13 @@
   }
 
   // ---- selection -------------------------------------------------------
+  // Relative to the map's density, so a sparse map keeps the topic's neighbours in view. Never out past
+  // the full map, and on a big map close enough to bring in the selected topic's edges.
+  function selectRatio() {
+    const ratio = Math.min(1, lineSpacingPx / SELECT_LINE_PX);
+    return edgeGated ? Math.min(ratio, EDGE_ZOOM * 0.75) : ratio;
+  }
+
   function selectTopic(id) {
     const i = byId.get(id);
     if (i === undefined) return Promise.resolve();
@@ -745,7 +761,7 @@
     const d = sigma.getNodeDisplayData(id);
     const camera = sigma.getCamera();
     return camera.animate(
-      { x: d.x, y: d.y, ratio: Math.min(camera.ratio, SELECT_RATIO) },
+      { x: d.x, y: d.y, ratio: Math.min(camera.ratio, selectRatio()) },
       { duration: 250 }
     );
   }
