@@ -2,7 +2,7 @@
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 LEVELS: tuple[str, ...] = (
     "gk",
@@ -10,6 +10,12 @@ LEVELS: tuple[str, ...] = (
     "uni-lower",
     "uni-upper",
 )
+
+
+def _check_level(level: str) -> str:
+    if level not in LEVELS:
+        raise ValueError(f"unknown level {level!r}; expected one of {', '.join(LEVELS)}")
+    return level
 
 
 def level_rank(level: str) -> int:
@@ -44,6 +50,11 @@ class Topic(_Strict):
     encompassed: list[Edge] = Field(default_factory=list)
     knowledge_points: list[KnowledgePoint] = Field(default_factory=list)
 
+    @field_validator("level")
+    @classmethod
+    def _known_level(cls, v: str | None) -> str | None:
+        return v if v is None else _check_level(v)
+
     @model_validator(mode="after")
     def _non_stub_needs_placement(self):
         if not self.is_stub and not (self.subject and self.course and self.level):
@@ -66,6 +77,13 @@ class Course(_Strict):
     budget: int
     follows: list[str] = Field(default_factory=list)
     view_topics: list[str] | None = None
+
+    @field_validator("levels")
+    @classmethod
+    def _known_levels(cls, v: tuple[str, str]) -> tuple[str, str]:
+        for level in v:
+            _check_level(level)
+        return v
 
     @property
     def is_view(self) -> bool:

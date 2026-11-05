@@ -1,0 +1,101 @@
+course: math.arith
+topics:
+  - id: math.arith.add-whole-numbers
+    name: Adding whole numbers
+    subject: math
+    course: math.arith
+    level: g4
+    status: draft
+    knowledge_points:
+      - id: kp1
+        can_do: Add two numbers under 100 without regrouping
+      - id: kp2
+        can_do: Add multi-digit numbers with regrouping
+      - id: kp3
+        can_do: Add three or more multi-digit numbers
+  - id: math.arith.multiply-whole-numbers
+    name: Multiplying whole numbers
+    subject: math
+    course: math.arith
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.arith.add-whole-numbers
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply a single digit by a single digit
+        key_prerequisites: [math.arith.add-whole-numbers]
+      - id: kp2
+        can_do: Multiply a multi-digit number by a single digit
+        key_prerequisites: [math.arith.add-whole-numbers]
+      - id: kp3
+        can_do: Multiply two multi-digit numbers
+        key_prerequisites: [math.arith.add-whole-numbers]
+  - id: math.arith.simplify-fractions
+    name: Simplifying fractions
+    subject: math
+    course: math.arith
+    level: g5
+    status: draft
+    prerequisites:
+      - topic: math.arith.multiply-whole-numbers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Simplify a fraction by a given common factor
+        key_prerequisites: [math.arith.multiply-whole-numbers]
+      - id: kp2
+        can_do: Simplify a fraction to lowest terms
+        key_prerequisites: [math.arith.multiply-whole-numbers]
+      - id: kp3
+        can_do: Decide whether two fractions are equivalent
+        key_prerequisites: [math.arith.multiply-whole-numbers]
+  - id: math.arith.add-like-fractions
+    name: Adding fractions with like denominators
+    subject: math
+    course: math.arith
+    level: g5
+    status: draft
+    prerequisites:
+      - topic: math.arith.simplify-fractions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.arith.add-whole-numbers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two proper fractions with the same denominator
+        key_prerequisites: [math.arith.add-whole-numbers]
+      - id: kp2
+        can_do: Add like fractions and simplify the sum
+        key_prerequisites: [math.arith.simplify-fractions]
+      - id: kp3
+        can_do: Add like fractions with a sum above one
+        key_prerequisites: [math.arith.simplify-fractions]
+  - id: math.arith.add-unlike-fractions
+    name: Adding fractions with unlike denominators
+    subject: math
+    course: math.arith
+    level: g5
+    status: draft
+    prerequisites:
+      - topic: math.arith.add-like-fractions
+        encompassing: 0.7
+        confidence: high
+      - topic: math.arith.simplify-fractions
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add fractions when one denominator divides the other
+        key_prerequisites: [math.arith.add-like-fractions]
+      - id: kp2
+        can_do: Add fractions with coprime denominators
+        key_prerequisites: [math.arith.add-like-fractions]
+      - id: kp3
+        can_do: Add unlike fractions and simplify the result
+        key_prerequisites: [math.arith.simplify-fractions]

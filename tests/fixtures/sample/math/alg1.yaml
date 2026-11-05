@@ -1,0 +1,129 @@
+course: math.alg1
+topics:
+  - id: math.alg1.evaluate-expressions
+    name: Evaluating algebraic expressions
+    subject: math
+    course: math.alg1
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.arith.add-unlike-fractions
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate a one-variable expression at a whole number
+        key_prerequisites: [math.arith.multiply-whole-numbers]
+      - id: kp2
+        can_do: Evaluate an expression with several operations
+        key_prerequisites: [math.arith.multiply-whole-numbers]
+      - id: kp3
+        can_do: Evaluate an expression with two variables
+        key_prerequisites: [math.arith.add-whole-numbers]
+  - id: math.alg1.combine-like-terms
+    name: Combining like terms
+    subject: math
+    course: math.alg1
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.alg1.evaluate-expressions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine like terms with positive coefficients
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp2
+        can_do: Combine like terms with negative coefficients
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp3
+        can_do: Combine like terms in expressions with several variables
+        key_prerequisites: [math.alg1.evaluate-expressions]
+  - id: math.alg1.solve-one-step-equations
+    name: Solving one-step linear equations
+    subject: math
+    course: math.alg1
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.alg1.evaluate-expressions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve x + a = b with whole numbers
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp2
+        can_do: Solve ax = b with whole numbers
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp3
+        can_do: Solve one-step equations with fractions
+        key_prerequisites: [math.arith.add-unlike-fractions]
+  - id: math.alg1.solve-two-step-equations
+    name: Solving two-step linear equations
+    subject: math
+    course: math.alg1
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.alg1.solve-one-step-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve ax + b = c with positive integers
+        key_prerequisites: [math.alg1.solve-one-step-equations]
+      - id: kp2
+        can_do: Solve two-step equations with negative numbers
+        key_prerequisites: [math.alg1.solve-one-step-equations]
+      - id: kp3
+        can_do: Solve two-step equations with fractional coefficients
+        key_prerequisites: [math.alg1.solve-one-step-equations]
+  - id: math.alg1.solve-multi-step-equations
+    name: Solving multi-step linear equations
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.solve-two-step-equations
+        encompassing: 0.7
+        confidence: high
+      - topic: math.alg1.combine-like-terms
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.alg1.combine-like-terms
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve equations needing one simplification step first
+        key_prerequisites: [math.alg1.combine-like-terms]
+      - id: kp2
+        can_do: Solve equations with variables on both sides
+        key_prerequisites: [math.alg1.solve-two-step-equations]
+      - id: kp3
+        can_do: Solve equations with distribution and fractions
+        key_prerequisites: [math.alg1.solve-two-step-equations, math.alg1.combine-like-terms]
+  - id: math.alg1.graph-linear-equations
+    name: Graphing linear equations
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.solve-two-step-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Complete a table of values for y = mx + b
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp2
+        can_do: Plot a line from a table of values
+        key_prerequisites: [math.alg1.evaluate-expressions]
+      - id: kp3
+        can_do: Graph a line from slope and intercept
+        key_prerequisites: [math.alg1.solve-two-step-equations]
