@@ -11,6 +11,7 @@ from kg.map.export import export_map
 from kg.reports import find_duplicates, review_queue, review_report, stats as compute_stats
 from kg.store import GraphLoadError, load_graph, write_graph
 from kg.synthetic import generate
+from kg.weights import WeightImportError, export_weights, import_weights
 
 app = typer.Typer(add_completion=False, no_args_is_help=True)
 
@@ -151,6 +152,30 @@ def split_topic_command(
 
 
 CourseOption = typer.Option(None, "--course", help="Limit to one course ID.")
+
+
+@app.command("export-weights")
+def export_weights_command(
+    root: Path = RootOption,
+    out: Path = typer.Option(..., "--out", help="CSV file to write."),
+) -> None:
+    """Write every edge weight to a CSV for bulk editing."""
+    export_weights(_load(root), out)
+    typer.echo(f"wrote {out}")
+
+
+@app.command("import-weights")
+def import_weights_command(file: Path, root: Path = RootOption) -> None:
+    """Apply weights and confidences from a CSV. Exit 1, writing nothing, on any problem."""
+    kg = _load(root)
+    try:
+        edited = import_weights(kg, file)
+    except (WeightImportError, OSError, UnicodeDecodeError) as exc:
+        for problem in getattr(exc, "problems", [str(exc)]):
+            typer.echo(problem)
+        raise _fail("import failed; nothing written") from exc
+    _commit(edited)
+    typer.echo(f"imported weights from {file}")
 
 
 def _counts(title: str, counts: dict) -> None:
