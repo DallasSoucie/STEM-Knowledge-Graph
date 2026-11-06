@@ -1,0 +1,541 @@
+course: math.k
+topics:
+  - id: math.k.tell-same-different
+    name: Telling same from different
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    knowledge_points:
+      - id: kp1
+        can_do: Find the object that matches a given object
+      - id: kp2
+        can_do: Say whether two objects are the same or different in color
+      - id: kp3
+        can_do: Say whether two objects are the same or different in shape or size
+      - id: kp4
+        can_do: Pick the one object that does not belong in a small group
+  - id: math.k.match-one-to-one
+    name: Matching objects one to one
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.tell-same-different
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Give each object in a group exactly one partner from another group
+      - id: kp2
+        can_do: Tell whether any objects are left without a partner
+      - id: kp3
+        can_do: Pair up two groups whose objects are spread out
+  - id: math.k.sort-by-one-attribute
+    name: Sorting objects by one attribute
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.tell-same-different
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sort objects into two given groups by color
+        key_prerequisites: [math.k.tell-same-different]
+      - id: kp2
+        can_do: Sort objects into two given groups by shape or size
+        key_prerequisites: [math.k.tell-same-different]
+      - id: kp3
+        can_do: Sort objects into three given groups
+      - id: kp4
+        can_do: Choose an attribute to sort by and say the rule used
+  - id: math.k.say-numbers-to-5
+    name: Saying number names to 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    knowledge_points:
+      - id: kp1
+        can_do: Say the number names 1 to 3 in order
+      - id: kp2
+        can_do: Say the number names 1 to 5 in order
+      - id: kp3
+        can_do: Say which number comes next, up to 5
+  - id: math.k.count-objects-to-5
+    name: Counting objects to 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.match-one-to-one
+        encompassing: 0.5
+        confidence: high
+      - topic: math.k.say-numbers-to-5
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count up to 3 objects in a line, touching each one once
+        key_prerequisites: [math.k.say-numbers-to-5, math.k.match-one-to-one]
+      - id: kp2
+        can_do: Count up to 5 objects in a line, touching each one once
+        key_prerequisites: [math.k.say-numbers-to-5, math.k.match-one-to-one]
+      - id: kp3
+        can_do: Count up to 5 objects in a circle without counting one twice
+        key_prerequisites: [math.k.match-one-to-one]
+  - id: math.k.last-count-tells-how-many
+    name: Knowing the last number counted tells how many
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-objects-to-5
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Answer how many after counting up to 3 objects
+        key_prerequisites: [math.k.count-objects-to-5]
+      - id: kp2
+        can_do: Answer how many after counting up to 5 objects
+        key_prerequisites: [math.k.count-objects-to-5]
+      - id: kp3
+        can_do: Say the amount stays the same when objects are moved around
+      - id: kp4
+        can_do: Say the amount stays the same when counted from the other end
+  - id: math.k.see-small-groups
+    name: Seeing small groups without counting
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.last-count-tells-how-many
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name a group of 1 to 3 at a glance
+        key_prerequisites: [math.k.last-count-tells-how-many]
+      - id: kp2
+        can_do: Name 4 or 5 dots in a familiar dice pattern at a glance
+      - id: kp3
+        can_do: Name 4 or 5 objects in a loose arrangement at a glance
+  - id: math.k.read-numerals-1-to-5
+    name: Reading numerals 1 to 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.last-count-tells-how-many
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say the name of a written numeral from 1 to 5
+      - id: kp2
+        can_do: Match a written numeral from 1 to 5 to a group of that size
+        key_prerequisites: [math.k.last-count-tells-how-many]
+      - id: kp3
+        can_do: Pick the numeral that tells how many are in a group
+        key_prerequisites: [math.k.last-count-tells-how-many]
+  - id: math.k.count-out-to-5
+    name: Counting out a given number to 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.last-count-tells-how-many
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take out up to 3 objects when asked
+        key_prerequisites: [math.k.last-count-tells-how-many]
+      - id: kp2
+        can_do: Take out up to 5 objects when asked
+        key_prerequisites: [math.k.last-count-tells-how-many]
+      - id: kp3
+        can_do: Stop at the asked-for number when taking from a larger pile
+        key_prerequisites: [math.k.last-count-tells-how-many]
+  - id: math.k.zero-as-none
+    name: Zero as none
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.last-count-tells-how-many
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say zero when a group has no objects
+      - id: kp2
+        can_do: Match the numeral 0 to an empty group
+      - id: kp3
+        can_do: Pick the group that has zero from several groups
+        key_prerequisites: [math.k.last-count-tells-how-many]
+  - id: math.k.write-numerals-0-to-5
+    name: Writing numerals 0 to 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.read-numerals-1-to-5
+        encompassing: 0.5
+        confidence: high
+      - topic: math.k.zero-as-none
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Trace the numerals 0 to 5
+      - id: kp2
+        can_do: Write a numeral from 0 to 5 when it is named
+        key_prerequisites: [math.k.read-numerals-1-to-5]
+      - id: kp3
+        can_do: Write the numeral that tells how many are in a group
+        key_prerequisites: [math.k.read-numerals-1-to-5, math.k.zero-as-none]
+  - id: math.k.say-numbers-to-10
+    name: Saying number names to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.say-numbers-to-5
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say the number names 1 to 7 in order
+        key_prerequisites: [math.k.say-numbers-to-5]
+      - id: kp2
+        can_do: Say the number names 1 to 10 in order
+        key_prerequisites: [math.k.say-numbers-to-5]
+      - id: kp3
+        can_do: Say which number comes next, up to 10
+  - id: math.k.count-line-to-10
+    name: Counting objects in a line to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.last-count-tells-how-many
+        encompassing: 0.8
+        confidence: high
+      - topic: math.k.say-numbers-to-10
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count 6 or 7 objects in a line and say how many
+        key_prerequisites: [math.k.say-numbers-to-10, math.k.last-count-tells-how-many]
+      - id: kp2
+        can_do: Count 8 to 10 objects in a line and say how many
+        key_prerequisites: [math.k.say-numbers-to-10, math.k.last-count-tells-how-many]
+      - id: kp3
+        can_do: Count up to 10 objects in rows or a circle and say how many
+        key_prerequisites: [math.k.last-count-tells-how-many]
+  - id: math.k.count-scattered-to-10
+    name: Counting scattered objects to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-line-to-10
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count up to 6 scattered objects by moving each one aside
+        key_prerequisites: [math.k.count-line-to-10]
+      - id: kp2
+        can_do: Count up to 10 scattered objects by moving each one aside
+        key_prerequisites: [math.k.count-line-to-10]
+      - id: kp3
+        can_do: Count up to 10 scattered pictures that cannot be moved
+        key_prerequisites: [math.k.count-line-to-10]
+  - id: math.k.read-numerals-6-to-10
+    name: Reading numerals 6 to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.read-numerals-1-to-5
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.k.count-line-to-10
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say the name of a written numeral from 6 to 10
+      - id: kp2
+        can_do: Match a written numeral from 6 to 10 to a group of that size
+        key_prerequisites: [math.k.count-line-to-10]
+      - id: kp3
+        can_do: Tell apart numerals that look alike, such as 6 and 9
+  - id: math.k.write-numerals-6-to-10
+    name: Writing numerals 6 to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-numerals-0-to-5
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.k.read-numerals-6-to-10
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the numerals 6 to 8 when they are named
+        key_prerequisites: [math.k.read-numerals-6-to-10]
+      - id: kp2
+        can_do: Write the numerals 9 and 10 when they are named
+        key_prerequisites: [math.k.read-numerals-6-to-10]
+      - id: kp3
+        can_do: Write the numeral that tells how many are in a group up to 10
+        key_prerequisites: [math.k.read-numerals-6-to-10]
+  - id: math.k.count-out-to-10
+    name: Counting out a given number to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-out-to-5
+        encompassing: 0.7
+        confidence: high
+      - topic: math.k.count-scattered-to-10
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Take out 6 to 8 objects when asked
+        key_prerequisites: [math.k.count-out-to-5]
+      - id: kp2
+        can_do: Take out 9 or 10 objects when asked
+        key_prerequisites: [math.k.count-out-to-5]
+      - id: kp3
+        can_do: Recount a group to check it has the asked-for number
+        key_prerequisites: [math.k.count-scattered-to-10]
+  - id: math.k.ten-frame
+    name: Showing numbers on a ten frame
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.see-small-groups
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.k.count-line-to-10
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fill a ten frame to show a number from 1 to 5
+        key_prerequisites: [math.k.count-line-to-10]
+      - id: kp2
+        can_do: Fill a ten frame to show a number from 6 to 10
+        key_prerequisites: [math.k.count-line-to-10]
+      - id: kp3
+        can_do: Say the number shown on a filled ten frame
+        key_prerequisites: [math.k.see-small-groups]
+  - id: math.k.five-and-some-more
+    name: Seeing 6 to 9 as five and some more
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.ten-frame
+        encompassing: 0.75
+        confidence: high
+    encompassed:
+      - topic: math.k.see-small-groups
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show 6 or 7 as a full row of five and some more
+        key_prerequisites: [math.k.ten-frame]
+      - id: kp2
+        can_do: Show 8 or 9 as a full row of five and some more
+        key_prerequisites: [math.k.ten-frame]
+      - id: kp3
+        can_do: Say the total for five and some more without counting from one
+        key_prerequisites: [math.k.see-small-groups]
+  - id: math.k.one-more-one-less
+    name: One more and one less to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-scattered-to-10
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say how many there are after one object is added
+        key_prerequisites: [math.k.count-scattered-to-10]
+      - id: kp2
+        can_do: Say how many there are after one object is removed
+        key_prerequisites: [math.k.count-scattered-to-10]
+      - id: kp3
+        can_do: Say the number that is one more than a given number to 10
+      - id: kp4
+        can_do: Say the number that is one less than a given number to 10
+  - id: math.k.order-numbers-to-10
+    name: Putting numbers 0 to 10 in order
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.zero-as-none
+        encompassing: 0.1
+        confidence: medium
+      - topic: math.k.read-numerals-6-to-10
+        encompassing: 0.55
+        confidence: high
+      - topic: math.k.one-more-one-less
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Put number cards 1 to 5 in order
+        key_prerequisites: [math.k.one-more-one-less]
+      - id: kp2
+        can_do: Put number cards 0 to 10 in order
+        key_prerequisites: [math.k.zero-as-none, math.k.read-numerals-6-to-10]
+      - id: kp3
+        can_do: Fill in a missing number in a row from 0 to 10
+        key_prerequisites: [math.k.one-more-one-less, math.k.read-numerals-6-to-10]
+  - id: math.k.count-back-from-10
+    name: Counting backward from 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.order-numbers-to-10
+        encompassing: 0.5
+        confidence: medium
+    encompassed:
+      - topic: math.k.one-more-one-less
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count backward from 5 to 0
+        key_prerequisites: [math.k.one-more-one-less]
+      - id: kp2
+        can_do: Count backward from 10 to 0
+        key_prerequisites: [math.k.order-numbers-to-10]
+      - id: kp3
+        can_do: Count backward from a given number up to 10
+        key_prerequisites: [math.k.order-numbers-to-10]
+  - id: math.k.compare-groups-matching
+    name: Comparing groups by matching
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.match-one-to-one
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Pair two groups and say which has more
+        key_prerequisites: [math.k.match-one-to-one]
+      - id: kp2
+        can_do: Pair two groups and say which has fewer
+        key_prerequisites: [math.k.match-one-to-one]
+      - id: kp3
+        can_do: Pair two groups and say when they have the same number
+        key_prerequisites: [math.k.match-one-to-one]
+  - id: math.k.compare-groups-counting
+    name: Comparing groups by counting to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-scattered-to-10
+        encompassing: 0.8
+        confidence: high
+      - topic: math.k.compare-groups-matching
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count two groups up to 5 and say which has more
+        key_prerequisites: [math.k.count-scattered-to-10]
+      - id: kp2
+        can_do: Count two groups up to 10 and say which has more or fewer
+        key_prerequisites: [math.k.count-scattered-to-10]
+      - id: kp3
+        can_do: Compare groups when the group with more has the smaller objects
+        key_prerequisites: [math.k.compare-groups-matching]
+  - id: math.k.compare-numerals-to-10
+    name: Comparing written numbers to 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.order-numbers-to-10
+        encompassing: 0.6
+        confidence: high
+      - topic: math.k.compare-groups-counting
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say which of two written numbers up to 5 is greater
+        key_prerequisites: [math.k.order-numbers-to-10]
+      - id: kp2
+        can_do: Say which of two written numbers up to 10 is greater or less
+        key_prerequisites: [math.k.order-numbers-to-10]
+      - id: kp3
+        can_do: Pick the greatest number from three written numbers up to 10
+        key_prerequisites: [math.k.order-numbers-to-10]
+  - id: math.k.equal-unequal-balance
+    name: Equal and unequal as balance
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.compare-groups-counting
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say whether a pictured balance is level or tipped
+      - id: kp2
+        can_do: Say whether two groups are equal or unequal after counting
+        key_prerequisites: [math.k.compare-groups-counting]
+      - id: kp3
+        can_do: Make two unequal groups equal by adding or removing objects
+        key_prerequisites: [math.k.compare-groups-counting]
