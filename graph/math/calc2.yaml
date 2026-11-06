@@ -1,0 +1,3746 @@
+course: math.calc2
+topics:
+  - id: math.calc2.integration-by-parts
+    name: Using integration by parts
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.product-rule-derivative
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the parts formula from the product rule
+        key_prerequisites: [math.calc1.product-rule-derivative]
+      - id: kp2
+        can_do: Integrate x times an exponential
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp3
+        can_do: Integrate x times sine or cosine
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Integrate a quadratic times an exponential with one step left over
+        key_prerequisites: [math.calc1.u-substitution-definite]
+  - id: math.calc2.parts-definite
+    name: Using integration by parts on definite integrals
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate boundary terms at the limits
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp2
+        can_do: Evaluate a definite parts integral with an exponential
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp3
+        can_do: Evaluate a definite parts integral with trig
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp4
+        can_do: Evaluate a definite parts integral with a log
+        key_prerequisites: [math.calc2.integration-by-parts]
+  - id: math.calc2.improper-infinite-limits
+    name: Evaluating improper integrals with infinite limits
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-exp-log
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.parts-definite
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an improper integral as a limit
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp2
+        can_do: Evaluate a convergent power integral
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp3
+        can_do: Show a power integral diverges
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp4
+        can_do: Evaluate an exponential tail needing parts
+        key_prerequisites: [math.calc2.parts-definite, math.calc2.integration-by-parts]
+  - id: math.calc2.p-integrals
+    name: Using the p-integral test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the integral of one over x to the p from one to infinity
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp2
+        can_do: Decide convergence from the value of p
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find the p condition on zero to one
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp4
+        can_do: Use the test with a constant multiple
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+  - id: math.calc2.parts-choose-u
+    name: Choosing parts for integration by parts
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rank factor types for choosing u
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp2
+        can_do: Choose u for a power and exponential
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp3
+        can_do: Choose u for a power and a log
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp4
+        can_do: Fix a poor choice of u
+        key_prerequisites: [math.calc2.integration-by-parts]
+  - id: math.calc2.parts-with-log-inverse
+    name: Using parts with logs and inverse trig
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate ln x
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp2
+        can_do: Integrate a power times a log
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp3
+        can_do: Integrate arctan x
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp4
+        can_do: Integrate arcsin x
+        key_prerequisites: [math.calc2.integration-by-parts]
+  - id: math.calc2.parts-repeated
+    name: Using integration by parts repeatedly
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parts-choose-u
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.parts-with-log-inverse
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply parts twice to a quadratic with an exponential
+        key_prerequisites: [math.calc2.parts-choose-u]
+      - id: kp2
+        can_do: Apply parts twice with trig
+        key_prerequisites: [math.calc2.parts-choose-u]
+      - id: kp3
+        can_do: Use a tabular layout
+        key_prerequisites: [math.calc2.parts-choose-u]
+      - id: kp4
+        can_do: Apply parts to a log squared
+        key_prerequisites: [math.calc2.parts-with-log-inverse]
+  - id: math.calc2.parts-cyclic
+    name: Using cyclic integration by parts
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parts-repeated
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot when the original integral returns
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp2
+        can_do: Solve for an exponential times sine
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp3
+        can_do: Solve for an exponential times cosine
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp4
+        can_do: Solve for secant cubed
+        key_prerequisites: [math.calc2.parts-repeated]
+  - id: math.calc2.parts-reduction-formula
+    name: Deriving reduction formulas
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parts-repeated
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a reduction formula for a power of a log
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp2
+        can_do: Derive a reduction formula for a power of sine
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp3
+        can_do: Use a reduction formula repeatedly
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp4
+        can_do: Use a reduction formula on a definite integral
+        key_prerequisites: [math.calc2.parts-repeated]
+  - id: math.calc2.odd-power-sine-cosine
+    name: Integrating odd powers of sine or cosine
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-with-trig
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Peel off one cosine with an odd power
+        key_prerequisites: [math.calc1.substitution-with-trig]
+      - id: kp2
+        can_do: Peel off one sine with an odd power
+        key_prerequisites: [math.calc1.substitution-with-trig]
+      - id: kp3
+        can_do: Use the Pythagorean identity after peeling
+        key_prerequisites: [math.calc1.substitution-with-trig]
+      - id: kp4
+        can_do: Handle odd power with a composite angle
+        key_prerequisites: [math.calc1.substitution-with-trig]
+  - id: math.calc2.even-power-sine-cosine
+    name: Integrating even powers of sine and cosine
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.odd-power-sine-cosine
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.reduce-powers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the half-angle identity for sine squared
+        key_prerequisites: [math.precalc.reduce-powers]
+      - id: kp2
+        can_do: Use the half-angle identity for cosine squared
+        key_prerequisites: [math.precalc.reduce-powers]
+      - id: kp3
+        can_do: Integrate a fourth power
+        key_prerequisites: [math.precalc.reduce-powers]
+      - id: kp4
+        can_do: Integrate both even powers
+        key_prerequisites: [math.calc2.odd-power-sine-cosine, math.precalc.reduce-powers]
+  - id: math.calc2.powers-sine-cosine
+    name: Integrating powers of sine and cosine
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.even-power-sine-cosine
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.substitution-with-trig
+        encompassing: 0.1
+        confidence: medium
+      - topic: math.precalc.reduce-powers
+        encompassing: 0.1
+        confidence: medium
+      - topic: math.calc2.odd-power-sine-cosine
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a method from the exponents
+        key_prerequisites: [math.calc2.even-power-sine-cosine]
+      - id: kp2
+        can_do: Integrate an odd and even mix
+        key_prerequisites: [math.calc2.even-power-sine-cosine]
+      - id: kp3
+        can_do: Integrate a product of even powers
+        key_prerequisites: [math.calc2.even-power-sine-cosine]
+      - id: kp4
+        can_do: Integrate with a substituted angle
+        key_prerequisites: [math.calc2.even-power-sine-cosine]
+  - id: math.calc2.trig-products-different-angles
+    name: Integrating products with different angles
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.powers-sine-cosine
+        encompassing: 0.3
+        confidence: high
+      - topic: math.precalc.product-sum-identities
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a product-to-sum form for sine and cosine
+        key_prerequisites: [math.precalc.product-sum-identities]
+      - id: kp2
+        can_do: Use it for two sines
+        key_prerequisites: [math.precalc.product-sum-identities]
+      - id: kp3
+        can_do: Use it for two cosines
+        key_prerequisites: [math.precalc.product-sum-identities]
+      - id: kp4
+        can_do: Evaluate over a full period
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+  - id: math.calc2.trig-sub-sine
+    name: Using trig substitution with sine
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.powers-sine-cosine
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.substitution-inverse-trig
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the sine substitution for a square root
+        key_prerequisites: [math.calc1.substitution-inverse-trig]
+      - id: kp2
+        can_do: Draw the reference triangle
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+      - id: kp3
+        can_do: Integrate a root of a constant minus x squared
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+      - id: kp4
+        can_do: Return to x with a triangle
+        key_prerequisites: [math.calc2.powers-sine-cosine, math.calc1.substitution-inverse-trig]
+  - id: math.calc2.tangent-secant-even
+    name: Integrating with even powers of secant
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.odd-power-sine-cosine
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Peel off secant squared
+        key_prerequisites: [math.calc2.odd-power-sine-cosine]
+      - id: kp2
+        can_do: Convert the rest to tangent
+        key_prerequisites: [math.calc2.odd-power-sine-cosine]
+      - id: kp3
+        can_do: Integrate a tangent power with an even secant power
+        key_prerequisites: [math.calc2.odd-power-sine-cosine]
+      - id: kp4
+        can_do: Integrate an even power of secant alone
+        key_prerequisites: [math.calc2.odd-power-sine-cosine]
+  - id: math.calc2.tangent-secant-odd
+    name: Integrating with odd powers of tangent
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.tangent-secant-even
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Peel off secant tangent
+        key_prerequisites: [math.calc2.tangent-secant-even]
+      - id: kp2
+        can_do: Convert the rest to secant
+        key_prerequisites: [math.calc2.tangent-secant-even]
+      - id: kp3
+        can_do: Integrate an odd tangent power with any secant power
+        key_prerequisites: [math.calc2.tangent-secant-even]
+      - id: kp4
+        can_do: Integrate a pure power of tangent
+        key_prerequisites: [math.calc2.tangent-secant-even]
+  - id: math.calc2.powers-tangent-secant
+    name: Integrating powers of tangent and secant
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.powers-sine-cosine
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.tangent-secant-odd
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.tangent-secant-even
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose the method from the exponents
+        key_prerequisites: [math.calc2.tangent-secant-odd]
+      - id: kp2
+        can_do: Integrate secant
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+      - id: kp3
+        can_do: Integrate secant cubed by parts
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+      - id: kp4
+        can_do: Integrate cotangent and cosecant analogues
+        key_prerequisites: [math.calc2.tangent-secant-odd, math.calc2.tangent-secant-even]
+  - id: math.calc2.trig-sub-tangent
+    name: Using trig substitution with tangent
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-sub-sine
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.powers-tangent-secant
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the tangent substitution
+        key_prerequisites: [math.calc2.trig-sub-sine]
+      - id: kp2
+        can_do: Integrate one over x squared plus a constant
+        key_prerequisites: [math.calc2.powers-tangent-secant]
+      - id: kp3
+        can_do: Handle a root of a sum of squares
+        key_prerequisites: [math.calc2.powers-tangent-secant]
+      - id: kp4
+        can_do: Return to x with a triangle
+        key_prerequisites: [math.calc2.trig-sub-sine]
+  - id: math.calc2.trig-sub-secant
+    name: Using trig substitution with secant
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-sub-tangent
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the secant substitution
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp2
+        can_do: Choose the sign for x positive
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp3
+        can_do: Integrate a root of x squared minus a constant
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp4
+        can_do: Return to x with a triangle
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+  - id: math.calc2.trig-sub-completing-square
+    name: Completing the square before trig substitution
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-sub-secant
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.alg1.complete-the-square-expression
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Complete a square under a root
+        key_prerequisites: [math.alg1.complete-the-square-expression]
+      - id: kp2
+        can_do: Shift then substitute
+        key_prerequisites: [math.calc2.trig-sub-secant]
+      - id: kp3
+        can_do: Handle a quadratic denominator
+        key_prerequisites: [math.calc2.trig-sub-secant, math.alg1.complete-the-square-expression]
+      - id: kp4
+        can_do: Integrate with a linear numerator
+        key_prerequisites: [math.calc2.trig-sub-secant]
+  - id: math.calc2.trig-sub-definite
+    name: Changing limits in a trig substitution
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-sub-secant
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Change limits to the angle
+        key_prerequisites: [math.calc2.trig-sub-secant]
+      - id: kp2
+        can_do: Evaluate without returning to x
+        key_prerequisites: [math.calc2.trig-sub-secant]
+      - id: kp3
+        can_do: Find an area of a circular segment
+        key_prerequisites: [math.calc2.trig-sub-secant]
+      - id: kp4
+        can_do: Find an ellipse's area
+        key_prerequisites: [math.calc2.trig-sub-secant]
+  - id: math.calc2.partial-fractions-setup
+    name: Choosing a partial fraction form
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.1
+        confidence: low
+      - topic: math.precalc.partial-fractions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell proper from improper rational functions
+        key_prerequisites: [math.precalc.partial-fractions]
+      - id: kp2
+        can_do: Write the form for linear factors
+        key_prerequisites: [math.precalc.partial-fractions]
+      - id: kp3
+        can_do: Write the form for repeated factors
+        key_prerequisites: [math.precalc.partial-fractions]
+      - id: kp4
+        can_do: Write the form for irreducible quadratic factors
+        key_prerequisites: [math.precalc.partial-fractions]
+  - id: math.calc2.partial-fractions-linear
+    name: Integrating with distinct linear factors
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-setup
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.1
+        confidence: medium
+      - topic: math.precalc.partial-fractions
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for constants with cover-up
+        key_prerequisites: [math.calc2.partial-fractions-setup]
+      - id: kp2
+        can_do: Integrate two linear factors
+        key_prerequisites: [math.calc2.partial-fractions-setup]
+      - id: kp3
+        can_do: Integrate three linear factors
+        key_prerequisites: [math.calc2.partial-fractions-setup]
+      - id: kp4
+        can_do: Evaluate a definite rational integral
+        key_prerequisites: [math.calc2.partial-fractions-setup]
+  - id: math.calc2.partial-fractions-repeated-integral
+    name: Integrating with repeated linear factors
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.partial-fractions-repeated
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find constants for a squared factor
+        key_prerequisites: [math.precalc.partial-fractions-repeated]
+      - id: kp2
+        can_do: Integrate a squared factor
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp3
+        can_do: Integrate a cubed factor
+        key_prerequisites: [math.calc2.partial-fractions-linear, math.precalc.partial-fractions-repeated]
+      - id: kp4
+        can_do: Integrate with a repeated factor and a separate factor
+        key_prerequisites: [math.calc2.partial-fractions-linear, math.precalc.partial-fractions-repeated]
+  - id: math.calc2.long-division-first
+    name: Dividing before integrating a rational function
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.alg2.polynomial-long-division
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect an improper integrand
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp2
+        can_do: Divide a rational function first
+        key_prerequisites: [math.alg2.polynomial-long-division]
+      - id: kp3
+        can_do: Integrate a quotient and remainder
+        key_prerequisites: [math.calc2.partial-fractions-linear, math.alg2.polynomial-long-division]
+      - id: kp4
+        can_do: Combine with partial fractions
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+  - id: math.calc2.rationalizing-substitutions
+    name: Using rationalizing substitutions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute for a square root
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp2
+        can_do: Substitute for mixed fractional powers
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp3
+        can_do: Substitute for an exponential denominator
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp4
+        can_do: Use a half-angle tangent substitution
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+  - id: math.calc2.log-and-arctan-integrals
+    name: Integrating simple rational functions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.substitution-inverse-trig
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate one over a linear function
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp2
+        can_do: Integrate one over a sum of squares
+        key_prerequisites: [math.calc1.substitution-inverse-trig]
+      - id: kp3
+        can_do: Integrate x over a sum of squares
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp4
+        can_do: Split a linear numerator over a quadratic
+        key_prerequisites: [math.calc1.substitution-with-exp-log, math.calc1.substitution-inverse-trig]
+  - id: math.calc2.partial-fractions-quadratic-integral
+    name: Integrating with quadratic factors
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.3
+        confidence: high
+      - topic: math.precalc.partial-fractions-quadratic
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.log-and-arctan-integrals
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.substitution-inverse-trig
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find constants for a quadratic factor
+        key_prerequisites: [math.precalc.partial-fractions-quadratic]
+      - id: kp2
+        can_do: Integrate with one linear and one quadratic factor
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp3
+        can_do: Complete a square inside a quadratic factor
+        key_prerequisites: [math.calc2.log-and-arctan-integrals]
+      - id: kp4
+        can_do: Integrate two different quadratic factors
+        key_prerequisites: [math.precalc.partial-fractions-quadratic, math.calc2.log-and-arctan-integrals]
+  - id: math.calc2.strategy-for-integration
+    name: Choosing a method of integration
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-quadratic-integral
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.parts-reduction-formula
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.calc2.trig-sub-definite
+        encompassing: 0.1
+        confidence: low
+      - topic: math.calc2.partial-fractions-repeated-integral
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc2.parts-repeated
+        encompassing: 0.15
+        confidence: high
+      - topic: math.calc2.trig-sub-secant
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Simplify an integrand first
+        key_prerequisites: [math.calc2.partial-fractions-quadratic-integral]
+      - id: kp2
+        can_do: Identify a substitution by shape
+        key_prerequisites: [math.calc2.partial-fractions-repeated-integral]
+      - id: kp3
+        can_do: Choose between parts and substitution
+        key_prerequisites: [math.calc2.parts-repeated]
+      - id: kp4
+        can_do: Classify and integrate a mixed list
+        key_prerequisites: [math.calc2.partial-fractions-quadratic-integral, math.calc2.parts-reduction-formula, math.calc2.trig-sub-secant]
+  - id: math.calc2.improper-both-infinite
+    name: Splitting doubly infinite improper integrals
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split at a convenient point
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp2
+        can_do: Evaluate with an arctangent
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Show that one divergent piece spoils the integral
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp4
+        can_do: Tell the principal value mistake from true convergence
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+  - id: math.calc2.improper-discontinuous
+    name: Evaluating improper integrals with discontinuities
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-both-infinite
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Spot an infinite integrand at an endpoint
+        key_prerequisites: [math.calc2.improper-both-infinite]
+      - id: kp2
+        can_do: Evaluate at a left endpoint blow-up
+        key_prerequisites: [math.calc2.improper-both-infinite]
+      - id: kp3
+        can_do: Evaluate at a right endpoint blow-up
+        key_prerequisites: [math.calc2.improper-both-infinite]
+      - id: kp4
+        can_do: Show divergence at an endpoint
+        key_prerequisites: [math.calc2.improper-both-infinite]
+  - id: math.calc2.improper-interior-discontinuity
+    name: Handling a discontinuity inside the interval
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-discontinuous
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot an interior asymptote
+        key_prerequisites: [math.calc2.improper-discontinuous]
+      - id: kp2
+        can_do: Split into two improper pieces
+        key_prerequisites: [math.calc2.improper-discontinuous]
+      - id: kp3
+        can_do: Evaluate a convergent interior case
+        key_prerequisites: [math.calc2.improper-discontinuous]
+      - id: kp4
+        can_do: Catch a false use of the fundamental theorem
+        key_prerequisites: [math.calc2.improper-discontinuous]
+  - id: math.calc2.comparison-improper
+    name: Comparing improper integrals
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.p-integrals
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.improper-interior-discontinuity
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.calc1.integral-comparison-bounds
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare with a p-integral
+        key_prerequisites: [math.calc2.p-integrals]
+      - id: kp2
+        can_do: Compare with an exponential
+        key_prerequisites: [math.calc1.integral-comparison-bounds]
+      - id: kp3
+        can_do: Use a limit comparison
+        key_prerequisites: [math.calc2.p-integrals]
+      - id: kp4
+        can_do: Handle a discontinuity by comparison
+        key_prerequisites: [math.calc2.improper-interior-discontinuity]
+  - id: math.calc2.trapezoid-rule
+    name: Using the trapezoid rule
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.riemann-left-right-midpoint
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the rule from trapezoids
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp2
+        can_do: Use it with a formula
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp3
+        can_do: Use it with a table
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp4
+        can_do: Decide over or under estimate from concavity
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+  - id: math.calc2.numerical-trapezoid-simpson
+    name: Estimating with the trapezoid and Simpson's rules
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trapezoid-rule
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.calc1.riemann-left-right-midpoint
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why Simpson's rule needs even subintervals
+        key_prerequisites: [math.calc2.trapezoid-rule]
+      - id: kp2
+        can_do: Use Simpson's rule with a formula
+        key_prerequisites: [math.calc2.trapezoid-rule]
+      - id: kp3
+        can_do: Use Simpson's rule with a table
+        key_prerequisites: [math.calc2.trapezoid-rule]
+      - id: kp4
+        can_do: Compare trapezoid, midpoint and Simpson's answers
+        key_prerequisites: [math.calc2.trapezoid-rule]
+  - id: math.calc2.numerical-error-bounds
+    name: Bounding trapezoid and Simpson's errors
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.numerical-trapezoid-simpson
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound the second derivative on an interval
+        key_prerequisites: [math.calc2.numerical-trapezoid-simpson]
+      - id: kp2
+        can_do: Use the trapezoid error bound
+        key_prerequisites: [math.calc2.numerical-trapezoid-simpson]
+      - id: kp3
+        can_do: Use the Simpson's error bound
+        key_prerequisites: [math.calc2.numerical-trapezoid-simpson]
+      - id: kp4
+        can_do: Find the n needed for an accuracy
+        key_prerequisites: [math.calc2.numerical-trapezoid-simpson]
+  - id: math.calc2.moments-center-of-mass-discrete
+    name: Finding center of mass of point masses
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the center of mass on a line
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Find moments in the plane
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find a center of mass in the plane
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Find a rod's center of mass with varying density
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: math.calc2.centroid-of-region
+    name: Finding the centroid of a region
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.moments-center-of-mass-discrete
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write moment integrals for a region
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp2
+        can_do: Find the centroid under a curve
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Use symmetry to skip an integral
+        key_prerequisites: [math.calc2.moments-center-of-mass-discrete]
+      - id: kp4
+        can_do: Find a centroid of a semicircle
+        key_prerequisites: [math.calc2.moments-center-of-mass-discrete]
+  - id: math.calc2.probability-density-integral
+    name: Using integrals for probability density
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.average-value
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Check that a function is a density
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp2
+        can_do: Find a probability as an integral
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find a density constant
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp4
+        can_do: Use an exponential density
+        key_prerequisites: [math.calc2.improper-infinite-limits, math.calc1.average-value]
+  - id: math.calc2.consumer-surplus-applications
+    name: Using integrals in economics
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find consumer surplus
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp2
+        can_do: Find producer surplus
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Find present value of an income stream
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp4
+        can_do: Find a total from a continuous flow
+        key_prerequisites: [math.calc1.area-between-curves-x]
+  - id: math.calc2.shells-around-y-axis
+    name: Using shells around the y-axis
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.volume-by-washers
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a shell's volume element
+        key_prerequisites: [math.calc1.volume-by-washers]
+      - id: kp2
+        can_do: Rotate a region under a curve about the y-axis
+        key_prerequisites: [math.calc1.volume-by-washers]
+      - id: kp3
+        can_do: Rotate a region between curves about the y-axis
+        key_prerequisites: [math.calc1.volume-by-washers]
+      - id: kp4
+        can_do: Find a volume hard by washers
+        key_prerequisites: [math.calc1.volume-by-washers]
+  - id: math.calc2.volume-by-shells
+    name: Finding volume by cylindrical shells
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.shells-around-y-axis
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.calc1.volume-by-washers
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rotate about the x-axis with shells
+        key_prerequisites: [math.calc2.shells-around-y-axis]
+      - id: kp2
+        can_do: Set a radius and height for y-based shells
+        key_prerequisites: [math.calc2.shells-around-y-axis]
+      - id: kp3
+        can_do: Rotate around a line x equals a constant
+        key_prerequisites: [math.calc2.shells-around-y-axis]
+      - id: kp4
+        can_do: Compare a shell setup with washers
+        key_prerequisites: [math.calc1.volume-by-washers]
+  - id: math.calc2.choose-disk-or-shell
+    name: Choosing disks or shells
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.volume-by-shells
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Pick a method from which functions solve easily
+        key_prerequisites: [math.calc2.volume-by-shells]
+      - id: kp2
+        can_do: Set up both integrals for a region
+        key_prerequisites: [math.calc2.volume-by-shells]
+      - id: kp3
+        can_do: Evaluate the easier setup
+        key_prerequisites: [math.calc2.volume-by-shells]
+      - id: kp4
+        can_do: Justify a choice
+        key_prerequisites: [math.calc2.volume-by-shells]
+  - id: math.calc2.rotation-about-other-lines
+    name: Rotating about lines other than the axes
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.choose-disk-or-shell
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rotate with washers about y equals a constant
+        key_prerequisites: [math.calc2.choose-disk-or-shell]
+      - id: kp2
+        can_do: Rotate with shells about x equals a constant
+        key_prerequisites: [math.calc2.choose-disk-or-shell]
+      - id: kp3
+        can_do: Rotate with a line outside the region
+        key_prerequisites: [math.calc2.choose-disk-or-shell]
+      - id: kp4
+        can_do: Rotate with a line above the region
+        key_prerequisites: [math.calc2.choose-disk-or-shell]
+  - id: math.calc2.arc-length-simple
+    name: Finding simple arc lengths
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the arc length formula
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp2
+        can_do: Find arc length with a power
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp3
+        can_do: Find arc length with a perfect-square integrand
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Set up an arc length without evaluating
+        key_prerequisites: [math.calc1.u-substitution-definite]
+  - id: math.calc2.arc-length-integral
+    name: Finding arc length
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-sub-tangent
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.arc-length-simple
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an arc length by trig substitution
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp2
+        can_do: Find an arc length in terms of y
+        key_prerequisites: [math.calc2.arc-length-simple]
+      - id: kp3
+        can_do: Find an arc length with a log function
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Estimate an arc length numerically
+        key_prerequisites: [math.calc2.arc-length-simple]
+  - id: math.calc2.surface-of-revolution
+    name: Finding the area of a surface of revolution
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.arc-length-integral
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the area element
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp2
+        can_do: Find area rotating around the x-axis
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp3
+        can_do: Find area rotating around the y-axis
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp4
+        can_do: Find a sphere's area with the formula
+        key_prerequisites: [math.calc2.arc-length-integral]
+  - id: math.calc2.arc-length-function
+    name: Writing the arc length function
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.arc-length-integral
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the function as an integral
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp2
+        can_do: Evaluate it for a simple curve
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp3
+        can_do: Find the rate of change of arc length
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp4
+        can_do: Reparametrize a line by arc length
+        key_prerequisites: [math.calc2.arc-length-integral]
+  - id: math.calc2.work-variable-force
+    name: Finding work done by a variable force
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work with a constant force in joules
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Set up work with a variable force in newtons
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Evaluate a work integral in joules
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Evaluate a work integral in foot-pounds
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: math.calc2.work-springs
+    name: Finding work done by a spring
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.work-variable-force
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a spring constant in newtons per metre
+        key_prerequisites: [math.calc2.work-variable-force]
+      - id: kp2
+        can_do: Find spring work from rest length in joules
+        key_prerequisites: [math.calc2.work-variable-force]
+      - id: kp3
+        can_do: Find spring work between two stretches
+        key_prerequisites: [math.calc2.work-variable-force]
+      - id: kp4
+        can_do: Solve a spring problem in pounds and feet
+        key_prerequisites: [math.calc2.work-variable-force]
+  - id: math.calc2.work-lifting-ropes
+    name: Finding work lifting a rope
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.work-springs
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Slice a rope into layers
+        key_prerequisites: [math.calc2.work-springs]
+      - id: kp2
+        can_do: Lift a hanging rope in metric units
+        key_prerequisites: [math.calc2.work-springs]
+      - id: kp3
+        can_do: Lift a rope with a load
+        key_prerequisites: [math.calc2.work-springs]
+      - id: kp4
+        can_do: Lift a leaking bucket in imperial units
+        key_prerequisites: [math.calc2.work-springs]
+  - id: math.calc2.work-pumping-cylinder
+    name: Finding work pumping from a cylindrical tank
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.work-lifting-ropes
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.volume-by-disks
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Slice a tank into layers
+        key_prerequisites: [math.calc2.work-lifting-ropes]
+      - id: kp2
+        can_do: Write a layer's weight in newtons
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp3
+        can_do: Pump water out of a cylinder in joules
+        key_prerequisites: [math.calc2.work-lifting-ropes, math.calc1.volume-by-disks]
+      - id: kp4
+        can_do: Pump water out of a tank in foot-pounds
+        key_prerequisites: [math.calc2.work-lifting-ropes, math.calc1.volume-by-disks]
+  - id: math.calc2.work-pumping-liquid
+    name: Finding work pumping a liquid
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.volume-known-cross-sections
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.work-pumping-cylinder
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.work-lifting-ropes
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Slice a conical tank
+        key_prerequisites: [math.calc1.volume-known-cross-sections]
+      - id: kp2
+        can_do: Slice a spherical tank
+        key_prerequisites: [math.calc1.volume-known-cross-sections]
+      - id: kp3
+        can_do: Pump a liquid from a trough
+        key_prerequisites: [math.calc2.work-pumping-cylinder]
+      - id: kp4
+        can_do: Pump to a height above the rim
+        key_prerequisites: [math.calc2.work-pumping-cylinder]
+  - id: math.calc2.hydrostatic-force
+    name: Finding hydrostatic force
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.work-pumping-liquid
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pressure at a depth in pascals
+        key_prerequisites: [math.calc2.work-pumping-liquid]
+      - id: kp2
+        can_do: Slice a vertical plate in strips
+        key_prerequisites: [math.calc2.work-pumping-liquid]
+      - id: kp3
+        can_do: Find force on a rectangular or triangular plate
+        key_prerequisites: [math.calc2.work-pumping-liquid]
+      - id: kp4
+        can_do: Solve a dam problem in imperial units
+        key_prerequisites: [math.calc2.work-pumping-liquid]
+  - id: math.calc2.centroid-between-curves
+    name: Finding the centroid between two curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.centroid-of-region
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write moments with two curves
+        key_prerequisites: [math.calc2.centroid-of-region]
+      - id: kp2
+        can_do: Find a centroid between a line and a parabola
+        key_prerequisites: [math.calc2.centroid-of-region]
+      - id: kp3
+        can_do: Find a centroid for a region in y
+        key_prerequisites: [math.calc2.centroid-of-region]
+      - id: kp4
+        can_do: Use symmetry between two curves
+        key_prerequisites: [math.calc2.centroid-of-region]
+  - id: math.calc2.pappus-theorem
+    name: Using Pappus' theorem
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.volume-by-shells
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.calc2.centroid-between-curves
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.centroid-of-region
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem for volume
+        key_prerequisites: [math.calc2.centroid-between-curves]
+      - id: kp2
+        can_do: Find a torus volume
+        key_prerequisites: [math.calc2.centroid-between-curves]
+      - id: kp3
+        can_do: Find a centroid from a volume
+        key_prerequisites: [math.calc2.volume-by-shells]
+      - id: kp4
+        can_do: State the theorem for surface area
+        key_prerequisites: [math.calc2.centroid-of-region]
+  - id: math.calc2.expected-value-integral
+    name: Finding mean and median with integrals
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.probability-density-integral
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean from a density
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp2
+        can_do: Find a median from a density
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp3
+        can_do: Find a mean of an exponential density
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp4
+        can_do: Compare mean and median
+        key_prerequisites: [math.calc2.probability-density-integral]
+  - id: math.calc2.intro-differential-equations
+    name: Introducing differential equations
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.initial-value-antiderivative
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a differential equation
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+      - id: kp2
+        can_do: Write an equation from a stated rate
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+      - id: kp3
+        can_do: Tell order of a differential equation
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+      - id: kp4
+        can_do: Tell a general from a particular solution
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+  - id: math.calc2.verify-de-solutions
+    name: Checking a solution of a differential equation
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.intro-differential-equations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a function by substitution
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp2
+        can_do: Check a family with a constant
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp3
+        can_do: Find a constant from an initial value
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp4
+        can_do: Check a solution of a second-order equation
+        key_prerequisites: [math.calc2.intro-differential-equations]
+  - id: math.calc2.slope-fields
+    name: Reading and sketching slope fields
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.verify-de-solutions
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.intro-differential-equations
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a short slope at a point
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp2
+        can_do: Sketch a field on a grid
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp3
+        can_do: Sketch a solution through a point
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp4
+        can_do: Match equations to fields
+        key_prerequisites: [math.calc2.verify-de-solutions]
+  - id: math.calc2.eulers-method-intro
+    name: Using Euler's method
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.slope-fields
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.linear-approximation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take one step along a slope
+        key_prerequisites: [math.calc2.slope-fields, math.calc1.linear-approximation]
+      - id: kp2
+        can_do: Fill a table of steps
+        key_prerequisites: [math.calc2.slope-fields]
+      - id: kp3
+        can_do: Compare step sizes
+        key_prerequisites: [math.calc2.slope-fields]
+      - id: kp4
+        can_do: Tell whether Euler over or under estimates
+        key_prerequisites: [math.calc2.slope-fields, math.calc1.linear-approximation]
+  - id: math.calc2.separable-equations
+    name: Solving separable equations
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc2.verify-de-solutions
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.intro-differential-equations
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate variables
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp2
+        can_do: Solve with a power
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp3
+        can_do: Solve with exponentials or trig
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp4
+        can_do: Solve using partial fractions
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+  - id: math.calc2.mixing-problems-intro
+    name: Solving simple mixing problems
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate in minus rate out
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp2
+        can_do: Set up a tank equation with constant volume
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Solve a salt tank problem
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp4
+        can_do: Find a long-term concentration
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: math.calc2.separable-initial-value
+    name: Solving separable initial value problems
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the constant from an initial condition
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp2
+        can_do: Solve explicitly for y
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Keep a solution implicit
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp4
+        can_do: Check the domain of a solution
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: math.calc2.exponential-growth-de
+    name: Modelling exponential growth
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.separable-initial-value
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve y prime equals k y
+        key_prerequisites: [math.calc2.separable-initial-value]
+      - id: kp2
+        can_do: Find k from data
+        key_prerequisites: [math.calc2.separable-initial-value]
+      - id: kp3
+        can_do: Model growth in population or money
+        key_prerequisites: [math.calc2.separable-initial-value]
+      - id: kp4
+        can_do: Model radioactive decay
+        key_prerequisites: [math.calc2.separable-initial-value]
+  - id: math.calc2.newton-cooling-de
+    name: Modelling Newton's law of cooling
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.newton-cooling-models
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.separable-initial-value
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a cooling equation in Celsius
+        key_prerequisites: [math.precalc.newton-cooling-models]
+      - id: kp2
+        can_do: Solve with ambient temperature
+        key_prerequisites: [math.calc2.separable-initial-value]
+      - id: kp3
+        can_do: Find a time of death-style unknown
+        key_prerequisites: [math.calc2.separable-initial-value]
+      - id: kp4
+        can_do: Solve a Fahrenheit case
+        key_prerequisites: [math.calc2.separable-initial-value]
+  - id: math.calc2.half-life-doubling-de
+    name: Using half-life and doubling time
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.exponential-growth-de
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find k from a half-life
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp2
+        can_do: Find a half-life from k
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp3
+        can_do: Find a doubling time
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp4
+        can_do: Date a sample with carbon decay
+        key_prerequisites: [math.calc2.exponential-growth-de]
+  - id: math.calc2.logistic-behaviour
+    name: Reading logistic behaviour without solving
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.slope-fields
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.logistic-growth
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read carrying capacity from the equation
+        key_prerequisites: [math.precalc.logistic-growth]
+      - id: kp2
+        can_do: Find equilibrium solutions
+        key_prerequisites: [math.precalc.logistic-growth]
+      - id: kp3
+        can_do: Find where growth is fastest
+        key_prerequisites: [math.calc2.slope-fields, math.precalc.logistic-growth]
+      - id: kp4
+        can_do: Sketch solutions from a field
+        key_prerequisites: [math.calc2.slope-fields]
+  - id: math.calc2.logistic-de
+    name: Solving the logistic equation
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.logistic-behaviour
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.2
+        confidence: high
+      - topic: math.precalc.logistic-growth
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate a logistic equation
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp2
+        can_do: Integrate with partial fractions
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp3
+        can_do: Solve for the population
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp4
+        can_do: Use data to find k
+        key_prerequisites: [math.calc2.logistic-behaviour, math.precalc.logistic-growth]
+  - id: math.calc2.sequence-terms-formula
+    name: Finding formulas for sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.sequence-limits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a formula from listed terms
+        key_prerequisites: [math.precalc.sequence-limits]
+      - id: kp2
+        can_do: Use an alternating sign factor
+        key_prerequisites: [math.precalc.sequence-limits]
+      - id: kp3
+        can_do: Write a factorial term
+        key_prerequisites: [math.precalc.sequence-limits]
+      - id: kp4
+        can_do: List terms from a formula
+        key_prerequisites: [math.precalc.sequence-limits]
+  - id: math.calc2.sequence-notation-limits
+    name: Finding limits of sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-exp-log
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.sequence-terms-formula
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.precalc.sequence-limits
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Connect sequence limits to function limits
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp2
+        can_do: Find a limit of a rational sequence
+        key_prerequisites: [math.precalc.sequence-limits]
+      - id: kp3
+        can_do: Find a limit with a root or exponent
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp4
+        can_do: Show a sequence diverges
+        key_prerequisites: [math.calc2.sequence-terms-formula]
+  - id: math.calc2.sequence-limit-laws
+    name: Using limit laws on sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.sequence-notation-limits
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use sum, product and quotient laws
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+      - id: kp2
+        can_do: Use a continuous function on a limit
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+      - id: kp3
+        can_do: Use absolute values for an alternating sequence
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+      - id: kp4
+        can_do: Combine laws on a fraction
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+  - id: math.calc2.monotonic-bounded-sequences
+    name: Using monotonic and bounded sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.sequence-limit-laws
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.sequence-notation-limits
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a sequence increases by differences
+        key_prerequisites: [math.calc2.sequence-limit-laws]
+      - id: kp2
+        can_do: Show a sequence increases by ratios
+        key_prerequisites: [math.calc2.sequence-limit-laws]
+      - id: kp3
+        can_do: Find an upper bound
+        key_prerequisites: [math.calc2.sequence-limit-laws]
+      - id: kp4
+        can_do: Conclude convergence
+        key_prerequisites: [math.calc2.sequence-limit-laws, math.calc2.sequence-notation-limits]
+  - id: math.calc2.sequence-squeeze-and-lhopital
+    name: Finding sequence limits with squeeze and L'Hopital
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.squeeze-theorem
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.growth-rate-comparison
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.sequence-limit-laws
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc2.sequence-notation-limits
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Squeeze an oscillating sequence
+        key_prerequisites: [math.calc1.squeeze-theorem]
+      - id: kp2
+        can_do: Use L'Hopital's rule through a function
+        key_prerequisites: [math.calc1.growth-rate-comparison]
+      - id: kp3
+        can_do: Find a limit of a root of n
+        key_prerequisites: [math.calc1.growth-rate-comparison]
+      - id: kp4
+        can_do: Find a limit of a power with n in it
+        key_prerequisites: [math.calc1.growth-rate-comparison, math.calc2.sequence-limit-laws]
+  - id: math.calc2.recursive-sequence-limits
+    name: Finding limits of recursive sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.monotonic-bounded-sequences
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute terms of a recursion
+        key_prerequisites: [math.calc2.monotonic-bounded-sequences]
+      - id: kp2
+        can_do: Find a limit candidate with the fixed-point equation
+        key_prerequisites: [math.calc2.monotonic-bounded-sequences]
+      - id: kp3
+        can_do: Show bounds by induction
+        key_prerequisites: [math.calc2.monotonic-bounded-sequences]
+      - id: kp4
+        can_do: Conclude a limit
+        key_prerequisites: [math.calc2.monotonic-bounded-sequences]
+  - id: math.calc2.sequences-powers-factorials
+    name: Comparing powers and factorials in sequences
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.sequence-squeeze-and-lhopital
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rank powers, exponentials and factorials
+        key_prerequisites: [math.calc2.sequence-squeeze-and-lhopital]
+      - id: kp2
+        can_do: Find a limit of a power over a factorial
+        key_prerequisites: [math.calc2.sequence-squeeze-and-lhopital]
+      - id: kp3
+        can_do: Find a limit with factorials by ratios
+        key_prerequisites: [math.calc2.sequence-squeeze-and-lhopital]
+      - id: kp4
+        can_do: Simplify a ratio of factorials
+        key_prerequisites: [math.calc2.sequence-squeeze-and-lhopital]
+  - id: math.calc2.series-as-partial-sums
+    name: Defining a series with partial sums
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.sequence-notation-limits
+        encompassing: 0.35
+        confidence: high
+      - topic: math.alg2.series-with-partial-sums
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell a sequence from a series
+        key_prerequisites: [math.alg2.series-with-partial-sums]
+      - id: kp2
+        can_do: Find partial sums numerically
+        key_prerequisites: [math.alg2.series-with-partial-sums]
+      - id: kp3
+        can_do: Write a series as a limit of partial sums
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+      - id: kp4
+        can_do: Conclude a sum from partial sums
+        key_prerequisites: [math.calc2.sequence-notation-limits]
+  - id: math.calc2.geometric-series-calc
+    name: Summing geometric series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.series-review-convergence
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a ratio from a series
+        key_prerequisites: [math.precalc.series-review-convergence]
+      - id: kp2
+        can_do: Decide convergence of a geometric series
+        key_prerequisites: [math.precalc.series-review-convergence]
+      - id: kp3
+        can_do: Sum a geometric series
+        key_prerequisites: [math.precalc.series-review-convergence]
+      - id: kp4
+        can_do: Sum a series starting at another index
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+  - id: math.calc2.divergence-test
+    name: Using the divergence test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the test on a rational term
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp2
+        can_do: Use the test on a trig or exponential term
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp3
+        can_do: Explain why zero limit proves nothing
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp4
+        can_do: Explain with the harmonic series
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+  - id: math.calc2.integral-test
+    name: Using the integral test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.divergence-test
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.p-integrals
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the test's hypotheses
+        key_prerequisites: [math.calc2.divergence-test]
+      - id: kp2
+        can_do: Decide convergence by an integral
+        key_prerequisites: [math.calc2.p-integrals]
+      - id: kp3
+        can_do: Decide with a log in the denominator
+        key_prerequisites: [math.calc2.p-integrals]
+      - id: kp4
+        can_do: Explain sum against integral with rectangles
+        key_prerequisites: [math.calc2.p-integrals]
+  - id: math.calc2.p-series
+    name: Using p-series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.integral-test
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify p in a series
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp2
+        can_do: Decide convergence from p
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp3
+        can_do: Compare the harmonic case
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp4
+        can_do: Rewrite a term to find p
+        key_prerequisites: [math.calc2.integral-test]
+  - id: math.calc2.integral-test-remainder
+    name: Estimating a sum with the integral test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.integral-test
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound a remainder with integrals
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp2
+        can_do: Find terms needed for an accuracy
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp3
+        can_do: Bound a sum between two integrals
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp4
+        can_do: Estimate a p-series
+        key_prerequisites: [math.calc2.integral-test]
+  - id: math.calc2.alternating-series-test
+    name: Using the alternating series test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.divergence-test
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize an alternating series
+        key_prerequisites: [math.calc2.divergence-test]
+      - id: kp2
+        can_do: Check the two conditions
+        key_prerequisites: [math.calc2.divergence-test]
+      - id: kp3
+        can_do: Use the test on a rational series
+        key_prerequisites: [math.calc2.divergence-test]
+      - id: kp4
+        can_do: Use the test with a log
+        key_prerequisites: [math.calc2.divergence-test]
+  - id: math.calc2.absolute-conditional
+    name: Telling absolute from conditional convergence
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.alternating-series-test
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.p-series
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define absolute convergence
+        key_prerequisites: [math.calc2.alternating-series-test]
+      - id: kp2
+        can_do: Decide absolute convergence with a p-series
+        key_prerequisites: [math.calc2.p-series]
+      - id: kp3
+        can_do: Classify a conditionally convergent series
+        key_prerequisites: [math.calc2.alternating-series-test, math.calc2.p-series]
+      - id: kp4
+        can_do: Explain that absolute convergence implies convergence
+        key_prerequisites: [math.calc2.alternating-series-test]
+  - id: math.calc2.ratio-test
+    name: Using the ratio test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.absolute-conditional
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.sequences-powers-factorials
+        encompassing: 0.1
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: State the test and its outcomes
+        key_prerequisites: [math.calc2.absolute-conditional]
+      - id: kp2
+        can_do: Use it on a series with exponentials
+        key_prerequisites: [math.calc2.absolute-conditional]
+      - id: kp3
+        can_do: Use it with powers
+        key_prerequisites: [math.calc2.sequences-powers-factorials]
+      - id: kp4
+        can_do: Recognize an inconclusive result
+        key_prerequisites: [math.calc2.absolute-conditional]
+  - id: math.calc2.root-test
+    name: Using the root test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.ratio-test
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the root test
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp2
+        can_do: Use it with an nth power term
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp3
+        can_do: Use it with a power of n in the exponent
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp4
+        can_do: Choose root over ratio
+        key_prerequisites: [math.calc2.ratio-test]
+  - id: math.calc2.series-partial-sum-formula
+    name: Finding a partial sum formula
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a formula from early partial sums
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp2
+        can_do: Prove a partial sum pattern
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp3
+        can_do: Find a term from partial sums
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp4
+        can_do: Find a sum from a formula
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+  - id: math.calc2.telescoping-series
+    name: Summing telescoping series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.telescoping-sums
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.series-partial-sum-formula
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a term into a difference
+        key_prerequisites: [math.precalc.telescoping-sums]
+      - id: kp2
+        can_do: Spot a cancellation pattern
+        key_prerequisites: [math.calc2.series-partial-sum-formula]
+      - id: kp3
+        can_do: Sum a two-gap telescoping series
+        key_prerequisites: [math.calc2.series-partial-sum-formula]
+      - id: kp4
+        can_do: Sum a log telescoping series
+        key_prerequisites: [math.precalc.telescoping-sums]
+  - id: math.calc2.series-algebra
+    name: Using sums and multiples of series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add convergent series
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp2
+        can_do: Pull out a constant
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp3
+        can_do: Remove finitely many terms
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+      - id: kp4
+        can_do: Reason about a convergent plus a divergent
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+  - id: math.calc2.geometric-series-rewriting
+    name: Rewriting a series as geometric
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite exponents into standard form
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp2
+        can_do: Shift the starting index
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp3
+        can_do: Split into two geometric series
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp4
+        can_do: Rewrite a term with mixed bases
+        key_prerequisites: [math.calc2.geometric-series-calc]
+  - id: math.calc2.direct-comparison
+    name: Using the direct comparison test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.p-series
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.series-algebra
+        encompassing: 0.1
+        confidence: low
+      - topic: math.calc2.geometric-series-rewriting
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare with a p-series for convergence
+        key_prerequisites: [math.calc2.p-series]
+      - id: kp2
+        can_do: Compare with the harmonic series for divergence
+        key_prerequisites: [math.calc2.p-series]
+      - id: kp3
+        can_do: Compare with a geometric series
+        key_prerequisites: [math.calc2.geometric-series-rewriting]
+      - id: kp4
+        can_do: Discard extra terms with a bound
+        key_prerequisites: [math.calc2.series-algebra]
+  - id: math.calc2.repeating-decimals-series
+    name: Writing repeating decimals with series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a decimal as a geometric series
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp2
+        can_do: Sum a pure repeating decimal
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp3
+        can_do: Sum a delayed repeating decimal
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp4
+        can_do: Explain why 0.999... equals one
+        key_prerequisites: [math.calc2.geometric-series-calc]
+  - id: math.calc2.comparison-choose-bound
+    name: Choosing a series to compare against
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.direct-comparison
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dominant term
+        key_prerequisites: [math.calc2.direct-comparison]
+      - id: kp2
+        can_do: Decide which way a bound must go
+        key_prerequisites: [math.calc2.direct-comparison]
+      - id: kp3
+        can_do: Fix a bound in the wrong direction
+        key_prerequisites: [math.calc2.direct-comparison]
+      - id: kp4
+        can_do: Use bounded sine in a comparison
+        key_prerequisites: [math.calc2.direct-comparison]
+  - id: math.calc2.limit-comparison
+    name: Using the limit comparison test
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.comparison-choose-bound
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.direct-comparison
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the limit comparison test
+        key_prerequisites: [math.calc2.comparison-choose-bound]
+      - id: kp2
+        can_do: Use it for a rational term
+        key_prerequisites: [math.calc2.comparison-choose-bound]
+      - id: kp3
+        can_do: Use it where direct comparison fails
+        key_prerequisites: [math.calc2.comparison-choose-bound]
+      - id: kp4
+        can_do: Use it with a log
+        key_prerequisites: [math.calc2.comparison-choose-bound]
+  - id: math.calc2.limit-comparison-roots
+    name: Using limit comparison with roots
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.limit-comparison
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dominant power with a root
+        key_prerequisites: [math.calc2.limit-comparison]
+      - id: kp2
+        can_do: Use the test with a root in the denominator
+        key_prerequisites: [math.calc2.limit-comparison]
+      - id: kp3
+        can_do: Use the test with nested roots
+        key_prerequisites: [math.calc2.limit-comparison]
+      - id: kp4
+        can_do: Use the test with a sine of a small value
+        key_prerequisites: [math.calc2.limit-comparison]
+  - id: math.calc2.choose-a-series-test
+    name: Choosing a test for convergence
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.root-test
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.limit-comparison-roots
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc2.limit-comparison
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match forms to geometric and p-series first
+        key_prerequisites: [math.calc2.limit-comparison-roots]
+      - id: kp2
+        can_do: Spot factorials and exponentials for ratio
+        key_prerequisites: [math.calc2.root-test]
+      - id: kp3
+        can_do: Spot alternating forms
+        key_prerequisites: [math.calc2.limit-comparison]
+      - id: kp4
+        can_do: Classify a mixed list
+        key_prerequisites: [math.calc2.root-test, math.calc2.limit-comparison-roots]
+  - id: math.calc2.alternating-decreasing-check
+    name: Checking decreasing terms for alternating series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.alternating-series-test
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.increasing-decreasing-derivative
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check decrease by comparing terms
+        key_prerequisites: [math.calc2.alternating-series-test]
+      - id: kp2
+        can_do: Check decrease with a derivative
+        key_prerequisites: [math.calc1.increasing-decreasing-derivative]
+      - id: kp3
+        can_do: Check eventually decreasing terms
+        key_prerequisites: [math.calc1.increasing-decreasing-derivative]
+      - id: kp4
+        can_do: Spot a failed alternating series
+        key_prerequisites: [math.calc2.alternating-series-test]
+  - id: math.calc2.alternating-remainder
+    name: Bounding the remainder of an alternating series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.alternating-decreasing-check
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.alternating-series-test
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound the error by the next term
+        key_prerequisites: [math.calc2.alternating-decreasing-check]
+      - id: kp2
+        can_do: Find terms needed for a given accuracy
+        key_prerequisites: [math.calc2.alternating-decreasing-check]
+      - id: kp3
+        can_do: Estimate a sum
+        key_prerequisites: [math.calc2.alternating-decreasing-check]
+      - id: kp4
+        can_do: Tell the sign of an error
+        key_prerequisites: [math.calc2.alternating-series-test]
+  - id: math.calc2.ratio-test-factorials
+    name: Using the ratio test with factorials
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.ratio-test
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Simplify a factorial ratio
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp2
+        can_do: Use the test with factorials and powers
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp3
+        can_do: Use the test on a double factorial
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp4
+        can_do: Find a limit that gives e
+        key_prerequisites: [math.calc2.ratio-test]
+  - id: math.calc2.power-series-intro
+    name: Understanding power series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.ratio-test-factorials
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.ratio-test
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a power series in sigma form
+        key_prerequisites: [math.calc2.ratio-test-factorials]
+      - id: kp2
+        can_do: Evaluate partial sums at x
+        key_prerequisites: [math.calc2.ratio-test-factorials]
+      - id: kp3
+        can_do: Test convergence at a point
+        key_prerequisites: [math.calc2.ratio-test]
+      - id: kp4
+        can_do: Use the ratio test for a general x
+        key_prerequisites: [math.calc2.ratio-test]
+  - id: math.calc2.radius-of-convergence
+    name: Finding the radius of convergence
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.power-series-intro
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a radius by ratio
+        key_prerequisites: [math.calc2.power-series-intro]
+      - id: kp2
+        can_do: Find a radius of zero
+        key_prerequisites: [math.calc2.power-series-intro]
+      - id: kp3
+        can_do: Find an infinite radius
+        key_prerequisites: [math.calc2.power-series-intro]
+      - id: kp4
+        can_do: Use a root test for a radius
+        key_prerequisites: [math.calc2.power-series-intro]
+  - id: math.calc2.functions-as-power-series
+    name: Representing functions with geometric series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.power-series-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a geometric pattern
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp2
+        can_do: Write one over one minus x as a series
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp3
+        can_do: Substitute a power of x
+        key_prerequisites: [math.calc2.power-series-intro]
+      - id: kp4
+        can_do: Multiply by a power of x
+        key_prerequisites: [math.calc2.power-series-intro]
+  - id: math.calc2.taylor-polynomials
+    name: Building Taylor polynomials
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.linear-approximation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match derivatives at a center
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp2
+        can_do: Build a polynomial at zero
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp3
+        can_do: Compare a polynomial to a function
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp4
+        can_do: Build a higher polynomial for exponential or trig
+        key_prerequisites: [math.calc1.higher-derivatives]
+  - id: math.calc2.radius-with-factorials
+    name: Finding the radius with factorials
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.radius-of-convergence
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a radius with a factorial denominator
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp2
+        can_do: Find a radius with a factorial numerator
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp3
+        can_do: Find a radius with a mixed factorial
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp4
+        can_do: Find a radius with powers of a constant
+        key_prerequisites: [math.calc2.radius-of-convergence]
+  - id: math.calc2.center-shifted-power-series
+    name: Working with power series at other centres
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.radius-of-convergence
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a center from a series
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp2
+        can_do: Find a radius for a shifted series
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp3
+        can_do: Find an interval around a shift
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp4
+        can_do: Shift a center by rewriting
+        key_prerequisites: [math.calc2.radius-of-convergence]
+  - id: math.calc2.endpoints-of-interval
+    name: Testing endpoints of a power series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.radius-of-convergence
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.alternating-series-test
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute an endpoint
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp2
+        can_do: Test with an alternating series at one end
+        key_prerequisites: [math.calc2.alternating-series-test]
+      - id: kp3
+        can_do: Test with a p-series at the other
+        key_prerequisites: [math.calc2.radius-of-convergence]
+      - id: kp4
+        can_do: Write a result in interval notation
+        key_prerequisites: [math.calc2.radius-of-convergence]
+  - id: math.calc2.interval-of-convergence
+    name: Finding the interval of convergence
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.radius-with-factorials
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.center-shifted-power-series
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.endpoints-of-interval
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.radius-of-convergence
+        encompassing: 0.15
+        confidence: high
+      - topic: math.calc2.alternating-series-test
+        encompassing: 0.1
+        confidence: medium
+      - topic: math.calc2.p-series
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Combine radius and endpoints
+        key_prerequisites: [math.calc2.endpoints-of-interval]
+      - id: kp2
+        can_do: Find an interval with a shifted center
+        key_prerequisites: [math.calc2.center-shifted-power-series]
+      - id: kp3
+        can_do: Find an interval with a factorial term
+        key_prerequisites: [math.calc2.radius-with-factorials]
+      - id: kp4
+        can_do: Decide open or closed ends
+        key_prerequisites: [math.calc2.endpoints-of-interval, math.calc2.alternating-series-test, math.calc2.p-series]
+  - id: math.calc2.rational-function-as-series
+    name: Rewriting a rational function as a series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.functions-as-power-series
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor out a constant to reach geometric form
+        key_prerequisites: [math.calc2.functions-as-power-series]
+      - id: kp2
+        can_do: Use a linear denominator
+        key_prerequisites: [math.calc2.functions-as-power-series]
+      - id: kp3
+        can_do: Use partial fractions first
+        key_prerequisites: [math.calc2.functions-as-power-series]
+      - id: kp4
+        can_do: Find the interval of a resulting series
+        key_prerequisites: [math.calc2.functions-as-power-series]
+  - id: math.calc2.differentiate-integrate-series
+    name: Differentiating and integrating power series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.rational-function-as-series
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc2.functions-as-power-series
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a series term by term
+        key_prerequisites: [math.calc2.rational-function-as-series]
+      - id: kp2
+        can_do: Integrate a series with a constant
+        key_prerequisites: [math.calc2.rational-function-as-series]
+      - id: kp3
+        can_do: Reach a new function by differentiating
+        key_prerequisites: [math.calc2.functions-as-power-series]
+      - id: kp4
+        can_do: State what happens to the radius
+        key_prerequisites: [math.calc2.rational-function-as-series]
+  - id: math.calc2.series-for-arctan-log
+    name: Finding series for arctan and log
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.differentiate-integrate-series
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate a geometric series to reach log
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp2
+        can_do: Integrate to reach arctangent
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp3
+        can_do: Find a constant by substitution
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp4
+        can_do: Estimate pi or a log value
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+  - id: math.calc2.taylor-at-other-centers
+    name: Finding Taylor polynomials at other centres
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-polynomials
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write powers of x minus a
+        key_prerequisites: [math.calc2.taylor-polynomials]
+      - id: kp2
+        can_do: Build a polynomial for root at a point
+        key_prerequisites: [math.calc2.taylor-polynomials]
+      - id: kp3
+        can_do: Build a polynomial for a log at one
+        key_prerequisites: [math.calc2.taylor-polynomials]
+      - id: kp4
+        can_do: Build a polynomial for sine at a point
+        key_prerequisites: [math.calc2.taylor-polynomials]
+  - id: math.calc2.taylor-series
+    name: Finding Taylor series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.power-series-intro
+        encompassing: 0.1
+        confidence: low
+      - topic: math.calc2.taylor-at-other-centers
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.taylor-polynomials
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the general Taylor formula
+        key_prerequisites: [math.calc2.taylor-at-other-centers]
+      - id: kp2
+        can_do: Find a coefficient from a derivative
+        key_prerequisites: [math.calc2.taylor-polynomials]
+      - id: kp3
+        can_do: Find a series from a derivative pattern
+        key_prerequisites: [math.calc2.taylor-at-other-centers]
+      - id: kp4
+        can_do: Find a series at a center other than zero
+        key_prerequisites: [math.calc2.taylor-at-other-centers]
+  - id: math.calc2.taylor-remainder
+    name: Using Taylor's remainder
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-series
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.alternating-remainder
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Lagrange remainder
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp2
+        can_do: Bound the remainder for sine or cosine
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp3
+        can_do: Bound the remainder for the exponential
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp4
+        can_do: Compare to an alternating series bound
+        key_prerequisites: [math.calc2.alternating-remainder]
+  - id: math.calc2.series-for-sine-cosine
+    name: Finding the series for sine and cosine
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-series
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the sine series
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp2
+        can_do: Derive the cosine series
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp3
+        can_do: Find their intervals
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp4
+        can_do: Estimate a value with a few terms
+        key_prerequisites: [math.calc2.taylor-series]
+  - id: math.calc2.series-for-exp
+    name: Finding the series for the exponential
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-series
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the exponential series
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp2
+        can_do: Use it at x equals one to estimate e
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp3
+        can_do: Find its interval
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp4
+        can_do: Find a series with a base other than e
+        key_prerequisites: [math.calc2.taylor-series]
+  - id: math.calc2.maclaurin-common
+    name: Using common Maclaurin series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.series-for-sine-cosine
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.series-for-exp
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.taylor-series
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recall the core series
+        key_prerequisites: [math.calc2.series-for-sine-cosine, math.calc2.series-for-exp]
+      - id: kp2
+        can_do: Read a Taylor coefficient off a known series
+        key_prerequisites: [math.calc2.taylor-series]
+      - id: kp3
+        can_do: Decide which known series applies
+        key_prerequisites: [math.calc2.series-for-sine-cosine, math.calc2.series-for-exp]
+      - id: kp4
+        can_do: Recognize a series as a known function
+        key_prerequisites: [math.calc2.series-for-sine-cosine, math.calc2.series-for-exp]
+  - id: math.calc2.substitute-into-series
+    name: Building series by substituting
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute a power of x
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp2
+        can_do: Substitute a multiple of x
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp3
+        can_do: Multiply by a power afterward
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Find a coefficient after substitution
+        key_prerequisites: [math.calc2.maclaurin-common]
+  - id: math.calc2.multiply-divide-series
+    name: Multiplying and dividing series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply two series to a given degree
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp2
+        can_do: Divide a series to a given degree
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp3
+        can_do: Find the first terms of tangent
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Find a coefficient of a product
+        key_prerequisites: [math.calc2.maclaurin-common]
+  - id: math.calc2.series-to-estimate-integrals
+    name: Estimating integrals with series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.substitute-into-series
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.alternating-remainder
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate a series term by term
+        key_prerequisites: [math.calc2.substitute-into-series]
+      - id: kp2
+        can_do: Estimate an integral with sine of x squared
+        key_prerequisites: [math.calc2.substitute-into-series]
+      - id: kp3
+        can_do: Bound the estimate's error
+        key_prerequisites: [math.calc2.alternating-remainder]
+      - id: kp4
+        can_do: Find terms needed for an accuracy
+        key_prerequisites: [math.calc2.alternating-remainder]
+  - id: math.calc2.series-for-limits
+    name: Finding limits with series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.substitute-into-series
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.multiply-divide-series
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Replace a function with a series in a limit
+        key_prerequisites: [math.calc2.substitute-into-series]
+      - id: kp2
+        can_do: Find a trig limit with series
+        key_prerequisites: [math.calc2.substitute-into-series]
+      - id: kp3
+        can_do: Find a limit with a quotient of series
+        key_prerequisites: [math.calc2.multiply-divide-series]
+      - id: kp4
+        can_do: Compare with L'Hopital's rule
+        key_prerequisites: [math.calc2.substitute-into-series]
+  - id: math.calc2.binomial-series
+    name: Using the binomial series
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.binomial-theorem-applications
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a binomial series with a fractional power
+        key_prerequisites: [math.precalc.binomial-theorem-applications]
+      - id: kp2
+        can_do: Write one for a root
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp3
+        can_do: Write one for a reciprocal
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Find its interval of convergence
+        key_prerequisites: [math.calc2.maclaurin-common]
+  - id: math.calc2.sum-a-series-from-known
+    name: Finding the sum of a series from a known function
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc2.series-for-arctan-log
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize an exponential series
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp2
+        can_do: Recognize a sine or cosine series
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp3
+        can_do: Recognize a log or arctangent series
+        key_prerequisites: [math.calc2.series-for-arctan-log]
+      - id: kp4
+        can_do: Adjust for an extra factor
+        key_prerequisites: [math.calc2.maclaurin-common, math.calc2.series-for-arctan-log]
+  - id: math.calc2.taylor-error-estimate
+    name: Estimating the error of a Taylor polynomial
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a bound for a given degree
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp2
+        can_do: Find a degree for a given accuracy
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp3
+        can_do: Find an x-range for a given accuracy
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp4
+        can_do: Compare a bound against the true error
+        key_prerequisites: [math.calc2.taylor-remainder]
+  - id: math.calc2.applications-of-taylor-physics
+    name: Applying Taylor series in physics
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-error-estimate
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc2.binomial-series
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Approximate gravity near the surface
+        key_prerequisites: [math.calc2.binomial-series]
+      - id: kp2
+        can_do: Approximate a relativistic energy
+        key_prerequisites: [math.calc2.binomial-series]
+      - id: kp3
+        can_do: Approximate a pendulum period
+        key_prerequisites: [math.calc2.taylor-error-estimate]
+      - id: kp4
+        can_do: Approximate a small-angle formula with an error bound
+        key_prerequisites: [math.calc2.taylor-error-estimate, math.calc2.taylor-remainder]
+  - id: math.calc2.series-equals-function
+    name: Showing a Taylor series equals its function
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.65
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State when a Taylor series equals its function
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp2
+        can_do: Show a remainder tends to zero for the exponential
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp3
+        can_do: Show it for sine and cosine
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp4
+        can_do: Explain a function not equal to its series
+        key_prerequisites: [math.calc2.taylor-remainder]
+  - id: math.calc2.parametric-derivatives
+    name: Finding derivatives of parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.parametric-eliminate
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a slope from x of t and y of t
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Use the chain rule to justify the slope formula
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Find a slope at a value of t
+        key_prerequisites: [math.precalc.parametric-eliminate]
+      - id: kp4
+        can_do: Find a slope after eliminating a parameter
+        key_prerequisites: [math.precalc.parametric-eliminate]
+  - id: math.calc2.parametric-area
+    name: Finding areas with parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an area with a parametric integrand
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Handle orientation of a curve
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp3
+        can_do: Find the area under one arch of a cycloid
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Find an area enclosed by an ellipse
+        key_prerequisites: [math.calc1.u-substitution-definite]
+  - id: math.calc2.parametric-arc-length
+    name: Finding arc length of parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.arc-length-integral
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the parametric length formula
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp2
+        can_do: Find a length of a line or circle
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp3
+        can_do: Find a length of a curve with a perfect square
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp4
+        can_do: Find one arch of a cycloid
+        key_prerequisites: [math.calc2.parametric-derivatives]
+  - id: math.calc2.parametric-surface-area
+    name: Finding surface areas of parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-arc-length
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.surface-of-revolution
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the parametric area formula
+        key_prerequisites: [math.calc2.surface-of-revolution]
+      - id: kp2
+        can_do: Rotate a curve around the x-axis
+        key_prerequisites: [math.calc2.parametric-arc-length]
+      - id: kp3
+        can_do: Rotate a curve around the y-axis
+        key_prerequisites: [math.calc2.parametric-arc-length]
+      - id: kp4
+        can_do: Find a sphere's area parametrically
+        key_prerequisites: [math.calc2.parametric-arc-length]
+  - id: math.calc2.polar-area
+    name: Finding area in polar coordinates
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.2
+        confidence: high
+      - topic: math.precalc.polar-curves
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.powers-sine-cosine
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the polar sector formula
+        key_prerequisites: [math.precalc.polar-curves]
+      - id: kp2
+        can_do: Find the area of a circle or cardioid
+        key_prerequisites: [math.calc2.powers-sine-cosine]
+      - id: kp3
+        can_do: Find the limits from a graph
+        key_prerequisites: [math.precalc.polar-curves]
+      - id: kp4
+        can_do: Find an area with a half-angle identity
+        key_prerequisites: [math.calc1.u-substitution-definite, math.calc2.powers-sine-cosine]
+  - id: math.calc2.conics-with-calculus
+    name: Using calculus on conic sections
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.conic-applications
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a tangent to a parametric ellipse
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Find a tangent to a hyperbola
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp3
+        can_do: Use the reflective property of a parabola
+        key_prerequisites: [math.precalc.conic-applications]
+      - id: kp4
+        can_do: Find a slope on a rotated conic
+        key_prerequisites: [math.calc2.parametric-derivatives]
+  - id: math.calc2.parametric-tangent-lines
+    name: Finding tangents to parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a tangent at a value of t
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Write a tangent at a given point
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp3
+        can_do: Find two tangents at a self-crossing
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp4
+        can_do: Find a normal line
+        key_prerequisites: [math.calc2.parametric-derivatives]
+  - id: math.calc2.parametric-second-derivative
+    name: Finding second derivatives of parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.parametric-tangent-lines
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate the slope with respect to t
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Divide by dx dt
+        key_prerequisites: [math.calc1.higher-derivatives, math.calc2.parametric-tangent-lines]
+      - id: kp3
+        can_do: Find a concavity from a parametric curve
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+      - id: kp4
+        can_do: Evaluate at a point
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+  - id: math.calc2.parametric-horizontal-vertical
+    name: Finding horizontal and vertical tangents of parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-tangent-lines
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find horizontal tangents
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+      - id: kp2
+        can_do: Find vertical tangents
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+      - id: kp3
+        can_do: Handle both derivatives being zero
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+      - id: kp4
+        can_do: Find these on a cycloid
+        key_prerequisites: [math.calc2.parametric-tangent-lines]
+  - id: math.calc2.polar-derivatives
+    name: Finding slopes of polar curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.polar-curves
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.parametric-horizontal-vertical
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a polar curve in parametric form
+        key_prerequisites: [math.calc2.parametric-horizontal-vertical, math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Find a slope at an angle
+        key_prerequisites: [math.precalc.polar-curves]
+      - id: kp3
+        can_do: Find a slope with a rose or cardioid
+        key_prerequisites: [math.calc2.parametric-horizontal-vertical]
+      - id: kp4
+        can_do: Find tangents at the pole
+        key_prerequisites: [math.calc2.parametric-horizontal-vertical]
+  - id: math.calc2.polar-arc-length
+    name: Finding arc length of polar curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.polar-derivatives
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.arc-length-integral
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the polar length formula
+        key_prerequisites: [math.calc2.polar-derivatives, math.calc2.arc-length-integral]
+      - id: kp2
+        can_do: Find a length of a circle
+        key_prerequisites: [math.calc2.polar-derivatives]
+      - id: kp3
+        can_do: Find the length of a cardioid
+        key_prerequisites: [math.calc2.polar-derivatives]
+      - id: kp4
+        can_do: Find the length of a spiral numerically
+        key_prerequisites: [math.calc2.arc-length-integral]
+  - id: math.calc2.polar-tangent-lines
+    name: Writing tangent lines to polar curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.polar-derivatives
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert a polar point to rectangular
+        key_prerequisites: [math.calc2.polar-derivatives]
+      - id: kp2
+        can_do: Write a tangent line at an angle
+        key_prerequisites: [math.calc2.polar-derivatives]
+      - id: kp3
+        can_do: Find horizontal tangents on a cardioid
+        key_prerequisites: [math.calc2.polar-derivatives]
+      - id: kp4
+        can_do: Find vertical tangents on a cardioid
+        key_prerequisites: [math.calc2.polar-derivatives]
+  - id: math.calc2.polar-area-petal
+    name: Finding the area of one petal
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.polar-area
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find limits for one petal
+        key_prerequisites: [math.calc2.polar-area]
+      - id: kp2
+        can_do: Find the area of a rose petal
+        key_prerequisites: [math.calc2.polar-area]
+      - id: kp3
+        can_do: Find a limacon's inner loop area
+        key_prerequisites: [math.calc2.polar-area]
+      - id: kp4
+        can_do: Find all petals by symmetry
+        key_prerequisites: [math.calc2.polar-area]
+  - id: math.calc2.polar-area-between-curves
+    name: Finding area between polar curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.polar-area-petal
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.polar-area
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angles where curves cross
+        key_prerequisites: [math.calc2.polar-area-petal]
+      - id: kp2
+        can_do: Find an area inside one curve and outside another
+        key_prerequisites: [math.calc2.polar-area-petal]
+      - id: kp3
+        can_do: Find an area shared by two curves
+        key_prerequisites: [math.calc2.polar-area-petal]
+      - id: kp4
+        can_do: Catch a crossing missed by simultaneous solving
+        key_prerequisites: [math.calc2.polar-area-petal]
+  - id: math.calc2.hyperbolic-definitions
+    name: Defining hyperbolic functions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sinh and cosh from exponentials
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp2
+        can_do: Define the other four functions
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp3
+        can_do: Evaluate hyperbolic functions
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp4
+        can_do: Explain the name from a hyperbola
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+  - id: math.calc2.hyperbolic-graphs
+    name: Graphing hyperbolic functions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.hyperbolic-definitions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Graph sinh and cosh
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+      - id: kp2
+        can_do: Graph tanh and its asymptotes
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+      - id: kp3
+        can_do: Tell parity and range
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+      - id: kp4
+        can_do: Compare with exponentials at large x
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+  - id: math.calc2.hyperbolic-identities
+    name: Using hyperbolic identities
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.hyperbolic-graphs
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.hyperbolic-definitions
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the basic identity
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+      - id: kp2
+        can_do: Derive a double-angle identity
+        key_prerequisites: [math.calc2.hyperbolic-definitions]
+      - id: kp3
+        can_do: Compare signs with trig identities
+        key_prerequisites: [math.calc2.hyperbolic-graphs]
+      - id: kp4
+        can_do: Simplify a hyperbolic expression
+        key_prerequisites: [math.calc2.hyperbolic-graphs]
+  - id: math.calc2.hyperbolic-derivatives-integrals
+    name: Differentiating and integrating hyperbolic functions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.hyperbolic-identities
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.u-substitution-indefinite
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate sinh and cosh
+        key_prerequisites: [math.calc2.hyperbolic-identities]
+      - id: kp2
+        can_do: Differentiate other hyperbolic functions
+        key_prerequisites: [math.calc2.hyperbolic-identities]
+      - id: kp3
+        can_do: Integrate hyperbolic forms
+        key_prerequisites: [math.calc2.hyperbolic-identities]
+      - id: kp4
+        can_do: Integrate with a substitution
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+  - id: math.calc2.inverse-hyperbolic
+    name: Using inverse hyperbolic functions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.hyperbolic-derivatives-integrals
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivative-of-inverse-function
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an inverse as a log
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals]
+      - id: kp2
+        can_do: Differentiate inverse hyperbolic functions
+        key_prerequisites: [math.calc1.derivative-of-inverse-function]
+      - id: kp3
+        can_do: Integrate to an inverse hyperbolic form
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals]
+      - id: kp4
+        can_do: Choose its form over a log
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals]
+  - id: math.calc2.hyperbolic-substitutions
+    name: Using hyperbolic substitutions
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.inverse-hyperbolic
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.calc2.trig-sub-tangent
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute sinh for a sum of squares
+        key_prerequisites: [math.calc2.inverse-hyperbolic]
+      - id: kp2
+        can_do: Substitute cosh for a difference of squares
+        key_prerequisites: [math.calc2.inverse-hyperbolic]
+      - id: kp3
+        can_do: Compare with a trig substitution
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp4
+        can_do: Evaluate a definite integral with them
+        key_prerequisites: [math.calc2.inverse-hyperbolic]
+  - id: math.calc2.catenary
+    name: Applying the catenary
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.hyperbolic-derivatives-integrals
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.calc2.arc-length-integral
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a hanging cable as a cosh
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals]
+      - id: kp2
+        can_do: Find the arc length of a cable
+        key_prerequisites: [math.calc2.arc-length-integral]
+      - id: kp3
+        can_do: Find a tension from the shape
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals]
+      - id: kp4
+        can_do: Find a sag from a span in metres
+        key_prerequisites: [math.calc2.hyperbolic-derivatives-integrals, math.calc2.arc-length-integral]

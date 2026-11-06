@@ -1,0 +1,3673 @@
+course: math.analysis
+topics:
+  - id: math.analysis.axioms-of-reals
+    name: Using the field and order axioms
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.group-axiom-proofs
+        encompassing: 0.3
+        confidence: high
+      - topic: math.proofs.order-relations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the field axioms
+        key_prerequisites: [math.proofs.group-axiom-proofs]
+      - id: kp2
+        can_do: State the order axioms
+        key_prerequisites: [math.proofs.order-relations]
+      - id: kp3
+        can_do: Prove a basic fact from field axioms
+        key_prerequisites: [math.proofs.group-axiom-proofs]
+      - id: kp4
+        can_do: Prove a basic fact from order axioms
+        key_prerequisites: [math.proofs.order-relations]
+  - id: math.analysis.absolute-value-inequalities-analysis
+    name: Proving absolute value inequalities
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.axioms-of-reals
+        encompassing: 0.3
+        confidence: high
+      - topic: math.proofs.absolute-value-proofs
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define absolute value on an ordered field
+        key_prerequisites: [math.analysis.axioms-of-reals]
+      - id: kp2
+        can_do: Rewrite an inequality as a two-sided bound
+        key_prerequisites: [math.proofs.absolute-value-proofs]
+      - id: kp3
+        can_do: Prove a product rule
+        key_prerequisites: [math.proofs.absolute-value-proofs]
+      - id: kp4
+        can_do: Prove a quotient bound
+        key_prerequisites: [math.analysis.axioms-of-reals, math.proofs.absolute-value-proofs]
+  - id: math.analysis.triangle-inequality
+    name: Using the triangle inequality
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.absolute-value-inequalities-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the triangle inequality
+        key_prerequisites: [math.analysis.absolute-value-inequalities-analysis]
+      - id: kp2
+        can_do: Prove the reverse triangle inequality
+        key_prerequisites: [math.analysis.absolute-value-inequalities-analysis]
+      - id: kp3
+        can_do: Add and subtract a term to use it
+        key_prerequisites: [math.analysis.absolute-value-inequalities-analysis]
+      - id: kp4
+        can_do: Bound a sum with many terms
+        key_prerequisites: [math.analysis.absolute-value-inequalities-analysis]
+  - id: math.analysis.bernoulli-inequality
+    name: Proving Bernoulli's inequality
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.induction-inequalities
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the inequality
+        key_prerequisites: [math.proofs.induction-inequalities]
+      - id: kp2
+        can_do: Prove it by induction
+        key_prerequisites: [math.proofs.induction-inequalities]
+      - id: kp3
+        can_do: Use it to show a power grows
+        key_prerequisites: [math.proofs.induction-inequalities]
+      - id: kp4
+        can_do: Use it to show a power shrinks
+        key_prerequisites: [math.proofs.induction-inequalities]
+  - id: math.analysis.bounds-of-sets
+    name: Finding upper and lower bounds
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.axioms-of-reals
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bounds of an interval
+        key_prerequisites: [math.analysis.axioms-of-reals]
+      - id: kp2
+        can_do: Find bounds of a set defined by a formula
+        key_prerequisites: [math.analysis.axioms-of-reals]
+      - id: kp3
+        can_do: Find bounds of a sequence's terms
+        key_prerequisites: [math.analysis.axioms-of-reals]
+      - id: kp4
+        can_do: Show a set is unbounded
+        key_prerequisites: [math.analysis.axioms-of-reals]
+  - id: math.analysis.supremum-infimum
+    name: Finding suprema and infima
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.least-upper-bounds-intro
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.bounds-of-sets
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.axioms-of-reals
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define supremum and infimum
+        key_prerequisites: [math.proofs.least-upper-bounds-intro]
+      - id: kp2
+        can_do: Find them for finite sets
+        key_prerequisites: [math.analysis.bounds-of-sets]
+      - id: kp3
+        can_do: Find them for open intervals
+        key_prerequisites: [math.analysis.bounds-of-sets]
+      - id: kp4
+        can_do: Tell supremum from maximum
+        key_prerequisites: [math.analysis.bounds-of-sets]
+  - id: math.analysis.sup-proofs
+    name: Proving a number is a supremum
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.supremum-infimum
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the epsilon characterization
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp2
+        can_do: Prove a supremum of a formula set
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp3
+        can_do: Prove an infimum of a formula set
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp4
+        can_do: Prove a supremum of a sequence's terms
+        key_prerequisites: [math.analysis.supremum-infimum]
+  - id: math.analysis.completeness-axiom
+    name: Using the completeness axiom
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sup-proofs
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.supremum-infimum
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the axiom
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp2
+        can_do: Show the rationals fail it
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp3
+        can_do: Derive the greatest lower bound version
+        key_prerequisites: [math.analysis.sup-proofs]
+      - id: kp4
+        can_do: Use it to find a supremum exists
+        key_prerequisites: [math.analysis.sup-proofs]
+  - id: math.analysis.archimedean-property
+    name: Using the Archimedean property
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.completeness-axiom
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the property
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp2
+        can_do: Prove it from completeness
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp3
+        can_do: Find n with one over n below epsilon
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp4
+        can_do: Use it to prove an infimum is zero
+        key_prerequisites: [math.analysis.completeness-axiom]
+  - id: math.analysis.density-of-rationals
+    name: Proving density of the rationals
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.archimedean-property
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State density
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp2
+        can_do: Prove density of rationals
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp3
+        can_do: Prove density of irrationals
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp4
+        can_do: Find a rational in a given interval
+        key_prerequisites: [math.analysis.archimedean-property]
+  - id: math.analysis.existence-of-roots
+    name: Proving square roots exist
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.completeness-axiom
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a set for root two
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp2
+        can_do: Show its supremum squares to two
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp3
+        can_do: Generalize to nth roots
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp4
+        can_do: Compare with rationals
+        key_prerequisites: [math.analysis.completeness-axiom]
+  - id: math.analysis.nested-intervals
+    name: Using nested intervals
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.completeness-axiom
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the nested intervals theorem
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp2
+        can_do: Prove it from completeness
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp3
+        can_do: Show open intervals fail
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp4
+        can_do: Find when the intersection is a point
+        key_prerequisites: [math.analysis.completeness-axiom]
+  - id: math.analysis.sup-of-combinations
+    name: Proving suprema of sums and multiples
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sup-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a supremum of a sum
+        key_prerequisites: [math.analysis.sup-proofs]
+      - id: kp2
+        can_do: Prove a supremum of a scalar multiple
+        key_prerequisites: [math.analysis.sup-proofs]
+      - id: kp3
+        can_do: Prove a supremum under a negative scale
+        key_prerequisites: [math.analysis.sup-proofs]
+      - id: kp4
+        can_do: Prove a supremum of a product of positives
+        key_prerequisites: [math.analysis.sup-proofs]
+  - id: math.analysis.decimal-expansions
+    name: Working with decimal expansions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.archimedean-property
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a decimal as a limit
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp2
+        can_do: Show every real has an expansion
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp3
+        can_do: Handle repeated nines
+        key_prerequisites: [math.analysis.archimedean-property]
+      - id: kp4
+        can_do: Show a repeating decimal is rational
+        key_prerequisites: [math.analysis.archimedean-property]
+  - id: math.analysis.countability-reals
+    name: Proving the reals are uncountable
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.nested-intervals
+        encompassing: 0.3
+        confidence: high
+      - topic: math.proofs.uncountable-diagonal
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.decimal-expansions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove with nested intervals
+        key_prerequisites: [math.analysis.nested-intervals]
+      - id: kp2
+        can_do: Prove with a diagonal argument
+        key_prerequisites: [math.proofs.uncountable-diagonal, math.analysis.decimal-expansions]
+      - id: kp3
+        can_do: Show an interval is uncountable
+        key_prerequisites: [math.analysis.nested-intervals]
+      - id: kp4
+        can_do: Show irrationals are uncountable
+        key_prerequisites: [math.proofs.uncountable-diagonal]
+  - id: math.analysis.sequence-limit-definition
+    name: Using the epsilon definition of a sequence limit
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.sequences-limit-proofs
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.triangle-inequality
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the epsilon definition of a sequence limit
+        key_prerequisites: [math.proofs.sequences-limit-proofs]
+      - id: kp2
+        can_do: Find an N for a given epsilon
+        key_prerequisites: [math.proofs.sequences-limit-proofs]
+      - id: kp3
+        can_do: Use the triangle inequality in an estimate
+        key_prerequisites: [math.analysis.triangle-inequality]
+      - id: kp4
+        can_do: Picture the epsilon band
+        key_prerequisites: [math.proofs.sequences-limit-proofs]
+  - id: math.analysis.sequence-limit-proofs
+    name: Proving limits of sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a rational sequence limit
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp2
+        can_do: Prove a limit with roots
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp3
+        can_do: Prove a limit with a bound on oscillation
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp4
+        can_do: Bound a denominator from below
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+  - id: math.analysis.sequence-divergence-proofs
+    name: Proving a sequence diverges
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Negate the definition
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp2
+        can_do: Prove an oscillating sequence diverges
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp3
+        can_do: Prove an unbounded sequence diverges
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp4
+        can_do: Use two subsequence ideas informally
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+  - id: math.analysis.monotone-convergence
+    name: Using the monotone convergence theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.completeness-axiom
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.bernoulli-inequality
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the monotone convergence theorem
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp2
+        can_do: Prove it from completeness
+        key_prerequisites: [math.analysis.completeness-axiom]
+      - id: kp3
+        can_do: Use it for a bounded sequence
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp4
+        can_do: Show the sequence behind e converges
+        key_prerequisites: [math.analysis.bernoulli-inequality]
+  - id: math.analysis.subsequences
+    name: Working with subsequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a subsequence
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp2
+        can_do: Prove a subsequence shares a limit
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp3
+        can_do: Show divergence with subsequences
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp4
+        can_do: Find monotone subsequences
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+  - id: math.analysis.bolzano-weierstrass
+    name: Using the Bolzano-Weierstrass theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.nested-intervals
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.subsequences
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Bolzano-Weierstrass theorem
+        key_prerequisites: [math.analysis.nested-intervals]
+      - id: kp2
+        can_do: Prove it with nested intervals
+        key_prerequisites: [math.analysis.nested-intervals]
+      - id: kp3
+        can_do: Prove it with monotone subsequences
+        key_prerequisites: [math.analysis.subsequences]
+      - id: kp4
+        can_do: Use it on a bounded sequence
+        key_prerequisites: [math.analysis.subsequences]
+  - id: math.analysis.cauchy-sequences
+    name: Using Cauchy sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.bolzano-weierstrass
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a Cauchy sequence
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+      - id: kp2
+        can_do: Prove a convergent sequence is Cauchy
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+      - id: kp3
+        can_do: Prove a Cauchy sequence is bounded
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+      - id: kp4
+        can_do: Show a sequence is not Cauchy
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+  - id: math.analysis.uniqueness-of-limits
+    name: Proving limits are unique
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that limits are unique
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp2
+        can_do: Prove with an epsilon of half the gap
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp3
+        can_do: Prove with a triangle inequality
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp4
+        can_do: Use it to conclude divergence
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+  - id: math.analysis.bounded-convergent
+    name: Proving convergent sequences are bounded
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a convergent sequence is bounded
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp2
+        can_do: Find an explicit bound
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp3
+        can_do: Show the converse fails
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp4
+        can_do: Use the contrapositive for divergence
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+  - id: math.analysis.limit-laws-proofs
+    name: Proving limit laws for sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniqueness-of-limits
+        encompassing: 0.1
+        confidence: low
+      - topic: math.analysis.bounded-convergent
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the sum law
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp2
+        can_do: Prove the product law
+        key_prerequisites: [math.analysis.bounded-convergent]
+      - id: kp3
+        can_do: Prove the quotient law
+        key_prerequisites: [math.analysis.bounded-convergent]
+      - id: kp4
+        can_do: Prove a root law
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+  - id: math.analysis.limits-and-order
+    name: Proving limits preserve order
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-laws-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a limit of nonnegative terms is nonnegative
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp2
+        can_do: Prove comparison of limits
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp3
+        can_do: Show strict order can fail
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp4
+        can_do: Prove a positive limit gives eventually positive terms
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+  - id: math.analysis.squeeze-proofs
+    name: Proving the squeeze theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limits-and-order
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the squeeze theorem
+        key_prerequisites: [math.analysis.limits-and-order]
+      - id: kp2
+        can_do: Use it on a root of n
+        key_prerequisites: [math.analysis.limits-and-order]
+      - id: kp3
+        can_do: Use it on a bounded product
+        key_prerequisites: [math.analysis.limits-and-order]
+      - id: kp4
+        can_do: Use it on a sum with n terms
+        key_prerequisites: [math.analysis.limits-and-order]
+  - id: math.analysis.recursive-sequence-proofs
+    name: Proving recursive sequences converge
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.monotone-convergence
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove bounds by induction
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp2
+        can_do: Prove monotonicity by induction
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp3
+        can_do: Find the limit from a fixed-point equation
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp4
+        can_do: Handle a sequence that alternates
+        key_prerequisites: [math.analysis.monotone-convergence]
+  - id: math.analysis.standard-limit-proofs
+    name: Proving standard limits
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-laws-proofs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.bernoulli-inequality
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a power of a small number tends to zero
+        key_prerequisites: [math.analysis.bernoulli-inequality]
+      - id: kp2
+        can_do: Prove the nth root of n tends to one
+        key_prerequisites: [math.analysis.bernoulli-inequality]
+      - id: kp3
+        can_do: Prove n over a power tends to zero
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp4
+        can_do: Prove a power over a factorial tends to zero
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+  - id: math.analysis.divergence-to-infinity
+    name: Proving divergence to infinity
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-divergence-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define divergence to infinity
+        key_prerequisites: [math.analysis.sequence-divergence-proofs]
+      - id: kp2
+        can_do: Prove a polynomial sequence does this
+        key_prerequisites: [math.analysis.sequence-divergence-proofs]
+      - id: kp3
+        can_do: Prove a reciprocal rule
+        key_prerequisites: [math.analysis.sequence-divergence-proofs]
+      - id: kp4
+        can_do: Tell it from unbounded
+        key_prerequisites: [math.analysis.sequence-divergence-proofs]
+  - id: math.analysis.subsequential-limits
+    name: Finding subsequential limits
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.subsequences
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find all subsequential limits
+        key_prerequisites: [math.analysis.subsequences]
+      - id: kp2
+        can_do: Find them for an oscillating formula
+        key_prerequisites: [math.analysis.subsequences]
+      - id: kp3
+        can_do: Prove a closed-set fact about them
+        key_prerequisites: [math.analysis.subsequences]
+      - id: kp4
+        can_do: Connect to convergence
+        key_prerequisites: [math.analysis.subsequences]
+  - id: math.analysis.limsup-liminf
+    name: Using limit superior and inferior
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.monotone-convergence
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.divergence-to-infinity
+        encompassing: 0.1
+        confidence: low
+      - topic: math.analysis.subsequential-limits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define them with tails
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp2
+        can_do: Find them for a sequence
+        key_prerequisites: [math.analysis.subsequential-limits]
+      - id: kp3
+        can_do: Prove they are subsequential limits
+        key_prerequisites: [math.analysis.subsequential-limits]
+      - id: kp4
+        can_do: Prove convergence iff they agree
+        key_prerequisites: [math.analysis.monotone-convergence]
+  - id: math.analysis.cauchy-convergent-proof
+    name: Proving Cauchy sequences converge
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.cauchy-sequences
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a bounded convergent subsequence
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp2
+        can_do: Upgrade to the whole sequence
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp3
+        can_do: State equivalence with convergence
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp4
+        can_do: Show a rational Cauchy sequence without a rational limit
+        key_prerequisites: [math.analysis.cauchy-sequences]
+  - id: math.analysis.completeness-from-cauchy
+    name: Using completeness through Cauchy sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.cauchy-convergent-proof
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.cauchy-sequences
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Cauchy to prove convergence without a limit
+        key_prerequisites: [math.analysis.cauchy-convergent-proof]
+      - id: kp2
+        can_do: Show contractive sequences converge
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp3
+        can_do: Compare ways to state completeness
+        key_prerequisites: [math.analysis.cauchy-convergent-proof]
+      - id: kp4
+        can_do: Define a complete ordered field
+        key_prerequisites: [math.analysis.cauchy-convergent-proof]
+  - id: math.analysis.series-convergence-formal
+    name: Defining convergence of series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-laws-proofs
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.series-as-partial-sums
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define convergence with partial sums
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp2
+        can_do: Show linearity of series
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp3
+        can_do: Show a tail decides convergence
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp4
+        can_do: Connect to first-year tests
+        key_prerequisites: [math.calc2.series-as-partial-sums]
+  - id: math.analysis.cauchy-criterion-series
+    name: Using the Cauchy criterion for series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.cauchy-sequences
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Cauchy criterion for series
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp2
+        can_do: Use it for the divergence test
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp3
+        can_do: Use it for a harmonic series
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp4
+        can_do: Use it for a tail bound
+        key_prerequisites: [math.analysis.series-convergence-formal]
+  - id: math.analysis.absolute-convergence-proof
+    name: Proving absolute convergence implies convergence
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.cauchy-criterion-series
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove absolute convergence implies convergence
+        key_prerequisites: [math.analysis.cauchy-criterion-series]
+      - id: kp2
+        can_do: Show the converse fails
+        key_prerequisites: [math.analysis.cauchy-criterion-series]
+      - id: kp3
+        can_do: Bound a sum by an absolute sum
+        key_prerequisites: [math.analysis.cauchy-criterion-series]
+      - id: kp4
+        can_do: Prove a comparison with a complex or sign term
+        key_prerequisites: [math.analysis.cauchy-criterion-series]
+  - id: math.analysis.alternating-proof
+    name: Proving the alternating series test
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.monotone-convergence
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a monotone pair of partial sums
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp2
+        can_do: Prove convergence
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp3
+        can_do: Prove the error bound
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp4
+        can_do: Show a failure without monotonic terms
+        key_prerequisites: [math.analysis.series-convergence-formal]
+  - id: math.analysis.rearrangements
+    name: Exploring rearrangements of series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.absolute-convergence-proof
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a rearrangement
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp2
+        can_do: Show absolute convergence preserves sums
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp3
+        can_do: Rearrange the alternating harmonic series
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp4
+        can_do: State Riemann's rearrangement result
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+  - id: math.analysis.geometric-proofs
+    name: Proving geometric series convergence
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the partial sum formula
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp2
+        can_do: Prove convergence for a small ratio
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp3
+        can_do: Prove divergence for a large ratio
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp4
+        can_do: Use it for a repeating decimal
+        key_prerequisites: [math.analysis.series-convergence-formal]
+  - id: math.analysis.term-test-proof
+    name: Proving the divergence test
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the term test
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp2
+        can_do: Show the converse fails
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp3
+        can_do: Prove divergence of the harmonic series
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp4
+        can_do: Use the test's contrapositive
+        key_prerequisites: [math.analysis.series-convergence-formal]
+  - id: math.analysis.comparison-proofs
+    name: Proving comparison tests
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.monotone-convergence
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.geometric-proofs
+        encompassing: 0.2
+        confidence: high
+      - topic: math.analysis.term-test-proof
+        encompassing: 0.1
+        confidence: low
+    encompassed:
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a bounded partial sum criterion
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp2
+        can_do: Prove direct comparison
+        key_prerequisites: [math.analysis.monotone-convergence, math.analysis.geometric-proofs]
+      - id: kp3
+        can_do: Prove limit comparison
+        key_prerequisites: [math.analysis.monotone-convergence]
+      - id: kp4
+        can_do: Prove the p-series result
+        key_prerequisites: [math.analysis.series-convergence-formal]
+  - id: math.analysis.ratio-root-proofs
+    name: Proving ratio and root tests
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.comparison-proofs
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.limsup-liminf
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.standard-limit-proofs
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the ratio test
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp2
+        can_do: Prove the root test with limsup
+        key_prerequisites: [math.analysis.limsup-liminf]
+      - id: kp3
+        can_do: Show the root test is stronger
+        key_prerequisites: [math.analysis.limsup-liminf]
+      - id: kp4
+        can_do: Prove a limit formula for a power of a factorial
+        key_prerequisites: [math.analysis.standard-limit-proofs]
+  - id: math.analysis.condensation-test
+    name: Using Cauchy condensation
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.comparison-proofs
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Cauchy condensation test
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp2
+        can_do: Prove the test
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp3
+        can_do: Use it on p-series
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp4
+        can_do: Use it with logs
+        key_prerequisites: [math.analysis.comparison-proofs]
+  - id: math.analysis.dirichlet-abel-tests
+    name: Using Dirichlet and Abel tests
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.alternating-proof
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use summation by parts
+        key_prerequisites: [math.analysis.alternating-proof]
+      - id: kp2
+        can_do: State Dirichlet's test
+        key_prerequisites: [math.analysis.alternating-proof]
+      - id: kp3
+        can_do: Use it on sine over n
+        key_prerequisites: [math.analysis.alternating-proof]
+      - id: kp4
+        can_do: State Abel's test
+        key_prerequisites: [math.analysis.alternating-proof]
+  - id: math.analysis.series-products
+    name: Using Cauchy products of series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.absolute-convergence-proof
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a Cauchy product
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp2
+        can_do: Prove Mertens' result for absolute convergence
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp3
+        can_do: Multiply two exponentials
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+      - id: kp4
+        can_do: Show a failing conditional product
+        key_prerequisites: [math.analysis.absolute-convergence-proof]
+  - id: math.analysis.open-closed-sets
+    name: Working with open and closed sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.supremum-infimum
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define open and closed sets
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp2
+        can_do: Test intervals and unions
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp3
+        can_do: Find a set neither open nor closed
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp4
+        can_do: Find a set both open and closed
+        key_prerequisites: [math.analysis.supremum-infimum]
+  - id: math.analysis.limit-points
+    name: Working with limit points
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.open-closed-sets
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a limit point
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp2
+        can_do: Find limit points of a set
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp3
+        can_do: Characterize with sequences
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp4
+        can_do: Tell isolated points
+        key_prerequisites: [math.analysis.open-closed-sets]
+  - id: math.analysis.connected-sets
+    name: Working with connected sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.open-closed-sets
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a disconnected set
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp2
+        can_do: Show an interval is connected
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp3
+        can_do: Show connected sets are intervals
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp4
+        can_do: Show rationals are disconnected
+        key_prerequisites: [math.analysis.open-closed-sets]
+  - id: math.analysis.open-sets-proofs
+    name: Proving unions and intersections of open sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.open-closed-sets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove arbitrary unions are open
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp2
+        can_do: Prove finite intersections are open
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp3
+        can_do: Show infinite intersections can fail
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp4
+        can_do: Prove a complement rule
+        key_prerequisites: [math.analysis.open-closed-sets]
+  - id: math.analysis.closure-interior
+    name: Finding closure and interior
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-points
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.open-sets-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find closure of a set
+        key_prerequisites: [math.analysis.limit-points]
+      - id: kp2
+        can_do: Find interior of a set
+        key_prerequisites: [math.analysis.open-sets-proofs]
+      - id: kp3
+        can_do: Prove closure is closed
+        key_prerequisites: [math.analysis.limit-points]
+      - id: kp4
+        can_do: Find a boundary
+        key_prerequisites: [math.analysis.limit-points, math.analysis.open-sets-proofs]
+  - id: math.analysis.perfect-and-cantor
+    name: Exploring perfect sets and the Cantor set
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.closure-interior
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.proofs.uncountable-diagonal
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a perfect set
+        key_prerequisites: [math.analysis.closure-interior]
+      - id: kp2
+        can_do: Build the Cantor set
+        key_prerequisites: [math.analysis.closure-interior]
+      - id: kp3
+        can_do: Show its length is zero
+        key_prerequisites: [math.analysis.closure-interior]
+      - id: kp4
+        can_do: Show it is uncountable
+        key_prerequisites: [math.proofs.uncountable-diagonal]
+  - id: math.analysis.closed-via-sequences
+    name: Characterizing closed sets with sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-points
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove closed iff containing sequence limits
+        key_prerequisites: [math.analysis.limit-points]
+      - id: kp2
+        can_do: Prove a set is closed with sequences
+        key_prerequisites: [math.analysis.limit-points]
+      - id: kp3
+        can_do: Prove a set is not closed with a sequence
+        key_prerequisites: [math.analysis.limit-points]
+      - id: kp4
+        can_do: Compare with the open-set definition
+        key_prerequisites: [math.analysis.limit-points]
+  - id: math.analysis.compact-sets-sequences
+    name: Defining compactness with sequences
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.bolzano-weierstrass
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.closed-via-sequences
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.analysis.limit-points
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sequential compactness
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+      - id: kp2
+        can_do: Prove a closed bounded interval is compact
+        key_prerequisites: [math.analysis.bolzano-weierstrass]
+      - id: kp3
+        can_do: Prove a compact set is closed and bounded
+        key_prerequisites: [math.analysis.closed-via-sequences]
+      - id: kp4
+        can_do: Show finite sets are compact
+        key_prerequisites: [math.analysis.limit-points]
+  - id: math.analysis.compact-sets-covers
+    name: Defining compactness with open covers
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.compact-sets-sequences
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an open cover
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+      - id: kp2
+        can_do: Find a finite subcover
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+      - id: kp3
+        can_do: Show a cover with no finite subcover
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+      - id: kp4
+        can_do: State equivalence with sequential compactness
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+  - id: math.analysis.compact-nonexamples
+    name: Showing sets are not compact
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.compact-sets-covers
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show an open interval is not compact
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp2
+        can_do: Show an unbounded set is not compact
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp3
+        can_do: Build a cover with no finite subcover
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp4
+        can_do: Show rationals in an interval fail
+        key_prerequisites: [math.analysis.compact-sets-covers]
+  - id: math.analysis.heine-borel
+    name: Using the Heine-Borel theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.compact-nonexamples
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.analysis.compact-sets-covers
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Heine-Borel theorem
+        key_prerequisites: [math.analysis.compact-nonexamples]
+      - id: kp2
+        can_do: Prove the closed interval case
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp3
+        can_do: Prove the general case
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp4
+        can_do: Use it to test sets
+        key_prerequisites: [math.analysis.compact-nonexamples]
+  - id: math.analysis.compact-properties
+    name: Proving properties of compact sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.heine-borel
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a closed subset is compact
+        key_prerequisites: [math.analysis.heine-borel]
+      - id: kp2
+        can_do: Prove finite unions are compact
+        key_prerequisites: [math.analysis.heine-borel]
+      - id: kp3
+        can_do: Prove intersection of nested compact sets is nonempty
+        key_prerequisites: [math.analysis.heine-borel]
+      - id: kp4
+        can_do: Find a compact set's maximum
+        key_prerequisites: [math.analysis.heine-borel]
+  - id: math.analysis.dense-sets
+    name: Working with dense sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.closure-interior
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.density-of-rationals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a dense subset
+        key_prerequisites: [math.analysis.closure-interior]
+      - id: kp2
+        can_do: Show a set is dense with closure
+        key_prerequisites: [math.analysis.closure-interior]
+      - id: kp3
+        can_do: Use density of rationals
+        key_prerequisites: [math.analysis.density-of-rationals]
+      - id: kp4
+        can_do: Show two continuous functions agreeing on a dense set are equal
+        key_prerequisites: [math.analysis.density-of-rationals]
+  - id: math.analysis.function-limit-epsilon-delta
+    name: Using the epsilon-delta limit definition
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-definition
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.epsilon-delta-quadratic
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc1.epsilon-delta-linear
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the epsilon-delta limit definition
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp2
+        can_do: Relate delta to a limit point
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp3
+        can_do: Prove a quadratic case
+        key_prerequisites: [math.calc1.epsilon-delta-quadratic]
+      - id: kp4
+        can_do: Picture it on a graph
+        key_prerequisites: [math.calc1.epsilon-delta-linear]
+  - id: math.analysis.function-limit-proofs-analysis
+    name: Proving function limits
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.function-limit-epsilon-delta
+        encompassing: 0.4
+        confidence: high
+      - topic: math.proofs.function-limit-proofs
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a limit of a rational function
+        key_prerequisites: [math.analysis.function-limit-epsilon-delta]
+      - id: kp2
+        can_do: Prove a limit with a root
+        key_prerequisites: [math.proofs.function-limit-proofs]
+      - id: kp3
+        can_do: Prove a limit at infinity
+        key_prerequisites: [math.analysis.function-limit-epsilon-delta]
+      - id: kp4
+        can_do: Prove an infinite limit
+        key_prerequisites: [math.analysis.function-limit-epsilon-delta]
+  - id: math.analysis.sequential-criterion
+    name: Using the sequential criterion for limits
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.function-limit-proofs-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the sequential criterion for limits
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp2
+        can_do: Prove both directions
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp3
+        can_do: Prove a limit exists using sequences
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp4
+        can_do: Use it to transfer sequence laws
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+  - id: math.analysis.limit-nonexistence-proofs
+    name: Proving a limit does not exist
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequential-criterion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find two sequences with different limits
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp2
+        can_do: Disprove a limit of sine of one over x
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp3
+        can_do: Disprove a limit for a Dirichlet-type function
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp4
+        can_do: Negate the definition
+        key_prerequisites: [math.analysis.sequential-criterion]
+  - id: math.analysis.continuity-definition-analysis
+    name: Using the epsilon-delta definition of continuity
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.limit-nonexistence-proofs
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.sequential-criterion
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State epsilon-delta continuity
+        key_prerequisites: [math.analysis.limit-nonexistence-proofs]
+      - id: kp2
+        can_do: Prove continuity of a polynomial
+        key_prerequisites: [math.analysis.limit-nonexistence-proofs]
+      - id: kp3
+        can_do: Prove continuity of a root
+        key_prerequisites: [math.analysis.limit-nonexistence-proofs]
+      - id: kp4
+        can_do: State continuity with sequences
+        key_prerequisites: [math.analysis.sequential-criterion]
+  - id: math.analysis.uniform-continuity
+    name: Using uniform continuity
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define uniform continuity
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp2
+        can_do: Compare to pointwise continuity
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp3
+        can_do: Prove it for a linear function
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp4
+        can_do: Prove it for a square on a bounded interval
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+  - id: math.analysis.heine-cantor
+    name: Proving continuity on compact sets is uniform
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-continuity
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.compact-sets-covers
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that continuity on compact sets is uniform
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp2
+        can_do: Prove with sequences
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp3
+        can_do: Prove with open covers
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp4
+        can_do: Use on a closed interval
+        key_prerequisites: [math.analysis.uniform-continuity]
+  - id: math.analysis.lipschitz-functions
+    name: Using Lipschitz functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-continuity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a Lipschitz condition
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp2
+        can_do: Show Lipschitz implies uniform continuity
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp3
+        can_do: Use a bounded derivative to show it
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp4
+        can_do: Find a uniformly continuous non-Lipschitz function
+        key_prerequisites: [math.analysis.uniform-continuity]
+  - id: math.analysis.one-sided-limits-analysis
+    name: Proving one-sided limits
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.function-limit-proofs-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define one-sided limits
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp2
+        can_do: Relate them to two-sided limits
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp3
+        can_do: Prove with an epsilon-delta argument
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp4
+        can_do: Define limits at infinity for monotone functions
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+  - id: math.analysis.discontinuities-monotone
+    name: Classifying discontinuities of monotone functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.monotone-convergence
+        encompassing: 0.2
+        confidence: high
+      - topic: math.analysis.one-sided-limits-analysis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show one-sided limits exist for a monotone function
+        key_prerequisites: [math.analysis.one-sided-limits-analysis]
+      - id: kp2
+        can_do: Classify its discontinuities
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp3
+        can_do: Show they are countable
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp4
+        can_do: Build a monotone function with many jumps
+        key_prerequisites: [math.analysis.monotone-convergence]
+  - id: math.analysis.limit-laws-functions
+    name: Proving limit laws for functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequential-criterion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the sum law
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp2
+        can_do: Prove the product law
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp3
+        can_do: Prove the quotient law
+        key_prerequisites: [math.analysis.sequential-criterion]
+      - id: kp4
+        can_do: Prove a composition law
+        key_prerequisites: [math.analysis.sequential-criterion]
+  - id: math.analysis.continuity-algebra-proofs
+    name: Proving combinations of continuous functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.limit-laws-proofs
+        encompassing: 0.2
+        confidence: high
+      - topic: math.analysis.limit-laws-functions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove sums and products are continuous
+        key_prerequisites: [math.analysis.limit-laws-functions]
+      - id: kp2
+        can_do: Prove quotients are continuous
+        key_prerequisites: [math.analysis.limit-laws-proofs]
+      - id: kp3
+        can_do: Prove compositions are continuous
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp4
+        can_do: Conclude polynomials and rational functions are continuous
+        key_prerequisites: [math.analysis.limit-laws-functions]
+  - id: math.analysis.unusual-function-continuity
+    name: Testing continuity of unusual functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.density-of-rationals
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test Dirichlet's function
+        key_prerequisites: [math.analysis.density-of-rationals]
+      - id: kp2
+        can_do: Test a function continuous at one point
+        key_prerequisites: [math.analysis.continuity-definition-analysis, math.analysis.density-of-rationals]
+      - id: kp3
+        can_do: Test Thomae's function
+        key_prerequisites: [math.analysis.continuity-definition-analysis, math.analysis.density-of-rationals]
+      - id: kp4
+        can_do: Test x times a sine of a reciprocal
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+  - id: math.analysis.continuous-image-compact
+    name: Proving continuous images of compact sets are compact
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.compact-sets-sequences
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that continuous images of compact sets are compact
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp2
+        can_do: Prove with sequences
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+      - id: kp3
+        can_do: Find an example with a bounded image
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp4
+        can_do: Show a non-closed image for a non-compact domain
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+  - id: math.analysis.extreme-value-proof
+    name: Proving the extreme value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuous-image-compact
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.15
+        confidence: high
+      - topic: math.analysis.compact-sets-sequences
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a function on a closed interval is bounded
+        key_prerequisites: [math.analysis.continuous-image-compact]
+      - id: kp2
+        can_do: Show the supremum is attained
+        key_prerequisites: [math.analysis.continuous-image-compact]
+      - id: kp3
+        can_do: Show failure on an open interval
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+      - id: kp4
+        can_do: Generalize to any compact set
+        key_prerequisites: [math.analysis.compact-sets-sequences]
+  - id: math.analysis.continuous-image-connected
+    name: Proving continuous images of connected sets are connected
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.connected-sets
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that continuous images of connected sets are connected
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp2
+        can_do: Prove it
+        key_prerequisites: [math.analysis.continuity-definition-analysis, math.analysis.connected-sets]
+      - id: kp3
+        can_do: Conclude intervals map to intervals
+        key_prerequisites: [math.analysis.connected-sets]
+      - id: kp4
+        can_do: Find a counterexample with a discontinuity
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+  - id: math.analysis.intermediate-value-proof
+    name: Proving the intermediate value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuous-image-connected
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.15
+        confidence: high
+      - topic: math.analysis.connected-sets
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the intermediate value theorem
+        key_prerequisites: [math.analysis.continuous-image-connected]
+      - id: kp2
+        can_do: Prove with the connectedness result
+        key_prerequisites: [math.analysis.connected-sets]
+      - id: kp3
+        can_do: Prove with bisection or a supremum
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp4
+        can_do: Prove root existence with it
+        key_prerequisites: [math.analysis.continuous-image-connected]
+  - id: math.analysis.uniform-nonexamples
+    name: Proving a function is not uniformly continuous
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-continuity
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a square on the reals fails
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp2
+        can_do: Show a reciprocal on an open interval fails
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp3
+        can_do: Use two sequences to disprove
+        key_prerequisites: [math.analysis.uniform-continuity]
+      - id: kp4
+        can_do: Show a sine of a square fails
+        key_prerequisites: [math.analysis.uniform-continuity]
+  - id: math.analysis.inverse-continuous
+    name: Proving inverse functions are continuous
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.intermediate-value-proof
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show continuous injections are strictly monotone
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp2
+        can_do: Prove inverse functions are continuous
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp3
+        can_do: Find an inverse's domain
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp4
+        can_do: Conclude root functions are continuous
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+  - id: math.analysis.fixed-point-from-ivt
+    name: Proving a fixed point from the intermediate value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.intermediate-value-proof
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State a fixed point on an interval
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp2
+        can_do: Prove with a helper function
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp3
+        can_do: Use a contraction idea
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp4
+        can_do: Find an application
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+  - id: math.analysis.derivative-definition-analysis
+    name: Proving derivatives from the definition
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.function-limit-proofs-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.differentiability
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the derivative rigorously
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp2
+        can_do: Prove a power derivative from the definition
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp3
+        can_do: Prove differentiable implies continuous
+        key_prerequisites: [math.analysis.function-limit-proofs-analysis]
+      - id: kp4
+        can_do: Show a failure with an absolute value
+        key_prerequisites: [math.calc1.differentiability]
+  - id: math.analysis.differentiation-rule-proofs
+    name: Proving differentiation rules
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.derivative-definition-analysis
+        encompassing: 0.45
+        confidence: high
+      - topic: math.analysis.continuity-algebra-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the sum rule
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+      - id: kp2
+        can_do: Prove the product rule
+        key_prerequisites: [math.analysis.derivative-definition-analysis, math.analysis.continuity-algebra-proofs]
+      - id: kp3
+        can_do: Prove the quotient rule
+        key_prerequisites: [math.analysis.derivative-definition-analysis, math.analysis.continuity-algebra-proofs]
+      - id: kp4
+        can_do: Prove a power rule by induction
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+  - id: math.analysis.chain-rule-proof
+    name: Proving the chain rule
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.differentiation-rule-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot the flaw in the naive proof
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+      - id: kp2
+        can_do: Define a helper function
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+      - id: kp3
+        can_do: Finish the proof
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+      - id: kp4
+        can_do: Use the result for a composition
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+  - id: math.analysis.interior-extremum
+    name: Proving the interior extremum theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.derivative-definition-analysis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the interior extremum theorem
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+      - id: kp2
+        can_do: Prove it with one-sided limits
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+      - id: kp3
+        can_do: Use it to find extremum candidates
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+      - id: kp4
+        can_do: Show the converse fails
+        key_prerequisites: [math.analysis.derivative-definition-analysis]
+  - id: math.analysis.rolle-proof
+    name: Proving Rolle's theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.interior-extremum
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.extreme-value-proof
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Rolle's theorem
+        key_prerequisites: [math.analysis.interior-extremum]
+      - id: kp2
+        can_do: Find a maximum and minimum
+        key_prerequisites: [math.analysis.extreme-value-proof]
+      - id: kp3
+        can_do: Handle the constant case
+        key_prerequisites: [math.analysis.extreme-value-proof]
+      - id: kp4
+        can_do: Conclude with the extremum theorem
+        key_prerequisites: [math.analysis.interior-extremum]
+  - id: math.analysis.mvt-proof
+    name: Proving the mean value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.rolle-proof
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a helper function
+        key_prerequisites: [math.analysis.rolle-proof]
+      - id: kp2
+        can_do: Conclude from Rolle's theorem
+        key_prerequisites: [math.analysis.rolle-proof]
+      - id: kp3
+        can_do: Interpret geometrically
+        key_prerequisites: [math.analysis.rolle-proof]
+      - id: kp4
+        can_do: Show a failure without differentiability
+        key_prerequisites: [math.analysis.rolle-proof]
+  - id: math.analysis.darboux-theorem
+    name: Using Darboux's theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.interior-extremum
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Darboux's theorem
+        key_prerequisites: [math.analysis.interior-extremum]
+      - id: kp2
+        can_do: Prove it with a helper function
+        key_prerequisites: [math.analysis.interior-extremum]
+      - id: kp3
+        can_do: Show derivatives cannot have jumps
+        key_prerequisites: [math.analysis.interior-extremum]
+      - id: kp4
+        can_do: Find a discontinuous derivative
+        key_prerequisites: [math.analysis.interior-extremum]
+  - id: math.analysis.inverse-function-derivative-proof
+    name: Proving the derivative of an inverse function
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.differentiation-rule-proofs
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.inverse-continuous
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.analysis.intermediate-value-proof
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the inverse function derivative theorem
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+      - id: kp2
+        can_do: Prove with sequences
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+      - id: kp3
+        can_do: Use it for roots
+        key_prerequisites: [math.analysis.inverse-continuous]
+      - id: kp4
+        can_do: Use it for arctangent and log
+        key_prerequisites: [math.analysis.differentiation-rule-proofs]
+  - id: math.analysis.taylor-theorem-analysis
+    name: Proving Taylor's theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Taylor's theorem
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp2
+        can_do: Prove with a helper function
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp3
+        can_do: Bound a remainder
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp4
+        can_do: Use it for a sine or exponential
+        key_prerequisites: [math.calc2.taylor-remainder]
+  - id: math.analysis.monotone-from-derivative
+    name: Proving monotonicity from the derivative
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a positive derivative gives increasing
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp2
+        can_do: Prove a zero derivative gives constant
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp3
+        can_do: Prove strict monotonicity
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp4
+        can_do: Show a converse failure
+        key_prerequisites: [math.analysis.mvt-proof]
+  - id: math.analysis.mvt-applications-analysis
+    name: Using the mean value theorem in proofs
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.monotone-from-derivative
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a Lipschitz bound
+        key_prerequisites: [math.analysis.monotone-from-derivative]
+      - id: kp2
+        can_do: Prove two antiderivatives differ by a constant
+        key_prerequisites: [math.analysis.monotone-from-derivative]
+      - id: kp3
+        can_do: Prove uniqueness of a root
+        key_prerequisites: [math.analysis.monotone-from-derivative]
+      - id: kp4
+        can_do: Bound a difference of function values
+        key_prerequisites: [math.analysis.monotone-from-derivative]
+  - id: math.analysis.inequalities-from-mvt
+    name: Proving inequalities with the mean value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a sine bound
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp2
+        can_do: Prove a log bound
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp3
+        can_do: Prove an exponential bound
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp4
+        can_do: Prove a Bernoulli-type bound
+        key_prerequisites: [math.analysis.mvt-proof]
+  - id: math.analysis.cauchy-mvt
+    name: Proving the generalized mean value theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the generalized theorem
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp2
+        can_do: Prove with a helper function
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp3
+        can_do: Interpret on a parametric curve
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp4
+        can_do: Use it to compare two rates
+        key_prerequisites: [math.analysis.mvt-proof]
+  - id: math.analysis.lhopital-proof
+    name: Proving L'Hopital's rule
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.cauchy-mvt
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the zero over zero case
+        key_prerequisites: [math.analysis.cauchy-mvt]
+      - id: kp2
+        can_do: Prove a limit at infinity case
+        key_prerequisites: [math.analysis.cauchy-mvt]
+      - id: kp3
+        can_do: Prove an infinity over infinity case
+        key_prerequisites: [math.analysis.cauchy-mvt]
+      - id: kp4
+        can_do: Show a failure when the ratio's limit fails
+        key_prerequisites: [math.analysis.cauchy-mvt]
+  - id: math.analysis.second-derivative-test-proof
+    name: Proving the second derivative test
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.taylor-theorem-analysis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove with Taylor's theorem
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp2
+        can_do: Prove a higher derivative test
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp3
+        can_do: Prove convexity from the second derivative
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp4
+        can_do: Prove a minimum on an interval
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+  - id: math.analysis.partitions-upper-lower-sums
+    name: Using partitions and Darboux sums
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.supremum-infimum
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a partition
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Find upper and lower sums
+        key_prerequisites: [math.analysis.supremum-infimum]
+      - id: kp3
+        can_do: Show they bound the area
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Show lower is below upper
+        key_prerequisites: [math.analysis.supremum-infimum]
+  - id: math.analysis.computing-darboux-sums
+    name: Finding Darboux sums
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.partitions-upper-lower-sums
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sums for a linear function
+        key_prerequisites: [math.analysis.partitions-upper-lower-sums]
+      - id: kp2
+        can_do: Find sums for a square
+        key_prerequisites: [math.analysis.partitions-upper-lower-sums]
+      - id: kp3
+        can_do: Find sums for a step function
+        key_prerequisites: [math.analysis.partitions-upper-lower-sums]
+      - id: kp4
+        can_do: Use a uniform partition
+        key_prerequisites: [math.analysis.partitions-upper-lower-sums]
+  - id: math.analysis.refinement-lemmas
+    name: Using refinements of partitions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.computing-darboux-sums
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.analysis.partitions-upper-lower-sums
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a refinement
+        key_prerequisites: [math.analysis.partitions-upper-lower-sums]
+      - id: kp2
+        can_do: Prove a refinement raises lower sums
+        key_prerequisites: [math.analysis.computing-darboux-sums]
+      - id: kp3
+        can_do: Prove a refinement lowers upper sums
+        key_prerequisites: [math.analysis.computing-darboux-sums]
+      - id: kp4
+        can_do: Prove any lower sum is below any upper sum
+        key_prerequisites: [math.analysis.computing-darboux-sums]
+  - id: math.analysis.riemann-integrable-definition
+    name: Defining Riemann integrability
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.refinement-lemmas
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define upper and lower integrals
+        key_prerequisites: [math.analysis.refinement-lemmas]
+      - id: kp2
+        can_do: Define integrability
+        key_prerequisites: [math.analysis.refinement-lemmas]
+      - id: kp3
+        can_do: Find an integral of a step function
+        key_prerequisites: [math.analysis.refinement-lemmas]
+      - id: kp4
+        can_do: Find when a bounded function is needed
+        key_prerequisites: [math.analysis.refinement-lemmas]
+  - id: math.analysis.non-integrable-examples
+    name: Showing a function is not integrable
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.riemann-integrable-definition
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.density-of-rationals
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Dirichlet's function fails
+        key_prerequisites: [math.analysis.riemann-integrable-definition, math.analysis.density-of-rationals]
+      - id: kp2
+        can_do: Find upper and lower sums for it
+        key_prerequisites: [math.analysis.density-of-rationals]
+      - id: kp3
+        can_do: Show an unbounded function fails
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+      - id: kp4
+        can_do: Show Thomae's function succeeds
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+  - id: math.analysis.riemann-vs-darboux
+    name: Relating Riemann and Darboux sums
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.riemann-integrable-definition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define Riemann sums with tags
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+      - id: kp2
+        can_do: Bound a Riemann sum by Darboux sums
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+      - id: kp3
+        can_do: State the definitions' equivalence
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+      - id: kp4
+        can_do: Use mesh in place of a partition
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+  - id: math.analysis.integrability-criterion
+    name: Using the Riemann criterion
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.riemann-vs-darboux
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.riemann-integrable-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Riemann criterion
+        key_prerequisites: [math.analysis.riemann-vs-darboux]
+      - id: kp2
+        can_do: Prove the criterion
+        key_prerequisites: [math.analysis.riemann-integrable-definition]
+      - id: kp3
+        can_do: Use it for a linear function
+        key_prerequisites: [math.analysis.riemann-vs-darboux]
+      - id: kp4
+        can_do: Use it for a square
+        key_prerequisites: [math.analysis.riemann-vs-darboux]
+  - id: math.analysis.continuous-implies-integrable
+    name: Proving continuous functions are integrable
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.integrability-criterion
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.heine-cantor
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that continuous functions are integrable
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp2
+        can_do: Use uniform continuity to choose a mesh
+        key_prerequisites: [math.analysis.heine-cantor]
+      - id: kp3
+        can_do: Prove that continuous functions are integrable
+        key_prerequisites: [math.analysis.integrability-criterion, math.analysis.heine-cantor]
+      - id: kp4
+        can_do: Bound the difference of sums
+        key_prerequisites: [math.analysis.heine-cantor]
+  - id: math.analysis.monotone-integrable
+    name: Proving monotone functions are integrable
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.integrability-criterion
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that monotone functions are integrable
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp2
+        can_do: Use equal-width partitions
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp3
+        can_do: Prove that monotone functions are integrable
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp4
+        can_do: Find a monotone function with jumps that is integrable
+        key_prerequisites: [math.analysis.integrability-criterion]
+  - id: math.analysis.integrate-from-definition
+    name: Finding an integral from the definition
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.integrability-criterion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a linear integral from sums
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp2
+        can_do: Find a square's integral from sums
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp3
+        can_do: Find an exponential's integral from sums
+        key_prerequisites: [math.analysis.integrability-criterion]
+      - id: kp4
+        can_do: Check a sum with a limit
+        key_prerequisites: [math.analysis.integrability-criterion]
+  - id: math.analysis.integral-properties-proofs
+    name: Proving properties of the integral
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.integrate-from-definition
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.integrability-criterion
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove linearity
+        key_prerequisites: [math.analysis.integrate-from-definition]
+      - id: kp2
+        can_do: Prove additivity over intervals
+        key_prerequisites: [math.analysis.integrate-from-definition]
+      - id: kp3
+        can_do: Prove monotonicity
+        key_prerequisites: [math.analysis.integrate-from-definition]
+      - id: kp4
+        can_do: Prove the absolute value inequality
+        key_prerequisites: [math.analysis.integrability-criterion]
+  - id: math.analysis.finite-discontinuities
+    name: Proving functions with few discontinuities are integrable
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuous-implies-integrable
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove one discontinuity is fine
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp2
+        can_do: Prove finitely many are fine
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp3
+        can_do: Prove changing finitely many values changes nothing
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp4
+        can_do: Integrate a piecewise function
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+  - id: math.analysis.mvt-integrals-proof
+    name: Proving the mean value theorem for integrals
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.integral-properties-proofs
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.intermediate-value-proof
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the mean value theorem for integrals
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+      - id: kp2
+        can_do: Bound by max and min
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+      - id: kp3
+        can_do: Conclude with the intermediate value theorem
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+      - id: kp4
+        can_do: Show a failure without continuity
+        key_prerequisites: [math.analysis.intermediate-value-proof]
+  - id: math.analysis.ftc-proofs
+    name: Proving the fundamental theorem of calculus
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.mvt-proof
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.mvt-integrals-proof
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.analysis.integral-properties-proofs
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the integral function is continuous
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+      - id: kp2
+        can_do: Prove its derivative
+        key_prerequisites: [math.analysis.mvt-integrals-proof]
+      - id: kp3
+        can_do: Prove the evaluation form with a mean value argument
+        key_prerequisites: [math.analysis.mvt-proof]
+      - id: kp4
+        can_do: Show a failure at a discontinuity
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+  - id: math.analysis.integration-by-parts-proof
+    name: Proving integration by parts
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.ftc-proofs
+        encompassing: 0.45
+        confidence: high
+      - topic: math.analysis.differentiation-rule-proofs
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State it precisely
+        key_prerequisites: [math.analysis.ftc-proofs]
+      - id: kp2
+        can_do: Prove it with a product
+        key_prerequisites: [math.analysis.ftc-proofs, math.analysis.differentiation-rule-proofs]
+      - id: kp3
+        can_do: Use it for a Taylor remainder
+        key_prerequisites: [math.analysis.ftc-proofs]
+      - id: kp4
+        can_do: Handle a limit of a boundary term
+        key_prerequisites: [math.analysis.ftc-proofs]
+  - id: math.analysis.improper-integrals-analysis
+    name: Working with improper integrals rigorously
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.ftc-proofs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.comparison-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define convergence with limits
+        key_prerequisites: [math.analysis.ftc-proofs]
+      - id: kp2
+        can_do: Prove comparison
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp3
+        can_do: Compare with a series
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp4
+        can_do: Show conditional convergence of a sine ratio
+        key_prerequisites: [math.analysis.ftc-proofs]
+  - id: math.analysis.substitution-proof
+    name: Proving the substitution rule
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.ftc-proofs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.chain-rule-proof
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the rule
+        key_prerequisites: [math.analysis.ftc-proofs]
+      - id: kp2
+        can_do: Prove with the chain rule
+        key_prerequisites: [math.analysis.chain-rule-proof]
+      - id: kp3
+        can_do: Use it with a monotone change of variable
+        key_prerequisites: [math.analysis.chain-rule-proof]
+      - id: kp4
+        can_do: Show when hypotheses matter
+        key_prerequisites: [math.analysis.ftc-proofs]
+  - id: math.analysis.lebesgue-criterion-statement
+    name: Stating the Lebesgue criterion
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuous-implies-integrable
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define measure zero
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp2
+        can_do: Show countable sets have measure zero
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp3
+        can_do: State the Lebesgue criterion
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+      - id: kp4
+        can_do: Use it on an example
+        key_prerequisites: [math.analysis.continuous-implies-integrable]
+  - id: math.analysis.pointwise-convergence
+    name: Using pointwise convergence
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-proofs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define pointwise convergence
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp2
+        can_do: Find a pointwise limit
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp3
+        can_do: Find a limit of powers on an interval
+        key_prerequisites: [math.analysis.sequence-limit-proofs]
+      - id: kp4
+        can_do: Find a limit by cases
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+  - id: math.analysis.pointwise-failures
+    name: Showing pointwise limits lose continuity
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.pointwise-convergence
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show continuity can be lost
+        key_prerequisites: [math.analysis.pointwise-convergence]
+      - id: kp2
+        can_do: Show an integral can change
+        key_prerequisites: [math.analysis.pointwise-convergence]
+      - id: kp3
+        can_do: Show a derivative limit can fail
+        key_prerequisites: [math.analysis.pointwise-convergence]
+      - id: kp4
+        can_do: Find a moving bump example
+        key_prerequisites: [math.analysis.pointwise-convergence]
+  - id: math.analysis.uniform-convergence
+    name: Using uniform convergence
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.pointwise-failures
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.pointwise-convergence
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define uniform convergence
+        key_prerequisites: [math.analysis.pointwise-failures]
+      - id: kp2
+        can_do: Compare to pointwise limit
+        key_prerequisites: [math.analysis.pointwise-convergence]
+      - id: kp3
+        can_do: Prove a linear shrink is uniform
+        key_prerequisites: [math.analysis.pointwise-failures]
+      - id: kp4
+        can_do: Picture an epsilon tube
+        key_prerequisites: [math.analysis.pointwise-failures]
+  - id: math.analysis.uniform-limit-continuous
+    name: Proving uniform limits are continuous
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that uniform limits are continuous
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp2
+        can_do: Prove with a three-epsilon argument
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp3
+        can_do: Use it to reject uniform convergence
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp4
+        can_do: Find a non-uniform continuous limit
+        key_prerequisites: [math.analysis.uniform-convergence]
+  - id: math.analysis.uniform-limit-integral
+    name: Exchanging limits and integrals
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-limit-continuous
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.integral-properties-proofs
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State when a limit and an integral can be exchanged
+        key_prerequisites: [math.analysis.uniform-limit-continuous]
+      - id: kp2
+        can_do: Prove that uniform limits and integrals can be exchanged
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+      - id: kp3
+        can_do: Use it on a sequence
+        key_prerequisites: [math.analysis.uniform-limit-continuous]
+      - id: kp4
+        can_do: Show a failure without uniform convergence
+        key_prerequisites: [math.analysis.uniform-limit-continuous]
+  - id: math.analysis.uniform-limit-derivative
+    name: Exchanging limits and derivatives
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-limit-integral
+        encompassing: 0.45
+        confidence: high
+      - topic: math.analysis.mvt-applications-analysis
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem's hypotheses
+        key_prerequisites: [math.analysis.uniform-limit-integral]
+      - id: kp2
+        can_do: Prove when limits and derivatives can be exchanged
+        key_prerequisites: [math.analysis.uniform-limit-integral, math.analysis.mvt-applications-analysis]
+      - id: kp3
+        can_do: Use it for a series
+        key_prerequisites: [math.analysis.uniform-limit-integral]
+      - id: kp4
+        can_do: Show that uniform limits need not be differentiable
+        key_prerequisites: [math.analysis.uniform-limit-integral]
+  - id: math.analysis.weierstrass-approximation
+    name: Using the Weierstrass approximation theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.analysis.heine-cantor
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the Weierstrass approximation theorem
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp2
+        can_do: Use a Bernstein polynomial
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp3
+        can_do: Sketch the proof
+        key_prerequisites: [math.analysis.heine-cantor]
+      - id: kp4
+        can_do: Use it to approximate a function
+        key_prerequisites: [math.analysis.uniform-convergence]
+  - id: math.analysis.fourier-convergence-intro
+    name: Exploring convergence of Fourier series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.analysis.integral-properties-proofs
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Fourier series as a limit of partial sums
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp2
+        can_do: Find coefficients as integrals
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+      - id: kp3
+        can_do: State a uniform convergence result
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp4
+        can_do: Use a kernel idea
+        key_prerequisites: [math.analysis.integral-properties-proofs]
+  - id: math.analysis.uniform-convergence-suprema
+    name: Testing uniform convergence with suprema
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a supremum norm
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp2
+        can_do: Find where the max occurs
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp3
+        can_do: Conclude uniform convergence
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp4
+        can_do: Conclude a failure of uniform convergence
+        key_prerequisites: [math.analysis.uniform-convergence]
+  - id: math.analysis.series-of-functions
+    name: Working with series of functions
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.series-convergence-formal
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define partial sums of functions
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp2
+        can_do: Find a pointwise sum
+        key_prerequisites: [math.analysis.series-convergence-formal]
+      - id: kp3
+        can_do: Test uniform convergence by a tail
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp4
+        can_do: Use the Cauchy criterion uniformly
+        key_prerequisites: [math.analysis.uniform-convergence]
+  - id: math.analysis.uniform-cauchy-mtest
+    name: Using the Weierstrass M-test
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.comparison-proofs
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.uniform-convergence-suprema
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.series-of-functions
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the M-test
+        key_prerequisites: [math.analysis.series-of-functions]
+      - id: kp2
+        can_do: Prove the test
+        key_prerequisites: [math.analysis.comparison-proofs]
+      - id: kp3
+        can_do: Use it for a power series
+        key_prerequisites: [math.analysis.uniform-convergence-suprema]
+      - id: kp4
+        can_do: Use it for a trig series
+        key_prerequisites: [math.analysis.series-of-functions]
+  - id: math.analysis.power-series-analysis
+    name: Proving properties of power series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-cauchy-mtest
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.ratio-root-proofs
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a radius formula
+        key_prerequisites: [math.analysis.ratio-root-proofs]
+      - id: kp2
+        can_do: Prove uniform convergence on a smaller interval
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+      - id: kp3
+        can_do: Prove continuity inside the radius
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+      - id: kp4
+        can_do: Handle a boundary example
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+  - id: math.analysis.exp-log-rigorous
+    name: Defining exponential and log functions rigorously
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.power-series-analysis
+        encompassing: 0.3
+        confidence: high
+      - topic: math.analysis.ftc-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an exponential by a series
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp2
+        can_do: Prove a product rule
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp3
+        can_do: Define a log as an inverse
+        key_prerequisites: [math.analysis.ftc-proofs]
+      - id: kp4
+        can_do: Show the log derivative
+        key_prerequisites: [math.analysis.ftc-proofs]
+  - id: math.analysis.nowhere-differentiable-example
+    name: Exploring a nowhere differentiable function
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.uniform-cauchy-mtest
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Weierstrass-type series
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+      - id: kp2
+        can_do: Show continuity by the M-test
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+      - id: kp3
+        can_do: Sketch the failure of differentiability
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+      - id: kp4
+        can_do: Compare with a typical picture
+        key_prerequisites: [math.analysis.uniform-cauchy-mtest]
+  - id: math.analysis.power-series-differentiation
+    name: Proving power series can be differentiated
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.power-series-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.uniform-limit-derivative
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a derivative's radius
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp2
+        can_do: Prove term-by-term differentiation
+        key_prerequisites: [math.analysis.uniform-limit-derivative]
+      - id: kp3
+        can_do: Prove term-by-term integration
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp4
+        can_do: Find a closed form with it
+        key_prerequisites: [math.analysis.power-series-analysis]
+  - id: math.analysis.taylor-series-convergence
+    name: Proving Taylor series converge
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.taylor-theorem-analysis
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.power-series-differentiation
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.analysis.power-series-analysis
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a remainder tends to zero
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp2
+        can_do: Prove for an exponential
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp3
+        can_do: Prove for a sine and cosine
+        key_prerequisites: [math.analysis.taylor-theorem-analysis]
+      - id: kp4
+        can_do: Use uniqueness of power series
+        key_prerequisites: [math.analysis.power-series-differentiation]
+  - id: math.analysis.abel-theorem-series
+    name: Using Abel's theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.power-series-analysis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Abel's theorem
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp2
+        can_do: Prove with summation by parts
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp3
+        can_do: Evaluate an alternating log series
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp4
+        can_do: Evaluate an arctangent series
+        key_prerequisites: [math.analysis.power-series-analysis]
+  - id: math.analysis.smooth-non-analytic
+    name: Exploring a smooth non-analytic function
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.taylor-series-convergence
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the classic function
+        key_prerequisites: [math.analysis.taylor-series-convergence]
+      - id: kp2
+        can_do: Show all derivatives vanish at zero
+        key_prerequisites: [math.analysis.taylor-series-convergence]
+      - id: kp3
+        can_do: Show its Taylor series fails
+        key_prerequisites: [math.analysis.taylor-series-convergence]
+      - id: kp4
+        can_do: Tell smooth from analytic
+        key_prerequisites: [math.analysis.taylor-series-convergence]
+  - id: math.analysis.trig-from-series
+    name: Defining sine and cosine with series
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.power-series-analysis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sine and cosine with series
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp2
+        can_do: Show the derivative relations
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp3
+        can_do: Show the Pythagorean identity
+        key_prerequisites: [math.analysis.power-series-analysis]
+      - id: kp4
+        can_do: Define pi from the first zero
+        key_prerequisites: [math.analysis.power-series-analysis]
+  - id: math.analysis.metric-space-definition
+    name: Defining metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.triangle-inequality
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the metric axioms
+        key_prerequisites: [math.analysis.triangle-inequality]
+      - id: kp2
+        can_do: Test a function for the axioms
+        key_prerequisites: [math.analysis.triangle-inequality]
+      - id: kp3
+        can_do: Find a distance in the plane
+        key_prerequisites: [math.analysis.triangle-inequality]
+      - id: kp4
+        can_do: Use the discrete metric
+        key_prerequisites: [math.analysis.triangle-inequality]
+  - id: math.analysis.norms-on-rn
+    name: Using norms on real n-space
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.metric-space-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a norm
+        key_prerequisites: [math.analysis.metric-space-definition]
+      - id: kp2
+        can_do: Find a one, two and max norm
+        key_prerequisites: [math.analysis.metric-space-definition]
+      - id: kp3
+        can_do: Sketch unit balls
+        key_prerequisites: [math.analysis.metric-space-definition]
+      - id: kp4
+        can_do: Compare norms
+        key_prerequisites: [math.analysis.metric-space-definition]
+  - id: math.analysis.examples-of-metrics
+    name: Working with examples of metrics
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.norms-on-rn
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.analysis.metric-space-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a sup metric on functions
+        key_prerequisites: [math.analysis.norms-on-rn]
+      - id: kp2
+        can_do: Use an integral metric on functions
+        key_prerequisites: [math.analysis.norms-on-rn]
+      - id: kp3
+        can_do: Use a Hamming metric on strings
+        key_prerequisites: [math.analysis.metric-space-definition]
+      - id: kp4
+        can_do: Use a metric induced on a subset
+        key_prerequisites: [math.analysis.metric-space-definition]
+  - id: math.analysis.open-balls-metric
+    name: Using open and closed sets in a metric space
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.open-closed-sets
+        encompassing: 0.25
+        confidence: high
+      - topic: math.analysis.examples-of-metrics
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.analysis.metric-space-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an open ball
+        key_prerequisites: [math.analysis.examples-of-metrics]
+      - id: kp2
+        can_do: Define an open set
+        key_prerequisites: [math.analysis.open-closed-sets]
+      - id: kp3
+        can_do: Prove a ball is open
+        key_prerequisites: [math.analysis.metric-space-definition]
+      - id: kp4
+        can_do: Find open sets in a discrete metric
+        key_prerequisites: [math.analysis.examples-of-metrics]
+  - id: math.analysis.closure-in-metric
+    name: Finding closures in metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.open-balls-metric
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a closed set
+        key_prerequisites: [math.analysis.open-balls-metric]
+      - id: kp2
+        can_do: Define closure
+        key_prerequisites: [math.analysis.open-balls-metric]
+      - id: kp3
+        can_do: Define limit points in a metric space
+        key_prerequisites: [math.analysis.open-balls-metric]
+      - id: kp4
+        can_do: Find a closure in a subset metric
+        key_prerequisites: [math.analysis.open-balls-metric]
+  - id: math.analysis.sequences-in-metric
+    name: Using sequences in metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequence-limit-definition
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.closure-in-metric
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.analysis.open-balls-metric
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define convergence
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp2
+        can_do: Characterize closed sets with sequences
+        key_prerequisites: [math.analysis.closure-in-metric]
+      - id: kp3
+        can_do: Compare with coordinate convergence
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+      - id: kp4
+        can_do: Find a limit in the sup metric
+        key_prerequisites: [math.analysis.sequence-limit-definition]
+  - id: math.analysis.complete-metric-spaces
+    name: Using complete metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequences-in-metric
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.completeness-from-cauchy
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.analysis.cauchy-sequences
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define Cauchy and complete
+        key_prerequisites: [math.analysis.cauchy-sequences]
+      - id: kp2
+        can_do: Show a non-complete space
+        key_prerequisites: [math.analysis.sequences-in-metric]
+      - id: kp3
+        can_do: Show a closed subset of a complete space is complete
+        key_prerequisites: [math.analysis.completeness-from-cauchy]
+      - id: kp4
+        can_do: Find a completion by example
+        key_prerequisites: [math.analysis.sequences-in-metric]
+  - id: math.analysis.compactness-metric
+    name: Using compactness in metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequences-in-metric
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.compact-sets-covers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define compactness in a metric space
+        key_prerequisites: [math.analysis.compact-sets-covers]
+      - id: kp2
+        can_do: Show a compact set is closed and bounded
+        key_prerequisites: [math.analysis.sequences-in-metric]
+      - id: kp3
+        can_do: Show the converse fails in a function space
+        key_prerequisites: [math.analysis.sequences-in-metric]
+      - id: kp4
+        can_do: Prove covers and sequences agree
+        key_prerequisites: [math.analysis.compact-sets-covers]
+  - id: math.analysis.continuity-metric
+    name: Using continuity between metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.sequences-in-metric
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.continuity-definition-analysis
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define continuity with epsilon and delta
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+      - id: kp2
+        can_do: Use sequences
+        key_prerequisites: [math.analysis.sequences-in-metric]
+      - id: kp3
+        can_do: Find a continuous function on a function space
+        key_prerequisites: [math.analysis.sequences-in-metric]
+      - id: kp4
+        can_do: Prove distance is continuous
+        key_prerequisites: [math.analysis.continuity-definition-analysis]
+  - id: math.analysis.contraction-mapping
+    name: Using the contraction mapping theorem
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.complete-metric-spaces
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.lipschitz-functions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a contraction
+        key_prerequisites: [math.analysis.lipschitz-functions]
+      - id: kp2
+        can_do: State the contraction mapping theorem
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp3
+        can_do: Prove the contraction mapping theorem
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp4
+        can_do: Use it for a fixed point
+        key_prerequisites: [math.analysis.lipschitz-functions]
+  - id: math.analysis.function-spaces-sup-norm
+    name: Using the sup norm on function spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.complete-metric-spaces
+        encompassing: 0.4
+        confidence: high
+      - topic: math.analysis.uniform-convergence
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the sup norm
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp2
+        can_do: Show continuous functions are complete
+        key_prerequisites: [math.analysis.complete-metric-spaces, math.analysis.uniform-convergence]
+      - id: kp3
+        can_do: Interpret uniform convergence as convergence
+        key_prerequisites: [math.analysis.uniform-convergence]
+      - id: kp4
+        can_do: Show an integral metric is not complete
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+  - id: math.analysis.rn-complete
+    name: Proving real n-space is complete
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.complete-metric-spaces
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show coordinates are Cauchy
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp2
+        can_do: Prove real n-space is complete
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp3
+        can_do: Prove sequences converge coordinatewise
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+      - id: kp4
+        can_do: Use Bolzano-Weierstrass in n-space
+        key_prerequisites: [math.analysis.complete-metric-spaces]
+  - id: math.analysis.continuity-open-sets
+    name: Characterizing continuity with open sets
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.continuity-metric
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the open-preimage criterion
+        key_prerequisites: [math.analysis.continuity-metric]
+      - id: kp2
+        can_do: Use it to show a set is open
+        key_prerequisites: [math.analysis.continuity-metric]
+      - id: kp3
+        can_do: Test a discontinuous function
+        key_prerequisites: [math.analysis.continuity-metric]
+      - id: kp4
+        can_do: State the closed-set version
+        key_prerequisites: [math.analysis.continuity-metric]
+  - id: math.analysis.extreme-values-metric
+    name: Proving extreme values on compact metric spaces
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.compactness-metric
+        encompassing: 0.35
+        confidence: high
+      - topic: math.analysis.continuity-metric
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the image of a compact set is compact
+        key_prerequisites: [math.analysis.compactness-metric, math.analysis.continuity-metric]
+      - id: kp2
+        can_do: Prove a maximum is attained
+        key_prerequisites: [math.analysis.compactness-metric]
+      - id: kp3
+        can_do: Find a closest point in a compact set
+        key_prerequisites: [math.analysis.continuity-metric]
+      - id: kp4
+        can_do: Show uniform continuity on a compact space
+        key_prerequisites: [math.analysis.continuity-metric]
+  - id: math.analysis.contraction-integral-equation
+    name: Applying contraction to integral equations
+    subject: math
+    course: math.analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.analysis.contraction-mapping
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.analysis.function-spaces-sup-norm
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an initial value problem as an integral
+        key_prerequisites: [math.analysis.function-spaces-sup-norm]
+      - id: kp2
+        can_do: Define the integral operator
+        key_prerequisites: [math.analysis.function-spaces-sup-norm]
+      - id: kp3
+        can_do: Show it is a contraction
+        key_prerequisites: [math.analysis.contraction-mapping]
+      - id: kp4
+        can_do: Conclude existence and uniqueness
+        key_prerequisites: [math.analysis.contraction-mapping, math.analysis.function-spaces-sup-norm]

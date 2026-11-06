@@ -1,0 +1,4100 @@
+course: math.probstat
+topics:
+  - id: math.probstat.sample-spaces-events
+    name: Describing sample spaces and events
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.sample-space-set-notation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List a sample space
+        key_prerequisites: [math.alg2.sample-space-set-notation]
+      - id: kp2
+        can_do: Write an event as a subset
+        key_prerequisites: [math.alg2.sample-space-set-notation]
+      - id: kp3
+        can_do: Describe an infinite sample space
+        key_prerequisites: [math.alg2.sample-space-set-notation]
+      - id: kp4
+        can_do: Describe a continuous sample space
+        key_prerequisites: [math.alg2.sample-space-set-notation]
+  - id: math.probstat.set-operations-events
+    name: Using set operations on events
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sample-spaces-events
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write unions and intersections of events
+        key_prerequisites: [math.probstat.sample-spaces-events]
+      - id: kp2
+        can_do: Write complements
+        key_prerequisites: [math.probstat.sample-spaces-events]
+      - id: kp3
+        can_do: Test mutually exclusive events
+        key_prerequisites: [math.probstat.sample-spaces-events]
+      - id: kp4
+        can_do: Translate words into event algebra
+        key_prerequisites: [math.probstat.sample-spaces-events]
+  - id: math.probstat.axioms-of-probability
+    name: Using the axioms of probability
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.set-operations-events
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.sample-spaces-events
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the three axioms
+        key_prerequisites: [math.probstat.set-operations-events]
+      - id: kp2
+        can_do: Check an assignment on a finite space
+        key_prerequisites: [math.probstat.set-operations-events]
+      - id: kp3
+        can_do: Use additivity
+        key_prerequisites: [math.probstat.set-operations-events]
+      - id: kp4
+        can_do: Build a distribution from a rule
+        key_prerequisites: [math.probstat.sample-spaces-events]
+  - id: math.probstat.consequences-of-axioms
+    name: Proving consequences of the axioms
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.axioms-of-probability
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the complement rule
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp2
+        can_do: Prove the monotonicity rule
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp3
+        can_do: Prove the two-event union rule
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp4
+        can_do: Find bounds on an intersection
+        key_prerequisites: [math.probstat.axioms-of-probability]
+  - id: math.probstat.conditional-probability-definition
+    name: Defining conditional probability
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.axioms-of-probability
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.conditional-probability
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the definition
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp2
+        can_do: Find a conditional probability from a count
+        key_prerequisites: [math.alg2.conditional-probability]
+      - id: kp3
+        can_do: Show it satisfies the axioms
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp4
+        can_do: Compare a conditional with its reverse
+        key_prerequisites: [math.alg2.conditional-probability]
+  - id: math.probstat.independence-events
+    name: Testing independence of events
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.conditional-probability-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test the product rule
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp2
+        can_do: Test by comparing conditionals
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp3
+        can_do: Use independence to compute
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp4
+        can_do: Show complements stay independent
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+  - id: math.probstat.counting-for-probability
+    name: Counting with permutations and combinations
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.combinations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count ordered outcomes
+        key_prerequisites: [math.alg2.combinations]
+      - id: kp2
+        can_do: Count unordered outcomes
+        key_prerequisites: [math.alg2.combinations]
+      - id: kp3
+        can_do: Count with replacement
+        key_prerequisites: [math.alg2.combinations]
+      - id: kp4
+        can_do: Choose the matching count
+        key_prerequisites: [math.alg2.combinations]
+  - id: math.probstat.equally-likely-counting
+    name: Finding probabilities by counting
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.axioms-of-probability
+        encompassing: 0.25
+        confidence: high
+      - topic: math.alg2.counting-probability
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.counting-for-probability
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a probability by counting
+        key_prerequisites: [math.probstat.counting-for-probability]
+      - id: kp2
+        can_do: Find a card-hand probability
+        key_prerequisites: [math.probstat.counting-for-probability]
+      - id: kp3
+        can_do: Find a birthday probability
+        key_prerequisites: [math.alg2.counting-probability]
+      - id: kp4
+        can_do: Use a complement with counting
+        key_prerequisites: [math.probstat.axioms-of-probability]
+  - id: math.probstat.inclusion-exclusion-prob
+    name: Using inclusion-exclusion for probability
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.consequences-of-axioms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a two-event union
+        key_prerequisites: [math.probstat.consequences-of-axioms]
+      - id: kp2
+        can_do: Find a three-event union
+        key_prerequisites: [math.probstat.consequences-of-axioms]
+      - id: kp3
+        can_do: Find a matching problem probability
+        key_prerequisites: [math.probstat.consequences-of-axioms]
+      - id: kp4
+        can_do: Use the general formula
+        key_prerequisites: [math.probstat.consequences-of-axioms]
+  - id: math.probstat.conditional-from-tables
+    name: Finding conditional probabilities from tables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.conditional-probability-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a two-way table
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp2
+        can_do: Find a conditional from row totals
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp3
+        can_do: Find a conditional from column totals
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp4
+        can_do: Build a table from percentages
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+  - id: math.probstat.multiplication-law
+    name: Using the multiplication law
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.conditional-from-tables
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.conditional-probability-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply two conditionals
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp2
+        can_do: Find a draw without replacement
+        key_prerequisites: [math.probstat.conditional-from-tables]
+      - id: kp3
+        can_do: Extend to three events
+        key_prerequisites: [math.probstat.conditional-from-tables]
+      - id: kp4
+        can_do: Find a chain of events
+        key_prerequisites: [math.probstat.conditional-from-tables]
+  - id: math.probstat.tree-diagrams-prob
+    name: Using tree diagrams
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.multiplication-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a two-stage tree
+        key_prerequisites: [math.probstat.multiplication-law]
+      - id: kp2
+        can_do: Find a path's probability
+        key_prerequisites: [math.probstat.multiplication-law]
+      - id: kp3
+        can_do: Add paths for an event
+        key_prerequisites: [math.probstat.multiplication-law]
+      - id: kp4
+        can_do: Find a reverse conditional from a tree
+        key_prerequisites: [math.probstat.multiplication-law]
+  - id: math.probstat.total-probability
+    name: Using the law of total probability
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.tree-diagrams-prob
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.multiplication-law
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a partition of a space
+        key_prerequisites: [math.probstat.tree-diagrams-prob]
+      - id: kp2
+        can_do: Use the law with two cases
+        key_prerequisites: [math.probstat.tree-diagrams-prob]
+      - id: kp3
+        can_do: Use the law with several cases
+        key_prerequisites: [math.probstat.multiplication-law]
+      - id: kp4
+        can_do: Solve a defective-items problem
+        key_prerequisites: [math.probstat.tree-diagrams-prob]
+  - id: math.probstat.bayes-theorem
+    name: Using Bayes' theorem
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.total-probability
+        encompassing: 0.45
+        confidence: high
+      - topic: math.stats.bayes-intro
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Bayes' theorem
+        key_prerequisites: [math.probstat.total-probability]
+      - id: kp2
+        can_do: Use it with two hypotheses
+        key_prerequisites: [math.stats.bayes-intro]
+      - id: kp3
+        can_do: Use it with several hypotheses
+        key_prerequisites: [math.probstat.total-probability]
+      - id: kp4
+        can_do: Update after two pieces of evidence
+        key_prerequisites: [math.probstat.total-probability]
+  - id: math.probstat.diagnostic-test-bayes
+    name: Applying Bayes' theorem to testing
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bayes-theorem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use sensitivity and specificity
+        key_prerequisites: [math.probstat.bayes-theorem]
+      - id: kp2
+        can_do: Find a positive predictive value
+        key_prerequisites: [math.probstat.bayes-theorem]
+      - id: kp3
+        can_do: Show a low base rate effect
+        key_prerequisites: [math.probstat.bayes-theorem]
+      - id: kp4
+        can_do: Find a second-test update
+        key_prerequisites: [math.probstat.bayes-theorem]
+  - id: math.probstat.independent-vs-disjoint
+    name: Telling independent from disjoint events
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.independence-events
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show disjoint events are dependent
+        key_prerequisites: [math.probstat.independence-events]
+      - id: kp2
+        can_do: Find when both can hold
+        key_prerequisites: [math.probstat.independence-events]
+      - id: kp3
+        can_do: Tell which from a table
+        key_prerequisites: [math.probstat.independence-events]
+      - id: kp4
+        can_do: Correct a mistaken solution
+        key_prerequisites: [math.probstat.independence-events]
+  - id: math.probstat.mutual-independence
+    name: Using mutual independence
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.independent-vs-disjoint
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.independence-events
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mutual independence
+        key_prerequisites: [math.probstat.independent-vs-disjoint]
+      - id: kp2
+        can_do: Show pairwise independence is not enough
+        key_prerequisites: [math.probstat.independence-events]
+      - id: kp3
+        can_do: Find a product over many events
+        key_prerequisites: [math.probstat.independent-vs-disjoint]
+      - id: kp4
+        can_do: Find an at-least-one probability
+        key_prerequisites: [math.probstat.independent-vs-disjoint]
+  - id: math.probstat.reliability-systems
+    name: Finding reliability of systems
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mutual-independence
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a series system's reliability
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp2
+        can_do: Find a parallel system's reliability
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp3
+        can_do: Find a mixed system's reliability
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp4
+        can_do: Find a needed component count
+        key_prerequisites: [math.probstat.mutual-independence]
+  - id: math.probstat.conditional-independence
+    name: Using conditional independence
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mutual-independence
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define conditional independence
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp2
+        can_do: Show independence does not imply it
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp3
+        can_do: Show it does not imply independence
+        key_prerequisites: [math.probstat.mutual-independence]
+      - id: kp4
+        can_do: Use it in a two-test problem
+        key_prerequisites: [math.probstat.mutual-independence]
+  - id: math.probstat.random-variable-definition
+    name: Defining random variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.axioms-of-probability
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a random variable as a function
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp2
+        can_do: Find its possible values
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp3
+        can_do: Tell discrete from continuous
+        key_prerequisites: [math.probstat.axioms-of-probability]
+      - id: kp4
+        can_do: Find an event from a value
+        key_prerequisites: [math.probstat.axioms-of-probability]
+  - id: math.probstat.distribution-from-experiment
+    name: Building a distribution from an experiment
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.random-variable-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tabulate two dice
+        key_prerequisites: [math.probstat.random-variable-definition]
+      - id: kp2
+        can_do: Tabulate draws without replacement
+        key_prerequisites: [math.probstat.random-variable-definition]
+      - id: kp3
+        can_do: Tabulate a waiting time
+        key_prerequisites: [math.probstat.random-variable-definition]
+      - id: kp4
+        can_do: Draw a bar chart of a distribution
+        key_prerequisites: [math.probstat.random-variable-definition]
+  - id: math.probstat.pmf
+    name: Using probability mass functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.distribution-from-experiment
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.probstat.random-variable-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a mass function
+        key_prerequisites: [math.probstat.distribution-from-experiment]
+      - id: kp2
+        can_do: Find probability of a range
+        key_prerequisites: [math.probstat.distribution-from-experiment]
+      - id: kp3
+        can_do: Use a formula for a mass function
+        key_prerequisites: [math.probstat.distribution-from-experiment]
+      - id: kp4
+        can_do: Find the most likely value
+        key_prerequisites: [math.probstat.distribution-from-experiment]
+  - id: math.probstat.expectation-discrete
+    name: Finding expected value
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pmf
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an expected value from a table
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp2
+        can_do: Find one from a formula
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp3
+        can_do: Interpret it as a long-run average
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp4
+        can_do: Find a fair game's price
+        key_prerequisites: [math.probstat.pmf]
+  - id: math.probstat.expectation-of-functions
+    name: Finding expected values of functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-discrete
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an expected value of a square
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp2
+        can_do: Use the law of the unconscious statistician
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp3
+        can_do: Compare a function of the mean with the mean of a function
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp4
+        can_do: Find an expected payoff
+        key_prerequisites: [math.probstat.expectation-discrete]
+  - id: math.probstat.hypergeometric
+    name: Using the hypergeometric distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-discrete
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.equally-likely-counting
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.alg2.combinations
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify the setup
+        key_prerequisites: [math.probstat.equally-likely-counting]
+      - id: kp2
+        can_do: Find a probability with a formula
+        key_prerequisites: [math.probstat.equally-likely-counting]
+      - id: kp3
+        can_do: Find the mean
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp4
+        can_do: Compare to a binomial
+        key_prerequisites: [math.probstat.expectation-discrete]
+  - id: math.probstat.mgf-discrete
+    name: Using moment generating functions for discrete variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-of-functions
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a moment generating function
+        key_prerequisites: [math.probstat.expectation-of-functions]
+      - id: kp2
+        can_do: Find one from a table
+        key_prerequisites: [math.probstat.expectation-of-functions]
+      - id: kp3
+        can_do: Find one for a Bernoulli variable
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Find one for a Poisson variable
+        key_prerequisites: [math.calc2.maclaurin-common]
+  - id: math.probstat.pmf-valid
+    name: Finding a constant to make a valid distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pmf
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for a constant
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp2
+        can_do: Use a geometric sum
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp3
+        can_do: Use a finite sum
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp4
+        can_do: Reject an invalid assignment
+        key_prerequisites: [math.probstat.pmf]
+  - id: math.probstat.cdf-discrete
+    name: Using cumulative distribution functions for discrete variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pmf-valid
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.pmf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a CDF
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp2
+        can_do: Build a step function
+        key_prerequisites: [math.probstat.pmf-valid]
+      - id: kp3
+        can_do: Find probability of a range from a CDF
+        key_prerequisites: [math.probstat.pmf-valid]
+      - id: kp4
+        can_do: Read properties of a CDF
+        key_prerequisites: [math.probstat.pmf-valid]
+  - id: math.probstat.cdf-to-pmf
+    name: Recovering a mass function from a CDF
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.cdf-discrete
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read jumps as probabilities
+        key_prerequisites: [math.probstat.cdf-discrete]
+      - id: kp2
+        can_do: Find a mass function from a table
+        key_prerequisites: [math.probstat.cdf-discrete]
+      - id: kp3
+        can_do: Find a mass function from a formula
+        key_prerequisites: [math.probstat.cdf-discrete]
+      - id: kp4
+        can_do: Find a probability at a point
+        key_prerequisites: [math.probstat.cdf-discrete]
+  - id: math.probstat.expectation-properties
+    name: Using properties of expectation
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-of-functions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity with constants
+        key_prerequisites: [math.probstat.expectation-of-functions]
+      - id: kp2
+        can_do: Use linearity with several variables
+        key_prerequisites: [math.probstat.expectation-of-functions]
+      - id: kp3
+        can_do: Use indicators
+        key_prerequisites: [math.probstat.expectation-of-functions]
+      - id: kp4
+        can_do: Find an expected number of matches
+        key_prerequisites: [math.probstat.expectation-of-functions]
+  - id: math.probstat.variance-discrete
+    name: Finding variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-properties
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.probstat.expectation-of-functions
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a variance by definition
+        key_prerequisites: [math.probstat.expectation-properties]
+      - id: kp2
+        can_do: Use the shortcut formula
+        key_prerequisites: [math.probstat.expectation-properties]
+      - id: kp3
+        can_do: Find a standard deviation
+        key_prerequisites: [math.probstat.expectation-properties]
+      - id: kp4
+        can_do: Compare spreads
+        key_prerequisites: [math.probstat.expectation-properties]
+  - id: math.probstat.linear-transformations-rv
+    name: Using linear transformations of random variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-discrete
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean after a shift
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp2
+        can_do: Find a variance after a scale
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp3
+        can_do: Find a standardized variable
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp4
+        can_do: Convert units for a mean and variance
+        key_prerequisites: [math.probstat.variance-discrete]
+  - id: math.probstat.bernoulli-binomial
+    name: Using Bernoulli and binomial distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-discrete
+        encompassing: 0.4
+        confidence: high
+      - topic: math.stats.binomial-mean-sd
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize Bernoulli trials
+        key_prerequisites: [math.stats.binomial-mean-sd]
+      - id: kp2
+        can_do: Find a binomial probability
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp3
+        can_do: Find an at-least probability
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp4
+        can_do: Find a binomial's most likely count
+        key_prerequisites: [math.probstat.variance-discrete]
+  - id: math.probstat.poisson
+    name: Using the Poisson distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify a Poisson setting
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Find a probability with a rate
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp3
+        can_do: Find a mean and variance
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Rescale a rate to a new time
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+  - id: math.probstat.binomial-mean-variance
+    name: Finding the binomial mean and variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a mean with indicators
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Derive a variance
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp3
+        can_do: Find both from parameters
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp4
+        can_do: Find parameters from a mean and variance
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+  - id: math.probstat.poisson-approx-binomial
+    name: Approximating a binomial with a Poisson distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.poisson
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.binomial-mean-variance
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set a rate from n and p
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp2
+        can_do: Find an approximate probability
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp3
+        can_do: Judge when to use it
+        key_prerequisites: [math.probstat.binomial-mean-variance]
+      - id: kp4
+        can_do: Derive the limit
+        key_prerequisites: [math.probstat.poisson]
+  - id: math.probstat.geometric-distribution
+    name: Using the geometric distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-discrete
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a first-success probability
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp2
+        can_do: Find a tail probability
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp3
+        can_do: Find a mean and variance
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp4
+        can_do: Use memorylessness in a discrete setting
+        key_prerequisites: [math.probstat.variance-discrete]
+  - id: math.probstat.geometric-negative-binomial
+    name: Using geometric and negative binomial distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.geometric-distribution
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a probability of a kth success
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.geometric-distribution]
+      - id: kp3
+        can_do: Connect to a sum of geometric variables
+        key_prerequisites: [math.probstat.geometric-distribution]
+      - id: kp4
+        can_do: Solve a series-of-games problem
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+  - id: math.probstat.poisson-process-intro
+    name: Exploring Poisson processes
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.poisson
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a process with a rate
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp2
+        can_do: Count events in intervals
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp3
+        can_do: Use independent intervals
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp4
+        can_do: Find time until the first event
+        key_prerequisites: [math.probstat.poisson]
+  - id: math.probstat.mgf-moments
+    name: Finding moments from a generating function
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mgf-discrete
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate at zero
+        key_prerequisites: [math.probstat.mgf-discrete]
+      - id: kp2
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.mgf-discrete]
+      - id: kp3
+        can_do: Identify a distribution from its function
+        key_prerequisites: [math.probstat.mgf-discrete]
+      - id: kp4
+        can_do: Use a series expansion for moments
+        key_prerequisites: [math.probstat.mgf-discrete]
+  - id: math.probstat.pdf
+    name: Using probability density functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.random-variable-definition
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.probability-density-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a probability as area
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp2
+        can_do: Check a density
+        key_prerequisites: [math.probstat.random-variable-definition]
+      - id: kp3
+        can_do: Find that points have zero probability
+        key_prerequisites: [math.probstat.random-variable-definition]
+      - id: kp4
+        can_do: Sketch a density
+        key_prerequisites: [math.probstat.random-variable-definition]
+  - id: math.probstat.expectation-continuous
+    name: Finding expected values of continuous variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pdf
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.expected-value-integral
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean by an integral
+        key_prerequisites: [math.calc2.expected-value-integral]
+      - id: kp2
+        can_do: Find a mean with parts
+        key_prerequisites: [math.calc2.integration-by-parts]
+      - id: kp3
+        can_do: Find an expected value of a function
+        key_prerequisites: [math.probstat.pdf]
+      - id: kp4
+        can_do: Find a mean that does not exist
+        key_prerequisites: [math.calc2.expected-value-integral]
+  - id: math.probstat.variance-continuous
+    name: Finding variances of continuous variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-continuous
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a variance by integral
+        key_prerequisites: [math.probstat.expectation-continuous]
+      - id: kp2
+        can_do: Use the shortcut formula
+        key_prerequisites: [math.probstat.expectation-continuous]
+      - id: kp3
+        can_do: Find a standard deviation
+        key_prerequisites: [math.probstat.expectation-continuous]
+      - id: kp4
+        can_do: Find a variance after a scale
+        key_prerequisites: [math.probstat.expectation-continuous]
+  - id: math.probstat.uniform-distribution
+    name: Using the uniform distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-continuous
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a uniform probability
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp2
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp3
+        can_do: Solve a waiting problem
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp4
+        can_do: Transform a uniform variable
+        key_prerequisites: [math.probstat.variance-continuous]
+  - id: math.probstat.exponential-distribution
+    name: Using the exponential distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-continuous
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.poisson-process-intro
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a tail probability
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp2
+        can_do: Find a mean and variance
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find a rate from a median
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp4
+        can_do: Connect to a Poisson process
+        key_prerequisites: [math.probstat.poisson-process-intro]
+  - id: math.probstat.memoryless-property
+    name: Using the memoryless property
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.exponential-distribution
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.conditional-probability-definition
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the property
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp2
+        can_do: Prove the property
+        key_prerequisites: [math.probstat.exponential-distribution, math.probstat.conditional-probability-definition]
+      - id: kp3
+        can_do: Use it for a remaining time
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp4
+        can_do: Compare to a uniform waiting time
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+  - id: math.probstat.gamma-distribution
+    name: Using the gamma distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.exponential-distribution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a sum of exponentials
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp2
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp3
+        can_do: Find a probability with integer shape
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp4
+        can_do: Scale a rate
+        key_prerequisites: [math.probstat.exponential-distribution]
+  - id: math.probstat.gamma-function
+    name: Using the gamma function
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.gamma-distribution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the function
+        key_prerequisites: [math.probstat.gamma-distribution]
+      - id: kp2
+        can_do: Use its recursion
+        key_prerequisites: [math.probstat.gamma-distribution]
+      - id: kp3
+        can_do: Find a half-integer value
+        key_prerequisites: [math.probstat.gamma-distribution]
+      - id: kp4
+        can_do: Connect to factorials
+        key_prerequisites: [math.probstat.gamma-distribution]
+  - id: math.probstat.normal-distribution-pdf
+    name: Using the normal density
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-continuous
+        encompassing: 0.25
+        confidence: high
+      - topic: math.stats.normal-calculations
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.gaussian-integral
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read the density's parameters
+        key_prerequisites: [math.stats.normal-calculations]
+      - id: kp2
+        can_do: Check normalization
+        key_prerequisites: [math.calc3.gaussian-integral]
+      - id: kp3
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp4
+        can_do: Sketch families of curves
+        key_prerequisites: [math.stats.normal-calculations]
+  - id: math.probstat.standardizing
+    name: Standardizing normal variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.normal-distribution-pdf
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.linear-transformations-rv
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a z-value
+        key_prerequisites: [math.probstat.linear-transformations-rv]
+      - id: kp2
+        can_do: Prove a standard normal arises
+        key_prerequisites: [math.probstat.normal-distribution-pdf]
+      - id: kp3
+        can_do: Find a probability with a z-value
+        key_prerequisites: [math.probstat.normal-distribution-pdf]
+      - id: kp4
+        can_do: Find a value from a percentile
+        key_prerequisites: [math.probstat.linear-transformations-rv]
+  - id: math.probstat.beta-distribution
+    name: Using the beta distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.gamma-function
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a beta density
+        key_prerequisites: [math.probstat.gamma-function]
+      - id: kp2
+        can_do: Find its constant using gamma values
+        key_prerequisites: [math.probstat.gamma-function]
+      - id: kp3
+        can_do: Find a mean
+        key_prerequisites: [math.probstat.gamma-function]
+      - id: kp4
+        can_do: Sketch shapes
+        key_prerequisites: [math.probstat.gamma-function]
+  - id: math.probstat.mgf-continuous
+    name: Using moment generating functions for continuous variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-continuous
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.mgf-moments
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.probstat.mgf-discrete
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find one for an exponential variable
+        key_prerequisites: [math.probstat.expectation-continuous]
+      - id: kp2
+        can_do: Find one for a normal variable
+        key_prerequisites: [math.probstat.expectation-continuous]
+      - id: kp3
+        can_do: Find moments
+        key_prerequisites: [math.probstat.mgf-moments]
+      - id: kp4
+        can_do: Identify a distribution by a formula
+        key_prerequisites: [math.probstat.mgf-moments]
+  - id: math.probstat.density-constant
+    name: Finding a constant to make a valid density
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pdf
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for a constant
+        key_prerequisites: [math.probstat.pdf]
+      - id: kp2
+        can_do: Solve with an exponential
+        key_prerequisites: [math.probstat.pdf]
+      - id: kp3
+        can_do: Solve on a piecewise support
+        key_prerequisites: [math.probstat.pdf]
+      - id: kp4
+        can_do: Check nonnegativity
+        key_prerequisites: [math.probstat.pdf]
+  - id: math.probstat.cdf-continuous
+    name: Using cumulative distribution functions for continuous variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-1
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.density-constant
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.pdf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a CDF from a density
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp2
+        can_do: Use a CDF for a range
+        key_prerequisites: [math.probstat.density-constant]
+      - id: kp3
+        can_do: Handle a piecewise density
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp4
+        can_do: Read properties of a CDF
+        key_prerequisites: [math.probstat.pdf]
+  - id: math.probstat.functions-of-rv-cdf
+    name: Finding distributions of functions by the CDF method
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.cdf-continuous
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a CDF of a linear function
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp2
+        can_do: Find a density of a square
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp3
+        can_do: Find a density of an exponential transform
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp4
+        can_do: Handle a two-to-one function
+        key_prerequisites: [math.probstat.cdf-continuous]
+  - id: math.probstat.functions-of-rv-transform
+    name: Finding distributions by the change of variables method
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.functions-of-rv-cdf
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the change of variables formula
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp2
+        can_do: Use it on a monotonic function
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp3
+        can_do: Use it for a log or root
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp4
+        can_do: Split a non-monotonic function
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+  - id: math.probstat.cdf-to-pdf
+    name: Recovering a density from a CDF
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.cdf-continuous
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a CDF
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp2
+        can_do: Handle a piecewise CDF
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp3
+        can_do: Find a probability from either
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp4
+        can_do: Spot a non-density CDF
+        key_prerequisites: [math.probstat.cdf-continuous]
+  - id: math.probstat.percentiles-continuous
+    name: Finding percentiles of continuous variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.cdf-to-pdf
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.cdf-continuous
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a median
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp2
+        can_do: Find a quartile
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp3
+        can_do: Solve for a general percentile
+        key_prerequisites: [math.probstat.cdf-to-pdf]
+      - id: kp4
+        can_do: Find a percentile of a transformed variable
+        key_prerequisites: [math.probstat.cdf-continuous]
+  - id: math.probstat.mixed-distributions
+    name: Working with mixed distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.cdf-continuous
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a CDF with a jump
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp2
+        can_do: Find a mean of a mixed variable
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp3
+        can_do: Find a variable with a censored value
+        key_prerequisites: [math.probstat.cdf-continuous]
+      - id: kp4
+        can_do: Find a mixture of two distributions
+        key_prerequisites: [math.probstat.cdf-continuous]
+  - id: math.probstat.normal-tables
+    name: Using normal tables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.standardizing
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a standard normal table
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp2
+        can_do: Use symmetry for negative values
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp3
+        can_do: Find a range probability
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp4
+        can_do: Find a percentile backward
+        key_prerequisites: [math.probstat.standardizing]
+  - id: math.probstat.lognormal
+    name: Using the lognormal distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.functions-of-rv-transform
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.probstat.standardizing
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define it through a log
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp2
+        can_do: Find a probability
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp3
+        can_do: Find a mean
+        key_prerequisites: [math.probstat.functions-of-rv-transform]
+      - id: kp4
+        can_do: Model a growth rate with it
+        key_prerequisites: [math.probstat.functions-of-rv-transform]
+  - id: math.probstat.hazard-rates
+    name: Using hazard rates
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.exponential-distribution
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a survival function
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp2
+        can_do: Define a hazard rate
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp3
+        can_do: Show a constant rate gives an exponential
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp4
+        can_do: Find a Weibull hazard
+        key_prerequisites: [math.probstat.exponential-distribution]
+  - id: math.probstat.chi-square-distribution
+    name: Using the chi-square distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.gamma-function
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.standardizing
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define it from a squared normal
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp2
+        can_do: Find it as a gamma case
+        key_prerequisites: [math.probstat.gamma-function]
+      - id: kp3
+        can_do: Read a table
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp4
+        can_do: Find a mean and variance
+        key_prerequisites: [math.probstat.gamma-function]
+  - id: math.probstat.joint-pmf
+    name: Using joint probability mass functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pmf
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a joint table
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp2
+        can_do: Check a joint mass function
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp3
+        can_do: Find a probability of a region
+        key_prerequisites: [math.probstat.pmf]
+      - id: kp4
+        can_do: Find a joint function from a formula
+        key_prerequisites: [math.probstat.pmf]
+  - id: math.probstat.joint-pdf
+    name: Using joint density functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.pdf
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.probability-double
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.calc3.double-general-regions
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a joint density
+        key_prerequisites: [math.probstat.pdf]
+      - id: kp2
+        can_do: Find a probability over a rectangle
+        key_prerequisites: [math.calc3.probability-double]
+      - id: kp3
+        can_do: Find a probability over a general region
+        key_prerequisites: [math.calc3.double-general-regions]
+      - id: kp4
+        can_do: Find a constant in a joint density
+        key_prerequisites: [math.probstat.pdf]
+  - id: math.probstat.multinomial-distribution
+    name: Using the multinomial distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pmf
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify the setup
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Find a probability
+        key_prerequisites: [math.probstat.joint-pmf]
+      - id: kp3
+        can_do: Find its marginals
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp4
+        can_do: Find a covariance
+        key_prerequisites: [math.probstat.joint-pmf]
+  - id: math.probstat.transformations-joint
+    name: Using joint transformations
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc3.jacobian
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.functions-of-rv-transform
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a joint density for a new pair
+        key_prerequisites: [math.calc3.jacobian]
+      - id: kp2
+        can_do: Find a sum and difference density
+        key_prerequisites: [math.probstat.joint-pdf, math.calc3.jacobian]
+      - id: kp3
+        can_do: Find a ratio's density
+        key_prerequisites: [math.calc3.jacobian]
+      - id: kp4
+        can_do: Find a gamma and beta relation
+        key_prerequisites: [math.probstat.functions-of-rv-transform]
+  - id: math.probstat.chi-square-t-f-intro
+    name: Introducing chi-square, t and F distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.chi-square-distribution
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.transformations-joint
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.probstat.gamma-function
+        encompassing: 0.1
+        confidence: high
+      - topic: math.probstat.standardizing
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a t variable from normal and chi-square
+        key_prerequisites: [math.probstat.chi-square-distribution]
+      - id: kp2
+        can_do: Find an F variable from two chi-squares
+        key_prerequisites: [math.probstat.chi-square-distribution]
+      - id: kp3
+        can_do: Read t and F tables
+        key_prerequisites: [math.probstat.chi-square-distribution]
+      - id: kp4
+        can_do: Derive a t density with a transformation
+        key_prerequisites: [math.probstat.transformations-joint]
+  - id: math.probstat.joint-cdf
+    name: Using joint cumulative distribution functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a joint CDF
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp2
+        can_do: Find one from a density
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Find a rectangle's probability
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp4
+        can_do: Recover a joint density
+        key_prerequisites: [math.probstat.joint-pdf]
+  - id: math.probstat.marginal-distributions
+    name: Finding marginal distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pmf
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.joint-cdf
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a marginal from a table
+        key_prerequisites: [math.probstat.joint-pmf]
+      - id: kp2
+        can_do: Find a marginal from a density
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Handle a triangular region
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp4
+        can_do: Show marginals do not fix a joint
+        key_prerequisites: [math.probstat.joint-cdf]
+  - id: math.probstat.conditional-distributions
+    name: Finding conditional distributions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.marginal-distributions
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.conditional-probability-definition
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a conditional from a table
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp2
+        can_do: Find a conditional density
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp3
+        can_do: Find a conditional probability
+        key_prerequisites: [math.probstat.conditional-probability-definition]
+      - id: kp4
+        can_do: Find a conditional on a triangle
+        key_prerequisites: [math.probstat.marginal-distributions]
+  - id: math.probstat.independence-rv
+    name: Testing independence of random variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.marginal-distributions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test from a table
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp2
+        can_do: Test with a joint density
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp3
+        can_do: Spot dependence from a region's shape
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp4
+        can_do: Find a joint from independent marginals
+        key_prerequisites: [math.probstat.marginal-distributions]
+  - id: math.probstat.conditional-expectation
+    name: Finding conditional expectation
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.conditional-distributions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find one from a table
+        key_prerequisites: [math.probstat.conditional-distributions]
+      - id: kp2
+        can_do: Find one from a density
+        key_prerequisites: [math.probstat.conditional-distributions]
+      - id: kp3
+        can_do: Write it as a function of the condition
+        key_prerequisites: [math.probstat.conditional-distributions]
+      - id: kp4
+        can_do: Find a conditional variance
+        key_prerequisites: [math.probstat.conditional-distributions]
+  - id: math.probstat.law-of-total-expectation
+    name: Using the law of total expectation
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.conditional-expectation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the tower law
+        key_prerequisites: [math.probstat.conditional-expectation]
+      - id: kp2
+        can_do: Use it on a two-stage experiment
+        key_prerequisites: [math.probstat.conditional-expectation]
+      - id: kp3
+        can_do: Use it with a random count
+        key_prerequisites: [math.probstat.conditional-expectation]
+      - id: kp4
+        can_do: Use it for a hierarchical model
+        key_prerequisites: [math.probstat.conditional-expectation]
+  - id: math.probstat.sums-by-convolution
+    name: Finding sums of variables by convolution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.independence-rv
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a discrete sum's distribution
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp2
+        can_do: Set a convolution integral
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Find a sum of two uniform variables
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp4
+        can_do: Find a sum of two exponential variables
+        key_prerequisites: [math.probstat.independence-rv]
+  - id: math.probstat.joint-probability-regions
+    name: Finding probabilities over regions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a region
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp2
+        can_do: Set limits for a density
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Find a probability one variable is larger
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp4
+        can_do: Find a sum condition's probability
+        key_prerequisites: [math.probstat.joint-pdf]
+  - id: math.probstat.expectation-joint
+    name: Finding expected values of joint functions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.marginal-distributions
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.joint-probability-regions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an expected function from a table
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp2
+        can_do: Find one from a density
+        key_prerequisites: [math.probstat.joint-probability-regions]
+      - id: kp3
+        can_do: Find an expected product
+        key_prerequisites: [math.probstat.marginal-distributions]
+      - id: kp4
+        can_do: Find an expected maximum
+        key_prerequisites: [math.probstat.joint-probability-regions]
+  - id: math.probstat.covariance
+    name: Finding covariance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-joint
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.variance-discrete
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define covariance
+        key_prerequisites: [math.probstat.expectation-joint]
+      - id: kp2
+        can_do: Use the shortcut formula
+        key_prerequisites: [math.probstat.expectation-joint]
+      - id: kp3
+        can_do: Find it from a table
+        key_prerequisites: [math.probstat.expectation-joint]
+      - id: kp4
+        can_do: Find it from a density
+        key_prerequisites: [math.probstat.variance-discrete]
+  - id: math.probstat.correlation
+    name: Finding correlation
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.covariance
+        encompassing: 0.4
+        confidence: high
+      - topic: math.stats.correlation-properties
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define correlation
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp2
+        can_do: Show it lies between bounds
+        key_prerequisites: [math.stats.correlation-properties]
+      - id: kp3
+        can_do: Find it from a table
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp4
+        can_do: Interpret its value
+        key_prerequisites: [math.stats.correlation-properties]
+  - id: math.probstat.independence-factorization
+    name: Testing independence by factoring
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.independence-rv
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor a joint density
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp2
+        can_do: Check the support's shape
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp3
+        can_do: Show independence by factoring
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp4
+        can_do: Show a failure despite a factorable formula
+        key_prerequisites: [math.probstat.independence-rv]
+  - id: math.probstat.mgf-for-sums
+    name: Using moment generating functions for sums
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mgf-continuous
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.independence-factorization
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.independence-rv
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the product rule
+        key_prerequisites: [math.probstat.independence-factorization]
+      - id: kp2
+        can_do: Find a sum of Poisson variables
+        key_prerequisites: [math.probstat.mgf-continuous]
+      - id: kp3
+        can_do: Find a sum of normal variables
+        key_prerequisites: [math.probstat.mgf-continuous]
+      - id: kp4
+        can_do: Find a sum of gamma variables
+        key_prerequisites: [math.probstat.mgf-continuous]
+  - id: math.probstat.normal-linear-combinations
+    name: Finding distributions of normal sums
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mgf-for-sums
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.standardizing
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a distribution of a sum
+        key_prerequisites: [math.probstat.mgf-for-sums]
+      - id: kp2
+        can_do: Find a distribution of a difference
+        key_prerequisites: [math.probstat.mgf-for-sums]
+      - id: kp3
+        can_do: Find a distribution of a sample mean
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp4
+        can_do: Find a probability about two variables
+        key_prerequisites: [math.probstat.standardizing]
+  - id: math.probstat.covariance-properties
+    name: Using properties of covariance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.covariance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use bilinearity
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp2
+        can_do: Find a covariance of combinations
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp3
+        can_do: Use symmetry
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp4
+        can_do: Show a variable with itself gives variance
+        key_prerequisites: [math.probstat.covariance]
+  - id: math.probstat.variance-of-sums
+    name: Finding the variance of a sum
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.covariance-properties
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.probstat.covariance
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a variance of two variables
+        key_prerequisites: [math.probstat.covariance-properties]
+      - id: kp2
+        can_do: Find a variance of several variables
+        key_prerequisites: [math.probstat.covariance-properties]
+      - id: kp3
+        can_do: Use it for independent variables
+        key_prerequisites: [math.probstat.covariance]
+      - id: kp4
+        can_do: Find a variance of a weighted portfolio
+        key_prerequisites: [math.probstat.covariance-properties]
+  - id: math.probstat.uncorrelated-vs-independent
+    name: Telling uncorrelated from independent
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.correlation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.independence-rv
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show independence implies zero covariance
+        key_prerequisites: [math.probstat.independence-rv]
+      - id: kp2
+        can_do: Find an uncorrelated dependent pair
+        key_prerequisites: [math.probstat.correlation]
+      - id: kp3
+        can_do: Test a table for both
+        key_prerequisites: [math.probstat.correlation, math.probstat.independence-rv]
+      - id: kp4
+        can_do: Explain why correlation misses a nonlinear link
+        key_prerequisites: [math.probstat.correlation]
+  - id: math.probstat.bivariate-normal
+    name: Using the bivariate normal distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.standardizing
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.uncorrelated-vs-independent
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.correlation
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read the five parameters
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp2
+        can_do: Find a marginal
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp3
+        can_do: Find a conditional
+        key_prerequisites: [math.probstat.correlation]
+      - id: kp4
+        can_do: Show zero correlation gives independence
+        key_prerequisites: [math.probstat.uncorrelated-vs-independent]
+  - id: math.probstat.sample-mean-moments
+    name: Finding the mean and variance of a sample mean
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-of-sums
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a sample mean's mean
+        key_prerequisites: [math.probstat.variance-of-sums]
+      - id: kp2
+        can_do: Find a sample mean's variance
+        key_prerequisites: [math.probstat.variance-of-sums]
+      - id: kp3
+        can_do: Find a standard error
+        key_prerequisites: [math.probstat.variance-of-sums]
+      - id: kp4
+        can_do: Find a size for a given standard error
+        key_prerequisites: [math.probstat.variance-of-sums]
+  - id: math.probstat.total-variance
+    name: Using the law of total variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.law-of-total-expectation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law of total variance
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp2
+        can_do: Use it on a two-stage experiment
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp3
+        can_do: Use it on a mixture
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp4
+        can_do: Split variation into parts
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+  - id: math.probstat.random-sums
+    name: Finding moments of random sums
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.law-of-total-expectation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean of a random sum
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp2
+        can_do: Find a variance of a random sum
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp3
+        can_do: Solve an insurance claim model
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+      - id: kp4
+        can_do: Find a generating function
+        key_prerequisites: [math.probstat.law-of-total-expectation]
+  - id: math.probstat.multivariate-normal-intro
+    name: Exploring the multivariate normal
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bivariate-normal
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a mean vector and covariance matrix
+        key_prerequisites: [math.probstat.bivariate-normal]
+      - id: kp2
+        can_do: Find a marginal
+        key_prerequisites: [math.probstat.bivariate-normal]
+      - id: kp3
+        can_do: Find a linear combination's distribution
+        key_prerequisites: [math.probstat.bivariate-normal]
+      - id: kp4
+        can_do: Sketch contours
+        key_prerequisites: [math.probstat.bivariate-normal]
+  - id: math.probstat.markov-chebyshev
+    name: Using Markov's and Chebyshev's inequalities
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.variance-continuous
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Markov's inequality
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp2
+        can_do: Use Chebyshev's inequality
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp3
+        can_do: Compare to an exact probability
+        key_prerequisites: [math.probstat.variance-continuous]
+      - id: kp4
+        can_do: Bound a sample mean
+        key_prerequisites: [math.probstat.variance-continuous]
+  - id: math.probstat.simulation-random-variables
+    name: Simulating random variables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.functions-of-rv-cdf
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.uniform-distribution
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the inverse CDF method
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp2
+        can_do: Simulate a discrete variable
+        key_prerequisites: [math.probstat.uniform-distribution]
+      - id: kp3
+        can_do: Use rejection sampling
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp4
+        can_do: Estimate a probability by simulation
+        key_prerequisites: [math.probstat.uniform-distribution]
+  - id: math.probstat.convergence-in-probability
+    name: Using convergence in probability
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.markov-chebyshev
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define convergence in probability
+        key_prerequisites: [math.probstat.markov-chebyshev]
+      - id: kp2
+        can_do: Show it with Chebyshev's inequality
+        key_prerequisites: [math.probstat.markov-chebyshev]
+      - id: kp3
+        can_do: Show a sample maximum converges
+        key_prerequisites: [math.probstat.markov-chebyshev]
+      - id: kp4
+        can_do: Tell it from pointwise convergence
+        key_prerequisites: [math.probstat.markov-chebyshev]
+  - id: math.probstat.law-of-large-numbers
+    name: Using the law of large numbers
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sample-mean-moments
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.convergence-in-probability
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.markov-chebyshev
+        encompassing: 0.15
+        confidence: high
+      - topic: math.probstat.variance-of-sums
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the weak law
+        key_prerequisites: [math.probstat.convergence-in-probability]
+      - id: kp2
+        can_do: Prove it with Chebyshev's inequality
+        key_prerequisites: [math.probstat.markov-chebyshev]
+      - id: kp3
+        can_do: Apply to relative frequencies
+        key_prerequisites: [math.probstat.sample-mean-moments]
+      - id: kp4
+        can_do: Find a sample size from the bound
+        key_prerequisites: [math.probstat.markov-chebyshev]
+  - id: math.probstat.convergence-in-distribution
+    name: Using convergence in distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mgf-continuous
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define it with CDFs
+        key_prerequisites: [math.probstat.mgf-continuous]
+      - id: kp2
+        can_do: Use generating functions
+        key_prerequisites: [math.probstat.mgf-continuous]
+      - id: kp3
+        can_do: Find a limit of a binomial
+        key_prerequisites: [math.probstat.mgf-continuous]
+      - id: kp4
+        can_do: Tell it from convergence in probability
+        key_prerequisites: [math.probstat.mgf-continuous]
+  - id: math.probstat.central-limit-theorem-formal
+    name: Using the central limit theorem
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mgf-for-sums
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.standardizing
+        encompassing: 0.2
+        confidence: high
+      - topic: math.probstat.convergence-in-distribution
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the central limit theorem
+        key_prerequisites: [math.probstat.convergence-in-distribution]
+      - id: kp2
+        can_do: Sketch the generating function proof
+        key_prerequisites: [math.probstat.mgf-for-sums]
+      - id: kp3
+        can_do: Standardize a sum
+        key_prerequisites: [math.probstat.standardizing]
+      - id: kp4
+        can_do: Judge sample sizes
+        key_prerequisites: [math.probstat.convergence-in-distribution]
+  - id: math.probstat.normal-approx-binomial
+    name: Approximating binomials with the normal distribution
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.central-limit-theorem-formal
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.normal-tables
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean and standard deviation
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Standardize a count
+        key_prerequisites: [math.probstat.central-limit-theorem-formal]
+      - id: kp3
+        can_do: Use a table for the probability
+        key_prerequisites: [math.probstat.normal-tables]
+      - id: kp4
+        can_do: Judge when it applies
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+  - id: math.probstat.continuity-correction
+    name: Using the continuity correction
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.normal-approx-binomial
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add half a unit
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp2
+        can_do: Handle at-most and at-least
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp3
+        can_do: Handle an exact count
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp4
+        can_do: Compare with an exact answer
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+  - id: math.probstat.clt-sums-means
+    name: Applying the central limit theorem to sums and means
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.central-limit-theorem-formal
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a probability about a sum
+        key_prerequisites: [math.probstat.central-limit-theorem-formal]
+      - id: kp2
+        can_do: Find a probability about a mean
+        key_prerequisites: [math.probstat.central-limit-theorem-formal]
+      - id: kp3
+        can_do: Find a sample size for a probability
+        key_prerequisites: [math.probstat.central-limit-theorem-formal]
+      - id: kp4
+        can_do: Use it with a non-normal population
+        key_prerequisites: [math.probstat.central-limit-theorem-formal]
+  - id: math.probstat.sampling-distribution-of-mean
+    name: Finding the sampling distribution of the mean
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.stats.sampling-mean
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.normal-linear-combinations
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.clt-sums-means
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.central-limit-theorem-formal
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find its mean and standard error
+        key_prerequisites: [math.stats.sampling-mean]
+      - id: kp2
+        can_do: Find an exact distribution for normal data
+        key_prerequisites: [math.probstat.normal-linear-combinations]
+      - id: kp3
+        can_do: Find an approximate distribution for other data
+        key_prerequisites: [math.probstat.clt-sums-means]
+      - id: kp4
+        can_do: Find a probability for a mean
+        key_prerequisites: [math.probstat.clt-sums-means]
+  - id: math.probstat.sample-variance-distribution
+    name: Finding the sampling distribution of the variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.chi-square-t-f-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.sampling-distribution-of-mean
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show why n minus one
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp2
+        can_do: Show the scaled variance is chi-square
+        key_prerequisites: [math.probstat.chi-square-t-f-intro]
+      - id: kp3
+        can_do: State that mean and variance are independent
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp4
+        can_do: Find a probability about a sample variance
+        key_prerequisites: [math.probstat.chi-square-t-f-intro]
+  - id: math.probstat.min-max-distribution
+    name: Finding the distribution of a minimum or maximum
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.functions-of-rv-cdf
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.independence-rv
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a maximum's CDF
+        key_prerequisites: [math.probstat.functions-of-rv-cdf, math.probstat.independence-rv]
+      - id: kp2
+        can_do: Find a minimum's CDF
+        key_prerequisites: [math.probstat.functions-of-rv-cdf, math.probstat.independence-rv]
+      - id: kp3
+        can_do: Find a density of each
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+      - id: kp4
+        can_do: Find a minimum of exponentials
+        key_prerequisites: [math.probstat.independence-rv]
+  - id: math.probstat.order-statistics
+    name: Using order statistics
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.min-max-distribution
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.functions-of-rv-cdf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define order statistics
+        key_prerequisites: [math.probstat.min-max-distribution]
+      - id: kp2
+        can_do: Find a kth order density
+        key_prerequisites: [math.probstat.min-max-distribution]
+      - id: kp3
+        can_do: Find a median's density
+        key_prerequisites: [math.probstat.min-max-distribution]
+      - id: kp4
+        can_do: Find a joint range
+        key_prerequisites: [math.probstat.functions-of-rv-cdf]
+  - id: math.probstat.point-estimators
+    name: Defining point estimators
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sampling-distribution-of-mean
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell estimator from estimate
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp2
+        can_do: Name a parameter and a statistic
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp3
+        can_do: Find an estimator of a mean
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp4
+        can_do: Find an estimator of a proportion
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+  - id: math.probstat.method-of-moments
+    name: Using the method of moments
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.point-estimators
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match the first moment
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp2
+        can_do: Match two moments
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp3
+        can_do: Use it on a gamma model
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp4
+        can_do: Compare it with another estimator
+        key_prerequisites: [math.probstat.point-estimators]
+  - id: math.probstat.likelihood-function
+    name: Writing a likelihood function
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.point-estimators
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a likelihood for discrete data
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp2
+        can_do: Write one for continuous data
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Write a log-likelihood
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp4
+        can_do: Plot a likelihood over a parameter
+        key_prerequisites: [math.probstat.point-estimators]
+  - id: math.probstat.sufficient-statistics
+    name: Using sufficient statistics
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.likelihood-function
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sufficiency
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp2
+        can_do: Use the factorization theorem
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp3
+        can_do: Find one for a Bernoulli sample
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp4
+        can_do: Find one for a normal sample
+        key_prerequisites: [math.probstat.likelihood-function]
+  - id: math.probstat.bayesian-estimation
+    name: Using Bayesian estimation
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.likelihood-function
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.bayes-theorem
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.beta-distribution
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name prior and posterior
+        key_prerequisites: [math.probstat.bayes-theorem]
+      - id: kp2
+        can_do: Update a discrete prior
+        key_prerequisites: [math.probstat.bayes-theorem]
+      - id: kp3
+        can_do: Update with a beta prior
+        key_prerequisites: [math.probstat.beta-distribution]
+      - id: kp4
+        can_do: Find a posterior mean
+        key_prerequisites: [math.probstat.likelihood-function, math.probstat.beta-distribution]
+  - id: math.probstat.ci-large-sample-mean
+    name: Finding large-sample intervals for a mean
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sampling-distribution-of-mean
+        encompassing: 0.35
+        confidence: high
+      - topic: math.stats.ci-idea
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive an interval from a standardized mean
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+      - id: kp2
+        can_do: Find a known-variance interval
+        key_prerequisites: [math.stats.ci-idea]
+      - id: kp3
+        can_do: Find a critical value
+        key_prerequisites: [math.stats.ci-idea]
+      - id: kp4
+        can_do: Relate width to size
+        key_prerequisites: [math.probstat.sampling-distribution-of-mean]
+  - id: math.probstat.ci-proportion-calc
+    name: Finding intervals for proportions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-large-sample-mean
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.normal-approx-binomial
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a standard error for a proportion
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp2
+        can_do: Find an interval for a proportion
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp3
+        can_do: Find a plus-four interval
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp4
+        can_do: Check conditions
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+  - id: math.probstat.ci-variance
+    name: Finding intervals for a variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sample-variance-distribution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a chi-square pivot
+        key_prerequisites: [math.probstat.sample-variance-distribution]
+      - id: kp2
+        can_do: Find an interval for a variance
+        key_prerequisites: [math.probstat.sample-variance-distribution]
+      - id: kp3
+        can_do: Find an interval for a standard deviation
+        key_prerequisites: [math.probstat.sample-variance-distribution]
+      - id: kp4
+        can_do: Explain why the interval is not symmetric
+        key_prerequisites: [math.probstat.sample-variance-distribution]
+  - id: math.probstat.sample-size-calc
+    name: Finding a sample size for a given precision
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-proportion-calc
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a size for a margin
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+      - id: kp2
+        can_do: Use a planning value
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+      - id: kp3
+        can_do: Use the worst case
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+      - id: kp4
+        can_do: Solve for a size for a mean
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+  - id: math.probstat.unbiased-estimators
+    name: Testing unbiased estimators
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.point-estimators
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test a mean estimator
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp2
+        can_do: Test a variance estimator
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp3
+        can_do: Fix a biased estimator
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp4
+        can_do: Compare several estimators of a mean
+        key_prerequisites: [math.probstat.point-estimators]
+  - id: math.probstat.bias-variance-mse
+    name: Using bias, variance and mean squared error
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.unbiased-estimators
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.point-estimators
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a bias
+        key_prerequisites: [math.probstat.unbiased-estimators]
+      - id: kp2
+        can_do: Find a mean squared error
+        key_prerequisites: [math.probstat.unbiased-estimators]
+      - id: kp3
+        can_do: Split it into bias and variance
+        key_prerequisites: [math.probstat.unbiased-estimators]
+      - id: kp4
+        can_do: Prefer a biased estimator by error
+        key_prerequisites: [math.probstat.point-estimators]
+  - id: math.probstat.consistency-efficiency
+    name: Testing consistency and efficiency
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bias-variance-mse
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.law-of-large-numbers
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define consistency
+        key_prerequisites: [math.probstat.law-of-large-numbers]
+      - id: kp2
+        can_do: Show a sample mean is consistent
+        key_prerequisites: [math.probstat.law-of-large-numbers]
+      - id: kp3
+        can_do: Find relative efficiency
+        key_prerequisites: [math.probstat.bias-variance-mse]
+      - id: kp4
+        can_do: Compare estimators by variance
+        key_prerequisites: [math.probstat.bias-variance-mse]
+  - id: math.probstat.mle-discrete
+    name: Finding maximum likelihood estimates for discrete models
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.likelihood-function
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Maximize for a Bernoulli sample
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp2
+        can_do: Maximize for a Poisson sample
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp3
+        can_do: Maximize for a geometric sample
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp4
+        can_do: Find an MLE with a log-likelihood
+        key_prerequisites: [math.probstat.likelihood-function]
+  - id: math.probstat.mle-continuous
+    name: Finding maximum likelihood estimates for continuous models
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mle-discrete
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Maximize for an exponential sample
+        key_prerequisites: [math.probstat.mle-discrete]
+      - id: kp2
+        can_do: Maximize for a normal mean
+        key_prerequisites: [math.probstat.mle-discrete]
+      - id: kp3
+        can_do: Maximize for a normal mean and variance
+        key_prerequisites: [math.probstat.mle-discrete]
+      - id: kp4
+        can_do: Find a boundary MLE for a uniform sample
+        key_prerequisites: [math.probstat.mle-discrete]
+  - id: math.probstat.maximum-likelihood
+    name: Finding maximum likelihood estimates
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mle-continuous
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.likelihood-function
+        encompassing: 0.1
+        confidence: high
+      - topic: math.alg2.log-product-quotient
+        encompassing: 0.15
+        confidence: high
+      - topic: math.probstat.mle-discrete
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use log rules on a likelihood
+        key_prerequisites: [math.alg2.log-product-quotient]
+      - id: kp2
+        can_do: Solve two equations for two parameters
+        key_prerequisites: [math.probstat.mle-continuous]
+      - id: kp3
+        can_do: Check a second-derivative condition
+        key_prerequisites: [math.probstat.mle-continuous]
+      - id: kp4
+        can_do: Use invariance for a function of a parameter
+        key_prerequisites: [math.probstat.likelihood-function]
+  - id: math.probstat.mle-properties
+    name: Using properties of maximum likelihood estimators
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.maximum-likelihood
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.consistency-efficiency
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State consistency of MLEs
+        key_prerequisites: [math.probstat.consistency-efficiency]
+      - id: kp2
+        can_do: State large-sample normality
+        key_prerequisites: [math.probstat.maximum-likelihood]
+      - id: kp3
+        can_do: Find an approximate interval
+        key_prerequisites: [math.probstat.maximum-likelihood]
+      - id: kp4
+        can_do: Find a limit of its variance
+        key_prerequisites: [math.probstat.maximum-likelihood]
+  - id: math.probstat.fisher-information
+    name: Using Fisher information and the Cramer-Rao bound
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.mle-properties
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define information
+        key_prerequisites: [math.probstat.mle-properties]
+      - id: kp2
+        can_do: Find it for a Bernoulli model
+        key_prerequisites: [math.probstat.mle-properties]
+      - id: kp3
+        can_do: State the Cramer-Rao bound
+        key_prerequisites: [math.probstat.mle-properties]
+      - id: kp4
+        can_do: Test an estimator for efficiency
+        key_prerequisites: [math.probstat.mle-properties]
+  - id: math.probstat.conjugate-priors
+    name: Using conjugate priors
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.bayesian-estimation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a conjugate prior
+        key_prerequisites: [math.probstat.bayesian-estimation]
+      - id: kp2
+        can_do: Use a beta prior for a binomial
+        key_prerequisites: [math.probstat.bayesian-estimation]
+      - id: kp3
+        can_do: Use a gamma prior for a Poisson
+        key_prerequisites: [math.probstat.bayesian-estimation]
+      - id: kp4
+        can_do: Use a normal prior for a normal mean
+        key_prerequisites: [math.probstat.bayesian-estimation]
+  - id: math.probstat.ci-interpretation
+    name: Interpreting confidence intervals
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-large-sample-mean
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State a correct interpretation
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp2
+        can_do: Spot an incorrect interpretation
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp3
+        can_do: Tell confidence from probability
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp4
+        can_do: Simulate interval coverage
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+  - id: math.probstat.ci-small-sample-t
+    name: Finding small-sample t intervals
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sample-variance-distribution
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.ci-interpretation
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.probstat.ci-large-sample-mean
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a t interval
+        key_prerequisites: [math.probstat.sample-variance-distribution]
+      - id: kp2
+        can_do: Find a t interval
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp3
+        can_do: Check normality assumptions
+        key_prerequisites: [math.probstat.ci-interpretation]
+      - id: kp4
+        can_do: Compare with a z interval
+        key_prerequisites: [math.probstat.ci-interpretation]
+  - id: math.probstat.ci-two-samples
+    name: Finding intervals for two samples
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-small-sample-t
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.ci-proportion-calc
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an interval for a mean difference
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp2
+        can_do: Find an interval for a proportion difference
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+      - id: kp3
+        can_do: Use pooled variances
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp4
+        can_do: Interpret an interval containing zero
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+  - id: math.probstat.pivotal-quantities
+    name: Building intervals with pivotal quantities
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-small-sample-t
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a pivot
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp2
+        can_do: Build an interval from a pivot
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp3
+        can_do: Use an exponential sample's pivot
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp4
+        can_do: Use an order statistic pivot
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+  - id: math.probstat.hypothesis-framework
+    name: Using the hypothesis testing framework
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.ci-large-sample-mean
+        encompassing: 0.3
+        confidence: high
+      - topic: math.stats.null-alternative
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write null and alternative
+        key_prerequisites: [math.stats.null-alternative]
+      - id: kp2
+        can_do: Define a test statistic
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp3
+        can_do: Choose one or two tails
+        key_prerequisites: [math.stats.null-alternative]
+      - id: kp4
+        can_do: State a conclusion in context
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+  - id: math.probstat.test-for-mean
+    name: Testing a mean
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.ci-small-sample-t
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run a known-variance test
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp2
+        can_do: Run a t test
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp3
+        can_do: Find a p-value
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp4
+        can_do: Check conditions
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+  - id: math.probstat.test-for-proportion
+    name: Testing a proportion
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.ci-proportion-calc
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a statistic with the null value
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+      - id: kp2
+        can_do: Run a one-sided test
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp3
+        can_do: Run a two-sided test
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp4
+        can_do: Run an exact binomial test
+        key_prerequisites: [math.probstat.ci-proportion-calc]
+  - id: math.probstat.test-for-variance
+    name: Testing a variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.ci-variance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a chi-square statistic
+        key_prerequisites: [math.probstat.ci-variance]
+      - id: kp2
+        can_do: Run a one-sided test
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp3
+        can_do: Run a two-sided test
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp4
+        can_do: Judge sensitivity to normality
+        key_prerequisites: [math.probstat.ci-variance]
+  - id: math.probstat.paired-tests
+    name: Using paired tests
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.test-for-mean
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot paired data
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp2
+        can_do: Find differences
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp3
+        can_do: Run a paired t test
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp4
+        can_do: Compare to an unpaired analysis
+        key_prerequisites: [math.probstat.test-for-mean]
+  - id: math.probstat.p-values-formal
+    name: Interpreting p-values formally
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a p-value
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp2
+        can_do: Find one for each tail
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp3
+        can_do: Spot a false interpretation
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp4
+        can_do: Show p-values are uniform under the null
+        key_prerequisites: [math.probstat.hypothesis-framework]
+  - id: math.probstat.multiple-testing-issue
+    name: Recognizing multiple testing
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.p-values-formal
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a family error rate
+        key_prerequisites: [math.probstat.p-values-formal]
+      - id: kp2
+        can_do: Use a Bonferroni correction
+        key_prerequisites: [math.probstat.p-values-formal]
+      - id: kp3
+        can_do: Tell the false discovery idea
+        key_prerequisites: [math.probstat.p-values-formal]
+      - id: kp4
+        can_do: Spot data dredging
+        key_prerequisites: [math.probstat.p-values-formal]
+  - id: math.probstat.goodness-of-fit
+    name: Using chi-square goodness of fit
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.chi-square-t-f-intro
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.multinomial-distribution
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected counts
+        key_prerequisites: [math.probstat.multinomial-distribution]
+      - id: kp2
+        can_do: Find a chi-square statistic
+        key_prerequisites: [math.probstat.chi-square-t-f-intro]
+      - id: kp3
+        can_do: Find degrees of freedom
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp4
+        can_do: Test a fitted model
+        key_prerequisites: [math.probstat.hypothesis-framework, math.probstat.chi-square-t-f-intro]
+  - id: math.probstat.independence-contingency
+    name: Testing independence in contingency tables
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.goodness-of-fit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected counts in a table
+        key_prerequisites: [math.probstat.goodness-of-fit]
+      - id: kp2
+        can_do: Find a chi-square statistic
+        key_prerequisites: [math.probstat.goodness-of-fit]
+      - id: kp3
+        can_do: Find degrees of freedom
+        key_prerequisites: [math.probstat.goodness-of-fit]
+      - id: kp4
+        can_do: Interpret a result
+        key_prerequisites: [math.probstat.goodness-of-fit]
+  - id: math.probstat.f-test-variances
+    name: Using F tests for two variances
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.test-for-variance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form an F statistic
+        key_prerequisites: [math.probstat.test-for-variance]
+      - id: kp2
+        can_do: Read an F table
+        key_prerequisites: [math.probstat.test-for-variance]
+      - id: kp3
+        can_do: Run a two-sided test
+        key_prerequisites: [math.probstat.test-for-variance]
+      - id: kp4
+        can_do: Judge its assumptions
+        key_prerequisites: [math.probstat.test-for-variance]
+  - id: math.probstat.bootstrap
+    name: Using the bootstrap
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.simulation-random-variables
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.ci-large-sample-mean
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Resample from data
+        key_prerequisites: [math.probstat.simulation-random-variables]
+      - id: kp2
+        can_do: Estimate a standard error
+        key_prerequisites: [math.probstat.simulation-random-variables]
+      - id: kp3
+        can_do: Find a percentile interval
+        key_prerequisites: [math.probstat.ci-large-sample-mean]
+      - id: kp4
+        can_do: Judge when it fails
+        key_prerequisites: [math.probstat.simulation-random-variables]
+  - id: math.probstat.rejection-regions
+    name: Using rejection regions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a critical value
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp2
+        can_do: Write a region
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp3
+        can_do: Connect it to a p-value
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp4
+        can_do: Find a region for a level
+        key_prerequisites: [math.probstat.hypothesis-framework]
+  - id: math.probstat.type-errors-power-calc
+    name: Finding error rates and power
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.rejection-regions
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.probstat.hypothesis-framework
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the two errors
+        key_prerequisites: [math.probstat.hypothesis-framework]
+      - id: kp2
+        can_do: Find a Type I rate
+        key_prerequisites: [math.probstat.rejection-regions]
+      - id: kp3
+        can_do: Find a Type II rate
+        key_prerequisites: [math.probstat.rejection-regions]
+      - id: kp4
+        can_do: Find power at an alternative
+        key_prerequisites: [math.probstat.rejection-regions]
+  - id: math.probstat.neyman-pearson
+    name: Using the Neyman-Pearson lemma
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.type-errors-power-calc
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.probstat.likelihood-function
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a most powerful test
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp2
+        can_do: State the Neyman-Pearson lemma
+        key_prerequisites: [math.probstat.likelihood-function]
+      - id: kp3
+        can_do: Find a test for a normal mean
+        key_prerequisites: [math.probstat.type-errors-power-calc, math.probstat.likelihood-function]
+      - id: kp4
+        can_do: Find a test for a Bernoulli model
+        key_prerequisites: [math.probstat.type-errors-power-calc, math.probstat.likelihood-function]
+  - id: math.probstat.likelihood-ratio-tests
+    name: Using likelihood ratio tests
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.neyman-pearson
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.maximum-likelihood
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a likelihood ratio
+        key_prerequisites: [math.probstat.neyman-pearson]
+      - id: kp2
+        can_do: Find one for a normal mean
+        key_prerequisites: [math.probstat.maximum-likelihood]
+      - id: kp3
+        can_do: Connect it to a t test
+        key_prerequisites: [math.probstat.maximum-likelihood]
+      - id: kp4
+        can_do: State its large-sample chi-square rule
+        key_prerequisites: [math.probstat.neyman-pearson]
+  - id: math.probstat.power-curves
+    name: Drawing power curves
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.type-errors-power-calc
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a power function
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp2
+        can_do: Sketch a power curve
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp3
+        can_do: Compare two tests
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp4
+        can_do: Find the size's effect
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+  - id: math.probstat.sample-size-for-power
+    name: Finding a sample size for power
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.type-errors-power-calc
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set a target power
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp2
+        can_do: Solve for a size
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp3
+        can_do: Find the effect size's role
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+      - id: kp4
+        can_do: Use it for a two-sample design
+        key_prerequisites: [math.probstat.type-errors-power-calc]
+  - id: math.probstat.test-ci-duality
+    name: Connecting tests to confidence intervals
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.test-for-mean
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a test from an interval
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp2
+        can_do: Invert a test to an interval
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp3
+        can_do: Connect one-sided cases
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp4
+        can_do: Spot an inconsistency
+        key_prerequisites: [math.probstat.test-for-mean]
+  - id: math.probstat.two-proportion-test
+    name: Testing two proportions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.test-for-proportion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Pool a proportion
+        key_prerequisites: [math.probstat.test-for-proportion]
+      - id: kp2
+        can_do: Run a two-proportion test
+        key_prerequisites: [math.probstat.test-for-proportion]
+      - id: kp3
+        can_do: Find an interval to compare
+        key_prerequisites: [math.probstat.test-for-proportion]
+      - id: kp4
+        can_do: Compare to a chi-square table
+        key_prerequisites: [math.probstat.test-for-proportion]
+  - id: math.probstat.two-sample-tests
+    name: Comparing two samples
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.test-for-mean
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.ci-two-samples
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.two-proportion-test
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run a two-sample mean test
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp2
+        can_do: Use a two-sample interval
+        key_prerequisites: [math.probstat.ci-two-samples]
+      - id: kp3
+        can_do: Compare two proportions
+        key_prerequisites: [math.probstat.two-proportion-test]
+      - id: kp4
+        can_do: Choose a design
+        key_prerequisites: [math.probstat.test-for-mean]
+  - id: math.probstat.nonparametric-tests
+    name: Using nonparametric tests
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.two-sample-tests
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run a sign test
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp2
+        can_do: Run a signed-rank test
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp3
+        can_do: Run a rank-sum test
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp4
+        can_do: Compare to a t test
+        key_prerequisites: [math.probstat.two-sample-tests]
+  - id: math.probstat.pooled-unpooled
+    name: Telling pooled from unpooled tests
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.two-sample-tests
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a pooled variance
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp2
+        can_do: Find unpooled degrees of freedom
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp3
+        can_do: Choose with a ratio of variances
+        key_prerequisites: [math.probstat.two-sample-tests]
+      - id: kp4
+        can_do: Compare results
+        key_prerequisites: [math.probstat.two-sample-tests]
+  - id: math.probstat.anova-one-way
+    name: Using one-way analysis of variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.f-test-variances
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.pooled-unpooled
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.probstat.two-sample-tests
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the model
+        key_prerequisites: [math.probstat.pooled-unpooled]
+      - id: kp2
+        can_do: Split variation into within and between
+        key_prerequisites: [math.probstat.f-test-variances]
+      - id: kp3
+        can_do: Find an F statistic
+        key_prerequisites: [math.probstat.f-test-variances]
+      - id: kp4
+        can_do: Explain why it beats many t tests
+        key_prerequisites: [math.probstat.two-sample-tests]
+  - id: math.probstat.anova-table-compute
+    name: Building an analysis of variance table
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.anova-one-way
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sums of squares
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp2
+        can_do: Find degrees of freedom
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp3
+        can_do: Find mean squares
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp4
+        can_do: Read a p-value from a table
+        key_prerequisites: [math.probstat.anova-one-way]
+  - id: math.probstat.anova-post-hoc
+    name: Comparing groups after analysis of variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.multiple-testing-issue
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.anova-table-compute
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.probstat.anova-one-way
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use pairwise tests
+        key_prerequisites: [math.probstat.multiple-testing-issue]
+      - id: kp2
+        can_do: Use a Bonferroni adjustment
+        key_prerequisites: [math.probstat.multiple-testing-issue]
+      - id: kp3
+        can_do: Use a Tukey comparison
+        key_prerequisites: [math.probstat.anova-table-compute]
+      - id: kp4
+        can_do: Interpret a group ranking
+        key_prerequisites: [math.probstat.anova-one-way]
+  - id: math.probstat.anova-two-way-intro
+    name: Exploring two-way analysis of variance
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.anova-one-way
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State two factors
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp2
+        can_do: Read an interaction plot
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp3
+        can_do: Read a two-way table
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp4
+        can_do: Tell main effects from interaction
+        key_prerequisites: [math.probstat.anova-one-way]
+  - id: math.probstat.simple-linear-model
+    name: Writing the simple linear regression model
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.stats.least-squares-regression
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.point-estimators
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the model with an error term
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp2
+        can_do: State its assumptions
+        key_prerequisites: [math.probstat.point-estimators]
+      - id: kp3
+        can_do: Interpret parameters
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp4
+        can_do: Tell a population line from a fit
+        key_prerequisites: [math.probstat.point-estimators]
+  - id: math.probstat.least-squares-derivation
+    name: Deriving least squares estimates
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.simple-linear-model
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.least-squares-from-calculus
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc3.optimization-multivariable
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the sum of squares
+        key_prerequisites: [math.calc3.least-squares-from-calculus]
+      - id: kp2
+        can_do: Solve the normal equations
+        key_prerequisites: [math.calc3.least-squares-from-calculus]
+      - id: kp3
+        can_do: Find a fitted line
+        key_prerequisites: [math.probstat.simple-linear-model]
+      - id: kp4
+        can_do: Show the residuals sum to zero
+        key_prerequisites: [math.calc3.optimization-multivariable]
+  - id: math.probstat.sampling-of-slope
+    name: Finding the sampling distribution of the slope
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.least-squares-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.variance-of-sums
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a slope as a linear combination
+        key_prerequisites: [math.probstat.least-squares-derivation]
+      - id: kp2
+        can_do: Find its mean
+        key_prerequisites: [math.probstat.least-squares-derivation]
+      - id: kp3
+        can_do: Find its variance
+        key_prerequisites: [math.probstat.variance-of-sums]
+      - id: kp4
+        can_do: Find its distribution
+        key_prerequisites: [math.probstat.least-squares-derivation]
+  - id: math.probstat.inference-for-regression
+    name: Using inference for regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sampling-of-slope
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.test-for-mean
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an estimate of error variance
+        key_prerequisites: [math.probstat.sampling-of-slope]
+      - id: kp2
+        can_do: Find an interval for a slope
+        key_prerequisites: [math.probstat.sampling-of-slope]
+      - id: kp3
+        can_do: Run a t test for a slope
+        key_prerequisites: [math.probstat.test-for-mean]
+      - id: kp4
+        can_do: Interpret software output
+        key_prerequisites: [math.probstat.sampling-of-slope]
+  - id: math.probstat.prediction-confidence-bands
+    name: Using prediction and confidence intervals
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.inference-for-regression
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an interval for a mean response
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp2
+        can_do: Find a prediction interval
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp3
+        can_do: Explain why the prediction interval is wider
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp4
+        can_do: Spot extrapolation
+        key_prerequisites: [math.probstat.inference-for-regression]
+  - id: math.probstat.regression-diagnostics
+    name: Checking regression assumptions
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.inference-for-regression
+        encompassing: 0.3
+        confidence: high
+      - topic: math.stats.residual-analysis
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a residual plot
+        key_prerequisites: [math.stats.residual-analysis]
+      - id: kp2
+        can_do: Check normality of residuals
+        key_prerequisites: [math.stats.residual-analysis]
+      - id: kp3
+        can_do: Spot leverage and influence
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp4
+        can_do: Spot non-constant variance
+        key_prerequisites: [math.stats.residual-analysis]
+  - id: math.probstat.correlation-regression-link
+    name: Connecting correlation and regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.least-squares-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.correlation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a slope from a correlation
+        key_prerequisites: [math.probstat.least-squares-derivation, math.probstat.correlation]
+      - id: kp2
+        can_do: Find a coefficient of determination
+        key_prerequisites: [math.probstat.correlation]
+      - id: kp3
+        can_do: Test zero correlation
+        key_prerequisites: [math.probstat.least-squares-derivation]
+      - id: kp4
+        can_do: Explain regression to the mean
+        key_prerequisites: [math.probstat.correlation]
+  - id: math.probstat.r-squared-anova-table
+    name: Reading an analysis of variance table for regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.inference-for-regression
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.anova-one-way
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.correlation-regression-link
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split total variation for a line
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp2
+        can_do: Build a table
+        key_prerequisites: [math.probstat.anova-one-way]
+      - id: kp3
+        can_do: Find a coefficient of determination
+        key_prerequisites: [math.probstat.correlation-regression-link]
+      - id: kp4
+        can_do: Connect F to t
+        key_prerequisites: [math.probstat.inference-for-regression, math.probstat.anova-one-way]
+  - id: math.probstat.transforming-for-regression
+    name: Transforming variables in regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.regression-diagnostics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a log transform
+        key_prerequisites: [math.probstat.regression-diagnostics]
+      - id: kp2
+        can_do: Use a power transform
+        key_prerequisites: [math.probstat.regression-diagnostics]
+      - id: kp3
+        can_do: Fit a curve with a transformed model
+        key_prerequisites: [math.probstat.regression-diagnostics]
+      - id: kp4
+        can_do: Interpret a log-scale slope
+        key_prerequisites: [math.probstat.regression-diagnostics]
+  - id: math.probstat.multiple-regression-intro
+    name: Using multiple regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.transforming-for-regression
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.probstat.regression-diagnostics
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a model with several predictors
+        key_prerequisites: [math.probstat.transforming-for-regression]
+      - id: kp2
+        can_do: Interpret a partial slope
+        key_prerequisites: [math.probstat.transforming-for-regression]
+      - id: kp3
+        can_do: Read an output table
+        key_prerequisites: [math.probstat.transforming-for-regression]
+      - id: kp4
+        can_do: Spot collinearity
+        key_prerequisites: [math.probstat.regression-diagnostics]
+  - id: math.probstat.logistic-regression-intro
+    name: Exploring logistic regression
+    subject: math
+    course: math.probstat
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.probstat.multiple-regression-intro
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.probstat.maximum-likelihood
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the odds and a logit
+        key_prerequisites: [math.probstat.multiple-regression-intro]
+      - id: kp2
+        can_do: Interpret a coefficient
+        key_prerequisites: [math.probstat.multiple-regression-intro]
+      - id: kp3
+        can_do: Fit by maximum likelihood
+        key_prerequisites: [math.probstat.maximum-likelihood]
+      - id: kp4
+        can_do: Read a classification result
+        key_prerequisites: [math.probstat.multiple-regression-intro]

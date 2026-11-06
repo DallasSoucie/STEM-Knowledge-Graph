@@ -1,0 +1,2923 @@
+course: math.pde
+topics:
+  - id: math.pde.pde-classification
+    name: Classifying partial differential equations
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.partial-differential-equation-check
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell a PDE from an ODE
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp2
+        can_do: Name independent variables
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp3
+        can_do: Name the heat, wave and Laplace types
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp4
+        can_do: Find an equation's type by form
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+  - id: math.pde.order-linearity-pde
+    name: Finding order and linearity
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.pde-classification
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find order
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp2
+        can_do: Test linearity
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp3
+        can_do: Test homogeneity
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp4
+        can_do: Name quasilinear equations
+        key_prerequisites: [math.pde.pde-classification]
+  - id: math.pde.deriving-wave-equation
+    name: Deriving the wave equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.pde-classification
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.free-oscillation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a string's force balance
+        key_prerequisites: [math.diffeq.free-oscillation]
+      - id: kp2
+        can_do: Find a wave speed
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp3
+        can_do: Write the wave equation
+        key_prerequisites: [math.pde.pde-classification, math.diffeq.free-oscillation]
+      - id: kp4
+        can_do: Add a damping term
+        key_prerequisites: [math.diffeq.free-oscillation]
+  - id: math.pde.transport-equation
+    name: Solving the transport equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.pde-classification
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.chain-rule-multivariable
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find its form
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp2
+        can_do: Use a moving coordinate
+        key_prerequisites: [math.calc3.chain-rule-multivariable]
+      - id: kp3
+        can_do: Solve with an initial profile
+        key_prerequisites: [math.calc3.chain-rule-multivariable]
+      - id: kp4
+        can_do: Picture a travelling wave
+        key_prerequisites: [math.pde.pde-classification]
+  - id: math.pde.characteristics-first-order
+    name: Using the method of characteristics
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.transport-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define characteristic curves
+        key_prerequisites: [math.pde.transport-equation]
+      - id: kp2
+        can_do: Find them for constant coefficients
+        key_prerequisites: [math.pde.transport-equation]
+      - id: kp3
+        can_do: Solve along them
+        key_prerequisites: [math.pde.transport-equation]
+      - id: kp4
+        can_do: Sketch them
+        key_prerequisites: [math.pde.transport-equation]
+  - id: math.pde.pde-check-solutions
+    name: Checking solutions of PDEs
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.partial-differential-equation-check
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a heat solution
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp2
+        can_do: Check a wave solution
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp3
+        can_do: Check a Laplace solution
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp4
+        can_do: Check a boundary condition too
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+  - id: math.pde.linear-operators-superposition-pde
+    name: Using superposition for PDEs
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.order-linearity-pde
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.linear-operator-superposition
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.pde-check-solutions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation with an operator
+        key_prerequisites: [math.pde.order-linearity-pde]
+      - id: kp2
+        can_do: Use superposition for two solutions
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+      - id: kp3
+        can_do: Use superposition for infinite sums
+        key_prerequisites: [math.pde.pde-check-solutions]
+      - id: kp4
+        can_do: Split a problem into simpler parts
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+  - id: math.pde.boundary-types
+    name: Telling Dirichlet, Neumann and Robin conditions apart
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.pde-classification
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name Dirichlet conditions
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp2
+        can_do: Name Neumann conditions
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp3
+        can_do: Name Robin conditions
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp4
+        can_do: Interpret each physically
+        key_prerequisites: [math.pde.pde-classification]
+  - id: math.pde.boundary-initial-conditions
+    name: Using boundary and initial conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.initial-boundary-values
+        encompassing: 0.1
+        confidence: low
+      - topic: math.pde.boundary-types
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.pde.pde-classification
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count needed conditions
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp2
+        can_do: Write a heat problem fully
+        key_prerequisites: [math.pde.boundary-types]
+      - id: kp3
+        can_do: Write a wave problem fully
+        key_prerequisites: [math.pde.boundary-types]
+      - id: kp4
+        can_do: Write a Laplace problem fully
+        key_prerequisites: [math.pde.boundary-types]
+  - id: math.pde.well-posed-problems
+    name: Understanding well-posed problems
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.boundary-initial-conditions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the three requirements
+        key_prerequisites: [math.pde.boundary-initial-conditions]
+      - id: kp2
+        can_do: Show a backward heat problem fails
+        key_prerequisites: [math.pde.boundary-initial-conditions]
+      - id: kp3
+        can_do: Show an ill-posed Laplace problem
+        key_prerequisites: [math.pde.boundary-initial-conditions]
+      - id: kp4
+        can_do: Find continuous dependence on data
+        key_prerequisites: [math.pde.boundary-initial-conditions]
+  - id: math.pde.classify-second-order
+    name: Classifying second-order equations
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.pde-classification
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a discriminant
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp2
+        can_do: Classify with constant coefficients
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp3
+        can_do: Classify with variable coefficients
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp4
+        can_do: Find where a type changes
+        key_prerequisites: [math.pde.pde-classification]
+  - id: math.pde.canonical-forms
+    name: Reducing second-order equations to canonical form
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.characteristics-first-order
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.classify-second-order
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.second-order-chain-rule
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.pde.pde-classification
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find characteristic coordinates
+        key_prerequisites: [math.pde.characteristics-first-order]
+      - id: kp2
+        can_do: Change variables
+        key_prerequisites: [math.calc3.second-order-chain-rule]
+      - id: kp3
+        can_do: Reduce a hyperbolic equation
+        key_prerequisites: [math.pde.characteristics-first-order, math.pde.classify-second-order]
+      - id: kp4
+        can_do: Reduce a parabolic equation
+        key_prerequisites: [math.pde.characteristics-first-order, math.pde.classify-second-order]
+  - id: math.pde.conservation-laws
+    name: Deriving conservation laws
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.pde-classification
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an integral balance
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp2
+        can_do: Turn it into a local law with the divergence theorem
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp3
+        can_do: Add a source term
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp4
+        can_do: Write a flux law
+        key_prerequisites: [math.pde.pde-classification]
+  - id: math.pde.deriving-heat-equation
+    name: Deriving the heat equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.conservation-laws
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.2
+        confidence: high
+      - topic: math.pde.pde-classification
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Fourier's law
+        key_prerequisites: [math.pde.conservation-laws]
+      - id: kp2
+        can_do: Write the one-dimensional equation
+        key_prerequisites: [math.pde.conservation-laws]
+      - id: kp3
+        can_do: Write the three-dimensional equation
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp4
+        can_do: Find diffusivity's units in metres and seconds
+        key_prerequisites: [math.pde.conservation-laws]
+  - id: math.pde.deriving-laplace-equation
+    name: Deriving Laplace's equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.deriving-heat-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take the steady state
+        key_prerequisites: [math.pde.deriving-heat-equation]
+      - id: kp2
+        can_do: Write the Laplacian
+        key_prerequisites: [math.pde.deriving-heat-equation]
+      - id: kp3
+        can_do: Connect it to potentials
+        key_prerequisites: [math.pde.deriving-heat-equation]
+      - id: kp4
+        can_do: Add a source for Poisson's equation
+        key_prerequisites: [math.pde.deriving-heat-equation]
+  - id: math.pde.ode-eigen-recap
+    name: Solving the eigenvalue problem on an interval
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve with both ends fixed
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp2
+        can_do: Solve with insulated ends
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp3
+        can_do: Solve with periodic ends
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp4
+        can_do: Rule out negative eigenvalues
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+  - id: math.pde.separation-idea
+    name: Separating variables in a PDE
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.linear-operators-superposition-pde
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.separation-of-variables-preview
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.ode-eigen-recap
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume a product form
+        key_prerequisites: [math.diffeq.separation-of-variables-preview]
+      - id: kp2
+        can_do: Split with a separation constant
+        key_prerequisites: [math.pde.linear-operators-superposition-pde]
+      - id: kp3
+        can_do: Find a boundary problem from conditions
+        key_prerequisites: [math.pde.ode-eigen-recap]
+      - id: kp4
+        can_do: List the separated solutions
+        key_prerequisites: [math.pde.ode-eigen-recap]
+  - id: math.pde.forced-first-order
+    name: Solving forced first-order equations
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.characteristics-first-order
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add a source along characteristics
+        key_prerequisites: [math.pde.characteristics-first-order]
+      - id: kp2
+        can_do: Solve a constant source
+        key_prerequisites: [math.pde.characteristics-first-order]
+      - id: kp3
+        can_do: Solve a variable source
+        key_prerequisites: [math.pde.characteristics-first-order]
+      - id: kp4
+        can_do: Use an initial condition
+        key_prerequisites: [math.pde.characteristics-first-order]
+  - id: math.pde.nonconstant-characteristics
+    name: Using characteristics with variable coefficients
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.forced-first-order
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.pde.characteristics-first-order
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a variable-coefficient transport
+        key_prerequisites: [math.pde.forced-first-order]
+      - id: kp2
+        can_do: Find curves by an ODE
+        key_prerequisites: [math.pde.characteristics-first-order]
+      - id: kp3
+        can_do: Solve with a rotating flow
+        key_prerequisites: [math.pde.forced-first-order]
+      - id: kp4
+        can_do: Find a domain the data reaches
+        key_prerequisites: [math.pde.forced-first-order]
+  - id: math.pde.characteristics-initial-curve
+    name: Solving with data on a curve
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.nonconstant-characteristics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Parametrize initial data
+        key_prerequisites: [math.pde.nonconstant-characteristics]
+      - id: kp2
+        can_do: Solve for two parameters
+        key_prerequisites: [math.pde.nonconstant-characteristics]
+      - id: kp3
+        can_do: Find a non-characteristic condition
+        key_prerequisites: [math.pde.nonconstant-characteristics]
+      - id: kp4
+        can_do: Eliminate parameters
+        key_prerequisites: [math.pde.nonconstant-characteristics]
+  - id: math.pde.nonlinear-burgers-intro
+    name: Exploring Burgers' equation and shocks
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.characteristics-initial-curve
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.pde.nonconstant-characteristics
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Burgers' equation
+        key_prerequisites: [math.pde.characteristics-initial-curve]
+      - id: kp2
+        can_do: Find crossing characteristics
+        key_prerequisites: [math.pde.characteristics-initial-curve]
+      - id: kp3
+        can_do: Find a breaking time
+        key_prerequisites: [math.pde.characteristics-initial-curve]
+      - id: kp4
+        can_do: Define a rarefaction fan
+        key_prerequisites: [math.pde.nonconstant-characteristics]
+  - id: math.pde.traffic-flow-model
+    name: Modelling traffic flow
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.nonlinear-burgers-intro
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a density-flux model
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp2
+        can_do: Find a wave speed
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp3
+        can_do: Find a shock at a red light
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp4
+        can_do: Find a rarefaction at a green light
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+  - id: math.pde.shock-speed
+    name: Finding shock speeds
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.nonlinear-burgers-intro
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the jump condition
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp2
+        can_do: Find a shock's speed
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp3
+        can_do: Sketch a shock
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+      - id: kp4
+        can_do: Pick the physical solution
+        key_prerequisites: [math.pde.nonlinear-burgers-intro]
+  - id: math.pde.periodic-functions-orthogonality
+    name: Using orthogonality of trig functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.function-space-projection
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.inner-product-spaces
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the function inner product
+        key_prerequisites: [math.linalg.inner-product-spaces]
+      - id: kp2
+        can_do: Show orthogonality of trig functions
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp3
+        can_do: Find norms of trig functions
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp4
+        can_do: Treat a series as a projection
+        key_prerequisites: [math.linalg.function-space-projection]
+  - id: math.pde.fourier-coefficients
+    name: Finding Fourier coefficients
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.periodic-functions-orthogonality
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive coefficient formulas
+        key_prerequisites: [math.pde.periodic-functions-orthogonality]
+      - id: kp2
+        can_do: Find coefficients of a line
+        key_prerequisites: [math.pde.periodic-functions-orthogonality]
+      - id: kp3
+        can_do: Find coefficients of a quadratic
+        key_prerequisites: [math.pde.periodic-functions-orthogonality]
+      - id: kp4
+        can_do: Find coefficients using parts repeatedly
+        key_prerequisites: [math.pde.periodic-functions-orthogonality]
+  - id: math.pde.parseval
+    name: Using Parseval's identity
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the identity
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp2
+        can_do: Prove it formally
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp3
+        can_do: Use it to find energy
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp4
+        can_do: Use it to find a norm
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.complex-fourier
+    name: Using complex Fourier series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.euler-formula
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write complex exponentials
+        key_prerequisites: [math.diffeq.euler-formula]
+      - id: kp2
+        can_do: Find complex coefficients
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp3
+        can_do: Convert to real coefficients
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp4
+        can_do: Use orthogonality with conjugates
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.fourier-piecewise
+    name: Finding Fourier series of piecewise functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coefficients of a square wave
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp2
+        can_do: Find coefficients of a saw wave
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp3
+        can_do: Find coefficients of a pulse
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp4
+        can_do: Plot partial sums
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.fourier-periodic-extensions
+    name: Using periodic extensions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-piecewise
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a periodic extension
+        key_prerequisites: [math.pde.fourier-piecewise]
+      - id: kp2
+        can_do: Find jumps of an extension
+        key_prerequisites: [math.pde.fourier-piecewise]
+      - id: kp3
+        can_do: Find a mean value at a jump
+        key_prerequisites: [math.pde.fourier-piecewise]
+      - id: kp4
+        can_do: Find a series from a shifted interval
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.convergence-of-fourier
+    name: Using the Fourier convergence theorem
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-periodic-extensions
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.fourier-convergence-statement
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State conditions for convergence
+        key_prerequisites: [math.diffeq.fourier-convergence-statement]
+      - id: kp2
+        can_do: Find a value at a jump
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+      - id: kp3
+        can_do: Find a uniform convergence case
+        key_prerequisites: [math.diffeq.fourier-convergence-statement]
+      - id: kp4
+        can_do: Find a failure with a non-smooth function
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+  - id: math.pde.gibbs-phenomenon
+    name: Recognizing the Gibbs phenomenon
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.convergence-of-fourier
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show an overshoot by plots
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp2
+        can_do: Find its size
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp3
+        can_do: Show it does not shrink
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp4
+        can_do: Reduce it with smoothing
+        key_prerequisites: [math.pde.convergence-of-fourier]
+  - id: math.pde.differentiating-fourier
+    name: Differentiating Fourier series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.convergence-of-fourier
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State when a term-by-term derivative is valid
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp2
+        can_do: Find a valid case
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp3
+        can_do: Find a failing case
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp4
+        can_do: Use boundary terms
+        key_prerequisites: [math.pde.convergence-of-fourier]
+  - id: math.pde.general-period
+    name: Finding series on a general interval
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rescale to a length
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp2
+        can_do: Find coefficients on a length
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp3
+        can_do: Find a series on a shifted interval
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp4
+        can_do: Find a series for a metre-long rod
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.even-odd-extension
+    name: Building even and odd extensions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-periodic-extensions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build an even extension
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+      - id: kp2
+        can_do: Build an odd extension
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+      - id: kp3
+        can_do: Sketch each
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+      - id: kp4
+        can_do: Find continuity of each at the ends
+        key_prerequisites: [math.pde.fourier-periodic-extensions]
+  - id: math.pde.sine-cosine-series
+    name: Finding sine and cosine series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-even-odd
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.general-period
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.even-odd-extension
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.fourier-periodic-extensions
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a sine series
+        key_prerequisites: [math.pde.even-odd-extension]
+      - id: kp2
+        can_do: Find a cosine series
+        key_prerequisites: [math.pde.even-odd-extension]
+      - id: kp3
+        can_do: Find a series on a rod's length
+        key_prerequisites: [math.pde.general-period]
+      - id: kp4
+        can_do: Choose by boundary conditions
+        key_prerequisites: [math.diffeq.fourier-even-odd]
+  - id: math.pde.mean-square-convergence
+    name: Using mean-square convergence
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.convergence-of-fourier
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.parseval
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mean-square error
+        key_prerequisites: [math.pde.parseval]
+      - id: kp2
+        can_do: Show partial sums minimize it
+        key_prerequisites: [math.pde.parseval]
+      - id: kp3
+        can_do: State convergence
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp4
+        can_do: Find an error from Parseval's identity
+        key_prerequisites: [math.pde.parseval]
+  - id: math.pde.integrating-fourier
+    name: Integrating Fourier series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.convergence-of-fourier
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State term-by-term integration
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp2
+        can_do: Integrate a square wave's series
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp3
+        can_do: Find a new series
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp4
+        can_do: Handle a constant term
+        key_prerequisites: [math.pde.convergence-of-fourier]
+  - id: math.pde.number-series-from-fourier
+    name: Evaluating number series with Fourier series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.parseval
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a sum of reciprocal squares
+        key_prerequisites: [math.pde.parseval]
+      - id: kp2
+        can_do: Find a sum of reciprocal fourth powers
+        key_prerequisites: [math.pde.parseval]
+      - id: kp3
+        can_do: Use a value at a point
+        key_prerequisites: [math.pde.parseval]
+      - id: kp4
+        can_do: Use Parseval's identity
+        key_prerequisites: [math.pde.parseval]
+  - id: math.pde.uniform-fourier-convergence
+    name: Testing uniform convergence of Fourier series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.convergence-of-fourier
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the M-test
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp2
+        can_do: Use continuity and piecewise smoothness
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp3
+        can_do: Connect coefficient decay to smoothness
+        key_prerequisites: [math.pde.convergence-of-fourier]
+      - id: kp4
+        can_do: Find a non-uniform example
+        key_prerequisites: [math.pde.convergence-of-fourier]
+  - id: math.pde.sturm-liouville-form
+    name: Writing Sturm-Liouville problems
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the standard form
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp2
+        can_do: Rewrite an equation with a factor
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp3
+        can_do: Name weight function and coefficients
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp4
+        can_do: Write regular boundary conditions
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+  - id: math.pde.sl-eigenvalues
+    name: Finding Sturm-Liouville eigenvalues
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sturm-liouville-form
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find eigenvalues for simple coefficients
+        key_prerequisites: [math.pde.sturm-liouville-form]
+      - id: kp2
+        can_do: Find a transcendental equation
+        key_prerequisites: [math.pde.sturm-liouville-form]
+      - id: kp3
+        can_do: Estimate large eigenvalues
+        key_prerequisites: [math.pde.sturm-liouville-form]
+      - id: kp4
+        can_do: State their ordering
+        key_prerequisites: [math.pde.sturm-liouville-form]
+  - id: math.pde.bessel-eigenfunctions
+    name: Using Bessel eigenfunctions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-eigenvalues
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.bessel-intro
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the radial equation
+        key_prerequisites: [math.diffeq.bessel-intro]
+      - id: kp2
+        can_do: Find eigenvalues from zeros
+        key_prerequisites: [math.diffeq.bessel-intro]
+      - id: kp3
+        can_do: Use a weight of r
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp4
+        can_do: Find the first few modes
+        key_prerequisites: [math.diffeq.bessel-intro]
+  - id: math.pde.legendre-eigenfunctions
+    name: Using Legendre eigenfunctions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-eigenvalues
+        encompassing: 0.1
+        confidence: low
+      - topic: math.diffeq.airy-legendre-examples
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the angular equation
+        key_prerequisites: [math.diffeq.airy-legendre-examples]
+      - id: kp2
+        can_do: Find eigenvalues from integers
+        key_prerequisites: [math.diffeq.airy-legendre-examples]
+      - id: kp3
+        can_do: Find a Legendre polynomial
+        key_prerequisites: [math.diffeq.airy-legendre-examples]
+      - id: kp4
+        can_do: Use its recurrence
+        key_prerequisites: [math.diffeq.airy-legendre-examples]
+  - id: math.pde.self-adjoint-operators
+    name: Using self-adjoint operators
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sturm-liouville-form
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.inner-product-spaces
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define self-adjoint
+        key_prerequisites: [math.linalg.inner-product-spaces]
+      - id: kp2
+        can_do: Show boundary terms vanish
+        key_prerequisites: [math.pde.sturm-liouville-form]
+      - id: kp3
+        can_do: Use Lagrange's identity
+        key_prerequisites: [math.pde.sturm-liouville-form]
+      - id: kp4
+        can_do: Compare to a symmetric matrix
+        key_prerequisites: [math.linalg.inner-product-spaces]
+  - id: math.pde.sl-orthogonality
+    name: Proving orthogonality of eigenfunctions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-eigenvalues
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.periodic-functions-orthogonality
+        encompassing: 0.2
+        confidence: high
+      - topic: math.pde.self-adjoint-operators
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove orthogonality with a weight
+        key_prerequisites: [math.pde.self-adjoint-operators]
+      - id: kp2
+        can_do: Find a norm with a weight
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp3
+        can_do: Compare with trig orthogonality
+        key_prerequisites: [math.pde.periodic-functions-orthogonality]
+      - id: kp4
+        can_do: Use it for a Robin problem
+        key_prerequisites: [math.pde.sl-eigenvalues]
+  - id: math.pde.rayleigh-quotient
+    name: Using the Rayleigh quotient
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-orthogonality
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the quotient
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp2
+        can_do: Derive it from the problem
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp3
+        can_do: Bound a lowest eigenvalue
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp4
+        can_do: Use a test function
+        key_prerequisites: [math.pde.sl-orthogonality]
+  - id: math.pde.weight-function-orthogonality
+    name: Using weight functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-orthogonality
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a weight from a form
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp2
+        can_do: Compute a weighted norm
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp3
+        can_do: Compute weighted coefficients
+        key_prerequisites: [math.pde.sl-orthogonality]
+      - id: kp4
+        can_do: Check orthogonality numerically
+        key_prerequisites: [math.pde.sl-orthogonality]
+  - id: math.pde.eigenfunction-expansions
+    name: Using eigenfunction expansions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-coefficients
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.weight-function-orthogonality
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.pde.sl-orthogonality
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a function
+        key_prerequisites: [math.pde.weight-function-orthogonality]
+      - id: kp2
+        can_do: Find coefficients with a weight
+        key_prerequisites: [math.pde.weight-function-orthogonality]
+      - id: kp3
+        can_do: Find a series with Robin eigenfunctions
+        key_prerequisites: [math.pde.fourier-coefficients]
+      - id: kp4
+        can_do: State convergence
+        key_prerequisites: [math.pde.fourier-coefficients]
+  - id: math.pde.sl-real-eigenvalues
+    name: Proving eigenvalues are real
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.self-adjoint-operators
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove eigenvalues are real
+        key_prerequisites: [math.pde.self-adjoint-operators]
+      - id: kp2
+        can_do: Prove positivity with an energy argument
+        key_prerequisites: [math.pde.self-adjoint-operators]
+      - id: kp3
+        can_do: Prove simple eigenvalues
+        key_prerequisites: [math.pde.self-adjoint-operators]
+      - id: kp4
+        can_do: Compare to matrices
+        key_prerequisites: [math.pde.self-adjoint-operators]
+  - id: math.pde.periodic-sl
+    name: Solving periodic eigenvalue problems
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sl-eigenvalues
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find periodic eigenvalues
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp2
+        can_do: Find two-fold eigenfunctions
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp3
+        can_do: Find their orthogonality
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp4
+        can_do: Write a full Fourier basis
+        key_prerequisites: [math.pde.sl-eigenvalues]
+  - id: math.pde.bessel-expansions
+    name: Expanding with Bessel functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.bessel-eigenfunctions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Fourier-Bessel series
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp2
+        can_do: Find coefficients
+        key_prerequisites: [math.pde.bessel-eigenfunctions]
+      - id: kp3
+        can_do: Use a known integral
+        key_prerequisites: [math.pde.bessel-eigenfunctions]
+      - id: kp4
+        can_do: Plot partial sums
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+  - id: math.pde.legendre-expansions
+    name: Expanding with Legendre polynomials
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.legendre-eigenfunctions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Legendre series
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp2
+        can_do: Find coefficients
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp3
+        can_do: Use parity to skip terms
+        key_prerequisites: [math.pde.legendre-eigenfunctions]
+      - id: kp4
+        can_do: Expand a polynomial exactly
+        key_prerequisites: [math.pde.legendre-eigenfunctions]
+  - id: math.pde.heat-separation-dirichlet
+    name: Solving the heat equation with Dirichlet conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sine-cosine-series
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.boundary-initial-conditions
+        encompassing: 0.2
+        confidence: high
+      - topic: math.pde.deriving-heat-equation
+        encompassing: 0.2
+        confidence: high
+      - topic: math.pde.separation-idea
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a product solution
+        key_prerequisites: [math.pde.separation-idea]
+      - id: kp2
+        can_do: Find a series with a sine fit
+        key_prerequisites: [math.pde.sine-cosine-series]
+      - id: kp3
+        can_do: Find a rod's temperature with data in metres
+        key_prerequisites: [math.pde.boundary-initial-conditions, math.pde.deriving-heat-equation]
+      - id: kp4
+        can_do: Find decay rates
+        key_prerequisites: [math.pde.separation-idea]
+  - id: math.pde.maximum-principle-heat
+    name: Using the maximum principle for heat
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.well-posed-problems
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the maximum principle for heat
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp2
+        can_do: Prove the principle
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp3
+        can_do: Find a bound from data
+        key_prerequisites: [math.pde.well-posed-problems]
+      - id: kp4
+        can_do: Find uniqueness from it
+        key_prerequisites: [math.pde.well-posed-problems]
+  - id: math.pde.energy-methods
+    name: Using energy methods for uniqueness
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.well-posed-problems
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an energy integral
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp2
+        can_do: Show energy decays
+        key_prerequisites: [math.pde.well-posed-problems]
+      - id: kp3
+        can_do: Conclude uniqueness
+        key_prerequisites: [math.pde.well-posed-problems]
+      - id: kp4
+        can_do: Show stability on initial data
+        key_prerequisites: [math.pde.well-posed-problems]
+  - id: math.pde.heat-2d-rectangle
+    name: Solving heat in a rectangle
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate three variables
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp2
+        can_do: Write a double series
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp3
+        can_do: Find double coefficients
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Find the slowest decaying mode
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+  - id: math.pde.heat-initial-fit
+    name: Matching initial data with a sine series
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit a constant initial temperature
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp2
+        can_do: Fit a step initial temperature
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp3
+        can_do: Fit an initial sine combination by inspection
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Find the leading term for long time
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+  - id: math.pde.heat-neumann
+    name: Solving the heat equation with Neumann conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-initial-fit
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cosine modes with insulated ends
+        key_prerequisites: [math.pde.heat-initial-fit]
+      - id: kp2
+        can_do: Find a series solution
+        key_prerequisites: [math.pde.heat-initial-fit]
+      - id: kp3
+        can_do: Find a long-term constant
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Find a total heat conservation
+        key_prerequisites: [math.pde.heat-initial-fit]
+  - id: math.pde.heat-mixed-robin
+    name: Solving with mixed and Robin conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-neumann
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.sl-eigenvalues
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve one fixed end and one insulated
+        key_prerequisites: [math.pde.heat-neumann]
+      - id: kp2
+        can_do: Solve a cooling end
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp3
+        can_do: Find a transcendental eigenvalue
+        key_prerequisites: [math.pde.sl-eigenvalues]
+      - id: kp4
+        can_do: Expand with non-standard eigenfunctions
+        key_prerequisites: [math.pde.sl-eigenvalues]
+  - id: math.pde.heat-long-term
+    name: Reading long-time behaviour of heat solutions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit as time grows
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp2
+        can_do: Find a first-mode decay
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp3
+        can_do: Find when a mode dominates
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Estimate time to reach a tolerance
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+  - id: math.pde.heat-nonhomogeneous-bc
+    name: Handling steady boundary conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-long-term
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a steady state
+        key_prerequisites: [math.pde.heat-long-term]
+      - id: kp2
+        can_do: Subtract to reach zero ends
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp3
+        can_do: Solve the remainder
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Add back the steady state
+        key_prerequisites: [math.pde.heat-long-term]
+  - id: math.pde.heat-source-terms
+    name: Solving the heat equation with sources
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-nonhomogeneous-bc
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a steady source solution
+        key_prerequisites: [math.pde.heat-nonhomogeneous-bc]
+      - id: kp2
+        can_do: Expand a source in eigenfunctions
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp3
+        can_do: Solve mode ODEs
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp4
+        can_do: Combine with boundary changes
+        key_prerequisites: [math.pde.heat-nonhomogeneous-bc]
+  - id: math.pde.heat-uniqueness
+    name: Proving uniqueness for the heat equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.maximum-principle-heat
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.energy-methods
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove with a maximum principle
+        key_prerequisites: [math.pde.maximum-principle-heat]
+      - id: kp2
+        can_do: Prove with energy
+        key_prerequisites: [math.pde.energy-methods]
+      - id: kp3
+        can_do: Compare two arguments
+        key_prerequisites: [math.pde.maximum-principle-heat, math.pde.energy-methods]
+      - id: kp4
+        can_do: Extend to a Neumann problem
+        key_prerequisites: [math.pde.energy-methods]
+  - id: math.pde.heat-on-a-ring
+    name: Solving heat on a ring
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-separation-dirichlet
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.periodic-sl
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use periodic conditions
+        key_prerequisites: [math.pde.periodic-sl]
+      - id: kp2
+        can_do: Write a full Fourier solution
+        key_prerequisites: [math.pde.heat-separation-dirichlet, math.pde.periodic-sl]
+      - id: kp3
+        can_do: Find a rate of mixing
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+      - id: kp4
+        can_do: Find an average temperature
+        key_prerequisites: [math.pde.heat-separation-dirichlet]
+  - id: math.pde.heat-time-dependent-bc
+    name: Handling time-dependent boundary conditions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-source-terms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Remove boundary data with a helper
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp2
+        can_do: Find a new source
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp3
+        can_do: Expand and solve modes
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp4
+        can_do: Find a periodic boundary response
+        key_prerequisites: [math.pde.heat-source-terms]
+  - id: math.pde.heat-3d-box
+    name: Solving heat in a box
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-2d-rectangle
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate in three directions
+        key_prerequisites: [math.pde.heat-2d-rectangle]
+      - id: kp2
+        can_do: Write a triple series
+        key_prerequisites: [math.pde.heat-2d-rectangle]
+      - id: kp3
+        can_do: Find decay rates
+        key_prerequisites: [math.pde.heat-2d-rectangle]
+      - id: kp4
+        can_do: Solve with symmetry
+        key_prerequisites: [math.pde.heat-2d-rectangle]
+  - id: math.pde.duhamel
+    name: Using Duhamel's principle
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-source-terms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Duhamel's principle
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp2
+        can_do: Write a solution as a time integral
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp3
+        can_do: Use it for a mode equation
+        key_prerequisites: [math.pde.heat-source-terms]
+      - id: kp4
+        can_do: Use it for a forced heat problem
+        key_prerequisites: [math.pde.heat-source-terms]
+  - id: math.pde.wave-separation
+    name: Solving the wave equation by separation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sine-cosine-series
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.deriving-wave-equation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.separation-idea
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find product solutions
+        key_prerequisites: [math.pde.separation-idea]
+      - id: kp2
+        can_do: Find a series with two initial data
+        key_prerequisites: [math.pde.sine-cosine-series]
+      - id: kp3
+        can_do: Find coefficients from velocity
+        key_prerequisites: [math.pde.sine-cosine-series]
+      - id: kp4
+        can_do: Find a string's solution with fixed ends
+        key_prerequisites: [math.pde.deriving-wave-equation]
+  - id: math.pde.dalembert
+    name: Using d'Alembert's solution
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.canonical-forms
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.deriving-wave-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find characteristic coordinates
+        key_prerequisites: [math.pde.canonical-forms]
+      - id: kp2
+        can_do: Write a general solution
+        key_prerequisites: [math.pde.canonical-forms]
+      - id: kp3
+        can_do: Solve with an initial displacement
+        key_prerequisites: [math.pde.deriving-wave-equation]
+      - id: kp4
+        can_do: Picture splitting waves
+        key_prerequisites: [math.pde.deriving-wave-equation]
+  - id: math.pde.reflection-method
+    name: Using the method of reflections
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.dalembert
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Extend data oddly
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp2
+        can_do: Solve with a fixed end
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp3
+        can_do: Solve with a free end
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp4
+        can_do: Solve with two ends
+        key_prerequisites: [math.pde.dalembert]
+  - id: math.pde.wave-nonhomogeneous
+    name: Solving forced wave equations
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.wave-separation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand forcing in modes
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp2
+        can_do: Solve forced mode equations
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp3
+        can_do: Find a resonance
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp4
+        can_do: Solve with a boundary forcing
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+  - id: math.pde.wave-energy
+    name: Using conservation of energy for waves
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.wave-separation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.energy-methods
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define kinetic and potential energy
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp2
+        can_do: Show conservation
+        key_prerequisites: [math.pde.energy-methods]
+      - id: kp3
+        can_do: Conclude uniqueness
+        key_prerequisites: [math.pde.energy-methods]
+      - id: kp4
+        can_do: Add damping's effect
+        key_prerequisites: [math.pde.wave-separation]
+  - id: math.pde.membrane-vibration
+    name: Solving a vibrating rectangular membrane
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.wave-separation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate in two space directions
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp2
+        can_do: Write a double series
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp3
+        can_do: Find frequencies
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp4
+        can_do: Find degenerate modes
+        key_prerequisites: [math.pde.wave-separation]
+  - id: math.pde.plucked-string
+    name: Solving a plucked string
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.wave-separation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a triangular shape
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp2
+        can_do: Find coefficients
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp3
+        can_do: Write a series
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp4
+        can_do: Find a harmonic's amplitude
+        key_prerequisites: [math.pde.wave-separation]
+  - id: math.pde.modes-of-string
+    name: Reading modes of a vibrating string
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.plucked-string
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.pde.wave-separation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find harmonics
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp2
+        can_do: Find a frequency from length and tension in SI units
+        key_prerequisites: [math.pde.plucked-string]
+      - id: kp3
+        can_do: Find nodes and antinodes
+        key_prerequisites: [math.pde.plucked-string]
+      - id: kp4
+        can_do: Connect to musical pitch
+        key_prerequisites: [math.pde.plucked-string]
+  - id: math.pde.damped-wave
+    name: Solving a damped wave equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.wave-separation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add a damping term
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp2
+        can_do: Solve for mode equations
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp3
+        can_do: Tell underdamped modes
+        key_prerequisites: [math.pde.wave-separation]
+      - id: kp4
+        can_do: Find decay rates
+        key_prerequisites: [math.pde.wave-separation]
+  - id: math.pde.dalembert-initial-velocity
+    name: Using d'Alembert's formula with initial velocity
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.dalembert
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add a velocity term
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp2
+        can_do: Solve with a velocity pulse
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp3
+        can_do: Solve with both data
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp4
+        can_do: Sketch solution pieces
+        key_prerequisites: [math.pde.dalembert]
+  - id: math.pde.domain-of-dependence
+    name: Finding domains of dependence
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.dalembert-initial-velocity
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.pde.dalembert
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an interval from a point
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp2
+        can_do: Find a range of influence
+        key_prerequisites: [math.pde.dalembert-initial-velocity]
+      - id: kp3
+        can_do: Find finite propagation speed
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp4
+        can_do: Find when a pulse arrives
+        key_prerequisites: [math.pde.dalembert-initial-velocity]
+  - id: math.pde.wave-duhamel
+    name: Using Duhamel's formula for waves
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.dalembert
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.duhamel
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a forced solution
+        key_prerequisites: [math.pde.duhamel]
+      - id: kp2
+        can_do: Integrate over a triangle
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp3
+        can_do: Solve a constant force
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp4
+        can_do: Solve a local force
+        key_prerequisites: [math.pde.duhamel]
+  - id: math.pde.semi-infinite-string
+    name: Solving a semi-infinite string
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.reflection-method
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Extend from a half line
+        key_prerequisites: [math.pde.reflection-method]
+      - id: kp2
+        can_do: Solve with a fixed end
+        key_prerequisites: [math.pde.reflection-method]
+      - id: kp3
+        can_do: Solve with a free end
+        key_prerequisites: [math.pde.reflection-method]
+      - id: kp4
+        can_do: Find a reflected pulse
+        key_prerequisites: [math.pde.reflection-method]
+  - id: math.pde.nodal-lines
+    name: Finding nodal lines of a membrane
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.membrane-vibration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find lines of no motion
+        key_prerequisites: [math.pde.membrane-vibration]
+      - id: kp2
+        can_do: Find them for several modes
+        key_prerequisites: [math.pde.membrane-vibration]
+      - id: kp3
+        can_do: Combine degenerate modes
+        key_prerequisites: [math.pde.membrane-vibration]
+      - id: kp4
+        can_do: Sketch Chladni-type patterns
+        key_prerequisites: [math.pde.membrane-vibration]
+  - id: math.pde.laplace-rectangle
+    name: Solving Laplace's equation in a rectangle
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.sine-cosine-series
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.deriving-laplace-equation
+        encompassing: 0.2
+        confidence: high
+      - topic: math.pde.separation-idea
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find products with a sinh
+        key_prerequisites: [math.pde.separation-idea]
+      - id: kp2
+        can_do: Solve with one nonzero side
+        key_prerequisites: [math.pde.sine-cosine-series]
+      - id: kp3
+        can_do: Find coefficients
+        key_prerequisites: [math.pde.sine-cosine-series]
+      - id: kp4
+        can_do: Compute a temperature at a point
+        key_prerequisites: [math.pde.deriving-laplace-equation]
+  - id: math.pde.harmonic-functions
+    name: Using harmonic functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.deriving-laplace-equation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a harmonic function
+        key_prerequisites: [math.pde.deriving-laplace-equation]
+      - id: kp2
+        can_do: Test functions
+        key_prerequisites: [math.pde.deriving-laplace-equation]
+      - id: kp3
+        can_do: Find a polynomial example
+        key_prerequisites: [math.pde.deriving-laplace-equation]
+      - id: kp4
+        can_do: Name their physical meaning
+        key_prerequisites: [math.pde.deriving-laplace-equation]
+  - id: math.pde.mean-value-maximum-laplace
+    name: Using mean value and maximum principles
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.harmonic-functions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the mean value property
+        key_prerequisites: [math.pde.harmonic-functions]
+      - id: kp2
+        can_do: Prove it in the plane
+        key_prerequisites: [math.pde.harmonic-functions]
+      - id: kp3
+        can_do: State the maximum principle
+        key_prerequisites: [math.pde.harmonic-functions]
+      - id: kp4
+        can_do: Find bounds from boundary data
+        key_prerequisites: [math.pde.harmonic-functions]
+  - id: math.pde.polar-separation
+    name: Solving Laplace's equation in a disk
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.laplace-rectangle
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc3.double-polar
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the polar Laplacian
+        key_prerequisites: [math.calc3.double-polar]
+      - id: kp2
+        can_do: Separate into radial and angular parts
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp3
+        can_do: Find a solution in a disk
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp4
+        can_do: Fit boundary data
+        key_prerequisites: [math.pde.laplace-rectangle]
+  - id: math.pde.circular-membrane
+    name: Solving a vibrating circular membrane
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.bessel-expansions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.nodal-lines
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.pde.membrane-vibration
+        encompassing: 0.15
+        confidence: high
+      - topic: math.pde.bessel-eigenfunctions
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate in polar coordinates
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Find radial Bessel modes
+        key_prerequisites: [math.pde.bessel-expansions]
+      - id: kp3
+        can_do: Find frequencies from Bessel zeros
+        key_prerequisites: [math.pde.bessel-expansions, math.pde.bessel-eigenfunctions]
+      - id: kp4
+        can_do: Compare nodal circles and lines
+        key_prerequisites: [math.pde.nodal-lines]
+  - id: math.pde.poisson-kernel
+    name: Using the Poisson kernel
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sum a disk series
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Write the kernel
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp3
+        can_do: Find a center value
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp4
+        can_do: Show a mean value link
+        key_prerequisites: [math.pde.polar-separation]
+  - id: math.pde.spherical-laplace
+    name: Solving Laplace's equation in a sphere
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.legendre-expansions
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.legendre-eigenfunctions
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the spherical Laplacian
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Solve with axial symmetry
+        key_prerequisites: [math.pde.legendre-expansions]
+      - id: kp3
+        can_do: Fit boundary data with Legendre terms
+        key_prerequisites: [math.pde.legendre-expansions]
+      - id: kp4
+        can_do: Find an outside solution
+        key_prerequisites: [math.pde.polar-separation]
+  - id: math.pde.cylindrical-laplace
+    name: Solving Laplace's equation in a cylinder
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.bessel-expansions
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.bessel-eigenfunctions
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the cylindrical Laplacian
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Find a radial Bessel factor
+        key_prerequisites: [math.pde.bessel-expansions]
+      - id: kp3
+        can_do: Find a height factor
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp4
+        can_do: Fit boundary data
+        key_prerequisites: [math.pde.bessel-expansions]
+  - id: math.pde.greens-identities
+    name: Using Green's identities
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.harmonic-functions
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the first identity
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp2
+        can_do: Derive the second identity
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp3
+        can_do: Use it for uniqueness
+        key_prerequisites: [math.pde.harmonic-functions]
+      - id: kp4
+        can_do: Use it for a harmonic function fact
+        key_prerequisites: [math.pde.harmonic-functions]
+  - id: math.pde.laplace-nonzero-sides
+    name: Superposing solutions for nonzero sides
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.laplace-rectangle
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split into four problems
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp2
+        can_do: Solve for a top side
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp3
+        can_do: Solve for a side wall
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp4
+        can_do: Combine solutions
+        key_prerequisites: [math.pde.laplace-rectangle]
+  - id: math.pde.poisson-equation
+    name: Solving Poisson's equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.laplace-nonzero-sides
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.pde.laplace-rectangle
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a source in eigenfunctions
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp2
+        can_do: Find coefficients
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp3
+        can_do: Add a Laplace solution for boundary data
+        key_prerequisites: [math.pde.laplace-nonzero-sides]
+      - id: kp4
+        can_do: Solve a constant source in a rectangle
+        key_prerequisites: [math.pde.laplace-rectangle]
+  - id: math.pde.neumann-compatibility
+    name: Checking compatibility for Neumann problems
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.laplace-rectangle
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the integral condition
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp2
+        can_do: Check given data
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp3
+        can_do: Find nonuniqueness by a constant
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp4
+        can_do: Solve a compatible problem
+        key_prerequisites: [math.pde.laplace-rectangle]
+  - id: math.pde.laplace-annulus-wedge
+    name: Solving in an annulus or wedge
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Keep negative powers in an annulus
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Fit two boundaries
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp3
+        can_do: Use non-integer powers in a wedge
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp4
+        can_do: Solve a wedge
+        key_prerequisites: [math.pde.polar-separation]
+  - id: math.pde.laplace-exterior
+    name: Solving outside a disk
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.polar-separation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Keep bounded terms
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp2
+        can_do: Solve outside a disk
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp3
+        can_do: Find a far-field value
+        key_prerequisites: [math.pde.polar-separation]
+      - id: kp4
+        can_do: Solve for flow past a cylinder
+        key_prerequisites: [math.pde.polar-separation]
+  - id: math.pde.uniqueness-laplace
+    name: Proving uniqueness for Laplace's equation
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.mean-value-maximum-laplace
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove with the maximum principle
+        key_prerequisites: [math.pde.mean-value-maximum-laplace]
+      - id: kp2
+        can_do: Prove with energy
+        key_prerequisites: [math.pde.mean-value-maximum-laplace]
+      - id: kp3
+        can_do: Prove with Neumann up to a constant
+        key_prerequisites: [math.pde.mean-value-maximum-laplace]
+      - id: kp4
+        can_do: Find a stability bound
+        key_prerequisites: [math.pde.mean-value-maximum-laplace]
+  - id: math.pde.greens-one-dimension
+    name: Finding one-dimensional Green's functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.initial-boundary-values
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define by a point source
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp2
+        can_do: Find a jump condition
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp3
+        can_do: Build it for two fixed ends
+        key_prerequisites: [math.diffeq.initial-boundary-values]
+      - id: kp4
+        can_do: Solve a forced boundary problem with it
+        key_prerequisites: [math.diffeq.initial-boundary-values]
+  - id: math.pde.greens-free-space
+    name: Finding free-space Green's functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.greens-identities
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a fundamental solution in the plane
+        key_prerequisites: [math.pde.greens-identities]
+      - id: kp2
+        can_do: Find one in space
+        key_prerequisites: [math.pde.greens-identities]
+      - id: kp3
+        can_do: Use a singular point in the identity
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp4
+        can_do: Solve for a point charge's potential
+        key_prerequisites: [math.pde.greens-identities]
+  - id: math.pde.greens-functions
+    name: Using Green's functions
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.greens-one-dimension
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.greens-free-space
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.poisson-equation
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.pde.greens-identities
+        encompassing: 0.1
+        confidence: high
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define by a domain's boundary
+        key_prerequisites: [math.pde.greens-free-space]
+      - id: kp2
+        can_do: Show symmetry
+        key_prerequisites: [math.pde.greens-identities]
+      - id: kp3
+        can_do: Write a solution formula
+        key_prerequisites: [math.pde.greens-one-dimension, math.pde.greens-free-space]
+      - id: kp4
+        can_do: Solve a Poisson problem with one
+        key_prerequisites: [math.pde.poisson-equation]
+  - id: math.pde.method-of-images
+    name: Using the method of images
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.greens-functions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Place an image charge
+        key_prerequisites: [math.pde.greens-functions]
+      - id: kp2
+        can_do: Build for a half plane
+        key_prerequisites: [math.pde.greens-functions]
+      - id: kp3
+        can_do: Build for a disk
+        key_prerequisites: [math.pde.greens-functions]
+      - id: kp4
+        can_do: Solve with boundary data
+        key_prerequisites: [math.pde.greens-functions]
+  - id: math.pde.fourier-transform-definition
+    name: Defining the Fourier transform
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.complex-fourier
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Move from series to an integral
+        key_prerequisites: [math.pde.complex-fourier]
+      - id: kp2
+        can_do: Write the transform
+        key_prerequisites: [math.pde.complex-fourier]
+      - id: kp3
+        can_do: Find a transform of a pulse
+        key_prerequisites: [math.pde.complex-fourier]
+      - id: kp4
+        can_do: Find a transform of an exponential
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+  - id: math.pde.laplace-transform-pde
+    name: Using Laplace transforms on PDEs
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.solve-ivp-laplace
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.pde-classification
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform in time
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp2
+        can_do: Solve the resulting ODE
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp3
+        can_do: Use boundary conditions
+        key_prerequisites: [math.pde.pde-classification]
+      - id: kp4
+        can_do: Invert with a table
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+  - id: math.pde.fourier-transform-pairs
+    name: Finding common transform pairs
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a Gaussian's transform
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp2
+        can_do: Find a decaying exponential's transform
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp3
+        can_do: Find a pulse's transform
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp4
+        can_do: Use a table
+        key_prerequisites: [math.pde.fourier-transform-definition]
+  - id: math.pde.fourier-inversion
+    name: Using the inversion formula
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the inversion formula
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp2
+        can_do: Use it to find an integral
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp3
+        can_do: Connect series and transforms
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp4
+        can_do: Find a value at a jump
+        key_prerequisites: [math.pde.fourier-transform-definition]
+  - id: math.pde.fourier-transform-properties
+    name: Using Fourier transform properties
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-pairs
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.fourier-inversion
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity
+        key_prerequisites: [math.pde.fourier-transform-pairs]
+      - id: kp2
+        can_do: Use shift and scale
+        key_prerequisites: [math.pde.fourier-transform-pairs]
+      - id: kp3
+        can_do: Use duality
+        key_prerequisites: [math.pde.fourier-inversion]
+      - id: kp4
+        can_do: Use Plancherel's identity
+        key_prerequisites: [math.pde.fourier-inversion]
+  - id: math.pde.fourier-convolution
+    name: Using the convolution theorem
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.convolution
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define convolution
+        key_prerequisites: [math.diffeq.convolution]
+      - id: kp2
+        can_do: State the convolution theorem
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp3
+        can_do: Invert a product
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp4
+        can_do: Compute a convolution of Gaussians
+        key_prerequisites: [math.pde.fourier-transform-properties]
+  - id: math.pde.wave-with-fourier
+    name: Solving the wave equation with transforms
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.dalembert
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform in space
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp2
+        can_do: Solve the time ODE
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp3
+        can_do: Invert to reach d'Alembert's form
+        key_prerequisites: [math.pde.dalembert]
+      - id: kp4
+        can_do: Solve a pulse
+        key_prerequisites: [math.pde.fourier-transform-properties]
+  - id: math.pde.semi-infinite-sine-cosine
+    name: Using sine and cosine transforms
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sine and cosine transforms
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp2
+        can_do: Use a derivative rule
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp3
+        can_do: Choose by end conditions
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp4
+        can_do: Find a transform
+        key_prerequisites: [math.pde.fourier-transform-properties]
+  - id: math.pde.transform-derivatives
+    name: Transforming derivatives
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform a first derivative
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp2
+        can_do: Transform a second derivative
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp3
+        can_do: Turn a PDE into an ODE
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp4
+        can_do: Find the condition at infinity
+        key_prerequisites: [math.pde.fourier-transform-properties]
+  - id: math.pde.heat-on-the-line
+    name: Solving heat on the whole line
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-convolution
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.transform-derivatives
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform in space
+        key_prerequisites: [math.pde.transform-derivatives]
+      - id: kp2
+        can_do: Solve the time ODE
+        key_prerequisites: [math.pde.transform-derivatives]
+      - id: kp3
+        can_do: Invert with a convolution
+        key_prerequisites: [math.pde.fourier-convolution]
+      - id: kp4
+        can_do: Find a solution with a step temperature
+        key_prerequisites: [math.pde.fourier-convolution]
+  - id: math.pde.delta-function-pde
+    name: Using the delta function
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a delta by a limit
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp2
+        can_do: Find its transform
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp3
+        can_do: Use it as a point source
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp4
+        can_do: Use sifting on an integral
+        key_prerequisites: [math.diffeq.impulse-delta]
+  - id: math.pde.heat-kernel
+    name: Using the heat kernel
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.heat-on-the-line
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.delta-function-pde
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the kernel
+        key_prerequisites: [math.pde.heat-on-the-line]
+      - id: kp2
+        can_do: Check it solves the equation
+        key_prerequisites: [math.pde.heat-on-the-line]
+      - id: kp3
+        can_do: Show it starts at a point source
+        key_prerequisites: [math.pde.delta-function-pde]
+      - id: kp4
+        can_do: Find spreading with time
+        key_prerequisites: [math.pde.heat-on-the-line]
+  - id: math.pde.laplace-half-plane
+    name: Solving Laplace's equation in a half plane
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.fourier-convolution
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform along a boundary
+        key_prerequisites: [math.pde.fourier-convolution]
+      - id: kp2
+        can_do: Keep the decaying solution
+        key_prerequisites: [math.pde.fourier-convolution]
+      - id: kp3
+        can_do: Write a Poisson integral
+        key_prerequisites: [math.pde.fourier-convolution]
+      - id: kp4
+        can_do: Evaluate for a step boundary
+        key_prerequisites: [math.pde.fourier-convolution]
+  - id: math.pde.heat-half-line
+    name: Solving heat on a half line
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.semi-infinite-sine-cosine
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve with a fixed-temperature end
+        key_prerequisites: [math.pde.semi-infinite-sine-cosine]
+      - id: kp2
+        can_do: Solve with an insulated end
+        key_prerequisites: [math.pde.semi-infinite-sine-cosine]
+      - id: kp3
+        can_do: Use reflection to compare
+        key_prerequisites: [math.pde.semi-infinite-sine-cosine]
+      - id: kp4
+        can_do: Find a solution with the error function
+        key_prerequisites: [math.pde.semi-infinite-sine-cosine]
+  - id: math.pde.heat-half-line-laplace
+    name: Solving heat on a half line with Laplace transforms
+    subject: math
+    course: math.pde
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.laplace-transform-pde
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.heat-on-the-line
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform in time
+        key_prerequisites: [math.pde.laplace-transform-pde]
+      - id: kp2
+        can_do: Solve in space
+        key_prerequisites: [math.pde.laplace-transform-pde]
+      - id: kp3
+        can_do: Invert to an error function
+        key_prerequisites: [math.pde.laplace-transform-pde]
+      - id: kp4
+        can_do: Compare with a sine transform result
+        key_prerequisites: [math.pde.heat-on-the-line]

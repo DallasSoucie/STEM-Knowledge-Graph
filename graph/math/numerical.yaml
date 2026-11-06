@@ -1,0 +1,2935 @@
+course: math.numerical
+topics:
+  - id: math.numerical.binary-representation
+    name: Writing numbers in binary
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.alg2.exponent-laws-rational
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert an integer to binary
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp2
+        can_do: Convert a fraction to binary
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp3
+        can_do: Spot a repeating binary fraction
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp4
+        can_do: Write a number in normalized binary
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+  - id: math.numerical.floating-point
+    name: Understanding floating-point numbers
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.binary-representation
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.alg2.exponent-laws-rational
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name sign, exponent and mantissa
+        key_prerequisites: [math.numerical.binary-representation]
+      - id: kp2
+        can_do: Read a double-precision format
+        key_prerequisites: [math.numerical.binary-representation]
+      - id: kp3
+        can_do: Find the largest and smallest values
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp4
+        can_do: Find spacing between numbers
+        key_prerequisites: [math.numerical.binary-representation]
+  - id: math.numerical.machine-epsilon
+    name: Finding machine epsilon
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.floating-point
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define machine epsilon
+        key_prerequisites: [math.numerical.floating-point]
+      - id: kp2
+        can_do: Find it for a given format
+        key_prerequisites: [math.numerical.floating-point]
+      - id: kp3
+        can_do: Find it with a loop
+        key_prerequisites: [math.numerical.floating-point]
+      - id: kp4
+        can_do: Round a value to a format
+        key_prerequisites: [math.numerical.floating-point]
+  - id: math.numerical.absolute-relative-error
+    name: Finding absolute and relative error
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.machine-epsilon
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.numerical.floating-point
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find absolute error
+        key_prerequisites: [math.numerical.machine-epsilon]
+      - id: kp2
+        can_do: Find relative error
+        key_prerequisites: [math.numerical.machine-epsilon]
+      - id: kp3
+        can_do: Count significant digits
+        key_prerequisites: [math.numerical.machine-epsilon]
+      - id: kp4
+        can_do: Bound relative error of rounding
+        key_prerequisites: [math.numerical.floating-point]
+  - id: math.numerical.rounding-and-cancellation
+    name: Avoiding rounding and cancellation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.absolute-relative-error
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show adding small to large loses digits
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp2
+        can_do: Show subtracting close numbers loses digits
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp3
+        can_do: Order a sum to reduce error
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp4
+        can_do: Find digits lost
+        key_prerequisites: [math.numerical.absolute-relative-error]
+  - id: math.numerical.taylor-for-error
+    name: Using Taylor's theorem for error analysis
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.absolute-relative-error
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a truncation error with a remainder
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp2
+        can_do: Bound a Taylor error on an interval
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp3
+        can_do: Tell truncation from rounding
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp4
+        can_do: Choose a degree for an accuracy
+        key_prerequisites: [math.calc2.taylor-remainder]
+  - id: math.numerical.order-of-convergence
+    name: Finding order of convergence
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.taylor-for-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define linear and quadratic convergence
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp2
+        can_do: Find an order from a recurrence
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp3
+        can_do: Find an error constant
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp4
+        can_do: Compare iterations
+        key_prerequisites: [math.numerical.taylor-for-error]
+  - id: math.numerical.big-o-numerical
+    name: Using big-O in numerical analysis
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.taylor-for-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an error with big-O
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp2
+        can_do: Tell big-O as h shrinks from n grows
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp3
+        can_do: Combine big-O terms
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp4
+        can_do: Read an order from a log-log slope
+        key_prerequisites: [math.numerical.taylor-for-error]
+  - id: math.numerical.algorithm-cost
+    name: Counting operations in an algorithm
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.big-o-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count flops in a dot product
+        key_prerequisites: [math.numerical.big-o-numerical]
+      - id: kp2
+        can_do: Count flops in a matrix product
+        key_prerequisites: [math.numerical.big-o-numerical]
+      - id: kp3
+        can_do: Compare cost with an exponent
+        key_prerequisites: [math.numerical.big-o-numerical]
+      - id: kp4
+        can_do: Estimate a run time from a count
+        key_prerequisites: [math.numerical.big-o-numerical]
+  - id: math.numerical.rewrite-to-avoid-cancellation
+    name: Rewriting formulas to avoid cancellation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.rounding-and-cancellation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite with a conjugate
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+      - id: kp2
+        can_do: Rewrite a quadratic formula
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+      - id: kp3
+        can_do: Use a series near a small value
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+      - id: kp4
+        can_do: Use an identity for a trig difference
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+  - id: math.numerical.error-propagation
+    name: Propagating errors through a calculation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.absolute-relative-error
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.differentials
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Propagate through a sum and a product
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp2
+        can_do: Use a derivative for a function
+        key_prerequisites: [math.calc1.differentials]
+      - id: kp3
+        can_do: Find a condition number of a function
+        key_prerequisites: [math.calc1.differentials]
+      - id: kp4
+        can_do: Estimate an output error
+        key_prerequisites: [math.numerical.absolute-relative-error]
+  - id: math.numerical.conditioning-stability
+    name: Telling conditioning from stability
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.rewrite-to-avoid-cancellation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.error-propagation
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.numerical.rounding-and-cancellation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define ill-conditioned problems
+        key_prerequisites: [math.numerical.error-propagation]
+      - id: kp2
+        can_do: Define unstable algorithms
+        key_prerequisites: [math.numerical.rewrite-to-avoid-cancellation]
+      - id: kp3
+        can_do: Compare two algorithms for a problem
+        key_prerequisites: [math.numerical.rewrite-to-avoid-cancellation]
+      - id: kp4
+        can_do: Tell forward from backward error
+        key_prerequisites: [math.numerical.error-propagation]
+  - id: math.numerical.unstable-recurrences
+    name: Spotting unstable recursions
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.conditioning-stability
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a growth factor
+        key_prerequisites: [math.numerical.conditioning-stability]
+      - id: kp2
+        can_do: Run an unstable recursion
+        key_prerequisites: [math.numerical.conditioning-stability]
+      - id: kp3
+        can_do: Reverse direction for stability
+        key_prerequisites: [math.numerical.conditioning-stability]
+      - id: kp4
+        can_do: Spot a parasitic solution
+        key_prerequisites: [math.numerical.conditioning-stability]
+  - id: math.numerical.rate-from-data
+    name: Estimating a convergence rate from data
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate an order from three errors
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp2
+        can_do: Estimate from a log plot
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp3
+        can_do: Compare with theory
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp4
+        can_do: Find a hidden constant
+        key_prerequisites: [math.numerical.order-of-convergence]
+  - id: math.numerical.bisection
+    name: Using the bisection method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.absolute-relative-error
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.intermediate-value-applications
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a bracket
+        key_prerequisites: [math.calc1.intermediate-value-applications]
+      - id: kp2
+        can_do: Run several steps
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp3
+        can_do: Find a sign change
+        key_prerequisites: [math.calc1.intermediate-value-applications]
+      - id: kp4
+        can_do: Write a loop in pseudocode
+        key_prerequisites: [math.numerical.absolute-relative-error]
+  - id: math.numerical.newton-method-numerical
+    name: Using Newton's method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc1.newtons-method
+        encompassing: 0.4
+        confidence: high
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the iteration
+        key_prerequisites: [math.calc1.newtons-method]
+      - id: kp2
+        can_do: Run on a polynomial
+        key_prerequisites: [math.calc1.newtons-method]
+      - id: kp3
+        can_do: Implement with a derivative function
+        key_prerequisites: [math.calc1.newtons-method]
+      - id: kp4
+        can_do: Find a reciprocal or a root without division
+        key_prerequisites: [math.numerical.order-of-convergence]
+  - id: math.numerical.secant-method
+    name: Using the secant method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-method-numerical
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Replace the derivative with a difference
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp2
+        can_do: Run several steps
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp3
+        can_do: Find its order
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp4
+        can_do: Compare costs per digit with Newton's method
+        key_prerequisites: [math.numerical.newton-method-numerical]
+  - id: math.numerical.polynomial-roots-horner
+    name: Using Horner's method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.algorithm-cost
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.alg2.synthetic-division
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate with nested multiplication
+        key_prerequisites: [math.numerical.algorithm-cost]
+      - id: kp2
+        can_do: Find a derivative with the same scheme
+        key_prerequisites: [math.alg2.synthetic-division]
+      - id: kp3
+        can_do: Count saved operations
+        key_prerequisites: [math.numerical.algorithm-cost]
+      - id: kp4
+        can_do: Use it inside Newton's method
+        key_prerequisites: [math.numerical.algorithm-cost]
+  - id: math.numerical.bisection-error-bound
+    name: Bounding bisection error
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.bisection
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an error after n steps
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp2
+        can_do: Find n for an accuracy
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp3
+        can_do: Find a rate of convergence
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp4
+        can_do: Compare the bound to true error
+        key_prerequisites: [math.numerical.bisection]
+  - id: math.numerical.stopping-criteria
+    name: Choosing stopping criteria
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.bisection
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a tolerance on x
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp2
+        can_do: Use a tolerance on residual
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp3
+        can_do: Use a relative tolerance
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp4
+        can_do: Find a failing case for each
+        key_prerequisites: [math.numerical.bisection]
+  - id: math.numerical.hybrid-methods
+    name: Combining root-finding methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.secant-method
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.bisection-error-bound
+        encompassing: 0.1
+        confidence: low
+      - topic: math.numerical.stopping-criteria
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.numerical.bisection
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use false position
+        key_prerequisites: [math.numerical.secant-method]
+      - id: kp2
+        can_do: Fall back on bisection
+        key_prerequisites: [math.numerical.bisection]
+      - id: kp3
+        can_do: Trace Brent-style logic
+        key_prerequisites: [math.numerical.secant-method]
+      - id: kp4
+        can_do: Choose a method
+        key_prerequisites: [math.numerical.stopping-criteria]
+  - id: math.numerical.fixed-point-rewriting
+    name: Rewriting an equation as a fixed-point problem
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.absolute-relative-error
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite in a fixed-point form
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp2
+        can_do: Find several forms
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp3
+        can_do: Find a fixed point on a graph
+        key_prerequisites: [math.numerical.absolute-relative-error]
+      - id: kp4
+        can_do: Spot a form that diverges
+        key_prerequisites: [math.numerical.absolute-relative-error]
+  - id: math.numerical.fixed-point-iteration
+    name: Using fixed-point iteration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.taylor-for-error
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.fixed-point-rewriting
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run an iteration
+        key_prerequisites: [math.numerical.fixed-point-rewriting]
+      - id: kp2
+        can_do: Draw a cobweb
+        key_prerequisites: [math.numerical.fixed-point-rewriting]
+      - id: kp3
+        can_do: Find a convergence from a slope
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp4
+        can_do: Bound the slope
+        key_prerequisites: [math.numerical.taylor-for-error]
+  - id: math.numerical.fixed-point-convergence
+    name: Proving fixed-point convergence
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.fixed-point-iteration
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc1.mean-value-theorem
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a contraction bound
+        key_prerequisites: [math.calc1.mean-value-theorem]
+      - id: kp2
+        can_do: Prove uniqueness
+        key_prerequisites: [math.calc1.mean-value-theorem]
+      - id: kp3
+        can_do: Bound the error after n steps
+        key_prerequisites: [math.numerical.fixed-point-iteration]
+      - id: kp4
+        can_do: Find the convergence rate
+        key_prerequisites: [math.numerical.fixed-point-iteration]
+  - id: math.numerical.newton-failure-cases
+    name: Finding where Newton's method fails
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-method-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a zero derivative failure
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp2
+        can_do: Find a cycle failure
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp3
+        can_do: Find a divergence failure
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp4
+        can_do: Choose a safe start
+        key_prerequisites: [math.numerical.newton-method-numerical]
+  - id: math.numerical.newton-convergence
+    name: Analyzing Newton's method convergence
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-failure-cases
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.numerical.newton-method-numerical
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive quadratic convergence
+        key_prerequisites: [math.numerical.newton-failure-cases]
+      - id: kp2
+        can_do: Find an error constant
+        key_prerequisites: [math.numerical.newton-failure-cases]
+      - id: kp3
+        can_do: Find a basin of attraction
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp4
+        can_do: Doubling digits check
+        key_prerequisites: [math.numerical.newton-failure-cases]
+  - id: math.numerical.multiple-roots
+    name: Handling multiple roots
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-convergence
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show linear convergence at a double root
+        key_prerequisites: [math.numerical.newton-convergence]
+      - id: kp2
+        can_do: Use the modified iteration
+        key_prerequisites: [math.numerical.newton-convergence]
+      - id: kp3
+        can_do: Apply Newton's method to the ratio
+        key_prerequisites: [math.numerical.newton-convergence]
+      - id: kp4
+        can_do: Estimate multiplicity
+        key_prerequisites: [math.numerical.newton-convergence]
+  - id: math.numerical.aitken-acceleration
+    name: Using Aitken acceleration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.fixed-point-convergence
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the formula
+        key_prerequisites: [math.numerical.fixed-point-convergence]
+      - id: kp2
+        can_do: Accelerate a linear sequence
+        key_prerequisites: [math.numerical.fixed-point-convergence]
+      - id: kp3
+        can_do: Use Steffensen's method
+        key_prerequisites: [math.numerical.fixed-point-convergence]
+      - id: kp4
+        can_do: Find its order
+        key_prerequisites: [math.numerical.order-of-convergence]
+  - id: math.numerical.polynomial-deflation
+    name: Deflating a polynomial
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.polynomial-roots-horner
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Divide off a found root
+        key_prerequisites: [math.numerical.polynomial-roots-horner]
+      - id: kp2
+        can_do: Find the remaining roots
+        key_prerequisites: [math.numerical.polynomial-roots-horner]
+      - id: kp3
+        can_do: Spot growing errors
+        key_prerequisites: [math.numerical.polynomial-roots-horner]
+      - id: kp4
+        can_do: Refine with the original polynomial
+        key_prerequisites: [math.numerical.polynomial-roots-horner]
+  - id: math.numerical.vector-matrix-norms
+    name: Using vector and matrix norms
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find one, two and max norms of a vector
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp2
+        can_do: Find one and max norms of a matrix
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp3
+        can_do: Find a two norm with eigenvalues
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp4
+        can_do: Use a submultiplicative bound
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+  - id: math.numerical.condition-number
+    name: Finding condition numbers
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.vector-matrix-norms
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.conditioning-stability
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a matrix's condition number
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp2
+        can_do: Find it for a small matrix
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp3
+        can_do: Find a Hilbert matrix's condition number
+        key_prerequisites: [math.numerical.conditioning-stability]
+      - id: kp4
+        can_do: Estimate digits lost
+        key_prerequisites: [math.numerical.conditioning-stability]
+  - id: math.numerical.residuals-error-bounds
+    name: Bounding errors with residuals
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.condition-number
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a residual
+        key_prerequisites: [math.numerical.condition-number]
+      - id: kp2
+        can_do: Bound a relative error by a residual
+        key_prerequisites: [math.numerical.condition-number]
+      - id: kp3
+        can_do: Show a small residual with a large error
+        key_prerequisites: [math.numerical.condition-number]
+      - id: kp4
+        can_do: Use a backward error
+        key_prerequisites: [math.numerical.condition-number]
+  - id: math.numerical.jacobi-method
+    name: Using Jacobi iteration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.vector-matrix-norms
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the split
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp2
+        can_do: Run several steps
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp3
+        can_do: Write a matrix form
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp4
+        can_do: Write the stopping test
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+  - id: math.numerical.gauss-seidel
+    name: Using Gauss-Seidel iteration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.jacobi-method
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use updated values
+        key_prerequisites: [math.numerical.jacobi-method]
+      - id: kp2
+        can_do: Run several steps
+        key_prerequisites: [math.numerical.jacobi-method]
+      - id: kp3
+        can_do: Write a matrix form
+        key_prerequisites: [math.numerical.jacobi-method]
+      - id: kp4
+        can_do: Compare to Jacobi
+        key_prerequisites: [math.numerical.jacobi-method]
+  - id: math.numerical.sor
+    name: Using successive over-relaxation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.gauss-seidel
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add a relaxation factor
+        key_prerequisites: [math.numerical.gauss-seidel]
+      - id: kp2
+        can_do: Run a step
+        key_prerequisites: [math.numerical.gauss-seidel]
+      - id: kp3
+        can_do: Find its effect by experiment
+        key_prerequisites: [math.numerical.gauss-seidel]
+      - id: kp4
+        can_do: Find an optimal factor for a small case
+        key_prerequisites: [math.numerical.gauss-seidel]
+  - id: math.numerical.triangular-solves
+    name: Solving triangular systems
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a lower triangular system
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve an upper triangular system
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp3
+        can_do: Count their cost
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Handle a singular diagonal
+        key_prerequisites: [math.linalg.gaussian-elimination]
+  - id: math.numerical.gaussian-elimination-numerical
+    name: Using Gaussian elimination numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.algorithm-cost
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.triangular-solves
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write elimination in pseudocode
+        key_prerequisites: [math.numerical.algorithm-cost]
+      - id: kp2
+        can_do: Count its operations
+        key_prerequisites: [math.numerical.algorithm-cost]
+      - id: kp3
+        can_do: Use a triangular solve to finish
+        key_prerequisites: [math.numerical.triangular-solves]
+      - id: kp4
+        can_do: Find multipliers
+        key_prerequisites: [math.linalg.gaussian-elimination]
+  - id: math.numerical.systems-nonlinear-newton
+    name: Using Newton's method for nonlinear systems
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-method-numerical
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.linearization-multivariable
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.gaussian-elimination-numerical
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Jacobian
+        key_prerequisites: [math.calc3.linearization-multivariable]
+      - id: kp2
+        can_do: Set up a linear step
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp3
+        can_do: Run two steps of a two-equation system
+        key_prerequisites: [math.numerical.newton-method-numerical, math.calc3.linearization-multivariable, math.numerical.gaussian-elimination-numerical]
+      - id: kp4
+        can_do: Find when a step diverges
+        key_prerequisites: [math.numerical.newton-method-numerical]
+  - id: math.numerical.elimination-cost
+    name: Counting the cost of elimination
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.gaussian-elimination-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an n cubed count
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp2
+        can_do: Compare with a solve count
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp3
+        can_do: Estimate a run time
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp4
+        can_do: Compare factor-then-solve for many right sides
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+  - id: math.numerical.failure-without-pivoting
+    name: Seeing failure without pivoting
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.gaussian-elimination-numerical
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.rounding-and-cancellation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a zero pivot failure
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp2
+        can_do: Find a tiny pivot failure
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+      - id: kp3
+        can_do: Find a large multiplier
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp4
+        can_do: Compare with a true answer
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+  - id: math.numerical.pivoting
+    name: Using partial pivoting
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.failure-without-pivoting
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.numerical.gaussian-elimination-numerical
+        encompassing: 0.1
+        confidence: high
+      - topic: math.numerical.rounding-and-cancellation
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Swap to a largest pivot
+        key_prerequisites: [math.numerical.failure-without-pivoting]
+      - id: kp2
+        can_do: Track row swaps
+        key_prerequisites: [math.numerical.gaussian-elimination-numerical]
+      - id: kp3
+        can_do: Bound multipliers
+        key_prerequisites: [math.numerical.failure-without-pivoting]
+      - id: kp4
+        can_do: Compare accuracy with no pivoting
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+  - id: math.numerical.scaled-pivoting
+    name: Using scaled pivoting
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.pivoting
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find scale factors
+        key_prerequisites: [math.numerical.pivoting]
+      - id: kp2
+        can_do: Choose a scaled pivot
+        key_prerequisites: [math.numerical.pivoting]
+      - id: kp3
+        can_do: Compare to partial pivoting
+        key_prerequisites: [math.numerical.pivoting]
+      - id: kp4
+        can_do: Use full pivoting in a small case
+        key_prerequisites: [math.numerical.pivoting]
+  - id: math.numerical.lu-numerical
+    name: Using LU factorization numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.elimination-cost
+        encompassing: 0.2
+        confidence: high
+      - topic: math.numerical.scaled-pivoting
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.solve-with-lu
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.lu-factorization
+        encompassing: 0.15
+        confidence: high
+      - topic: math.numerical.pivoting
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a pivoted LU in code form
+        key_prerequisites: [math.numerical.scaled-pivoting]
+      - id: kp2
+        can_do: Reuse a factorization
+        key_prerequisites: [math.linalg.solve-with-lu]
+      - id: kp3
+        can_do: Store in place
+        key_prerequisites: [math.numerical.elimination-cost]
+      - id: kp4
+        can_do: Find a determinant from a factorization
+        key_prerequisites: [math.linalg.lu-factorization]
+  - id: math.numerical.cholesky
+    name: Using Cholesky factorization
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lu-numerical
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.positive-definite
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test applicability
+        key_prerequisites: [math.linalg.positive-definite]
+      - id: kp2
+        can_do: Find a factor for a small matrix
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp3
+        can_do: Compare cost with LU
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp4
+        can_do: Use it to test positive definiteness
+        key_prerequisites: [math.linalg.positive-definite]
+  - id: math.numerical.tridiagonal-systems
+    name: Solving tridiagonal systems
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lu-numerical
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a tridiagonal algorithm
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp2
+        can_do: Find its linear cost
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp3
+        can_do: Use it on a small system
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp4
+        can_do: Find when no pivoting is needed
+        key_prerequisites: [math.numerical.lu-numerical]
+  - id: math.numerical.avoid-forming-inverse
+    name: Solving without forming an inverse
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lu-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare cost of an inverse
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp2
+        can_do: Compare accuracy of an inverse
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp3
+        can_do: Rewrite an expression with solves
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp4
+        can_do: Compute a quadratic form with a solve
+        key_prerequisites: [math.numerical.lu-numerical]
+  - id: math.numerical.diagonal-dominance
+    name: Testing diagonal dominance
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.vector-matrix-norms
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test strict dominance
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp2
+        can_do: Rearrange to reach dominance
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp3
+        can_do: Use it to conclude convergence
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp4
+        can_do: Conclude invertibility
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+  - id: math.numerical.spectral-radius
+    name: Using the spectral radius
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.vector-matrix-norms
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a spectral radius
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp2
+        can_do: Bound it by a norm
+        key_prerequisites: [math.numerical.vector-matrix-norms]
+      - id: kp3
+        can_do: Use it to test matrix powers
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp4
+        can_do: Find a limit of powers
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.numerical.iterative-convergence
+    name: Proving convergence of iterative methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.gauss-seidel
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.diagonal-dominance
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.spectral-radius
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an iteration matrix
+        key_prerequisites: [math.numerical.gauss-seidel]
+      - id: kp2
+        can_do: Prove convergence by spectral radius
+        key_prerequisites: [math.numerical.spectral-radius]
+      - id: kp3
+        can_do: Prove convergence by dominance
+        key_prerequisites: [math.numerical.diagonal-dominance]
+      - id: kp4
+        can_do: Find a rate of convergence
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.numerical.sparse-matrices
+    name: Exploiting sparse matrices
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.tridiagonal-systems
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Store a sparse matrix
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp2
+        can_do: Find a product's cost
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp3
+        can_do: Spot fill-in
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp4
+        can_do: Compare direct and iterative costs
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+  - id: math.numerical.conjugate-gradient
+    name: Using the conjugate gradient method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.iterative-convergence
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.positive-definite
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.sparse-matrices
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the problem as minimization
+        key_prerequisites: [math.linalg.positive-definite]
+      - id: kp2
+        can_do: Run a step by hand
+        key_prerequisites: [math.numerical.iterative-convergence]
+      - id: kp3
+        can_do: Use conjugate directions
+        key_prerequisites: [math.linalg.positive-definite]
+      - id: kp4
+        can_do: Find a convergence dependence on condition number
+        key_prerequisites: [math.numerical.sparse-matrices]
+  - id: math.numerical.iterative-refinement
+    name: Using iterative refinement
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lu-numerical
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.residuals-error-bounds
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a residual in higher precision
+        key_prerequisites: [math.numerical.residuals-error-bounds]
+      - id: kp2
+        can_do: Run one correction
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp3
+        can_do: Find when it helps
+        key_prerequisites: [math.numerical.residuals-error-bounds]
+      - id: kp4
+        can_do: Compare to using a better factorization
+        key_prerequisites: [math.numerical.lu-numerical]
+  - id: math.numerical.preconditioning-intro
+    name: Exploring preconditioning
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.conjugate-gradient
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a preconditioner
+        key_prerequisites: [math.numerical.conjugate-gradient]
+      - id: kp2
+        can_do: Use a diagonal one
+        key_prerequisites: [math.numerical.conjugate-gradient]
+      - id: kp3
+        can_do: Find its effect on condition number
+        key_prerequisites: [math.numerical.conjugate-gradient]
+      - id: kp4
+        can_do: Name incomplete factorizations
+        key_prerequisites: [math.numerical.conjugate-gradient]
+  - id: math.numerical.least-squares-numerical
+    name: Solving least squares numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.least-squares-qr
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.condition-number
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a tall system
+        key_prerequisites: [math.linalg.least-squares-qr]
+      - id: kp2
+        can_do: Solve through QR
+        key_prerequisites: [math.linalg.least-squares-qr]
+      - id: kp3
+        can_do: Find a residual norm
+        key_prerequisites: [math.numerical.condition-number]
+      - id: kp4
+        can_do: Find a condition number for it
+        key_prerequisites: [math.numerical.condition-number]
+  - id: math.numerical.normal-equation-accuracy
+    name: Seeing why normal equations lose accuracy
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.least-squares-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare condition numbers
+        key_prerequisites: [math.numerical.least-squares-numerical]
+      - id: kp2
+        can_do: Show loss of digits
+        key_prerequisites: [math.numerical.least-squares-numerical]
+      - id: kp3
+        can_do: Find when normal equations are fine
+        key_prerequisites: [math.numerical.least-squares-numerical]
+      - id: kp4
+        can_do: Choose a solver
+        key_prerequisites: [math.numerical.least-squares-numerical]
+  - id: math.numerical.qr-householder
+    name: Using Householder QR
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.normal-equation-accuracy
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.numerical.least-squares-numerical
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a reflector
+        key_prerequisites: [math.numerical.normal-equation-accuracy]
+      - id: kp2
+        can_do: Apply a reflector
+        key_prerequisites: [math.numerical.normal-equation-accuracy]
+      - id: kp3
+        can_do: Run a factorization on a small matrix
+        key_prerequisites: [math.numerical.normal-equation-accuracy]
+      - id: kp4
+        can_do: Solve a least squares problem with it
+        key_prerequisites: [math.numerical.least-squares-numerical]
+  - id: math.numerical.givens-rotations
+    name: Using Givens rotations
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.qr-householder
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a rotation that zeroes an entry
+        key_prerequisites: [math.numerical.qr-householder]
+      - id: kp2
+        can_do: Zero a sparse entry
+        key_prerequisites: [math.numerical.qr-householder]
+      - id: kp3
+        can_do: Compare with reflectors
+        key_prerequisites: [math.numerical.qr-householder]
+      - id: kp4
+        can_do: Update a factorization
+        key_prerequisites: [math.numerical.qr-householder]
+  - id: math.numerical.gershgorin
+    name: Using Gershgorin's theorem
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw discs
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp2
+        can_do: Bound eigenvalues
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp3
+        can_do: Use it for invertibility
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp4
+        can_do: Refine discs by scaling
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.numerical.power-method
+    name: Using the power method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.2
+        confidence: high
+      - topic: math.numerical.gershgorin
+        encompassing: 0.1
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Run the iteration
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp2
+        can_do: Find an eigenvalue by a quotient
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp3
+        can_do: Find the convergence rate from a ratio
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp4
+        can_do: Choose a start with Gershgorin discs
+        key_prerequisites: [math.numerical.gershgorin]
+  - id: math.numerical.inverse-power-method
+    name: Using inverse power iteration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.power-method
+        encompassing: 0.45
+        confidence: high
+      - topic: math.numerical.lu-numerical
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve at each step
+        key_prerequisites: [math.numerical.lu-numerical]
+      - id: kp2
+        can_do: Find a smallest eigenvalue
+        key_prerequisites: [math.numerical.power-method]
+      - id: kp3
+        can_do: Use a shift to target an eigenvalue
+        key_prerequisites: [math.numerical.power-method]
+      - id: kp4
+        can_do: Find an eigenvector
+        key_prerequisites: [math.numerical.power-method]
+  - id: math.numerical.qr-algorithm-intro
+    name: Introducing the QR algorithm
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.qr-householder
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.power-method
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run one iteration
+        key_prerequisites: [math.numerical.qr-householder]
+      - id: kp2
+        can_do: Find a similar matrix
+        key_prerequisites: [math.numerical.qr-householder]
+      - id: kp3
+        can_do: Find convergence to a triangular form
+        key_prerequisites: [math.numerical.power-method]
+      - id: kp4
+        can_do: Find eigenvalues from a diagonal
+        key_prerequisites: [math.numerical.power-method]
+  - id: math.numerical.rayleigh-quotient-iteration
+    name: Using Rayleigh quotient iteration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.inverse-power-method
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the quotient
+        key_prerequisites: [math.numerical.inverse-power-method]
+      - id: kp2
+        can_do: Update a shift
+        key_prerequisites: [math.numerical.inverse-power-method]
+      - id: kp3
+        can_do: Run on a symmetric matrix
+        key_prerequisites: [math.numerical.inverse-power-method]
+      - id: kp4
+        can_do: Find a cubic convergence claim
+        key_prerequisites: [math.numerical.inverse-power-method]
+  - id: math.numerical.qr-with-shifts
+    name: Using shifts in the QR algorithm
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.qr-algorithm-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce to Hessenberg form
+        key_prerequisites: [math.numerical.qr-algorithm-intro]
+      - id: kp2
+        can_do: Use a shift
+        key_prerequisites: [math.numerical.qr-algorithm-intro]
+      - id: kp3
+        can_do: Deflate a converged entry
+        key_prerequisites: [math.numerical.qr-algorithm-intro]
+      - id: kp4
+        can_do: Compare costs
+        key_prerequisites: [math.numerical.qr-algorithm-intro]
+  - id: math.numerical.svd-numerical
+    name: Using the SVD numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.svd-compute
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.qr-with-shifts
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.numerical.qr-algorithm-intro
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Avoid forming a transpose product
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp2
+        can_do: Use a bidiagonal idea
+        key_prerequisites: [math.numerical.qr-with-shifts]
+      - id: kp3
+        can_do: Find a numerical rank
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp4
+        can_do: Compare with library output
+        key_prerequisites: [math.linalg.svd-compute]
+  - id: math.numerical.rank-deficient-least-squares
+    name: Handling rank-deficient least squares
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.svd-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a rank from a tolerance
+        key_prerequisites: [math.numerical.svd-numerical]
+      - id: kp2
+        can_do: Find a minimal-length solution
+        key_prerequisites: [math.numerical.svd-numerical]
+      - id: kp3
+        can_do: Truncate small values
+        key_prerequisites: [math.numerical.svd-numerical]
+      - id: kp4
+        can_do: Compare with normal equations
+        key_prerequisites: [math.numerical.svd-numerical]
+  - id: math.numerical.polynomial-interpolation
+    name: Using polynomial interpolation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.alg2.write-polynomial-from-zeros
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.big-o-numerical
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the interpolation problem
+        key_prerequisites: [math.alg2.write-polynomial-from-zeros]
+      - id: kp2
+        can_do: Find a line and parabola through points
+        key_prerequisites: [math.alg2.write-polynomial-from-zeros]
+      - id: kp3
+        can_do: Count free coefficients
+        key_prerequisites: [math.numerical.big-o-numerical]
+      - id: kp4
+        can_do: Find an interpolation error by a graph
+        key_prerequisites: [math.numerical.big-o-numerical]
+  - id: math.numerical.newton-divided-differences
+    name: Using Newton's divided differences
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a table
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp2
+        can_do: Read a Newton form
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp3
+        can_do: Add a new point
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp4
+        can_do: Evaluate with nested form
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+  - id: math.numerical.hermite-interpolation
+    name: Using Hermite interpolation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-divided-differences
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match values and slopes
+        key_prerequisites: [math.numerical.newton-divided-differences]
+      - id: kp2
+        can_do: Build a doubled-node table
+        key_prerequisites: [math.numerical.newton-divided-differences]
+      - id: kp3
+        can_do: Find a cubic Hermite form
+        key_prerequisites: [math.numerical.newton-divided-differences]
+      - id: kp4
+        can_do: Find when to use it
+        key_prerequisites: [math.numerical.newton-divided-differences]
+  - id: math.numerical.approximation-least-squares-functions
+    name: Approximating functions by least squares
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.least-squares-numerical
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a discrete fit
+        key_prerequisites: [math.numerical.least-squares-numerical]
+      - id: kp2
+        can_do: Set up a continuous fit with an inner product
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp3
+        can_do: Find a best line to a function
+        key_prerequisites: [math.numerical.least-squares-numerical]
+      - id: kp4
+        can_do: Find a Hilbert matrix problem
+        key_prerequisites: [math.numerical.least-squares-numerical]
+  - id: math.numerical.vandermonde
+    name: Using the Vandermonde system
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Vandermonde matrix
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp2
+        can_do: Solve for coefficients
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp3
+        can_do: Find its determinant's meaning
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp4
+        can_do: Spot its ill-conditioning
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+  - id: math.numerical.interpolant-uniqueness
+    name: Proving uniqueness of the interpolating polynomial
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove uniqueness with roots
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp2
+        can_do: Prove existence
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp3
+        can_do: Connect to invertibility
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp4
+        can_do: Find a repeated-node failure
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+  - id: math.numerical.lagrange-form
+    name: Using the Lagrange form
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.vandermonde
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.interpolant-uniqueness
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write basis polynomials
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp2
+        can_do: Write an interpolant
+        key_prerequisites: [math.numerical.vandermonde]
+      - id: kp3
+        can_do: Evaluate at a point
+        key_prerequisites: [math.numerical.vandermonde]
+      - id: kp4
+        can_do: Compare update costs with a Newton form
+        key_prerequisites: [math.numerical.interpolant-uniqueness]
+  - id: math.numerical.interpolation-error
+    name: Bounding interpolation error
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lagrange-form
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.numerical.taylor-for-error
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the error formula
+        key_prerequisites: [math.numerical.lagrange-form]
+      - id: kp2
+        can_do: Bound it on an interval
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp3
+        can_do: Find the node polynomial's size
+        key_prerequisites: [math.numerical.lagrange-form]
+      - id: kp4
+        can_do: Find a degree for an accuracy
+        key_prerequisites: [math.numerical.lagrange-form]
+  - id: math.numerical.piecewise-linear-interp
+    name: Using piecewise linear interpolation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.interpolation-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpolate by segments
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp2
+        can_do: Bound its error
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp3
+        can_do: Find a spacing for an accuracy
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp4
+        can_do: Compare to a high-degree fit
+        key_prerequisites: [math.numerical.interpolation-error]
+  - id: math.numerical.cubic-splines
+    name: Using cubic splines
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.piecewise-linear-interp
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.tridiagonal-systems
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.hermite-interpolation
+        encompassing: 0.1
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: State the spline conditions
+        key_prerequisites: [math.numerical.piecewise-linear-interp]
+      - id: kp2
+        can_do: Set up the tridiagonal system
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp3
+        can_do: Solve a small spline
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp4
+        can_do: Compare to a Hermite fit
+        key_prerequisites: [math.numerical.hermite-interpolation]
+  - id: math.numerical.chebyshev-polynomials
+    name: Using Chebyshev polynomials
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.interpolation-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define them by cosine
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp2
+        can_do: Use their recurrence
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp3
+        can_do: Find their roots
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp4
+        can_do: Find their minimax property
+        key_prerequisites: [math.numerical.interpolation-error]
+  - id: math.numerical.runge-chebyshev
+    name: Avoiding Runge's phenomenon with Chebyshev nodes
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.chebyshev-polynomials
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.numerical.interpolation-error
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Runge's phenomenon
+        key_prerequisites: [math.numerical.interpolation-error]
+      - id: kp2
+        can_do: Use Chebyshev nodes
+        key_prerequisites: [math.numerical.chebyshev-polynomials]
+      - id: kp3
+        can_do: Rescale nodes to an interval
+        key_prerequisites: [math.numerical.chebyshev-polynomials]
+      - id: kp4
+        can_do: Compare errors
+        key_prerequisites: [math.numerical.chebyshev-polynomials]
+  - id: math.numerical.natural-clamped-splines
+    name: Comparing natural and clamped splines
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.cubic-splines
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set natural ends
+        key_prerequisites: [math.numerical.cubic-splines]
+      - id: kp2
+        can_do: Set clamped ends
+        key_prerequisites: [math.numerical.cubic-splines]
+      - id: kp3
+        can_do: Compare ends' errors
+        key_prerequisites: [math.numerical.cubic-splines]
+      - id: kp4
+        can_do: Choose with known slopes
+        key_prerequisites: [math.numerical.cubic-splines]
+  - id: math.numerical.trig-interpolation
+    name: Using trigonometric interpolation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit a trig polynomial
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp2
+        can_do: Use equally spaced points
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp3
+        can_do: Find discrete orthogonality
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+      - id: kp4
+        can_do: Find a discrete Fourier coefficient
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+  - id: math.numerical.fft-intro
+    name: Introducing the fast Fourier transform
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.algorithm-cost
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.trig-interpolation
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.numerical.polynomial-interpolation
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a discrete transform as a matrix
+        key_prerequisites: [math.numerical.trig-interpolation]
+      - id: kp2
+        can_do: Split into even and odd parts
+        key_prerequisites: [math.numerical.trig-interpolation]
+      - id: kp3
+        can_do: Find its cost
+        key_prerequisites: [math.numerical.algorithm-cost]
+      - id: kp4
+        can_do: Multiply polynomials with a transform
+        key_prerequisites: [math.numerical.polynomial-interpolation]
+  - id: math.numerical.finite-differences
+    name: Using finite differences
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.taylor-for-error
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a forward difference
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp2
+        can_do: Derive a backward difference
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp3
+        can_do: Derive a central difference
+        key_prerequisites: [math.numerical.taylor-for-error]
+      - id: kp4
+        can_do: Find orders from Taylor's theorem
+        key_prerequisites: [math.numerical.taylor-for-error]
+  - id: math.numerical.newton-cotes
+    name: Using Newton-Cotes rules
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.lagrange-form
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.numerical-trapezoid-simpson
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a rule from interpolation
+        key_prerequisites: [math.numerical.lagrange-form]
+      - id: kp2
+        can_do: Find weights
+        key_prerequisites: [math.numerical.lagrange-form]
+      - id: kp3
+        can_do: Use Simpson's three-eighths rule
+        key_prerequisites: [math.calc2.numerical-trapezoid-simpson]
+      - id: kp4
+        can_do: Find when high order fails
+        key_prerequisites: [math.numerical.lagrange-form]
+  - id: math.numerical.composite-rules-error
+    name: Using composite rules and their errors
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-cotes
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.interpolation-error
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.numerical-error-bounds
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write composite trapezoid and Simpson's rules
+        key_prerequisites: [math.numerical.newton-cotes]
+      - id: kp2
+        can_do: Bound their errors
+        key_prerequisites: [math.calc2.numerical-error-bounds]
+      - id: kp3
+        can_do: Find an n for an accuracy
+        key_prerequisites: [math.calc2.numerical-error-bounds]
+      - id: kp4
+        can_do: Verify the order by experiment
+        key_prerequisites: [math.numerical.interpolation-error]
+  - id: math.numerical.adaptive-quadrature
+    name: Using adaptive quadrature
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.composite-rules-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split where error is large
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp2
+        can_do: Estimate error with two results
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp3
+        can_do: Trace a small recursion
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp4
+        can_do: Compare function evaluations
+        key_prerequisites: [math.numerical.composite-rules-error]
+  - id: math.numerical.improper-numerical
+    name: Handling singular integrals numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.composite-rules-error
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Remove a singularity by substitution
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp2
+        can_do: Remove a singularity by subtraction
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp3
+        can_do: Truncate an infinite interval
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp4
+        can_do: Use an open rule
+        key_prerequisites: [math.numerical.composite-rules-error]
+  - id: math.numerical.multiple-integrals-numerical
+    name: Estimating multiple integrals
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.composite-rules-error
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc3.iterated-rectangles
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use an iterated rule
+        key_prerequisites: [math.calc3.iterated-rectangles]
+      - id: kp2
+        can_do: Use a product rule
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp3
+        can_do: Find its cost in dimension
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp4
+        can_do: Handle a non-rectangular region
+        key_prerequisites: [math.calc3.iterated-rectangles]
+  - id: math.numerical.monte-carlo
+    name: Using Monte Carlo integration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.composite-rules-error
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate an integral by sampling
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp2
+        can_do: Find its error rate
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp3
+        can_do: Compare with dimension
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp4
+        can_do: Use importance sampling
+        key_prerequisites: [math.numerical.composite-rules-error]
+  - id: math.numerical.central-difference-error
+    name: Analyzing central difference error
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a second-order error
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp2
+        can_do: Compare to one-sided differences
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp3
+        can_do: Check with shrinking steps
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp4
+        can_do: Derive a higher-order stencil
+        key_prerequisites: [math.numerical.finite-differences]
+  - id: math.numerical.step-size-tradeoff
+    name: Choosing a step size
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.rounding-and-cancellation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write total error as a sum
+        key_prerequisites: [math.numerical.finite-differences, math.numerical.rounding-and-cancellation]
+      - id: kp2
+        can_do: Find an optimal step
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp3
+        can_do: Show error rising at tiny steps
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+      - id: kp4
+        can_do: Use a complex-step idea
+        key_prerequisites: [math.numerical.rounding-and-cancellation]
+  - id: math.numerical.richardson-extrapolation
+    name: Using Richardson extrapolation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.central-difference-error
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.step-size-tradeoff
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine two step sizes
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp2
+        can_do: Find a higher order
+        key_prerequisites: [math.numerical.central-difference-error]
+      - id: kp3
+        can_do: Estimate an error from two results
+        key_prerequisites: [math.numerical.step-size-tradeoff]
+      - id: kp4
+        can_do: Use it twice
+        key_prerequisites: [math.numerical.central-difference-error]
+  - id: math.numerical.romberg
+    name: Using Romberg integration
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.composite-rules-error
+        encompassing: 0.4
+        confidence: high
+      - topic: math.numerical.richardson-extrapolation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a table
+        key_prerequisites: [math.numerical.composite-rules-error, math.numerical.richardson-extrapolation]
+      - id: kp2
+        can_do: Reuse evaluations
+        key_prerequisites: [math.numerical.composite-rules-error]
+      - id: kp3
+        can_do: Find orders in the table
+        key_prerequisites: [math.numerical.richardson-extrapolation]
+      - id: kp4
+        can_do: Compare with an adaptive rule
+        key_prerequisites: [math.numerical.composite-rules-error]
+  - id: math.numerical.second-derivative-difference
+    name: Using differences for second derivatives
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the three-point stencil
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp2
+        can_do: Find its order
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp3
+        can_do: Use it at a point
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp4
+        can_do: Write a matrix for a grid
+        key_prerequisites: [math.numerical.finite-differences]
+  - id: math.numerical.degree-of-precision
+    name: Finding degree of precision
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-cotes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define degree of precision
+        key_prerequisites: [math.numerical.newton-cotes]
+      - id: kp2
+        can_do: Find it for the trapezoid rule
+        key_prerequisites: [math.numerical.newton-cotes]
+      - id: kp3
+        can_do: Find it for Simpson's rule
+        key_prerequisites: [math.numerical.newton-cotes]
+      - id: kp4
+        can_do: Solve for weights to reach it
+        key_prerequisites: [math.numerical.newton-cotes]
+  - id: math.numerical.orthogonal-polynomials
+    name: Using orthogonal polynomials
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.approximation-least-squares-functions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define by an inner product
+        key_prerequisites: [math.numerical.approximation-least-squares-functions]
+      - id: kp2
+        can_do: Find a three-term recurrence
+        key_prerequisites: [math.numerical.approximation-least-squares-functions]
+      - id: kp3
+        can_do: Find Legendre polynomials
+        key_prerequisites: [math.numerical.approximation-least-squares-functions]
+      - id: kp4
+        can_do: Find roots inside an interval
+        key_prerequisites: [math.numerical.approximation-least-squares-functions]
+  - id: math.numerical.gaussian-quadrature
+    name: Using Gaussian quadrature
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.degree-of-precision
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.orthogonal-polynomials
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.numerical.newton-cotes
+        encompassing: 0.1
+        confidence: high
+      - topic: math.numerical.approximation-least-squares-functions
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use two-point rules
+        key_prerequisites: [math.numerical.orthogonal-polynomials]
+      - id: kp2
+        can_do: Find degree of exactness
+        key_prerequisites: [math.numerical.degree-of-precision]
+      - id: kp3
+        can_do: Rescale to any interval
+        key_prerequisites: [math.numerical.newton-cotes]
+      - id: kp4
+        can_do: Compare with Newton-Cotes
+        key_prerequisites: [math.numerical.orthogonal-polynomials]
+  - id: math.numerical.euler-numerical
+    name: Using Euler's method numerically
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.eulers-method-intro
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive from a forward difference
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp2
+        can_do: Run on a test equation
+        key_prerequisites: [math.calc2.eulers-method-intro]
+      - id: kp3
+        can_do: Code a loop
+        key_prerequisites: [math.numerical.finite-differences]
+      - id: kp4
+        can_do: Observe a first-order error
+        key_prerequisites: [math.numerical.finite-differences]
+  - id: math.numerical.local-global-error
+    name: Telling local from global error
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.euler-numerical
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a local error
+        key_prerequisites: [math.numerical.euler-numerical]
+      - id: kp2
+        can_do: Find a global error
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp3
+        can_do: Show halving a step halves the error
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp4
+        can_do: Find a Lipschitz bound
+        key_prerequisites: [math.numerical.euler-numerical]
+  - id: math.numerical.stability-stiff
+    name: Handling stability and stiffness
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.local-global-error
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.conditioning-stability
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a test equation
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp2
+        can_do: Find a step limit for Euler's method
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp3
+        can_do: Recognize stiffness
+        key_prerequisites: [math.numerical.conditioning-stability]
+      - id: kp4
+        can_do: Compare a stiff and non-stiff solve
+        key_prerequisites: [math.numerical.conditioning-stability]
+  - id: math.numerical.boundary-finite-difference
+    name: Using finite differences for boundary problems
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.tridiagonal-systems
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.second-derivative-difference
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.numerical.finite-differences
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up grid equations
+        key_prerequisites: [math.numerical.second-derivative-difference]
+      - id: kp2
+        can_do: Solve as a tridiagonal system
+        key_prerequisites: [math.numerical.tridiagonal-systems]
+      - id: kp3
+        can_do: Handle a derivative boundary
+        key_prerequisites: [math.numerical.second-derivative-difference]
+      - id: kp4
+        can_do: Find order from a grid study
+        key_prerequisites: [math.numerical.finite-differences]
+  - id: math.numerical.pde-finite-difference-intro
+    name: Introducing finite differences for PDEs
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.boundary-finite-difference
+        encompassing: 0.35
+        confidence: high
+      - topic: math.numerical.stability-stiff
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a heat equation grid
+        key_prerequisites: [math.numerical.boundary-finite-difference]
+      - id: kp2
+        can_do: Write a Poisson grid
+        key_prerequisites: [math.numerical.boundary-finite-difference]
+      - id: kp3
+        can_do: Find a stability requirement
+        key_prerequisites: [math.numerical.stability-stiff]
+      - id: kp4
+        can_do: Assemble a matrix
+        key_prerequisites: [math.numerical.boundary-finite-difference]
+  - id: math.numerical.optimization-gradient-descent
+    name: Using gradient descent
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.gradient-direction
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.order-of-convergence
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take a gradient step
+        key_prerequisites: [math.calc3.gradient-direction]
+      - id: kp2
+        can_do: Choose a step size
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp3
+        can_do: Find a rate for a quadratic
+        key_prerequisites: [math.numerical.order-of-convergence]
+      - id: kp4
+        can_do: Use a line search
+        key_prerequisites: [math.calc3.gradient-direction]
+  - id: math.numerical.taylor-methods
+    name: Using Taylor methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.euler-numerical
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a second-order method
+        key_prerequisites: [math.numerical.euler-numerical]
+      - id: kp2
+        can_do: Find derivatives from the equation
+        key_prerequisites: [math.numerical.euler-numerical]
+      - id: kp3
+        can_do: Run a step
+        key_prerequisites: [math.numerical.euler-numerical]
+      - id: kp4
+        can_do: Compare cost with Runge-Kutta
+        key_prerequisites: [math.numerical.euler-numerical]
+  - id: math.numerical.midpoint-heun
+    name: Using midpoint and Heun's methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.local-global-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run a midpoint step
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp2
+        can_do: Run a Heun step
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp3
+        can_do: Show second order
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp4
+        can_do: Check with a known solution
+        key_prerequisites: [math.numerical.local-global-error]
+  - id: math.numerical.runge-kutta
+    name: Using Runge-Kutta methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.taylor-methods
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.midpoint-heun
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.numerical.local-global-error
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the fourth-order formula
+        key_prerequisites: [math.numerical.midpoint-heun]
+      - id: kp2
+        can_do: Run a step
+        key_prerequisites: [math.numerical.midpoint-heun]
+      - id: kp3
+        can_do: Observe fourth-order error
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp4
+        can_do: Compare function evaluations
+        key_prerequisites: [math.numerical.taylor-methods]
+  - id: math.numerical.systems-higher-order-ode
+    name: Solving systems and higher-order equations
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.runge-kutta
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert to a system
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp2
+        can_do: Run on a pendulum
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp3
+        can_do: Run on two coupled equations
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp4
+        can_do: Check energy behaviour
+        key_prerequisites: [math.numerical.runge-kutta]
+  - id: math.numerical.boundary-shooting
+    name: Using the shooting method
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.systems-higher-order-ode
+        encompassing: 0.4
+        confidence: high
+      - topic: math.numerical.secant-method
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Turn a boundary problem into a root problem
+        key_prerequisites: [math.numerical.systems-higher-order-ode]
+      - id: kp2
+        can_do: Use a secant update
+        key_prerequisites: [math.numerical.secant-method]
+      - id: kp3
+        can_do: Solve a linear case
+        key_prerequisites: [math.numerical.systems-higher-order-ode]
+      - id: kp4
+        can_do: Solve a nonlinear case
+        key_prerequisites: [math.numerical.systems-higher-order-ode, math.numerical.secant-method]
+  - id: math.numerical.consistency-convergence-ode
+    name: Using consistency and convergence
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.local-global-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define consistency
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp2
+        can_do: Define zero-stability
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp3
+        can_do: State the equivalence theorem
+        key_prerequisites: [math.numerical.local-global-error]
+      - id: kp4
+        can_do: Test a method
+        key_prerequisites: [math.numerical.local-global-error]
+  - id: math.numerical.multistep-methods
+    name: Using multistep methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.runge-kutta
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.lagrange-form
+        encompassing: 0.2
+        confidence: high
+      - topic: math.numerical.consistency-convergence-ode
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Adams-Bashforth
+        key_prerequisites: [math.numerical.lagrange-form]
+      - id: kp2
+        can_do: Use Adams-Moulton
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp3
+        can_do: Start a multistep method
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp4
+        can_do: Test its root condition
+        key_prerequisites: [math.numerical.consistency-convergence-ode]
+  - id: math.numerical.adaptive-step-size
+    name: Using adaptive step sizes
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.runge-kutta
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two orders for an estimate
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp2
+        can_do: Adjust a step
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp3
+        can_do: Trace a small run
+        key_prerequisites: [math.numerical.runge-kutta]
+      - id: kp4
+        can_do: Use an embedded pair
+        key_prerequisites: [math.numerical.runge-kutta]
+  - id: math.numerical.predictor-corrector
+    name: Using predictor-corrector methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.multistep-methods
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict with an explicit step
+        key_prerequisites: [math.numerical.multistep-methods]
+      - id: kp2
+        can_do: Correct with an implicit step
+        key_prerequisites: [math.numerical.multistep-methods]
+      - id: kp3
+        can_do: Run a step
+        key_prerequisites: [math.numerical.multistep-methods]
+      - id: kp4
+        can_do: Estimate an error
+        key_prerequisites: [math.numerical.multistep-methods]
+  - id: math.numerical.absolute-stability-regions
+    name: Finding regions of absolute stability
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.stability-stiff
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a region for Euler's method
+        key_prerequisites: [math.numerical.stability-stiff]
+      - id: kp2
+        can_do: Plot one for a fourth-order method
+        key_prerequisites: [math.numerical.stability-stiff]
+      - id: kp3
+        can_do: Find a step limit from an eigenvalue
+        key_prerequisites: [math.numerical.stability-stiff]
+      - id: kp4
+        can_do: Compare explicit and implicit regions
+        key_prerequisites: [math.numerical.stability-stiff]
+  - id: math.numerical.implicit-methods
+    name: Using implicit methods
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-method-numerical
+        encompassing: 0.25
+        confidence: high
+      - topic: math.numerical.absolute-stability-regions
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.numerical.stability-stiff
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write backward Euler
+        key_prerequisites: [math.numerical.absolute-stability-regions]
+      - id: kp2
+        can_do: Solve a step with Newton's method
+        key_prerequisites: [math.numerical.newton-method-numerical]
+      - id: kp3
+        can_do: Use the trapezoid method
+        key_prerequisites: [math.numerical.absolute-stability-regions]
+      - id: kp4
+        can_do: Find A-stability
+        key_prerequisites: [math.numerical.absolute-stability-regions]
+  - id: math.numerical.newton-for-optimization
+    name: Using Newton's method for optimization
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.optimization-gradient-descent
+        encompassing: 0.3
+        confidence: high
+      - topic: math.numerical.systems-nonlinear-newton
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Hessian step
+        key_prerequisites: [math.numerical.systems-nonlinear-newton]
+      - id: kp2
+        can_do: Run on a two-variable function
+        key_prerequisites: [math.numerical.optimization-gradient-descent, math.numerical.systems-nonlinear-newton]
+      - id: kp3
+        can_do: Compare with gradient descent
+        key_prerequisites: [math.numerical.optimization-gradient-descent]
+      - id: kp4
+        can_do: Handle an indefinite Hessian
+        key_prerequisites: [math.numerical.systems-nonlinear-newton]
+  - id: math.numerical.numerical-pde-explicit
+    name: Solving PDEs with explicit finite differences
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.pde-finite-difference-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an explicit heat scheme
+        key_prerequisites: [math.numerical.pde-finite-difference-intro]
+      - id: kp2
+        can_do: Run on a small grid
+        key_prerequisites: [math.numerical.pde-finite-difference-intro]
+      - id: kp3
+        can_do: Find an accuracy order
+        key_prerequisites: [math.numerical.pde-finite-difference-intro]
+      - id: kp4
+        can_do: Handle boundary values
+        key_prerequisites: [math.numerical.pde-finite-difference-intro]
+  - id: math.numerical.numerical-stability-von-neumann
+    name: Using von Neumann stability
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.numerical-pde-explicit
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume a Fourier mode
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+      - id: kp2
+        can_do: Find an amplification factor
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+      - id: kp3
+        can_do: Find a stability limit
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+      - id: kp4
+        can_do: Test a wave scheme
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+  - id: math.numerical.crank-nicolson
+    name: Using an implicit method for the heat equation
+    subject: math
+    course: math.numerical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.numerical-pde-explicit
+        encompassing: 0.4
+        confidence: high
+      - topic: math.numerical.implicit-methods
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Average two time levels
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+      - id: kp2
+        can_do: Set up the tridiagonal step
+        key_prerequisites: [math.numerical.implicit-methods]
+      - id: kp3
+        can_do: Find second-order accuracy
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
+      - id: kp4
+        can_do: Compare stability with an explicit scheme
+        key_prerequisites: [math.numerical.numerical-pde-explicit]
