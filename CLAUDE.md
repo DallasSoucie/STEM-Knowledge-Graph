@@ -40,28 +40,32 @@ A knowledge graph for a Math Academy-style adaptive learning app covering roughl
 - **IDs are readable slugs**: `<subject>.<course>.<topic-slug>`, e.g. `math.alg1.solve-two-step-equations`. Never numeric IDs, so a typo becomes a dangling reference that validation catches. IDs are stable; use `rename-id` rather than hand-editing references.
 - Keep YAML diff-friendly: one key per line, stable key order, topics in course order.
 
+Each course file wraps its topics in a `course:` / `topics:` mapping; the example below is one entry of `topics:`.
+
 ```yaml
-id: math.alg1.solve-two-step-equations
-name: Solving two-step linear equations
-subject: math
 course: math.alg1
-level: g8
-status: draft
-prerequisites:
-  - topic: math.alg1.solve-one-step-equations
-    encompassing: 0.6
-    confidence: high
-encompassed:
-  - topic: math.g6.fraction-operations
-    encompassing: 0.15
-    confidence: medium
-knowledge_points:
-  - id: kp1
-    can_do: Solve ax + b = c with positive integer coefficients
-    key_prerequisites: [math.alg1.solve-one-step-equations]
-  - id: kp2
-    can_do: Solve two-step equations with fractional coefficients
-    key_prerequisites: [math.g6.fraction-operations]
+topics:
+  - id: math.alg1.solve-two-step-equations
+    name: Solving two-step linear equations
+    subject: math
+    course: math.alg1
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.alg1.solve-one-step-equations
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.g6.fraction-operations
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve ax + b = c with positive integer coefficients
+        key_prerequisites: [math.alg1.solve-one-step-equations]
+      - id: kp2
+        can_do: Solve two-step equations with fractional coefficients
+        key_prerequisites: [math.g6.fraction-operations]
 ```
 
 ## Stack
@@ -77,17 +81,19 @@ python -m venv .venv
 git config core.hooksPath .githooks
 ```
 
-The `.githooks/pre-commit` hook runs `kg validate` and blocks the commit on failure. Run commands as `.venv/Scripts/kg <command>` or `.venv/Scripts/python -m kg.cli <command>`. Every graph command takes `--root` (default `graph`).
+The `.githooks/pre-commit` hook runs `kg validate` and blocks the commit on failure. Run commands as `.venv/Scripts/kg <command>` or `.venv/Scripts/python -m kg.cli <command>`. Every graph command takes `--root` (default `graph`). The hook validates the working tree, not just the staged files.
 
 ## Commands
+
+Update this section as the tooling is built, and keep it accurate.
 
 - `validate` - the gate for all content changes (see below)
 - `stats` - counts by subject/course/level, prerequisite, KP and weight distributions, depth
 - `ancestors` / `descendants` / `path` - graph queries
 - `split-topic`, `rename-id` - safe structural edits (rename updates every reference and records `id-history.yaml`)
 - `export-weights` / `import-weights` - round-trip edge weights and confidences through CSV
-- `review-report` - low-confidence edges, topics near limits, all cross-subject edges
-- `review-queue` - prerequisite edges ranked by review risk
+- `review-report` - low-confidence edges, topics near limits, all cross-subject edges (direct and encompassed edges, labelled by kind)
+- `review-queue` - prerequisite and encompassed edges ranked by review risk
 - `find-duplicates` - topic pairs in different courses that look like the same skill
 - `export-map` - write the offline curriculum map to `build/map.html` (not committed; refuses if validation fails)
 - `synth` - write a synthetic valid graph, for testing only
@@ -95,7 +101,7 @@ The `.githooks/pre-commit` hook runs `kg validate` and blocks the commit on fail
 
 ## Validation (must stay green)
 
-`validate` fails on: cycles, dangling references, duplicate IDs, KP count outside 2-5, more than 4 direct prerequisites without `justification`, more than 4 key prerequisites per KP, weights outside 0-1, orphan nodes, gaps (a prerequisite missing from the course sequence in `graph/courses.yaml`), a key prerequisite that is neither a direct prerequisite nor an ancestor, a key prerequisite missing from both `prerequisites` and `encompassed`, an `encompassed` topic that is not an ancestor, a stub with no dependent. Stubs are exempt from the KP count. It warns on: redundant edges implied transitively, prerequisites above the topic's level, a topic where every KP has 3 or more key prerequisites, a topic above `gk` with no prerequisites, weights in a course clustering on a few values, a course more than 20% off its budget.
+`validate` fails on: cycles, dangling references, duplicate IDs, KP count outside 2-5, more than 4 direct prerequisites without `justification`, more than 4 key prerequisites per KP, weights outside 0-1, orphan nodes, gaps (a prerequisite missing from the course sequence in `graph/courses.yaml`), a key prerequisite that is neither a direct prerequisite nor an ancestor, a key prerequisite missing from both `prerequisites` and `encompassed`, an `encompassed` topic that is not an ancestor, a stub with no dependent, an ID that is not `<subject>.<course>.<slug>` in lowercase (`id-format`), a topic in a course missing from the manifest or in a view course (`unknown-course`), courses whose `follows` form a cycle (`manifest-follows-cycle`), a topic whose prerequisite is not yet known when its course sequence reaches it (`learner-walk`), more courses in a subject than its map row has lanes (`lane-overflow`), and duplicates: a repeated ID, a repeated prerequisite or `encompassed` entry or KP ID within one topic, or a repeated course in `courses.yaml` (`duplicate-id`). A course file that is not at the path its `course:` names is a load error. Stubs are exempt from the KP count. It warns on: redundant edges implied transitively, prerequisites above the topic's level, a topic where every KP has 3 or more key prerequisites, a topic above `gk` with no prerequisites, weights in a course clustering on a few values, a course more than 20% off its budget, a non-stub topic whose level is outside its course's level range (`level-outside-course`).
 
 **Run `validate` after every batch of content and before every commit. Never leave the graph in an invalid state.**
 

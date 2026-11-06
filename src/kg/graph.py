@@ -16,6 +16,7 @@ class KnowledgeGraph:
     courses: dict[str, Course] = field(default_factory=dict)
     history: list[HistoryEntry] = field(default_factory=list)
     duplicate_ids: list[str] = field(default_factory=list)
+    duplicate_courses: list[str] = field(default_factory=list)  # course IDs repeated in courses.yaml
     root: Path = Path("graph")
 
 

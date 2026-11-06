@@ -68,7 +68,7 @@ def valid_graph() -> KnowledgeGraph:
     """Small graph that passes every rule with no issues at all."""
     kg = KnowledgeGraph()
     kg.courses = {
-        "math.a": course("math.a", 3),
+        "math.a": course("math.a", 3, levels=("gk", "g5")),
         "math.b": course("math.b", 1, ["math.a"]),
     }
     add(
@@ -121,9 +121,6 @@ def tmp_graph(tmp_path):
 
 @pytest.fixture
 def tmp_graph_with_duplicate(tmp_graph):
-    write_course(tmp_graph, "math.a", [stub("math.a.x")])
-    # same id again, from a second file that claims the same course
-    (tmp_graph / "math" / "a2.yaml").write_text(
-        "course: math.a\ntopics:\n- {id: math.a.x, name: Again, status: stub}\n", encoding="utf-8"
-    )
+    # the same id twice in one course file
+    write_course(tmp_graph, "math.a", [stub("math.a.x"), stub("math.a.x", "Again")])
     return tmp_graph

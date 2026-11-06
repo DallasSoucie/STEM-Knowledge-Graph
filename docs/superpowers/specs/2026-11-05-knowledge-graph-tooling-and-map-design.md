@@ -68,6 +68,8 @@ The rules are those in the `CLAUDE.md` validation section, plus:
 
 - **Learner walk (error):** starting from nothing, walk each course sequence in order and confirm every topic becomes reachable. This stands in for Math Academy's practice of running the real model build until we have a model.
 - **Encompassed ancestry (error, new rule):** every `encompassed` topic must be an ancestor of the topic. Otherwise a student could get review credit for a topic they were never required to learn. Approving this spec approves this rule, and `CLAUDE.md` is updated to match.
+- **Lane overflow (error):** the map gives each subject row a fixed number of lanes. A manifest that needs more lanes than the row holds fails `validate`, so `export-map` never meets it.
+- **Level outside course (warning):** a non-stub topic whose level lies outside its course's level range in the manifest.
 
 If LibYAML parsing alone breaks the 10-second target, add a cache of parsed files, keyed on file hash. Build the cache only if the speed test fails.
 
@@ -102,13 +104,13 @@ Positions are computed in Python and are repeatable.
 - **Lanes:** lanes have one fixed height and are assigned to courses in manifest order. Courses with non-overlapping level ranges can share a lane. Courses at the same level get separate lanes, which keeps them from piling up.
 - **Topic position:** a course's topics at one level form a block inside its column and lane, wrapped into 8 lines like text, in listed order. Line length comes from the course's budget; past budget the lines tighten and never grow taller.
 
-Adding a topic respaces only its own course. Adding a course can shift lanes within its own subject row, but not other rows. View courses add no positions.
+Adding a topic respaces only its own course. Adding a course can shift lanes within its own subject row, but not other rows. A new course whose per-level budget share exceeds the largest share at any level it spans widens that column, which shifts the x positions of every row from that level on. View courses add no positions.
 
 ### Display
 
 - Zoomed out: every topic and edge, with subject and course labels. Edges are very faint. Topics are coloured by subject.
 - Zoomed in: topic names appear.
-- Stubs appear as hollow dots.
+- Stubs appear as a pale tint of their subject colour, since the renderer draws filled dots only.
 - Fallback: if the 20,000-topic test shows all edges can't stay usable, draw edges only past a zoom threshold or when a filter is on. Topics always show.
 
 ### Interaction

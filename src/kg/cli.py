@@ -90,7 +90,12 @@ def synth(
     """Write a synthetic valid graph (for testing, not content)."""
     if topics < 5:
         raise _fail("--topics must be at least 5")
-    write_graph(generate(topics, seed=seed, root=out))
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        raise _fail(f"{out} exists and is not an empty directory; nothing written")
+    try:
+        write_graph(generate(topics, seed=seed, root=out))
+    except OSError as exc:
+        raise _fail(f"cannot write {out}: {exc}") from exc
     typer.echo(f"wrote {topics} topics to {out}")
 
 
@@ -106,7 +111,11 @@ def export_map_command(
         for i in errors:
             typer.echo(f"error {i.rule} {i.file or '-'} {i.topic or '-'}: {i.message}")
         raise _fail(f"{len(errors)} errors; map not written")
-    typer.echo(f"wrote {export_map(kg, out)}")
+    try:
+        written = export_map(kg, out)
+    except OSError as exc:
+        raise _fail(f"cannot write {out}: {exc}") from exc
+    typer.echo(f"wrote {written}")
 
 
 def _commit(new_kg: KnowledgeGraph) -> None:
@@ -160,7 +169,11 @@ def export_weights_command(
     out: Path = typer.Option(..., "--out", help="CSV file to write."),
 ) -> None:
     """Write every edge weight to a CSV for bulk editing."""
-    export_weights(_load(root), out)
+    kg = _load(root)
+    try:
+        export_weights(kg, out)
+    except OSError as exc:
+        raise _fail(f"cannot write {out}: {exc}") from exc
     typer.echo(f"wrote {out}")
 
 
@@ -203,14 +216,14 @@ def review_report_command(root: Path = RootOption, course: str | None = CourseOp
     """Low-confidence edges, topics near limits, and cross-subject edges."""
     r = review_report(_load(root), course)
     typer.echo(f"low-confidence edges ({len(r['low_confidence'])}):")
-    for t, p in r["low_confidence"]:
-        typer.echo(f"  {t} <- {p}")
+    for t, p, kind in r["low_confidence"]:
+        typer.echo(f"  {t} <- {p} ({kind})")
     typer.echo(f"topics near limits ({len(r['near_limits'])}):")
     for t in r["near_limits"]:
         typer.echo(f"  {t}")
     typer.echo(f"cross-subject edges ({len(r['cross_subject'])}):")
-    for t, p in r["cross_subject"]:
-        typer.echo(f"  {t} <- {p}")
+    for t, p, kind in r["cross_subject"]:
+        typer.echo(f"  {t} <- {p} ({kind})")
 
 
 @app.command("review-queue")
@@ -222,7 +235,7 @@ def review_queue_command(
     """Prerequisite edges in the order a human should review them."""
     for q in review_queue(_load(root), limit, course):
         cross = " cross-subject" if q.cross_subject else ""
-        typer.echo(f"{q.confidence} {q.descendants} {q.topic} <- {q.prerequisite}{cross}")
+        typer.echo(f"{q.confidence} {q.descendants} {q.topic} <- {q.prerequisite} {q.kind}{cross}")
 
 
 @app.command("find-duplicates")

@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -90,8 +91,15 @@ def _course(c: Course) -> dict[str, Any]:
     return d
 
 
+_SLUG = r"[a-z0-9]+(?:-[a-z0-9]+)*"
+_COURSE_ID_RE = re.compile(rf"^{_SLUG}\.{_SLUG}$")
+
+
 def _course_path(root: Path, course_id: str) -> Path:
-    subject, short = course_id.split(".", 1)
+    """The one file a course lives in. Refuses IDs that are not `<subject>.<course>` slugs."""
+    if not _COURSE_ID_RE.match(course_id):
+        raise ValueError(f"course ID {course_id!r} is not <subject>.<course> in lowercase")
+    subject, short = course_id.split(".")
     return Path(root) / subject / f"{short}.yaml"
 
 
@@ -153,7 +161,7 @@ def _empty_vacated_course_files(root: Path, written: set[str]) -> None:
             course_id, topics = doc["course"], doc["topics"]
         except Exception:  # noqa: BLE001 - unreadable files are load's problem, not ours
             continue
-        if course_id not in written and topics:
+        if course_id not in written and topics and _COURSE_ID_RE.match(str(course_id)):
             write_course(root, course_id, [])
 
 
@@ -211,6 +219,8 @@ def load_graph(root: Path) -> KnowledgeGraph:
     courses_path = root / COURSES_FILE
     if courses_path.exists():
         for c in _load_list(courses_path, "courses", Course, problems):
+            if c.id in kg.courses:
+                kg.duplicate_courses.append(c.id)
             kg.courses[c.id] = c
 
     history_path = root / HISTORY_FILE
@@ -225,6 +235,9 @@ def load_graph(root: Path) -> KnowledgeGraph:
                 raise ValueError("expected a mapping with a 'course' id")
             if not isinstance(doc.get("topics"), list):
                 raise ValueError("expected a 'topics' list")
+            canonical = _course_path(root, doc["course"]).relative_to(root).as_posix()
+            if path.relative_to(root).as_posix() != canonical:
+                raise ValueError(f"course {doc['course']} belongs in {canonical}, not this file")
             topics = [Topic.model_validate(item) for item in doc["topics"]]
             stray = [t.id for t in topics if t.course_id != doc["course"]]
             if stray:

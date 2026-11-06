@@ -34,6 +34,21 @@ def prereq_above_level(kg: KnowledgeGraph, index: GraphIndex):
                 )
 
 
+@rule("level-outside-course", "warning")
+def level_outside_course(kg: KnowledgeGraph, index: GraphIndex):
+    for tid, t in kg.topics.items():
+        course = kg.courses.get(t.course_id)
+        if t.is_stub or t.level is None or course is None or course.is_view:
+            continue
+        lo, hi = sorted(level_rank(x) for x in course.levels)
+        if not lo <= level_rank(t.level) <= hi:
+            yield issue(
+                "level-outside-course",
+                f"level {t.level} is outside {course.id}'s range {course.levels[0]} to {course.levels[1]}",
+                tid,
+            )
+
+
 @rule("congested-topic", "warning")
 def congested_topic(kg: KnowledgeGraph, index: GraphIndex):
     for tid, t in kg.topics.items():

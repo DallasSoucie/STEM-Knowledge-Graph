@@ -117,3 +117,13 @@ def test_empty_graph_exports(tmp_path):
 def test_sample_graph_is_valid_and_exports(sample_graph, tmp_path):
     assert not [i for i in run_checks(sample_graph) if i.severity == "error"]
     assert export(sample_graph, tmp_path).startswith("<!doctype html>")
+
+
+def test_template_tokens_in_names_do_not_break_the_page(tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 1)}
+    t = topic("math.a.one", level="g4")
+    add(kg, t.model_copy(update={"name": "/*__APP__*/ and /*__SIGMA__*/"}))
+    html = export(kg, tmp_path)
+    assert json.loads(data_block(html))["topics"][0]["name"] == "/*__APP__*/ and /*__SIGMA__*/"
+    assert html.count("/*vendor:sigma*/") == 1 and html.count("/*vendor:graphology*/") == 1

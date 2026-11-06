@@ -47,10 +47,11 @@ def row_bounds(kg: KnowledgeGraph) -> dict[str, tuple[float, float]]:
     return bounds
 
 
-def lane_of(kg: KnowledgeGraph) -> dict[str, tuple[str, int]]:
-    """course id -> (subject, lane). First-fit in manifest order; view courses get no lane."""
+def _assign_lanes(kg: KnowledgeGraph) -> tuple[dict[str, tuple[str, int]], list[str]]:
+    """First-fit lanes per course in manifest order, plus the courses that overflow their subject."""
     taken: dict[str, list[list[tuple[int, int]]]] = defaultdict(list)
     result: dict[str, tuple[str, int]] = {}
+    overflow: list[str] = []
     for c in kg.courses.values():
         if c.is_view:
             continue
@@ -65,10 +66,25 @@ def lane_of(kg: KnowledgeGraph) -> dict[str, tuple[str, int]]:
             lane = len(lanes)
             lanes.append([(lo, hi)])
         if lane >= _capacity(c.subject):
-            raise ValueError(
-                f"subject {c.subject!r} needs more than {_capacity(c.subject)} lanes (course {c.id})"
-            )
+            overflow.append(c.id)
         result[c.id] = (c.subject, lane)
+    return result, overflow
+
+
+def lane_overflows(kg: KnowledgeGraph) -> list[tuple[str, str]]:
+    """(course id, subject) for every course that does not fit in its subject's lane capacity."""
+    _, overflow = _assign_lanes(kg)
+    return [(cid, kg.courses[cid].subject) for cid in overflow]
+
+
+def lane_of(kg: KnowledgeGraph) -> dict[str, tuple[str, int]]:
+    """course id -> (subject, lane). First-fit in manifest order; view courses get no lane."""
+    result, overflow = _assign_lanes(kg)
+    if overflow:
+        subject = kg.courses[overflow[0]].subject
+        raise ValueError(
+            f"subject {subject!r} needs more than {_capacity(subject)} lanes (course {overflow[0]})"
+        )
     return result
 
 

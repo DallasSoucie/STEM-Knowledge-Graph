@@ -49,6 +49,7 @@
   const CONFIDENCES = ["high", "medium", "low"];
   const DIRECTIONS = ["prerequisites", "dependents", "both"];
   const SUBJECT_IDS = new Set(topics.map((t) => t.subject));
+  for (const s of data.subjects) SUBJECT_IDS.add(s.id);
   const COURSE_IDS = new Set(topics.map((t) => t.course));
   for (const c of data.courses) COURSE_IDS.add(c.id);
   const topicRank = Int16Array.from(topics, (t) => (LEVEL_RANK.has(t.level) ? LEVEL_RANK.get(t.level) : -1));
@@ -851,7 +852,7 @@
   function updateCount() {
     const total = topics.length;
     const n = matches === null ? total : matches.count;
-    countEl.textContent = n + " of " + total + " topics";
+    countEl.textContent = total === 0 ? "No topics yet" : n + " of " + total + " topics";
     countEl.classList.toggle("none", matches !== null && n === 0);
     clearEl.hidden = !isActive(filters);
   }
@@ -901,6 +902,13 @@
     const out = [];
     for (let i = 0; i < topics.length; i++) if (matches.mask[i]) out.push(topics[i].id);
     return out;
+  }
+
+  if (topics.length === 0) {
+    const note = document.createElement("div");
+    note.className = "empty-note";
+    note.textContent = "No topics yet. Add course files under the graph folder and export again.";
+    document.getElementById("map-wrap").appendChild(note);
   }
 
   buildControls();

@@ -164,6 +164,19 @@ def weight_clustering():
     return kg
 
 
+def lane_overflow():
+    kg = valid_graph()
+    for i in range(13):  # math has 12 lanes; same-level courses each need their own
+        kg.courses[f"math.o{i}"] = course(f"math.o{i}", 1)
+    return kg
+
+
+def level_outside_course():
+    kg = valid_graph()
+    _replace(kg, "math.b.four", level="g9")  # math.b spans g4 to g6
+    return kg
+
+
 def budget_variance():
     kg = valid_graph()
     kg.courses["math.a"] = course("math.a", 10)
@@ -194,6 +207,8 @@ CASES = [
     ("no-prereq-above-gk", no_prereq_above_gk),
     ("weight-clustering", weight_clustering),
     ("budget-variance", budget_variance),
+    ("lane-overflow", lane_overflow),
+    ("level-outside-course", level_outside_course),
 ]
 
 
@@ -234,6 +249,7 @@ def test_severities_match_the_spec():
         "no-prereq-above-gk",
         "weight-clustering",
         "budget-variance",
+        "level-outside-course",
     }
     assert {n for n, r in RULES.items() if r.severity == "warning"} == warnings
     assert {i.severity for i in run_checks(redundant_edge()) if i.rule == "redundant-edge"} == {
@@ -434,3 +450,39 @@ def test_topic_filed_under_a_view_course_is_an_unknown_course():
     add(kg, stub("math.v.x"))
     (found,) = [i for i in run_checks(kg) if i.rule == "unknown-course"]
     assert found.topic == "math.v.x" and "view" in found.message
+
+
+def test_lane_overflow_is_an_error_naming_the_manifest():
+    found = [i for i in run_checks(lane_overflow()) if i.rule == "lane-overflow"]
+    assert found and all(i.severity == "error" and i.file == "courses.yaml" for i in found)
+
+
+def test_level_outside_course_ignores_stubs_and_in_range_topics():
+    assert "level-outside-course" not in rules_fired(valid_graph())
+    kg = level_outside_course()
+    (found,) = [i for i in run_checks(kg) if i.rule == "level-outside-course"]
+    assert found.severity == "warning" and found.topic == "math.b.four"
+
+
+def _dup_messages(kg):
+    return [i.message for i in run_checks(kg) if i.rule == "duplicate-id"]
+
+
+def test_duplicate_entries_within_a_topic_are_flagged():
+    kg = valid_graph()
+    _replace(kg, "math.a.two", prerequisites=[edge("math.a.one"), edge("math.a.one", 0.2)])
+    assert any("math.a.one" in m for m in _dup_messages(kg))
+
+    kg = valid_graph()
+    _replace(kg, "math.a.three", encompassed=[edge("math.a.one"), edge("math.a.one", 0.2)])
+    assert any("math.a.one" in m for m in _dup_messages(kg))
+
+    kg = valid_graph()
+    kg.topics["math.a.two"].knowledge_points[1].id = "kp1"
+    assert any("kp1" in m for m in _dup_messages(kg))
+
+
+def test_repeated_course_in_manifest_is_flagged():
+    kg = valid_graph()
+    kg.duplicate_courses = ["math.a"]
+    assert any("math.a" in m for m in _dup_messages(kg))

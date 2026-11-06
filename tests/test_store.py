@@ -152,3 +152,42 @@ def test_parse_cache_follows_file_edits(sample_copy):
     tid = next(t for t in first.topics.values() if t.course_id.endswith(path.stem)).id
     path.write_bytes(path.read_bytes().replace(f"name: {first.topics[tid].name}".encode(), b"name: Edited", 1))
     assert load_graph(sample_copy).topics[tid].name == "Edited"
+
+
+def test_misnamed_course_file_is_a_load_problem(tmp_path):
+    write_course(tmp_path, "math.a", [stub("math.a.x")])
+    (tmp_path / "math" / "a.yaml").rename(tmp_path / "math" / "wrong.yaml")
+    with pytest.raises(GraphLoadError) as exc:
+        load_graph(tmp_path)
+    (path, message), = exc.value.problems
+    assert path.name == "wrong.yaml" and "math/a.yaml" in message
+
+
+def test_two_files_declaring_one_course_is_a_load_problem(tmp_path):
+    write_course(tmp_path, "math.a", [stub("math.a.x")])
+    (tmp_path / "math" / "a2.yaml").write_text(
+        "course: math.a\ntopics:\n- {id: math.a.y, name: Y, status: stub}\n", encoding="utf-8"
+    )
+    with pytest.raises(GraphLoadError) as exc:
+        load_graph(tmp_path)
+    assert [p.name for p, _ in exc.value.problems] == ["a2.yaml"]
+
+
+@pytest.mark.parametrize("bad", ["../evil.x", "math.a/../../x", "math", "Math.A", "a.b.c", ""])
+def test_write_course_refuses_ids_that_could_leave_the_root(tmp_path, bad):
+    root = tmp_path / "graph"
+    root.mkdir()
+    with pytest.raises(ValueError):
+        write_course(root, bad, [])
+    assert not [p for p in tmp_path.rglob("*.yaml")]
+
+
+def test_repeated_course_in_manifest_is_recorded(tmp_path):
+    (tmp_path / "courses.yaml").write_text(
+        "courses:\n"
+        "- {id: math.a, subject: math, levels: [g4, g5], budget: 1}\n"
+        "- {id: math.a, subject: math, levels: [g4, g5], budget: 2}\n",
+        encoding="utf-8",
+    )
+    kg = load_graph(tmp_path)
+    assert kg.duplicate_courses == ["math.a"]

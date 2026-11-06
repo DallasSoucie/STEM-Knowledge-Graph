@@ -1,9 +1,11 @@
 """Structural rules: IDs, references, cycles, limits, ancestry of key prerequisites."""
 
 import re
+from collections import Counter
 
 from kg.checks.base import COURSES_FILE_NAME, is_acyclic, issue, rule
 from kg.graph import GraphIndex, KnowledgeGraph
+from kg.map.layout import LANE_CAPACITY, DEFAULT_LANE_CAPACITY, lane_overflows
 
 _SLUG = r"[a-z0-9]+(?:-[a-z0-9]+)*"
 _ID_RE = re.compile(rf"^{_SLUG}\.{_SLUG}\.{_SLUG}$")
@@ -13,6 +15,18 @@ _ID_RE = re.compile(rf"^{_SLUG}\.{_SLUG}\.{_SLUG}$")
 def duplicate_id(kg: KnowledgeGraph, index: GraphIndex):
     for tid in kg.duplicate_ids:
         yield issue("duplicate-id", f"ID {tid} is defined more than once", tid)
+    for cid in kg.duplicate_courses:
+        yield issue(
+            "duplicate-id", f"course {cid} is listed more than once", file=COURSES_FILE_NAME
+        )
+    for tid, t in kg.topics.items():
+        for kind, edges in (("prerequisite", t.prerequisites), ("encompassed topic", t.encompassed)):
+            for target, n in Counter(e.topic for e in edges).items():
+                if n > 1:
+                    yield issue("duplicate-id", f"{kind} {target} is listed {n} times", tid)
+        for kp_id, n in Counter(k.id for k in t.knowledge_points).items():
+            if n > 1:
+                yield issue("duplicate-id", f"knowledge point {kp_id} is defined {n} times", tid)
 
 
 @rule("id-format", "error")
@@ -169,3 +183,15 @@ def encompassed_not_ancestor(kg: KnowledgeGraph, index: GraphIndex):
                 yield issue(
                     "encompassed-not-ancestor", f"encompassed {e.topic} is not an ancestor", tid
                 )
+
+
+@rule("lane-overflow", "error")
+def lane_overflow(kg: KnowledgeGraph, index: GraphIndex):
+    """The map has a fixed number of lanes per subject row; more courses than fit cannot be laid out."""
+    for cid, subject in lane_overflows(kg):
+        yield issue(
+            "lane-overflow",
+            f"course {cid} needs more than {LANE_CAPACITY.get(subject, DEFAULT_LANE_CAPACITY)} "
+            f"lanes in subject {subject}",
+            file=COURSES_FILE_NAME,
+        )

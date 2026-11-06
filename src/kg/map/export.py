@@ -32,9 +32,11 @@ def render_map(kg: KnowledgeGraph) -> str:
         + _inline_js(_read(_DIR / "vendor" / "graphology.umd.min.js"), "graphology"),
         "APP": _inline_js(_read(_DIR / "app.js"), "app.js"),
     }
+    # the data block goes in last: topic names are free text and may contain a template token
+    data_block = parts.pop("DATA")
     for key, value in parts.items():
         page = page.replace(f"/*__{key}__*/", value)
-    return page
+    return page.replace("/*__DATA__*/", data_block)
 
 
 def export_map(kg: KnowledgeGraph, out: Path) -> Path:

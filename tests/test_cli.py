@@ -75,3 +75,48 @@ def test_synth_writes_a_graph_that_validates(tmp_path):
     result = run("synth", "--topics", "300", "--out", str(out))
     assert result.exit_code == 0, result.output
     assert run("validate", "--root", str(out)).exit_code == 0
+
+
+def test_synth_refuses_a_non_empty_directory_and_writes_nothing(sample_copy):
+    from conftest import FIXTURE
+
+    before = {p.relative_to(sample_copy): p.read_bytes() for p in sample_copy.rglob("*") if p.is_file()}
+    result = run("synth", "--topics", "30", "--out", str(sample_copy))
+    assert result.exit_code == 1 and "Traceback" not in result.output
+    after = {p.relative_to(sample_copy): p.read_bytes() for p in sample_copy.rglob("*") if p.is_file()}
+    assert before == after
+
+
+def test_synth_into_an_existing_empty_directory_is_fine(tmp_path):
+    out = tmp_path / "g"
+    out.mkdir()
+    assert run("synth", "--topics", "30", "--out", str(out)).exit_code == 0
+
+
+def test_lane_overflow_stops_validate_and_export_map_cleanly(tmp_path):
+    from conftest import course, valid_graph
+
+    kg = valid_graph()
+    for i in range(13):
+        kg.courses[f"math.o{i}"] = course(f"math.o{i}", 1)
+    kg.root = tmp_path / "g"
+    write_graph(kg)
+    result = run("validate", "--root", str(kg.root))
+    assert result.exit_code == 1 and "lane-overflow" in result.output
+    out = tmp_path / "map.html"
+    result = run("export-map", "--root", str(kg.root), "--out", str(out))
+    assert result.exit_code == 1 and "Traceback" not in result.output and not out.exists()
+
+
+def test_os_errors_print_a_message_and_exit_1(tmp_path, sample_copy):
+    blocker = tmp_path / "file"
+    blocker.write_text("x", encoding="utf-8")  # a file where a directory is needed
+    for args in (
+        ["export-map", "--root", str(sample_copy), "--out", str(blocker / "map.html")],
+        ["export-weights", "--root", str(sample_copy), "--out", str(blocker / "w.csv")],
+        ["synth", "--topics", "30", "--out", str(blocker / "g")],
+    ):
+        result = run(*args)
+        assert result.exit_code == 1, args
+        assert result.exception is None or isinstance(result.exception, SystemExit), args
+        assert result.output.strip(), args

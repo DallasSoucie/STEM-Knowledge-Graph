@@ -573,3 +573,24 @@ def test_selecting_on_a_dense_graph_separates_lines(page, tmp_path):
     page.wait_for_timeout(500)
     gap = page.evaluate("([a, b]) => window.kgMap.nodeViewport(b).y - window.kgMap.nodeViewport(a).y", [a, b])
     assert 15 <= gap <= 30
+
+
+def test_ticking_a_subject_with_no_topics_yet_filters_to_nothing(page, tmp_path):
+    kg = filter_graph()
+    kg.courses["chem.c"] = course("chem.c", 3, levels=("g10", "g12"))  # a course with no topics
+    page.errors = open_map(page, kg, tmp_path)
+    total = len(kg.topics)
+    page.get_by_label("chem", exact=True).check()
+    assert page.evaluate("window.kgMap.matchedIds()") == []
+    assert page.locator("#match-count").inner_text() == f"0 of {total} topics"
+    assert page.get_by_role("button", name="Clear filters").is_visible()
+    assert "chem" in page.evaluate("decodeURIComponent(location.hash)")
+    page.get_by_role("button", name="Clear filters").click()
+    assert page.evaluate("window.kgMap.matchCount()") == total
+    assert page.errors == []
+
+
+def test_empty_map_says_there_are_no_topics_yet(page, tmp_path):
+    errors = open_map(page, KnowledgeGraph(), tmp_path)
+    assert "No topics yet" in page.locator("body").inner_text()
+    assert errors == []

@@ -31,8 +31,8 @@ def test_stats_counts_match_a_known_graph():
     assert s["prerequisite_count"] == {0: 1, 1: 3}
     assert s["kp_count"] == {3: 4}
     assert s["depth"] == {0: 1, 1: 1, 2: 1, 3: 1}
-    assert s["weight"]["count"] == 3 and s["weight"]["mean"] == pytest.approx(0.5)
-    assert s["confidence_by_course"]["math.a"] == {"high": 2, "medium": 0, "low": 0}
+    assert s["weight"]["count"] == 4 and s["weight"]["mean"] == pytest.approx(0.45)
+    assert s["confidence_by_course"]["math.a"] == {"high": 3, "medium": 0, "low": 0}
     assert s["budget_variance"] == {"math.a": 0, "math.b": 0}
 
 
@@ -54,8 +54,47 @@ def cross_graph() -> KnowledgeGraph:
 
 def test_cross_subject_derived_from_subject_fields():
     rep = review_report(cross_graph())
-    assert rep["cross_subject"] == [("physics.p.kin", "math.a.two")]
+    assert rep["cross_subject"] == [("physics.p.kin", "math.a.two", "direct")]
     assert review_report(valid_graph())["cross_subject"] == []
+
+
+def encompassed_graph() -> KnowledgeGraph:
+    """physics.p.kin lists math.a.one as an encompassed edge: low confidence and cross-subject."""
+    kg = cross_graph()
+    kin = kg.topics["physics.p.kin"]
+    kin.encompassed = [Edge(topic="math.a.one", encompassing=0.4, confidence="low")]
+    return kg
+
+
+def test_report_and_queue_include_encompassed_edges_labelled_by_kind():
+    kg = encompassed_graph()
+    rep = review_report(kg)
+    assert ("physics.p.kin", "math.a.one", "encompassed") in rep["low_confidence"]
+    assert ("physics.p.kin", "math.a.one", "encompassed") in rep["cross_subject"]
+    assert ("physics.p.kin", "math.a.two", "direct") in rep["cross_subject"]
+    items = {(q.topic, q.prerequisite, q.kind) for q in review_queue(kg)}
+    assert ("physics.p.kin", "math.a.one", "encompassed") in items
+    assert ("physics.p.kin", "math.a.two", "direct") in items
+    enc = next(q for q in review_queue(kg) if q.kind == "encompassed")
+    assert enc.confidence == "low" and enc.cross_subject
+
+
+def test_stats_weights_and_confidence_include_encompassed_edges():
+    s = stats(valid_graph())  # three direct edges at 0.5, one encompassed at 0.3
+    assert s["weight"]["count"] == 4
+    assert s["weight"]["min"] == pytest.approx(0.3)
+    assert s["confidence_by_course"]["math.a"]["high"] == 3
+
+
+def test_cli_prints_encompassed_kind(tmp_path):
+    root = tmp_path / "g"
+    kg = encompassed_graph()
+    kg.root = root
+    write_graph(kg)
+    out = CliRunner().invoke(app, ["review-queue", "--root", str(root)]).output
+    assert any("physics.p.kin <- math.a.one" in ln and "encompassed" in ln for ln in out.splitlines())
+    out = CliRunner().invoke(app, ["review-report", "--root", str(root)]).output
+    assert "physics.p.kin <- math.a.one (encompassed)" in out
 
 
 def test_queue_order():

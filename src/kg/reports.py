@@ -42,11 +42,11 @@ def _depths(kg: KnowledgeGraph) -> dict[str, int]:
 def stats(kg: KnowledgeGraph, course: str | None = None) -> dict:
     topics = _scope(kg, course)
     depths = _depths(kg) if topics else {}
-    weights = [e.encompassing for t in topics.values() for e in t.prerequisites]
+    weights = [e.encompassing for t in topics.values() for e in (*t.prerequisites, *t.encompassed)]
     confidence: dict[str, Counter] = {}
     for t in topics.values():
         c = confidence.setdefault(_course(t), Counter())
-        for e in t.prerequisites:
+        for e in (*t.prerequisites, *t.encompassed):
             c[e.confidence] += 1
     courses = Counter(_course(t) for t in topics.values())
     levels = Counter(t.level or "none" for t in topics.values())
@@ -89,11 +89,12 @@ def review_report(kg: KnowledgeGraph, course: str | None = None) -> dict:
     topics = _scope(kg, course)
     low, cross = [], []
     for tid, t in topics.items():
-        for e in t.prerequisites:
-            if e.confidence == "low":
-                low.append((tid, e.topic))
-            if _cross_subject(kg, tid, e.topic):
-                cross.append((tid, e.topic))
+        for kind, edges in (("direct", t.prerequisites), ("encompassed", t.encompassed)):
+            for e in edges:
+                if e.confidence == "low":
+                    low.append((tid, e.topic, kind))
+                if _cross_subject(kg, tid, e.topic):
+                    cross.append((tid, e.topic, kind))
     return {
         "low_confidence": low,
         "near_limits": [tid for tid, t in topics.items() if is_near_limits(t)],
@@ -108,6 +109,7 @@ class QueueItem:
     confidence: str
     descendants: int
     cross_subject: bool
+    kind: str = "direct"  # "direct" or "encompassed"
 
 
 def review_queue(
@@ -117,11 +119,14 @@ def review_queue(
     g = build_digraph(kg)
     items = []
     for tid, t in _scope(kg, course).items():
-        if not t.prerequisites:
+        if not t.prerequisites and not t.encompassed:
             continue
         n = len(nx.descendants(g, tid) - {tid})
-        for e in t.prerequisites:
-            items.append(QueueItem(tid, e.topic, e.confidence, n, _cross_subject(kg, tid, e.topic)))
+        for kind, edges in (("direct", t.prerequisites), ("encompassed", t.encompassed)):
+            for e in edges:
+                items.append(
+                    QueueItem(tid, e.topic, e.confidence, n, _cross_subject(kg, tid, e.topic), kind)
+                )
     items.sort(
         key=lambda q: (
             q.confidence != "low",
@@ -129,6 +134,7 @@ def review_queue(
             not q.cross_subject,
             q.topic,
             q.prerequisite,
+            q.kind,
         )
     )
     return items if limit is None else items[:limit]
