@@ -129,3 +129,4 @@ Update this section as the tooling is built, and keep it accurate.
 - Relevant BC Curriculum: "C:\AI\Learn STEM\refs\bc-curriculum"
 - Textbooks: "C:\AI\Learn STEM\refs\Textbooks" 
 - Uni course descriptions with prerequisites: "C:\AI\Learn STEM\refs\uni_course_descriptions"
+- Common Core math standards: "C:\AI\Learn STEM\refs\common-core-standards\Math_Standards1.pdf". Compare against the BC curriculum and use best judgement where they differ.
