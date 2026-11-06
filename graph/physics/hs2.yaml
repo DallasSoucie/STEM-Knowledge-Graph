@@ -2560,3 +2560,684 @@ topics:
       - id: kp4
         can_do: Reduce eddy current loss
         key_prerequisites: [physics.hs2.lenzs-law]
+  - id: physics.hs2.electromagnetic-wave-nature
+    name: Describing electromagnetic waves
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.faradays-law
+        encompassing: 0.25
+        confidence: medium
+      - topic: physics.ms.electromagnetic-spectrum
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.wave-equation-problems
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a wave of changing fields
+        key_prerequisites: [physics.hs2.faradays-law]
+      - id: kp2
+        can_do: Use the speed of light
+        key_prerequisites: [physics.hs1.wave-equation-problems]
+      - id: kp3
+        can_do: Find frequency and wavelength of a band
+        key_prerequisites: [physics.ms.electromagnetic-spectrum]
+      - id: kp4
+        can_do: Explain why these waves need no medium
+        key_prerequisites: [physics.hs2.faradays-law]
+  - id: physics.hs2.radiation-and-health
+    name: Evaluating health effects of radiation
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Tell ionizing from non-ionizing radiation
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp2
+        can_do: Evaluate claims about phones and microwaves
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp3
+        can_do: Explain ultraviolet and X-ray risks
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp4
+        can_do: Name protective measures
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+  - id: physics.hs2.polarization
+    name: Explaining polarization
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.ms.transverse-and-longitudinal
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why only transverse waves polarize
+        key_prerequisites: [physics.ms.transverse-and-longitudinal]
+      - id: kp2
+        can_do: Use a polarizer to cut intensity
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp3
+        can_do: Find a change with two filters
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp4
+        can_do: Explain polarized sunglasses
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+  - id: physics.hs2.digital-transmission
+    name: Evaluating digital transmission and storage
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.25
+        confidence: medium
+      - topic: physics.ms.digital-signals
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare analog and digital noise
+        key_prerequisites: [physics.ms.digital-signals]
+      - id: kp2
+        can_do: Count bits for a message
+        key_prerequisites: [physics.ms.digital-signals]
+      - id: kp3
+        can_do: Explain sampling rates
+        key_prerequisites: [physics.ms.digital-signals]
+      - id: kp4
+        can_do: Evaluate storage and security risks
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+  - id: physics.hs2.ray-model
+    name: Using the ray model of light
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.ms.reflection-of-light
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw rays from a point
+        key_prerequisites: [physics.ms.reflection-of-light]
+      - id: kp2
+        can_do: Tell when the ray model applies
+        key_prerequisites: [physics.ms.reflection-of-light]
+      - id: kp3
+        can_do: Trace a reflected ray
+        key_prerequisites: [physics.ms.reflection-of-light]
+      - id: kp4
+        can_do: Explain a pinhole image
+        key_prerequisites: [physics.ms.reflection-of-light]
+  - id: physics.hs2.plane-mirror-images
+    name: Finding images in plane mirrors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.ray-model
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.ms.reflection-of-light
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an image's position
+        key_prerequisites: [physics.hs2.ray-model]
+      - id: kp2
+        can_do: Tell real from virtual images
+        key_prerequisites: [physics.hs2.ray-model]
+      - id: kp3
+        can_do: Find a mirror height to see a full body
+        key_prerequisites: [physics.hs2.ray-model]
+      - id: kp4
+        can_do: Trace rays with two mirrors
+        key_prerequisites: [physics.ms.reflection-of-light]
+  - id: physics.hs2.curved-mirror-rays
+    name: Drawing rays for curved mirrors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.plane-mirror-images
+        encompassing: 0.4
+        confidence: high
+      - topic: math.geom.circle-terms
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name focus and centre of curvature
+        key_prerequisites: [math.geom.circle-terms]
+      - id: kp2
+        can_do: Draw rays for a concave mirror
+        key_prerequisites: [physics.hs2.plane-mirror-images]
+      - id: kp3
+        can_do: Draw rays for a convex mirror
+        key_prerequisites: [physics.hs2.plane-mirror-images]
+      - id: kp4
+        can_do: Find an image type by object position
+        key_prerequisites: [physics.hs2.plane-mirror-images]
+  - id: physics.hs2.mirror-equation
+    name: Using the mirror equation
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.curved-mirror-rays
+        encompassing: 0.35
+        confidence: high
+      - topic: math.alg2.solve-rational-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the mirror equation
+        key_prerequisites: [physics.hs2.curved-mirror-rays, math.alg2.solve-rational-equations]
+      - id: kp2
+        can_do: Set signs for mirrors and images
+        key_prerequisites: [physics.hs2.curved-mirror-rays]
+      - id: kp3
+        can_do: Find a focal length from data
+        key_prerequisites: [math.alg2.solve-rational-equations]
+      - id: kp4
+        can_do: Find a mirror's use from an image
+        key_prerequisites: [physics.hs2.curved-mirror-rays]
+  - id: physics.hs2.magnification
+    name: Calculating magnification
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.mirror-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate magnification
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp2
+        can_do: Read an image's size and orientation
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp3
+        can_do: Solve a shaving mirror problem
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp4
+        can_do: Solve a store security mirror problem
+        key_prerequisites: [physics.hs2.mirror-equation]
+  - id: physics.hs2.index-of-refraction
+    name: Using index of refraction
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.ms.refraction
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.wave-equation-problems
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define index from speed
+        key_prerequisites: [physics.hs1.wave-equation-problems]
+      - id: kp2
+        can_do: Find light's speed in a material
+        key_prerequisites: [physics.hs1.wave-equation-problems]
+      - id: kp3
+        can_do: Compare materials
+        key_prerequisites: [physics.ms.refraction]
+      - id: kp4
+        can_do: Find a change in speed at a boundary
+        key_prerequisites: [physics.ms.refraction]
+  - id: physics.hs2.snells-law
+    name: Using Snell's law
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.geom.trig-find-angle
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.index-of-refraction
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.ms.refraction
+        encompassing: 0.15
+        confidence: high
+      - topic: physics.hs1.wave-equation-problems
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the law to find an angle
+        key_prerequisites: [math.geom.trig-find-angle, physics.hs2.index-of-refraction]
+      - id: kp2
+        can_do: Find an index from angles
+        key_prerequisites: [physics.hs2.index-of-refraction]
+      - id: kp3
+        can_do: Draw a ray entering a denser material
+        key_prerequisites: [physics.ms.refraction]
+      - id: kp4
+        can_do: Trace a ray through a parallel block
+        key_prerequisites: [math.geom.trig-find-angle]
+  - id: physics.hs2.total-internal-reflection
+    name: Finding total internal reflection
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find when reflection is total
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Calculate a critical angle
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp3
+        can_do: Explain a diamond's sparkle
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp4
+        can_do: Test whether a ray escapes
+        key_prerequisites: [physics.hs2.snells-law]
+  - id: physics.hs2.dispersion-and-prisms
+    name: Explaining dispersion and prisms
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.color
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why index varies with colour
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Trace light through a prism
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp3
+        can_do: Explain a rainbow
+        key_prerequisites: [physics.ms.color]
+      - id: kp4
+        can_do: Compare red and violet deviation
+        key_prerequisites: [physics.hs2.snells-law]
+  - id: physics.hs2.lens-ray-diagrams
+    name: Drawing lens ray diagrams
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.ms.lenses
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name lens types by shape
+        key_prerequisites: [physics.ms.lenses]
+      - id: kp2
+        can_do: Draw rays for a converging lens
+        key_prerequisites: [physics.ms.lenses]
+      - id: kp3
+        can_do: Draw rays for a diverging lens
+        key_prerequisites: [physics.ms.lenses]
+      - id: kp4
+        can_do: Find an image type by object position
+        key_prerequisites: [physics.hs2.snells-law]
+  - id: physics.hs2.thin-lens-equation
+    name: Using the thin lens equation
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.lens-ray-diagrams
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.mirror-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the thin lens equation
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp2
+        can_do: Set signs for lenses
+        key_prerequisites: [physics.hs2.lens-ray-diagrams]
+      - id: kp3
+        can_do: Find a focal length from data
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp4
+        can_do: Find a magnification
+        key_prerequisites: [physics.hs2.mirror-equation]
+  - id: physics.hs2.lens-combinations
+    name: Solving two-lens systems
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.thin-lens-equation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.magnification
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use one lens's image as the next object
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+      - id: kp2
+        can_do: Find a final position
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+      - id: kp3
+        can_do: Find total magnification
+        key_prerequisites: [physics.hs2.magnification]
+      - id: kp4
+        can_do: Handle a virtual object
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+  - id: physics.hs2.eye-and-corrective-lenses
+    name: Explaining the eye and corrective lenses
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.thin-lens-equation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain focus in an eye
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+      - id: kp2
+        can_do: Explain near and far sight
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+      - id: kp3
+        can_do: Choose a corrective lens
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+      - id: kp4
+        can_do: Calculate a lens's power in dioptres
+        key_prerequisites: [physics.hs2.thin-lens-equation]
+  - id: physics.hs2.wavelength-in-a-medium
+    name: Finding wavelength in a medium
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.index-of-refraction
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a wavelength in glass
+        key_prerequisites: [physics.hs2.index-of-refraction]
+      - id: kp2
+        can_do: Explain unchanged frequency
+        key_prerequisites: [physics.hs2.index-of-refraction]
+      - id: kp3
+        can_do: Find a colour's speed in water
+        key_prerequisites: [physics.hs2.index-of-refraction]
+      - id: kp4
+        can_do: Find a wave count in a thickness
+        key_prerequisites: [physics.hs2.index-of-refraction]
+  - id: physics.hs2.optical-fibres
+    name: Explaining optical fibres
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.total-internal-reflection
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain light guiding in a fibre
+        key_prerequisites: [physics.hs2.total-internal-reflection]
+      - id: kp2
+        can_do: Find an acceptance angle
+        key_prerequisites: [physics.hs2.total-internal-reflection]
+      - id: kp3
+        can_do: Compare fibre with copper
+        key_prerequisites: [physics.hs2.total-internal-reflection]
+      - id: kp4
+        can_do: Explain medical and data uses
+        key_prerequisites: [physics.hs2.total-internal-reflection]
+  - id: physics.hs2.optical-instruments
+    name: Analyzing microscopes and telescopes
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.lens-combinations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze a magnifying glass
+        key_prerequisites: [physics.hs2.lens-combinations]
+      - id: kp2
+        can_do: Analyze a microscope
+        key_prerequisites: [physics.hs2.lens-combinations]
+      - id: kp3
+        can_do: Analyze a refracting telescope
+        key_prerequisites: [physics.hs2.lens-combinations]
+      - id: kp4
+        can_do: Find an angular magnification
+        key_prerequisites: [physics.hs2.lens-combinations]
+  - id: physics.hs2.light-as-a-wave-evidence
+    name: Using evidence for light as a wave
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.two-source-interference
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain a historical wave argument
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp2
+        can_do: Use interference as evidence
+        key_prerequisites: [physics.hs1.two-source-interference]
+      - id: kp3
+        can_do: Compare particle and wave predictions
+        key_prerequisites: [physics.hs1.two-source-interference, physics.hs2.electromagnetic-wave-nature]
+      - id: kp4
+        can_do: Interpret an interference picture
+        key_prerequisites: [physics.hs1.two-source-interference]
+  - id: physics.hs2.double-slit
+    name: Using double-slit interference
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.light-as-a-wave-evidence
+        encompassing: 0.4
+        confidence: high
+      - topic: math.geom.trig-find-angle
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a path difference
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+      - id: kp2
+        can_do: Find angles of bright fringes
+        key_prerequisites: [math.geom.trig-find-angle]
+      - id: kp3
+        can_do: Find fringe spacing
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+      - id: kp4
+        can_do: Find a wavelength from a pattern
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+  - id: physics.hs2.diffraction-gratings
+    name: Using diffraction gratings
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.double-slit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the grating equation
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp2
+        can_do: Find a number of lines per metre
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp3
+        can_do: Find a highest order
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp4
+        can_do: Compare with a double slit
+        key_prerequisites: [physics.hs2.double-slit]
+  - id: physics.hs2.single-slit
+    name: Using single-slit diffraction
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.double-slit
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe spread through a slit
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp2
+        can_do: Find a first dark angle
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp3
+        can_do: Find central width
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp4
+        can_do: Predict the effect of a narrower slit
+        key_prerequisites: [physics.hs2.double-slit]
+  - id: physics.hs2.resolution-limit
+    name: Explaining the limit of resolution
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.single-slit
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State a resolution criterion
+        key_prerequisites: [physics.hs2.single-slit]
+      - id: kp2
+        can_do: Find a telescope's smallest angle
+        key_prerequisites: [physics.hs2.single-slit]
+      - id: kp3
+        can_do: Find an eye's resolving limit
+        key_prerequisites: [physics.hs2.single-slit]
+      - id: kp4
+        can_do: Explain a large dish's advantage
+        key_prerequisites: [physics.hs2.single-slit]
+  - id: physics.hs2.thin-film-interference
+    name: Explaining thin-film interference
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.light-as-a-wave-evidence
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.snells-law
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find path difference in a film
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+      - id: kp2
+        can_do: Include phase shifts
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp3
+        can_do: Find a thickness for no reflection
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence, physics.hs2.snells-law]
+      - id: kp4
+        can_do: Explain colours on a soap film
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+  - id: physics.hs2.doppler-light
+    name: Explaining the Doppler effect for light
+    subject: physics
+    course: physics.hs2
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.doppler-sound
+        encompassing: 0.3
+        confidence: medium
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain a shift in light
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp2
+        can_do: Find a shift for a moving source
+        key_prerequisites: [physics.hs1.doppler-sound]
+      - id: kp3
+        can_do: Compare to sound's Doppler effect
+        key_prerequisites: [physics.hs1.doppler-sound]
+      - id: kp4
+        can_do: Explain police radar
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
