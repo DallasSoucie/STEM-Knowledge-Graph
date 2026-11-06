@@ -523,14 +523,13 @@ def small_graph(*sizes):
     return kg
 
 
-def named_course_graph(n=71):
+def named_course_graph(n=10):
+    # a chain, so each topic is its own stage, plus a side topic that is alone on its line: only the stage
+    # spacing, not the next dot on the line, limits its name
     kg = KnowledgeGraph()
-    kg.courses = {"math.a": course("math.a", 60, levels=("g4", "g4"))}
-    # nine parallel chains, so the topics form stages and rows rather than a single column
-    names = [
-        topic(f"math.a.t{i:03d}", [f"math.a.t{i - 9:03d}"] if i >= 9 else None, level="g4")
-        for i in range(n)
-    ]
+    kg.courses = {"math.a": course("math.a", n, levels=("g4", "g4"))}
+    names = [topic(f"math.a.t{i:03d}", [f"math.a.t{i - 1:03d}"] if i else None, level="g4") for i in range(n - 1)]
+    names.append(topic(f"math.a.t{n - 1:03d}", ["math.a.t000"], level="g4"))
     for i, t in enumerate(names):
         t.name = f"Solving a rather long kind of problem number {i}"
     add(kg, *names)
@@ -542,8 +541,24 @@ def test_small_course_names_every_topic_on_a_wide_window(page, tmp_path):
     open_map(page, named_course_graph(), tmp_path)
     page.wait_for_timeout(300)
     texts = page.evaluate("window.kgMap.labelTexts()")
-    assert len(texts) == 71
-    assert any(t.endswith("\u2026") for t in texts.values())
+    assert len(texts) == 10
+    assert any(t.endswith("…") for t in texts.values())
+
+
+def test_a_name_never_reaches_the_next_stage(page, tmp_path):
+    page.set_viewport_size({"width": 1920, "height": 1080})
+    open_map(page, named_course_graph(), tmp_path)
+    page.wait_for_timeout(300)
+    topics = page.evaluate("JSON.parse(document.getElementById('kg-data').textContent).topics")
+    xs = {t["id"]: page.evaluate("id => window.kgMap.nodeViewport(id).x", t["id"]) for t in topics}
+    by_stage = sorted(set(t["x"] for t in topics))
+    rects = {r["text"]: r for r in page.evaluate("window.kgMap.labelRects()") if r["text"] in xs}
+    assert rects
+    for t in topics:
+        later = [x for x in by_stage if x > t["x"]]
+        if t["id"] in rects and later:
+            next_dots = min(xs[o["id"]] for o in topics if o["x"] == later[0])
+            assert rects[t["id"]]["x1"] - 12 < next_dots, t["id"]
 
 
 @pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
@@ -562,9 +577,9 @@ def test_small_course_labels_stay_inside_the_window(page, tmp_path, size):
 def test_zooming_in_shows_whole_names(page, tmp_path):
     page.set_viewport_size({"width": 1920, "height": 1080})
     open_map(page, named_course_graph(), tmp_path)
-    wanted = "math.a.t036"
+    wanted = "math.a.t006"
     zoom_in(page, 6, around=wanted)
-    assert page.evaluate("window.kgMap.labelTexts()")[wanted] == "Solving a rather long kind of problem number 36"
+    assert page.evaluate("window.kgMap.labelTexts()")[wanted] == "Solving a rather long kind of problem number 6"
 
 
 @pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])

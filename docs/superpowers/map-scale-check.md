@@ -118,6 +118,33 @@ at most, and 35 ms or less at every ratio above 0.1. The earlier concern of abou
 Removing labels and course labels in turn did not make frames measurably faster, so the label work is not
 the cost; drawing dots and edges under software GL is. None of this has been measured on a real GPU.
 
+## Flow layout check (2026-11-06)
+
+The map now draws a left-to-right prerequisite flow (`2026-11-06-flow-layout-design.md`), so the layout
+sections above describe the old table. Same method as the first table: `kg synth --topics 20000`, exported,
+driven with Playwright and software GL at 1400x850, two runs. Frame times are conservative bounds as before.
+
+| | Flow layout (two runs) |
+|---|---|
+| File size | 18.1 MB |
+| Seconds to first render | 0.42, 0.42 |
+| Pan, zoomed out (median / worst frame) | 17 ms / 22 ms, 18 ms / 22 ms |
+| Zoom in with wheel (median / worst) | 17 ms / 21 ms, 17 ms / 19 ms |
+| Pan, zoomed in (median / worst) | 17 ms / 19 ms, 17 ms / 20 ms |
+| Zoom out (median / worst) | 17 ms / 22 ms, 17 ms / 20 ms |
+| Subject filter (to second painted frame) | 0.26 s, 0.26 s |
+| Lineage filter, both directions, no limit (4,293 topics) | 0.22 s, 0.22 s |
+| Lineage filter, 2 steps | 0.05 s, 0.05 s |
+
+Frames over 100 ms: 0. Passing bar met.
+
+Shape: 927 stages, the tallest holding 46 topics, `STAGE_SPACING` 3.0, so the whole map is about 2778 by 45
+units (about 62:1). At 1920x1080 the overview is a thin coloured band across the middle of the window with
+course and level labels above it; it reads as a flow only once zoomed in. The synthetic graph is chain-like,
+which makes it far longer than a real one is likely to be, so this is the worst case for proportions.
+Topic names get `stage_spacing` graph units of room before the next stage, so they shorten with an ellipsis
+as stages crowd together and show whole once zoomed in.
+
 ## Reproduce
 
 ```

@@ -348,18 +348,6 @@
   // Dots grow as 1 / sqrt(ratio), so this is the size they reach when lines are LABEL_LINE_PX apart.
   const labelThreshold = dotSize * 0.99 * Math.max(1, Math.sqrt(LABEL_LINE_PX / lineSpacingPx));
 
-  // Graph distance from each topic to the next dot on its line, which is the room its name has.
-  const nextDotGap = new Float64Array(topics.length).fill(Infinity);
-  const dotsByLine = new Map();
-  topics.forEach((t, i) => {
-    if (!dotsByLine.has(t.y)) dotsByLine.set(t.y, []);
-    dotsByLine.get(t.y).push(i);
-  });
-  for (const line of dotsByLine.values()) {
-    line.sort((a, b) => topics[a].x - topics[b].x);
-    for (let n = 0; n + 1 < line.length; n++) nextDotGap[line[n]] = topics[line[n + 1]].x - topics[line[n]].x;
-  }
-
   const GraphCtor = window.graphology.Graph || window.graphology;
 
   const graph = new GraphCtor({ type: "directed" });
@@ -547,14 +535,15 @@
     updateOverlay();
   }
 
-  // The name to draw and its width: whole if it fits before the next dot and the window's edge, shortened
+  // The name to draw and its width: whole if it fits before the next stage and the window's edge, shortened
   // if enough room is left, and otherwise whole only if the edge would not cut it. Null means no label.
   function fitLabel(context, d, settings) {
     const width = labelWidth(context, d.key, d.label, settings);
     if (!sigma) return { text: d.label, width };
     const toEdge = sigma.getDimensions().width - (d.x + d.size + 3);
-    const toNextDot = nextDotGap[byId.get(d.key)] * pxPerUnit - d.size - 9;
-    const room = Math.min(toEdge, toNextDot);
+    // stages sit stage_spacing apart, so a name stops short of the next stage's dots whatever line they are on
+    const toNextStage = topics[byId.get(d.key)].x < spanX[1] ? data.stage_spacing * pxPerUnit - d.size - 9 : Infinity;
+    const room = Math.min(toEdge, toNextStage);
     if (width <= room) return { text: d.label, width };
     if (room >= MIN_LABEL_PX) {
       const chars = Math.floor(((room - 8) * d.label.length) / width);

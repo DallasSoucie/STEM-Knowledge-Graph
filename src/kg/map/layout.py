@@ -12,7 +12,7 @@ from kg.model import LEVELS
 SUBJECT_ORDER = ("math", "physics", "chem", "bio", "engr")
 
 LINE_SPACING = 1.0
-STAGE_SPACING = 4.0  # between stages; wider than LINE_SPACING since topic names are wide
+STAGE_SPACING = 3.0  # between stages; wider than LINE_SPACING for names, but the map is width-limited so more only flattens it
 
 
 def _prerequisite_graph(kg: KnowledgeGraph) -> nx.DiGraph:

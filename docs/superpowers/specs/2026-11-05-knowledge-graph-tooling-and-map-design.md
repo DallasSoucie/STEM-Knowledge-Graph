@@ -97,7 +97,7 @@ A topic is **near the limits** if it has 4 or more direct prerequisites, has a K
 
 ### Layout: curriculum bands
 
-Replaced by `2026-11-06-flow-layout-design.md`, once that is built.
+Replaced by `2026-11-06-flow-layout-design.md`.
 
 Positions are computed in Python and are repeatable.
 
