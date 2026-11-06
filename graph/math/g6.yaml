@@ -23,6 +23,9 @@ topics:
       - id: kp3
         can_do: Read a number spanning billions and thousandths
         key_prerequisites: [math.g5.read-write-thousandths]
+      - id: kp4
+        can_do: Compare the size of a digit in far-apart places
+        key_prerequisites: [math.g5.read-write-thousandths, math.g4.read-write-large-numbers]
   - id: math.g6.name-millions-billions
     name: Naming millions and billions
     subject: math
@@ -127,7 +130,10 @@ topics:
         can_do: Find the greatest common factor of two numbers
         key_prerequisites: [math.g4.factor-pairs]
       - id: kp3
-        can_do: Find the greatest common factor of two larger numbers
+        can_do: Find the greatest common factor when one number divides the other
+        key_prerequisites: [math.g4.factor-pairs]
+      - id: kp4
+        can_do: Find the greatest common factor of two numbers up to 100
         key_prerequisites: [math.g4.factor-pairs]
   - id: math.g6.lcm
     name: Finding the least common multiple
@@ -147,7 +153,7 @@ topics:
         can_do: Find the least common multiple of two larger numbers
         key_prerequisites: [math.g5.common-denominators]
       - id: kp3
-        can_do: Say how least common multiples relate to common denominators
+        can_do: Use a least common multiple as a common denominator
         key_prerequisites: [math.g5.common-denominators]
   - id: math.g6.prime-factorization
     name: Finding prime factorizations
@@ -167,7 +173,8 @@ topics:
         can_do: Write a prime factorization with multiplication
         key_prerequisites: [math.g4.prime-or-composite]
       - id: kp3
-        can_do: Say why each number has one prime factorization
+        can_do: Write a prime factorization with exponents
+        key_prerequisites: [math.g4.prime-or-composite]
   - id: math.g6.gcf-with-prime-factors
     name: Finding the greatest common factor with prime factors
     subject: math
@@ -260,6 +267,9 @@ topics:
       - id: kp3
         can_do: Show the factored sum with an area model
         key_prerequisites: [math.g3.area-model-break-apart]
+      - id: kp4
+        can_do: Write a sum in factored form and check by expanding
+        key_prerequisites: [math.g6.gcf, math.g3.area-model-break-apart]
   - id: math.g6.improper-mixed-fluency
     name: Converting improper fractions and mixed numbers fluently
     subject: math
@@ -345,6 +355,9 @@ topics:
       - id: kp3
         can_do: Solve a model when the answer is not a whole number
         key_prerequisites: [math.g5.fraction-division-stories]
+      - id: kp4
+        can_do: Say whether a quotient will be more or less than 1
+        key_prerequisites: [math.g6.how-many-fit]
   - id: math.g6.divide-with-common-denominators
     name: Dividing fractions with common denominators
     subject: math
@@ -410,6 +423,9 @@ topics:
       - id: kp3
         can_do: Divide fractions and simplify the result
         key_prerequisites: [math.g6.reciprocals]
+      - id: kp4
+        can_do: Divide with fractions greater than 1
+        key_prerequisites: [math.g6.reciprocals]
   - id: math.g6.whole-by-fraction
     name: Dividing a whole number by a fraction
     subject: math
@@ -472,6 +488,9 @@ topics:
       - id: kp3
         can_do: Solve a story with a missing side found by dividing
         key_prerequisites: [math.g6.divide-mixed-numbers]
+      - id: kp4
+        can_do: Write and solve an equation for a fraction division story
+        key_prerequisites: [math.g6.divide-mixed-numbers]
   - id: math.g6.divide-with-algorithm
     name: Dividing with the standard algorithm
     subject: math
@@ -493,8 +512,8 @@ topics:
         can_do: Divide by a three-digit number
         key_prerequisites: [math.g5.four-digit-by-two-digit]
       - id: kp3
-        can_do: Check a long division by multiplying
-        key_prerequisites: [math.g5.check-long-division]
+        can_do: Check a long division by multiplying, and fix a mistake
+        key_prerequisites: [math.g5.four-digit-by-two-digit, math.g5.check-long-division]
   - id: math.g6.remainders-as-fractions-decimals
     name: Writing remainders as fractions or decimals
     subject: math
@@ -579,6 +598,9 @@ topics:
       - id: kp3
         can_do: Round a long quotient to a given place
         key_prerequisites: [math.g6.divide-with-algorithm]
+      - id: kp4
+        can_do: Divide a decimal by a decimal and round the result
+        key_prerequisites: [math.g5.decimal-divide-by-decimal, math.g6.divide-with-algorithm]
   - id: math.g6.decimals-all-operations
     name: Adding, subtracting, multiplying and dividing decimals fluently
     subject: math
@@ -637,7 +659,7 @@ topics:
     prerequisites:
       - topic: math.g4.times-as-many
         encompassing: 0.3
-        confidence: medium
+        confidence: low
       - topic: math.g3.fractions-of-a-set
         encompassing: 0.25
         confidence: medium
@@ -649,8 +671,8 @@ topics:
         can_do: Say a ratio from a picture
         key_prerequisites: [math.g3.fractions-of-a-set]
       - id: kp3
-        can_do: Tell a ratio from a difference
-        key_prerequisites: [math.g4.times-as-many]
+        can_do: Tell a ratio from a difference between two quantities
+        key_prerequisites: [math.g3.fractions-of-a-set, math.g4.times-as-many]
   - id: math.g6.ratio-notation
     name: Writing ratios with a colon and as a fraction
     subject: math
@@ -757,6 +779,9 @@ topics:
       - id: kp3
         can_do: Say whether two ratios are equivalent
         key_prerequisites: [math.g6.ratio-language]
+      - id: kp4
+        can_do: Find an equivalent ratio by a non-whole scale
+        key_prerequisites: [math.g6.ratio-language, math.g4.equivalent-fractions-multiply]
   - id: math.g6.double-number-lines
     name: Using double number lines
     subject: math
@@ -798,7 +823,8 @@ topics:
         can_do: Use addition and multiplication in a ratio table
         key_prerequisites: [math.g4.patterns-in-tables]
       - id: kp3
-        can_do: Compare ratios using a table
+        can_do: Compare two ratios using a table
+        key_prerequisites: [math.g6.equivalent-ratios]
   - id: math.g6.ratio-missing-value
     name: Finding a missing value in a ratio
     subject: math
@@ -817,7 +843,7 @@ topics:
         can_do: Find a missing value when the scale is not a whole number
         key_prerequisites: [math.g6.ratio-tables]
       - id: kp3
-        can_do: Find a missing value by going through 1
+        can_do: Find a missing value by first finding the value for 1
         key_prerequisites: [math.g6.ratio-tables]
   - id: math.g6.ratio-graphs
     name: Plotting ratio tables on a graph
@@ -888,6 +914,9 @@ topics:
       - id: kp3
         can_do: Find both unit rates for one ratio
         key_prerequisites: [math.g6.ratio-language]
+      - id: kp4
+        can_do: Use a unit rate to find an amount for a new quantity
+        key_prerequisites: [math.g6.rate-language, math.g6.decimals-all-operations]
   - id: math.g6.constant-speed
     name: Solving constant speed stories
     subject: math
@@ -974,6 +1003,9 @@ topics:
       - id: kp3
         can_do: Say which mixture is stronger
         key_prerequisites: [math.g6.ratio-tables, math.g6.unit-rates]
+      - id: kp4
+        can_do: Compare two ratios with different totals
+        key_prerequisites: [math.g6.ratio-tables, math.g6.unit-rates]
   - id: math.g6.ratio-stories
     name: Solving ratio stories
     subject: math
@@ -1000,6 +1032,9 @@ topics:
       - id: kp3
         can_do: Solve a story comparing two ratios
         key_prerequisites: [math.g6.compare-ratios]
+      - id: kp4
+        can_do: Solve a two-step ratio story
+        key_prerequisites: [math.g6.compare-ratios, math.g6.split-in-a-ratio]
   - id: math.g6.convert-with-ratios
     name: Converting units with ratios
     subject: math
@@ -1026,6 +1061,9 @@ topics:
       - id: kp3
         can_do: Convert a rate from one unit to another
         key_prerequisites: [math.g6.unit-rates]
+      - id: kp4
+        can_do: Convert between metric and imperial units with a given rate
+        key_prerequisites: [math.g6.unit-rates, math.g5.convert-metric, math.g5.convert-imperial]
   - id: math.g6.percent-as-per-100
     name: Understanding percent as a rate per 100
     subject: math
@@ -1035,7 +1073,7 @@ topics:
     prerequisites:
       - topic: math.g6.ratio-language
         encompassing: 0.3
-        confidence: medium
+        confidence: low
       - topic: math.g4.decimal-hundredths
         encompassing: 0.35
         confidence: medium
@@ -1135,6 +1173,9 @@ topics:
       - id: kp3
         can_do: Find a percent of a number with a table
         key_prerequisites: [math.g6.percent-bar-models]
+      - id: kp4
+        can_do: Find a percent greater than 100
+        key_prerequisites: [math.g6.percent-bar-models, math.g5.fraction-of-whole]
   - id: math.g6.find-whole-from-percent
     name: Finding the whole from a part and a percent
     subject: math
@@ -1178,6 +1219,9 @@ topics:
       - id: kp3
         can_do: Compare two discounts
         key_prerequisites: [math.g6.percent-of-quantity]
+      - id: kp4
+        can_do: Find the original price from a sale price and discount
+        key_prerequisites: [math.g6.percent-of-quantity, math.g6.decimals-all-operations]
   - id: math.g6.percent-stories
     name: Solving percent stories
     subject: math
@@ -1201,6 +1245,9 @@ topics:
       - id: kp3
         can_do: Solve a story finding what percent one number is of another
         key_prerequisites: [math.g6.find-whole-from-percent]
+      - id: kp4
+        can_do: Solve a story with a percent increase
+        key_prerequisites: [math.g6.find-whole-from-percent, math.g6.percentage-discounts]
   - id: math.g6.negative-numbers
     name: Understanding negative numbers
     subject: math
@@ -1381,6 +1428,9 @@ topics:
       - id: kp3
         can_do: Find the rational number at a marked point
         key_prerequisites: [math.g6.place-integers]
+      - id: kp4
+        can_do: Place a mix of positive and negative fractions and decimals
+        key_prerequisites: [math.g6.place-integers, math.g4.decimals-on-number-line]
   - id: math.g6.order-rational-numbers
     name: Comparing and ordering rational numbers
     subject: math
@@ -1403,7 +1453,7 @@ topics:
         key_prerequisites: [math.g6.place-rational-numbers]
       - id: kp3
         can_do: Compare a negative fraction with a negative decimal
-        key_prerequisites: [math.g5.compare-thousandths]
+        key_prerequisites: [math.g6.place-rational-numbers, math.g5.compare-thousandths]
   - id: math.g6.inequality-statements
     name: Writing statements of order in context
     subject: math
@@ -1434,6 +1484,10 @@ topics:
       - topic: math.g6.place-rational-numbers
         encompassing: 0.4
         confidence: high
+    encompassed:
+      - topic: math.g6.opposites
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say that absolute value is a distance from zero
@@ -1443,7 +1497,7 @@ topics:
         key_prerequisites: [math.g6.place-rational-numbers]
       - id: kp3
         can_do: Find the numbers with a given absolute value
-        key_prerequisites: [math.g6.place-rational-numbers]
+        key_prerequisites: [math.g6.place-rational-numbers, math.g6.opposites]
   - id: math.g6.absolute-value-in-context
     name: Using absolute value in context
     subject: math
@@ -1580,6 +1634,9 @@ topics:
       - id: kp3
         can_do: Find a distance across an axis
         key_prerequisites: [math.g6.four-quadrants]
+      - id: kp4
+        can_do: Find the perimeter of a rectangle from its vertices
+        key_prerequisites: [math.g6.four-quadrants, math.g6.absolute-value]
   - id: math.g6.four-quadrant-problems
     name: Solving problems on the four-quadrant plane
     subject: math
@@ -1609,7 +1666,7 @@ topics:
     prerequisites:
       - topic: math.g5.powers-of-ten-exponents
         encompassing: 0.3
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write repeated multiplication with an exponent
@@ -1662,6 +1719,9 @@ topics:
       - id: kp3
         can_do: Find a mistake in an order of operations
         key_prerequisites: [math.g5.brackets-and-braces]
+      - id: kp4
+        can_do: Evaluate an expression with exponents inside grouping
+        key_prerequisites: [math.g6.evaluate-powers, math.g5.brackets-and-braces]
   - id: math.g6.order-with-fractions-decimals
     name: Using the order of operations with fractions and decimals
     subject: math
@@ -1723,6 +1783,9 @@ topics:
         key_prerequisites: [math.g6.letters-for-numbers]
       - id: kp3
         can_do: Write an expression for a story situation
+        key_prerequisites: [math.g6.letters-for-numbers]
+      - id: kp4
+        can_do: Write an expression with two operations from words
         key_prerequisites: [math.g6.letters-for-numbers]
   - id: math.g6.expression-parts
     name: Naming the parts of an expression
@@ -1786,6 +1849,9 @@ topics:
       - id: kp3
         can_do: Evaluate an expression with a fraction or decimal value
         key_prerequisites: [math.g6.order-of-operations]
+      - id: kp4
+        can_do: Evaluate an expression with two variables
+        key_prerequisites: [math.g6.letters-for-numbers, math.g6.order-of-operations]
   - id: math.g6.evaluate-with-exponents
     name: Evaluating expressions with exponents
     subject: math
@@ -1869,6 +1935,9 @@ topics:
       - id: kp3
         can_do: Show an expansion with an area model
         key_prerequisites: [math.g6.properties-for-equivalent]
+      - id: kp4
+        can_do: Expand and then combine like terms
+        key_prerequisites: [math.g6.properties-for-equivalent]
   - id: math.g6.factor-expressions
     name: Factoring expressions
     subject: math
@@ -1888,6 +1957,9 @@ topics:
         key_prerequisites: [math.g6.expand-with-distributive]
       - id: kp3
         can_do: Check a factorization by expanding
+        key_prerequisites: [math.g6.expand-with-distributive]
+      - id: kp4
+        can_do: Factor an expression with two variables
         key_prerequisites: [math.g6.expand-with-distributive]
   - id: math.g6.combine-like-terms
     name: Combining like terms
@@ -1935,6 +2007,9 @@ topics:
       - id: kp3
         can_do: Say why agreeing at one value does not prove equivalence
         key_prerequisites: [math.g6.evaluate-expressions]
+      - id: kp4
+        can_do: Choose all equivalent expressions from a list
+        key_prerequisites: [math.g6.properties-for-equivalent, math.g6.evaluate-expressions]
   - id: math.g6.equation-or-expression
     name: Telling equations from expressions
     subject: math
@@ -2037,6 +2112,9 @@ topics:
       - id: kp3
         can_do: Solve with fractions
         key_prerequisites: [math.g5.inverse-operations]
+      - id: kp4
+        can_do: Write and solve from a sentence
+        key_prerequisites: [math.g6.model-equations-balance, math.g5.inverse-operations]
   - id: math.g6.solve-subtract-equations
     name: Solving equations of the form x - p = q
     subject: math
@@ -2079,6 +2157,9 @@ topics:
       - id: kp3
         can_do: Solve px = q with a fraction coefficient
         key_prerequisites: [math.g6.fraction-divide-reciprocal]
+      - id: kp4
+        can_do: Solve px = q when the answer is a fraction
+        key_prerequisites: [math.g6.solve-add-equations, math.g6.fraction-divide-reciprocal]
   - id: math.g6.solve-divide-equations
     name: Solving equations of the form x / p = q
     subject: math
@@ -2144,6 +2225,9 @@ topics:
       - id: kp3
         can_do: Say what the answer means in the story
         key_prerequisites: [math.g6.variables-in-stories]
+      - id: kp4
+        can_do: Solve a story and check the answer in context
+        key_prerequisites: [math.g6.solve-multiply-equations, math.g6.variables-in-stories]
   - id: math.g6.inequalities-as-constraints
     name: Writing inequalities as constraints
     subject: math
@@ -2209,6 +2293,9 @@ topics:
         key_prerequisites: [math.g6.inequalities-as-constraints]
       - id: kp3
         can_do: Graph a story's constraint
+        key_prerequisites: [math.g6.inequalities-as-constraints]
+      - id: kp4
+        can_do: Write an inequality from a graph and a story
         key_prerequisites: [math.g6.inequalities-as-constraints]
   - id: math.g6.dependent-independent
     name: Telling dependent from independent variables
@@ -2320,6 +2407,9 @@ topics:
       - id: kp3
         can_do: Describe a relationship in words from each form
         key_prerequisites: [math.g6.dependent-independent]
+      - id: kp4
+        can_do: Find a missing value using any of the three forms
+        key_prerequisites: [math.g6.graph-from-equation, math.g6.ratio-graphs]
   - id: math.g6.angle-classification
     name: Classifying angles by measure
     subject: math
@@ -2419,7 +2509,7 @@ topics:
     prerequisites:
       - topic: math.g5.area-square-rectangle
         encompassing: 0.3
-        confidence: medium
+        confidence: low
     encompassed:
       - topic: math.g4.area-perimeter-formulas
         encompassing: 0.55
@@ -2433,6 +2523,7 @@ topics:
         key_prerequisites: [math.g4.area-perimeter-formulas]
       - id: kp3
         can_do: Pick the height rather than a slanted side
+        key_prerequisites: [math.g5.area-square-rectangle]
   - id: math.g6.area-of-right-triangles
     name: Finding the area of right triangles
     subject: math
@@ -2471,6 +2562,9 @@ topics:
         key_prerequisites: [math.g6.area-of-right-triangles]
       - id: kp3
         can_do: Find a height drawn outside the triangle
+        key_prerequisites: [math.g6.area-of-right-triangles]
+      - id: kp4
+        can_do: Find a missing height from a triangle's area
         key_prerequisites: [math.g6.area-of-right-triangles]
   - id: math.g6.area-special-quadrilaterals
     name: Finding the area of rhombi and kites
@@ -2511,6 +2605,9 @@ topics:
       - id: kp3
         can_do: Find a trapezoid's area with a formula
         key_prerequisites: [math.g6.area-of-triangles]
+      - id: kp4
+        can_do: Find a missing base from a trapezoid's area
+        key_prerequisites: [math.g6.area-of-triangles]
   - id: math.g6.area-of-composite-shapes
     name: Finding the area of composite shapes
     subject: math
@@ -2530,6 +2627,9 @@ topics:
         key_prerequisites: [math.g6.area-of-trapezoids]
       - id: kp3
         can_do: Find a composite area by subtracting a part
+        key_prerequisites: [math.g6.area-of-trapezoids]
+      - id: kp4
+        can_do: Find a missing length before finding a composite area
         key_prerequisites: [math.g6.area-of-trapezoids]
   - id: math.g6.area-stories-all-shapes
     name: Solving area stories with all shapes
@@ -2594,6 +2694,9 @@ topics:
       - id: kp3
         can_do: Use a volume formula with decimal edges
         key_prerequisites: [math.g5.volume-formulas]
+      - id: kp4
+        can_do: Find a missing edge from a volume with fractions
+        key_prerequisites: [math.g5.volume-formulas, math.g5.times-mixed-numbers]
   - id: math.g6.volume-stories-fractional
     name: Solving volume stories with fractional edges
     subject: math
@@ -2747,6 +2850,9 @@ topics:
       - id: kp3
         can_do: Find the surface area of a triangular prism
         key_prerequisites: [math.g6.nets]
+      - id: kp4
+        can_do: Find a missing edge from a surface area
+        key_prerequisites: [math.g6.nets]
   - id: math.g6.surface-area-pyramids
     name: Finding the surface area of pyramids
     subject: math
@@ -2776,7 +2882,7 @@ topics:
     prerequisites:
       - topic: math.g5.plot-points
         encompassing: 0.35
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Slide a shape on a grid
@@ -2816,7 +2922,7 @@ topics:
     prerequisites:
       - topic: math.g4.degree-as-part-of-circle
         encompassing: 0.25
-        confidence: medium
+        confidence: low
       - topic: math.g5.plot-points
         encompassing: 0.25
         confidence: medium
@@ -2883,7 +2989,7 @@ topics:
     prerequisites:
       - topic: math.g6.statistical-questions
         encompassing: 0.35
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Describe where a data set is centred
@@ -2964,7 +3070,7 @@ topics:
         confidence: high
       - topic: math.g6.order-rational-numbers
         encompassing: 0.1
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find the median of an odd number of values
@@ -2998,6 +3104,9 @@ topics:
       - id: kp3
         can_do: Find a missing value from a mean
         key_prerequisites: [math.g6.measure-of-center]
+      - id: kp4
+        can_do: Compare two data sets using their means
+        key_prerequisites: [math.g6.measure-of-center, math.g5.decimal-divide-by-whole]
   - id: math.g6.mean-or-median
     name: Choosing between mean and median
     subject: math
@@ -3050,7 +3159,7 @@ topics:
     prerequisites:
       - topic: math.g6.measure-of-center
         encompassing: 0.3
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Say that variability describes how values differ
@@ -3172,6 +3281,9 @@ topics:
       - id: kp3
         can_do: Compare two box plots
         key_prerequisites: [math.g6.interquartile-range]
+      - id: kp4
+        can_do: Read quartiles and range from a box plot
+        key_prerequisites: [math.g6.interquartile-range]
   - id: math.g6.center-spread-shape
     name: Describing center, spread and shape
     subject: math
@@ -3219,6 +3331,9 @@ topics:
       - id: kp3
         can_do: Choose the center and spread that fit a distribution
         key_prerequisites: [math.g6.center-spread-shape]
+      - id: kp4
+        can_do: Summarize data from a context and justify the choice
+        key_prerequisites: [math.g6.box-plots, math.g6.center-spread-shape]
   - id: math.g6.line-graphs
     name: Making and reading line graphs
     subject: math
@@ -3231,7 +3346,7 @@ topics:
         confidence: high
       - topic: math.g5.double-bar-graphs
         encompassing: 0.25
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Read a line graph over time
@@ -3254,7 +3369,7 @@ topics:
         confidence: high
       - topic: math.g6.percent-as-per-100
         encompassing: 0.25
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find a theoretical probability as a fraction
@@ -3265,6 +3380,9 @@ topics:
       - id: kp3
         can_do: Say what probabilities of 0 and 1 mean
         key_prerequisites: [math.g5.single-event-probability]
+      - id: kp4
+        can_do: Compare two events using their probabilities
+        key_prerequisites: [math.g5.single-event-probability, math.g6.percent-as-per-100]
   - id: math.g6.experimental-or-theoretical
     name: Comparing experimental and theoretical probability
     subject: math
@@ -3297,7 +3415,7 @@ topics:
     prerequisites:
       - topic: math.g4.make-change
         encompassing: 0.25
-        confidence: medium
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Tell income from expenses
