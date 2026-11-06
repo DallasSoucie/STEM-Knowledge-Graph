@@ -28,7 +28,7 @@ def errors(kg):
 def view_graph():
     kg = KnowledgeGraph()
     kg.courses = {
-        "math.a": course("math.a", 3),
+        "math.a": course("math.a", 3, levels=("gk", "g5")),
         "math.v": Course(
             id="math.v",
             subject="math",

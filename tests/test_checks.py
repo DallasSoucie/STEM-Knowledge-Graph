@@ -461,7 +461,7 @@ def test_level_outside_course_ignores_stubs_and_in_range_topics():
     kg = level_outside_course()
     (found,) = [i for i in run_checks(kg) if i.rule == "level-outside-course"]
     assert found.severity == "error"
-    assert found.severity == "warning" and found.topic == "math.b.four"
+    assert found.topic == "math.b.four"
 
 
 def _dup_messages(kg):
