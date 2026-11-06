@@ -616,3 +616,448 @@ topics:
       - id: kp3
         can_do: Use one known fact to state the others in its family
         key_prerequisites: [math.g1.add-in-either-order, math.g1.subtraction-as-missing-addend]
+  - id: math.g1.add-doubles
+    name: Adding doubles
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-fluently-within-10
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say doubles up to 5 + 5 from memory
+        key_prerequisites: [math.g1.add-fluently-within-10]
+      - id: kp2
+        can_do: Say doubles from 6 + 6 to 10 + 10 using objects or a drawing
+      - id: kp3
+        can_do: Say doubles up to 10 + 10 from memory
+  - id: math.g1.add-near-doubles
+    name: Adding near doubles
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-doubles
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two numbers one apart by using the smaller double
+        key_prerequisites: [math.g1.add-doubles]
+      - id: kp2
+        can_do: Add two numbers one apart by using the larger double
+        key_prerequisites: [math.g1.add-doubles]
+      - id: kp3
+        can_do: Tell whether a sum is a near double
+  - id: math.g1.add-by-making-ten
+    name: Adding by making ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.k.partner-to-make-10
+        encompassing: 0.6
+        confidence: high
+      - topic: math.k.teen-as-ten-and-ones
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g1.add-fluently-within-10
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add 9 to a number by moving one to make ten
+        key_prerequisites: [math.k.partner-to-make-10, math.k.teen-as-ten-and-ones]
+      - id: kp2
+        can_do: Add 8 to a number by moving two to make ten
+        key_prerequisites: [math.k.partner-to-make-10, math.k.teen-as-ten-and-ones]
+      - id: kp3
+        can_do: Add any two numbers with a total over 10 by making ten
+        key_prerequisites: [math.k.partner-to-make-10, math.g1.add-fluently-within-10]
+  - id: math.g1.subtract-through-ten
+    name: Subtracting by going back through ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.k.teen-as-ten-and-ones
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g1.subtract-fluently-within-10
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract from a teen number down to 10
+        key_prerequisites: [math.k.teen-as-ten-and-ones]
+      - id: kp2
+        can_do: Subtract 9 from a teen number by going back through ten
+        key_prerequisites: [math.k.teen-as-ten-and-ones, math.g1.subtract-fluently-within-10]
+      - id: kp3
+        can_do: Split the amount taken away to go back through ten
+        key_prerequisites: [math.g1.subtract-fluently-within-10]
+  - id: math.g1.subtract-using-addition
+    name: Subtracting by using addition
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.subtraction-as-missing-addend
+        encompassing: 0.65
+        confidence: high
+      - topic: math.g1.add-by-making-ten
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use a known doubles fact to find a difference
+        key_prerequisites: [math.g1.subtraction-as-missing-addend]
+      - id: kp2
+        can_do: Find a difference within 20 by asking what to add
+        key_prerequisites: [math.g1.subtraction-as-missing-addend, math.g1.add-by-making-ten]
+      - id: kp3
+        can_do: Check a subtraction within 20 by adding
+        key_prerequisites: [math.g1.add-by-making-ten]
+  - id: math.g1.choose-strategy-within-20
+    name: Choosing a strategy within 20
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-near-doubles
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g1.subtract-through-ten
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g1.subtract-using-addition
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g1.add-by-making-ten
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose doubles or making ten to add within 20
+        key_prerequisites: [math.g1.add-near-doubles, math.g1.add-by-making-ten]
+      - id: kp2
+        can_do: Choose going back through ten or using addition to subtract
+        key_prerequisites: [math.g1.subtract-through-ten, math.g1.subtract-using-addition]
+      - id: kp3
+        can_do: Solve a mixed set of sums and differences within 20
+        key_prerequisites: [math.g1.add-by-making-ten, math.g1.subtract-through-ten]
+  - id: math.g1.add-three-numbers
+    name: Adding three numbers
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-in-either-order
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g1.add-by-making-ten
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add three numbers from left to right
+        key_prerequisites: [math.g1.add-in-either-order]
+      - id: kp2
+        can_do: Choose two of three numbers that make ten first
+        key_prerequisites: [math.g1.add-by-making-ten]
+      - id: kp3
+        can_do: Choose which two of three numbers are easiest to add first
+        key_prerequisites: [math.g1.add-in-either-order, math.g1.add-by-making-ten]
+  - id: math.g1.add-take-stories-within-20
+    name: Solving add and take-away stories within 20
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.k.addition-stories-within-10
+        encompassing: 0.5
+        confidence: high
+      - topic: math.k.subtraction-stories-within-10
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g1.choose-strategy-within-20
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story where objects join a group, up to 20
+        key_prerequisites: [math.k.addition-stories-within-10, math.g1.choose-strategy-within-20]
+      - id: kp2
+        can_do: Solve a story where objects are taken away, up to 20
+        key_prerequisites: [math.k.subtraction-stories-within-10, math.g1.choose-strategy-within-20]
+      - id: kp3
+        can_do: Solve a story where two groups are put together, up to 20
+        key_prerequisites: [math.k.addition-stories-within-10]
+      - id: kp4
+        can_do: Write the equation that fits a story
+  - id: math.g1.missing-part-stories
+    name: Solving stories with a missing part
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-take-stories-within-20
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.g1.unknown-in-addition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story that gives the total and one part
+        key_prerequisites: [math.g1.add-take-stories-within-20]
+      - id: kp2
+        can_do: Write an equation with a symbol for the missing part
+        key_prerequisites: [math.g1.unknown-in-addition]
+      - id: kp3
+        can_do: Solve a story whose two parts can be split in several ways
+  - id: math.g1.unknown-change-or-start-stories
+    name: Solving stories with an unknown change or start
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.unknown-in-subtraction
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g1.missing-part-stories
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story where the number added is unknown
+        key_prerequisites: [math.g1.missing-part-stories]
+      - id: kp2
+        can_do: Solve a story where the number taken away is unknown
+        key_prerequisites: [math.g1.unknown-in-subtraction]
+      - id: kp3
+        can_do: Solve a story where the starting number is unknown
+        key_prerequisites: [math.g1.unknown-in-subtraction, math.g1.missing-part-stories]
+  - id: math.g1.how-many-more-stories
+    name: Solving how-many-more stories
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.missing-part-stories
+        encompassing: 0.55
+        confidence: high
+    encompassed:
+      - topic: math.k.compare-groups-counting
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find how many more one group has by pairing objects
+        key_prerequisites: [math.k.compare-groups-counting]
+      - id: kp2
+        can_do: Solve a story asking how many more
+        key_prerequisites: [math.g1.missing-part-stories]
+      - id: kp3
+        can_do: Solve a story asking how many fewer
+        key_prerequisites: [math.g1.missing-part-stories]
+      - id: kp4
+        can_do: Solve a story that gives the difference and asks for a group's size
+        key_prerequisites: [math.g1.missing-part-stories]
+  - id: math.g1.three-number-stories
+    name: Solving stories with three numbers
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-three-numbers
+        encompassing: 0.7
+        confidence: high
+      - topic: math.g1.add-take-stories-within-20
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story with three groups and a total up to 20
+        key_prerequisites: [math.g1.add-three-numbers]
+      - id: kp2
+        can_do: Write an equation with three addends for a story
+        key_prerequisites: [math.g1.add-three-numbers, math.g1.add-take-stories-within-20]
+      - id: kp3
+        can_do: Solve a three-number story with a symbol for the total
+        key_prerequisites: [math.g1.add-three-numbers]
+  - id: math.g1.add-multiples-of-ten
+    name: Adding multiples of ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.multiples-of-ten-as-tens
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.add-fluently-within-10
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add multiples of ten using bundles
+        key_prerequisites: [math.g1.multiples-of-ten-as-tens]
+      - id: kp2
+        can_do: Add multiples of ten using a known fact, such as 3 + 4
+        key_prerequisites: [math.g1.add-fluently-within-10]
+      - id: kp3
+        can_do: Write the equation for adding two multiples of ten
+        key_prerequisites: [math.g1.multiples-of-ten-as-tens]
+  - id: math.g1.subtract-multiples-of-ten
+    name: Subtracting multiples of ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.multiples-of-ten-as-tens
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.subtract-fluently-within-10
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract multiples of ten using bundles
+        key_prerequisites: [math.g1.multiples-of-ten-as-tens]
+      - id: kp2
+        can_do: Subtract multiples of ten using a known fact, such as 7 - 4
+        key_prerequisites: [math.g1.subtract-fluently-within-10]
+      - id: kp3
+        can_do: Subtract a multiple of ten from itself
+  - id: math.g1.add-tens-to-two-digit
+    name: Adding tens to a two-digit number
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.ten-more-ten-less
+        encompassing: 0.65
+        confidence: high
+      - topic: math.g1.add-multiples-of-ten
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add 10 to a two-digit number
+        key_prerequisites: [math.g1.ten-more-ten-less]
+      - id: kp2
+        can_do: Add several tens to a two-digit number using bundles
+        key_prerequisites: [math.g1.add-multiples-of-ten]
+      - id: kp3
+        can_do: Add several tens to a two-digit number without bundles
+        key_prerequisites: [math.g1.add-multiples-of-ten]
+  - id: math.g1.add-ones-without-new-ten
+    name: Adding ones to a two-digit number without a new ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.two-digit-as-tens-and-ones
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.add-fluently-within-10
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add ones to a multiple of ten
+        key_prerequisites: [math.g1.two-digit-as-tens-and-ones]
+      - id: kp2
+        can_do: Add ones to a two-digit number using bundles
+        key_prerequisites: [math.g1.two-digit-as-tens-and-ones, math.g1.add-fluently-within-10]
+      - id: kp3
+        can_do: Add ones to a two-digit number using a known fact
+        key_prerequisites: [math.g1.add-fluently-within-10]
+  - id: math.g1.add-ones-with-new-ten
+    name: Adding ones to a two-digit number with a new ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-by-making-ten
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.add-ones-without-new-ten
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add ones that exactly complete the next ten
+        key_prerequisites: [math.g1.add-ones-without-new-ten]
+      - id: kp2
+        can_do: Trade ten ones for a new ten using bundles
+        key_prerequisites: [math.g1.add-ones-without-new-ten]
+      - id: kp3
+        can_do: Add ones with a new ten using a drawing or written method
+        key_prerequisites: [math.g1.add-by-making-ten]
+  - id: math.g1.add-two-digit-without-new-ten
+    name: Adding two-digit numbers without a new ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-tens-to-two-digit
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.add-ones-without-new-ten
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two two-digit numbers using bundles
+        key_prerequisites: [math.g1.add-tens-to-two-digit, math.g1.add-ones-without-new-ten]
+      - id: kp2
+        can_do: Add tens with tens and ones with ones in a drawing
+        key_prerequisites: [math.g1.add-tens-to-two-digit, math.g1.add-ones-without-new-ten]
+      - id: kp3
+        can_do: Record the addition with a written method
+  - id: math.g1.add-two-digit-with-new-ten
+    name: Adding two-digit numbers with a new ten
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.g1.add-ones-with-new-ten
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.add-two-digit-without-new-ten
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two two-digit numbers and trade for a new ten using bundles
+        key_prerequisites: [math.g1.add-ones-with-new-ten]
+      - id: kp2
+        can_do: Add two two-digit numbers with a new ten in a drawing
+        key_prerequisites: [math.g1.add-ones-with-new-ten, math.g1.add-two-digit-without-new-ten]
+      - id: kp3
+        can_do: Record the new ten in a written method
+        key_prerequisites: [math.g1.add-two-digit-without-new-ten]
