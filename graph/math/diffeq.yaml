@@ -1,0 +1,3970 @@
+course: math.diffeq
+topics:
+  - id: math.diffeq.classify-odes
+    name: Classifying differential equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.intro-differential-equations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell ordinary from partial equations
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp2
+        can_do: Name dependent and independent variables
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp3
+        can_do: Tell a system from a single equation
+        key_prerequisites: [math.calc2.intro-differential-equations]
+      - id: kp4
+        can_do: Write an equation from a stated law
+        key_prerequisites: [math.calc2.intro-differential-equations]
+  - id: math.diffeq.direction-fields-analysis
+    name: Analyzing direction fields
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.slope-fields
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read isolated behaviour from a field
+        key_prerequisites: [math.calc2.slope-fields]
+      - id: kp2
+        can_do: Find a solution's long-term behaviour from a field
+        key_prerequisites: [math.calc2.slope-fields]
+      - id: kp3
+        can_do: Find a region where slopes are positive
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp4
+        can_do: Use a field to compare initial values
+        key_prerequisites: [math.calc2.slope-fields]
+  - id: math.diffeq.tangent-line-to-euler
+    name: Moving from tangent lines to Euler's method
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.eulers-method-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.direction-fields-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a step from a tangent line
+        key_prerequisites: [math.calc2.eulers-method-intro]
+      - id: kp2
+        can_do: Link a step size to the field
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+      - id: kp3
+        can_do: Take several steps with a general formula
+        key_prerequisites: [math.calc2.eulers-method-intro]
+      - id: kp4
+        can_do: Explain why an error builds up
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+  - id: math.diffeq.order-linearity-identify
+    name: Identifying order and linearity
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the order of an equation
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp2
+        can_do: Test linearity
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp3
+        can_do: Test homogeneity
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp4
+        can_do: Name coefficient types
+        key_prerequisites: [math.diffeq.classify-odes]
+  - id: math.diffeq.solution-checking
+    name: Checking solutions of differential equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.order-linearity-identify
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check an explicit solution
+        key_prerequisites: [math.diffeq.order-linearity-identify]
+      - id: kp2
+        can_do: Check an implicit solution
+        key_prerequisites: [math.diffeq.order-linearity-identify]
+      - id: kp3
+        can_do: Check a family with a constant
+        key_prerequisites: [math.diffeq.order-linearity-identify]
+      - id: kp4
+        can_do: Find constants that make a form a solution
+        key_prerequisites: [math.diffeq.classify-odes]
+  - id: math.diffeq.general-and-particular
+    name: Telling general from particular solutions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.solution-checking
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell a general solution
+        key_prerequisites: [math.diffeq.solution-checking]
+      - id: kp2
+        can_do: Apply an initial condition
+        key_prerequisites: [math.diffeq.solution-checking]
+      - id: kp3
+        can_do: Count constants from the order
+        key_prerequisites: [math.diffeq.solution-checking]
+      - id: kp4
+        can_do: Find a particular member of a family
+        key_prerequisites: [math.diffeq.solution-checking]
+  - id: math.diffeq.separable-odes
+    name: Solving separable equations with care
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.general-and-particular
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a separable form
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp2
+        can_do: Solve with absolute values handled
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Solve with an initial value
+        key_prerequisites: [math.diffeq.general-and-particular]
+      - id: kp4
+        can_do: Write a solution implicitly or explicitly
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: math.diffeq.isoclines
+    name: Sketching with isoclines
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.direction-fields-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an isocline for a given slope
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+      - id: kp2
+        can_do: Draw slopes along isoclines
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+      - id: kp3
+        can_do: Sketch solutions with isoclines
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+      - id: kp4
+        can_do: Find a solution that is itself an isocline
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+  - id: math.diffeq.autonomous-equations
+    name: Analyzing autonomous equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.isoclines
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.direction-fields-analysis
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize an autonomous equation
+        key_prerequisites: [math.diffeq.isoclines]
+      - id: kp2
+        can_do: Find equilibria
+        key_prerequisites: [math.diffeq.isoclines]
+      - id: kp3
+        can_do: Plot the rate against y
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+      - id: kp4
+        can_do: Show horizontal shifts give new solutions
+        key_prerequisites: [math.diffeq.direction-fields-analysis]
+  - id: math.diffeq.equilibrium-stability
+    name: Classifying equilibria by stability
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.autonomous-equations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify stable and unstable points from a sign chart
+        key_prerequisites: [math.diffeq.autonomous-equations]
+      - id: kp2
+        can_do: Classify with a derivative test
+        key_prerequisites: [math.diffeq.autonomous-equations]
+      - id: kp3
+        can_do: Spot a semi-stable equilibrium
+        key_prerequisites: [math.diffeq.autonomous-equations]
+      - id: kp4
+        can_do: Sketch solutions near equilibria
+        key_prerequisites: [math.diffeq.autonomous-equations]
+  - id: math.diffeq.phase-lines
+    name: Drawing phase lines
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.equilibrium-stability
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a phase line
+        key_prerequisites: [math.diffeq.equilibrium-stability]
+      - id: kp2
+        can_do: Read behaviour from a phase line
+        key_prerequisites: [math.diffeq.equilibrium-stability]
+      - id: kp3
+        can_do: Sketch a solution curve from a phase line
+        key_prerequisites: [math.diffeq.equilibrium-stability]
+      - id: kp4
+        can_do: Find equilibria of a given phase line's equation
+        key_prerequisites: [math.diffeq.equilibrium-stability]
+  - id: math.diffeq.modelling-population
+    name: Modelling populations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.phase-lines
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.logistic-de
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write logistic growth with a carrying capacity
+        key_prerequisites: [math.calc2.logistic-de]
+      - id: kp2
+        can_do: Read behaviour from a phase line
+        key_prerequisites: [math.diffeq.phase-lines]
+      - id: kp3
+        can_do: Add a threshold population
+        key_prerequisites: [math.diffeq.phase-lines]
+      - id: kp4
+        can_do: Fit a model to data
+        key_prerequisites: [math.calc2.logistic-de]
+  - id: math.diffeq.separable-implicit
+    name: Leaving separable solutions implicit
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Leave a solution in implicit form
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp2
+        can_do: Check an implicit solution
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp3
+        can_do: Solve for y where possible
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Graph with a level curve view
+        key_prerequisites: [math.diffeq.separable-odes]
+  - id: math.diffeq.singular-solutions
+    name: Finding lost and singular solutions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.separable-implicit
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium solutions lost by dividing
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp2
+        can_do: Add them to the general family
+        key_prerequisites: [math.diffeq.separable-implicit]
+      - id: kp3
+        can_do: Find a nonunique initial value case
+        key_prerequisites: [math.diffeq.separable-implicit]
+      - id: kp4
+        can_do: Find an envelope solution
+        key_prerequisites: [math.diffeq.separable-implicit]
+  - id: math.diffeq.linear-first-order-standard
+    name: Writing a linear equation in standard form
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite in standard form
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp2
+        can_do: Read p and q
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp3
+        can_do: Find an interval from coefficients
+        key_prerequisites: [math.diffeq.classify-odes]
+      - id: kp4
+        can_do: Tell a non-linear equation
+        key_prerequisites: [math.diffeq.classify-odes]
+  - id: math.diffeq.integrating-factors-intro
+    name: Exploring why integrating factors work
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order-standard
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.1
+        confidence: high
+      - topic: math.calc1.product-rule-derivative
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a reversed product rule
+        key_prerequisites: [math.calc1.product-rule-derivative]
+      - id: kp2
+        can_do: Derive the integrating factor
+        key_prerequisites: [math.diffeq.linear-first-order-standard]
+      - id: kp3
+        can_do: Find a factor for a constant coefficient
+        key_prerequisites: [math.diffeq.linear-first-order-standard]
+      - id: kp4
+        can_do: Find a factor for a variable coefficient
+        key_prerequisites: [math.diffeq.linear-first-order-standard]
+  - id: math.diffeq.linear-first-order
+    name: Solving linear first-order equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.integrating-factors-intro
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve with a constant coefficient
+        key_prerequisites: [math.diffeq.integrating-factors-intro]
+      - id: kp2
+        can_do: Solve with a variable coefficient
+        key_prerequisites: [math.diffeq.integrating-factors-intro]
+      - id: kp3
+        can_do: Solve with an initial value
+        key_prerequisites: [math.diffeq.integrating-factors-intro]
+      - id: kp4
+        can_do: Solve when the integral needs parts or substitution
+        key_prerequisites: [math.diffeq.integrating-factors-intro]
+  - id: math.diffeq.bernoulli-equations
+    name: Solving Bernoulli equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a Bernoulli form
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Choose a new variable
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Reduce to a linear equation
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Solve and return to y
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.riccati-intro
+    name: Exploring Riccati equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.bernoulli-equations
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a Riccati form
+        key_prerequisites: [math.diffeq.bernoulli-equations]
+      - id: kp2
+        can_do: Reduce with one known solution
+        key_prerequisites: [math.diffeq.bernoulli-equations]
+      - id: kp3
+        can_do: Solve a constant-coefficient case
+        key_prerequisites: [math.diffeq.bernoulli-equations]
+      - id: kp4
+        can_do: Solve with a guessed solution
+        key_prerequisites: [math.diffeq.bernoulli-equations]
+  - id: math.diffeq.modelling-falling-objects
+    name: Modelling falling objects with drag
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Newton's law with linear drag in newtons
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Find terminal velocity in metres per second
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Solve with quadratic drag
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Solve a drag problem in feet per second
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.modelling-circuits-first
+    name: Modelling simple circuits
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an RC equation in volts and ohms
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Solve for a charging capacitor
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Solve an RL equation
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Find a time constant
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.interval-of-validity
+    name: Finding the interval of validity
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read an interval from linear coefficients
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Find one for a separable solution
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp3
+        can_do: Find a blow-up time
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Choose the piece that holds an initial value
+        key_prerequisites: [math.diffeq.separable-odes, math.diffeq.linear-first-order]
+  - id: math.diffeq.existence-uniqueness-first
+    name: Using existence and uniqueness
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.interval-of-validity
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.15
+        confidence: high
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the linear theorem
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: State the nonlinear theorem
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp3
+        can_do: Check the hypotheses at a point
+        key_prerequisites: [math.diffeq.interval-of-validity]
+      - id: kp4
+        can_do: Show nonuniqueness at a failure
+        key_prerequisites: [math.diffeq.separable-odes]
+  - id: math.diffeq.linear-with-piecewise
+    name: Solving linear equations with piecewise coefficients
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve on each piece
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Match values at a boundary
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Solve a switched forcing problem
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Sketch a continuous solution
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.exact-test
+    name: Testing whether an equation is exact
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc3.clairaut-mixed-partials
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write M dx plus N dy
+        key_prerequisites: [math.calc3.clairaut-mixed-partials]
+      - id: kp2
+        can_do: Test equality of cross partials
+        key_prerequisites: [math.calc3.clairaut-mixed-partials]
+      - id: kp3
+        can_do: Test with trig or exponential terms
+        key_prerequisites: [math.calc3.clairaut-mixed-partials]
+      - id: kp4
+        can_do: Find a constant to make an equation exact
+        key_prerequisites: [math.calc3.clairaut-mixed-partials]
+  - id: math.diffeq.exact-equations
+    name: Solving exact equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc3.find-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.exact-test
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate to find a potential
+        key_prerequisites: [math.calc3.find-potential]
+      - id: kp2
+        can_do: Find the missing function of y
+        key_prerequisites: [math.calc3.find-potential]
+      - id: kp3
+        can_do: Write an implicit solution
+        key_prerequisites: [math.diffeq.exact-test]
+      - id: kp4
+        can_do: Solve with an initial value
+        key_prerequisites: [math.calc3.find-potential]
+  - id: math.diffeq.exact-integrating-factors
+    name: Making equations exact
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.exact-equations
+        encompassing: 0.45
+        confidence: high
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a factor depending on x alone
+        key_prerequisites: [math.diffeq.exact-equations]
+      - id: kp2
+        can_do: Find a factor depending on y alone
+        key_prerequisites: [math.diffeq.exact-equations]
+      - id: kp3
+        can_do: Show a linear equation as an exact one
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Solve after making exact
+        key_prerequisites: [math.diffeq.exact-equations]
+  - id: math.diffeq.linear-substitution-general
+    name: Using a general linear substitution
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a new variable for a linear combination
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp2
+        can_do: Rewrite the equation
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp3
+        can_do: Solve and return to x and y
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Solve with an initial value
+        key_prerequisites: [math.diffeq.separable-odes]
+  - id: math.diffeq.homogeneous-substitution
+    name: Using homogeneous substitution
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-substitution-general
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a ratio form
+        key_prerequisites: [math.diffeq.linear-substitution-general]
+      - id: kp2
+        can_do: Substitute v equals y over x
+        key_prerequisites: [math.diffeq.linear-substitution-general]
+      - id: kp3
+        can_do: Separate and solve
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Return to y
+        key_prerequisites: [math.diffeq.linear-substitution-general]
+  - id: math.diffeq.long-term-behaviour
+    name: Reading long-term behaviour from a solution
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit from a solution
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Tell a transient from a steady part
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Compare two forcing inputs
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Find when a solution crosses a value
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.modelling-mixing
+    name: Modelling tank mixing
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.long-term-behaviour
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rates with constant volume in litres
+        key_prerequisites: [math.diffeq.long-term-behaviour]
+      - id: kp2
+        can_do: Solve a constant-volume tank
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Write rates with changing volume
+        key_prerequisites: [math.diffeq.long-term-behaviour]
+      - id: kp4
+        can_do: Find a maximum concentration
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.choose-first-order-method
+    name: Choosing a first-order method
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.bernoulli-equations
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.homogeneous-substitution
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.exact-integrating-factors
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.exact-equations
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test separable and linear first
+        key_prerequisites: [math.diffeq.bernoulli-equations]
+      - id: kp2
+        can_do: Test for exact forms
+        key_prerequisites: [math.diffeq.exact-equations]
+      - id: kp3
+        can_do: Test for substitutions
+        key_prerequisites: [math.diffeq.homogeneous-substitution]
+      - id: kp4
+        can_do: Classify and solve a mixed list
+        key_prerequisites: [math.diffeq.bernoulli-equations, math.diffeq.homogeneous-substitution, math.diffeq.exact-integrating-factors]
+  - id: math.diffeq.harvesting-model
+    name: Modelling harvesting
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.modelling-population
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add constant harvesting
+        key_prerequisites: [math.diffeq.modelling-population]
+      - id: kp2
+        can_do: Add proportional harvesting
+        key_prerequisites: [math.diffeq.modelling-population]
+      - id: kp3
+        can_do: Find equilibria with harvesting
+        key_prerequisites: [math.diffeq.modelling-population]
+      - id: kp4
+        can_do: Find a sustainable yield
+        key_prerequisites: [math.diffeq.modelling-population]
+  - id: math.diffeq.bifurcations-intro
+    name: Exploring bifurcations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.harvesting-model
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.phase-lines
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibria as functions of a parameter
+        key_prerequisites: [math.diffeq.harvesting-model]
+      - id: kp2
+        can_do: Find a critical parameter
+        key_prerequisites: [math.diffeq.harvesting-model]
+      - id: kp3
+        can_do: Draw a bifurcation diagram
+        key_prerequisites: [math.diffeq.phase-lines]
+      - id: kp4
+        can_do: Name a saddle-node case
+        key_prerequisites: [math.diffeq.harvesting-model]
+  - id: math.diffeq.orthogonal-trajectories
+    name: Finding orthogonal trajectories
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.separable-odes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a family's differential equation
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp2
+        can_do: Write the negative reciprocal slope
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp3
+        can_do: Solve for the trajectories
+        key_prerequisites: [math.diffeq.separable-odes]
+      - id: kp4
+        can_do: Sketch both families
+        key_prerequisites: [math.diffeq.separable-odes]
+  - id: math.diffeq.variable-gravity-model
+    name: Modelling with variable gravity
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.modelling-falling-objects
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write gravity with distance in metres
+        key_prerequisites: [math.diffeq.modelling-falling-objects]
+      - id: kp2
+        can_do: Reduce with velocity as a function of height
+        key_prerequisites: [math.diffeq.modelling-falling-objects]
+      - id: kp3
+        can_do: Find an escape velocity in metres per second
+        key_prerequisites: [math.diffeq.modelling-falling-objects]
+      - id: kp4
+        can_do: Find an impact speed
+        key_prerequisites: [math.diffeq.modelling-falling-objects]
+  - id: math.diffeq.heating-cooling-model
+    name: Modelling heating and cooling
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a cooling law
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Add a heater or a varying environment
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Solve with a periodic outside temperature
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Find a phase lag
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.picard-iteration
+    name: Using Picard iteration
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.existence-uniqueness-first
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an integral form of an equation
+        key_prerequisites: [math.diffeq.existence-uniqueness-first]
+      - id: kp2
+        can_do: Compute two iterates
+        key_prerequisites: [math.diffeq.existence-uniqueness-first]
+      - id: kp3
+        can_do: Match iterates to a series
+        key_prerequisites: [math.diffeq.existence-uniqueness-first]
+      - id: kp4
+        can_do: Explain why iterates converge
+        key_prerequisites: [math.diffeq.existence-uniqueness-first]
+  - id: math.diffeq.euler-by-hand
+    name: Building an Euler table
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.tangent-line-to-euler
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a step table
+        key_prerequisites: [math.diffeq.tangent-line-to-euler]
+      - id: kp2
+        can_do: Fill three steps by hand
+        key_prerequisites: [math.diffeq.tangent-line-to-euler]
+      - id: kp3
+        can_do: Use a smaller step
+        key_prerequisites: [math.diffeq.tangent-line-to-euler]
+      - id: kp4
+        can_do: Estimate error by comparing tables
+        key_prerequisites: [math.diffeq.tangent-line-to-euler]
+  - id: math.diffeq.euler-error
+    name: Analyzing Euler's method error
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.taylor-remainder
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.euler-by-hand
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.tangent-line-to-euler
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a local error from Taylor's theorem
+        key_prerequisites: [math.calc2.taylor-remainder]
+      - id: kp2
+        can_do: Find a global error order
+        key_prerequisites: [math.diffeq.euler-by-hand]
+      - id: kp3
+        can_do: Check error shrinks with a halved step
+        key_prerequisites: [math.diffeq.euler-by-hand]
+      - id: kp4
+        can_do: Tell rounding from truncation error
+        key_prerequisites: [math.calc2.taylor-remainder]
+  - id: math.diffeq.improved-euler-rk4
+    name: Using improved Euler and Runge-Kutta methods
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.euler-error
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Do one improved Euler step
+        key_prerequisites: [math.diffeq.euler-error]
+      - id: kp2
+        can_do: Do one fourth-order step
+        key_prerequisites: [math.diffeq.euler-error]
+      - id: kp3
+        can_do: Compare accuracy for the same step
+        key_prerequisites: [math.diffeq.euler-error]
+      - id: kp4
+        can_do: Fill a table with a software result
+        key_prerequisites: [math.diffeq.euler-error]
+  - id: math.diffeq.second-order-intro
+    name: Introducing second-order linear equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a second-order linear equation
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Tell homogeneous from forced
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Count initial conditions
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Write a spring equation as an example
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: math.diffeq.linear-operator-superposition
+    name: Using linear operators and superposition
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.second-order-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation with a linear operator
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp2
+        can_do: Show linearity of the operator
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp3
+        can_do: Use superposition for homogeneous equations
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp4
+        can_do: Show a nonlinear equation failing superposition
+        key_prerequisites: [math.diffeq.second-order-intro]
+  - id: math.diffeq.euler-formula
+    name: Using Euler's formula
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.maclaurin-common
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.alg2.complex-standard-form
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the formula from series
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp2
+        can_do: Write a complex exponential in trig form
+        key_prerequisites: [math.alg2.complex-standard-form]
+      - id: kp3
+        can_do: Differentiate a complex exponential
+        key_prerequisites: [math.calc2.maclaurin-common]
+      - id: kp4
+        can_do: Recover sine and cosine
+        key_prerequisites: [math.calc2.maclaurin-common, math.alg2.complex-standard-form]
+  - id: math.diffeq.characteristic-equation
+    name: Writing the characteristic equation
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.second-order-intro
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg1.choose-quadratic-method
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Try an exponential solution
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp2
+        can_do: Write the characteristic equation
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp3
+        can_do: Find its roots
+        key_prerequisites: [math.alg1.choose-quadratic-method]
+      - id: kp4
+        can_do: Use it for a missing first-order term
+        key_prerequisites: [math.diffeq.second-order-intro, math.alg1.choose-quadratic-method]
+  - id: math.diffeq.constant-coefficients-real
+    name: Solving with real distinct roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-operator-superposition
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.characteristic-equation
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.alg1.choose-quadratic-method
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a general solution with two real roots
+        key_prerequisites: [math.diffeq.characteristic-equation]
+      - id: kp2
+        can_do: Use the quadratic formula
+        key_prerequisites: [math.alg1.choose-quadratic-method]
+      - id: kp3
+        can_do: Use it with a zero root
+        key_prerequisites: [math.diffeq.characteristic-equation]
+      - id: kp4
+        can_do: Read decay or growth from the roots
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+  - id: math.diffeq.constant-coefficients-complex
+    name: Solving with complex roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-real
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.euler-formula
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a complex pair of roots
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp2
+        can_do: Write a real general solution
+        key_prerequisites: [math.diffeq.euler-formula]
+      - id: kp3
+        can_do: Solve with a pure imaginary pair
+        key_prerequisites: [math.diffeq.euler-formula]
+      - id: kp4
+        can_do: Convert from complex exponentials
+        key_prerequisites: [math.diffeq.euler-formula]
+  - id: math.diffeq.undetermined-coefficients-poly-exp
+    name: Using undetermined coefficients with polynomials and exponentials
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-real
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Guess a polynomial form
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp2
+        can_do: Guess an exponential form
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp3
+        can_do: Solve for coefficients
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp4
+        can_do: Write a general solution
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+  - id: math.diffeq.undetermined-coefficients-trig
+    name: Using undetermined coefficients with trig forcing
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-coefficients-poly-exp
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Guess a sine and cosine form
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Solve for coefficients
+        key_prerequisites: [math.diffeq.undetermined-coefficients-poly-exp]
+      - id: kp3
+        can_do: Force with a product of a polynomial and trig
+        key_prerequisites: [math.diffeq.undetermined-coefficients-poly-exp]
+      - id: kp4
+        can_do: Write a general solution
+        key_prerequisites: [math.diffeq.undetermined-coefficients-poly-exp, math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.superposition-forcing
+    name: Combining forcing terms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-coefficients-trig
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a forcing into parts
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp2
+        can_do: Find a particular solution for each
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp3
+        can_do: Add the parts
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp4
+        can_do: Solve a forced initial value problem
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+  - id: math.diffeq.cauchy-euler
+    name: Solving Cauchy-Euler equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize the equation's form
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Solve with real roots
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Solve with a repeated root
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Solve with a complex pair
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.linear-independence-functions
+    name: Testing independence of functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linear-operator-superposition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test two functions by ratio
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+      - id: kp2
+        can_do: Test with a linear combination
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+      - id: kp3
+        can_do: Spot dependent trig functions
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+      - id: kp4
+        can_do: Tell an interval's effect on independence
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+  - id: math.diffeq.wronskian
+    name: Using the Wronskian
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.determinants-2x2
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.linear-independence-functions
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.linear-operator-superposition
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a two-function Wronskian
+        key_prerequisites: [math.precalc.determinants-2x2]
+      - id: kp2
+        can_do: Use it to test independence
+        key_prerequisites: [math.diffeq.linear-independence-functions]
+      - id: kp3
+        can_do: Compute a three-function Wronskian
+        key_prerequisites: [math.precalc.determinants-2x2]
+      - id: kp4
+        can_do: Connect it to the initial value system
+        key_prerequisites: [math.diffeq.linear-operator-superposition]
+  - id: math.diffeq.fundamental-solution-sets
+    name: Finding fundamental solution sets
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.wronskian
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a fundamental set
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp2
+        can_do: Test a pair
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp3
+        can_do: Write a general solution
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp4
+        can_do: Find a fundamental set with given initial values
+        key_prerequisites: [math.diffeq.wronskian]
+  - id: math.diffeq.reduction-of-order
+    name: Using reduction of order
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fundamental-solution-sets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume a second solution form
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp2
+        can_do: Reduce to a first-order equation
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp3
+        can_do: Find a second solution with constant coefficients
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp4
+        can_do: Find a second solution with variable coefficients
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+  - id: math.diffeq.variation-of-parameters
+    name: Using variation of parameters
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fundamental-solution-sets
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.undetermined-coefficients-poly-exp
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the unknown-coefficient form
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp2
+        can_do: Solve for the derivatives of the coefficients
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp3
+        can_do: Solve a tangent-type forcing
+        key_prerequisites: [math.diffeq.fundamental-solution-sets]
+      - id: kp4
+        can_do: Compare with undetermined coefficients
+        key_prerequisites: [math.diffeq.undetermined-coefficients-poly-exp]
+  - id: math.diffeq.abel-theorem
+    name: Using Abel's theorem
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.wronskian
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State Abel's formula
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp2
+        can_do: Find a Wronskian without solving
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp3
+        can_do: Use it to get a second solution
+        key_prerequisites: [math.diffeq.wronskian]
+      - id: kp4
+        can_do: Show a Wronskian never or always vanishes
+        key_prerequisites: [math.diffeq.wronskian]
+  - id: math.diffeq.ivp-real-roots
+    name: Solving initial value problems with real roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-real
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find constants from two conditions
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp2
+        can_do: Solve with a zero root
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp3
+        can_do: Read a sign change count
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp4
+        can_do: Sketch a solution
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+  - id: math.diffeq.constant-coefficients-repeated
+    name: Solving with repeated roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.reduction-of-order
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.ivp-real-roots
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.constant-coefficients-real
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a repeated root
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+      - id: kp2
+        can_do: Write a second solution with a factor of t
+        key_prerequisites: [math.diffeq.reduction-of-order]
+      - id: kp3
+        can_do: Solve a repeated-root initial value problem
+        key_prerequisites: [math.diffeq.ivp-real-roots]
+      - id: kp4
+        can_do: Sketch a solution
+        key_prerequisites: [math.diffeq.ivp-real-roots]
+  - id: math.diffeq.ivp-complex-roots
+    name: Solving initial value problems with complex roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply conditions at zero
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Apply conditions elsewhere
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Find a zero crossing
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Find a maximum of a solution
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.initial-boundary-values
+    name: Solving initial and boundary value problems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.ivp-complex-roots
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell boundary from initial problems
+        key_prerequisites: [math.diffeq.ivp-complex-roots]
+      - id: kp2
+        can_do: Solve a unique boundary problem
+        key_prerequisites: [math.diffeq.ivp-complex-roots]
+      - id: kp3
+        can_do: Solve one with no solution
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Solve one with infinitely many solutions
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.behaviour-from-roots
+    name: Reading long-term behaviour from roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read decay from negative real parts
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Read oscillation from imaginary parts
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Sketch an envelope
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Find a frequency from a root
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.amplitude-phase-form
+    name: Writing oscillations with amplitude and phase
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert to a single cosine
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Find amplitude and phase
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Find an angle in the right quadrant
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Find first-time peaks
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.higher-order-roots
+    name: Finding roots for higher-order equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-repeated
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.alg2.solve-polynomial-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor a cubic characteristic polynomial
+        key_prerequisites: [math.alg2.solve-polynomial-equations]
+      - id: kp2
+        can_do: Factor a quartic with a substitution
+        key_prerequisites: [math.alg2.solve-polynomial-equations]
+      - id: kp3
+        can_do: Find a repeated root's multiplicity
+        key_prerequisites: [math.diffeq.constant-coefficients-repeated]
+      - id: kp4
+        can_do: Find roots of a complex number
+        key_prerequisites: [math.alg2.solve-polynomial-equations]
+  - id: math.diffeq.higher-order-homogeneous
+    name: Solving higher-order homogeneous equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.higher-order-roots
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.constant-coefficients-repeated
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a solution with distinct roots
+        key_prerequisites: [math.diffeq.higher-order-roots]
+      - id: kp2
+        can_do: Write a solution with repeated roots
+        key_prerequisites: [math.diffeq.constant-coefficients-repeated]
+      - id: kp3
+        can_do: Write a solution with repeated complex roots
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Solve a third-order initial value problem
+        key_prerequisites: [math.diffeq.higher-order-roots]
+  - id: math.diffeq.undetermined-product-forms
+    name: Guessing forms for products of forcing terms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-coefficients-trig
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Guess for a polynomial times an exponential
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp2
+        can_do: Guess for an exponential times trig
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp3
+        can_do: Guess for all three factors
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp4
+        can_do: Solve a product forcing
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+  - id: math.diffeq.undetermined-coefficients-resonance
+    name: Adjusting guesses for repeated forms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-product-forms
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.undetermined-coefficients-trig
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot an overlap with a homogeneous solution
+        key_prerequisites: [math.diffeq.undetermined-product-forms]
+      - id: kp2
+        can_do: Multiply by t
+        key_prerequisites: [math.diffeq.undetermined-product-forms]
+      - id: kp3
+        can_do: Multiply by t squared with a repeated root
+        key_prerequisites: [math.diffeq.undetermined-product-forms]
+      - id: kp4
+        can_do: Solve a resonant trig forcing
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+  - id: math.diffeq.undetermined-higher-order
+    name: Using undetermined coefficients at higher order
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-coefficients-resonance
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.higher-order-homogeneous
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a form for a third-order equation
+        key_prerequisites: [math.diffeq.higher-order-homogeneous]
+      - id: kp2
+        can_do: Adjust a form for a repeated root
+        key_prerequisites: [math.diffeq.undetermined-coefficients-resonance]
+      - id: kp3
+        can_do: Solve for coefficients
+        key_prerequisites: [math.diffeq.undetermined-coefficients-resonance]
+      - id: kp4
+        can_do: Write a form with coefficients left unsolved
+        key_prerequisites: [math.diffeq.undetermined-coefficients-resonance, math.diffeq.higher-order-homogeneous]
+  - id: math.diffeq.forced-method-choice
+    name: Choosing a method for forced equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.variation-of-parameters
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.undetermined-coefficients-resonance
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.superposition-forcing
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether a forcing suits undetermined coefficients
+        key_prerequisites: [math.diffeq.undetermined-coefficients-resonance]
+      - id: kp2
+        can_do: Spot a forcing needing variation of parameters
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp3
+        can_do: Split forcing into parts
+        key_prerequisites: [math.diffeq.superposition-forcing]
+      - id: kp4
+        can_do: Choose and solve for a mixed list
+        key_prerequisites: [math.diffeq.variation-of-parameters, math.diffeq.undetermined-coefficients-resonance]
+  - id: math.diffeq.variation-with-ivp
+    name: Using variation of parameters with initial conditions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.variation-of-parameters
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Keep constants of integration
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp2
+        can_do: Use definite integrals from an initial time
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp3
+        can_do: Write a solution as an integral
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp4
+        can_do: Solve with an initial value
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+  - id: math.diffeq.cauchy-euler-forced
+    name: Solving forced Cauchy-Euler equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.cauchy-euler
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.variation-of-parameters
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite in standard form first
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp2
+        can_do: Find the homogeneous solution
+        key_prerequisites: [math.diffeq.cauchy-euler]
+      - id: kp3
+        can_do: Apply variation of parameters
+        key_prerequisites: [math.diffeq.variation-of-parameters]
+      - id: kp4
+        can_do: Change variables to reach constant coefficients
+        key_prerequisites: [math.diffeq.cauchy-euler]
+  - id: math.diffeq.spring-setup
+    name: Setting up spring-mass equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.second-order-intro
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a spring constant in newtons per metre
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp2
+        can_do: Write an equation from mass and damping
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp3
+        can_do: Convert from imperial weights and feet
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp4
+        can_do: Set initial position and velocity
+        key_prerequisites: [math.diffeq.second-order-intro]
+  - id: math.diffeq.free-oscillation
+    name: Modelling free oscillations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.amplitude-phase-form
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.spring-setup
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a natural frequency
+        key_prerequisites: [math.diffeq.spring-setup]
+      - id: kp2
+        can_do: Find a period and an amplitude
+        key_prerequisites: [math.diffeq.amplitude-phase-form]
+      - id: kp3
+        can_do: Solve an initial value problem
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Solve a problem in imperial units
+        key_prerequisites: [math.diffeq.spring-setup]
+  - id: math.diffeq.damped-oscillation
+    name: Modelling damped oscillations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.free-oscillation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.behaviour-from-roots
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a damped equation
+        key_prerequisites: [math.diffeq.free-oscillation]
+      - id: kp2
+        can_do: Find a quasi-frequency
+        key_prerequisites: [math.diffeq.behaviour-from-roots]
+      - id: kp3
+        can_do: Find a time constant from decay
+        key_prerequisites: [math.diffeq.behaviour-from-roots]
+      - id: kp4
+        can_do: Find when the motion remains within a bound
+        key_prerequisites: [math.diffeq.free-oscillation]
+  - id: math.diffeq.rlc-circuits
+    name: Modelling RLC circuits
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.damped-oscillation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.modelling-circuits-first
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation in inductance, resistance and capacitance
+        key_prerequisites: [math.diffeq.damped-oscillation]
+      - id: kp2
+        can_do: Match terms with a spring
+        key_prerequisites: [math.diffeq.damped-oscillation]
+      - id: kp3
+        can_do: Find charge in a circuit
+        key_prerequisites: [math.diffeq.modelling-circuits-first]
+      - id: kp4
+        can_do: Find current from charge
+        key_prerequisites: [math.diffeq.modelling-circuits-first]
+  - id: math.diffeq.overdamped-critical
+    name: Telling overdamped from critically damped
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.damped-oscillation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify by discriminant
+        key_prerequisites: [math.diffeq.damped-oscillation]
+      - id: kp2
+        can_do: Find critical damping
+        key_prerequisites: [math.diffeq.damped-oscillation]
+      - id: kp3
+        can_do: Sketch each case
+        key_prerequisites: [math.diffeq.damped-oscillation]
+      - id: kp4
+        can_do: Count zero crossings for an overdamped case
+        key_prerequisites: [math.diffeq.damped-oscillation]
+  - id: math.diffeq.forced-oscillation
+    name: Modelling forced oscillations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.undetermined-coefficients-trig
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.overdamped-critical
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.damped-oscillation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a sinusoidal forcing
+        key_prerequisites: [math.diffeq.overdamped-critical]
+      - id: kp2
+        can_do: Find an undamped forced solution
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+      - id: kp3
+        can_do: Find a damped forced solution
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig, math.diffeq.damped-oscillation]
+      - id: kp4
+        can_do: Find a response's amplitude
+        key_prerequisites: [math.diffeq.undetermined-coefficients-trig]
+  - id: math.diffeq.beats
+    name: Understanding beats
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.forced-oscillation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a sum of close frequencies
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp2
+        can_do: Rewrite as a product
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp3
+        can_do: Find a beat period
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp4
+        can_do: Sketch a beat pattern
+        key_prerequisites: [math.diffeq.forced-oscillation]
+  - id: math.diffeq.steady-transient
+    name: Separating steady and transient behaviour
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.forced-oscillation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a solution into parts
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp2
+        can_do: Find a steady amplitude
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp3
+        can_do: Find a phase lag
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp4
+        can_do: Find when the transient fades
+        key_prerequisites: [math.diffeq.forced-oscillation]
+  - id: math.diffeq.resonance
+    name: Understanding resonance
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.beats
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.steady-transient
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.forced-oscillation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an undamped resonant solution
+        key_prerequisites: [math.diffeq.forced-oscillation]
+      - id: kp2
+        can_do: Find a growth rate of an amplitude
+        key_prerequisites: [math.diffeq.beats]
+      - id: kp3
+        can_do: Find a practical resonance frequency
+        key_prerequisites: [math.diffeq.steady-transient]
+      - id: kp4
+        can_do: Explain a damage scenario
+        key_prerequisites: [math.diffeq.beats]
+  - id: math.diffeq.rlc-forced
+    name: Modelling forced RLC circuits
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.rlc-circuits
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.resonance
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.forced-oscillation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write forced RLC equations
+        key_prerequisites: [math.diffeq.rlc-circuits]
+      - id: kp2
+        can_do: Find a steady current
+        key_prerequisites: [math.diffeq.rlc-circuits]
+      - id: kp3
+        can_do: Find a resonant frequency
+        key_prerequisites: [math.diffeq.resonance]
+      - id: kp4
+        can_do: Find impedance from a steady solution
+        key_prerequisites: [math.diffeq.forced-oscillation]
+  - id: math.diffeq.laplace-definition
+    name: Defining the Laplace transform
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the transform integral
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp2
+        can_do: Find the transform of one
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find the transform of an exponential
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp4
+        can_do: Find a transform of a piecewise function
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+  - id: math.diffeq.laplace-existence
+    name: Testing existence of a Laplace transform
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-definition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define exponential order
+        key_prerequisites: [math.diffeq.laplace-definition]
+      - id: kp2
+        can_do: Test piecewise continuity
+        key_prerequisites: [math.diffeq.laplace-definition]
+      - id: kp3
+        can_do: Decide existence
+        key_prerequisites: [math.diffeq.laplace-definition]
+      - id: kp4
+        can_do: Find the domain in s
+        key_prerequisites: [math.diffeq.laplace-definition]
+  - id: math.diffeq.laplace-basic-transforms
+    name: Finding basic transforms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parts-cyclic
+        encompassing: 0.2
+        confidence: high
+      - topic: math.diffeq.laplace-existence
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.laplace-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the transform of a power of t
+        key_prerequisites: [math.diffeq.laplace-definition]
+      - id: kp2
+        can_do: Find the transform of sine and cosine
+        key_prerequisites: [math.calc2.parts-cyclic]
+      - id: kp3
+        can_do: Find the transform of a hyperbolic function
+        key_prerequisites: [math.diffeq.laplace-definition]
+      - id: kp4
+        can_do: Use linearity
+        key_prerequisites: [math.diffeq.laplace-existence]
+  - id: math.diffeq.laplace-table
+    name: Using a table of transforms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-basic-transforms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read forward transforms from a table
+        key_prerequisites: [math.diffeq.laplace-basic-transforms]
+      - id: kp2
+        can_do: Read inverse transforms from a table
+        key_prerequisites: [math.diffeq.laplace-basic-transforms]
+      - id: kp3
+        can_do: Adjust constants to match a table
+        key_prerequisites: [math.diffeq.laplace-basic-transforms]
+      - id: kp4
+        can_do: Combine several table entries
+        key_prerequisites: [math.diffeq.laplace-basic-transforms]
+  - id: math.diffeq.laplace-properties
+    name: Using linearity and shifting
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-table
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.laplace-basic-transforms
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity on a sum
+        key_prerequisites: [math.diffeq.laplace-table]
+      - id: kp2
+        can_do: Use a scaling property
+        key_prerequisites: [math.diffeq.laplace-table]
+      - id: kp3
+        can_do: Use a transform of an integral
+        key_prerequisites: [math.diffeq.laplace-basic-transforms]
+      - id: kp4
+        can_do: Use an initial and final value theorem
+        key_prerequisites: [math.diffeq.laplace-table]
+  - id: math.diffeq.inverse-laplace
+    name: Finding inverse transforms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.partial-fractions-linear
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity for an inverse
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp2
+        can_do: Split a fraction with partial fractions
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp3
+        can_do: Invert with distinct linear factors
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+      - id: kp4
+        can_do: Invert with repeated linear factors
+        key_prerequisites: [math.calc2.partial-fractions-linear]
+  - id: math.diffeq.laplace-of-derivatives
+    name: Transforming derivatives
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the first derivative rule
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp2
+        can_do: Derive the second derivative rule
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp3
+        can_do: Transform an equation
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp4
+        can_do: Solve for the unknown transform
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: math.diffeq.step-functions-laplace
+    name: Using step functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.alg1.piecewise-intro
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a unit step
+        key_prerequisites: [math.alg1.piecewise-intro]
+      - id: kp2
+        can_do: Graph a shifted step
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp3
+        can_do: Find a step's transform
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp4
+        can_do: Write a pulse from two steps
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: math.diffeq.laplace-first-shift
+    name: Using the first shifting theorem
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Shift with an exponential
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp2
+        can_do: Find a transform of an exponential times trig
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp3
+        can_do: Invert a shifted form
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp4
+        can_do: Find a transform of an exponential times a power
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: math.diffeq.inverse-laplace-completing-square
+    name: Inverting with completed squares
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.inverse-laplace
+        encompassing: 0.25
+        confidence: high
+      - topic: math.alg1.complete-the-square-expression
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.laplace-first-shift
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Complete a square in a denominator
+        key_prerequisites: [math.alg1.complete-the-square-expression]
+      - id: kp2
+        can_do: Rewrite a numerator to match shifted forms
+        key_prerequisites: [math.diffeq.laplace-first-shift]
+      - id: kp3
+        can_do: Invert to an exponential times sine
+        key_prerequisites: [math.diffeq.laplace-first-shift]
+      - id: kp4
+        can_do: Invert to an exponential times cosine
+        key_prerequisites: [math.diffeq.inverse-laplace]
+  - id: math.diffeq.laplace-t-multiplication
+    name: Transforming t times a function
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a transform in s
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp2
+        can_do: Find a transform of t times sine
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp3
+        can_do: Invert with a derivative in s
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp4
+        can_do: Solve for a repeated resonance form
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: math.diffeq.laplace-quadratic-factors
+    name: Inverting with quadratic factors
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.inverse-laplace
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.partial-fractions-quadratic
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find constants for a quadratic factor
+        key_prerequisites: [math.precalc.partial-fractions-quadratic]
+      - id: kp2
+        can_do: Invert a linear and quadratic product
+        key_prerequisites: [math.diffeq.inverse-laplace]
+      - id: kp3
+        can_do: Invert with a complex-root denominator
+        key_prerequisites: [math.diffeq.inverse-laplace]
+      - id: kp4
+        can_do: Invert with repeated quadratic factors
+        key_prerequisites: [math.diffeq.inverse-laplace, math.precalc.partial-fractions-quadratic]
+  - id: math.diffeq.solve-ivp-laplace
+    name: Solving initial value problems with Laplace transforms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-of-derivatives
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.inverse-laplace-completing-square
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.laplace-quadratic-factors
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a first-order problem
+        key_prerequisites: [math.diffeq.laplace-of-derivatives]
+      - id: kp2
+        can_do: Solve with distinct real roots
+        key_prerequisites: [math.diffeq.laplace-of-derivatives, math.diffeq.laplace-quadratic-factors]
+      - id: kp3
+        can_do: Solve with complex roots
+        key_prerequisites: [math.diffeq.inverse-laplace-completing-square]
+      - id: kp4
+        can_do: Solve with a repeated root
+        key_prerequisites: [math.diffeq.laplace-of-derivatives]
+  - id: math.diffeq.convolution
+    name: Using convolution
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.solve-ivp-laplace
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a convolution integral
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp2
+        can_do: State the convolution theorem
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp3
+        can_do: Invert a product with convolution
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp4
+        can_do: Solve with an unspecified forcing
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+  - id: math.diffeq.transfer-functions
+    name: Using transfer functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.convolution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a transfer function
+        key_prerequisites: [math.diffeq.convolution]
+      - id: kp2
+        can_do: Find one from an equation
+        key_prerequisites: [math.diffeq.convolution]
+      - id: kp3
+        can_do: Find an impulse response
+        key_prerequisites: [math.diffeq.convolution]
+      - id: kp4
+        can_do: Read stability from poles
+        key_prerequisites: [math.diffeq.convolution]
+  - id: math.diffeq.piecewise-as-step
+    name: Writing piecewise functions with step functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.step-functions-laplace
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a two-piece function
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp2
+        can_do: Write a multi-piece function
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp3
+        can_do: Write a ramp segment
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp4
+        can_do: Graph a function from steps
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+  - id: math.diffeq.second-shift
+    name: Using the second shifting theorem
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.step-functions-laplace
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the shift rule
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp2
+        can_do: Find a shifted transform
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp3
+        can_do: Invert with an exponential in s
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+      - id: kp4
+        can_do: Rewrite a function to match the rule
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+  - id: math.diffeq.discontinuous-forcing
+    name: Solving with discontinuous forcing
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.solve-ivp-laplace
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.piecewise-as-step
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.second-shift
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.step-functions-laplace
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform a piecewise forcing
+        key_prerequisites: [math.diffeq.piecewise-as-step]
+      - id: kp2
+        can_do: Solve a switched-on forcing
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp3
+        can_do: Solve a finite pulse
+        key_prerequisites: [math.diffeq.second-shift]
+      - id: kp4
+        can_do: Sketch a response
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+  - id: math.diffeq.impulse-delta
+    name: Using impulse functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.discontinuous-forcing
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a delta as a limit
+        key_prerequisites: [math.diffeq.discontinuous-forcing]
+      - id: kp2
+        can_do: Find a delta's transform
+        key_prerequisites: [math.diffeq.discontinuous-forcing]
+      - id: kp3
+        can_do: Solve an impulsive spring problem
+        key_prerequisites: [math.diffeq.discontinuous-forcing]
+      - id: kp4
+        can_do: Find a jump from an impulse
+        key_prerequisites: [math.diffeq.discontinuous-forcing]
+  - id: math.diffeq.periodic-laplace
+    name: Transforming periodic functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.geometric-series-calc
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State a periodic transform
+        key_prerequisites: [math.diffeq.laplace-properties]
+      - id: kp2
+        can_do: Find a square wave's transform
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp3
+        can_do: Find a sawtooth's transform
+        key_prerequisites: [math.calc2.geometric-series-calc]
+      - id: kp4
+        can_do: Solve with a periodic forcing
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: math.diffeq.series-shift-index
+    name: Shifting the index of a series
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.differentiate-integrate-series
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Shift an index up or down
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp2
+        can_do: Align powers of two series
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp3
+        can_do: Combine into one sigma
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+      - id: kp4
+        can_do: Differentiate a series and shift
+        key_prerequisites: [math.calc2.differentiate-integrate-series]
+  - id: math.diffeq.series-first-order
+    name: Finding series solutions of first-order equations
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.series-shift-index
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.classify-odes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute a power series into a first-order equation
+        key_prerequisites: [math.diffeq.series-shift-index]
+      - id: kp2
+        can_do: Find a recurrence
+        key_prerequisites: [math.diffeq.series-shift-index]
+      - id: kp3
+        can_do: Find a closed form
+        key_prerequisites: [math.diffeq.series-shift-index]
+      - id: kp4
+        can_do: Compare to an exact solution
+        key_prerequisites: [math.diffeq.classify-odes]
+  - id: math.diffeq.series-solutions-ordinary
+    name: Finding series solutions near an ordinary point
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.second-order-intro
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.series-first-order
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc2.differentiate-integrate-series
+        encompassing: 0.15
+        confidence: high
+      - topic: math.diffeq.series-shift-index
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an ordinary point
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp2
+        can_do: Substitute a series into a second-order equation
+        key_prerequisites: [math.calc2.differentiate-integrate-series, math.diffeq.series-shift-index]
+      - id: kp3
+        can_do: Find two independent series
+        key_prerequisites: [math.diffeq.series-first-order]
+      - id: kp4
+        can_do: Write the first few terms
+        key_prerequisites: [math.diffeq.series-first-order]
+  - id: math.diffeq.recurrence-from-series
+    name: Finding recurrence relations from series
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.series-solutions-ordinary
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a recurrence
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp2
+        can_do: List even and odd terms
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp3
+        can_do: Find a general term
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp4
+        can_do: Find a three-term recurrence
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+  - id: math.diffeq.airy-legendre-examples
+    name: Solving Airy and Legendre equations by series
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.recurrence-from-series
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve Airy's equation by series
+        key_prerequisites: [math.diffeq.recurrence-from-series]
+      - id: kp2
+        can_do: Solve Legendre's equation by series
+        key_prerequisites: [math.diffeq.recurrence-from-series]
+      - id: kp3
+        can_do: Find a terminating polynomial
+        key_prerequisites: [math.diffeq.recurrence-from-series]
+      - id: kp4
+        can_do: Use series for a variable-coefficient equation
+        key_prerequisites: [math.diffeq.recurrence-from-series]
+  - id: math.diffeq.singular-points
+    name: Classifying singular points
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.series-solutions-ordinary
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find singular points
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp2
+        can_do: Test regular singular points
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp3
+        can_do: Classify with several points
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp4
+        can_do: Classify a point at infinity by substitution
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+  - id: math.diffeq.series-solution-radius
+    name: Finding a lower bound on the radius of a series solution
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.series-solutions-ordinary
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the radius theorem
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp2
+        can_do: Find a distance to a singular point
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp3
+        can_do: Include complex singular points
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp4
+        can_do: Bound a radius without solving
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+  - id: math.diffeq.frobenius-indicial
+    name: Solving the indicial equation
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.singular-points
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume a series with an unknown power
+        key_prerequisites: [math.diffeq.singular-points]
+      - id: kp2
+        can_do: Find the indicial equation
+        key_prerequisites: [math.diffeq.singular-points]
+      - id: kp3
+        can_do: Find its roots
+        key_prerequisites: [math.diffeq.singular-points]
+      - id: kp4
+        can_do: Classify the root cases
+        key_prerequisites: [math.diffeq.singular-points]
+  - id: math.diffeq.frobenius
+    name: Using the method of Frobenius
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.recurrence-from-series
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.frobenius-indicial
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.singular-points
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve with distinct roots not differing by an integer
+        key_prerequisites: [math.diffeq.frobenius-indicial]
+      - id: kp2
+        can_do: Find a recurrence
+        key_prerequisites: [math.diffeq.recurrence-from-series]
+      - id: kp3
+        can_do: Handle roots differing by an integer
+        key_prerequisites: [math.diffeq.frobenius-indicial]
+      - id: kp4
+        can_do: Write two series solutions
+        key_prerequisites: [math.diffeq.frobenius-indicial]
+  - id: math.diffeq.frobenius-repeated-roots
+    name: Handling repeated indicial roots
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.frobenius
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a first series
+        key_prerequisites: [math.diffeq.frobenius]
+      - id: kp2
+        can_do: Write a second solution with a log
+        key_prerequisites: [math.diffeq.frobenius]
+      - id: kp3
+        can_do: Find first terms of a log solution
+        key_prerequisites: [math.diffeq.frobenius]
+      - id: kp4
+        can_do: Check a log solution form
+        key_prerequisites: [math.diffeq.frobenius]
+  - id: math.diffeq.bessel-intro
+    name: Introducing Bessel functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.frobenius-repeated-roots
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.frobenius
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Bessel's equation
+        key_prerequisites: [math.diffeq.frobenius]
+      - id: kp2
+        can_do: Find a Bessel series of order zero
+        key_prerequisites: [math.diffeq.frobenius-repeated-roots]
+      - id: kp3
+        can_do: Read a Bessel function's graph
+        key_prerequisites: [math.diffeq.frobenius]
+      - id: kp4
+        can_do: Use a recurrence between orders
+        key_prerequisites: [math.diffeq.frobenius]
+  - id: math.diffeq.systems-first-order-intro
+    name: Introducing first-order systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.second-order-intro
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a system with two unknowns
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp2
+        can_do: Name an initial value for a system
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp3
+        can_do: Read a system's solution as a curve
+        key_prerequisites: [math.diffeq.second-order-intro]
+      - id: kp4
+        can_do: Sketch components against time
+        key_prerequisites: [math.diffeq.second-order-intro]
+  - id: math.diffeq.laplace-systems
+    name: Solving systems with Laplace transforms
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.solve-ivp-laplace
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.systems-first-order-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform a two-equation system
+        key_prerequisites: [math.diffeq.solve-ivp-laplace, math.diffeq.systems-first-order-intro]
+      - id: kp2
+        can_do: Solve algebraically for the transforms
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp3
+        can_do: Invert to get both solutions
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp4
+        can_do: Solve a coupled mass problem
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+  - id: math.diffeq.verify-system-solution
+    name: Checking a solution of a system
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.systems-first-order-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a vector solution
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp2
+        can_do: Check a pair of functions
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp3
+        can_do: Check an initial value
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp4
+        can_do: Find a missing constant
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+  - id: math.diffeq.convert-to-system
+    name: Converting a higher-order equation to a system
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.verify-system-solution
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.systems-first-order-intro
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert a second-order equation
+        key_prerequisites: [math.diffeq.verify-system-solution]
+      - id: kp2
+        can_do: Convert a third-order equation
+        key_prerequisites: [math.diffeq.verify-system-solution]
+      - id: kp3
+        can_do: Convert a forced equation
+        key_prerequisites: [math.diffeq.verify-system-solution]
+      - id: kp4
+        can_do: Convert a pair of second-order equations
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+  - id: math.diffeq.matrix-form-systems
+    name: Writing a system in matrix form
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.convert-to-system
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a system with a coefficient matrix
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Tell homogeneous from forced
+        key_prerequisites: [math.diffeq.convert-to-system]
+      - id: kp3
+        can_do: Multiply out a matrix form
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Write an initial condition as a vector
+        key_prerequisites: [math.diffeq.convert-to-system]
+  - id: math.diffeq.system-from-application
+    name: Writing systems from applications
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.systems-first-order-intro
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for two connected tanks in litres
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp2
+        can_do: Write equations for two masses
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp3
+        can_do: Write a model of interacting populations
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+      - id: kp4
+        can_do: Write a two-loop circuit
+        key_prerequisites: [math.diffeq.systems-first-order-intro]
+  - id: math.diffeq.superposition-systems
+    name: Using superposition for systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.matrix-form-systems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add vector solutions
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+      - id: kp2
+        can_do: Scale a vector solution
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+      - id: kp3
+        can_do: Write a general combination
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+      - id: kp4
+        can_do: Show a non-homogeneous case failing
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+  - id: math.diffeq.eigen-solutions-real
+    name: Solving with real eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.superposition-systems
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.matrix-form-systems
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Try an exponential vector
+        key_prerequisites: [math.diffeq.superposition-systems]
+      - id: kp2
+        can_do: Solve with eigenvalues
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp3
+        can_do: Write a general solution
+        key_prerequisites: [math.diffeq.superposition-systems]
+      - id: kp4
+        can_do: Solve with a zero eigenvalue
+        key_prerequisites: [math.linalg.find-eigenvectors]
+  - id: math.diffeq.eigen-solutions-complex
+    name: Solving with complex eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.complex-eigenvalues
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.euler-formula
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a complex vector solution
+        key_prerequisites: [math.linalg.complex-eigenvalues]
+      - id: kp2
+        can_do: Split into real and imaginary parts
+        key_prerequisites: [math.diffeq.euler-formula]
+      - id: kp3
+        can_do: Write a real general solution
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp4
+        can_do: Solve an initial value problem
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.eigen-solutions-repeated
+    name: Solving with repeated eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.eigenspaces-multiplicity
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a shortage of eigenvectors
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+      - id: kp2
+        can_do: Handle a repeated eigenvalue with two eigenvectors
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+      - id: kp3
+        can_do: Write a solution with a factor of t
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp4
+        can_do: Solve an initial value problem
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.phase-portraits-real
+    name: Drawing phase portraits with real eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw straight-line solutions
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp2
+        can_do: Draw a saddle
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp3
+        can_do: Draw a node
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp4
+        can_do: Tell attractor from repeller
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.phase-portraits-complex
+    name: Drawing phase portraits with complex eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-complex
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.phase-portraits-real
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a center
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+      - id: kp2
+        can_do: Draw a spiral
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+      - id: kp3
+        can_do: Find a rotation direction
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+      - id: kp4
+        can_do: Compare to a real-eigenvalue portrait
+        key_prerequisites: [math.diffeq.phase-portraits-real]
+  - id: math.diffeq.coupled-tanks-springs
+    name: Modelling coupled tanks and springs
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-complex
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.modelling-mixing
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.system-from-application
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coupled tank salt amounts
+        key_prerequisites: [math.diffeq.modelling-mixing, math.diffeq.system-from-application]
+      - id: kp2
+        can_do: Find normal modes of two masses
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+      - id: kp3
+        can_do: Find a solution from initial values
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+      - id: kp4
+        can_do: Interpret a mode in motion
+        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+  - id: math.diffeq.fundamental-set-systems
+    name: Testing fundamental sets of systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.superposition-systems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a vector Wronskian
+        key_prerequisites: [math.diffeq.superposition-systems]
+      - id: kp2
+        can_do: Test a pair for independence
+        key_prerequisites: [math.diffeq.superposition-systems]
+      - id: kp3
+        can_do: Write a fundamental set
+        key_prerequisites: [math.diffeq.superposition-systems]
+      - id: kp4
+        can_do: Find a Wronskian's sign
+        key_prerequisites: [math.diffeq.superposition-systems]
+  - id: math.diffeq.ivp-systems
+    name: Solving initial value problems for systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for constants
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp2
+        can_do: Solve for three unknowns
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp3
+        can_do: Sketch a solution curve
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp4
+        can_do: Find when a component vanishes
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.fundamental-matrices
+    name: Using fundamental matrices
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fundamental-set-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.ivp-systems
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a fundamental matrix
+        key_prerequisites: [math.diffeq.fundamental-set-systems]
+      - id: kp2
+        can_do: Solve with its inverse
+        key_prerequisites: [math.diffeq.ivp-systems]
+      - id: kp3
+        can_do: Find a matrix equal to the identity at zero
+        key_prerequisites: [math.diffeq.ivp-systems]
+      - id: kp4
+        can_do: Use it for any initial value
+        key_prerequisites: [math.diffeq.fundamental-set-systems, math.diffeq.ivp-systems]
+  - id: math.diffeq.generalized-eigenvectors
+    name: Using generalized eigenvectors
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-repeated
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.jordan-form-intro
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a generalized eigenvector
+        key_prerequisites: [math.diffeq.eigen-solutions-repeated, math.linalg.jordan-form-intro]
+      - id: kp2
+        can_do: Write a second solution
+        key_prerequisites: [math.diffeq.eigen-solutions-repeated]
+      - id: kp3
+        can_do: Handle a triple eigenvalue
+        key_prerequisites: [math.linalg.jordan-form-intro]
+      - id: kp4
+        can_do: Solve an initial value problem
+        key_prerequisites: [math.diffeq.eigen-solutions-repeated]
+  - id: math.diffeq.undetermined-systems
+    name: Using undetermined coefficients for systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Guess a vector form
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp2
+        can_do: Solve for vector coefficients
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp3
+        can_do: Force with an exponential
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp4
+        can_do: Adjust on overlap
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.nonhomogeneous-systems
+    name: Solving nonhomogeneous systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fundamental-matrices
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.variation-of-parameters
+        encompassing: 0.2
+        confidence: high
+      - topic: math.diffeq.undetermined-systems
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the general form
+        key_prerequisites: [math.diffeq.fundamental-matrices]
+      - id: kp2
+        can_do: Use variation of parameters
+        key_prerequisites: [math.diffeq.fundamental-matrices, math.diffeq.variation-of-parameters]
+      - id: kp3
+        can_do: Use undetermined coefficients
+        key_prerequisites: [math.diffeq.undetermined-systems]
+      - id: kp4
+        can_do: Use diagonalization
+        key_prerequisites: [math.diffeq.fundamental-matrices]
+  - id: math.diffeq.decouple-by-diagonalizing
+    name: Decoupling a system by diagonalizing
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.diagonalization
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Change variables with eigenvectors
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp2
+        can_do: Solve decoupled equations
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+      - id: kp3
+        can_do: Return to the original variables
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp4
+        can_do: Decouple a forced system
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.matrix-exponential
+    name: Using the matrix exponential
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.decouple-by-diagonalizing
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.eigen-solutions-real
+        encompassing: 0.15
+        confidence: high
+      - topic: math.linalg.diagonalization
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a matrix exponential by a series
+        key_prerequisites: [math.diffeq.decouple-by-diagonalizing]
+      - id: kp2
+        can_do: Compute by diagonalizing
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp3
+        can_do: Compute for a nilpotent part
+        key_prerequisites: [math.diffeq.decouple-by-diagonalizing]
+      - id: kp4
+        can_do: Solve a system with it
+        key_prerequisites: [math.diffeq.eigen-solutions-real]
+  - id: math.diffeq.phase-portrait-repeated
+    name: Drawing phase portraits with repeated eigenvalues
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.phase-portraits-real
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.generalized-eigenvectors
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.eigen-solutions-repeated
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw an improper node
+        key_prerequisites: [math.diffeq.generalized-eigenvectors]
+      - id: kp2
+        can_do: Draw a proper node
+        key_prerequisites: [math.diffeq.eigen-solutions-repeated]
+      - id: kp3
+        can_do: Find its single direction
+        key_prerequisites: [math.diffeq.generalized-eigenvectors]
+      - id: kp4
+        can_do: Compare with a node
+        key_prerequisites: [math.diffeq.phase-portraits-real]
+  - id: math.diffeq.stability-of-linear-systems
+    name: Classifying stability of linear systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.phase-portraits-complex
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.phase-portrait-repeated
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify by eigenvalue signs
+        key_prerequisites: [math.diffeq.phase-portraits-complex]
+      - id: kp2
+        can_do: Include spirals and centers
+        key_prerequisites: [math.diffeq.phase-portraits-complex]
+      - id: kp3
+        can_do: Include repeated cases
+        key_prerequisites: [math.diffeq.phase-portrait-repeated]
+      - id: kp4
+        can_do: Find a parameter that changes stability
+        key_prerequisites: [math.diffeq.phase-portraits-complex]
+  - id: math.diffeq.trace-determinant-plane
+    name: Classifying with trace and determinant
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.stability-of-linear-systems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read trace and determinant
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+      - id: kp2
+        can_do: Find regions in the plane
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+      - id: kp3
+        can_do: Classify from the two values
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+      - id: kp4
+        can_do: Follow a parameter through the plane
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+  - id: math.diffeq.nonlinear-equilibria
+    name: Finding equilibria of nonlinear systems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.stability-of-linear-systems
+        encompassing: 0.3
+        confidence: high
+      - topic: math.alg2.nonlinear-systems
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibria of a polynomial system
+        key_prerequisites: [math.alg2.nonlinear-systems]
+      - id: kp2
+        can_do: Find equilibria with trig
+        key_prerequisites: [math.alg2.nonlinear-systems]
+      - id: kp3
+        can_do: Find a physical interpretation
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+      - id: kp4
+        can_do: Sketch a vector field near them
+        key_prerequisites: [math.diffeq.stability-of-linear-systems]
+  - id: math.diffeq.numerical-systems
+    name: Solving systems numerically
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.improved-euler-rk4
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.convert-to-system
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Euler's method for a system
+        key_prerequisites: [math.diffeq.convert-to-system]
+      - id: kp2
+        can_do: Write a higher-order equation as a step
+        key_prerequisites: [math.diffeq.convert-to-system]
+      - id: kp3
+        can_do: Use a fourth-order step
+        key_prerequisites: [math.diffeq.improved-euler-rk4]
+      - id: kp4
+        can_do: Compare numerical results to a known solution
+        key_prerequisites: [math.diffeq.improved-euler-rk4]
+  - id: math.diffeq.nullclines
+    name: Drawing nullclines
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.nonlinear-equilibria
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find nullclines
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp2
+        can_do: Mark flow direction in regions
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp3
+        can_do: Find equilibria from crossing
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp4
+        can_do: Sketch a phase plane
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+  - id: math.diffeq.linearization-jacobian
+    name: Linearizing at equilibria
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc3.linearization-multivariable
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.nullclines
+        encompassing: 0.2
+        confidence: high
+      - topic: math.diffeq.trace-determinant-plane
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.nonlinear-equilibria
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a Jacobian
+        key_prerequisites: [math.calc3.linearization-multivariable]
+      - id: kp2
+        can_do: Evaluate at an equilibrium
+        key_prerequisites: [math.calc3.linearization-multivariable, math.diffeq.nonlinear-equilibria]
+      - id: kp3
+        can_do: Classify a nonlinear equilibrium
+        key_prerequisites: [math.diffeq.trace-determinant-plane]
+      - id: kp4
+        can_do: Tell when linearization is inconclusive
+        key_prerequisites: [math.diffeq.trace-determinant-plane]
+  - id: math.diffeq.predator-prey
+    name: Modelling predator and prey
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linearization-jacobian
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the model's terms
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp2
+        can_do: Find equilibria
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp3
+        can_do: Linearize at both points
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp4
+        can_do: Find a cycle's shape
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+  - id: math.diffeq.competing-species
+    name: Modelling competing species
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linearization-jacobian
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the model's terms
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp2
+        can_do: Find equilibria
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp3
+        can_do: Decide coexistence
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp4
+        can_do: Decide extinction with phase planes
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+  - id: math.diffeq.limit-cycles-intro
+    name: Exploring limit cycles
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.predator-prey
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a limit cycle
+        key_prerequisites: [math.diffeq.predator-prey]
+      - id: kp2
+        can_do: Find a cycle in polar form
+        key_prerequisites: [math.diffeq.predator-prey]
+      - id: kp3
+        can_do: Decide stability from polar form
+        key_prerequisites: [math.diffeq.predator-prey]
+      - id: kp4
+        can_do: Use a trapping-region argument
+        key_prerequisites: [math.diffeq.predator-prey]
+  - id: math.diffeq.conserved-quantities
+    name: Using conserved quantities
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.nonlinear-equilibria
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a conserved quantity
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp2
+        can_do: Find level curves as orbits
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp3
+        can_do: Tell a center from a level curve
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+      - id: kp4
+        can_do: Use energy on a pendulum
+        key_prerequisites: [math.diffeq.nonlinear-equilibria]
+  - id: math.diffeq.nonlinear-pendulum
+    name: Analyzing a nonlinear pendulum
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linearization-jacobian
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.free-oscillation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.conserved-quantities
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the pendulum's equation
+        key_prerequisites: [math.diffeq.free-oscillation]
+      - id: kp2
+        can_do: Find equilibria and their types
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp3
+        can_do: Find energy curves
+        key_prerequisites: [math.diffeq.conserved-quantities]
+      - id: kp4
+        can_do: Compare small and large swings
+        key_prerequisites: [math.diffeq.linearization-jacobian, math.diffeq.free-oscillation]
+  - id: math.diffeq.lyapunov-intro
+    name: Exploring Lyapunov functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.linearization-jacobian
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a Lyapunov function
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp2
+        can_do: Test a candidate
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp3
+        can_do: Conclude stability
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+      - id: kp4
+        can_do: Handle an inconclusive linearization
+        key_prerequisites: [math.diffeq.linearization-jacobian]
+  - id: math.diffeq.boundary-solvability
+    name: Telling when boundary problems have solutions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve with a unique solution
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Find a no-solution case
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Find an infinite-solution case
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp4
+        can_do: Compare with initial value problems
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: math.diffeq.boundary-value-eigenproblems
+    name: Solving two-point boundary eigenvalue problems
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.boundary-solvability
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an eigenvalue problem
+        key_prerequisites: [math.diffeq.boundary-solvability]
+      - id: kp2
+        can_do: Test positive, zero and negative cases
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+      - id: kp3
+        can_do: Find eigenvalues with Dirichlet ends
+        key_prerequisites: [math.diffeq.boundary-solvability]
+      - id: kp4
+        can_do: Find eigenvalues with Neumann ends
+        key_prerequisites: [math.diffeq.boundary-solvability]
+  - id: math.diffeq.sine-cosine-eigenfunctions
+    name: Finding sine and cosine eigenfunctions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sine eigenfunctions
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp2
+        can_do: Find cosine eigenfunctions
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp3
+        can_do: Find periodic eigenfunctions
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp4
+        can_do: Rescale to a general interval
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+  - id: math.diffeq.trig-orthogonality-intro
+    name: Seeing orthogonality of sines and cosines
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.trig-products-different-angles
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate a product of different sines
+        key_prerequisites: [math.calc2.trig-products-different-angles]
+      - id: kp2
+        can_do: Integrate a product of a sine and cosine
+        key_prerequisites: [math.calc2.trig-products-different-angles]
+      - id: kp3
+        can_do: Find a sine squared integral over a period
+        key_prerequisites: [math.calc2.trig-products-different-angles]
+      - id: kp4
+        can_do: Summarize orthogonality on an interval
+        key_prerequisites: [math.calc2.trig-products-different-angles]
+  - id: math.diffeq.fourier-series-intro
+    name: Introducing Fourier series
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parts-cyclic
+        encompassing: 0.2
+        confidence: high
+      - topic: math.diffeq.sine-cosine-eigenfunctions
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.trig-orthogonality-intro
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a series form
+        key_prerequisites: [math.diffeq.sine-cosine-eigenfunctions]
+      - id: kp2
+        can_do: Find coefficients from orthogonality
+        key_prerequisites: [math.diffeq.trig-orthogonality-intro]
+      - id: kp3
+        can_do: Find coefficients of a line
+        key_prerequisites: [math.calc2.parts-cyclic]
+      - id: kp4
+        can_do: Find coefficients on a general period
+        key_prerequisites: [math.diffeq.trig-orthogonality-intro]
+  - id: math.diffeq.fourier-even-odd
+    name: Using even and odd Fourier series
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.integrate-even-odd
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.alg2.even-odd-functions
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot even and odd functions
+        key_prerequisites: [math.alg2.even-odd-functions]
+      - id: kp2
+        can_do: Find a sine series for an odd function
+        key_prerequisites: [math.calc1.integrate-even-odd]
+      - id: kp3
+        can_do: Find a cosine series for an even function
+        key_prerequisites: [math.calc1.integrate-even-odd]
+      - id: kp4
+        can_do: Skip half the coefficients
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+  - id: math.diffeq.fourier-piecewise-compute
+    name: Finding Fourier series of piecewise functions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a coefficient integral
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp2
+        can_do: Find a square wave's series
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp3
+        can_do: Find a triangle wave's series
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp4
+        can_do: Plot partial sums
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+  - id: math.diffeq.fourier-convergence-statement
+    name: Stating Fourier convergence
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-piecewise-compute
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.diffeq.fourier-piecewise-compute]
+      - id: kp2
+        can_do: Find a series value at a jump
+        key_prerequisites: [math.diffeq.fourier-piecewise-compute]
+      - id: kp3
+        can_do: Find a series value at a continuous point
+        key_prerequisites: [math.diffeq.fourier-piecewise-compute]
+      - id: kp4
+        can_do: Sketch a periodic extension
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+  - id: math.diffeq.fourier-half-range
+    name: Finding half-range expansions
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.fourier-even-odd
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Extend evenly
+        key_prerequisites: [math.diffeq.fourier-even-odd]
+      - id: kp2
+        can_do: Extend oddly
+        key_prerequisites: [math.diffeq.fourier-even-odd]
+      - id: kp3
+        can_do: Find a half-range sine series
+        key_prerequisites: [math.diffeq.fourier-even-odd]
+      - id: kp4
+        can_do: Find a half-range cosine series
+        key_prerequisites: [math.diffeq.fourier-even-odd]
+  - id: math.diffeq.separation-of-variables-preview
+    name: Previewing separation of variables
+    subject: math
+    course: math.diffeq
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc3.partial-differential-equation-check
+        encompassing: 0.25
+        confidence: high
+      - topic: math.diffeq.fourier-half-range
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.fourier-even-odd
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume a product solution
+        key_prerequisites: [math.calc3.partial-differential-equation-check]
+      - id: kp2
+        can_do: Separate into two ordinary equations
+        key_prerequisites: [math.diffeq.fourier-half-range]
+      - id: kp3
+        can_do: Solve for a heat problem's modes
+        key_prerequisites: [math.diffeq.fourier-half-range]
+      - id: kp4
+        can_do: Fit an initial condition with a series
+        key_prerequisites: [math.diffeq.fourier-even-odd]
