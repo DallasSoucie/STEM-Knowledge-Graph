@@ -800,3 +800,438 @@ topics:
       - id: kp4
         can_do: Compare two thrown objects
         key_prerequisites: [physics.hs1.thrown-upward]
+  - id: physics.hs1.drawing-vectors
+    name: Drawing vectors to scale
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.scalars-and-vectors-1d
+        encompassing: 0.3
+        confidence: high
+      - topic: math.geom.angle-notation-measure
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a scale for a vector
+        key_prerequisites: [physics.hs1.scalars-and-vectors-1d]
+      - id: kp2
+        can_do: Draw a vector from a magnitude and a direction
+        key_prerequisites: [math.geom.angle-notation-measure]
+      - id: kp3
+        can_do: Read a magnitude and direction from a drawing
+        key_prerequisites: [math.geom.angle-notation-measure]
+      - id: kp4
+        can_do: Name equal and opposite vectors
+        key_prerequisites: [physics.hs1.scalars-and-vectors-1d]
+  - id: physics.hs1.vector-components-physics
+    name: Resolving a vector into components
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.drawing-vectors
+        encompassing: 0.3
+        confidence: high
+      - topic: math.geom.trig-find-side
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a vector's right triangle
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp2
+        can_do: Find components with sine and cosine
+        key_prerequisites: [math.geom.trig-find-side]
+      - id: kp3
+        can_do: Set signs from the quadrant
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp4
+        can_do: Find components from an angle measured from another axis
+        key_prerequisites: [math.geom.trig-find-side]
+  - id: physics.hs1.magnitude-direction-physics
+    name: Finding a vector from its components
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.vector-components-physics
+        encompassing: 0.3
+        confidence: high
+      - topic: math.geom.trig-find-angle
+        encompassing: 0.3
+        confidence: high
+      - topic: math.g8.pythagorean-irrational-answers
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a magnitude from components
+        key_prerequisites: [math.g8.pythagorean-irrational-answers]
+      - id: kp2
+        can_do: Find an angle from components
+        key_prerequisites: [math.geom.trig-find-angle]
+      - id: kp3
+        can_do: Set a direction from the quadrant
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp4
+        can_do: Write a direction in words
+        key_prerequisites: [math.geom.trig-find-angle]
+  - id: physics.hs1.relative-velocity-line
+    name: Finding relative velocity along a line
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.displacement-with-signs
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.relative-motion
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a reference frame
+        key_prerequisites: [physics.ms.relative-motion]
+      - id: kp2
+        can_do: Add velocities in the same direction
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp3
+        can_do: Find velocities in opposite directions
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp4
+        can_do: Find a closing time from relative velocity
+        key_prerequisites: [physics.ms.relative-motion]
+  - id: physics.hs1.independence-of-motion
+    name: Separating horizontal and vertical motion
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.vector-components-physics
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.free-fall-equations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show that horizontal and vertical motion are independent
+        key_prerequisites: [physics.hs1.free-fall-equations]
+      - id: kp2
+        can_do: Split an initial velocity
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp3
+        can_do: Write equations for each direction
+        key_prerequisites: [physics.hs1.free-fall-equations]
+      - id: kp4
+        can_do: Compare a dropped and a launched object
+        key_prerequisites: [physics.hs1.free-fall-equations]
+  - id: physics.hs1.horizontal-launch
+    name: Solving horizontal projectile launches
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.independence-of-motion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a fall time from a height
+        key_prerequisites: [physics.hs1.independence-of-motion]
+      - id: kp2
+        can_do: Find horizontal distance
+        key_prerequisites: [physics.hs1.independence-of-motion]
+      - id: kp3
+        can_do: Find a landing velocity
+        key_prerequisites: [physics.hs1.independence-of-motion]
+      - id: kp4
+        can_do: Find a launch speed from a landing point
+        key_prerequisites: [physics.hs1.independence-of-motion]
+  - id: physics.hs1.angled-launch
+    name: Solving angled projectile launches
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.horizontal-launch
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.thrown-upward
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a launch velocity
+        key_prerequisites: [physics.hs1.horizontal-launch]
+      - id: kp2
+        can_do: Find a time to the peak
+        key_prerequisites: [physics.hs1.thrown-upward]
+      - id: kp3
+        can_do: Find a total flight time on level ground
+        key_prerequisites: [physics.hs1.thrown-upward]
+      - id: kp4
+        can_do: Find a position at a time
+        key_prerequisites: [physics.hs1.horizontal-launch]
+  - id: physics.hs1.range-and-peak
+    name: Finding projectile range and peak height
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.angled-launch
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a peak height
+        key_prerequisites: [physics.hs1.angled-launch]
+      - id: kp2
+        can_do: Find a range on level ground
+        key_prerequisites: [physics.hs1.angled-launch]
+      - id: kp3
+        can_do: Compare complementary launch angles
+        key_prerequisites: [physics.hs1.angled-launch]
+      - id: kp4
+        can_do: Find an angle for a greatest range
+        key_prerequisites: [physics.hs1.angled-launch]
+  - id: physics.hs1.scaling-vectors
+    name: Scaling vectors
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.drawing-vectors
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Scale a vector by a positive number
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp2
+        can_do: Scale by a negative number
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp3
+        can_do: Scale a vector's components
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp4
+        can_do: Find a unit direction
+        key_prerequisites: [physics.hs1.drawing-vectors]
+  - id: physics.hs1.adding-vectors-graphically
+    name: Adding vectors graphically
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.scaling-vectors
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.drawing-vectors
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two vectors tip to tail
+        key_prerequisites: [physics.hs1.scaling-vectors]
+      - id: kp2
+        can_do: Add three vectors in any order
+        key_prerequisites: [physics.hs1.scaling-vectors]
+      - id: kp3
+        can_do: Find a resultant with a ruler and protractor
+        key_prerequisites: [physics.hs1.drawing-vectors]
+      - id: kp4
+        can_do: Compare results with a parallelogram
+        key_prerequisites: [physics.hs1.scaling-vectors]
+  - id: physics.hs1.adding-by-components
+    name: Adding vectors by components
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.magnitude-direction-physics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.adding-vectors-graphically
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add x and y components
+        key_prerequisites: [physics.hs1.magnitude-direction-physics]
+      - id: kp2
+        can_do: Find a resultant's magnitude and direction
+        key_prerequisites: [physics.hs1.magnitude-direction-physics]
+      - id: kp3
+        can_do: Add three vectors
+        key_prerequisites: [physics.hs1.magnitude-direction-physics]
+      - id: kp4
+        can_do: Check with a sketch
+        key_prerequisites: [physics.hs1.adding-vectors-graphically]
+  - id: physics.hs1.subtracting-vectors
+    name: Subtracting vectors
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite subtraction as a negative vector
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp2
+        can_do: Find a difference by components
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp3
+        can_do: Find a change in velocity
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp4
+        can_do: Find a displacement between two points
+        key_prerequisites: [physics.hs1.adding-by-components]
+  - id: physics.hs1.displacement-in-two-dimensions
+    name: Finding two-dimensional displacement and velocity
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.average-velocity
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a total displacement
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp2
+        can_do: Find a two-dimensional velocity
+        key_prerequisites: [physics.hs1.average-velocity]
+      - id: kp3
+        can_do: Find a direction of motion
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp4
+        can_do: Compare distance and displacement on a route
+        key_prerequisites: [physics.hs1.adding-by-components]
+  - id: physics.hs1.relative-velocity-plane
+    name: Finding relative velocity in a plane
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.relative-velocity-line
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.subtracting-vectors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a boat's velocity across a river
+        key_prerequisites: [physics.hs1.subtracting-vectors]
+      - id: kp2
+        can_do: Find a crossing time
+        key_prerequisites: [physics.hs1.relative-velocity-line]
+      - id: kp3
+        can_do: Find a heading to go straight across
+        key_prerequisites: [physics.hs1.subtracting-vectors]
+      - id: kp4
+        can_do: Solve an aircraft in wind
+        key_prerequisites: [physics.hs1.subtracting-vectors]
+  - id: physics.hs1.tilted-axes
+    name: Choosing tilted axes for components
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.vector-components-physics
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rotate axes for a surface
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp2
+        can_do: Find components along a slope
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp3
+        can_do: Find an angle between a force and a slope
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp4
+        can_do: Choose useful axes
+        key_prerequisites: [physics.hs1.vector-components-physics]
+  - id: physics.hs1.launch-from-a-height
+    name: Solving launches from a height
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.angled-launch
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.time-from-a-quadratic
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a time equation
+        key_prerequisites: [physics.hs1.angled-launch]
+      - id: kp2
+        can_do: Solve with the quadratic formula
+        key_prerequisites: [physics.hs1.time-from-a-quadratic]
+      - id: kp3
+        can_do: Find a landing point
+        key_prerequisites: [physics.hs1.angled-launch]
+      - id: kp4
+        can_do: Find a launch from below a target
+        key_prerequisites: [physics.hs1.angled-launch]
+  - id: physics.hs1.projectile-graphs
+    name: Reading projectile motion graphs
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.range-and-peak
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.free-fall-graphs
+        encompassing: 0.2
+        confidence: high
+      - topic: physics.hs1.launch-from-a-height
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch horizontal velocity
+        key_prerequisites: [physics.hs1.range-and-peak]
+      - id: kp2
+        can_do: Sketch vertical velocity
+        key_prerequisites: [physics.hs1.free-fall-graphs]
+      - id: kp3
+        can_do: Sketch a trajectory
+        key_prerequisites: [physics.hs1.range-and-peak]
+      - id: kp4
+        can_do: Read launch values from graphs
+        key_prerequisites: [physics.hs1.launch-from-a-height]
