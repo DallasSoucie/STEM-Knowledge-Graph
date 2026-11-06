@@ -1235,3 +1235,649 @@ topics:
       - id: kp4
         can_do: Read launch values from graphs
         key_prerequisites: [physics.hs1.launch-from-a-height]
+  - id: physics.hs1.choosing-a-system
+    name: Choosing a system
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.ms.forces-as-interactions
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a boundary around a system
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp2
+        can_do: Tell internal from external forces
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp3
+        can_do: Choose a useful system
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp4
+        can_do: Show a force changes role with a new system
+        key_prerequisites: [physics.ms.forces-as-interactions]
+  - id: physics.hs1.free-body-diagrams
+    name: Drawing free-body diagrams
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-system
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.force-diagrams
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.drawing-vectors
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw every force on one object
+        key_prerequisites: [physics.ms.force-diagrams]
+      - id: kp2
+        can_do: Name each force's source
+        key_prerequisites: [physics.hs1.choosing-a-system]
+      - id: kp3
+        can_do: Leave out forces the object exerts
+        key_prerequisites: [physics.hs1.choosing-a-system]
+      - id: kp4
+        can_do: Draw arrows with sensible sizes
+        key_prerequisites: [physics.hs1.drawing-vectors]
+  - id: physics.hs1.weight-and-field-strength
+    name: Using weight and field strength
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.ms.weight-calculation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.rearranging-physics-formulas
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find weight with 9.8 newtons per kilogram
+        key_prerequisites: [physics.ms.weight-calculation]
+      - id: kp2
+        can_do: Tell mass from weight
+        key_prerequisites: [physics.ms.weight-calculation]
+      - id: kp3
+        can_do: Find mass from a weight
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+      - id: kp4
+        can_do: Find a planet's field strength from a weight
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+  - id: physics.hs1.normal-force
+    name: Finding normal force
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.free-body-diagrams
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.weight-and-field-strength
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find normal force on a level surface
+        key_prerequisites: [physics.hs1.weight-and-field-strength]
+      - id: kp2
+        can_do: Add an extra downward push
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+      - id: kp3
+        can_do: Add an upward pull
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+      - id: kp4
+        can_do: Explain why normal force is not always weight
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+  - id: physics.hs1.tension
+    name: Finding tension in a rope
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.free-body-diagrams
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.weight-and-field-strength
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tension for a hanging object
+        key_prerequisites: [physics.hs1.weight-and-field-strength]
+      - id: kp2
+        can_do: Explain why a light rope has one tension
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+      - id: kp3
+        can_do: Find tension with two ropes in line
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+      - id: kp4
+        can_do: Use a pulley to change a direction
+        key_prerequisites: [physics.hs1.free-body-diagrams]
+  - id: physics.hs1.first-law-in-one-dimension
+    name: Solving balanced force problems in one dimension
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.normal-force
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.tension
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.ms.inertia
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a resting object
+        key_prerequisites: [physics.hs1.normal-force, physics.hs1.tension]
+      - id: kp2
+        can_do: Solve a constant-velocity object
+        key_prerequisites: [physics.ms.inertia]
+      - id: kp3
+        can_do: Find an unknown force
+        key_prerequisites: [physics.hs1.normal-force]
+      - id: kp4
+        can_do: Explain why motion continues
+        key_prerequisites: [physics.ms.inertia]
+  - id: physics.hs1.second-law-in-one-dimension
+    name: Applying Newton's second law in one dimension
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.first-law-in-one-dimension
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.calculating-with-second-law
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find acceleration from a diagram
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp2
+        can_do: Find an unknown force from acceleration
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp3
+        can_do: Choose a positive direction
+        key_prerequisites: [physics.ms.calculating-with-second-law]
+      - id: kp4
+        can_do: Solve vertical motion with a rope
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+  - id: physics.hs1.second-law-with-motion
+    name: Combining forces and motion equations
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a force from motion data
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp2
+        can_do: Find motion from forces
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp3
+        can_do: Find a stopping force
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension, physics.hs1.choosing-a-motion-equation]
+      - id: kp4
+        can_do: Find a time to reach a speed
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension, physics.hs1.choosing-a-motion-equation]
+  - id: physics.hs1.apparent-weight
+    name: Finding apparent weight in an elevator
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a scale reading while accelerating up
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp2
+        can_do: Find a scale reading while accelerating down
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp3
+        can_do: Find a scale reading at constant velocity
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Explain free fall in a scale reading
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+  - id: physics.hs1.third-law-in-systems
+    name: Applying Newton's third law to systems
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.action-reaction
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Label force pairs in a system
+        key_prerequisites: [physics.ms.action-reaction]
+      - id: kp2
+        can_do: Tell a pair from balanced forces
+        key_prerequisites: [physics.ms.action-reaction]
+      - id: kp3
+        can_do: Find a contact force between two blocks
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Explain motion from an action-reaction pair
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+  - id: physics.hs1.connected-objects
+    name: Solving connected objects on a surface
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.third-law-in-systems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat connected objects as one system
+        key_prerequisites: [physics.hs1.third-law-in-systems]
+      - id: kp2
+        can_do: Find a shared acceleration
+        key_prerequisites: [physics.hs1.third-law-in-systems]
+      - id: kp3
+        can_do: Find a rope tension
+        key_prerequisites: [physics.hs1.third-law-in-systems]
+      - id: kp4
+        can_do: Find a contact force
+        key_prerequisites: [physics.hs1.third-law-in-systems]
+  - id: physics.hs1.pulley-systems
+    name: Solving hanging pulley systems
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.connected-objects
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a hanging mass and table system
+        key_prerequisites: [physics.hs1.connected-objects]
+      - id: kp2
+        can_do: Solve two hanging masses
+        key_prerequisites: [physics.hs1.connected-objects]
+      - id: kp3
+        can_do: Find a system's acceleration
+        key_prerequisites: [physics.hs1.connected-objects]
+      - id: kp4
+        can_do: Find a rope's tension
+        key_prerequisites: [physics.hs1.connected-objects]
+  - id: physics.hs1.forces-at-an-angle
+    name: Resolving forces at an angle
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.vector-components-physics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split an angled force
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp2
+        can_do: Find net force on two axes
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension, physics.hs1.vector-components-physics]
+      - id: kp3
+        can_do: Find acceleration with an angled force
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Find normal force with an angled pull
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+  - id: physics.hs1.inclines-without-friction
+    name: Solving inclined planes without friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.forces-at-an-angle
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.tilted-axes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split weight on a slope
+        key_prerequisites: [physics.hs1.tilted-axes]
+      - id: kp2
+        can_do: Find normal force on a slope
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp3
+        can_do: Find acceleration down a slope
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp4
+        can_do: Find a force to hold on a slope
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+  - id: physics.hs1.static-friction
+    name: Using static friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.first-law-in-one-dimension
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.friction-factors
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a maximum static friction formula
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp2
+        can_do: Explain why friction matches the push up to a limit
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp3
+        can_do: Find a push needed to start motion
+        key_prerequisites: [physics.ms.friction-factors]
+      - id: kp4
+        can_do: Find a coefficient from a limit
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+  - id: physics.hs1.kinetic-friction
+    name: Using kinetic friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.static-friction
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate kinetic friction
+        key_prerequisites: [physics.hs1.static-friction]
+      - id: kp2
+        can_do: Compare static and kinetic friction
+        key_prerequisites: [physics.hs1.static-friction]
+      - id: kp3
+        can_do: Find acceleration with friction
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Find a stopping distance with friction
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+  - id: physics.hs1.friction-coefficient-lab
+    name: Finding a friction coefficient from data
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.slope-meaning-in-data
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Plot friction against normal force
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp2
+        can_do: Find a coefficient from a slope
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp3
+        can_do: Compare a coefficient across surfaces
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp4
+        can_do: Find a coefficient from a sliding angle
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.hs1.friction-at-an-angle
+    name: Solving friction with an angled force
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.forces-at-an-angle
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a normal force with an angled pull
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp2
+        can_do: Find friction from that normal force
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp3
+        can_do: Find an acceleration
+        key_prerequisites: [physics.hs1.kinetic-friction, physics.hs1.forces-at-an-angle]
+      - id: kp4
+        can_do: Compare pushing with pulling
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+  - id: physics.hs1.inclines-with-friction
+    name: Solving inclined planes with friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.inclines-without-friction
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find friction on a slope
+        key_prerequisites: [physics.hs1.inclines-without-friction, physics.hs1.kinetic-friction]
+      - id: kp2
+        can_do: Find an acceleration going down
+        key_prerequisites: [physics.hs1.inclines-without-friction, physics.hs1.kinetic-friction]
+      - id: kp3
+        can_do: Find an acceleration going up
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp4
+        can_do: Find a sliding angle
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.hs1.drag-and-terminal-velocity
+    name: Modelling drag and terminal velocity
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.ms.air-and-water-resistance
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate drag to speed
+        key_prerequisites: [physics.ms.air-and-water-resistance]
+      - id: kp2
+        can_do: Explain terminal velocity with forces
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp3
+        can_do: Sketch speed against time
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp4
+        can_do: Find terminal drag from weight
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.hs1.hookes-law
+    name: Using Hooke's law
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.first-law-in-one-dimension
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.slope-meaning-in-data
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spring force
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp2
+        can_do: Find a spring constant from a slope
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp3
+        can_do: Find a stretch from a hanging mass
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp4
+        can_do: Tell where the law stops applying
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+  - id: physics.hs1.springs-in-combination
+    name: Comparing springs in series and parallel
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.hookes-law
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two springs in series
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp2
+        can_do: Compare two springs in parallel
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp3
+        can_do: Find an effective constant
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp4
+        can_do: Test a combination
+        key_prerequisites: [physics.hs1.hookes-law]
+  - id: physics.hs1.center-of-mass
+    name: Finding center of mass
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-system
+        encompassing: 0.3
+        confidence: high
+      - topic: math.alg1.equations-with-rational-coefficients
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a center of mass for two objects
+        key_prerequisites: [math.alg1.equations-with-rational-coefficients]
+      - id: kp2
+        can_do: Find a center of mass for a line of objects
+        key_prerequisites: [math.alg1.equations-with-rational-coefficients]
+      - id: kp3
+        can_do: Find a center of mass by symmetry
+        key_prerequisites: [physics.hs1.choosing-a-system]
+      - id: kp4
+        can_do: Find a balance point
+        key_prerequisites: [physics.hs1.choosing-a-system]
+  - id: physics.hs1.tension-at-angles
+    name: Finding tension in angled ropes
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.forces-at-an-angle
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.tension
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tension in one angled rope
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp2
+        can_do: Find tension in two equal ropes
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp3
+        can_do: Find tension in two unequal ropes
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp4
+        can_do: Explain why a nearly flat rope has a high tension
+        key_prerequisites: [physics.hs1.tension]
+  - id: physics.hs1.equilibrium-in-two-dimensions
+    name: Solving equilibrium in two dimensions
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.tension-at-angles
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.forces-at-an-angle
+        encompassing: 0.15
+        confidence: high
+      - topic: physics.hs1.first-law-in-one-dimension
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for both axes
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp2
+        can_do: Solve a hanging sign
+        key_prerequisites: [physics.hs1.tension-at-angles]
+      - id: kp3
+        can_do: Solve an object on a slope
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp4
+        can_do: Solve three forces at a point
+        key_prerequisites: [physics.hs1.tension-at-angles, physics.hs1.forces-at-an-angle]
