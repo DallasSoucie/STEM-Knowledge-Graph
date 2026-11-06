@@ -166,6 +166,9 @@ topics:
       - topic: math.g7.subtract-as-adding-opposite
         encompassing: 0.5
         confidence: medium
+      - topic: math.g7.add-on-number-line-integers
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Show subtraction as a move on a number line
@@ -183,6 +186,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.integer-number-line-subtract
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.g7.subtract-as-adding-opposite
         encompassing: 0.8
         confidence: high
@@ -409,11 +416,15 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.multiply-integers-same-sign
-        encompassing: 0.4
-        confidence: high
       - topic: math.g6.evaluate-powers
         encompassing: 0.5
+        confidence: high
+      - topic: math.g7.multiply-several-integers
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g7.multiply-integers-same-sign
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -435,14 +446,18 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.divide-integers
-        encompassing: 0.4
-        confidence: high
       - topic: math.g7.add-subtract-integer-strings
         encompassing: 0.4
         confidence: high
       - topic: math.g6.order-of-operations
         encompassing: 0.5
+        confidence: high
+      - topic: math.g7.sign-rules-summary
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g7.divide-integers
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -604,58 +619,6 @@ topics:
       - id: kp4
         can_do: Find a missing factor with signed fractions
         key_prerequisites: [math.g7.multiply-integers-same-sign]
-  - id: math.g7.divide-signed-fractions
-    name: Dividing signed fractions
-    subject: math
-    course: math.g7
-    level: g7
-    status: draft
-    prerequisites:
-      - topic: math.g7.multiply-signed-fractions
-        encompassing: 0.6
-        confidence: high
-      - topic: math.g7.divide-integers
-        encompassing: 0.3
-        confidence: medium
-      - topic: math.g6.fraction-divide-reciprocal
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Divide a signed fraction by a fraction
-        key_prerequisites: [math.g7.multiply-signed-fractions, math.g6.fraction-divide-reciprocal]
-      - id: kp2
-        can_do: Divide a signed fraction by an integer
-        key_prerequisites: [math.g7.divide-integers]
-      - id: kp3
-        can_do: Say the sign of a quotient of fractions
-        key_prerequisites: [math.g7.divide-integers]
-      - id: kp4
-        can_do: Divide with a mixed number and a negative
-        key_prerequisites: [math.g6.fraction-divide-reciprocal, math.g7.divide-integers]
-  - id: math.g7.mixed-number-signed-multiply
-    name: Multiplying and dividing signed mixed numbers
-    subject: math
-    course: math.g7
-    level: g7
-    status: draft
-    prerequisites:
-      - topic: math.g7.divide-signed-fractions
-        encompassing: 0.6
-        confidence: medium
-      - topic: math.g6.divide-mixed-numbers
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Multiply signed mixed numbers
-        key_prerequisites: [math.g7.divide-signed-fractions]
-      - id: kp2
-        can_do: Divide signed mixed numbers
-        key_prerequisites: [math.g7.divide-signed-fractions, math.g6.divide-mixed-numbers]
-      - id: kp3
-        can_do: Estimate the size and sign first
-        key_prerequisites: [math.g6.divide-mixed-numbers]
   - id: math.g7.multiply-divide-signed-decimals
     name: Multiplying and dividing signed decimals
     subject: math
@@ -705,6 +668,62 @@ topics:
       - id: kp3
         can_do: Compare fractions with negatives in different places
         key_prerequisites: [math.g7.divide-integers]
+  - id: math.g7.divide-signed-fractions
+    name: Dividing signed fractions
+    subject: math
+    course: math.g7
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g7.multiply-signed-fractions
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g6.fraction-divide-reciprocal
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g7.fractions-negative-position
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g7.divide-integers
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Divide a signed fraction by a fraction
+        key_prerequisites: [math.g7.multiply-signed-fractions, math.g6.fraction-divide-reciprocal]
+      - id: kp2
+        can_do: Divide a signed fraction by an integer
+        key_prerequisites: [math.g7.divide-integers]
+      - id: kp3
+        can_do: Say the sign of a quotient of fractions
+        key_prerequisites: [math.g7.divide-integers]
+      - id: kp4
+        can_do: Divide with a mixed number and a negative
+        key_prerequisites: [math.g6.fraction-divide-reciprocal, math.g7.divide-integers]
+  - id: math.g7.mixed-number-signed-multiply
+    name: Multiplying and dividing signed mixed numbers
+    subject: math
+    course: math.g7
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g7.divide-signed-fractions
+        encompassing: 0.6
+        confidence: medium
+      - topic: math.g6.divide-mixed-numbers
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply signed mixed numbers
+        key_prerequisites: [math.g7.divide-signed-fractions]
+      - id: kp2
+        can_do: Divide signed mixed numbers
+        key_prerequisites: [math.g7.divide-signed-fractions, math.g6.divide-mixed-numbers]
+      - id: kp3
+        can_do: Estimate the size and sign first
+        key_prerequisites: [math.g6.divide-mixed-numbers]
   - id: math.g7.rational-to-decimal-long-division
     name: Converting fractions to decimals by long division
     subject: math
@@ -819,6 +838,7 @@ topics:
     course: math.g7
     level: g7
     status: draft
+    justification: Brings together every rational operation, so it draws on each operation directly
     prerequisites:
       - topic: math.g7.integer-order-of-operations
         encompassing: 0.7
@@ -826,6 +846,15 @@ topics:
       - topic: math.g6.order-with-fractions-decimals
         encompassing: 0.5
         confidence: high
+      - topic: math.g7.mixed-number-signed-multiply
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g7.multiply-divide-signed-decimals
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g7.decimal-fraction-mixed-calculation
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Evaluate an expression with fractions and integers
@@ -859,46 +888,6 @@ topics:
       - id: kp3
         can_do: Simplify a fraction whose parts are sums
         key_prerequisites: [math.g7.divide-signed-fractions]
-  - id: math.g7.rational-number-stories
-    name: Solving stories with rational numbers
-    subject: math
-    course: math.g7
-    level: g7
-    status: draft
-    prerequisites:
-      - topic: math.g7.rational-order-of-operations
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a one-step story with signed fractions
-        key_prerequisites: [math.g7.rational-order-of-operations]
-      - id: kp2
-        can_do: Solve a two-step story with signed decimals
-        key_prerequisites: [math.g7.rational-order-of-operations]
-      - id: kp3
-        can_do: Say what the answer means, including its sign
-        key_prerequisites: [math.g7.rational-order-of-operations]
-  - id: math.g7.rational-in-context
-    name: Using rational numbers in real contexts
-    subject: math
-    course: math.g7
-    level: g7
-    status: draft
-    prerequisites:
-      - topic: math.g7.rational-number-stories
-        encompassing: 0.6
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Model an elevation change with rational numbers
-        key_prerequisites: [math.g7.rational-number-stories]
-      - id: kp2
-        can_do: Model a change in a stock or balance
-        key_prerequisites: [math.g7.rational-number-stories]
-      - id: kp3
-        can_do: Compare two rational changes in context
-        key_prerequisites: [math.g7.rational-number-stories]
   - id: math.g7.properties-for-rational-calculation
     name: Using properties to simplify rational calculations
     subject: math
@@ -942,6 +931,55 @@ topics:
       - id: kp3
         can_do: Say whether an exact answer is reasonable
         key_prerequisites: [math.g6.estimate-decimal-answers]
+  - id: math.g7.rational-number-stories
+    name: Solving stories with rational numbers
+    subject: math
+    course: math.g7
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g7.rational-order-of-operations
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g7.integer-times-divide-stories
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g7.estimate-rational-calculations
+        encompassing: 0.15
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a one-step story with signed fractions
+        key_prerequisites: [math.g7.rational-order-of-operations]
+      - id: kp2
+        can_do: Solve a two-step story with signed decimals
+        key_prerequisites: [math.g7.rational-order-of-operations]
+      - id: kp3
+        can_do: Say what the answer means, including its sign
+        key_prerequisites: [math.g7.rational-order-of-operations]
+  - id: math.g7.rational-in-context
+    name: Using rational numbers in real contexts
+    subject: math
+    course: math.g7
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g7.rational-number-stories
+        encompassing: 0.6
+        confidence: medium
+      - topic: math.g7.integers-in-temperature-money
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Model an elevation change with rational numbers
+        key_prerequisites: [math.g7.rational-number-stories]
+      - id: kp2
+        can_do: Model a change in a stock or balance
+        key_prerequisites: [math.g7.rational-number-stories]
+      - id: kp3
+        can_do: Compare two rational changes in context
+        key_prerequisites: [math.g7.rational-number-stories]
   - id: math.g7.rates-with-fractions
     name: Finding unit rates with fractions
     subject: math
@@ -977,6 +1015,9 @@ topics:
     prerequisites:
       - topic: math.g7.rates-with-fractions
         encompassing: 0.55
+        confidence: medium
+      - topic: math.g7.compound-fractions
+        encompassing: 0.4
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1170,10 +1211,14 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.test-proportional-graph
+      - topic: math.g7.constant-of-proportionality
         encompassing: 0.5
         confidence: high
-      - topic: math.g7.constant-of-proportionality
+      - topic: math.g7.identify-unit-rate-on-graph
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g7.test-proportional-graph
         encompassing: 0.5
         confidence: high
     knowledge_points:
@@ -1198,6 +1243,9 @@ topics:
         confidence: high
       - topic: math.g7.interpret-proportional-points
         encompassing: 0.45
+        confidence: medium
+      - topic: math.g7.proportional-through-origin
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1265,6 +1313,9 @@ topics:
       - topic: math.g7.solve-proportions
         encompassing: 0.65
         confidence: high
+      - topic: math.g7.write-equation-from-story-proportional
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a one-step proportional story
@@ -1305,6 +1356,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.write-equation-from-graph-proportional
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.interpret-proportional-points
         encompassing: 0.45
         confidence: medium
@@ -1328,11 +1383,15 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.rates-with-fractions
-        encompassing: 0.45
-        confidence: high
       - topic: math.g6.convert-with-ratios
         encompassing: 0.5
+        confidence: high
+      - topic: math.g7.complex-fraction-rates
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g7.rates-with-fractions
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1417,6 +1476,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.percent-of-part-whole-unknown
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.percent-equation
         encompassing: 0.55
         confidence: high
@@ -1591,6 +1654,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.percent-with-fractions
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.g7.percent-equation
         encompassing: 0.6
         confidence: high
@@ -1703,6 +1770,12 @@ topics:
       - topic: math.g7.sales-tax-and-tips
         encompassing: 0.5
         confidence: high
+      - topic: math.g7.percent-estimation
+        encompassing: 0.15
+        confidence: low
+      - topic: math.g7.successive-percent-changes
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a story with a markup and tax
@@ -1723,6 +1796,13 @@ topics:
       - topic: math.g7.multi-step-percent-stories
         encompassing: 0.5
         confidence: medium
+      - topic: math.g7.commissions-and-fees
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g7.simple-interest-solve-for
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g7.simple-interest
         encompassing: 0.35
         confidence: medium
@@ -1746,6 +1826,10 @@ topics:
       - topic: math.g6.evaluate-expressions
         encompassing: 0.55
         confidence: high
+      - topic: math.g7.properties-for-rational-calculation
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g7.rational-order-of-operations
         encompassing: 0.4
         confidence: medium
@@ -1878,6 +1962,10 @@ topics:
       - topic: math.g7.expand-with-negatives
         encompassing: 0.55
         confidence: high
+      - topic: math.g7.combine-terms-with-subtraction
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.add-subtract-linear-expressions
         encompassing: 0.55
         confidence: high
@@ -1944,6 +2032,9 @@ topics:
       - topic: math.g7.rational-coefficients
         encompassing: 0.45
         confidence: medium
+      - topic: math.g7.factor-with-rational-coefficients
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Rewrite a + 0.05a as 1.05a
@@ -2007,6 +2098,10 @@ topics:
       - topic: math.g6.equations-fractions-decimals
         encompassing: 0.5
         confidence: high
+      - topic: math.g7.evaluate-rational-expressions
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g7.divide-signed-fractions
         encompassing: 0.4
         confidence: high
@@ -2139,6 +2234,16 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.equation-with-negative-coefficient
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g7.two-step-fraction-equations
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g7.two-step-decimal-equations
+        encompassing: 0.4
+        confidence: high
+    encompassed:
       - topic: math.g7.two-step-integer-equations
         encompassing: 0.6
         confidence: high
@@ -2168,6 +2273,10 @@ topics:
       - topic: math.g7.two-step-rational-equations
         encompassing: 0.6
         confidence: high
+      - topic: math.g7.expand-with-fractions
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g7.expand-with-negatives
         encompassing: 0.45
         confidence: high
@@ -2320,6 +2429,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.inequality-flip
+        encompassing: 0.6
+        confidence: high
+    encompassed:
       - topic: math.g7.inequality-properties
         encompassing: 0.65
         confidence: high
@@ -2363,10 +2476,14 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.one-step-inequalities
+      - topic: math.g7.two-step-rational-equations
         encompassing: 0.6
         confidence: high
-      - topic: math.g7.two-step-rational-equations
+      - topic: math.g7.test-inequality-values
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g7.one-step-inequalities
         encompassing: 0.6
         confidence: high
     knowledge_points:
@@ -2495,6 +2612,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.corresponding-parts-scale
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.g7.scale-factor
         encompassing: 0.6
         confidence: high
@@ -2511,29 +2632,6 @@ topics:
       - id: kp4
         can_do: Find a scale with unit conversions
         key_prerequisites: [math.g7.scale-factor]
-  - id: math.g7.scale-and-rate-mixed
-    name: Solving mixed rate and scale problems
-    subject: math
-    course: math.g7
-    level: g7
-    status: draft
-    prerequisites:
-      - topic: math.g7.proportional-stories
-        encompassing: 0.4
-        confidence: medium
-      - topic: math.g7.scale-drawings
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Use a map scale and a speed in one problem
-        key_prerequisites: [math.g7.proportional-stories, math.g7.scale-drawings]
-      - id: kp2
-        can_do: Solve a two-step problem with a scale and a rate
-        key_prerequisites: [math.g7.proportional-stories, math.g7.scale-drawings]
-      - id: kp3
-        can_do: Find a cost from a scale drawing
-        key_prerequisites: [math.g7.scale-drawings]
   - id: math.g7.scale-maps
     name: Using map scales
     subject: math
@@ -2553,6 +2651,33 @@ topics:
         key_prerequisites: [math.g7.scale-drawings]
       - id: kp3
         can_do: Convert units with a map scale
+        key_prerequisites: [math.g7.scale-drawings]
+  - id: math.g7.scale-and-rate-mixed
+    name: Solving mixed rate and scale problems
+    subject: math
+    course: math.g7
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g7.proportional-stories
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g7.scale-maps
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g7.scale-drawings
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use a map scale and a speed in one problem
+        key_prerequisites: [math.g7.proportional-stories, math.g7.scale-drawings]
+      - id: kp2
+        can_do: Solve a two-step problem with a scale and a rate
+        key_prerequisites: [math.g7.proportional-stories, math.g7.scale-drawings]
+      - id: kp3
+        can_do: Find a cost from a scale drawing
         key_prerequisites: [math.g7.scale-drawings]
   - id: math.g7.redraw-at-new-scale
     name: Redrawing a figure at a new scale
@@ -2581,11 +2706,15 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.scale-drawings
-        encompassing: 0.4
-        confidence: medium
       - topic: math.g6.area-of-composite-shapes
         encompassing: 0.3
+        confidence: medium
+      - topic: math.g7.redraw-at-new-scale
+        encompassing: 0.2
+        confidence: low
+    encompassed:
+      - topic: math.g7.scale-drawings
+        encompassing: 0.4
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -2949,6 +3078,12 @@ topics:
       - topic: math.g7.semicircle-composites
         encompassing: 0.6
         confidence: high
+      - topic: math.g7.circumference-from-area
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g7.annulus-problems
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a story about a wheel's turns
@@ -3012,11 +3147,15 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.two-step-equation-stories
-        encompassing: 0.45
-        confidence: medium
       - topic: math.g7.angle-equations
         encompassing: 0.5
+        confidence: medium
+      - topic: math.g7.check-solution-of-equations
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.g7.two-step-equation-stories
+        encompassing: 0.45
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3055,6 +3194,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.quarter-circles
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.semicircle-composites
         encompassing: 0.45
         confidence: medium
@@ -3235,6 +3378,7 @@ topics:
     course: math.g7
     level: g7
     status: draft
+    justification: Applications topic combining volume and surface area of several solids
     prerequisites:
       - topic: math.g7.volume-cylinders
         encompassing: 0.4
@@ -3242,6 +3386,15 @@ topics:
       - topic: math.g7.surface-area-cylinders
         encompassing: 0.4
         confidence: high
+      - topic: math.g7.volume-composite-prisms
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g7.volume-missing-dimension
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g7.surface-area-composite
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a story about filling a tank
@@ -3342,6 +3495,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.biased-samples
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.g7.random-samples
         encompassing: 0.5
         confidence: medium
@@ -3362,12 +3519,16 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.random-samples
-        encompassing: 0.45
-        confidence: high
       - topic: math.g7.solve-proportions
         encompassing: 0.3
         confidence: medium
+      - topic: math.g7.choose-a-sample
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g7.random-samples
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Estimate a population proportion
@@ -3408,6 +3569,10 @@ topics:
     level: g7
     status: draft
     prerequisites:
+      - topic: math.g7.estimate-population-mean
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.inference-from-sample
         encompassing: 0.55
         confidence: medium
@@ -3471,11 +3636,18 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.compare-with-overlap
-        encompassing: 0.5
+      - topic: math.g7.variation-between-samples
+        encompassing: 0.2
         confidence: medium
+      - topic: math.g7.compare-means-of-variability
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.inference-from-sample
         encompassing: 0.4
+        confidence: medium
+      - topic: math.g7.compare-with-overlap
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3597,12 +3769,16 @@ topics:
     level: g7
     status: draft
     prerequisites:
-      - topic: math.g7.probability-scale
-        encompassing: 0.3
-        confidence: medium
       - topic: math.g6.experimental-or-theoretical
         encompassing: 0.55
         confidence: high
+      - topic: math.g7.probability-as-decimal-percent
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g7.probability-scale
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Run a chance process and record results
@@ -3685,6 +3861,9 @@ topics:
     prerequisites:
       - topic: math.g7.non-uniform-models
         encompassing: 0.55
+        confidence: medium
+      - topic: math.g7.long-run-frequency
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3795,6 +3974,9 @@ topics:
       - topic: math.g7.sample-spaces-tables
         encompassing: 0.45
         confidence: high
+      - topic: math.g7.complementary-events
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a compound probability from a tree

@@ -120,12 +120,16 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.square-roots
-        encompassing: 0.6
-        confidence: high
       - topic: math.g7.one-step-rational-equations
         encompassing: 0.3
         confidence: medium
+      - topic: math.g8.square-root-fractions-decimals
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g8.square-roots
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve x squared = p with a perfect square
@@ -283,6 +287,9 @@ topics:
       - topic: math.g8.irrational-numbers
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.repeating-to-fraction
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Sort numbers into rational and irrational
@@ -409,6 +416,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.closest-integer
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.estimate-square-roots
         encompassing: 0.65
         confidence: high
@@ -435,6 +446,12 @@ topics:
       - topic: math.g6.order-rational-numbers
         encompassing: 0.4
         confidence: medium
+      - topic: math.g7.compare-rational-forms
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g8.rational-approximations-pi
+        encompassing: 0.2
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Compare two square roots
@@ -455,6 +472,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.compare-irrationals
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.g8.approximate-irrationals
         encompassing: 0.55
         confidence: high
@@ -541,6 +562,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.exponent-with-variables
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.product-rule
         encompassing: 0.55
         confidence: high
@@ -650,6 +675,10 @@ topics:
       - topic: math.g8.power-of-product
         encompassing: 0.45
         confidence: high
+      - topic: math.g8.negative-exponent-fractions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.negative-exponents
         encompassing: 0.45
         confidence: high
@@ -799,6 +828,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.scientific-with-decimals
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.g8.scientific-notation-write
         encompassing: 0.6
         confidence: high
@@ -951,11 +984,21 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.multiply-divide-scientific
-        encompassing: 0.5
-        confidence: medium
       - topic: math.g8.add-subtract-scientific
         encompassing: 0.4
+        confidence: medium
+      - topic: math.g8.scientific-calculator-display
+        encompassing: 0.2
+        confidence: low
+      - topic: math.g8.how-many-times-larger
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g8.choose-scientific-units
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g8.multiply-divide-scientific
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1040,6 +1083,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.compare-proportional-graphs
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g8.slope-as-unit-rate
         encompassing: 0.5
         confidence: high
@@ -1083,12 +1130,16 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.slope-from-graph
-        encompassing: 0.6
-        confidence: high
       - topic: math.g7.subtract-integers
         encompassing: 0.25
         confidence: medium
+      - topic: math.g8.rise-over-run
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.g8.slope-from-graph
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Use the slope formula with positive coordinates
@@ -1132,6 +1183,7 @@ topics:
       - topic: math.g8.slope-from-graph
         encompassing: 0.5
         confidence: medium
+    encompassed:
       - topic: math.g7.interpret-proportional-points
         encompassing: 0.35
         confidence: medium
@@ -1145,26 +1197,6 @@ topics:
       - id: kp3
         can_do: Tell a decreasing rate in a story
         key_prerequisites: [math.g8.slope-from-graph]
-  - id: math.g8.positive-negative-zero-slope
-    name: Telling positive, negative, zero and undefined slope
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-from-two-points
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Tell positive from negative slope by looking
-        key_prerequisites: [math.g8.slope-from-two-points]
-      - id: kp2
-        can_do: Find a zero slope
-        key_prerequisites: [math.g8.slope-from-two-points]
-      - id: kp3
-        can_do: Say why vertical lines have undefined slope
-        key_prerequisites: [math.g8.slope-from-two-points]
   - id: math.g8.y-intercept
     name: Finding the y-intercept
     subject: math
@@ -1204,353 +1236,6 @@ topics:
       - id: kp3
         can_do: Say when a y-intercept makes no sense
         key_prerequisites: [math.g8.y-intercept]
-  - id: math.g8.slope-intercept-form
-    name: Writing y = mx + b
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.y-intercept
-        encompassing: 0.6
-        confidence: high
-      - topic: math.g8.positive-negative-zero-slope
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Identify m and b from an equation
-        key_prerequisites: [math.g8.y-intercept, math.g8.positive-negative-zero-slope]
-      - id: kp2
-        can_do: Write an equation from m and b
-        key_prerequisites: [math.g8.y-intercept]
-      - id: kp3
-        can_do: Compare two equations by their slopes and intercepts
-        key_prerequisites: [math.g8.positive-negative-zero-slope]
-      - id: kp4
-        can_do: Write an equation in slope-intercept form from a description
-        key_prerequisites: [math.g8.y-intercept, math.g8.positive-negative-zero-slope]
-  - id: math.g8.graph-slope-intercept
-    name: Graphing from slope-intercept form
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.7
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Graph a line with whole-number slope
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Plot the intercept first and move by slope
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Graph and check with a third point
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp4
-        can_do: Graph from an equation not yet in slope-intercept order
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.graph-negative-slope
-    name: Graphing a line with negative slope
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.65
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Graph a line with negative slope
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Tell a negative slope from a graph
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Graph with a negative intercept
-        key_prerequisites: [math.g8.graph-slope-intercept]
-  - id: math.g8.graph-fraction-slope
-    name: Graphing a line with a fractional slope
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.65
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Graph a line with a fractional slope
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Graph with a negative fractional slope
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Choose a scale to fit a fractional slope
-        key_prerequisites: [math.g8.graph-slope-intercept]
-  - id: math.g8.equation-from-graph
-    name: Writing an equation from a graph
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Write an equation from a graph with a clear intercept
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Write an equation when the intercept is a fraction
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Check the equation with another point
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp4
-        can_do: Write the equation of a line with a non-unit scale
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.equation-from-table
-    name: Writing an equation from a table
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.6
-        confidence: high
-      - topic: math.g6.table-from-equation
-        encompassing: 0.25
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Write an equation from a table with x = 0
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Write an equation from a table with no x = 0
-        key_prerequisites: [math.g8.slope-intercept-form, math.g6.table-from-equation]
-      - id: kp3
-        can_do: Write an equation from a table with uneven steps
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.equation-from-point-slope
-    name: Writing an equation from a point and slope
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find b from a slope and a point
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Write the equation from a slope and a point
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Write the equation with a fractional slope
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.equation-from-two-points
-    name: Writing an equation from two points
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.equation-from-point-slope
-        encompassing: 0.65
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Write an equation through two points
-        key_prerequisites: [math.g8.equation-from-point-slope]
-      - id: kp2
-        can_do: Write an equation with negative coordinates
-        key_prerequisites: [math.g8.equation-from-point-slope]
-      - id: kp3
-        can_do: Decide whether a third point is on the line
-        key_prerequisites: [math.g8.equation-from-point-slope]
-      - id: kp4
-        can_do: Write the equation with fractional coordinates
-        key_prerequisites: [math.g8.equation-from-point-slope]
-  - id: math.g8.equation-from-context
-    name: Writing an equation from a story
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Write an equation from a story with a rate and start
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Find the start from a later value
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Solve the story using the equation
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.equation-through-origin
-    name: Comparing y = mx and y = mx + b
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Tell y = mx from y = mx + b
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Say which relationship is proportional
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Change a proportional equation to add a fee
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.x-and-y-intercepts
-    name: Graphing with x- and y-intercepts
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find the x-intercept from an equation
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Find the y-intercept from an equation
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Graph a line using both intercepts
-        key_prerequisites: [math.g8.graph-slope-intercept]
-  - id: math.g8.horizontal-vertical-lines
-    name: Graphing horizontal and vertical lines
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Graph y = k
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Graph x = k
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Write the equation of a horizontal or vertical line
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp4
-        can_do: Find the intersection of a horizontal and a vertical line
-        key_prerequisites: [math.g8.graph-slope-intercept]
-  - id: math.g8.parallel-slopes
-    name: Recognizing parallel lines by slope
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say that parallel lines have equal slopes
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Decide whether two lines are parallel
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Write a parallel line through the same intercept
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp4
-        can_do: Write a parallel line through a given point
-        key_prerequisites: [math.g8.graph-slope-intercept]
-  - id: math.g8.perpendicular-slopes-intro
-    name: Recognizing perpendicular slopes
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.parallel-slopes
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Say that perpendicular slopes are negative reciprocals
-        key_prerequisites: [math.g8.parallel-slopes]
-      - id: kp2
-        can_do: Decide whether two lines are perpendicular
-        key_prerequisites: [math.g8.parallel-slopes]
-      - id: kp3
-        can_do: Find a perpendicular slope
-        key_prerequisites: [math.g8.parallel-slopes]
-  - id: math.g8.point-on-a-line
-    name: Testing whether a point is on a line
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Test a point in an equation
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp2
-        can_do: Find the missing coordinate of a point on a line
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Say why a point fails
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.discrete-linear-relations
-    name: Extending discrete linear relations
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g7.discrete-linear-tables
-        encompassing: 0.45
-        confidence: medium
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Extend a discrete relation to larger values
-        key_prerequisites: [math.g7.discrete-linear-tables]
-      - id: kp2
-        can_do: Write a rule with an equation
-        key_prerequisites: [math.g8.slope-intercept-form]
-      - id: kp3
-        can_do: Say why a discrete relation is only points
-        key_prerequisites: [math.g7.discrete-linear-tables]
   - id: math.g8.one-solution-equations
     name: Solving multi-step equations
     subject: math
@@ -1601,6 +1286,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.collect-like-terms-equations
+        encompassing: 0.45
+        confidence: high
+    encompassed:
       - topic: math.g8.one-solution-equations
         encompassing: 0.6
         confidence: high
@@ -1617,52 +1306,6 @@ topics:
       - id: kp4
         can_do: Solve with variables on both sides and parentheses
         key_prerequisites: [math.g8.one-solution-equations]
-  - id: math.g8.rewrite-to-slope-intercept
-    name: Rewriting an equation in slope-intercept form
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.slope-intercept-form
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g8.variables-on-both-sides
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Rewrite an equation by moving a term
-        key_prerequisites: [math.g8.slope-intercept-form, math.g8.variables-on-both-sides]
-      - id: kp2
-        can_do: Rewrite an equation with a coefficient on y
-        key_prerequisites: [math.g8.variables-on-both-sides]
-      - id: kp3
-        can_do: Rewrite and graph the result
-        key_prerequisites: [math.g8.slope-intercept-form]
-  - id: math.g8.standard-form-intro
-    name: Using ax + by = c
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.rewrite-to-slope-intercept
-        encompassing: 0.5
-        confidence: medium
-      - topic: math.g8.x-and-y-intercepts
-        encompassing: 0.45
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Graph ax + by = c using intercepts
-        key_prerequisites: [math.g8.x-and-y-intercepts]
-      - id: kp2
-        can_do: Rewrite from standard form to find a slope
-        key_prerequisites: [math.g8.rewrite-to-slope-intercept]
-      - id: kp3
-        can_do: Write a story equation in ax + by = c form
-        key_prerequisites: [math.g8.rewrite-to-slope-intercept]
   - id: math.g8.equations-with-distribution
     name: Solving equations with distribution on both sides
     subject: math
@@ -1730,6 +1373,13 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.equations-negatives-distribute
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g8.equations-decimals-both-sides
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.variables-on-both-sides
         encompassing: 0.7
         confidence: high
@@ -1875,765 +1525,6 @@ topics:
       - id: kp3
         can_do: Rearrange and evaluate a formula
         key_prerequisites: [math.g8.equations-with-distribution]
-  - id: math.g8.system-intro
-    name: Understanding systems of equations
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.graph-slope-intercept
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say what a solution to a system means
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp2
-        can_do: Say how two lines can meet
-        key_prerequisites: [math.g8.graph-slope-intercept]
-      - id: kp3
-        can_do: Describe a real situation with two equations
-  - id: math.g8.test-solution-system
-    name: Testing a solution of a system
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.system-intro
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Test a point in both equations
-        key_prerequisites: [math.g8.system-intro]
-      - id: kp2
-        can_do: Say why one equation is not enough
-        key_prerequisites: [math.g8.system-intro]
-      - id: kp3
-        can_do: Find a point that fits one equation but not the other
-        key_prerequisites: [math.g8.system-intro]
-  - id: math.g8.solve-systems-graphing
-    name: Solving systems by graphing
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.test-solution-system
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a system by graphing whole-number lines
-        key_prerequisites: [math.g8.test-solution-system]
-      - id: kp2
-        can_do: Read an intersection and check it
-        key_prerequisites: [math.g8.test-solution-system]
-      - id: kp3
-        can_do: Estimate a non-integer intersection
-        key_prerequisites: [math.g8.test-solution-system]
-      - id: kp4
-        can_do: Solve by graphing when an equation is in standard form
-        key_prerequisites: [math.g8.test-solution-system]
-  - id: math.g8.systems-from-tables
-    name: Solving systems from tables
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.system-intro
-        encompassing: 0.5
-        confidence: medium
-      - topic: math.g8.equation-from-table
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find a shared pair in two tables
-        key_prerequisites: [math.g8.system-intro]
-      - id: kp2
-        can_do: Extend tables to find a solution
-        key_prerequisites: [math.g8.equation-from-table]
-      - id: kp3
-        can_do: Write equations from tables to solve
-        key_prerequisites: [math.g8.equation-from-table]
-  - id: math.g8.types-of-solutions-system
-    name: Telling one, none or infinite solutions
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-graphing
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g8.parallel-slopes
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Tell one, none or infinite from a graph
-        key_prerequisites: [math.g8.solve-systems-graphing]
-      - id: kp2
-        can_do: Tell the type from slopes and intercepts
-        key_prerequisites: [math.g8.parallel-slopes]
-      - id: kp3
-        can_do: Change one equation to change the type
-        key_prerequisites: [math.g8.parallel-slopes]
-  - id: math.g8.solve-systems-substitution
-    name: Solving systems by substitution
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-graphing
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g8.variables-on-both-sides
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Substitute when a variable is alone
-        key_prerequisites: [math.g8.solve-systems-graphing]
-      - id: kp2
-        can_do: Rewrite one equation then substitute
-        key_prerequisites: [math.g8.variables-on-both-sides]
-      - id: kp3
-        can_do: Substitute with fractions or decimals
-        key_prerequisites: [math.g8.variables-on-both-sides]
-      - id: kp4
-        can_do: Check a solution in both equations
-        key_prerequisites: [math.g8.solve-systems-graphing]
-      - id: kp5
-        can_do: Substitute to solve in context
-        key_prerequisites: [math.g8.solve-systems-graphing, math.g8.variables-on-both-sides]
-  - id: math.g8.systems-rewrite-then-substitute
-    name: Rewriting then substituting in a system
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-substitution
-        encompassing: 0.65
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Choose which variable to isolate
-        key_prerequisites: [math.g8.solve-systems-substitution]
-      - id: kp2
-        can_do: Solve when neither variable is alone
-        key_prerequisites: [math.g8.solve-systems-substitution]
-      - id: kp3
-        can_do: Avoid a mistake when distributing a negative
-        key_prerequisites: [math.g8.solve-systems-substitution]
-  - id: math.g8.solve-systems-elimination-add
-    name: Solving systems by adding equations
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-graphing
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g8.variables-on-both-sides
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Add equations to remove a variable
-        key_prerequisites: [math.g8.solve-systems-graphing]
-      - id: kp2
-        can_do: Subtract equations to remove a variable
-        key_prerequisites: [math.g8.variables-on-both-sides]
-      - id: kp3
-        can_do: Solve for both variables
-        key_prerequisites: [math.g8.variables-on-both-sides]
-  - id: math.g8.solve-systems-elimination-multiply
-    name: Solving systems by multiplying first
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-elimination-add
-        encompassing: 0.65
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Multiply one equation to match coefficients
-        key_prerequisites: [math.g8.solve-systems-elimination-add]
-      - id: kp2
-        can_do: Multiply both equations
-        key_prerequisites: [math.g8.solve-systems-elimination-add]
-      - id: kp3
-        can_do: Solve with fractions by clearing first
-        key_prerequisites: [math.g8.solve-systems-elimination-add]
-      - id: kp4
-        can_do: Solve when one equation needs rewriting first
-        key_prerequisites: [math.g8.solve-systems-elimination-add]
-  - id: math.g8.systems-no-infinite-algebra
-    name: Recognizing no or infinite solutions algebraically
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-substitution
-        encompassing: 0.45
-        confidence: medium
-      - topic: math.g8.no-or-infinite-solutions
-        encompassing: 0.45
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Spot no solution when variables cancel
-        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.no-or-infinite-solutions]
-      - id: kp2
-        can_do: Spot infinite solutions when variables cancel
-        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.no-or-infinite-solutions]
-      - id: kp3
-        can_do: Say what the result means on a graph
-        key_prerequisites: [math.g8.solve-systems-substitution]
-  - id: math.g8.choose-system-method
-    name: Choosing a method for a system
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.solve-systems-substitution
-        encompassing: 0.45
-        confidence: high
-      - topic: math.g8.solve-systems-elimination-multiply
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Choose substitution when a variable is isolated
-        key_prerequisites: [math.g8.solve-systems-substitution]
-      - id: kp2
-        can_do: Choose elimination when coefficients match
-        key_prerequisites: [math.g8.solve-systems-elimination-multiply]
-      - id: kp3
-        can_do: Solve a mixed set of systems
-        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.solve-systems-elimination-multiply]
-  - id: math.g8.systems-with-fractions
-    name: Solving systems with fractions
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.choose-system-method
-        encompassing: 0.5
-        confidence: medium
-      - topic: math.g8.clearing-denominators
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Clear denominators in a system
-        key_prerequisites: [math.g8.clearing-denominators]
-      - id: kp2
-        can_do: Solve a system with decimals
-        key_prerequisites: [math.g8.choose-system-method]
-      - id: kp3
-        can_do: Choose a method for a system with fractions
-        key_prerequisites: [math.g8.choose-system-method]
-  - id: math.g8.system-from-story-setup
-    name: Writing a system from a story
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.system-intro
-        encompassing: 0.4
-        confidence: medium
-      - topic: math.g8.equation-from-context
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Choose variables for a system story
-        key_prerequisites: [math.g8.equation-from-context]
-      - id: kp2
-        can_do: Write two equations from a story
-        key_prerequisites: [math.g8.system-intro, math.g8.equation-from-context]
-      - id: kp3
-        can_do: Say what the solution means
-        key_prerequisites: [math.g8.system-intro]
-  - id: math.g8.system-stories
-    name: Solving system stories
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.choose-system-method
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g8.linear-equation-stories
-        encompassing: 0.35
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a ticket price story
-        key_prerequisites: [math.g8.choose-system-method]
-      - id: kp2
-        can_do: Solve a two-plan cost story
-        key_prerequisites: [math.g8.choose-system-method, math.g8.linear-equation-stories]
-      - id: kp3
-        can_do: Solve a mixture story
-        key_prerequisites: [math.g8.choose-system-method]
-      - id: kp4
-        can_do: Solve a speed with wind or current story
-        key_prerequisites: [math.g8.linear-equation-stories]
-  - id: math.g8.break-even-problems
-    name: Solving break-even problems
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.system-stories
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find when income equals cost
-        key_prerequisites: [math.g8.system-stories]
-      - id: kp2
-        can_do: Say what happens before and after break-even
-        key_prerequisites: [math.g8.system-stories]
-      - id: kp3
-        can_do: Solve with a table and a graph
-        key_prerequisites: [math.g8.system-stories]
-  - id: math.g8.function-definition
-    name: Understanding functions
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.discrete-linear-relations
-        encompassing: 0.35
-        confidence: low
-    knowledge_points:
-      - id: kp1
-        can_do: Say what a function is
-        key_prerequisites: [math.g8.discrete-linear-relations]
-      - id: kp2
-        can_do: Say that each input has exactly one output
-        key_prerequisites: [math.g8.discrete-linear-relations]
-      - id: kp3
-        can_do: Describe a real relationship as a function
-  - id: math.g8.input-output-tables
-    name: Using input-output tables
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-definition
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Fill an input-output table from a rule
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp2
-        can_do: Find a rule from a table
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp3
-        can_do: Find an input from an output
-        key_prerequisites: [math.g8.function-definition]
-  - id: math.g8.function-tables-mappings
-    name: Testing functions from tables and mappings
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-definition
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Test a table for being a function
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp2
-        can_do: Test a mapping for being a function
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp3
-        can_do: Say what repeated outputs and inputs mean
-        key_prerequisites: [math.g8.function-definition]
-  - id: math.g8.vertical-line-test
-    name: Using the vertical line test
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-tables-mappings
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Use the vertical line test
-        key_prerequisites: [math.g8.function-tables-mappings]
-      - id: kp2
-        can_do: Say why it works
-        key_prerequisites: [math.g8.function-tables-mappings]
-      - id: kp3
-        can_do: Test a graph with circles or curves
-        key_prerequisites: [math.g8.function-tables-mappings]
-  - id: math.g8.function-rules
-    name: Evaluating a function rule
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-definition
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find an output from a rule
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp2
-        can_do: Find an output with a negative or fractional input
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp3
-        can_do: Find the input from a given output
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp4
-        can_do: Evaluate a rule with an expression as input
-        key_prerequisites: [math.g8.function-definition]
-  - id: math.g8.graph-a-function-from-rule
-    name: Graphing a function from a rule
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-rules
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Plot points from a linear rule
-        key_prerequisites: [math.g8.function-rules]
-      - id: kp2
-        can_do: Plot points from a non-linear rule
-        key_prerequisites: [math.g8.function-rules]
-      - id: kp3
-        can_do: Choose sensible input values
-        key_prerequisites: [math.g8.function-rules]
-  - id: math.g8.linear-vs-nonlinear
-    name: Telling linear from nonlinear functions
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-tables-mappings
-        encompassing: 0.5
-        confidence: high
-    encompassed:
-      - topic: math.g8.slope-from-two-points
-        encompassing: 0.3
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Tell a linear table by its constant rate
-        key_prerequisites: [math.g8.function-tables-mappings, math.g8.slope-from-two-points]
-      - id: kp2
-        can_do: Tell a linear equation by its form
-        key_prerequisites: [math.g8.function-tables-mappings]
-      - id: kp3
-        can_do: Tell a linear graph from a curve
-        key_prerequisites: [math.g8.function-tables-mappings]
-  - id: math.g8.nonlinear-function-examples
-    name: Recognizing nonlinear function graphs
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.linear-vs-nonlinear
-        encompassing: 0.45
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Recognize a squared rule's curve
-        key_prerequisites: [math.g8.linear-vs-nonlinear]
-      - id: kp2
-        can_do: Recognize an exponential rule's curve
-        key_prerequisites: [math.g8.linear-vs-nonlinear]
-      - id: kp3
-        can_do: Say why a table is nonlinear
-        key_prerequisites: [math.g8.linear-vs-nonlinear]
-  - id: math.g8.compare-functions
-    name: Comparing functions in different forms
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.linear-vs-nonlinear
-        encompassing: 0.5
-        confidence: high
-      - topic: math.g7.compare-proportional-forms
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Compare rates between a table and a graph
-        key_prerequisites: [math.g8.linear-vs-nonlinear, math.g7.compare-proportional-forms]
-      - id: kp2
-        can_do: Compare starting values
-        key_prerequisites: [math.g8.linear-vs-nonlinear]
-      - id: kp3
-        can_do: Say which function is greater at a point
-        key_prerequisites: [math.g7.compare-proportional-forms]
-  - id: math.g8.functions-from-context-compare
-    name: Comparing a table and a graph in context
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.compare-functions
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Compare a table and a graph from a story
-        key_prerequisites: [math.g8.compare-functions]
-      - id: kp2
-        can_do: Compare an equation and a description
-        key_prerequisites: [math.g8.compare-functions]
-      - id: kp3
-        can_do: Pick the better plan from different forms
-        key_prerequisites: [math.g8.compare-functions]
-  - id: math.g8.rate-and-initial-value
-    name: Finding rate of change and initial value
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.equation-from-table
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find a rate and start from a table
-        key_prerequisites: [math.g8.equation-from-table]
-      - id: kp2
-        can_do: Find a rate and start from a graph
-        key_prerequisites: [math.g8.equation-from-table]
-      - id: kp3
-        can_do: Find them from a description
-        key_prerequisites: [math.g8.equation-from-table]
-  - id: math.g8.equation-from-table-compare
-    name: Finding when two options cost the same
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.linear-equation-stories
-        encompassing: 0.5
-        confidence: medium
-      - topic: math.g8.rate-and-initial-value
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find when two plans cost the same
-        key_prerequisites: [math.g8.linear-equation-stories, math.g8.rate-and-initial-value]
-      - id: kp2
-        can_do: Say which plan is cheaper for a given use
-        key_prerequisites: [math.g8.linear-equation-stories]
-      - id: kp3
-        can_do: Solve from a table and an equation
-        key_prerequisites: [math.g8.rate-and-initial-value]
-  - id: math.g8.linear-function-models
-    name: Modelling with a linear function
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.rate-and-initial-value
-        encompassing: 0.65
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Write a linear function from a description
-        key_prerequisites: [math.g8.rate-and-initial-value]
-      - id: kp2
-        can_do: Write a function from two data points
-        key_prerequisites: [math.g8.rate-and-initial-value]
-      - id: kp3
-        can_do: Use the function to find a new value
-        key_prerequisites: [math.g8.rate-and-initial-value]
-      - id: kp4
-        can_do: Build a model when data starts at a nonzero x
-        key_prerequisites: [math.g8.rate-and-initial-value]
-  - id: math.g8.interpret-rate-initial
-    name: Interpreting rate and initial value in context
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.linear-function-models
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say what the rate means in a story
-        key_prerequisites: [math.g8.linear-function-models]
-      - id: kp2
-        can_do: Say what the initial value means in a story
-        key_prerequisites: [math.g8.linear-function-models]
-      - id: kp3
-        can_do: Say how changing either changes the graph
-        key_prerequisites: [math.g8.linear-function-models]
-  - id: math.g8.compare-two-lines-context
-    name: Comparing two lines in context
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.interpret-rate-initial
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Compare two lines' rates in a story
-        key_prerequisites: [math.g8.interpret-rate-initial]
-      - id: kp2
-        can_do: Compare two lines' starts in a story
-        key_prerequisites: [math.g8.interpret-rate-initial]
-      - id: kp3
-        can_do: Find when one line passes the other
-        key_prerequisites: [math.g8.interpret-rate-initial]
-  - id: math.g8.qualitative-graphs
-    name: Describing qualitative graphs
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.function-definition
-        encompassing: 0.4
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say what a graph's shape shows
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp2
-        can_do: Tell where a function is increasing or decreasing
-        key_prerequisites: [math.g8.function-definition]
-      - id: kp3
-        can_do: Tell linear from nonlinear parts
-        key_prerequisites: [math.g8.function-definition]
-  - id: math.g8.increasing-decreasing-qualitative
-    name: Finding where a graph increases or decreases
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.qualitative-graphs
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Name intervals where a graph increases
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp2
-        can_do: Name intervals where a graph decreases
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp3
-        can_do: Name where a graph is constant
-        key_prerequisites: [math.g8.qualitative-graphs]
-  - id: math.g8.piecewise-qualitative
-    name: Reading a graph made of pieces
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.qualitative-graphs
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Read a graph with separate pieces
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp2
-        can_do: Say what happens at each change
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp3
-        can_do: Read a graph with a jump
-        key_prerequisites: [math.g8.qualitative-graphs]
-  - id: math.g8.match-story-to-graph
-    name: Matching a story to a graph
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.qualitative-graphs
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Match a story to a graph
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp2
-        can_do: Say why another graph does not fit
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp3
-        can_do: Match a graph to a table
-        key_prerequisites: [math.g8.qualitative-graphs]
-  - id: math.g8.sketch-qualitative-graph
-    name: Sketching a graph from a description
-    subject: math
-    course: math.g8
-    level: g8
-    status: draft
-    prerequisites:
-      - topic: math.g8.qualitative-graphs
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Sketch a graph from a story
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp2
-        can_do: Sketch with rates that change
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp3
-        can_do: Label axes with quantities
-        key_prerequisites: [math.g8.qualitative-graphs]
-      - id: kp4
-        can_do: Sketch a graph with several changes of rate
-        key_prerequisites: [math.g8.qualitative-graphs]
   - id: math.g8.properties-of-translations
     name: Verifying properties of translations
     subject: math
@@ -2830,6 +1721,9 @@ topics:
       - topic: math.g8.coordinate-translations
         encompassing: 0.4
         confidence: high
+      - topic: math.g8.translations-of-lines-angles
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say that congruent figures match after rigid motions
@@ -2956,6 +1850,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.dilation-scale-below-one
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.dilations
         encompassing: 0.55
         confidence: high
@@ -2992,6 +1890,1237 @@ topics:
       - id: kp3
         can_do: Say why any two points give the same slope
         key_prerequisites: [math.g8.slope-from-graph, math.g8.similar-figures-intro]
+  - id: math.g8.positive-negative-zero-slope
+    name: Telling positive, negative, zero and undefined slope
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-from-two-points
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g8.slope-similar-triangles
+        encompassing: 0.15
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Tell positive from negative slope by looking
+        key_prerequisites: [math.g8.slope-from-two-points]
+      - id: kp2
+        can_do: Find a zero slope
+        key_prerequisites: [math.g8.slope-from-two-points]
+      - id: kp3
+        can_do: Say why vertical lines have undefined slope
+        key_prerequisites: [math.g8.slope-from-two-points]
+  - id: math.g8.slope-intercept-form
+    name: Writing y = mx + b
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.y-intercept
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g8.positive-negative-zero-slope
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify m and b from an equation
+        key_prerequisites: [math.g8.y-intercept, math.g8.positive-negative-zero-slope]
+      - id: kp2
+        can_do: Write an equation from m and b
+        key_prerequisites: [math.g8.y-intercept]
+      - id: kp3
+        can_do: Compare two equations by their slopes and intercepts
+        key_prerequisites: [math.g8.positive-negative-zero-slope]
+      - id: kp4
+        can_do: Write an equation in slope-intercept form from a description
+        key_prerequisites: [math.g8.y-intercept, math.g8.positive-negative-zero-slope]
+  - id: math.g8.graph-slope-intercept
+    name: Graphing from slope-intercept form
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Graph a line with whole-number slope
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Plot the intercept first and move by slope
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Graph and check with a third point
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp4
+        can_do: Graph from an equation not yet in slope-intercept order
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.graph-negative-slope
+    name: Graphing a line with negative slope
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.65
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Graph a line with negative slope
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Tell a negative slope from a graph
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Graph with a negative intercept
+        key_prerequisites: [math.g8.graph-slope-intercept]
+  - id: math.g8.graph-fraction-slope
+    name: Graphing a line with a fractional slope
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.65
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Graph a line with a fractional slope
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Graph with a negative fractional slope
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Choose a scale to fit a fractional slope
+        key_prerequisites: [math.g8.graph-slope-intercept]
+  - id: math.g8.equation-from-graph
+    name: Writing an equation from a graph
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation from a graph with a clear intercept
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Write an equation when the intercept is a fraction
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Check the equation with another point
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp4
+        can_do: Write the equation of a line with a non-unit scale
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.equation-from-table
+    name: Writing an equation from a table
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g6.table-from-equation
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g8.slope-from-table
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation from a table with x = 0
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Write an equation from a table with no x = 0
+        key_prerequisites: [math.g8.slope-intercept-form, math.g6.table-from-equation]
+      - id: kp3
+        can_do: Write an equation from a table with uneven steps
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.equation-from-point-slope
+    name: Writing an equation from a point and slope
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.equation-from-graph
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find b from a slope and a point
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Write the equation from a slope and a point
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Write the equation with a fractional slope
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.equation-from-two-points
+    name: Writing an equation from two points
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.equation-from-point-slope
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation through two points
+        key_prerequisites: [math.g8.equation-from-point-slope]
+      - id: kp2
+        can_do: Write an equation with negative coordinates
+        key_prerequisites: [math.g8.equation-from-point-slope]
+      - id: kp3
+        can_do: Decide whether a third point is on the line
+        key_prerequisites: [math.g8.equation-from-point-slope]
+      - id: kp4
+        can_do: Write the equation with fractional coordinates
+        key_prerequisites: [math.g8.equation-from-point-slope]
+  - id: math.g8.equation-from-context
+    name: Writing an equation from a story
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an equation from a story with a rate and start
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Find the start from a later value
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Solve the story using the equation
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.equation-through-origin
+    name: Comparing y = mx and y = mx + b
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Tell y = mx from y = mx + b
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Say which relationship is proportional
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Change a proportional equation to add a fee
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.x-and-y-intercepts
+    name: Graphing with x- and y-intercepts
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-negative-slope
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g8.graph-fraction-slope
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the x-intercept from an equation
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Find the y-intercept from an equation
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Graph a line using both intercepts
+        key_prerequisites: [math.g8.graph-slope-intercept]
+  - id: math.g8.horizontal-vertical-lines
+    name: Graphing horizontal and vertical lines
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Graph y = k
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Graph x = k
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Write the equation of a horizontal or vertical line
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp4
+        can_do: Find the intersection of a horizontal and a vertical line
+        key_prerequisites: [math.g8.graph-slope-intercept]
+  - id: math.g8.parallel-slopes
+    name: Recognizing parallel lines by slope
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say that parallel lines have equal slopes
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Decide whether two lines are parallel
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Write a parallel line through the same intercept
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp4
+        can_do: Write a parallel line through a given point
+        key_prerequisites: [math.g8.graph-slope-intercept]
+  - id: math.g8.perpendicular-slopes-intro
+    name: Recognizing perpendicular slopes
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.parallel-slopes
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say that perpendicular slopes are negative reciprocals
+        key_prerequisites: [math.g8.parallel-slopes]
+      - id: kp2
+        can_do: Decide whether two lines are perpendicular
+        key_prerequisites: [math.g8.parallel-slopes]
+      - id: kp3
+        can_do: Find a perpendicular slope
+        key_prerequisites: [math.g8.parallel-slopes]
+  - id: math.g8.point-on-a-line
+    name: Testing whether a point is on a line
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Test a point in an equation
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp2
+        can_do: Find the missing coordinate of a point on a line
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Say why a point fails
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.discrete-linear-relations
+    name: Extending discrete linear relations
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g7.discrete-linear-tables
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Extend a discrete relation to larger values
+        key_prerequisites: [math.g7.discrete-linear-tables]
+      - id: kp2
+        can_do: Write a rule with an equation
+        key_prerequisites: [math.g8.slope-intercept-form]
+      - id: kp3
+        can_do: Say why a discrete relation is only points
+        key_prerequisites: [math.g7.discrete-linear-tables]
+  - id: math.g8.rewrite-to-slope-intercept
+    name: Rewriting an equation in slope-intercept form
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.slope-intercept-form
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g8.variables-on-both-sides
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite an equation by moving a term
+        key_prerequisites: [math.g8.slope-intercept-form, math.g8.variables-on-both-sides]
+      - id: kp2
+        can_do: Rewrite an equation with a coefficient on y
+        key_prerequisites: [math.g8.variables-on-both-sides]
+      - id: kp3
+        can_do: Rewrite and graph the result
+        key_prerequisites: [math.g8.slope-intercept-form]
+  - id: math.g8.standard-form-intro
+    name: Using ax + by = c
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.rewrite-to-slope-intercept
+        encompassing: 0.5
+        confidence: medium
+      - topic: math.g8.x-and-y-intercepts
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Graph ax + by = c using intercepts
+        key_prerequisites: [math.g8.x-and-y-intercepts]
+      - id: kp2
+        can_do: Rewrite from standard form to find a slope
+        key_prerequisites: [math.g8.rewrite-to-slope-intercept]
+      - id: kp3
+        can_do: Write a story equation in ax + by = c form
+        key_prerequisites: [math.g8.rewrite-to-slope-intercept]
+  - id: math.g8.system-intro
+    name: Understanding systems of equations
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.graph-slope-intercept
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say what a solution to a system means
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp2
+        can_do: Say how two lines can meet
+        key_prerequisites: [math.g8.graph-slope-intercept]
+      - id: kp3
+        can_do: Describe a real situation with two equations
+  - id: math.g8.test-solution-system
+    name: Testing a solution of a system
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.system-intro
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g8.point-on-a-line
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Test a point in both equations
+        key_prerequisites: [math.g8.system-intro]
+      - id: kp2
+        can_do: Say why one equation is not enough
+        key_prerequisites: [math.g8.system-intro]
+      - id: kp3
+        can_do: Find a point that fits one equation but not the other
+        key_prerequisites: [math.g8.system-intro]
+  - id: math.g8.solve-systems-graphing
+    name: Solving systems by graphing
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.test-solution-system
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a system by graphing whole-number lines
+        key_prerequisites: [math.g8.test-solution-system]
+      - id: kp2
+        can_do: Read an intersection and check it
+        key_prerequisites: [math.g8.test-solution-system]
+      - id: kp3
+        can_do: Estimate a non-integer intersection
+        key_prerequisites: [math.g8.test-solution-system]
+      - id: kp4
+        can_do: Solve by graphing when an equation is in standard form
+        key_prerequisites: [math.g8.test-solution-system]
+  - id: math.g8.systems-from-tables
+    name: Solving systems from tables
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.system-intro
+        encompassing: 0.5
+        confidence: medium
+      - topic: math.g8.equation-from-table
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a shared pair in two tables
+        key_prerequisites: [math.g8.system-intro]
+      - id: kp2
+        can_do: Extend tables to find a solution
+        key_prerequisites: [math.g8.equation-from-table]
+      - id: kp3
+        can_do: Write equations from tables to solve
+        key_prerequisites: [math.g8.equation-from-table]
+  - id: math.g8.types-of-solutions-system
+    name: Telling one, none or infinite solutions
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-graphing
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g8.parallel-slopes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell one, none or infinite from a graph
+        key_prerequisites: [math.g8.solve-systems-graphing]
+      - id: kp2
+        can_do: Tell the type from slopes and intercepts
+        key_prerequisites: [math.g8.parallel-slopes]
+      - id: kp3
+        can_do: Change one equation to change the type
+        key_prerequisites: [math.g8.parallel-slopes]
+  - id: math.g8.solve-systems-substitution
+    name: Solving systems by substitution
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-graphing
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g8.variables-on-both-sides
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g8.systems-from-tables
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Substitute when a variable is alone
+        key_prerequisites: [math.g8.solve-systems-graphing]
+      - id: kp2
+        can_do: Rewrite one equation then substitute
+        key_prerequisites: [math.g8.variables-on-both-sides]
+      - id: kp3
+        can_do: Substitute with fractions or decimals
+        key_prerequisites: [math.g8.variables-on-both-sides]
+      - id: kp4
+        can_do: Check a solution in both equations
+        key_prerequisites: [math.g8.solve-systems-graphing]
+      - id: kp5
+        can_do: Substitute to solve in context
+        key_prerequisites: [math.g8.solve-systems-graphing, math.g8.variables-on-both-sides]
+  - id: math.g8.systems-rewrite-then-substitute
+    name: Rewriting then substituting in a system
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-substitution
+        encompassing: 0.65
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose which variable to isolate
+        key_prerequisites: [math.g8.solve-systems-substitution]
+      - id: kp2
+        can_do: Solve when neither variable is alone
+        key_prerequisites: [math.g8.solve-systems-substitution]
+      - id: kp3
+        can_do: Avoid a mistake when distributing a negative
+        key_prerequisites: [math.g8.solve-systems-substitution]
+  - id: math.g8.solve-systems-elimination-add
+    name: Solving systems by adding equations
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-graphing
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g8.variables-on-both-sides
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add equations to remove a variable
+        key_prerequisites: [math.g8.solve-systems-graphing]
+      - id: kp2
+        can_do: Subtract equations to remove a variable
+        key_prerequisites: [math.g8.variables-on-both-sides]
+      - id: kp3
+        can_do: Solve for both variables
+        key_prerequisites: [math.g8.variables-on-both-sides]
+  - id: math.g8.solve-systems-elimination-multiply
+    name: Solving systems by multiplying first
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-elimination-add
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply one equation to match coefficients
+        key_prerequisites: [math.g8.solve-systems-elimination-add]
+      - id: kp2
+        can_do: Multiply both equations
+        key_prerequisites: [math.g8.solve-systems-elimination-add]
+      - id: kp3
+        can_do: Solve with fractions by clearing first
+        key_prerequisites: [math.g8.solve-systems-elimination-add]
+      - id: kp4
+        can_do: Solve when one equation needs rewriting first
+        key_prerequisites: [math.g8.solve-systems-elimination-add]
+  - id: math.g8.systems-no-infinite-algebra
+    name: Recognizing no or infinite solutions algebraically
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-substitution
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.g8.no-or-infinite-solutions
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.g8.types-of-solutions-system
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Spot no solution when variables cancel
+        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.no-or-infinite-solutions]
+      - id: kp2
+        can_do: Spot infinite solutions when variables cancel
+        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.no-or-infinite-solutions]
+      - id: kp3
+        can_do: Say what the result means on a graph
+        key_prerequisites: [math.g8.solve-systems-substitution]
+  - id: math.g8.choose-system-method
+    name: Choosing a method for a system
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.solve-systems-elimination-multiply
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g8.systems-rewrite-then-substitute
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.g8.solve-systems-substitution
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose substitution when a variable is isolated
+        key_prerequisites: [math.g8.solve-systems-substitution]
+      - id: kp2
+        can_do: Choose elimination when coefficients match
+        key_prerequisites: [math.g8.solve-systems-elimination-multiply]
+      - id: kp3
+        can_do: Solve a mixed set of systems
+        key_prerequisites: [math.g8.solve-systems-substitution, math.g8.solve-systems-elimination-multiply]
+  - id: math.g8.systems-with-fractions
+    name: Solving systems with fractions
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.choose-system-method
+        encompassing: 0.5
+        confidence: medium
+      - topic: math.g8.clearing-denominators
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Clear denominators in a system
+        key_prerequisites: [math.g8.clearing-denominators]
+      - id: kp2
+        can_do: Solve a system with decimals
+        key_prerequisites: [math.g8.choose-system-method]
+      - id: kp3
+        can_do: Choose a method for a system with fractions
+        key_prerequisites: [math.g8.choose-system-method]
+  - id: math.g8.function-definition
+    name: Understanding functions
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.discrete-linear-relations
+        encompassing: 0.35
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Say what a function is
+        key_prerequisites: [math.g8.discrete-linear-relations]
+      - id: kp2
+        can_do: Say that each input has exactly one output
+        key_prerequisites: [math.g8.discrete-linear-relations]
+      - id: kp3
+        can_do: Describe a real relationship as a function
+  - id: math.g8.input-output-tables
+    name: Using input-output tables
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-definition
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Fill an input-output table from a rule
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp2
+        can_do: Find a rule from a table
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp3
+        can_do: Find an input from an output
+        key_prerequisites: [math.g8.function-definition]
+  - id: math.g8.function-tables-mappings
+    name: Testing functions from tables and mappings
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.input-output-tables
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.g8.function-definition
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test a table for being a function
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp2
+        can_do: Test a mapping for being a function
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp3
+        can_do: Say what repeated outputs and inputs mean
+        key_prerequisites: [math.g8.function-definition]
+  - id: math.g8.vertical-line-test
+    name: Using the vertical line test
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-tables-mappings
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the vertical line test
+        key_prerequisites: [math.g8.function-tables-mappings]
+      - id: kp2
+        can_do: Say why it works
+        key_prerequisites: [math.g8.function-tables-mappings]
+      - id: kp3
+        can_do: Test a graph with circles or curves
+        key_prerequisites: [math.g8.function-tables-mappings]
+  - id: math.g8.function-rules
+    name: Evaluating a function rule
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-definition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an output from a rule
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp2
+        can_do: Find an output with a negative or fractional input
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp3
+        can_do: Find the input from a given output
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp4
+        can_do: Evaluate a rule with an expression as input
+        key_prerequisites: [math.g8.function-definition]
+  - id: math.g8.graph-a-function-from-rule
+    name: Graphing a function from a rule
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-rules
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Plot points from a linear rule
+        key_prerequisites: [math.g8.function-rules]
+      - id: kp2
+        can_do: Plot points from a non-linear rule
+        key_prerequisites: [math.g8.function-rules]
+      - id: kp3
+        can_do: Choose sensible input values
+        key_prerequisites: [math.g8.function-rules]
+  - id: math.g8.linear-vs-nonlinear
+    name: Telling linear from nonlinear functions
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-tables-mappings
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g8.graph-a-function-from-rule
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g8.slope-from-two-points
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Tell a linear table by its constant rate
+        key_prerequisites: [math.g8.function-tables-mappings, math.g8.slope-from-two-points]
+      - id: kp2
+        can_do: Tell a linear equation by its form
+        key_prerequisites: [math.g8.function-tables-mappings]
+      - id: kp3
+        can_do: Tell a linear graph from a curve
+        key_prerequisites: [math.g8.function-tables-mappings]
+  - id: math.g8.nonlinear-function-examples
+    name: Recognizing nonlinear function graphs
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.linear-vs-nonlinear
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a squared rule's curve
+        key_prerequisites: [math.g8.linear-vs-nonlinear]
+      - id: kp2
+        can_do: Recognize an exponential rule's curve
+        key_prerequisites: [math.g8.linear-vs-nonlinear]
+      - id: kp3
+        can_do: Say why a table is nonlinear
+        key_prerequisites: [math.g8.linear-vs-nonlinear]
+  - id: math.g8.compare-functions
+    name: Comparing functions in different forms
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.linear-vs-nonlinear
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.g7.compare-proportional-forms
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare rates between a table and a graph
+        key_prerequisites: [math.g8.linear-vs-nonlinear, math.g7.compare-proportional-forms]
+      - id: kp2
+        can_do: Compare starting values
+        key_prerequisites: [math.g8.linear-vs-nonlinear]
+      - id: kp3
+        can_do: Say which function is greater at a point
+        key_prerequisites: [math.g7.compare-proportional-forms]
+  - id: math.g8.functions-from-context-compare
+    name: Comparing a table and a graph in context
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.compare-functions
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare a table and a graph from a story
+        key_prerequisites: [math.g8.compare-functions]
+      - id: kp2
+        can_do: Compare an equation and a description
+        key_prerequisites: [math.g8.compare-functions]
+      - id: kp3
+        can_do: Pick the better plan from different forms
+        key_prerequisites: [math.g8.compare-functions]
+  - id: math.g8.rate-and-initial-value
+    name: Finding rate of change and initial value
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.equation-from-table
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a rate and start from a table
+        key_prerequisites: [math.g8.equation-from-table]
+      - id: kp2
+        can_do: Find a rate and start from a graph
+        key_prerequisites: [math.g8.equation-from-table]
+      - id: kp3
+        can_do: Find them from a description
+        key_prerequisites: [math.g8.equation-from-table]
+  - id: math.g8.linear-function-models
+    name: Modelling with a linear function
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.rate-and-initial-value
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a linear function from a description
+        key_prerequisites: [math.g8.rate-and-initial-value]
+      - id: kp2
+        can_do: Write a function from two data points
+        key_prerequisites: [math.g8.rate-and-initial-value]
+      - id: kp3
+        can_do: Use the function to find a new value
+        key_prerequisites: [math.g8.rate-and-initial-value]
+      - id: kp4
+        can_do: Build a model when data starts at a nonzero x
+        key_prerequisites: [math.g8.rate-and-initial-value]
+  - id: math.g8.interpret-rate-initial
+    name: Interpreting rate and initial value in context
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.linear-function-models
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g8.slope-as-rate-context
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g8.y-intercept-context
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say what the rate means in a story
+        key_prerequisites: [math.g8.linear-function-models]
+      - id: kp2
+        can_do: Say what the initial value means in a story
+        key_prerequisites: [math.g8.linear-function-models]
+      - id: kp3
+        can_do: Say how changing either changes the graph
+        key_prerequisites: [math.g8.linear-function-models]
+  - id: math.g8.compare-two-lines-context
+    name: Comparing two lines in context
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.interpret-rate-initial
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two lines' rates in a story
+        key_prerequisites: [math.g8.interpret-rate-initial]
+      - id: kp2
+        can_do: Compare two lines' starts in a story
+        key_prerequisites: [math.g8.interpret-rate-initial]
+      - id: kp3
+        can_do: Find when one line passes the other
+        key_prerequisites: [math.g8.interpret-rate-initial]
+  - id: math.g8.equation-from-table-compare
+    name: Finding when two options cost the same
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.linear-equation-stories
+        encompassing: 0.5
+        confidence: medium
+      - topic: math.g8.compare-two-lines-context
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g8.rate-and-initial-value
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find when two plans cost the same
+        key_prerequisites: [math.g8.linear-equation-stories, math.g8.rate-and-initial-value]
+      - id: kp2
+        can_do: Say which plan is cheaper for a given use
+        key_prerequisites: [math.g8.linear-equation-stories]
+      - id: kp3
+        can_do: Solve from a table and an equation
+        key_prerequisites: [math.g8.rate-and-initial-value]
+  - id: math.g8.system-from-story-setup
+    name: Writing a system from a story
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.system-intro
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g8.equation-from-context
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g8.equation-from-table-compare
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose variables for a system story
+        key_prerequisites: [math.g8.equation-from-context]
+      - id: kp2
+        can_do: Write two equations from a story
+        key_prerequisites: [math.g8.system-intro, math.g8.equation-from-context]
+      - id: kp3
+        can_do: Say what the solution means
+        key_prerequisites: [math.g8.system-intro]
+  - id: math.g8.system-stories
+    name: Solving system stories
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.choose-system-method
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g8.system-from-story-setup
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.g8.linear-equation-stories
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a ticket price story
+        key_prerequisites: [math.g8.choose-system-method]
+      - id: kp2
+        can_do: Solve a two-plan cost story
+        key_prerequisites: [math.g8.choose-system-method, math.g8.linear-equation-stories]
+      - id: kp3
+        can_do: Solve a mixture story
+        key_prerequisites: [math.g8.choose-system-method]
+      - id: kp4
+        can_do: Solve a speed with wind or current story
+        key_prerequisites: [math.g8.linear-equation-stories]
+  - id: math.g8.break-even-problems
+    name: Solving break-even problems
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.system-stories
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find when income equals cost
+        key_prerequisites: [math.g8.system-stories]
+      - id: kp2
+        can_do: Say what happens before and after break-even
+        key_prerequisites: [math.g8.system-stories]
+      - id: kp3
+        can_do: Solve with a table and a graph
+        key_prerequisites: [math.g8.system-stories]
+  - id: math.g8.qualitative-graphs
+    name: Describing qualitative graphs
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.function-definition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say what a graph's shape shows
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp2
+        can_do: Tell where a function is increasing or decreasing
+        key_prerequisites: [math.g8.function-definition]
+      - id: kp3
+        can_do: Tell linear from nonlinear parts
+        key_prerequisites: [math.g8.function-definition]
+  - id: math.g8.increasing-decreasing-qualitative
+    name: Finding where a graph increases or decreases
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.qualitative-graphs
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name intervals where a graph increases
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp2
+        can_do: Name intervals where a graph decreases
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp3
+        can_do: Name where a graph is constant
+        key_prerequisites: [math.g8.qualitative-graphs]
+  - id: math.g8.piecewise-qualitative
+    name: Reading a graph made of pieces
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.qualitative-graphs
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a graph with separate pieces
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp2
+        can_do: Say what happens at each change
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp3
+        can_do: Read a graph with a jump
+        key_prerequisites: [math.g8.qualitative-graphs]
+  - id: math.g8.match-story-to-graph
+    name: Matching a story to a graph
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.qualitative-graphs
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Match a story to a graph
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp2
+        can_do: Say why another graph does not fit
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp3
+        can_do: Match a graph to a table
+        key_prerequisites: [math.g8.qualitative-graphs]
+  - id: math.g8.sketch-qualitative-graph
+    name: Sketching a graph from a description
+    subject: math
+    course: math.g8
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: math.g8.match-story-to-graph
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g8.qualitative-graphs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a graph from a story
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp2
+        can_do: Sketch with rates that change
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp3
+        can_do: Label axes with quantities
+        key_prerequisites: [math.g8.qualitative-graphs]
+      - id: kp4
+        can_do: Sketch a graph with several changes of rate
+        key_prerequisites: [math.g8.qualitative-graphs]
   - id: math.g8.sequence-for-similarity
     name: Finding a sequence showing similarity
     subject: math
@@ -3025,6 +3154,10 @@ topics:
       - topic: math.g6.triangle-angle-sum
         encompassing: 0.55
         confidence: high
+      - topic: math.g7.unknown-angles-multiple-steps
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g7.angle-equations
         encompassing: 0.4
         confidence: high
@@ -3053,6 +3186,9 @@ topics:
         confidence: medium
       - topic: math.g8.angle-sum-exterior
         encompassing: 0.4
+        confidence: medium
+      - topic: math.g7.geometry-equations
+        encompassing: 0.35
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3137,11 +3273,15 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.transversal-angles
-        encompassing: 0.5
-        confidence: medium
       - topic: math.g8.variables-on-both-sides
         encompassing: 0.35
+        confidence: medium
+      - topic: math.g8.angles-parallel-names
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.g8.transversal-angles
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3345,6 +3485,10 @@ topics:
       - topic: math.g8.find-leg
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.irrationals-on-number-line
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g8.approximate-irrationals
         encompassing: 0.4
         confidence: medium
@@ -3428,6 +3572,9 @@ topics:
       - topic: math.g8.find-leg
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.pythagorean-rectangle-diagonal
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a ladder story
@@ -3465,12 +3612,19 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.find-hypotenuse
-        encompassing: 0.55
-        confidence: high
       - topic: math.g6.distance-on-the-grid
         encompassing: 0.45
         confidence: medium
+      - topic: math.g7.integer-distance
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g8.pythagorean-on-grid
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.g8.find-hypotenuse
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find a distance with a right triangle
@@ -3646,6 +3800,12 @@ topics:
       - topic: math.g8.solve-x-cubed
         encompassing: 0.45
         confidence: medium
+      - topic: math.g8.estimate-cube-roots
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g8.volume-cone-reverse
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a sphere's radius from a volume
@@ -3686,6 +3846,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.isosceles-height-pythagorean
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.find-leg
         encompassing: 0.5
         confidence: medium
@@ -3706,6 +3870,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.volume-hemisphere
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.volume-spheres
         encompassing: 0.55
         confidence: high
@@ -3732,6 +3900,12 @@ topics:
       - topic: math.g8.composite-solids
         encompassing: 0.6
         confidence: high
+      - topic: math.g7.volume-surface-stories
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g8.compare-volumes-formula
+        encompassing: 0.2
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Solve a tank-filling story
@@ -3852,11 +4026,15 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g8.describe-association
-        encompassing: 0.5
-        confidence: high
       - topic: math.g8.equation-from-two-points
         encompassing: 0.4
+        confidence: high
+      - topic: math.g8.strength-of-association
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g8.describe-association
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3898,6 +4076,10 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g8.judge-line-of-fit
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g8.line-of-fit
         encompassing: 0.55
         confidence: high
@@ -4003,6 +4185,13 @@ topics:
     level: g8
     status: draft
     prerequisites:
+      - topic: math.g7.compound-with-and-or
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g7.independent-experimental
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g7.compound-event-probability
         encompassing: 0.55
         confidence: medium
@@ -4063,12 +4252,16 @@ topics:
     level: g8
     status: draft
     prerequisites:
-      - topic: math.g7.multi-step-percent-stories
-        encompassing: 0.4
-        confidence: low
       - topic: math.g7.rates-with-fractions
         encompassing: 0.4
         confidence: high
+      - topic: math.g7.financial-percent-choices
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g7.multi-step-percent-stories
+        encompassing: 0.4
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Compare unit prices for best buys

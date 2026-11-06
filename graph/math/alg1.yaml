@@ -33,6 +33,9 @@ topics:
       - topic: math.alg1.units-in-formulas
         encompassing: 0.6
         confidence: medium
+      - topic: math.g7.convert-between-unit-rates
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Multiply by a conversion factor written as a fraction
@@ -133,11 +136,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.g8.square-roots
-        encompassing: 0.5
-        confidence: high
       - topic: math.g6.prime-factorization
         encompassing: 0.35
+        confidence: high
+      - topic: math.g8.leave-exact-radical
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g8.square-roots
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -161,6 +168,9 @@ topics:
     prerequisites:
       - topic: math.alg1.simplify-square-roots
         encompassing: 0.5
+        confidence: medium
+      - topic: math.alg1.appropriate-precision
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -356,6 +366,9 @@ topics:
     prerequisites:
       - topic: math.alg1.literal-equations
         encompassing: 0.6
+        confidence: medium
+      - topic: math.alg1.dimensional-analysis
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -558,11 +571,18 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.compound-or-inequalities
-        encompassing: 0.6
-        confidence: high
+      - topic: math.alg1.absolute-value-no-solution
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.alg1.inequality-notation-forms
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg1.absolute-value-equations
         encompassing: 0.5
+        confidence: high
+      - topic: math.alg1.compound-or-inequalities
+        encompassing: 0.6
         confidence: high
     knowledge_points:
       - id: kp1
@@ -587,6 +607,9 @@ topics:
       - topic: math.alg1.multi-step-inequalities
         encompassing: 0.6
         confidence: high
+      - topic: math.g7.inequality-stories
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write an inequality from a budget story
@@ -627,6 +650,9 @@ topics:
       - topic: math.alg1.equations-with-rational-coefficients
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.consecutive-integer-problems
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose what to call the unknown
@@ -649,6 +675,9 @@ topics:
         confidence: high
       - topic: math.g7.percent-equation
         encompassing: 0.35
+        confidence: medium
+      - topic: math.g7.recipes-and-mixtures-proportional
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -738,6 +767,9 @@ topics:
     prerequisites:
       - topic: math.alg1.equation-word-problems
         encompassing: 0.6
+        confidence: medium
+      - topic: math.g8.age-and-money-problems
+        encompassing: 0.4
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -922,11 +954,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.function-notation
-        encompassing: 0.5
-        confidence: high
       - topic: math.g8.vertical-line-test
         encompassing: 0.35
+        confidence: high
+      - topic: math.alg1.identify-functions-graph-table-rule
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.function-notation
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -994,6 +1030,12 @@ topics:
       - topic: math.alg1.domain-and-range
         encompassing: 0.55
         confidence: high
+      - topic: math.g8.sketch-qualitative-graph
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg1.intercepts-of-functions
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find intercepts and intervals from a graph
@@ -1017,6 +1059,9 @@ topics:
       - topic: math.alg1.interpret-function-graphs
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.increasing-decreasing-qualitative
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Name intervals where f increases or decreases
@@ -1277,6 +1322,9 @@ topics:
       - topic: math.g8.graph-slope-intercept
         encompassing: 0.4
         confidence: high
+      - topic: math.g8.piecewise-qualitative
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Evaluate a piecewise function
@@ -1359,26 +1407,6 @@ topics:
       - id: kp4
         can_do: Graph y = a|x - h| + k
         key_prerequisites: [math.alg1.piecewise-intro, math.alg1.absolute-value-equations]
-  - id: math.alg1.absolute-value-vertex
-    name: Finding the vertex of an absolute value graph
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.absolute-value-functions
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find the vertex of y = |x - h| + k
-        key_prerequisites: [math.alg1.absolute-value-functions]
-      - id: kp2
-        can_do: Say which way a graph opens
-        key_prerequisites: [math.alg1.absolute-value-functions]
-      - id: kp3
-        can_do: Write the equation from a vertex and shape
-        key_prerequisites: [math.alg1.absolute-value-functions]
   - id: math.alg1.transform-function-vertical
     name: Shifting a function graph vertically
     subject: math
@@ -1452,10 +1480,17 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.interpret-function-graphs
+      - topic: math.g8.functions-from-context-compare
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg1.sketch-from-features
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.g8.compare-functions
         encompassing: 0.55
         confidence: high
-      - topic: math.g8.compare-functions
+      - topic: math.alg1.interpret-function-graphs
         encompassing: 0.55
         confidence: high
     knowledge_points:
@@ -1478,12 +1513,16 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.function-notation
-        encompassing: 0.4
-        confidence: low
       - topic: math.alg1.literal-equations
         encompassing: 0.5
         confidence: high
+      - topic: math.alg1.find-x-given-f-of-x
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.function-notation
+        encompassing: 0.4
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Reverse a linear function's steps
@@ -1524,6 +1563,9 @@ topics:
       - topic: math.alg1.interpret-function-graphs
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg1.choose-scales-and-units
+        encompassing: 0.2
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Enter a function in a graphing tool
@@ -1581,6 +1623,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.g8.standard-form-intro
+        encompassing: 0.5
+        confidence: high
+    encompassed:
       - topic: math.g8.x-and-y-intercepts
         encompassing: 0.55
         confidence: high
@@ -1606,6 +1652,9 @@ topics:
     prerequisites:
       - topic: math.alg1.standard-form
         encompassing: 0.55
+        confidence: medium
+      - topic: math.g8.horizontal-vertical-lines
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1650,6 +1699,9 @@ topics:
       - topic: math.alg1.point-slope-form
         encompassing: 0.5
         confidence: high
+      - topic: math.alg1.solving-for-y
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Convert from slope-intercept to standard
@@ -1670,11 +1722,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.point-slope-form
-        encompassing: 0.5
-        confidence: high
       - topic: math.g8.parallel-slopes
         encompassing: 0.4
+        confidence: high
+      - topic: math.alg1.convert-line-forms
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.point-slope-form
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1715,6 +1771,9 @@ topics:
     prerequisites:
       - topic: math.alg1.parallel-lines
         encompassing: 0.6
+        confidence: high
+      - topic: math.g8.perpendicular-slopes-intro
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1762,6 +1821,9 @@ topics:
       - topic: math.g8.interpret-rate-initial
         encompassing: 0.45
         confidence: high
+      - topic: math.alg1.function-word-translate
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Build a model from two data points
@@ -1785,6 +1847,9 @@ topics:
       - topic: math.alg1.linear-model-from-context
         encompassing: 0.55
         confidence: high
+      - topic: math.g8.equation-through-origin
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Say what each number means
@@ -1805,6 +1870,13 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.g8.break-even-problems
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.alg1.linear-interpret-parameters
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg1.linear-model-from-context
         encompassing: 0.55
         confidence: medium
@@ -1838,6 +1910,30 @@ topics:
       - id: kp3
         can_do: Say how transformations change the slope and intercept
         key_prerequisites: [math.alg1.transform-stretch-reflect]
+  - id: math.alg1.absolute-value-vertex
+    name: Finding the vertex of an absolute value graph
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.linear-graph-transformations
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg1.absolute-value-functions
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the vertex of y = |x - h| + k
+        key_prerequisites: [math.alg1.absolute-value-functions]
+      - id: kp2
+        can_do: Say which way a graph opens
+        key_prerequisites: [math.alg1.absolute-value-functions]
+      - id: kp3
+        can_do: Write the equation from a vertex and shape
+        key_prerequisites: [math.alg1.absolute-value-functions]
   - id: math.alg1.two-variable-inequalities
     name: Graphing linear inequalities in two variables
     subject: math
@@ -1845,10 +1941,14 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.standard-form
+      - topic: math.alg1.multi-step-inequalities
         encompassing: 0.45
         confidence: high
-      - topic: math.alg1.multi-step-inequalities
+      - topic: math.alg1.vertical-horizontal-equations
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.standard-form
         encompassing: 0.45
         confidence: high
     knowledge_points:
@@ -1894,6 +1994,9 @@ topics:
       - topic: math.alg1.two-variable-inequalities
         encompassing: 0.55
         confidence: medium
+      - topic: math.alg1.inequality-word-constraints
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write an inequality with two variables from a story
@@ -1911,11 +2014,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.two-variable-inequalities
-        encompassing: 0.55
-        confidence: high
       - topic: math.g8.solve-systems-graphing
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg1.inequality-from-graph
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.two-variable-inequalities
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1940,6 +2047,9 @@ topics:
       - topic: math.alg1.systems-of-inequalities
         encompassing: 0.55
         confidence: medium
+      - topic: math.alg1.inequality-word-problems-two-var
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write a system from a story
@@ -1957,6 +2067,13 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.g8.systems-no-infinite-algebra
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g8.systems-with-fractions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g8.choose-system-method
         encompassing: 0.7
         confidence: high
@@ -2023,6 +2140,16 @@ topics:
       - topic: math.alg1.systems-review-three-methods
         encompassing: 0.55
         confidence: high
+      - topic: math.alg1.percent-mixture-equations
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg1.coin-and-ticket-problems
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.alg1.linear-cost-revenue
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg1.mixture-problems
         encompassing: 0.4
         confidence: medium
@@ -2043,6 +2170,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.alg1.system-inequality-stories
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.alg1.systems-of-inequalities
         encompassing: 0.4
         confidence: medium
@@ -2066,6 +2197,10 @@ topics:
       - topic: math.alg1.systems-review-three-methods
         encompassing: 0.45
         confidence: high
+      - topic: math.alg1.solving-by-table-technology
+        encompassing: 0.2
+        confidence: low
+    encompassed:
       - topic: math.alg1.function-notation
         encompassing: 0.4
         confidence: medium
@@ -2086,6 +2221,13 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.g8.exponents-in-expressions
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.alg1.parts-of-expressions
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g8.combine-exponent-rules
         encompassing: 0.4
         confidence: high
@@ -2169,11 +2311,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.polynomial-vocabulary
-        encompassing: 0.4
-        confidence: high
       - topic: math.g7.add-subtract-linear-expressions
         encompassing: 0.55
+        confidence: high
+      - topic: math.alg1.standard-form-polynomial
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.polynomial-vocabulary
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2344,11 +2490,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.multiply-monomials
-        encompassing: 0.55
-        confidence: high
       - topic: math.g7.expand-with-negatives
         encompassing: 0.4
+        confidence: high
+      - topic: math.alg1.exponents-with-monomials
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.multiply-monomials
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2545,10 +2695,14 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.subtract-polynomials
+      - topic: math.alg1.polynomial-times-polynomial
         encompassing: 0.3
         confidence: medium
-      - topic: math.alg1.polynomial-times-polynomial
+      - topic: math.alg1.add-subtract-polynomials-vertical
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg1.subtract-polynomials
         encompassing: 0.3
         confidence: medium
     knowledge_points:
@@ -2570,6 +2724,9 @@ topics:
     prerequisites:
       - topic: math.alg1.monomial-times-polynomial
         encompassing: 0.5
+        confidence: high
+      - topic: math.alg1.divide-monomials
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2593,6 +2750,9 @@ topics:
     prerequisites:
       - topic: math.alg1.polynomial-times-polynomial
         encompassing: 0.55
+        confidence: medium
+      - topic: math.alg1.evaluate-polynomials
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -2677,11 +2837,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.gcf-of-polynomial
-        encompassing: 0.5
-        confidence: high
       - topic: math.alg1.multiply-binomials
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg1.factor-negative-gcf
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.gcf-of-polynomial
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2726,6 +2890,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.alg1.factor-pairs-sum-product
+        encompassing: 0.55
+        confidence: high
+    encompassed:
       - topic: math.alg1.multiply-binomials
         encompassing: 0.6
         confidence: high
@@ -2749,6 +2917,9 @@ topics:
       - topic: math.alg1.factor-x2-bx-c-positive
         encompassing: 0.7
         confidence: high
+      - topic: math.alg1.foil-with-negatives
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Factor with a negative b and positive c
@@ -2782,32 +2953,6 @@ topics:
       - id: kp3
         can_do: Say whether you finished factoring
         key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
-  - id: math.alg1.factor-ax2-bx-c
-    name: Factoring ax squared + bx + c
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.factor-by-grouping
-        encompassing: 0.55
-        confidence: high
-      - topic: math.alg1.factor-x2-bx-c-negative
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Factor when a is above 1 by trying factors
-        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
-      - id: kp2
-        can_do: Factor when a is above 1 by grouping
-        key_prerequisites: [math.alg1.factor-by-grouping]
-      - id: kp3
-        can_do: Factor with negative terms
-        key_prerequisites: [math.alg1.factor-by-grouping, math.alg1.factor-x2-bx-c-negative]
-      - id: kp4
-        can_do: Factor with a common factor first
-        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
   - id: math.alg1.ac-method
     name: Using the ac method
     subject: math
@@ -2828,26 +2973,6 @@ topics:
       - id: kp3
         can_do: Compare with trial and error
         key_prerequisites: [math.alg1.factor-by-grouping]
-  - id: math.alg1.factor-prime-trinomials
-    name: Recognizing prime polynomials
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.factor-ax2-bx-c
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Show that a trinomial does not factor
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
-      - id: kp2
-        can_do: Use the discriminant-free check of pairs
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
-      - id: kp3
-        can_do: Say prime when none work
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
   - id: math.alg1.factor-difference-of-squares
     name: Factoring a difference of squares
     subject: math
@@ -2920,8 +3045,84 @@ topics:
       - id: kp4
         can_do: Factor with coefficients and two variables
         key_prerequisites: [math.alg1.special-product-squares]
-  - id: math.alg1.factor-completely
-    name: Factoring completely
+  - id: math.alg1.check-factoring
+    name: Checking a factorization by expanding
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.factor-x2-bx-c-negative
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Expand to check a factorization
+        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
+      - id: kp2
+        can_do: Find a sign mistake
+        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
+      - id: kp3
+        can_do: Evaluate at a value to check
+        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
+  - id: math.alg1.factor-ax2-bx-c
+    name: Factoring ax squared + bx + c
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.binomials-with-coefficients
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.alg1.ac-method
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg1.check-factoring
+        encompassing: 0.15
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.factor-by-grouping
+        encompassing: 0.55
+        confidence: high
+      - topic: math.alg1.factor-x2-bx-c-negative
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor when a is above 1 by trying factors
+        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
+      - id: kp2
+        can_do: Factor when a is above 1 by grouping
+        key_prerequisites: [math.alg1.factor-by-grouping]
+      - id: kp3
+        can_do: Factor with negative terms
+        key_prerequisites: [math.alg1.factor-by-grouping, math.alg1.factor-x2-bx-c-negative]
+      - id: kp4
+        can_do: Factor with a common factor first
+        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
+  - id: math.alg1.factor-prime-trinomials
+    name: Recognizing prime polynomials
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.factor-ax2-bx-c
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show that a trinomial does not factor
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+      - id: kp2
+        can_do: Use the discriminant-free check of pairs
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+      - id: kp3
+        can_do: Say prime when none work
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+  - id: math.alg1.factor-with-two-variables
+    name: Factoring with two variables
     subject: math
     course: math.alg1
     level: g9
@@ -2929,13 +3130,42 @@ topics:
     prerequisites:
       - topic: math.alg1.factor-ax2-bx-c
         encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Factor a trinomial with two variables
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+      - id: kp2
+        can_do: Factor by grouping with two variables
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+      - id: kp3
+        can_do: Check by expanding
+        key_prerequisites: [math.alg1.factor-ax2-bx-c]
+  - id: math.alg1.factor-completely
+    name: Factoring completely
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.factor-with-gcf-first
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg1.factor-difference-with-coefficients
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg1.factor-with-two-variables
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.gcf-of-polynomial
+        encompassing: 0.5
         confidence: high
       - topic: math.alg1.factor-difference-of-squares
         encompassing: 0.55
         confidence: high
-    encompassed:
-      - topic: math.alg1.gcf-of-polynomial
-        encompassing: 0.5
+      - topic: math.alg1.factor-ax2-bx-c
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2963,6 +3193,9 @@ topics:
       - topic: math.alg1.factor-perfect-square-trinomials
         encompassing: 0.4
         confidence: high
+      - topic: math.alg1.factor-prime-trinomials
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose a strategy from the form
@@ -2973,46 +3206,6 @@ topics:
       - id: kp3
         can_do: Say why a strategy fails
         key_prerequisites: [math.alg1.factor-completely]
-  - id: math.alg1.factor-with-two-variables
-    name: Factoring with two variables
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.factor-ax2-bx-c
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Factor a trinomial with two variables
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
-      - id: kp2
-        can_do: Factor by grouping with two variables
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
-      - id: kp3
-        can_do: Check by expanding
-        key_prerequisites: [math.alg1.factor-ax2-bx-c]
-  - id: math.alg1.check-factoring
-    name: Checking a factorization by expanding
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.factor-x2-bx-c-negative
-        encompassing: 0.45
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Expand to check a factorization
-        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
-      - id: kp2
-        can_do: Find a sign mistake
-        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
-      - id: kp3
-        can_do: Evaluate at a value to check
-        key_prerequisites: [math.alg1.factor-x2-bx-c-negative]
   - id: math.alg1.factoring-from-area
     name: Factoring to find dimensions from area
     subject: math
@@ -3022,6 +3215,9 @@ topics:
     prerequisites:
       - topic: math.alg1.factor-ax2-bx-c
         encompassing: 0.55
+        confidence: medium
+      - topic: math.alg1.polynomial-perimeter-area
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3086,6 +3282,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.alg1.quadratic-vocabulary
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg1.quadratic-parent
         encompassing: 0.6
         confidence: high
@@ -3169,11 +3369,18 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.vertical-stretch-ax2
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.transform-function-horizontal
         encompassing: 0.5
+        confidence: high
+      - topic: math.alg1.reflect-parabolas
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg1.shift-parabolas-horizontally
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.alg1.vertical-stretch-ax2
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3301,11 +3508,15 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.graph-standard-form
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.factor-x2-bx-c-negative
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg1.y-intercept-quadratic
+        encompassing: 0.15
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.graph-standard-form
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3347,6 +3558,12 @@ topics:
       - topic: math.alg1.graph-standard-form
         encompassing: 0.6
         confidence: high
+      - topic: math.alg1.domain-from-context
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.alg1.max-min-of-functions
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say what a vertex means in context
@@ -3370,6 +3587,10 @@ topics:
       - topic: math.alg1.factored-form-graph
         encompassing: 0.45
         confidence: high
+      - topic: math.alg1.vertex-form-write
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg1.vertex-form-graph
         encompassing: 0.45
         confidence: high
@@ -3416,6 +3637,10 @@ topics:
       - topic: math.alg1.simplify-square-roots
         encompassing: 0.5
         confidence: high
+      - topic: math.g8.square-roots-negative-solutions
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.g8.solve-x-squared
         encompassing: 0.55
         confidence: high
@@ -3502,10 +3727,14 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.alg1.zero-product-property
+      - topic: math.alg1.factor-ax2-bx-c
         encompassing: 0.6
         confidence: high
-      - topic: math.alg1.factor-ax2-bx-c
+      - topic: math.alg1.zero-product-with-x-term-gcf
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg1.zero-product-property
         encompassing: 0.6
         confidence: high
     knowledge_points:
@@ -3571,6 +3800,10 @@ topics:
       - topic: math.alg1.complete-the-square-expression
         encompassing: 0.6
         confidence: high
+      - topic: math.alg1.square-root-solutions-with-shifts
+        encompassing: 0.45
+        confidence: high
+    encompassed:
       - topic: math.alg1.solve-x2-equals
         encompassing: 0.5
         confidence: high
@@ -3700,6 +3933,9 @@ topics:
       - topic: math.alg1.quadratic-formula-integer
         encompassing: 0.75
         confidence: medium
+      - topic: math.alg1.exact-versus-approximate
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Simplify a root in the answer
@@ -3719,6 +3955,12 @@ topics:
     prerequisites:
       - topic: math.alg1.quadratic-formula
         encompassing: 0.5
+        confidence: medium
+      - topic: math.alg1.equations-with-parameters
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg1.complete-the-square-a-not-1
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3740,6 +3982,9 @@ topics:
       - topic: math.alg1.quadratic-formula
         encompassing: 0.55
         confidence: high
+      - topic: math.alg1.number-of-roots-graph
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Calculate the discriminant
@@ -3783,6 +4028,10 @@ topics:
       - topic: math.alg1.quadratic-formula
         encompassing: 0.55
         confidence: high
+      - topic: math.alg1.solve-rearrange-first
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg1.solve-by-factoring
         encompassing: 0.55
         confidence: high
@@ -3832,6 +4081,9 @@ topics:
       - topic: math.alg1.interpret-quadratic-features
         encompassing: 0.5
         confidence: high
+      - topic: math.alg1.factoring-from-area
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write a quadratic for a story
@@ -3842,29 +4094,6 @@ topics:
       - id: kp3
         can_do: Interpret both solutions
         key_prerequisites: [math.alg1.interpret-quadratic-features]
-  - id: math.alg1.projectile-area-stories
-    name: Solving projectile and area problems
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.quadratic-word-problems
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find when a projectile lands
-        key_prerequisites: [math.alg1.quadratic-word-problems]
-      - id: kp2
-        can_do: Find when it reaches a height
-        key_prerequisites: [math.alg1.quadratic-word-problems]
-      - id: kp3
-        can_do: Find a dimension from an area
-        key_prerequisites: [math.alg1.quadratic-word-problems]
-      - id: kp4
-        can_do: Find how long something stays above a height
-        key_prerequisites: [math.alg1.quadratic-word-problems]
   - id: math.alg1.quadratic-stories-revenue
     name: Solving revenue and profit problems
     subject: math
@@ -3928,6 +4157,33 @@ topics:
       - id: kp3
         can_do: Solve a frame or walkway problem
         key_prerequisites: [math.alg1.quadratic-word-problems]
+  - id: math.alg1.projectile-area-stories
+    name: Solving projectile and area problems
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.consecutive-and-dimension-quadratics
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg1.quadratic-word-problems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find when a projectile lands
+        key_prerequisites: [math.alg1.quadratic-word-problems]
+      - id: kp2
+        can_do: Find when it reaches a height
+        key_prerequisites: [math.alg1.quadratic-word-problems]
+      - id: kp3
+        can_do: Find a dimension from an area
+        key_prerequisites: [math.alg1.quadratic-word-problems]
+      - id: kp4
+        can_do: Find how long something stays above a height
+        key_prerequisites: [math.alg1.quadratic-word-problems]
   - id: math.alg1.linear-quadratic-systems
     name: Solving linear and quadratic systems
     subject: math
@@ -3938,6 +4194,13 @@ topics:
       - topic: math.alg1.choose-quadratic-method
         encompassing: 0.5
         confidence: high
+      - topic: math.alg1.solve-system-technology
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg1.quadratic-graph-solve
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg1.systems-review-three-methods
         encompassing: 0.45
         confidence: high
@@ -3984,6 +4247,10 @@ topics:
       - topic: math.alg1.vertex-by-completing-square
         encompassing: 0.5
         confidence: medium
+      - topic: math.alg1.compare-quadratic-forms
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg1.factored-form-graph
         encompassing: 0.5
         confidence: medium
@@ -4004,12 +4271,19 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.g8.combine-exponent-rules
-        encompassing: 0.55
-        confidence: high
       - topic: math.g8.scientific-notation-read
         encompassing: 0.35
         confidence: medium
+      - topic: math.g8.exponent-rule-errors
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g8.exponents-with-fractions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g8.combine-exponent-rules
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Simplify with variables and negative exponents
@@ -4070,12 +4344,16 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: math.g8.linear-vs-nonlinear
-        encompassing: 0.4
-        confidence: high
       - topic: math.g6.evaluate-powers
         encompassing: 0.35
         confidence: medium
+      - topic: math.g8.nonlinear-function-examples
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g8.linear-vs-nonlinear
+        encompassing: 0.4
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find a constant ratio in a table
@@ -4159,6 +4437,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.alg1.exponential-table-from-rule
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg1.exponential-functions
         encompassing: 0.6
         confidence: high
@@ -4244,26 +4526,6 @@ topics:
       - id: kp4
         can_do: Write a function from a percent rate
         key_prerequisites: [math.alg1.exponential-functions, math.g7.percent-increase]
-  - id: math.alg1.exponential-from-two-points
-    name: Writing an exponential from two points
-    subject: math
-    course: math.alg1
-    level: g9
-    status: draft
-    prerequisites:
-      - topic: math.alg1.growth-decay-rate
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find a base from consecutive values
-        key_prerequisites: [math.alg1.growth-decay-rate]
-      - id: kp2
-        can_do: Find a base from values further apart
-        key_prerequisites: [math.alg1.growth-decay-rate]
-      - id: kp3
-        can_do: Write the function
-        key_prerequisites: [math.alg1.growth-decay-rate]
   - id: math.alg1.exponential-from-table
     name: Writing an exponential from a table
     subject: math
@@ -4304,6 +4566,32 @@ topics:
       - id: kp3
         can_do: Write the rule and check it
         key_prerequisites: [math.alg1.exponential-initial-and-base]
+  - id: math.alg1.exponential-from-two-points
+    name: Writing an exponential from two points
+    subject: math
+    course: math.alg1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.growth-decay-rate
+        encompassing: 0.6
+        confidence: high
+      - topic: math.alg1.exponential-from-table
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg1.exponential-from-graph
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a base from consecutive values
+        key_prerequisites: [math.alg1.growth-decay-rate]
+      - id: kp2
+        can_do: Find a base from values further apart
+        key_prerequisites: [math.alg1.growth-decay-rate]
+      - id: kp3
+        can_do: Write the function
+        key_prerequisites: [math.alg1.growth-decay-rate]
   - id: math.alg1.geometric-sequences
     name: Working with geometric sequences
     subject: math
@@ -4383,6 +4671,9 @@ topics:
       - topic: math.alg1.compare-functions-forms
         encompassing: 0.5
         confidence: high
+      - topic: math.alg1.rate-of-change-intervals
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Compare growth in a table
@@ -4575,6 +4866,10 @@ topics:
     level: g9
     status: draft
     prerequisites:
+      - topic: math.g8.mean-median-mode-choice-context
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g8.central-tendency-choice
         encompassing: 0.3
         confidence: low
@@ -4727,6 +5022,9 @@ topics:
       - topic: math.g8.interpret-fit-slope-intercept
         encompassing: 0.5
         confidence: high
+      - topic: math.g8.nonlinear-association
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find a residual
@@ -4767,6 +5065,9 @@ topics:
       - topic: math.alg1.residuals
         encompassing: 0.5
         confidence: high
+      - topic: math.g8.outliers-clusters-scatter
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find a regression line with a tool
