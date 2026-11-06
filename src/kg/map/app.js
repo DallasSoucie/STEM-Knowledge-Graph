@@ -14,6 +14,10 @@
   const LINE_SPACING = 1; // graph units between a course block's lines, from layout.py
   const LABEL_LINE_PX = 6; // topic labels start once a block's lines are this many pixels apart
   const COURSE_LABEL_HEIGHT = 16;
+  const TOPIC_LABEL_HALF = 8; // half a topic label's height, so course labels clear the first line's names
+  const STAGE_PADDING = 30; // sigma's default margin around the dots
+  const LABEL_ROOM_PX = 90; // kept free right of the dots on maps that show names at once
+  const MIN_LABEL_PX = 56; // below this a shortened name says too little to be worth drawing
   // Sigma's grid only limits which topics may try for a label, and picks them by ID within a cell, so
   // it is kept loose once labels are on: drawLabel below does the real work of keeping them apart.
   const LABEL_GRID_CELL = 24;
@@ -328,20 +332,34 @@
   }
 
   // ---- graph and sigma -------------------------------------------------
-  // frame the topics that exist, with a margin; empty columns and rows would only waste space
-  const span = (pick, pad) => {
-    if (!topics.length) return [0, 1];
-    const [lo, hi] = minMax(topics, pick);
-    return [lo - pad, hi + pad];
-  };
-  const frameX = span((t) => t.x, 8);
-  const frameY = span((t) => t.y, 4);
-  const lineSpacingPx =
-    LINE_SPACING * Math.min(mapEl.clientWidth / (frameX[1] - frameX[0]), mapEl.clientHeight / (frameY[1] - frameY[0]));
+  // sigma fits the view to the topics that exist; empty columns and rows would only waste space
+  const extent = (pick) => (topics.length ? minMax(topics, pick) : [0, 1]);
+  const spanX = extent((t) => t.x);
+  const spanY = extent((t) => t.y);
+  const lineSpacingPx = Math.max(
+    0,
+    LINE_SPACING *
+      Math.min(
+        (mapEl.clientWidth - 2 * STAGE_PADDING) / (spanX[1] - spanX[0]),
+        (mapEl.clientHeight - 2 * STAGE_PADDING) / (spanY[1] - spanY[0]),
+      ),
+  );
   // Dots stay small enough at full zoom-out that a course reads as a block, not a smear; sigma grows them on zoom.
   const dotSize = Math.min(MAX_DOT, Math.max(MIN_DOT, lineSpacingPx * 0.45));
   // Dots grow as 1 / sqrt(ratio), so this is the size they reach when lines are LABEL_LINE_PX apart.
   const labelThreshold = dotSize * 0.99 * Math.max(1, Math.sqrt(LABEL_LINE_PX / lineSpacingPx));
+
+  // Graph distance from each topic to the next dot on its line, which is the room its name has.
+  const nextDotGap = new Float64Array(topics.length).fill(Infinity);
+  const dotsByLine = new Map();
+  topics.forEach((t, i) => {
+    if (!dotsByLine.has(t.y)) dotsByLine.set(t.y, []);
+    dotsByLine.get(t.y).push(i);
+  });
+  for (const line of dotsByLine.values()) {
+    line.sort((a, b) => topics[a].x - topics[b].x);
+    for (let n = 0; n + 1 < line.length; n++) nextDotGap[line[n]] = topics[line[n + 1]].x - topics[line[n]].x;
+  }
 
   const GraphCtor = window.graphology.Graph || window.graphology;
 
@@ -492,14 +510,20 @@
   let labelRects = [];
   let labelsClaimed = false;
   const labelWidths = new Map();
+  let drawnLabels = new Map(); // id -> the text drawn this frame (test hook)
+  let pxPerUnit = 0; // screen pixels per graph unit this frame
 
-  function labelRect(context, key, label, x, y, size, settings) {
+  function labelWidth(context, key, label, settings) {
     let width = labelWidths.get(key);
     if (width === undefined) {
       context.font = settings.labelWeight + " " + settings.labelSize + "px " + settings.labelFont;
       width = context.measureText(label).width;
       labelWidths.set(key, width);
     }
+    return width;
+  }
+
+  function labelRect(context, key, label, x, y, size, settings, width = labelWidth(context, key, label, settings)) {
     const half = settings.labelSize / 2 + 2;
     return { text: key, x0: x + size + 2, x1: x + size + width + 12, y0: y - half, y1: y + half };
   }
@@ -512,6 +536,8 @@
     if (labelsClaimed || !sigma) return; // sigma draws its first frame inside its constructor
     labelsClaimed = true;
     labelRects = [];
+    drawnLabels = new Map();
+    pxPerUnit = Math.abs(sigma.graphToViewport({ x: 1, y: 0 }).x - sigma.graphToViewport({ x: 0, y: 0 }).x);
     if (selected !== undefined) {
       const t = topics[selected];
       const p = sigma.graphToViewport(graph.getNodeAttributes(t.id));
@@ -522,24 +548,45 @@
     updateOverlay();
   }
 
+  // The name to draw and its width: whole if it fits before the next dot and the window's edge, shortened
+  // if enough room is left, and otherwise whole only if the edge would not cut it. Null means no label.
+  function fitLabel(context, d, settings) {
+    const width = labelWidth(context, d.key, d.label, settings);
+    if (!sigma) return { text: d.label, width };
+    const toEdge = sigma.getDimensions().width - (d.x + d.size + 3);
+    const toNextDot = nextDotGap[byId.get(d.key)] * pxPerUnit - d.size - 9;
+    const room = Math.min(toEdge, toNextDot);
+    if (width <= room) return { text: d.label, width };
+    if (room >= MIN_LABEL_PX) {
+      const chars = Math.floor(((room - 8) * d.label.length) / width);
+      return { text: d.label.slice(0, chars).trimEnd() + "\u2026", width: room };
+    }
+    return width <= toEdge ? { text: d.label, width } : null;
+  }
+
   function drawLabel(context, d, settings) {
     if (!d.label) return;
     claimLabels();
     const isSelected = selected !== undefined && topics[selected].id === d.key;
+    let text = d.label;
     if (!isSelected) {
-      const rect = labelRect(context, d.key, d.label, d.x, d.y, d.size, settings);
+      const fit = fitLabel(context, d, settings);
+      if (fit === null) return;
+      text = fit.text;
+      const rect = labelRect(context, d.key, d.label, d.x, d.y, d.size, settings, fit.width);
       if (labelRects.some((other) => rectsOverlap(rect, other))) return;
       labelRects.push(rect);
     }
+    drawnLabels.set(d.key, text);
     context.font = settings.labelWeight + " " + settings.labelSize + "px " + settings.labelFont;
     const x = d.x + d.size + 3, y = d.y + settings.labelSize / 3;
     // a halo in the background colour keeps the text readable over the dots of the lines around it
     context.lineJoin = "round";
     context.lineWidth = 3;
     context.strokeStyle = theme().bg;
-    context.strokeText(d.label, x, y);
+    context.strokeText(text, x, y);
     context.fillStyle = theme().fg;
-    context.fillText(d.label, x, y);
+    context.fillText(text, x, y);
   }
 
   // ---- HTML label layers: subjects in the gutter; levels and courses over the map ----
@@ -627,8 +674,7 @@
   // Levels sit just above the map, sticking to the top of the window once zoomed in. Returns the y
   // below which course labels have to stay.
   function placeLevels(w) {
-    const firstTopic = frameY[0] + 4;
-    const y = Math.max(2, sigma.graphToViewport({ x: 0, y: -firstTopic }).y - COURSE_LABEL_HEIGHT * 2);
+    const y = Math.max(2, sigma.graphToViewport({ x: 0, y: -spanY[0] }).y - COURSE_LABEL_HEIGHT * 2 - TOPIC_LABEL_HALF);
     for (const col of levelLabels) {
       const a = sigma.graphToViewport({ x: col.x0, y: 0 }).x;
       const b = sigma.graphToViewport({ x: col.x1, y: 0 }).x;
@@ -655,7 +701,7 @@
       c.dist = dx * dx + dy * dy;
       // above its block, or kept in view while the block fills the window
       c.px = clamp(a.x, 4, w - c.width - 4);
-      c.py = clamp(a.y - COURSE_LABEL_HEIGHT - 1, top, b.y - COURSE_LABEL_HEIGHT);
+      c.py = clamp(a.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, b.y - COURSE_LABEL_HEIGHT);
       wanted.push(c);
     }
     wanted.sort((p, q) => p.dist - q.dist || p.order - q.order);
@@ -691,13 +737,20 @@
     gutterEl.replaceChildren();
   }
 
+  // Dots are kept clear of the right edge only where names show at once; big overviews need the width.
+  function reserveLabelRoom() {
+    const dx = spanX[1] - spanX[0];
+    const usable = mapEl.clientWidth - 2 * STAGE_PADDING - LABEL_ROOM_PX;
+    if (lineSpacingPx < LABEL_LINE_PX || dx === 0 || usable <= 0) return;
+    sigma.setCustomBBox({ x: [spanX[0], spanX[1] + (LABEL_ROOM_PX * dx) / usable], y: [-spanY[1], -spanY[0]] });
+  }
+
   function start() {
     try {
       // when the browser has no WebGL, sigma's own script fails to load and leaves no global
       if (!window.Sigma) throw new Error("sigma did not load");
       const SigmaCtor = window.Sigma.Sigma || window.Sigma.default || window.Sigma;
       sigma = new SigmaCtor(graph, mapEl, {
-        customBBox: { x: frameX, y: [-frameY[1], -frameY[0]] },
         labelRenderedSizeThreshold: labelThreshold,
         labelDensity: LABEL_GRID_DENSITY,
         labelGridCellSize: LABEL_GRID_CELL,
@@ -717,6 +770,7 @@
       showStartFailure(err);
       return Promise.resolve();
     }
+    reserveLabelRoom();
     sigma.on("clickNode", ({ node }) => selectTopic(node));
     sigma.on("beforeRender", () => { labelsClaimed = false; });
     sigma.on("afterRender", claimLabels);
@@ -953,5 +1007,7 @@
     nodeViewport: (id) => sigma.graphToViewport(graph.getNodeAttributes(id)),
     // the selected, course and topic labels of the last frame, in map pixels (test hook for overprinting)
     labelRects: () => labelRects,
+    // the text of each topic label drawn in the last frame (test hook for shortening)
+    labelTexts: () => Object.fromEntries(drawnLabels),
   };
 })();

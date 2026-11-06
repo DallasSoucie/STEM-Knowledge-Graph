@@ -497,6 +497,46 @@ def small_graph(*sizes):
     return kg
 
 
+def named_course_graph(n=71):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 60, levels=("g4", "g4"))}
+    names = [topic(f"math.a.t{i:03d}", level="g4") for i in range(n)]
+    for i, t in enumerate(names):
+        t.name = f"Solving a rather long kind of problem number {i}"
+    add(kg, *names)
+    return kg
+
+
+def test_small_course_names_every_topic_on_a_wide_window(page, tmp_path):
+    page.set_viewport_size({"width": 1920, "height": 1080})
+    open_map(page, named_course_graph(), tmp_path)
+    page.wait_for_timeout(300)
+    texts = page.evaluate("window.kgMap.labelTexts()")
+    assert len(texts) == 71
+    assert any(t.endswith("\u2026") for t in texts.values())
+
+
+@pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
+def test_small_course_labels_stay_inside_the_window(page, tmp_path, size):
+    page.set_viewport_size({"width": size[0], "height": size[1]})
+    open_map(page, named_course_graph(), tmp_path)
+    page.wait_for_timeout(300)
+    assert page.evaluate("window.kgMap.labelTexts()")
+    rects = page.evaluate("window.kgMap.labelRects()")
+    assert_no_overlap(rects)
+    width = page.locator("#map").bounding_box()["width"]
+    # the 12px is labelRect's own margin past the text
+    assert max(r["x1"] for r in rects) <= width + 12
+
+
+def test_zooming_in_shows_whole_names(page, tmp_path):
+    page.set_viewport_size({"width": 1920, "height": 1080})
+    open_map(page, named_course_graph(), tmp_path)
+    wanted = "math.a.t036"
+    zoom_in(page, 6, around=wanted)
+    assert page.evaluate("window.kgMap.labelTexts()")[wanted] == "Solving a rather long kind of problem number 36"
+
+
 @pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
 @pytest.mark.parametrize("sizes", [(1,), (8,), (60,), (150,), (60, 80)])
 def test_small_graph_opens(page, tmp_path, sizes, size):
