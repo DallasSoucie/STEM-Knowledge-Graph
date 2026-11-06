@@ -93,21 +93,6 @@ def test_synth_into_an_existing_empty_directory_is_fine(tmp_path):
     assert run("synth", "--topics", "30", "--out", str(out)).exit_code == 0
 
 
-def test_lane_overflow_stops_validate_and_export_map_cleanly(tmp_path):
-    from conftest import course, valid_graph
-
-    kg = valid_graph()
-    for i in range(13):
-        kg.courses[f"math.o{i}"] = course(f"math.o{i}", 1)
-    kg.root = tmp_path / "g"
-    write_graph(kg)
-    result = run("validate", "--root", str(kg.root))
-    assert result.exit_code == 1 and "lane-overflow" in result.output
-    out = tmp_path / "map.html"
-    result = run("export-map", "--root", str(kg.root), "--out", str(out))
-    assert result.exit_code == 1 and "Traceback" not in result.output and not out.exists()
-
-
 def test_os_errors_print_a_message_and_exit_1(tmp_path, sample_copy):
     blocker = tmp_path / "file"
     blocker.write_text("x", encoding="utf-8")  # a file where a directory is needed

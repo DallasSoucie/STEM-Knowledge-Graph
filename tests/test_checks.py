@@ -164,13 +164,6 @@ def weight_clustering():
     return kg
 
 
-def lane_overflow():
-    kg = valid_graph()
-    for i in range(13):  # math has 12 lanes; same-level courses each need their own
-        kg.courses[f"math.o{i}"] = course(f"math.o{i}", 1)
-    return kg
-
-
 def level_outside_course():
     kg = valid_graph()
     _replace(kg, "math.b.four", level="g9")  # math.b spans g4 to g6
@@ -207,7 +200,6 @@ CASES = [
     ("no-prereq-above-gk", no_prereq_above_gk),
     ("weight-clustering", weight_clustering),
     ("budget-variance", budget_variance),
-    ("lane-overflow", lane_overflow),
     ("level-outside-course", level_outside_course),
 ]
 
@@ -451,9 +443,10 @@ def test_topic_filed_under_a_view_course_is_an_unknown_course():
     assert found.topic == "math.v.x" and "view" in found.message
 
 
-def test_lane_overflow_is_an_error_naming_the_manifest():
-    found = [i for i in run_checks(lane_overflow()) if i.rule == "lane-overflow"]
-    assert found and all(i.severity == "error" and i.file == "courses.yaml" for i in found)
+def test_validation_does_not_depend_on_the_map():
+    import kg.checks.structure as s
+
+    assert not hasattr(s, "lane_overflows")
 
 
 def test_level_outside_course_ignores_stubs_and_in_range_topics():

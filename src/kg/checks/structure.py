@@ -5,7 +5,6 @@ from collections import Counter
 
 from kg.checks.base import COURSES_FILE_NAME, is_acyclic, issue, rule
 from kg.graph import GraphIndex, KnowledgeGraph
-from kg.map.layout import LANE_CAPACITY, DEFAULT_LANE_CAPACITY, lane_overflows
 
 _SLUG = r"[a-z0-9]+(?:-[a-z0-9]+)*"
 _ID_RE = re.compile(rf"^{_SLUG}\.{_SLUG}\.{_SLUG}$")
@@ -183,15 +182,3 @@ def encompassed_not_ancestor(kg: KnowledgeGraph, index: GraphIndex):
                 yield issue(
                     "encompassed-not-ancestor", f"encompassed {e.topic} is not an ancestor", tid
                 )
-
-
-@rule("lane-overflow", "error")
-def lane_overflow(kg: KnowledgeGraph, index: GraphIndex):
-    """The map has a fixed number of lanes per subject row; more courses than fit cannot be laid out."""
-    for cid, subject in lane_overflows(kg):
-        yield issue(
-            "lane-overflow",
-            f"course {cid} needs more than {LANE_CAPACITY.get(subject, DEFAULT_LANE_CAPACITY)} "
-            f"lanes in subject {subject}",
-            file=COURSES_FILE_NAME,
-        )
