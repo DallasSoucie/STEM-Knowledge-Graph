@@ -1,0 +1,762 @@
+course: physics.ms
+topics:
+  - id: physics.ms.position-and-reference
+    name: Describing position from a reference point
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.elem.measuring-motion
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g5.coordinate-plane
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a position from a chosen reference point
+        key_prerequisites: [physics.elem.measuring-motion]
+      - id: kp2
+        can_do: Place positions on a line in metres
+        key_prerequisites: [physics.elem.measuring-motion]
+      - id: kp3
+        can_do: Place positions on a grid
+        key_prerequisites: [math.g5.coordinate-plane]
+      - id: kp4
+        can_do: Show how a new reference point changes the description
+        key_prerequisites: [physics.elem.measuring-motion]
+  - id: physics.ms.distance-and-displacement
+    name: Telling distance from displacement
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.ms.position-and-reference
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g6.negative-numbers-in-context
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find total distance on a straight trip
+        key_prerequisites: [physics.ms.position-and-reference]
+      - id: kp2
+        can_do: Find displacement with a direction
+        key_prerequisites: [math.g6.negative-numbers-in-context]
+      - id: kp3
+        can_do: Use negative values for the opposite direction
+        key_prerequisites: [math.g6.negative-numbers-in-context]
+      - id: kp4
+        can_do: Compare distance and displacement on a return trip
+        key_prerequisites: [physics.ms.position-and-reference, math.g6.negative-numbers-in-context]
+  - id: physics.ms.speed-as-a-rate
+    name: Calculating speed in metres per second
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.elem.comparing-speeds
+        encompassing: 0.25
+        confidence: high
+      - topic: math.g6.constant-speed
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write speed as distance over time
+        key_prerequisites: [math.g6.constant-speed]
+      - id: kp2
+        can_do: Calculate a speed in metres per second
+        key_prerequisites: [math.g6.constant-speed]
+      - id: kp3
+        can_do: Solve for distance from speed and time
+        key_prerequisites: [math.g6.constant-speed]
+      - id: kp4
+        can_do: Solve for time from speed and distance
+        key_prerequisites: [physics.elem.comparing-speeds]
+  - id: physics.ms.average-speed
+    name: Finding average speed for a trip
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.ms.speed-as-a-rate
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.g6.decimals-all-operations
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find an average speed with two stages
+        key_prerequisites: [physics.ms.speed-as-a-rate]
+      - id: kp2
+        can_do: Tell average from instantaneous speed
+        key_prerequisites: [physics.ms.speed-as-a-rate]
+      - id: kp3
+        can_do: Find total time before averaging
+        key_prerequisites: [physics.ms.speed-as-a-rate]
+      - id: kp4
+        can_do: Find an average speed with decimals
+        key_prerequisites: [math.g6.decimals-all-operations]
+  - id: physics.ms.unit-conversions-speed
+    name: Converting between metres per second and kilometres per hour
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.speed-as-a-rate
+        encompassing: 0.3
+        confidence: high
+      - topic: math.g7.convert-between-unit-rates
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert kilometres per hour to metres per second
+        key_prerequisites: [math.g7.convert-between-unit-rates]
+      - id: kp2
+        can_do: Convert metres per second to kilometres per hour
+        key_prerequisites: [math.g7.convert-between-unit-rates]
+      - id: kp3
+        can_do: Compare speeds in different units
+        key_prerequisites: [physics.ms.speed-as-a-rate, math.g7.convert-between-unit-rates]
+      - id: kp4
+        can_do: Convert a speed in miles per hour to kilometres per hour
+        key_prerequisites: [math.g7.convert-between-unit-rates]
+  - id: physics.ms.velocity-with-direction
+    name: Telling velocity from speed
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.ms.speed-as-a-rate
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.ms.distance-and-displacement
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell speed from velocity
+        key_prerequisites: [physics.ms.speed-as-a-rate]
+      - id: kp2
+        can_do: Write a velocity with a direction
+        key_prerequisites: [physics.ms.distance-and-displacement]
+      - id: kp3
+        can_do: Find an average velocity from displacement and time
+        key_prerequisites: [physics.ms.speed-as-a-rate, physics.ms.distance-and-displacement]
+      - id: kp4
+        can_do: Show an object with constant speed but changing velocity
+        key_prerequisites: [physics.ms.speed-as-a-rate]
+  - id: physics.ms.distance-time-graphs
+    name: Drawing distance-time graphs
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.average-speed
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g6.line-graphs
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plot a trip from a table
+        key_prerequisites: [math.g6.line-graphs]
+      - id: kp2
+        can_do: Show a stopped object on a graph
+        key_prerequisites: [physics.ms.average-speed]
+      - id: kp3
+        can_do: Show a faster and a slower stage
+        key_prerequisites: [physics.ms.average-speed]
+      - id: kp4
+        can_do: Tell a story from a distance-time graph
+        key_prerequisites: [math.g6.line-graphs]
+  - id: physics.ms.slope-as-speed
+    name: Reading speed from a distance-time graph
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.distance-time-graphs
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g7.identify-unit-rate-on-graph
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Link a steeper line to a higher speed
+        key_prerequisites: [physics.ms.distance-time-graphs]
+      - id: kp2
+        can_do: Find speed from two points on a line
+        key_prerequisites: [math.g7.identify-unit-rate-on-graph]
+      - id: kp3
+        can_do: Compare two objects on one graph
+        key_prerequisites: [physics.ms.distance-time-graphs, math.g7.identify-unit-rate-on-graph]
+      - id: kp4
+        can_do: Find a negative slope as returning
+        key_prerequisites: [physics.ms.distance-time-graphs]
+  - id: physics.ms.acceleration-intro
+    name: Calculating acceleration
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.velocity-with-direction
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g7.rates-with-fractions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define acceleration as change in velocity over time
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp2
+        can_do: Calculate acceleration in metres per second squared
+        key_prerequisites: [math.g7.rates-with-fractions]
+      - id: kp3
+        can_do: Tell speeding up from slowing down by sign
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp4
+        can_do: Find a final velocity from acceleration and time
+        key_prerequisites: [physics.ms.velocity-with-direction, math.g7.rates-with-fractions]
+  - id: physics.ms.speed-time-graphs
+    name: Reading speed-time graphs
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.acceleration-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.slope-as-speed
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read speed at a time
+        key_prerequisites: [physics.ms.slope-as-speed]
+      - id: kp2
+        can_do: Read acceleration from slope
+        key_prerequisites: [physics.ms.acceleration-intro]
+      - id: kp3
+        can_do: Show constant speed and constant acceleration
+        key_prerequisites: [physics.ms.acceleration-intro]
+      - id: kp4
+        can_do: Find distance as area under a simple graph
+        key_prerequisites: [physics.ms.slope-as-speed]
+  - id: physics.ms.relative-motion
+    name: Describing motion from different viewpoints
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.velocity-with-direction
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe motion from two viewpoints
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp2
+        can_do: Add speeds moving the same way
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp3
+        can_do: Subtract speeds moving opposite ways
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp4
+        can_do: Explain why a train seems still from a neighbouring train
+        key_prerequisites: [physics.ms.velocity-with-direction]
+  - id: physics.ms.forces-as-interactions
+    name: Describing forces as interactions
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.elem.balanced-and-unbalanced
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a force as a push or pull between two objects
+        key_prerequisites: [physics.elem.balanced-and-unbalanced]
+      - id: kp2
+        can_do: Name the object exerting and the object receiving a force
+        key_prerequisites: [physics.elem.balanced-and-unbalanced]
+      - id: kp3
+        can_do: Name common forces in a scene
+        key_prerequisites: [physics.elem.balanced-and-unbalanced]
+      - id: kp4
+        can_do: Tell a force from motion
+        key_prerequisites: [physics.elem.balanced-and-unbalanced]
+  - id: physics.ms.newtons-and-spring-scales
+    name: Measuring force in newtons
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.ms.forces-as-interactions
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g3.read-measuring-scales
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a force in newtons on a spring scale
+        key_prerequisites: [math.g3.read-measuring-scales]
+      - id: kp2
+        can_do: Estimate everyday forces in newtons
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp3
+        can_do: Relate spring stretch to force
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp4
+        can_do: Convert pounds of force to newtons
+        key_prerequisites: [physics.ms.forces-as-interactions]
+  - id: physics.ms.force-diagrams
+    name: Drawing force diagrams
+    subject: physics
+    course: physics.ms
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: physics.ms.forces-as-interactions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw an object as a dot with arrows
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp2
+        can_do: Draw longer arrows for bigger forces
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp3
+        can_do: Label each force by its source
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp4
+        can_do: Draw a diagram for a resting object
+        key_prerequisites: [physics.ms.forces-as-interactions]
+  - id: physics.ms.net-force
+    name: Finding net force along a line
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.force-diagrams
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.newtons-and-spring-scales
+        encompassing: 0.25
+        confidence: high
+      - topic: math.g7.add-integers-different-sign
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add forces in the same direction
+        key_prerequisites: [physics.ms.newtons-and-spring-scales]
+      - id: kp2
+        can_do: Subtract forces in opposite directions
+        key_prerequisites: [math.g7.add-integers-different-sign]
+      - id: kp3
+        can_do: Find net force from a diagram
+        key_prerequisites: [physics.ms.force-diagrams]
+      - id: kp4
+        can_do: Tell balanced from unbalanced from a net force
+        key_prerequisites: [physics.ms.force-diagrams]
+  - id: physics.ms.inertia
+    name: Explaining inertia and Newton's first law
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.net-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.velocity-with-direction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Newton's first law
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp2
+        can_do: Explain why a passenger lurches forward
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp3
+        can_do: Relate inertia to mass
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp4
+        can_do: Explain constant velocity with zero net force
+        key_prerequisites: [physics.ms.net-force, physics.ms.velocity-with-direction]
+  - id: physics.ms.force-mass-acceleration
+    name: Relating force, mass and acceleration
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.net-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.acceleration-intro
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict acceleration when force doubles
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp2
+        can_do: Predict acceleration when mass doubles
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp3
+        can_do: Use a table to find the pattern
+        key_prerequisites: [physics.ms.acceleration-intro]
+      - id: kp4
+        can_do: State Newton's second law in words
+        key_prerequisites: [physics.ms.net-force, physics.ms.acceleration-intro]
+  - id: physics.ms.calculating-with-second-law
+    name: Calculating with Newton's second law
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.force-mass-acceleration
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g7.one-step-rational-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force from mass and acceleration
+        key_prerequisites: [physics.ms.force-mass-acceleration]
+      - id: kp2
+        can_do: Find acceleration from force and mass
+        key_prerequisites: [math.g7.one-step-rational-equations]
+      - id: kp3
+        can_do: Find mass from force and acceleration
+        key_prerequisites: [math.g7.one-step-rational-equations]
+      - id: kp4
+        can_do: Use net force with two applied forces
+        key_prerequisites: [physics.ms.force-mass-acceleration]
+  - id: physics.ms.action-reaction
+    name: Finding action-reaction pairs
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.inertia
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.ms.forces-as-interactions
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Newton's third law
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp2
+        can_do: Find a force pair for walking or rockets
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp3
+        can_do: Tell a force pair from balanced forces
+        key_prerequisites: [physics.ms.inertia]
+      - id: kp4
+        can_do: Explain why equal forces can give unequal motion
+        key_prerequisites: [physics.ms.inertia]
+  - id: physics.ms.third-law-collisions
+    name: Applying Newton's third law to collisions
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.action-reaction
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.elem.energy-in-collisions
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare forces in a collision
+        key_prerequisites: [physics.ms.action-reaction]
+      - id: kp2
+        can_do: Compare motion in a collision of unequal masses
+        key_prerequisites: [physics.ms.action-reaction, physics.elem.energy-in-collisions]
+      - id: kp3
+        can_do: Design a device to reduce crash force
+        key_prerequisites: [physics.elem.energy-in-collisions]
+      - id: kp4
+        can_do: Explain why crumple zones help
+        key_prerequisites: [physics.ms.action-reaction]
+  - id: physics.ms.friction-factors
+    name: Testing what affects friction
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.net-force
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.elem.friction-on-surfaces
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test how surface affects friction
+        key_prerequisites: [physics.elem.friction-on-surfaces]
+      - id: kp2
+        can_do: Test how load affects friction
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp3
+        can_do: Tell static from sliding friction
+        key_prerequisites: [physics.elem.friction-on-surfaces]
+      - id: kp4
+        can_do: Find a friction force from constant speed
+        key_prerequisites: [physics.ms.net-force]
+  - id: physics.ms.air-and-water-resistance
+    name: Explaining air and water resistance
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.friction-factors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain drag in air and water
+        key_prerequisites: [physics.ms.friction-factors]
+      - id: kp2
+        can_do: Test how shape affects drag
+        key_prerequisites: [physics.ms.friction-factors]
+      - id: kp3
+        can_do: Explain terminal velocity
+        key_prerequisites: [physics.ms.friction-factors]
+      - id: kp4
+        can_do: Design a slow-falling parachute
+        key_prerequisites: [physics.ms.friction-factors]
+  - id: physics.ms.gravity-mass-distance
+    name: Relating gravity to mass and distance
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.elem.gravity-pulls-down
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.forces-as-interactions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say gravity attracts all masses
+        key_prerequisites: [physics.elem.gravity-pulls-down]
+      - id: kp2
+        can_do: Predict the effect of more mass
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp3
+        can_do: Predict the effect of more distance
+        key_prerequisites: [physics.ms.forces-as-interactions]
+      - id: kp4
+        can_do: Explain why gravity is noticed only with huge masses
+        key_prerequisites: [physics.elem.gravity-pulls-down]
+  - id: physics.ms.weight-calculation
+    name: Calculating weight from mass
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.gravity-mass-distance
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.elem.mass-and-weight-intro
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g7.proportional-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use gravitational field strength in newtons per kilogram
+        key_prerequisites: [physics.ms.gravity-mass-distance]
+      - id: kp2
+        can_do: Calculate weight from mass
+        key_prerequisites: [math.g7.proportional-equations]
+      - id: kp3
+        can_do: Calculate weight on another planet
+        key_prerequisites: [physics.ms.gravity-mass-distance, math.g7.proportional-equations]
+      - id: kp4
+        can_do: Tell mass and weight on a scale
+        key_prerequisites: [physics.elem.mass-and-weight-intro]
+  - id: physics.ms.free-fall
+    name: Describing free fall
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: physics.ms.weight-calculation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.force-mass-acceleration
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.air-and-water-resistance
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain equal acceleration in a vacuum
+        key_prerequisites: [physics.ms.weight-calculation, physics.ms.force-mass-acceleration]
+      - id: kp2
+        can_do: Find speed during free fall
+        key_prerequisites: [physics.ms.force-mass-acceleration]
+      - id: kp3
+        can_do: Compare a feather and a ball with air resistance
+        key_prerequisites: [physics.ms.air-and-water-resistance]
+      - id: kp4
+        can_do: Find weight as the only force in free fall
+        key_prerequisites: [physics.ms.weight-calculation]
+  - id: physics.ms.pressure
+    name: Calculating pressure
+    subject: physics
+    course: physics.ms
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: physics.ms.newtons-and-spring-scales
+        encompassing: 0.35
+        confidence: high
+      - topic: math.g7.rates-with-fractions
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.g3.area-of-rectangles
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define pressure as force over area
+        key_prerequisites: [physics.ms.newtons-and-spring-scales]
+      - id: kp2
+        can_do: Calculate pressure in pascals
+        key_prerequisites: [math.g7.rates-with-fractions]
+      - id: kp3
+        can_do: Compare a sharp and a blunt tool
+        key_prerequisites: [physics.ms.newtons-and-spring-scales]
+      - id: kp4
+        can_do: Find area from a rectangle's sides before calculating
+        key_prerequisites: [math.g3.area-of-rectangles]
+  - id: physics.ms.density
+    name: Calculating density
+    subject: physics
+    course: physics.ms
+    level: g7
+    status: draft
+    prerequisites:
+      - topic: math.g5.volume-formulas
+        encompassing: 0.25
+        confidence: high
+      - topic: math.g6.unit-rates
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define density as mass per volume
+        key_prerequisites: [math.g6.unit-rates]
+      - id: kp2
+        can_do: Calculate density in grams per cubic centimetre
+        key_prerequisites: [math.g5.volume-formulas, math.g6.unit-rates]
+      - id: kp3
+        can_do: Find mass or volume from density
+        key_prerequisites: [math.g6.unit-rates]
+      - id: kp4
+        can_do: Find volume by water displacement
+        key_prerequisites: [math.g5.volume-formulas]
+  - id: physics.ms.floating-and-sinking
+    name: Predicting floating and sinking
+    subject: physics
+    course: physics.ms
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: physics.ms.density
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.net-force
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.pressure
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict floating from density
+        key_prerequisites: [physics.ms.density]
+      - id: kp2
+        can_do: Name buoyant force and weight on a diagram
+        key_prerequisites: [physics.ms.net-force]
+      - id: kp3
+        can_do: Explain buoyancy with pressure and depth
+        key_prerequisites: [physics.ms.pressure]
+      - id: kp4
+        can_do: Explain why a steel ship floats
+        key_prerequisites: [physics.ms.density, physics.ms.net-force]
+  - id: physics.ms.fields-at-a-distance
+    name: Showing fields act at a distance
+    subject: physics
+    course: physics.ms
+    level: g8
+    status: draft
+    prerequisites:
+      - topic: physics.ms.gravity-mass-distance
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.elem.magnet-distance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a field as a force region
+        key_prerequisites: [physics.ms.gravity-mass-distance]
+      - id: kp2
+        can_do: Show a magnetic field at a distance
+        key_prerequisites: [physics.elem.magnet-distance]
+      - id: kp3
+        can_do: Show a gravity field at a distance
+        key_prerequisites: [physics.ms.gravity-mass-distance]
+      - id: kp4
+        can_do: Compare gravity, electric and magnetic fields
+        key_prerequisites: [physics.ms.gravity-mass-distance, physics.elem.magnet-distance]
