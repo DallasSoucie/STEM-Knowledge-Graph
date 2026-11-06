@@ -144,7 +144,6 @@ git commit -m "Add flow layout stages and positions"
 **Interfaces:**
 - Consumes: `flow_positions`, `topic_stages`, `level_floors`, `topic_depths`, `STAGE_SPACING` from Task 2.
 - Produces: `build_map_data` returns keys `levels`, `subjects` (`[{"id"}]`), `courses` (no `lane`), `level_markers` (`[{"level", "x"}]`), `stage_spacing`, `topics`, `edges`.
-- Produces: `window.kgMap.nextStageRoom` is not added; label room is covered in Task 4.
 
 - [ ] **Step 1: Update `tests/test_export.py:104`** to the new key set, and add:
 
