@@ -626,6 +626,9 @@ topics:
       - topic: math.calc2.partial-fractions-linear
         encompassing: 0.6
         confidence: high
+      - topic: math.calc1.integrate-simple-division
+        encompassing: 0.3
+        confidence: high
     encompassed:
       - topic: math.alg2.polynomial-long-division
         encompassing: 0.35
@@ -636,7 +639,7 @@ topics:
         key_prerequisites: [math.calc2.partial-fractions-linear]
       - id: kp2
         can_do: Divide a rational function first
-        key_prerequisites: [math.alg2.polynomial-long-division]
+        key_prerequisites: [math.alg2.polynomial-long-division, math.calc1.integrate-simple-division]
       - id: kp3
         can_do: Integrate a quotient and remainder
         key_prerequisites: [math.calc2.partial-fractions-linear, math.alg2.polynomial-long-division]
@@ -676,8 +679,12 @@ topics:
       - topic: math.calc1.substitution-with-exp-log
         encompassing: 0.4
         confidence: high
+      - topic: math.calc1.integrate-completing-square
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.calc1.substitution-inverse-trig
-        encompassing: 0.35
+        encompassing: 0.15
         confidence: high
     knowledge_points:
       - id: kp1
@@ -691,7 +698,7 @@ topics:
         key_prerequisites: [math.calc1.substitution-with-exp-log]
       - id: kp4
         can_do: Split a linear numerator over a quadratic
-        key_prerequisites: [math.calc1.substitution-with-exp-log, math.calc1.substitution-inverse-trig]
+        key_prerequisites: [math.calc1.substitution-with-exp-log, math.calc1.substitution-inverse-trig, math.calc1.integrate-completing-square]
   - id: math.calc2.partial-fractions-quadratic-integral
     name: Integrating with quadratic factors
     subject: math
@@ -1884,9 +1891,6 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: math.calc1.squeeze-theorem
-        encompassing: 0.25
-        confidence: high
       - topic: math.calc1.growth-rate-comparison
         encompassing: 0.35
         confidence: high
@@ -1896,6 +1900,9 @@ topics:
     encompassed:
       - topic: math.calc2.sequence-notation-limits
         encompassing: 0.15
+        confidence: high
+      - topic: math.calc1.squeeze-theorem
+        encompassing: 0.25
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3281,6 +3288,36 @@ topics:
       - id: kp4
         can_do: Find one arch of a cycloid
         key_prerequisites: [math.calc2.parametric-derivatives]
+  - id: math.calc2.parametric-speed-motion
+    name: Finding speed and motion on parametric curves
+    subject: math
+    course: math.calc2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc2.parametric-arc-length
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.parametric-motion
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.parametric-derivatives
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity components at a time
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp2
+        can_do: Find speed in metres per second
+        key_prerequisites: [math.precalc.parametric-motion, math.calc2.parametric-derivatives]
+      - id: kp3
+        can_do: Find when motion is horizontal or vertical
+        key_prerequisites: [math.calc2.parametric-derivatives]
+      - id: kp4
+        can_do: Find total distance travelled along a curve
+        key_prerequisites: [math.calc2.parametric-arc-length]
   - id: math.calc2.parametric-surface-area
     name: Finding surface areas of parametric curves
     subject: math
@@ -3445,15 +3482,18 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: math.precalc.polar-curves
-        encompassing: 0.25
-        confidence: high
       - topic: math.calc2.parametric-horizontal-vertical
         encompassing: 0.4
         confidence: high
+      - topic: math.precalc.polar-rates
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.calc2.parametric-derivatives
         encompassing: 0.2
+        confidence: high
+      - topic: math.precalc.polar-curves
+        encompassing: 0.15
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3461,7 +3501,7 @@ topics:
         key_prerequisites: [math.calc2.parametric-horizontal-vertical, math.calc2.parametric-derivatives]
       - id: kp2
         can_do: Find a slope at an angle
-        key_prerequisites: [math.precalc.polar-curves]
+        key_prerequisites: [math.precalc.polar-curves, math.precalc.polar-rates]
       - id: kp3
         can_do: Find a slope with a rose or cardioid
         key_prerequisites: [math.calc2.parametric-horizontal-vertical]
