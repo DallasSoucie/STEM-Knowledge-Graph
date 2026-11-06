@@ -1881,3 +1881,724 @@ topics:
       - id: kp4
         can_do: Solve three forces at a point
         key_prerequisites: [physics.hs1.tension-at-angles, physics.hs1.forces-at-an-angle]
+  - id: physics.hs1.describing-circular-motion
+    name: Describing uniform circular motion
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.vector-components-physics
+        encompassing: 0.35
+        confidence: high
+      - topic: math.geom.circle-terms
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find direction of velocity on a circle
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp2
+        can_do: Find direction of acceleration on a circle
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp3
+        can_do: Explain acceleration at constant speed
+        key_prerequisites: [physics.hs1.vector-components-physics]
+      - id: kp4
+        can_do: Name a circle's radius and circumference in a problem
+        key_prerequisites: [math.geom.circle-terms]
+  - id: physics.hs1.period-and-tangential-speed
+    name: Finding period and tangential speed
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.describing-circular-motion
+        encompassing: 0.3
+        confidence: high
+      - topic: math.geom.arc-length
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a period and frequency
+        key_prerequisites: [physics.hs1.describing-circular-motion]
+      - id: kp2
+        can_do: Find tangential speed from a period
+        key_prerequisites: [math.geom.arc-length]
+      - id: kp3
+        can_do: Find a radius from speed and period
+        key_prerequisites: [math.geom.arc-length]
+      - id: kp4
+        can_do: Find a speed from a rotation rate
+        key_prerequisites: [physics.hs1.describing-circular-motion]
+  - id: physics.hs1.centripetal-acceleration
+    name: Calculating centripetal acceleration
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.period-and-tangential-speed
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate centripetal acceleration
+        key_prerequisites: [physics.hs1.period-and-tangential-speed]
+      - id: kp2
+        can_do: Find how acceleration changes with speed
+        key_prerequisites: [physics.hs1.period-and-tangential-speed]
+      - id: kp3
+        can_do: Find how acceleration changes with radius
+        key_prerequisites: [physics.hs1.period-and-tangential-speed]
+      - id: kp4
+        can_do: Find acceleration from a period
+        key_prerequisites: [physics.hs1.period-and-tangential-speed]
+  - id: physics.hs1.centripetal-force
+    name: Identifying the centripetal force
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.centripetal-acceleration
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate centripetal force
+        key_prerequisites: [physics.hs1.centripetal-acceleration, physics.hs1.second-law-in-one-dimension]
+      - id: kp2
+        can_do: Name the force that provides it
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp3
+        can_do: Explain why it is not an extra force
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Find a radius from a force
+        key_prerequisites: [physics.hs1.centripetal-acceleration]
+  - id: physics.hs1.flat-curves
+    name: Solving a car on a flat curve
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.centripetal-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.static-friction
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify friction as the centripetal force
+        key_prerequisites: [physics.hs1.centripetal-force, physics.hs1.static-friction]
+      - id: kp2
+        can_do: Find a maximum speed on a curve
+        key_prerequisites: [physics.hs1.centripetal-force, physics.hs1.static-friction]
+      - id: kp3
+        can_do: Find a needed friction coefficient
+        key_prerequisites: [physics.hs1.static-friction]
+      - id: kp4
+        can_do: Find a change on a wet road
+        key_prerequisites: [physics.hs1.centripetal-force]
+  - id: physics.hs1.banked-curves
+    name: Solving banked curves
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.flat-curves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.inclines-without-friction
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a banked car's forces
+        key_prerequisites: [physics.hs1.inclines-without-friction]
+      - id: kp2
+        can_do: Find a design speed
+        key_prerequisites: [physics.hs1.flat-curves]
+      - id: kp3
+        can_do: Find a bank angle
+        key_prerequisites: [physics.hs1.flat-curves, physics.hs1.inclines-without-friction]
+      - id: kp4
+        can_do: Explain why banking reduces friction
+        key_prerequisites: [physics.hs1.flat-curves]
+  - id: physics.hs1.vertical-circles
+    name: Solving vertical circles
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.centripetal-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.apparent-weight
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tension at the top and bottom
+        key_prerequisites: [physics.hs1.centripetal-force]
+      - id: kp2
+        can_do: Find normal force in a loop
+        key_prerequisites: [physics.hs1.centripetal-force, physics.hs1.apparent-weight]
+      - id: kp3
+        can_do: Find a least speed at the top
+        key_prerequisites: [physics.hs1.centripetal-force]
+      - id: kp4
+        can_do: Find apparent weight on a swing
+        key_prerequisites: [physics.hs1.apparent-weight]
+  - id: physics.hs1.universal-gravitation
+    name: Using Newton's law of gravitation
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.ms.gravity-mass-distance
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.rearranging-physics-formulas
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.g8.multiply-divide-scientific
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate gravity between two masses
+        key_prerequisites: [physics.ms.gravity-mass-distance, physics.hs1.rearranging-physics-formulas]
+      - id: kp2
+        can_do: Predict a change from doubled distance
+        key_prerequisites: [physics.ms.gravity-mass-distance]
+      - id: kp3
+        can_do: Use scientific notation in the formula
+        key_prerequisites: [math.g8.multiply-divide-scientific]
+      - id: kp4
+        can_do: Find a mass or distance
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+  - id: physics.hs1.field-strength-from-gravitation
+    name: Finding gravitational field strength
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.universal-gravitation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs1.weight-and-field-strength
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive field strength
+        key_prerequisites: [physics.hs1.universal-gravitation]
+      - id: kp2
+        can_do: Find field strength at a height
+        key_prerequisites: [physics.hs1.universal-gravitation]
+      - id: kp3
+        can_do: Find field strength on another planet
+        key_prerequisites: [physics.hs1.weight-and-field-strength]
+      - id: kp4
+        can_do: Explain why objects fall at the same rate
+        key_prerequisites: [physics.hs1.universal-gravitation]
+  - id: physics.hs1.circular-orbits
+    name: Analyzing circular orbits
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.universal-gravitation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.centripetal-force
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set gravity equal to centripetal force
+        key_prerequisites: [physics.hs1.universal-gravitation, physics.hs1.centripetal-force]
+      - id: kp2
+        can_do: Find an orbital speed
+        key_prerequisites: [physics.hs1.universal-gravitation]
+      - id: kp3
+        can_do: Find an orbital period
+        key_prerequisites: [physics.hs1.centripetal-force]
+      - id: kp4
+        can_do: Explain why orbital speed does not depend on mass
+        key_prerequisites: [physics.hs1.universal-gravitation]
+  - id: physics.hs1.keplers-third-law
+    name: Using Kepler's third law
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.circular-orbits
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the period and radius relationship
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp2
+        can_do: Find a period from a radius
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp3
+        can_do: Find a radius from a period
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp4
+        can_do: Plot data to test the relationship
+        key_prerequisites: [physics.hs1.circular-orbits]
+  - id: physics.hs1.apparent-weightlessness
+    name: Explaining apparent weightlessness
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.circular-orbits
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.apparent-weight
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain weightlessness in orbit
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp2
+        can_do: Compare gravity on the ground and in orbit
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp3
+        can_do: Find a scale reading in orbit
+        key_prerequisites: [physics.hs1.apparent-weight]
+      - id: kp4
+        can_do: Find a spinning station's artificial gravity
+        key_prerequisites: [physics.hs1.circular-orbits]
+  - id: physics.hs1.work-at-an-angle
+    name: Calculating work with an angled force
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.ms.work
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.forces-at-an-angle
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the cosine in a work formula
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp2
+        can_do: Find work with a pull at an angle
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp3
+        can_do: Find when work is zero
+        key_prerequisites: [physics.hs1.forces-at-an-angle]
+      - id: kp4
+        can_do: Find when work is negative
+        key_prerequisites: [physics.ms.work]
+  - id: physics.hs1.net-work
+    name: Finding net work from several forces
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.work-at-an-angle
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add work by several forces
+        key_prerequisites: [physics.hs1.work-at-an-angle]
+      - id: kp2
+        can_do: Find net work from net force
+        key_prerequisites: [physics.hs1.work-at-an-angle]
+      - id: kp3
+        can_do: Compare both methods
+        key_prerequisites: [physics.hs1.work-at-an-angle]
+      - id: kp4
+        can_do: Find work done by normal force on a slope
+        key_prerequisites: [physics.hs1.work-at-an-angle]
+  - id: physics.hs1.work-from-a-graph
+    name: Finding work from a force-distance graph
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.net-work
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.displacement-from-area
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work under a constant force graph
+        key_prerequisites: [physics.hs1.displacement-from-area]
+      - id: kp2
+        can_do: Find work under a varying force graph
+        key_prerequisites: [physics.hs1.displacement-from-area]
+      - id: kp3
+        can_do: Treat area below the axis as negative
+        key_prerequisites: [physics.hs1.displacement-from-area]
+      - id: kp4
+        can_do: Find work done by a spring from a graph
+        key_prerequisites: [physics.hs1.net-work]
+  - id: physics.hs1.work-energy-theorem
+    name: Using the work-energy theorem
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.net-work
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.kinetic-energy-calculation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [physics.hs1.net-work]
+      - id: kp2
+        can_do: Find a final speed from net work
+        key_prerequisites: [physics.ms.kinetic-energy-calculation]
+      - id: kp3
+        can_do: Find a stopping distance
+        key_prerequisites: [physics.hs1.net-work]
+      - id: kp4
+        can_do: Find a net force from a speed change
+        key_prerequisites: [physics.hs1.net-work]
+  - id: physics.hs1.gravitational-energy-of-a-system
+    name: Using gravitational potential energy in a system
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.work-energy-theorem
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.gravitational-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include Earth in the system
+        key_prerequisites: [physics.hs1.work-energy-theorem]
+      - id: kp2
+        can_do: Choose a zero level
+        key_prerequisites: [physics.ms.gravitational-potential]
+      - id: kp3
+        can_do: Find a change in energy
+        key_prerequisites: [physics.ms.gravitational-potential]
+      - id: kp4
+        can_do: Link gravity's work to potential energy
+        key_prerequisites: [physics.hs1.work-energy-theorem]
+  - id: physics.hs1.elastic-potential-energy
+    name: Calculating elastic potential energy
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.work-from-a-graph
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.hookes-law
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the formula from a graph
+        key_prerequisites: [physics.hs1.work-from-a-graph]
+      - id: kp2
+        can_do: Calculate spring energy
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp3
+        can_do: Find a compression from an energy
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp4
+        can_do: Find a spring constant from an energy
+        key_prerequisites: [physics.hs1.hookes-law]
+  - id: physics.hs1.conserving-mechanical-energy
+    name: Using conservation of mechanical energy
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.gravitational-energy-of-a-system
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.energy-conservation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a system with no outside work
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+      - id: kp2
+        can_do: Find a speed from a drop
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+      - id: kp3
+        can_do: Find a height from a speed
+        key_prerequisites: [physics.ms.energy-conservation]
+      - id: kp4
+        can_do: Solve a roller coaster at two points
+        key_prerequisites: [physics.ms.energy-conservation]
+  - id: physics.hs1.energy-with-springs
+    name: Solving energy problems with springs
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.conserving-mechanical-energy
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.elastic-potential-energy
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a launch speed from a spring
+        key_prerequisites: [physics.hs1.elastic-potential-energy]
+      - id: kp2
+        can_do: Find a height from a spring launch
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy, physics.hs1.elastic-potential-energy]
+      - id: kp3
+        can_do: Find a compression from a moving object
+        key_prerequisites: [physics.hs1.elastic-potential-energy]
+      - id: kp4
+        can_do: Find a mass on a vertical spring
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy]
+  - id: physics.hs1.energy-in-circular-motion
+    name: Combining energy and circular motion
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.conserving-mechanical-energy
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.vertical-circles
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a speed at the top of a loop
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy]
+      - id: kp2
+        can_do: Find a least release height
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy, physics.hs1.vertical-circles]
+      - id: kp3
+        can_do: Find tension at the bottom of a swing
+        key_prerequisites: [physics.hs1.vertical-circles]
+      - id: kp4
+        can_do: Find where a slider leaves a surface
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy, physics.hs1.vertical-circles]
+  - id: physics.hs1.potential-energy-graphs
+    name: Reading potential energy graphs
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.energy-with-springs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force from a slope
+        key_prerequisites: [physics.hs1.energy-with-springs]
+      - id: kp2
+        can_do: Find turning points
+        key_prerequisites: [physics.hs1.energy-with-springs]
+      - id: kp3
+        can_do: Find a stable equilibrium
+        key_prerequisites: [physics.hs1.energy-with-springs]
+      - id: kp4
+        can_do: Find a speed from a graph
+        key_prerequisites: [physics.hs1.energy-with-springs]
+  - id: physics.hs1.power-from-work
+    name: Calculating mechanical power
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.work-energy-theorem
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.power
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate power from work
+        key_prerequisites: [physics.ms.power]
+      - id: kp2
+        can_do: Calculate power from an energy change
+        key_prerequisites: [physics.hs1.work-energy-theorem]
+      - id: kp3
+        can_do: Compare two motors
+        key_prerequisites: [physics.ms.power]
+      - id: kp4
+        can_do: Find a time from power
+        key_prerequisites: [physics.ms.power]
+  - id: physics.hs1.power-force-velocity
+    name: Finding power from force and velocity
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.power-from-work
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive power from force and velocity
+        key_prerequisites: [physics.hs1.power-from-work]
+      - id: kp2
+        can_do: Find a car's power at constant speed
+        key_prerequisites: [physics.hs1.power-from-work]
+      - id: kp3
+        can_do: Find a drag from power and speed
+        key_prerequisites: [physics.hs1.power-from-work]
+      - id: kp4
+        can_do: Find a top speed
+        key_prerequisites: [physics.hs1.power-from-work]
+  - id: physics.hs1.efficiency-of-machines
+    name: Finding the efficiency of machines
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.power-from-work
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.ms.efficiency
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find efficiency from input and output
+        key_prerequisites: [physics.ms.efficiency]
+      - id: kp2
+        can_do: Find useful output from efficiency
+        key_prerequisites: [physics.ms.efficiency]
+      - id: kp3
+        can_do: Find a motor's input power
+        key_prerequisites: [physics.hs1.power-from-work]
+      - id: kp4
+        can_do: Trace wasted energy
+        key_prerequisites: [physics.ms.efficiency]
+  - id: physics.hs1.work-by-gravity-and-friction
+    name: Finding work by gravity and friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.net-work
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work by gravity on a slope
+        key_prerequisites: [physics.hs1.net-work]
+      - id: kp2
+        can_do: Find work by friction
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp3
+        can_do: Show gravity's work depends only on height
+        key_prerequisites: [physics.hs1.net-work]
+      - id: kp4
+        can_do: Show friction's work depends on path
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.hs1.energy-with-friction
+    name: Solving energy problems with friction
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.conserving-mechanical-energy
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.work-by-gravity-and-friction
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an energy equation with friction
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy, physics.hs1.work-by-gravity-and-friction]
+      - id: kp2
+        can_do: Find a final speed
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy, physics.hs1.work-by-gravity-and-friction]
+      - id: kp3
+        can_do: Find a stopping distance
+        key_prerequisites: [physics.hs1.work-by-gravity-and-friction]
+      - id: kp4
+        can_do: Find a friction coefficient
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.hs1.system-bar-charts
+    name: Using energy bar charts for systems
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.energy-with-friction
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.energy-bar-charts
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw bars for a system with friction
+        key_prerequisites: [physics.hs1.energy-with-friction]
+      - id: kp2
+        can_do: Move bars when a system changes
+        key_prerequisites: [physics.ms.energy-bar-charts]
+      - id: kp3
+        can_do: Include outside work
+        key_prerequisites: [physics.hs1.energy-with-friction]
+      - id: kp4
+        can_do: Write an equation from bars
+        key_prerequisites: [physics.ms.energy-bar-charts]
