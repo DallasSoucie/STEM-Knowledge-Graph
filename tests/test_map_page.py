@@ -545,20 +545,58 @@ def test_small_course_names_every_topic_on_a_wide_window(page, tmp_path):
     assert any(t.endswith("…") for t in texts.values())
 
 
-def test_a_name_never_reaches_the_next_stage(page, tmp_path):
-    page.set_viewport_size({"width": 1920, "height": 1080})
-    open_map(page, named_course_graph(), tmp_path)
-    page.wait_for_timeout(300)
+def multi_dot_graph():
+    # three topics per stage over five stages, so names share a stage with others and sit on different lines
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 15, levels=("g4", "g4"))}
+    names = []
+    for stage in range(5):
+        for line in range(3):
+            prereqs = [f"math.a.s{stage - 1}l{k}" for k in range(3)] if stage else None
+            names.append(topic(f"math.a.s{stage}l{line}", prereqs, level="g4"))
+    for t in names:
+        t.name = f"Solving a rather long kind of problem {t.id[-4:]}"
+    add(kg, *names)
+    return kg
+
+
+def assert_names_stop_before_next_stage(page, skip=None):
     topics = page.evaluate("JSON.parse(document.getElementById('kg-data').textContent).topics")
     xs = {t["id"]: page.evaluate("id => window.kgMap.nodeViewport(id).x", t["id"]) for t in topics}
     by_stage = sorted(set(t["x"] for t in topics))
     rects = {r["text"]: r for r in page.evaluate("window.kgMap.labelRects()") if r["text"] in xs}
-    assert rects
     for t in topics:
         later = [x for x in by_stage if x > t["x"]]
-        if t["id"] in rects and later:
+        if t["id"] in rects and later and t["id"] != skip:
             next_dots = min(xs[o["id"]] for o in topics if o["x"] == later[0])
             assert rects[t["id"]]["x1"] - 12 < next_dots, t["id"]
+    return rects
+
+
+@pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
+@pytest.mark.parametrize("make", [named_course_graph, multi_dot_graph])
+def test_a_name_never_reaches_the_next_stage(page, tmp_path, size, make):
+    page.set_viewport_size({"width": size[0], "height": size[1]})
+    open_map(page, make(), tmp_path)
+    page.wait_for_timeout(300)
+    assert_names_stop_before_next_stage(page)
+
+
+def test_a_name_never_reaches_the_next_stage_once_selected(page, tmp_path):
+    page.set_viewport_size({"width": 1280, "height": 720})
+    open_map(page, multi_dot_graph(), tmp_path)
+    select(page, "math.a.s2l1")
+    page.wait_for_timeout(600)
+    # the selected topic keeps its full name; every other one still stops before the next stage
+    rects = assert_names_stop_before_next_stage(page, skip="math.a.s2l1")
+    assert "math.a.s2l1" in rects
+
+
+def test_names_show_at_open_on_a_small_multi_dot_flow(page, tmp_path):
+    page.set_viewport_size({"width": 1280, "height": 720})
+    open_map(page, multi_dot_graph(), tmp_path)
+    page.wait_for_timeout(300)
+    assert len(page.evaluate("window.kgMap.labelTexts()")) >= 1
 
 
 @pytest.mark.parametrize("size", [(1280, 720), (1920, 1080)])
@@ -615,6 +653,24 @@ def test_level_markers_show_and_never_overlap(page, tmp_path):
     rects = visible_rects(page, ".lbl-level")
     assert [r["text"] for r in rects] == ["gk", "g1", "g2"]
     assert_no_overlap(rects)
+
+
+def test_one_level_marker_stays_in_view_when_no_floor_is_on_screen(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 7, levels=("gk", "g2"))}
+    chain = [topic("math.a.t0", level="gk")]
+    for i in range(1, 7):
+        chain.append(topic(f"math.a.t{i}", [f"math.a.t{i - 1}"], level="g1" if i < 4 else "g2"))
+    add(kg, *chain)
+    open_map(page, kg, tmp_path)
+    page.evaluate("window.kgMap.selectTopic('math.a.t5')")
+    zoom_in(page, 6, around="math.a.t5")
+    box = page.locator("#map").bounding_box()
+    rects = visible_rects(page, ".lbl-level")
+    assert len(rects) == 1
+    assert rects[0]["x0"] >= box["x"] and rects[0]["x1"] <= box["x"] + box["width"]
+    assert rects[0]["text"] == "g2"
+    assert abs(rects[0]["x0"] - box["x"] - 4) < 1.5  # pinned at the edge: its own spot is off to the left
 
 
 def test_course_label_sits_at_its_largest_stage(page, tmp_path):
@@ -685,7 +741,7 @@ def in_view(page, kg):
 
 
 # 8 topics stack in one column at full-map zoom, and centring on one pushes the far end half a line off
-@pytest.mark.parametrize("n, wanted", [(8, 7), (150, 30)])
+@pytest.mark.parametrize("n, wanted", [(8, 7), (150, 24)])
 def test_selecting_on_a_sparse_graph_keeps_neighbours_in_view(page, tmp_path, n, wanted):
     kg = small_graph(n)
     open_map(page, kg, tmp_path)
@@ -705,7 +761,7 @@ def test_selecting_on_a_dense_graph_separates_lines(page, tmp_path):
     page.evaluate("id => window.kgMap.selectTopic(id)", a)
     page.wait_for_timeout(500)
     gap = page.evaluate("([a, b]) => window.kgMap.nodeViewport(b).y - window.kgMap.nodeViewport(a).y", [a, b])
-    assert 15 <= abs(gap) <= 30
+    assert 20 <= abs(gap) <= 37
 
 
 def test_ticking_a_subject_with_no_topics_yet_filters_to_nothing(page, tmp_path):

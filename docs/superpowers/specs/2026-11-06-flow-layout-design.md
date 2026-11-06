@@ -1,7 +1,7 @@
 # Map flow layout: design
 
 **Date:** 2026-11-06
-**Status:** awaiting owner review
+**Status:** approved
 **Replaces:** the "Layout: curriculum bands" section of `2026-11-05-knowledge-graph-tooling-and-map-design.md`, and the band-related risks and validation there
 
 ## Purpose

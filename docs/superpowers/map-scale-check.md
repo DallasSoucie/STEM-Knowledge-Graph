@@ -88,9 +88,8 @@ at 1920x1080, and `t11x-dark.png`.
   about 60 percent of the window height because the map area is 750 px wide; at 1920x1080 about 80 percent.
 - Mid zoom: course names fill in as you zoom in, one per block, and the current subject and level stay visible.
 - Zoomed in: topic names are readable and none printed over another. At lines about 20 px apart most topics
-  in view are named. Selecting a topic zooms until lines are about 20 px apart, capped at the full map, so
-  a sparse map keeps the neighbours in view. Tests cover that on one course of 8 (at least 7 in view) and of 150 topics (at least 30
-  in view), and the line gap on the real manifest with 40 topics per course. I looked at the result on `t11p-*`
+  in view are named. Selecting a topic then zoomed until lines were about 20 px apart (now 25 px, see the flow check below), capped at the full map, so
+  a sparse map keeps the neighbours in view. Tests cover that on one course of 8 (at least 7 in view) and of 150 topics (at least 30 in view at 20 px, 24 at 25 px), and the line gap on the real manifest with 40 topics per course. I looked at the result on `t11p-*`
   (one course of 150) and `t11r-c-selected` (filled manifest). It does not promise neighbouring names on every
   graph: labels are still culled, and on a dense map only the ones that fit show.
 - Lineage filter when zoomed in: matched names stand out against faded dots. Dark theme at zoom-out looks the same.
@@ -142,8 +141,12 @@ Shape: 927 stages, the tallest holding 46 topics, `STAGE_SPACING` 3.0, so the wh
 units (about 62:1). At 1920x1080 the overview is a thin coloured band across the middle of the window with
 course and level labels above it; it reads as a flow only once zoomed in. The synthetic graph is chain-like,
 which makes it far longer than a real one is likely to be, so this is the worst case for proportions.
-Topic names get `stage_spacing` graph units of room before the next stage, so they shorten with an ellipsis
-as stages crowd together and show whole once zoomed in.
+Topic names get `stage_spacing` graph units of room before the next stage. A name that fits is drawn whole;
+with at least 40 px of room it is shortened with an ellipsis; with less, no name is drawn, so a name never
+runs past the next stage. Selecting a topic zooms until lines are about 25 px apart (`SELECT_LINE_PX`), so
+neighbours in a stage have room for names. On the real graph at full zoom-out (71 topics, `math.k` and the
+course after it) the stage gap is 62 px at 1280x720 and every name is cut to about 6 to 8 letters, which says
+little; at 1920x1080 68 of 71 are cut but most show enough to read. Whole names need zooming in.
 
 ## Reproduce
 

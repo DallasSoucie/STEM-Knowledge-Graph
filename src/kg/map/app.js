@@ -8,16 +8,17 @@
   };
   const FALLBACK_COLOUR = "#888780";
   const MAX_RESULTS = 20;
-  const SELECT_LINE_PX = 20; // selecting a topic zooms until a block's lines are this many pixels apart
+  const SELECT_LINE_PX = 25; // selecting a topic zooms until neighbouring lines are this many pixels apart
   const MAX_DOT = 3.5; // topic radius in pixels at full zoom-out; dense maps use less, down to MIN_DOT
   const MIN_DOT = 1;
-  const LINE_SPACING = 1; // graph units between a course block's lines, from layout.py
-  const LABEL_LINE_PX = 6; // topic labels start once a block's lines are this many pixels apart
+  const LINE_SPACING = 1; // graph units between lines within a stage, from layout.py
+  const LABEL_LINE_PX = 6; // topic labels start once lines are this many pixels apart
   const COURSE_LABEL_HEIGHT = 16;
   const TOPIC_LABEL_HALF = 8; // half a topic label's height, so course labels clear the first line's names
   const STAGE_PADDING = 30; // sigma's default margin around the dots
   const LABEL_ROOM_PX = 90; // kept free right of the dots on maps that show names at once
-  const MIN_LABEL_PX = 56; // below this a shortened name says too little to be worth drawing
+  const LEVEL_PIN_X = 4; // where the last level marker left of the view sticks
+  const MIN_LABEL_PX = 40; // below this a shortened name says too little to be worth drawing
   // Sigma's grid only limits which topics may try for a label, and picks them by ID within a cell, so
   // it is kept loose once labels are on: drawLabel below does the real work of keeping them apart.
   const LABEL_GRID_CELL = 24;
@@ -331,7 +332,7 @@
   }
 
   // ---- graph and sigma -------------------------------------------------
-  // sigma fits the view to the topics that exist; empty columns and rows would only waste space
+  // sigma fits the view to the topics that exist; empty stages and lines would only waste space
   const extent = (pick) => (topics.length ? minMax(topics, pick) : [0, 1]);
   const spanX = extent((t) => t.x);
   const spanY = extent((t) => t.y);
@@ -343,7 +344,7 @@
         (mapEl.clientHeight - 2 * STAGE_PADDING) / (spanY[1] - spanY[0]),
       ),
   );
-  // Dots stay small enough at full zoom-out that a course reads as a block, not a smear; sigma grows them on zoom.
+  // Dots stay small enough at full zoom-out that a stage reads as a column of dots, not a smear; sigma grows them on zoom.
   const dotSize = Math.min(MAX_DOT, Math.max(MIN_DOT, lineSpacingPx * 0.45));
   // Dots grow as 1 / sqrt(ratio), so this is the size they reach when lines are LABEL_LINE_PX apart.
   const labelThreshold = dotSize * 0.99 * Math.max(1, Math.sqrt(LABEL_LINE_PX / lineSpacingPx));
@@ -352,7 +353,7 @@
 
   const graph = new GraphCtor({ type: "directed" });
   for (const t of topics) {
-    // sigma's y axis points up, the map's rows run downward
+    // sigma's y axis points up, the map's lines run downward
     graph.addNode(t.id, { x: t.x, y: -t.y, idx: byId.get(t.id), ...topicStyle(t) });
   }
   function addEdge(e) {
@@ -536,7 +537,7 @@
   }
 
   // The name to draw and its width: whole if it fits before the next stage and the window's edge, shortened
-  // if enough room is left, and otherwise whole only if the edge would not cut it. Null means no label.
+  // if at least MIN_LABEL_PX is left, and otherwise none (null), so a name never runs past the next stage.
   function fitLabel(context, d, settings) {
     const width = labelWidth(context, d.key, d.label, settings);
     if (!sigma) return { text: d.label, width };
@@ -549,7 +550,7 @@
       const chars = Math.floor(((room - 8) * d.label.length) / width);
       return { text: d.label.slice(0, chars).trimEnd() + "\u2026", width: room };
     }
-    return width <= toEdge ? { text: d.label, width } : null;
+    return null;
   }
 
   function drawLabel(context, d, settings) {
@@ -642,17 +643,25 @@
   // below which course labels have to stay.
   function placeLevels(w) {
     const y = Math.max(2, sigma.graphToViewport({ x: 0, y: -spanY[0] }).y - COURSE_LABEL_HEIGHT * 2 - TOPIC_LABEL_HALF);
+    const xs = levelLabels.map((m) => sigma.graphToViewport({ x: m.x, y: 0 }).x);
+    // a marker whose label would be clipped at the left edge counts as left of the view; the last of
+    // those is pinned at the edge so the current level always shows, unless the next marker is too close
+    let pinned = -1;
+    xs.forEach((x, i) => { if (x < LEVEL_PIN_X) pinned = i; });
     const placed = [];
-    for (const m of levelLabels) {
-      const x = sigma.graphToViewport({ x: m.x, y: 0 }).x;
-      const right = x + m.width + 1;
-      if (right < 0 || x > w || placed.some((p) => x < p.right && p.x < right)) {
-        hide(m);
-        continue;
+    levelLabels.forEach((m, i) => {
+      let x = xs[i];
+      if (i < pinned) return hide(m);
+      if (i === pinned) {
+        x = LEVEL_PIN_X;
+        const next = xs[i + 1];
+        if (next !== undefined && next < x + m.width + 1) return hide(m);
       }
+      const right = x + m.width + 1;
+      if (x > w || placed.some((p) => x < p.right && p.x < right)) return hide(m);
       placed.push({ x, right });
       place(m, x, y);
-    }
+    });
     return y + COURSE_LABEL_HEIGHT;
   }
 
@@ -669,7 +678,7 @@
       const dx = Math.max(a.x - w / 2, w / 2 - b.x, 0);
       const dy = Math.max(a.y - h / 2, h / 2 - b.y, 0);
       c.dist = dx * dx + dy * dy;
-      // above its block, or kept in view while the block fills the window
+      // above its anchor stage, or kept in view while the course fills the window
       const anchor = sigma.graphToViewport({ x: c.anchorX, y: -c.anchorY });
       c.px = clamp(anchor.x, 4, w - c.width - 4);
       c.py = clamp(anchor.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, Math.min(b.y, h) - COURSE_LABEL_HEIGHT);
