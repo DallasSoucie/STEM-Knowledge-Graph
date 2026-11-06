@@ -418,6 +418,16 @@ def visible_rects(page, selector):
     )
 
 
+def rects_in_map(page, selector):
+    """Visible rects that also intersect the map, so a label parked off-screen does not count."""
+    box = page.locator("#map").bounding_box()
+    return [
+        r for r in visible_rects(page, selector)
+        if r["x1"] > box["x"] and r["x0"] < box["x"] + box["width"]
+        and r["y1"] > box["y"] and r["y0"] < box["y"] + box["height"]
+    ]
+
+
 def assert_no_overlap(rects, other=None):
     pairs = combinations(rects, 2) if other is None else product(rects, other)
     for a, b in pairs:
@@ -455,7 +465,23 @@ def test_the_course_being_looked_at_gets_its_label(page, tmp_path):
     open_map(page, manifest_graph(), tmp_path)
     select(page, "engr.networks.t3")
     page.wait_for_timeout(600)
-    assert "engr.networks" in [r["text"] for r in visible_rects(page, ".lbl-course")]
+    assert "engr.networks" in [r["text"] for r in rects_in_map(page, ".lbl-course")]
+
+
+def test_course_label_stays_in_the_window_beside_a_much_taller_course(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {
+        "math.a": course("math.a", 201, levels=("g4", "g4")),
+        "math.b": course("math.b", 6, levels=("g4", "g4")),
+    }
+    add(kg, topic("math.a.r", level="g4"), topic("math.b.s", level="g4"))
+    add(kg, *[topic(f"math.a.t{i:03d}", ["math.a.r"], level="g4") for i in range(200)])
+    add(kg, *[topic(f"math.b.t{i}", ["math.b.s"], level="g4") for i in range(5)])
+    page.set_viewport_size({"width": 1280, "height": 720})
+    open_map(page, kg, tmp_path)
+    select(page, "math.b.s")
+    page.wait_for_timeout(800)
+    assert "math.b" in [r["text"] for r in rects_in_map(page, ".lbl-course")]
 
 
 def dense_course_graph():
@@ -587,7 +613,13 @@ def test_course_label_sits_at_its_largest_stage(page, tmp_path):
     left = page.locator("#map").bounding_box()["x"]
     x0 = page.evaluate("id => window.kgMap.nodeViewport(id).x", "math.a.s0")
     x1 = page.evaluate("id => window.kgMap.nodeViewport(id).x", "math.a.m0")
-    assert abs(label["x0"] - left - x1) <= x1 - x0
+    # under half a stage from the 5-topic stage, so the 1- and 2-topic stages cannot pass
+    assert abs(label["x0"] - left - x1) < (x1 - x0) / 2
+    top = min(
+        page.evaluate("id => window.kgMap.nodeViewport(id).y", f"math.a.m{i}") for i in range(5)
+    )
+    box_top = page.locator("#map").bounding_box()["y"]
+    assert label["y1"] - box_top <= top and top - (label["y1"] - box_top) < 20
 
 
 def test_startup_failure_is_reported_as_itself(page, tmp_path):

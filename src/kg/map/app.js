@@ -683,7 +683,7 @@
       // above its block, or kept in view while the block fills the window
       const anchor = sigma.graphToViewport({ x: c.anchorX, y: -c.anchorY });
       c.px = clamp(anchor.x, 4, w - c.width - 4);
-      c.py = clamp(anchor.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, b.y - COURSE_LABEL_HEIGHT);
+      c.py = clamp(anchor.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, Math.min(b.y, h) - COURSE_LABEL_HEIGHT);
       wanted.push(c);
     }
     wanted.sort((p, q) => p.dist - q.dist || p.order - q.order);
