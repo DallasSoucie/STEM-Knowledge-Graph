@@ -10,6 +10,7 @@ A knowledge graph for a Math Academy-style adaptive learning app covering roughl
 
 - Everything here must be original. Build from general knowledge of standards and typical curricula (Common Core, NGSS, AP, standard university course sequences).
 - **Never copy or closely mirror any specific textbook's table of contents, chapter structure, section titles, or wording.** Do not paste text from OpenStax or any other source. Prerequisite relationships are ideas and fine to derive; expression is not.
+- Metric comes first, and imperial is covered wherever Common Core uses it. Put both in one topic by default, with metric KPs first. Separate them only when that makes logical sense; when in doubt, ask.
 - Topic names are short, generic, and descriptive (e.g. "Solving two-step linear equations").
 - Do not invent edges to make the graph look connected. A weak or uncertain link is marked `confidence: low`, not dressed up.
 
