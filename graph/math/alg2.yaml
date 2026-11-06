@@ -74,6 +74,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.real-number-system-review
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.alg2.complex-i
         encompassing: 0.55
         confidence: high
@@ -137,11 +141,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.complex-add-subtract
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.multiply-binomials
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.complex-standard-form
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.complex-add-subtract
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -176,29 +184,6 @@ topics:
       - id: kp3
         can_do: Say why the product is real
         key_prerequisites: [math.alg2.complex-multiply]
-  - id: math.alg2.complex-divide
-    name: Dividing complex numbers
-    subject: math
-    course: math.alg2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: math.alg2.complex-conjugates
-        encompassing: 0.65
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Divide by a purely imaginary number
-        key_prerequisites: [math.alg2.complex-conjugates]
-      - id: kp2
-        can_do: Divide by a complex number
-        key_prerequisites: [math.alg2.complex-conjugates]
-      - id: kp3
-        can_do: Write the answer in a + bi form
-        key_prerequisites: [math.alg2.complex-conjugates]
-      - id: kp4
-        can_do: Divide and then simplify a fraction in a + bi form
-        key_prerequisites: [math.alg2.complex-conjugates]
   - id: math.alg2.powers-of-i
     name: Simplifying powers of i
     subject: math
@@ -222,6 +207,32 @@ topics:
       - id: kp4
         can_do: Evaluate i to a negative power
         key_prerequisites: [math.alg2.complex-multiply]
+  - id: math.alg2.complex-divide
+    name: Dividing complex numbers
+    subject: math
+    course: math.alg2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: math.alg2.complex-conjugates
+        encompassing: 0.65
+        confidence: high
+      - topic: math.alg2.powers-of-i
+        encompassing: 0.15
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Divide by a purely imaginary number
+        key_prerequisites: [math.alg2.complex-conjugates]
+      - id: kp2
+        can_do: Divide by a complex number
+        key_prerequisites: [math.alg2.complex-conjugates]
+      - id: kp3
+        can_do: Write the answer in a + bi form
+        key_prerequisites: [math.alg2.complex-conjugates]
+      - id: kp4
+        can_do: Divide and then simplify a fraction in a + bi form
+        key_prerequisites: [math.alg2.complex-conjugates]
   - id: math.alg2.quadratics-complex-solutions
     name: Solving quadratics with complex solutions
     subject: math
@@ -233,6 +244,9 @@ topics:
         encompassing: 0.35
         confidence: high
       - topic: math.alg1.quadratic-formula-irrational
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg2.negative-under-radical
         encompassing: 0.3
         confidence: medium
     encompassed:
@@ -352,6 +366,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.radical-to-rational-form
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.alg2.rational-exponents
         encompassing: 0.65
         confidence: high
@@ -438,10 +456,14 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.simplify-radicals-higher
+      - topic: math.alg1.add-subtract-square-roots
         encompassing: 0.5
         confidence: high
-      - topic: math.alg1.add-subtract-square-roots
+      - topic: math.alg2.simplify-with-variables-radical
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.simplify-radicals-higher
         encompassing: 0.5
         confidence: high
     knowledge_points:
@@ -493,6 +515,9 @@ topics:
       - topic: math.alg2.multiply-radicals
         encompassing: 0.65
         confidence: medium
+      - topic: math.alg2.add-subtract-radicals
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Multiply two binomials with radicals
@@ -538,6 +563,9 @@ topics:
     prerequisites:
       - topic: math.alg2.rationalize-denominators
         encompassing: 0.65
+        confidence: medium
+      - topic: math.alg2.binomial-radical-multiply
+        encompassing: 0.35
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -615,26 +643,6 @@ topics:
       - id: kp3
         can_do: Check all solutions
         key_prerequisites: [math.alg2.extraneous-radical]
-  - id: math.alg2.radical-word-problems
-    name: Solving radical models
-    subject: math
-    course: math.alg2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: math.alg2.extraneous-radical
-        encompassing: 0.6
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a pendulum or speed model
-        key_prerequisites: [math.alg2.extraneous-radical]
-      - id: kp2
-        can_do: Solve for a variable in a radical formula
-        key_prerequisites: [math.alg2.extraneous-radical]
-      - id: kp3
-        can_do: Check the answer's reasonableness
-        key_prerequisites: [math.alg2.extraneous-radical]
   - id: math.alg2.rational-exponent-equations
     name: Solving equations with rational exponents
     subject: math
@@ -658,6 +666,33 @@ topics:
       - id: kp3
         can_do: Check for extraneous solutions
         key_prerequisites: [math.alg2.radical-equations]
+  - id: math.alg2.radical-word-problems
+    name: Solving radical models
+    subject: math
+    course: math.alg2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: math.alg2.radical-two-sides
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg2.rational-exponent-equations
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg2.extraneous-radical
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a pendulum or speed model
+        key_prerequisites: [math.alg2.extraneous-radical]
+      - id: kp2
+        can_do: Solve for a variable in a radical formula
+        key_prerequisites: [math.alg2.extraneous-radical]
+      - id: kp3
+        can_do: Check the answer's reasonableness
+        key_prerequisites: [math.alg2.extraneous-radical]
   - id: math.alg2.polynomial-long-division
     name: Dividing polynomials by long division
     subject: math
@@ -754,6 +789,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.divide-non-monic
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.alg2.synthetic-with-missing-terms
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.synthetic-division
         encompassing: 0.55
         confidence: high
@@ -817,6 +859,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.polynomial-from-factor
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.alg2.factor-theorem
         encompassing: 0.65
         confidence: medium
@@ -837,6 +883,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.find-remaining-zeros
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.alg2.factor-theorem
         encompassing: 0.55
         confidence: high
@@ -946,12 +996,16 @@ topics:
       - topic: math.alg2.rational-root-theorem
         encompassing: 0.5
         confidence: medium
-      - topic: math.alg2.quadratics-complex-solutions
-        encompassing: 0.4
-        confidence: high
       - topic: math.alg1.derive-quadratic-formula
         encompassing: 0.1
         confidence: low
+      - topic: math.alg2.discriminant-complex
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.quadratics-complex-solutions
+        encompassing: 0.4
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Say how many roots a polynomial has
@@ -975,6 +1029,9 @@ topics:
       - topic: math.alg2.fundamental-theorem-algebra
         encompassing: 0.55
         confidence: high
+      - topic: math.alg2.sum-product-of-roots
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a conjugate root
@@ -1059,13 +1116,19 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.polynomial-identities
-        encompassing: 0.5
+      - topic: math.alg2.polynomial-identities-apply
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg2.pascals-triangle
+        encompassing: 0.45
         confidence: high
     encompassed:
       - topic: math.alg1.special-product-squares
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.polynomial-identities
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Expand a power of a binomial with the theorem
@@ -1169,11 +1232,18 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.polynomial-graphs-end-behavior
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg2.factor-theorem
         encompassing: 0.5
+        confidence: high
+      - topic: math.alg2.even-odd-degree-behavior
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg2.transformations-of-polynomials
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.polynomial-graphs-end-behavior
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1287,6 +1357,9 @@ topics:
       - topic: math.alg2.factor-quartic-quadratic-form
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.factor-by-grouping-cubic
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve by factoring with the rational root theorem
@@ -1333,12 +1406,16 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.polynomial-graph-zeros
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.compound-or-inequalities
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg2.multiplicity
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.polynomial-graph-zeros
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve with a sign chart
@@ -1362,6 +1439,10 @@ topics:
       - topic: math.alg2.solve-polynomial-equations
         encompassing: 0.5
         confidence: high
+      - topic: math.alg2.polynomial-with-technology
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg2.polynomial-turning-points
         encompassing: 0.4
         confidence: high
@@ -1478,12 +1559,19 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.simplify-rational-expressions
-        encompassing: 0.6
-        confidence: high
       - topic: math.g7.divide-signed-fractions
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.excluded-values
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.alg2.factor-before-cancel
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.simplify-rational-expressions
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Multiply rational expressions
@@ -1507,6 +1595,7 @@ topics:
       - topic: math.alg2.simplify-rational-expressions
         encompassing: 0.45
         confidence: high
+    encompassed:
       - topic: math.g6.lcm
         encompassing: 0.35
         confidence: medium
@@ -1587,6 +1676,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.rational-opposite-factors
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg2.add-rational-monomial-denominators
+        encompassing: 0.5
+        confidence: high
+    encompassed:
       - topic: math.alg2.lcd-of-rational
         encompassing: 0.7
         confidence: high
@@ -1665,6 +1761,9 @@ topics:
       - topic: math.alg1.choose-quadratic-method
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.proportion-rational-equations
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Multiply through by the least common denominator
@@ -1731,15 +1830,19 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.solve-rational-equations
-        encompassing: 0.5
-        confidence: high
       - topic: math.alg1.rate-time-distance
         encompassing: 0.4
         confidence: medium
       - topic: math.alg1.work-problems-linear
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg2.extraneous-rational
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg2.solve-rational-equations
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve a combined work problem
@@ -1827,12 +1930,16 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.inverse-variation
-        encompassing: 0.45
-        confidence: high
       - topic: math.alg1.transform-stretch-reflect
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg2.variation-graphs
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.inverse-variation
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Graph y = 1/x
@@ -1870,11 +1977,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.reciprocal-parent
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg2.simplify-rational-expressions
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.transform-reciprocal
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.reciprocal-parent
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1979,6 +2090,16 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.holes-vs-asymptotes
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.alg2.intercepts-of-rational
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg2.compare-degree-asymptotes
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.horizontal-asymptotes
         encompassing: 0.65
         confidence: high
@@ -2031,6 +2152,12 @@ topics:
       - topic: math.alg2.rational-work-rate
         encompassing: 0.4
         confidence: medium
+      - topic: math.alg2.literal-rational-equations
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg2.joint-combined-variation
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Model an average cost
@@ -2189,6 +2316,9 @@ topics:
       - topic: math.alg1.domain-and-range
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.function-operations-domain
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find the domain of a composition
@@ -2206,6 +2336,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.composition-in-context
+        encompassing: 0.2
+        confidence: low
+    encompassed:
       - topic: math.alg2.compose-functions
         encompassing: 0.55
         confidence: medium
@@ -2226,10 +2360,14 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.compose-functions
+      - topic: math.alg1.inverse-of-linear
         encompassing: 0.5
         confidence: high
-      - topic: math.alg1.inverse-of-linear
+      - topic: math.alg2.evaluate-composition-table
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg2.compose-functions
         encompassing: 0.5
         confidence: high
     knowledge_points:
@@ -2272,6 +2410,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.verify-inverses-composition
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.inverse-functions
         encompassing: 0.55
         confidence: high
@@ -2381,11 +2523,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.restrict-domain-inverse
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.transform-stretch-reflect
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.inverse-of-quadratic
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.restrict-domain-inverse
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2427,6 +2573,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.solve-square-root-function-inequality
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.alg2.square-root-functions
         encompassing: 0.6
         confidence: high
@@ -2447,11 +2597,14 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.square-root-functions
-        encompassing: 0.6
-        confidence: high
+      - topic: math.alg2.cube-root-functions
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.alg1.transform-stretch-reflect
+        encompassing: 0.6
+        confidence: high
+      - topic: math.alg2.square-root-functions
         encompassing: 0.6
         confidence: high
     knowledge_points:
@@ -2464,26 +2617,6 @@ topics:
       - id: kp3
         can_do: Transform from a table of values
         key_prerequisites: [math.alg1.transform-stretch-reflect]
-  - id: math.alg2.transform-from-equation
-    name: Describing a transformation from an equation
-    subject: math
-    course: math.alg2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: math.alg2.transform-function-families
-        encompassing: 0.6
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Describe a transformation from an equation
-        key_prerequisites: [math.alg2.transform-function-families]
-      - id: kp2
-        can_do: Find the new key points
-        key_prerequisites: [math.alg2.transform-function-families]
-      - id: kp3
-        can_do: Find a domain and range after a transformation
-        key_prerequisites: [math.alg2.transform-function-families]
   - id: math.alg2.write-transformed-equation
     name: Writing an equation from a transformed graph
     subject: math
@@ -2523,6 +2656,30 @@ topics:
         key_prerequisites: [math.alg2.transform-function-families]
       - id: kp3
         can_do: Say when both give the same graph
+        key_prerequisites: [math.alg2.transform-function-families]
+  - id: math.alg2.transform-from-equation
+    name: Describing a transformation from an equation
+    subject: math
+    course: math.alg2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: math.alg2.reflections-of-functions
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.transform-function-families
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a transformation from an equation
+        key_prerequisites: [math.alg2.transform-function-families]
+      - id: kp2
+        can_do: Find the new key points
+        key_prerequisites: [math.alg2.transform-function-families]
+      - id: kp3
+        can_do: Find a domain and range after a transformation
         key_prerequisites: [math.alg2.transform-function-families]
   - id: math.alg2.even-odd-functions
     name: Testing for even and odd functions
@@ -2631,6 +2788,9 @@ topics:
       - topic: math.alg1.absolute-value-vertex
         encompassing: 0.45
         confidence: medium
+      - topic: math.alg2.absolute-value-as-piecewise
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.alg1.absolute-value-functions
         encompassing: 0.5
@@ -2672,6 +2832,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.transform-from-equation
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.alg2.write-transformed-equation
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.alg2.transform-function-families
         encompassing: 0.5
         confidence: medium
@@ -2801,6 +2968,10 @@ topics:
       - topic: math.alg2.exponential-review-base
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.rewrite-with-same-base
+        encompassing: 0.55
+        confidence: high
+    encompassed:
       - topic: math.alg2.exponent-laws-rational
         encompassing: 0.5
         confidence: high
@@ -2844,11 +3015,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.exponential-review-base
-        encompassing: 0.5
-        confidence: high
       - topic: math.alg1.compound-interest-intro
         encompassing: 0.55
+        confidence: high
+      - topic: math.alg2.exponential-tables-growth-factor
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.exponential-review-base
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3031,6 +3206,10 @@ topics:
       - topic: math.alg2.log-definition
         encompassing: 0.55
         confidence: high
+      - topic: math.alg2.asymptote-exponential
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.alg2.inverse-graphs
         encompassing: 0.5
         confidence: high
@@ -3077,6 +3256,7 @@ topics:
       - topic: math.alg2.log-graphs
         encompassing: 0.5
         confidence: medium
+    encompassed:
       - topic: math.alg2.transform-function-families
         encompassing: 0.45
         confidence: medium
@@ -3097,12 +3277,19 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.evaluate-logs
-        encompassing: 0.55
-        confidence: high
+      - topic: math.alg2.exponent-rule-negative-rational
+        encompassing: 0.1
+        confidence: low
+      - topic: math.alg2.log-of-one-and-base
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.alg2.exponent-laws-rational
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg2.evaluate-logs
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Use the product rule
@@ -3198,6 +3385,9 @@ topics:
       - topic: math.alg1.solve-exponential-by-graph
         encompassing: 0.15
         confidence: low
+      - topic: math.alg2.log-exponent-conversion
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve when bases do not match
@@ -3261,6 +3451,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.log-domain
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.alg2.log-equal-sides
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.solve-log-equations
         encompassing: 0.6
         confidence: high
@@ -3330,6 +3527,9 @@ topics:
       - topic: math.alg2.half-life-doubling
         encompassing: 0.6
         confidence: high
+      - topic: math.alg2.time-to-reach-a-value
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Build a model from data
@@ -3473,6 +3673,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.series-with-partial-sums
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg2.sigma-properties
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg2.sigma-notation
         encompassing: 0.6
         confidence: high
@@ -3529,10 +3736,14 @@ topics:
       - topic: math.alg2.continuous-compounding
         encompassing: 0.4
         confidence: high
-      - topic: math.alg2.compound-interest-periods
+      - topic: math.alg2.geometric-series-finite
         encompassing: 0.4
         confidence: high
-      - topic: math.alg2.geometric-series-finite
+      - topic: math.alg2.effective-annual-rate
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.compound-interest-periods
         encompassing: 0.4
         confidence: high
     knowledge_points:
@@ -3575,6 +3786,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.geometric-common-ratio-fractions
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.alg2.geometric-series-finite
         encompassing: 0.6
         confidence: high
@@ -3668,6 +3883,9 @@ topics:
       - topic: math.alg2.geometric-series-finite
         encompassing: 0.5
         confidence: high
+      - topic: math.alg2.identify-sequence-type
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a savings plan story
@@ -3732,15 +3950,19 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.vertex-form-from-any
-        encompassing: 0.45
-        confidence: high
       - topic: math.alg1.systems-review-three-methods
         encompassing: 0.45
         confidence: high
       - topic: math.alg1.convert-vertex-to-standard
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.quadratic-complete-square-apply
+        encompassing: 0.1
+        confidence: low
+    encompassed:
+      - topic: math.alg2.vertex-form-from-any
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Write a quadratic from a vertex and point
@@ -3874,6 +4096,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.system-word-three-variables
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.alg2.systems-three-variables
         encompassing: 0.35
         confidence: low
@@ -3957,6 +4183,9 @@ topics:
       - topic: math.alg1.linear-programming-intro
         encompassing: 0.55
         confidence: medium
+      - topic: math.alg2.quadratic-inequalities-graph
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write constraints and an objective
@@ -4103,12 +4332,16 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.radian-measure
-        encompassing: 0.5
-        confidence: high
       - topic: math.g8.find-hypotenuse
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.degree-radian-conversion
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.radian-measure
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Define sine and cosine as coordinates
@@ -4169,12 +4402,16 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.unit-circle-defined
-        encompassing: 0.65
-        confidence: high
       - topic: math.alg1.simplify-square-roots
         encompassing: 0.35
         confidence: medium
+      - topic: math.alg2.special-triangles-unit-circle
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.alg2.unit-circle-defined
+        encompassing: 0.65
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find exact values in the first quadrant
@@ -4278,6 +4515,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.trig-periodicity
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg2.midline
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg2.graph-sine-cosine
         encompassing: 0.65
         confidence: high
@@ -4321,11 +4565,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.amplitude-period
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.transform-function-horizontal
         encompassing: 0.5
+        confidence: high
+      - topic: math.alg2.sketch-by-five-points
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.amplitude-period
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -4605,10 +4853,14 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.sample-space-set-notation
+      - topic: math.alg1.two-way-marginal-conditional
         encompassing: 0.45
         confidence: high
-      - topic: math.alg1.two-way-marginal-conditional
+      - topic: math.alg2.mutually-exclusive
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.sample-space-set-notation
         encompassing: 0.45
         confidence: high
     knowledge_points:
@@ -4637,6 +4889,9 @@ topics:
       - topic: math.g7.dependent-events-intro
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.complement-probability
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find a conditional probability from a table
@@ -4694,6 +4949,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.tree-diagrams-conditional
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg2.two-way-conditional
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.conditional-probability
         encompassing: 0.6
         confidence: high
@@ -4774,6 +5036,13 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.permutations-with-repeats
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg2.factorial-notation
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.permutations
         encompassing: 0.6
         confidence: high
@@ -4817,11 +5086,15 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.combinations
-        encompassing: 0.5
-        confidence: high
       - topic: math.alg2.multiplication-rule
         encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.permutations-with-restrictions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.combinations
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -4843,6 +5116,10 @@ topics:
       - topic: math.alg2.counting-probability
         encompassing: 0.5
         confidence: high
+      - topic: math.alg2.expand-with-binomial-coefficient
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.binomial-theorem
         encompassing: 0.35
         confidence: medium
@@ -4883,6 +5160,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.binomial-at-least
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.alg2.counting-probability
         encompassing: 0.5
         confidence: high
@@ -4926,6 +5207,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.expected-value-games
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.alg2.expected-value-intro
         encompassing: 0.55
         confidence: medium
@@ -4990,6 +5275,10 @@ topics:
     level: g11
     status: draft
     prerequisites:
+      - topic: math.alg2.empirical-rule-intro
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.alg2.normal-distribution-intro
         encompassing: 0.6
         confidence: high
@@ -5070,11 +5359,18 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: math.alg2.surveys-experiments-observational
-        encompassing: 0.45
-        confidence: medium
       - topic: math.alg2.fair-decisions
         encompassing: 0.35
+        confidence: medium
+      - topic: math.alg2.population-parameters
+        encompassing: 0.15
+        confidence: low
+      - topic: math.alg2.compare-sampling-methods
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg2.surveys-experiments-observational
+        encompassing: 0.45
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -5139,6 +5435,9 @@ topics:
       - topic: math.alg2.margin-of-error-intro
         encompassing: 0.5
         confidence: medium
+      - topic: math.alg2.compare-treatments-randomization
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Judge a report's data source

@@ -1,31 +1,5 @@
 course: math.g6
 topics:
-  - id: math.g6.thousandths-to-billions
-    name: Working with numbers from thousandths to billions
-    subject: math
-    course: math.g6
-    level: g6
-    status: draft
-    prerequisites:
-      - topic: math.g5.read-write-thousandths
-        encompassing: 0.35
-        confidence: high
-      - topic: math.g4.read-write-large-numbers
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Read and write numbers to billions
-        key_prerequisites: [math.g4.read-write-large-numbers]
-      - id: kp2
-        can_do: Say the value of a digit in a very large number
-        key_prerequisites: [math.g4.read-write-large-numbers]
-      - id: kp3
-        can_do: Read a number spanning billions and thousandths
-        key_prerequisites: [math.g5.read-write-thousandths]
-      - id: kp4
-        can_do: Compare the size of a digit in far-apart places
-        key_prerequisites: [math.g5.read-write-thousandths, math.g4.read-write-large-numbers]
   - id: math.g6.name-millions-billions
     name: Naming millions and billions
     subject: math
@@ -46,6 +20,36 @@ topics:
       - id: kp3
         can_do: Write 3.5 million as a whole number
         key_prerequisites: [math.g4.read-write-large-numbers]
+  - id: math.g6.thousandths-to-billions
+    name: Working with numbers from thousandths to billions
+    subject: math
+    course: math.g6
+    level: g6
+    status: draft
+    prerequisites:
+      - topic: math.g5.read-write-thousandths
+        encompassing: 0.35
+        confidence: high
+      - topic: math.g6.name-millions-billions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g4.read-write-large-numbers
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read and write numbers to billions
+        key_prerequisites: [math.g4.read-write-large-numbers]
+      - id: kp2
+        can_do: Say the value of a digit in a very large number
+        key_prerequisites: [math.g4.read-write-large-numbers]
+      - id: kp3
+        can_do: Read a number spanning billions and thousandths
+        key_prerequisites: [math.g5.read-write-thousandths]
+      - id: kp4
+        can_do: Compare the size of a digit in far-apart places
+        key_prerequisites: [math.g5.read-write-thousandths, math.g4.read-write-large-numbers]
   - id: math.g6.compare-very-large-small
     name: Comparing very large and very small numbers
     subject: math
@@ -102,6 +106,9 @@ topics:
       - topic: math.g5.zeros-in-products
         encompassing: 0.35
         confidence: medium
+      - topic: math.g5.properties-mental-multiply
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Multiply mentally using known facts and zeros
@@ -122,6 +129,9 @@ topics:
       - topic: math.g4.factor-pairs
         encompassing: 0.65
         confidence: high
+      - topic: math.g6.multiplicative-reasoning-facts
+        encompassing: 0.15
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: List the common factors of two numbers
@@ -251,12 +261,16 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.gcf
-        encompassing: 0.5
-        confidence: high
       - topic: math.g3.area-model-break-apart
         encompassing: 0.4
         confidence: medium
+      - topic: math.g6.gcf-with-prime-factors
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g6.gcf
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Rewrite a sum as a common factor times a sum
@@ -302,6 +316,9 @@ topics:
         confidence: medium
       - topic: math.g5.fractions-to-decimals
         encompassing: 0.45
+        confidence: medium
+      - topic: math.g5.order-decimals
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -407,11 +424,15 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.fraction-divide-models
-        encompassing: 0.4
-        confidence: high
       - topic: math.g6.reciprocals
         encompassing: 0.6
+        confidence: high
+      - topic: math.g6.divide-with-common-denominators
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g6.fraction-divide-models
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -453,11 +474,15 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.fraction-divide-reciprocal
-        encompassing: 0.65
-        confidence: high
       - topic: math.g6.improper-mixed-fluency
         encompassing: 0.5
+        confidence: high
+      - topic: math.g6.whole-by-fraction
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g6.fraction-divide-reciprocal
+        encompassing: 0.65
         confidence: high
     knowledge_points:
       - id: kp1
@@ -478,6 +503,9 @@ topics:
       - topic: math.g6.divide-mixed-numbers
         encompassing: 0.6
         confidence: high
+      - topic: math.g5.choose-operation-fractions
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Solve a story asking how many parts fit
@@ -498,12 +526,16 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g5.four-digit-by-two-digit
-        encompassing: 0.7
-        confidence: high
       - topic: math.g5.check-long-division
         encompassing: 0.3
         confidence: medium
+      - topic: math.g5.zero-in-long-quotient
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g5.four-digit-by-two-digit
+        encompassing: 0.7
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Divide multi-digit numbers with the standard algorithm
@@ -525,6 +557,9 @@ topics:
         encompassing: 0.5
         confidence: medium
       - topic: math.g5.fraction-as-division
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g5.remainders-two-digit-divisor
         encompassing: 0.4
         confidence: medium
     knowledge_points:
@@ -835,6 +870,9 @@ topics:
       - topic: math.g6.ratio-tables
         encompassing: 0.6
         confidence: high
+      - topic: math.g6.double-number-lines
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a missing value by scaling
@@ -855,6 +893,10 @@ topics:
       - topic: math.g6.ratio-tables
         encompassing: 0.45
         confidence: high
+      - topic: math.g5.graph-two-patterns
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g5.plot-points
         encompassing: 0.4
         confidence: high
@@ -1022,6 +1064,9 @@ topics:
       - topic: math.g6.ratio-missing-value
         encompassing: 0.35
         confidence: medium
+      - topic: math.g6.unit-rate-stories
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a story finding a missing value
@@ -1045,6 +1090,10 @@ topics:
       - topic: math.g6.unit-rates
         encompassing: 0.4
         confidence: high
+      - topic: math.g5.multi-step-conversion-stories
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g5.convert-metric
         encompassing: 0.45
         confidence: high
@@ -1160,6 +1209,13 @@ topics:
       - topic: math.g6.percent-bar-models
         encompassing: 0.45
         confidence: high
+      - topic: math.g5.compare-product-to-factors
+        encompassing: 0.1
+        confidence: low
+      - topic: math.g6.benchmark-percents
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g5.fraction-of-whole
         encompassing: 0.4
         confidence: high
@@ -1412,10 +1468,14 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.place-integers
+      - topic: math.g4.decimals-on-number-line
         encompassing: 0.45
         confidence: high
-      - topic: math.g4.decimals-on-number-line
+      - topic: math.g6.order-integers
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g6.place-integers
         encompassing: 0.45
         confidence: high
     knowledge_points:
@@ -1441,6 +1501,10 @@ topics:
       - topic: math.g6.place-rational-numbers
         encompassing: 0.55
         confidence: high
+      - topic: math.g6.compare-fractions-and-decimals
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g5.compare-thousandths
         encompassing: 0.35
         confidence: medium
@@ -1528,11 +1592,15 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.absolute-value
-        encompassing: 0.5
-        confidence: medium
       - topic: math.g6.order-rational-numbers
         encompassing: 0.45
+        confidence: medium
+      - topic: math.g6.absolute-value-in-context
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g6.absolute-value
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1554,6 +1622,10 @@ topics:
       - topic: math.g6.place-integers
         encompassing: 0.3
         confidence: medium
+      - topic: math.g5.coordinate-stories
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g5.plot-points
         encompassing: 0.6
         confidence: high
@@ -1594,12 +1666,15 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.four-quadrants
-        encompassing: 0.5
-        confidence: high
+      - topic: math.g6.signs-and-quadrants
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.g6.opposites
         encompassing: 0.4
+        confidence: high
+      - topic: math.g6.four-quadrants
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1706,6 +1781,10 @@ topics:
       - topic: math.g6.evaluate-powers
         encompassing: 0.45
         confidence: high
+      - topic: math.g5.nested-grouping
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g5.brackets-and-braces
         encompassing: 0.5
         confidence: high
@@ -1752,6 +1831,7 @@ topics:
       - topic: math.g5.variable-expressions-intro
         encompassing: 0.6
         confidence: high
+    encompassed:
       - topic: math.g5.write-numerical-expressions
         encompassing: 0.3
         confidence: medium
@@ -1997,6 +2077,9 @@ topics:
       - topic: math.g6.evaluate-expressions
         encompassing: 0.35
         confidence: high
+      - topic: math.g5.compare-expressions
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Test equivalence by substituting values
@@ -2038,6 +2121,9 @@ topics:
       - topic: math.g6.evaluate-expressions
         encompassing: 0.5
         confidence: high
+      - topic: math.g6.equation-or-expression
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Test a value in an equation
@@ -2080,6 +2166,9 @@ topics:
       - topic: math.g6.letters-for-numbers
         encompassing: 0.5
         confidence: high
+      - topic: math.g5.equation-from-story
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose a variable for an unknown in a story
@@ -2141,12 +2230,16 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.solve-add-equations
-        encompassing: 0.4
-        confidence: high
       - topic: math.g6.fraction-divide-reciprocal
         encompassing: 0.3
         confidence: medium
+      - topic: math.g6.solve-subtract-equations
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g6.solve-add-equations
+        encompassing: 0.4
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve an equation of the form px = q with whole numbers
@@ -2209,11 +2302,15 @@ topics:
     level: g6
     status: draft
     prerequisites:
-      - topic: math.g6.solve-multiply-equations
-        encompassing: 0.5
-        confidence: high
       - topic: math.g6.variables-in-stories
         encompassing: 0.55
+        confidence: high
+      - topic: math.g6.solve-divide-equations
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g6.solve-multiply-equations
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2281,6 +2378,10 @@ topics:
     level: g6
     status: draft
     prerequisites:
+      - topic: math.g6.test-inequality-solutions
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g6.inequalities-as-constraints
         encompassing: 0.55
         confidence: high
@@ -2444,6 +2545,10 @@ topics:
       - topic: math.g6.angle-classification
         encompassing: 0.4
         confidence: high
+      - topic: math.g5.classify-triangles-by-sides
+        encompassing: 0.45
+        confidence: medium
+    encompassed:
       - topic: math.g4.right-triangles
         encompassing: 0.4
         confidence: medium
@@ -2618,6 +2723,9 @@ topics:
       - topic: math.g6.area-of-trapezoids
         encompassing: 0.55
         confidence: high
+      - topic: math.g6.area-special-quadrilaterals
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Split a composite shape into known shapes
@@ -2681,6 +2789,10 @@ topics:
       - topic: math.g5.volume-formulas
         encompassing: 0.55
         confidence: high
+      - topic: math.g5.area-with-mixed-sides
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g5.times-mixed-numbers
         encompassing: 0.45
         confidence: high
@@ -2706,6 +2818,9 @@ topics:
     prerequisites:
       - topic: math.g6.volume-fractional-edges
         encompassing: 0.65
+        confidence: medium
+      - topic: math.g5.volume-stories
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -2747,6 +2862,10 @@ topics:
     level: g6
     status: draft
     prerequisites:
+      - topic: math.g6.four-quadrant-problems
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g6.distance-on-the-grid
         encompassing: 0.5
         confidence: high
@@ -2902,6 +3021,9 @@ topics:
     prerequisites:
       - topic: math.g6.reflect-points
         encompassing: 0.5
+        confidence: medium
+      - topic: math.g4.draw-lines-of-symmetry
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3160,6 +3282,9 @@ topics:
       - topic: math.g6.measure-of-center
         encompassing: 0.3
         confidence: low
+      - topic: math.g6.mode-and-range
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say that variability describes how values differ
@@ -3344,6 +3469,10 @@ topics:
       - topic: math.g5.plot-points
         encompassing: 0.35
         confidence: high
+      - topic: math.g5.choose-a-graph
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g5.double-bar-graphs
         encompassing: 0.25
         confidence: low
@@ -3416,6 +3545,9 @@ topics:
       - topic: math.g4.make-change
         encompassing: 0.25
         confidence: low
+      - topic: math.g5.duration
+        encompassing: 0.05
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Tell income from expenses
@@ -3438,6 +3570,9 @@ topics:
         confidence: medium
       - topic: math.g6.income-and-expenses
         encompassing: 0.5
+        confidence: medium
+      - topic: math.g5.money-calculations
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1

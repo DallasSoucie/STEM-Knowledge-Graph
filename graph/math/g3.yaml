@@ -10,6 +10,9 @@ topics:
       - topic: math.g2.array-totals
         encompassing: 0.4
         confidence: high
+      - topic: math.g2.even-as-equal-addends
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Describe a picture as some number of equal groups
@@ -98,32 +101,6 @@ topics:
       - id: kp3
         can_do: Choose the swapped order that makes a product easier
         key_prerequisites: [math.g3.arrays-as-multiplication]
-  - id: math.g3.skip-count-to-multiply
-    name: Skip counting to multiply
-    subject: math
-    course: math.g3
-    level: g3
-    status: draft
-    prerequisites:
-      - topic: math.g3.multiplication-equations
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g2.count-by-5s-to-1000
-        encompassing: 0.3
-        confidence: medium
-      - topic: math.g1.count-by-2s
-        encompassing: 0.35
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find a product by counting by 2s
-        key_prerequisites: [math.g1.count-by-2s]
-      - id: kp2
-        can_do: Find a product by counting by 5s
-        key_prerequisites: [math.g2.count-by-5s-to-1000]
-      - id: kp3
-        can_do: Find a product by counting by 10s
-        key_prerequisites: [math.g3.multiplication-equations]
   - id: math.g3.multiply-on-number-line
     name: Showing multiplication as jumps on a number line
     subject: math
@@ -146,6 +123,36 @@ topics:
         key_prerequisites: [math.g3.multiplication-equations]
       - id: kp3
         can_do: Find a product by making the jumps
+  - id: math.g3.skip-count-to-multiply
+    name: Skip counting to multiply
+    subject: math
+    course: math.g3
+    level: g3
+    status: draft
+    prerequisites:
+      - topic: math.g2.count-by-5s-to-1000
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g3.multiply-on-number-line
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g3.multiplication-equations
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.count-by-2s
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a product by counting by 2s
+        key_prerequisites: [math.g1.count-by-2s]
+      - id: kp2
+        can_do: Find a product by counting by 5s
+        key_prerequisites: [math.g2.count-by-5s-to-1000]
+      - id: kp3
+        can_do: Find a product by counting by 10s
+        key_prerequisites: [math.g3.multiplication-equations]
   - id: math.g3.multiply-by-2
     name: Multiplying by 2
     subject: math
@@ -156,6 +163,7 @@ topics:
       - topic: math.g3.skip-count-to-multiply
         encompassing: 0.45
         confidence: high
+    encompassed:
       - topic: math.g1.add-doubles
         encompassing: 0.5
         confidence: high
@@ -473,6 +481,7 @@ topics:
     course: math.g3
     level: g3
     status: draft
+    justification: Knowing all facts draws on each hard times table and on square facts directly
     prerequisites:
       - topic: math.g3.multiply-by-6
         encompassing: 0.35
@@ -483,6 +492,13 @@ topics:
       - topic: math.g3.multiply-by-8
         encompassing: 0.35
         confidence: high
+      - topic: math.g3.square-facts
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g3.nines-patterns
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.g3.multiply-by-9
         encompassing: 0.35
         confidence: high
@@ -528,6 +544,7 @@ topics:
       - topic: math.g3.products-from-memory
         encompassing: 0.4
         confidence: medium
+    encompassed:
       - topic: math.g2.odd-and-even
         encompassing: 0.45
         confidence: high
@@ -698,6 +715,13 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g3.divide-on-number-line
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g3.divide-with-arrays
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g3.division-equations
         encompassing: 0.5
         confidence: high
@@ -834,6 +858,9 @@ topics:
       - topic: math.g3.divide-by-6-7-8-9
         encompassing: 0.75
         confidence: high
+      - topic: math.g3.divide-with-0-and-1
+        encompassing: 0.15
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say quotients for divisors up to 5 from memory
@@ -939,29 +966,6 @@ topics:
       - id: kp4
         can_do: Round a number when the tens digit is 9
         key_prerequisites: [math.g3.round-to-nearest-10]
-  - id: math.g3.estimate-sums-differences
-    name: Estimating sums and differences
-    subject: math
-    course: math.g3
-    level: g3
-    status: draft
-    prerequisites:
-      - topic: math.g3.round-to-nearest-100
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Estimate a sum by rounding to the nearest 10
-        key_prerequisites: [math.g3.round-to-nearest-100]
-      - id: kp2
-        can_do: Estimate a sum by rounding to the nearest 100
-        key_prerequisites: [math.g3.round-to-nearest-100]
-      - id: kp3
-        can_do: Estimate a difference by rounding
-        key_prerequisites: [math.g3.round-to-nearest-100]
-      - id: kp4
-        can_do: Say whether an estimate is too high or too low
-        key_prerequisites: [math.g3.round-to-nearest-100]
   - id: math.g3.add-within-1000
     name: Adding fluently within 1000
     subject: math
@@ -991,6 +995,9 @@ topics:
     prerequisites:
       - topic: math.g3.add-within-1000
         encompassing: 0.75
+        confidence: medium
+      - topic: math.g2.add-four-two-digit
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1043,6 +1050,35 @@ topics:
         key_prerequisites: [math.g3.subtract-within-1000]
       - id: kp3
         can_do: Adjust a number to make a mental calculation easier
+  - id: math.g3.estimate-sums-differences
+    name: Estimating sums and differences
+    subject: math
+    course: math.g3
+    level: g3
+    status: draft
+    prerequisites:
+      - topic: math.g3.round-to-nearest-100
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g2.estimate-with-benchmarks
+        encompassing: 0.15
+        confidence: low
+      - topic: math.g3.mental-add-subtract-within-1000
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate a sum by rounding to the nearest 10
+        key_prerequisites: [math.g3.round-to-nearest-100]
+      - id: kp2
+        can_do: Estimate a sum by rounding to the nearest 100
+        key_prerequisites: [math.g3.round-to-nearest-100]
+      - id: kp3
+        can_do: Estimate a difference by rounding
+        key_prerequisites: [math.g3.round-to-nearest-100]
+      - id: kp4
+        can_do: Say whether an estimate is too high or too low
+        key_prerequisites: [math.g3.round-to-nearest-100]
   - id: math.g3.one-step-add-subtract-equations
     name: Solving one-step addition and subtraction equations
     subject: math
@@ -1150,6 +1186,9 @@ topics:
       - topic: math.g3.division-stories
         encompassing: 0.5
         confidence: high
+      - topic: math.g2.length-stories
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a story about arrays with an unknown row count
@@ -1234,14 +1273,18 @@ topics:
     level: g3
     status: draft
     prerequisites:
-      - topic: math.g3.add-within-1000
-        encompassing: 0.5
-        confidence: high
       - topic: math.g3.subtract-within-1000
         encompassing: 0.5
         confidence: high
       - topic: math.g2.two-step-mixed-stories
         encompassing: 0.6
+        confidence: high
+      - topic: math.g3.add-three-three-digit
+        encompassing: 0.2
+        confidence: low
+    encompassed:
+      - topic: math.g3.add-within-1000
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1268,6 +1311,9 @@ topics:
         confidence: medium
       - topic: math.g3.order-of-steps
         encompassing: 0.25
+        confidence: medium
+      - topic: math.g3.choose-operation-stories
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1432,12 +1478,16 @@ topics:
     level: g3
     status: draft
     prerequisites:
-      - topic: math.g3.unit-fractions
-        encompassing: 0.5
-        confidence: high
       - topic: math.g2.number-line
         encompassing: 0.4
         confidence: medium
+      - topic: math.g3.fractions-as-lengths
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g3.unit-fractions
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Split the space from 0 to 1 into equal parts
@@ -1455,11 +1505,12 @@ topics:
     level: g3
     status: draft
     prerequisites:
-      - topic: math.g3.read-write-fractions
-        encompassing: 0.45
-        confidence: high
       - topic: math.g3.unit-fractions-on-number-line
         encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.g3.read-write-fractions
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1546,6 +1597,9 @@ topics:
       - topic: math.g3.equivalent-fractions-models
         encompassing: 0.55
         confidence: medium
+      - topic: math.g3.whole-numbers-as-fractions
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Show two equivalent fractions at one point on a number line
@@ -1562,6 +1616,10 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g3.equivalent-on-number-line
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g3.equivalent-fractions-models
         encompassing: 0.6
         confidence: high
@@ -1627,6 +1685,10 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g3.fractions-same-whole
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.g3.compare-same-denominator
         encompassing: 0.45
         confidence: high
@@ -1678,6 +1740,9 @@ topics:
       - topic: math.g2.continue-increasing-patterns
         encompassing: 0.5
         confidence: high
+      - topic: math.g2.repeating-or-increasing
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say what is taken away each time in a pattern
@@ -1765,6 +1830,9 @@ topics:
       - topic: math.g3.time-to-the-minute
         encompassing: 0.5
         confidence: high
+      - topic: math.g1.months-and-dates
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find minutes between two times within an hour
@@ -1877,6 +1945,9 @@ topics:
       - topic: math.g3.litres-and-millilitres
         encompassing: 0.5
         confidence: medium
+      - topic: math.g2.estimate-lengths
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Estimate a mass from a familiar object
@@ -1896,6 +1967,10 @@ topics:
       - topic: math.g3.array-measure-stories
         encompassing: 0.45
         confidence: high
+      - topic: math.g3.estimate-mass-capacity
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.g3.grams-and-kilograms
         encompassing: 0.4
         confidence: high
@@ -1922,6 +1997,10 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g2.choose-a-measuring-tool
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.g2.measure-longer-lengths
         encompassing: 0.3
         confidence: low
@@ -1941,12 +2020,16 @@ topics:
     level: g3
     status: draft
     prerequisites:
-      - topic: math.g2.measure-with-a-ruler
-        encompassing: 0.6
-        confidence: high
       - topic: math.g3.fractions-on-number-line
         encompassing: 0.4
         confidence: medium
+      - topic: math.g2.measure-in-two-units
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g2.measure-with-a-ruler
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Measure to the nearest millimetre
@@ -2175,10 +2258,14 @@ topics:
     level: g3
     status: draft
     prerequisites:
-      - topic: math.g3.measure-area-by-counting
+      - topic: math.g3.arrays-as-multiplication
         encompassing: 0.5
         confidence: high
-      - topic: math.g3.arrays-as-multiplication
+      - topic: math.g3.area-in-square-units
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g3.measure-area-by-counting
         encompassing: 0.5
         confidence: high
     knowledge_points:
@@ -2249,6 +2336,9 @@ topics:
       - topic: math.g3.area-of-rectangles
         encompassing: 0.6
         confidence: high
+      - topic: math.g1.shapes-from-composites
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Split an L-shape into two rectangles
@@ -2298,6 +2388,9 @@ topics:
       - topic: math.g3.area-as-covering
         encompassing: 0.3
         confidence: low
+      - topic: math.g2.equal-shares-different-shapes
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Split a shape into parts with equal areas
@@ -2375,32 +2468,6 @@ topics:
         key_prerequisites: [math.g3.perimeter]
       - id: kp3
         can_do: Say which of the rectangles looks most like a square
-  - id: math.g3.perimeter-versus-area
-    name: Comparing perimeter and area of rectangles
-    subject: math
-    course: math.g3
-    level: g3
-    status: draft
-    prerequisites:
-      - topic: math.g3.area-of-rectangles
-        encompassing: 0.5
-        confidence: high
-      - topic: math.g3.perimeter
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say whether a question asks for perimeter or area
-        key_prerequisites: [math.g3.perimeter]
-      - id: kp2
-        can_do: Find both perimeter and area of a rectangle
-        key_prerequisites: [math.g3.area-of-rectangles, math.g3.perimeter]
-      - id: kp3
-        can_do: Say why two shapes can share one measure but not the other
-        key_prerequisites: [math.g3.area-of-rectangles]
-      - id: kp4
-        can_do: Solve a story needing both perimeter and area
-        key_prerequisites: [math.g3.area-of-rectangles, math.g3.perimeter]
   - id: math.g3.rectangles-same-area
     name: Making rectangles with the same area
     subject: math
@@ -2421,6 +2488,39 @@ topics:
       - id: kp3
         can_do: Compare the perimeters of rectangles with the same area
         key_prerequisites: [math.g3.area-of-rectangles]
+  - id: math.g3.perimeter-versus-area
+    name: Comparing perimeter and area of rectangles
+    subject: math
+    course: math.g3
+    level: g3
+    status: draft
+    prerequisites:
+      - topic: math.g3.rectangles-same-perimeter
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g3.rectangles-same-area
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g3.perimeter
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g3.area-of-rectangles
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say whether a question asks for perimeter or area
+        key_prerequisites: [math.g3.perimeter]
+      - id: kp2
+        can_do: Find both perimeter and area of a rectangle
+        key_prerequisites: [math.g3.area-of-rectangles, math.g3.perimeter]
+      - id: kp3
+        can_do: Say why two shapes can share one measure but not the other
+        key_prerequisites: [math.g3.area-of-rectangles]
+      - id: kp4
+        can_do: Solve a story needing both perimeter and area
+        key_prerequisites: [math.g3.area-of-rectangles, math.g3.perimeter]
   - id: math.g3.quadrilateral-categories
     name: Sorting quadrilaterals into categories
     subject: math
@@ -2428,6 +2528,10 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g2.sort-by-several-attributes
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g2.name-polygons
         encompassing: 0.5
         confidence: high
@@ -2485,6 +2589,10 @@ topics:
     level: g3
     status: draft
     prerequisites:
+      - topic: math.g2.money-stories
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g2.bills-and-dollar-sign
         encompassing: 0.5
         confidence: high

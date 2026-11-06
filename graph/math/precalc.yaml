@@ -74,10 +74,14 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.interval-notation
+      - topic: math.alg1.domain-and-range
         encompassing: 0.55
         confidence: high
-      - topic: math.alg1.domain-and-range
+      - topic: math.precalc.set-builder-notation
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.interval-notation
         encompassing: 0.55
         confidence: high
     knowledge_points:
@@ -174,6 +178,12 @@ topics:
     prerequisites:
       - topic: math.precalc.difference-quotient
         encompassing: 0.7
+        confidence: medium
+      - topic: math.alg2.radical-conjugate
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.alg2.complex-fractions
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -361,11 +371,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.transformations-combined
-        encompassing: 0.5
-        confidence: medium
       - topic: math.alg2.graph-rational-functions
         encompassing: 0.45
+        confidence: medium
+      - topic: math.precalc.reflection-order
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.transformations-combined
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -387,6 +401,9 @@ topics:
       - topic: math.precalc.transform-reciprocal-abs
         encompassing: 0.6
         confidence: medium
+      - topic: math.precalc.horizontal-vertical-stretches-compare
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Graph f(|x|) from a graph of f
@@ -410,6 +427,9 @@ topics:
       - topic: math.precalc.domain-range-interval
         encompassing: 0.55
         confidence: high
+      - topic: math.alg2.decompose-function
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find the domain of a composition with a root
@@ -433,6 +453,9 @@ topics:
       - topic: math.alg2.restrict-domain-inverse
         encompassing: 0.6
         confidence: high
+      - topic: math.alg2.inverse-of-rational
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose a restriction that gives an inverse
@@ -446,72 +469,6 @@ topics:
       - id: kp4
         can_do: Find two inverses for different restrictions
         key_prerequisites: [math.alg2.restrict-domain-inverse]
-  - id: math.precalc.modelling-functions
-    name: Choosing a function family to model data
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.function-families-review
-        encompassing: 0.4
-        confidence: medium
-      - topic: math.alg2.exponential-regression
-        encompassing: 0.4
-        confidence: low
-      - topic: math.alg1.quadratic-regression-intro
-        encompassing: 0.25
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Choose a family from a scatter plot
-        key_prerequisites: [math.precalc.function-families-review]
-      - id: kp2
-        can_do: Fit a model with technology
-        key_prerequisites: [math.alg2.exponential-regression]
-      - id: kp3
-        can_do: Judge a fit in context
-        key_prerequisites: [math.alg2.exponential-regression]
-  - id: math.precalc.function-from-description
-    name: Writing a function from a description
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.modelling-functions
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Write a function from a word description
-        key_prerequisites: [math.precalc.modelling-functions]
-      - id: kp2
-        can_do: Write area or cost as a function of one variable
-        key_prerequisites: [math.precalc.modelling-functions]
-      - id: kp3
-        can_do: State its domain
-        key_prerequisites: [math.precalc.modelling-functions]
-  - id: math.precalc.regression-choose-family
-    name: Choosing regression by residuals
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.modelling-functions
-        encompassing: 0.6
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Compare two regressions by residuals
-        key_prerequisites: [math.precalc.modelling-functions]
-      - id: kp2
-        can_do: Say why a higher r is not always better
-        key_prerequisites: [math.precalc.modelling-functions]
-      - id: kp3
-        can_do: Say what extrapolation might do
-        key_prerequisites: [math.precalc.modelling-functions]
   - id: math.precalc.end-behavior-limits-intro
     name: Describing end behavior informally
     subject: math
@@ -565,6 +522,13 @@ topics:
       - topic: math.alg2.vertical-asymptotes
         encompassing: 0.4
         confidence: medium
+      - topic: math.alg2.piecewise-continuity-check
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.precalc.piecewise-domain-range
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.alg2.piecewise-advanced
         encompassing: 0.4
         confidence: medium
@@ -624,72 +588,6 @@ topics:
       - id: kp4
         can_do: Write a limit in correct notation
         key_prerequisites: [math.precalc.limit-intuition]
-  - id: math.precalc.limits-algebraic-simple
-    name: Finding simple limits algebraically
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.limit-intuition
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find a limit by substitution
-        key_prerequisites: [math.precalc.limit-intuition]
-      - id: kp2
-        can_do: Find a limit by factoring
-        key_prerequisites: [math.precalc.limit-intuition]
-      - id: kp3
-        can_do: Find a limit using a conjugate
-        key_prerequisites: [math.precalc.limit-intuition]
-      - id: kp4
-        can_do: Find a limit by combining fractions
-        key_prerequisites: [math.precalc.limit-intuition]
-  - id: math.precalc.continuity-from-limits
-    name: Testing continuity with limits
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.one-sided-limits
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Check the three conditions for continuity
-        key_prerequisites: [math.precalc.one-sided-limits]
-      - id: kp2
-        can_do: Find a value that makes a function continuous
-        key_prerequisites: [math.precalc.one-sided-limits]
-      - id: kp3
-        can_do: Name a discontinuity's type
-        key_prerequisites: [math.precalc.one-sided-limits]
-      - id: kp4
-        can_do: Fix a discontinuity by redefining a value
-        key_prerequisites: [math.precalc.one-sided-limits]
-  - id: math.precalc.intermediate-value-theorem
-    name: Using the intermediate value theorem
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.continuity-from-limits
-        encompassing: 0.55
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: State the intermediate value theorem
-        key_prerequisites: [math.precalc.continuity-from-limits]
-      - id: kp2
-        can_do: Use it to find a zero's location
-        key_prerequisites: [math.precalc.continuity-from-limits]
-      - id: kp3
-        can_do: Say why continuity is needed
-        key_prerequisites: [math.precalc.continuity-from-limits]
   - id: math.precalc.rate-of-change-intuition
     name: Estimating an instantaneous rate of change
     subject: math
@@ -697,10 +595,17 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.difference-quotient
+      - topic: math.precalc.limit-intuition
         encompassing: 0.45
         confidence: medium
-      - topic: math.precalc.limit-intuition
+      - topic: math.precalc.difference-quotient-quadratic
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.precalc.difference-quotient-rational-root
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.difference-quotient
         encompassing: 0.45
         confidence: medium
     knowledge_points:
@@ -723,6 +628,10 @@ topics:
       - topic: math.precalc.secant-line
         encompassing: 0.5
         confidence: medium
+      - topic: math.precalc.rate-of-change-intuition
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.precalc.limit-intuition
         encompassing: 0.4
         confidence: medium
@@ -756,72 +665,6 @@ topics:
       - id: kp3
         can_do: Say what the area means in a speed story
         key_prerequisites: [math.precalc.limit-intuition]
-  - id: math.precalc.polynomial-analysis
-    name: Analyzing polynomial functions fully
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.alg2.polynomial-models
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find all features of a polynomial
-        key_prerequisites: [math.alg2.polynomial-models]
-      - id: kp2
-        can_do: Sketch by hand and check with technology
-        key_prerequisites: [math.alg2.polynomial-models]
-      - id: kp3
-        can_do: Answer a context question
-        key_prerequisites: [math.alg2.polynomial-models]
-      - id: kp4
-        can_do: Find a polynomial's intervals of increase
-        key_prerequisites: [math.alg2.polynomial-models]
-  - id: math.precalc.polynomial-from-graph
-    name: Writing a polynomial from a graph
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.polynomial-analysis
-        encompassing: 0.6
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Write a polynomial with chosen features
-        key_prerequisites: [math.precalc.polynomial-analysis]
-      - id: kp2
-        can_do: Find a leading coefficient from a point
-        key_prerequisites: [math.precalc.polynomial-analysis]
-      - id: kp3
-        can_do: Find a minimum degree from a graph
-        key_prerequisites: [math.precalc.polynomial-analysis]
-  - id: math.precalc.polynomial-end-behaviour-limits
-    name: Writing end behaviour with limits
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.polynomial-analysis
-        encompassing: 0.5
-        confidence: medium
-      - topic: math.precalc.limits-at-infinity
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Write end behaviour with limit notation
-        key_prerequisites: [math.precalc.limits-at-infinity]
-      - id: kp2
-        can_do: Use only the leading term
-        key_prerequisites: [math.precalc.polynomial-analysis]
-      - id: kp3
-        can_do: Compare two polynomials at large x
-        key_prerequisites: [math.precalc.polynomial-analysis]
   - id: math.precalc.sign-charts
     name: Using sign charts
     subject: math
@@ -882,6 +725,81 @@ topics:
       - id: kp3
         can_do: Narrow candidates for roots
         key_prerequisites: [math.precalc.descartes-rule]
+  - id: math.precalc.polynomial-analysis
+    name: Analyzing polynomial functions fully
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.alg2.polynomial-models
+        encompassing: 0.6
+        confidence: high
+      - topic: math.precalc.local-global-extrema
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.sketch-from-derivative-free-features
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.bounds-on-zeros
+        encompassing: 0.15
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Find all features of a polynomial
+        key_prerequisites: [math.alg2.polynomial-models]
+      - id: kp2
+        can_do: Sketch by hand and check with technology
+        key_prerequisites: [math.alg2.polynomial-models]
+      - id: kp3
+        can_do: Answer a context question
+        key_prerequisites: [math.alg2.polynomial-models]
+      - id: kp4
+        can_do: Find a polynomial's intervals of increase
+        key_prerequisites: [math.alg2.polynomial-models]
+  - id: math.precalc.polynomial-from-graph
+    name: Writing a polynomial from a graph
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.polynomial-analysis
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a polynomial with chosen features
+        key_prerequisites: [math.precalc.polynomial-analysis]
+      - id: kp2
+        can_do: Find a leading coefficient from a point
+        key_prerequisites: [math.precalc.polynomial-analysis]
+      - id: kp3
+        can_do: Find a minimum degree from a graph
+        key_prerequisites: [math.precalc.polynomial-analysis]
+  - id: math.precalc.polynomial-end-behaviour-limits
+    name: Writing end behaviour with limits
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.polynomial-analysis
+        encompassing: 0.5
+        confidence: medium
+      - topic: math.precalc.limits-at-infinity
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write end behaviour with limit notation
+        key_prerequisites: [math.precalc.limits-at-infinity]
+      - id: kp2
+        can_do: Use only the leading term
+        key_prerequisites: [math.precalc.polynomial-analysis]
+      - id: kp3
+        can_do: Compare two polynomials at large x
+        key_prerequisites: [math.precalc.polynomial-analysis]
   - id: math.precalc.complex-zeros-factorization
     name: Factoring over the complex numbers
     subject: math
@@ -944,6 +862,9 @@ topics:
       - topic: math.alg2.graph-rational-functions
         encompassing: 0.5
         confidence: high
+      - topic: math.precalc.polynomial-end-behaviour-limits
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find all features of a rational function
@@ -1000,6 +921,83 @@ topics:
       - id: kp3
         can_do: Name the type of discontinuity
         key_prerequisites: [math.precalc.one-sided-limits]
+  - id: math.precalc.limits-algebraic-simple
+    name: Finding simple limits algebraically
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.rational-holes-limits
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.precalc.limit-intuition
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit by substitution
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp2
+        can_do: Find a limit by factoring
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp3
+        can_do: Find a limit using a conjugate
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp4
+        can_do: Find a limit by combining fractions
+        key_prerequisites: [math.precalc.limit-intuition]
+  - id: math.precalc.continuity-from-limits
+    name: Testing continuity with limits
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.limits-algebraic-simple
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.one-sided-limits
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Check the three conditions for continuity
+        key_prerequisites: [math.precalc.one-sided-limits]
+      - id: kp2
+        can_do: Find a value that makes a function continuous
+        key_prerequisites: [math.precalc.one-sided-limits]
+      - id: kp3
+        can_do: Name a discontinuity's type
+        key_prerequisites: [math.precalc.one-sided-limits]
+      - id: kp4
+        can_do: Fix a discontinuity by redefining a value
+        key_prerequisites: [math.precalc.one-sided-limits]
+  - id: math.precalc.intermediate-value-theorem
+    name: Using the intermediate value theorem
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.continuity-from-limits
+        encompassing: 0.55
+        confidence: medium
+      - topic: math.alg2.intermediate-value-informal
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the intermediate value theorem
+        key_prerequisites: [math.precalc.continuity-from-limits]
+      - id: kp2
+        can_do: Use it to find a zero's location
+        key_prerequisites: [math.precalc.continuity-from-limits]
+      - id: kp3
+        can_do: Say why continuity is needed
+        key_prerequisites: [math.precalc.continuity-from-limits]
   - id: math.precalc.rational-applications
     name: Solving average cost and concentration problems
     subject: math
@@ -1027,6 +1025,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.rational-from-features
+        encompassing: 0.2
+        confidence: low
+    encompassed:
       - topic: math.precalc.polynomial-analysis
         encompassing: 0.45
         confidence: medium
@@ -1096,6 +1098,9 @@ topics:
       - topic: math.precalc.partial-fractions
         encompassing: 0.7
         confidence: medium
+      - topic: math.precalc.complex-zeros-factorization
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Decompose with an irreducible quadratic
@@ -1116,6 +1121,9 @@ topics:
       - topic: math.alg2.rational-inequalities
         encompassing: 0.6
         confidence: high
+      - topic: math.precalc.sign-charts
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a polynomial inequality
@@ -1162,11 +1170,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.alg2.log-graphs
-        encompassing: 0.55
-        confidence: high
       - topic: math.precalc.transformations-combined
         encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.transform-log-graphs
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.log-graphs
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1208,6 +1220,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.log-transformations-graph-sketch
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.precalc.log-function-analysis
         encompassing: 0.55
         confidence: medium
@@ -1230,6 +1246,9 @@ topics:
     prerequisites:
       - topic: math.precalc.log-function-analysis
         encompassing: 0.55
+        confidence: medium
+      - topic: math.precalc.composition-domains
+        encompassing: 0.35
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1264,6 +1283,75 @@ topics:
       - id: kp3
         can_do: Compare logs with roots
         key_prerequisites: [math.precalc.exponential-function-analysis]
+  - id: math.precalc.modelling-functions
+    name: Choosing a function family to model data
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.function-families-review
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.alg2.exponential-regression
+        encompassing: 0.4
+        confidence: low
+      - topic: math.alg1.quadratic-regression-intro
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.exponential-compare-growth-rates
+        encompassing: 0.1
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a family from a scatter plot
+        key_prerequisites: [math.precalc.function-families-review]
+      - id: kp2
+        can_do: Fit a model with technology
+        key_prerequisites: [math.alg2.exponential-regression]
+      - id: kp3
+        can_do: Judge a fit in context
+        key_prerequisites: [math.alg2.exponential-regression]
+  - id: math.precalc.function-from-description
+    name: Writing a function from a description
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.modelling-functions
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a function from a word description
+        key_prerequisites: [math.precalc.modelling-functions]
+      - id: kp2
+        can_do: Write area or cost as a function of one variable
+        key_prerequisites: [math.precalc.modelling-functions]
+      - id: kp3
+        can_do: State its domain
+        key_prerequisites: [math.precalc.modelling-functions]
+  - id: math.precalc.regression-choose-family
+    name: Choosing regression by residuals
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.modelling-functions
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two regressions by residuals
+        key_prerequisites: [math.precalc.modelling-functions]
+      - id: kp2
+        can_do: Say why a higher r is not always better
+        key_prerequisites: [math.precalc.modelling-functions]
+      - id: kp3
+        can_do: Say what extrapolation might do
+        key_prerequisites: [math.precalc.modelling-functions]
   - id: math.precalc.exponential-log-equations-mixed
     name: Solving mixed exponential and log equations
     subject: math
@@ -1337,6 +1425,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.exponential-equation-quadratic-form
+        encompassing: 0.1
+        confidence: low
+      - topic: math.precalc.log-equations-with-different-bases
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.precalc.exponential-log-equations-mixed
         encompassing: 0.55
         confidence: medium
@@ -1404,6 +1499,9 @@ topics:
         encompassing: 0.4
         confidence: medium
       - topic: math.precalc.exponential-function-analysis
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.alg2.linearize-with-logs
         encompassing: 0.35
         confidence: medium
     knowledge_points:
@@ -1586,6 +1684,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.exact-values-beyond-first
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.precalc.unit-circle-fluency
         encompassing: 0.5
         confidence: high
@@ -1615,6 +1717,9 @@ topics:
       - topic: math.alg2.trig-from-point
         encompassing: 0.45
         confidence: high
+      - topic: math.alg2.pythagorean-find-value
+        encompassing: 0.45
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find all values from one value and a quadrant
@@ -1638,6 +1743,9 @@ topics:
       - topic: math.alg2.graph-tangent
         encompassing: 0.4
         confidence: high
+      - topic: math.precalc.tangent-from-slope
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Graph secant from cosine
@@ -1678,6 +1786,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.alg2.compare-sine-cosine-forms
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.graph-tangent-transform
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.alg2.phase-vertical-shift
         encompassing: 0.65
         confidence: high
@@ -1741,11 +1856,18 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.general-sinusoid
-        encompassing: 0.5
-        confidence: high
       - topic: math.alg2.sinusoidal-models
         encompassing: 0.55
+        confidence: high
+      - topic: math.precalc.horizontal-stretch-period
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.sinusoid-from-table
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.general-sinusoid
+        encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1787,12 +1909,16 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.alg2.radian-measure
-        encompassing: 0.4
-        confidence: medium
       - topic: math.g6.constant-speed
         encompassing: 0.35
         confidence: low
+      - topic: math.alg2.sector-with-radians
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.radian-measure
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find angular speed
@@ -1836,6 +1962,9 @@ topics:
       - topic: math.precalc.inverse-with-restricted-domains
         encompassing: 0.5
         confidence: high
+      - topic: math.precalc.trig-domain-range
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say why the domain is restricted
@@ -1916,6 +2045,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.inverse-trig-domain
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.inverse-trig-exact
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.precalc.inverse-trig-functions
         encompassing: 0.6
         confidence: high
@@ -1959,6 +2095,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.trig-values-from-info
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.alg2.pythagorean-identity
         encompassing: 0.5
         confidence: high
@@ -2048,12 +2188,19 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.fundamental-identities
-        encompassing: 0.6
-        confidence: high
       - topic: math.alg2.add-subtract-rational
         encompassing: 0.3
         confidence: medium
+      - topic: math.precalc.pythagorean-identities-variants
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.precalc.quotient-reciprocal-identities
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.fundamental-identities
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Simplify with one identity
@@ -2094,6 +2241,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.factor-trig-expressions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.simplify-trig-expressions
         encompassing: 0.65
         confidence: high
@@ -2157,12 +2308,21 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.verify-identities
-        encompassing: 0.55
-        confidence: high
+      - topic: math.precalc.cofunction-even-odd-identities
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.verify-identity-common-denominator
+        encompassing: 0.15
+        confidence: low
+      - topic: math.precalc.verify-identity-conjugates
+        encompassing: 0.1
+        confidence: low
     encompassed:
       - topic: math.precalc.unit-circle-fluency
         encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.verify-identities
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2224,6 +2384,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.exact-with-sum-identities
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.precalc.sum-difference-identities
         encompassing: 0.6
         confidence: high
@@ -2287,6 +2451,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.double-angle-from-info
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.reduce-powers
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.precalc.double-angle-identities
         encompassing: 0.6
         confidence: high
@@ -2350,6 +2521,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.alg2.trig-equation-all-solutions
+        encompassing: 0.45
+        confidence: medium
+    encompassed:
       - topic: math.alg2.basic-trig-equations
         encompassing: 0.6
         confidence: high
@@ -2433,11 +2608,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.linear-trig-equations
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.choose-quadratic-method
         encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.trig-equations-interval
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.linear-trig-equations
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2479,11 +2658,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.quadratic-trig-equations
-        encompassing: 0.55
-        confidence: high
       - topic: math.precalc.double-angle-identities
         encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.factor-trig-equations
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.quadratic-trig-equations
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2531,6 +2714,9 @@ topics:
       - topic: math.precalc.sinusoid-applications
         encompassing: 0.4
         confidence: high
+      - topic: math.precalc.trig-equations-technology
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find when a tide reaches a height
@@ -2703,6 +2889,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.vector-from-magnitude-direction
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.vector-components
         encompassing: 0.6
         confidence: high
@@ -2829,12 +3019,16 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.vector-components
-        encompassing: 0.45
-        confidence: high
       - topic: math.precalc.unit-circle-fluency
         encompassing: 0.25
         confidence: medium
+      - topic: math.precalc.unit-vectors
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.precalc.vector-components
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find a dot product from components
@@ -2921,6 +3115,9 @@ topics:
       - topic: math.precalc.angle-between-vectors
         encompassing: 0.55
         confidence: medium
+      - topic: math.precalc.orthogonal-vectors
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a projection
@@ -2938,15 +3135,25 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.vector-add-subtract
-        encompassing: 0.5
-        confidence: high
-      - topic: math.precalc.vector-magnitude-direction
-        encompassing: 0.5
-        confidence: high
       - topic: math.geom.medians-centroid
         encompassing: 0.1
         confidence: low
+      - topic: math.precalc.direction-angle
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.resultant-force
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.precalc.work-as-dot-product
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.precalc.vector-magnitude-direction
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.vector-add-subtract
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve a boat in a current
@@ -3003,6 +3210,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.matrix-dimensions
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.precalc.matrix-basics
         encompassing: 0.55
         confidence: high
@@ -3132,6 +3343,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.determinants-3x3
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.determinants-2x2
         encompassing: 0.55
         confidence: medium
@@ -3155,6 +3370,9 @@ topics:
       - topic: math.precalc.determinants-2x2
         encompassing: 0.6
         confidence: high
+      - topic: math.precalc.identity-matrix
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a 2 by 2 inverse
@@ -3168,26 +3386,6 @@ topics:
       - id: kp4
         can_do: Solve for a matrix in AX = B
         key_prerequisites: [math.precalc.determinants-2x2]
-  - id: math.precalc.solve-with-matrix-inverse
-    name: Solving systems with an inverse matrix
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.inverse-matrix-2x2
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Write a system as a matrix equation
-        key_prerequisites: [math.precalc.inverse-matrix-2x2]
-      - id: kp2
-        can_do: Solve with an inverse
-        key_prerequisites: [math.precalc.inverse-matrix-2x2]
-      - id: kp3
-        can_do: Solve with a tool for a 3 by 3 system
-        key_prerequisites: [math.precalc.inverse-matrix-2x2]
   - id: math.precalc.row-reduce-augmented
     name: Solving with row reduction
     subject: math
@@ -3211,6 +3409,29 @@ topics:
       - id: kp3
         can_do: Spot no or infinite solutions
         key_prerequisites: [math.alg2.matrix-row-reduction-intro]
+  - id: math.precalc.solve-with-matrix-inverse
+    name: Solving systems with an inverse matrix
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.inverse-matrix-2x2
+        encompassing: 0.6
+        confidence: high
+      - topic: math.precalc.row-reduce-augmented
+        encompassing: 0.1
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Write a system as a matrix equation
+        key_prerequisites: [math.precalc.inverse-matrix-2x2]
+      - id: kp2
+        can_do: Solve with an inverse
+        key_prerequisites: [math.precalc.inverse-matrix-2x2]
+      - id: kp3
+        can_do: Solve with a tool for a 3 by 3 system
+        key_prerequisites: [math.precalc.inverse-matrix-2x2]
   - id: math.precalc.matrix-transformations
     name: Representing transformations with matrices
     subject: math
@@ -3360,6 +3581,9 @@ topics:
       - topic: math.precalc.polar-rectangular-conversion
         encompassing: 0.6
         confidence: high
+      - topic: math.precalc.polar-multiple-representations
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Graph r = a and theta = b
@@ -3400,6 +3624,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.convert-polar-equations
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.polar-symmetry
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.polar-equations
         encompassing: 0.55
         confidence: high
@@ -3460,6 +3691,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.alg2.complex-plane-intro
+        encompassing: 0.5
+        confidence: medium
+    encompassed:
       - topic: math.alg2.complex-add-subtract
         encompassing: 0.4
         confidence: medium
@@ -3550,11 +3785,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.complex-modulus
-        encompassing: 0.55
-        confidence: high
       - topic: math.precalc.polar-rectangular-conversion
         encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.argument-of-complex
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.precalc.complex-modulus
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3579,6 +3818,9 @@ topics:
       - topic: math.precalc.polar-form-complex
         encompassing: 0.65
         confidence: high
+      - topic: math.precalc.complex-conjugate-geometry
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Multiply in polar form
@@ -3705,12 +3947,16 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.precalc.parametric-basics
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.literal-equations
         encompassing: 0.35
         confidence: medium
+      - topic: math.precalc.parametric-trig-curves
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.parametric-basics
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Eliminate t in a linear case
@@ -3751,6 +3997,13 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.precalc.parametric-direction
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.precalc.parametric-from-rectangular
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.precalc.parametric-eliminate
         encompassing: 0.6
         confidence: high
@@ -3807,29 +4060,6 @@ topics:
       - id: kp3
         can_do: Say what each looks like
         key_prerequisites: [math.geom.cross-sections-solids]
-  - id: math.precalc.polar-conics
-    name: Writing conics in polar form
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.polar-curves
-        encompassing: 0.4
-        confidence: medium
-      - topic: math.precalc.conic-overview
-        encompassing: 0.35
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Read eccentricity from a polar form
-        key_prerequisites: [math.precalc.polar-curves, math.precalc.conic-overview]
-      - id: kp2
-        can_do: Name the conic
-        key_prerequisites: [math.precalc.conic-overview]
-      - id: kp3
-        can_do: Sketch a polar conic
-        key_prerequisites: [math.precalc.polar-curves]
   - id: math.precalc.circles-general-form
     name: Graphing circles in general form
     subject: math
@@ -3946,6 +4176,10 @@ topics:
       - topic: math.precalc.conic-overview
         encompassing: 0.5
         confidence: high
+      - topic: math.precalc.complete-square-conic-setup
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.precalc.circles-general-form
         encompassing: 0.45
         confidence: high
@@ -4002,6 +4236,33 @@ topics:
       - id: kp3
         can_do: Compare two ellipses
         key_prerequisites: [math.precalc.ellipse-foci]
+  - id: math.precalc.polar-conics
+    name: Writing conics in polar form
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.polar-curves
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.precalc.eccentricity
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.precalc.conic-overview
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read eccentricity from a polar form
+        key_prerequisites: [math.precalc.polar-curves, math.precalc.conic-overview]
+      - id: kp2
+        can_do: Name the conic
+        key_prerequisites: [math.precalc.conic-overview]
+      - id: kp3
+        can_do: Sketch a polar conic
+        key_prerequisites: [math.precalc.polar-curves]
   - id: math.precalc.write-ellipse-equation
     name: Writing an ellipse's equation
     subject: math
@@ -4095,6 +4356,10 @@ topics:
       - topic: math.precalc.hyperbola-asymptotes
         encompassing: 0.45
         confidence: high
+      - topic: math.precalc.horizontal-parabolas
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.precalc.parabola-conic
         encompassing: 0.45
         confidence: high
@@ -4138,6 +4403,10 @@ topics:
       - topic: math.precalc.classify-general-conic
         encompassing: 0.5
         confidence: high
+      - topic: math.alg2.circle-line-systems
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.alg2.nonlinear-systems
         encompassing: 0.45
         confidence: high
@@ -4164,6 +4433,12 @@ topics:
       - topic: math.geom.circle-tangent-line-equation
         encompassing: 0.1
         confidence: low
+      - topic: math.precalc.write-ellipse-equation
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.precalc.write-hyperbola-equation
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Solve a satellite dish problem
@@ -4184,6 +4459,9 @@ topics:
       - topic: math.precalc.conic-applications
         encompassing: 0.6
         confidence: medium
+      - topic: math.precalc.vertex-focus-directrix-from-equation
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Use a parabola's reflective property
@@ -4201,12 +4479,16 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.alg2.infinite-geometric-series
-        encompassing: 0.45
-        confidence: high
       - topic: math.precalc.end-behavior-limits-intro
         encompassing: 0.3
         confidence: medium
+      - topic: math.alg2.repeating-decimals-geometric
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.alg2.infinite-geometric-series
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Test a geometric series
@@ -4263,26 +4545,6 @@ topics:
       - id: kp4
         can_do: Say why both steps are needed
         key_prerequisites: [math.alg2.sigma-notation]
-  - id: math.precalc.induction-sums
-    name: Proving sums by induction
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.precalc.mathematical-induction
-        encompassing: 0.65
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Prove a sum formula
-        key_prerequisites: [math.precalc.mathematical-induction]
-      - id: kp2
-        can_do: Prove a sum of squares
-        key_prerequisites: [math.precalc.mathematical-induction]
-      - id: kp3
-        can_do: Find a mistake in a proof
-        key_prerequisites: [math.precalc.mathematical-induction]
   - id: math.precalc.induction-divisibility
     name: Proving divisibility by induction
     subject: math
@@ -4303,26 +4565,6 @@ topics:
       - id: kp3
         can_do: Choose a base case
         key_prerequisites: [math.precalc.mathematical-induction]
-  - id: math.precalc.binomial-theorem-applications
-    name: Applying the binomial theorem
-    subject: math
-    course: math.precalc
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.alg2.binomial-theorem
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find a specific term
-        key_prerequisites: [math.alg2.binomial-theorem]
-      - id: kp2
-        can_do: Approximate with a binomial
-        key_prerequisites: [math.alg2.binomial-theorem]
-      - id: kp3
-        can_do: Use it in probability
-        key_prerequisites: [math.alg2.binomial-theorem]
   - id: math.precalc.recursive-to-explicit
     name: Finding an explicit rule from a recursion
     subject: math
@@ -4386,6 +4628,29 @@ topics:
       - id: kp3
         can_do: Use the formulas in a sum
         key_prerequisites: [math.alg2.sigma-notation]
+  - id: math.precalc.induction-sums
+    name: Proving sums by induction
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.mathematical-induction
+        encompassing: 0.65
+        confidence: medium
+      - topic: math.precalc.sum-of-powers-formula
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a sum formula
+        key_prerequisites: [math.precalc.mathematical-induction]
+      - id: kp2
+        can_do: Prove a sum of squares
+        key_prerequisites: [math.precalc.mathematical-induction]
+      - id: kp3
+        can_do: Find a mistake in a proof
+        key_prerequisites: [math.precalc.mathematical-induction]
   - id: math.precalc.telescoping-sums
     name: Finding telescoping sums
     subject: math
@@ -4426,6 +4691,29 @@ topics:
       - id: kp3
         can_do: Find a probability with counting
         key_prerequisites: [math.alg2.combinations]
+  - id: math.precalc.binomial-theorem-applications
+    name: Applying the binomial theorem
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.alg2.binomial-theorem
+        encompassing: 0.55
+        confidence: high
+      - topic: math.precalc.counting-principles-review
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a specific term
+        key_prerequisites: [math.alg2.binomial-theorem]
+      - id: kp2
+        can_do: Approximate with a binomial
+        key_prerequisites: [math.alg2.binomial-theorem]
+      - id: kp3
+        can_do: Use it in probability
+        key_prerequisites: [math.alg2.binomial-theorem]
   - id: math.precalc.annuities-loan-series
     name: Modelling annuities and loans with series
     subject: math

@@ -285,6 +285,10 @@ topics:
       - topic: math.g1.write-numerals-to-120
         encompassing: 0.35
         confidence: high
+      - topic: math.g1.count-large-groups-by-tens
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g1.two-digit-as-tens-and-ones
         encompassing: 0.8
         confidence: high
@@ -481,32 +485,6 @@ topics:
       - id: kp4
         can_do: Add zero to a number within 10 from memory
         key_prerequisites: [math.k.add-fluently-within-5]
-  - id: math.g1.subtract-fluently-within-10
-    name: Subtracting fluently within 10
-    subject: math
-    course: math.g1
-    level: g1
-    status: draft
-    prerequisites:
-      - topic: math.k.subtract-fluently-within-5
-        encompassing: 0.4
-        confidence: high
-      - topic: math.k.split-6-to-10
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Say differences from 6 and 7 from memory
-        key_prerequisites: [math.k.split-6-to-10]
-      - id: kp2
-        can_do: Say differences from 8 and 9 from memory
-        key_prerequisites: [math.k.split-6-to-10]
-      - id: kp3
-        can_do: Say differences from 10 from memory
-        key_prerequisites: [math.k.split-6-to-10]
-      - id: kp4
-        can_do: Take away zero or the whole number from memory
-        key_prerequisites: [math.k.subtract-fluently-within-5]
   - id: math.g1.add-by-counting-on
     name: Adding by counting on
     subject: math
@@ -553,6 +531,36 @@ topics:
       - id: kp3
         can_do: Say which number the count back stops on
         key_prerequisites: [math.k.count-back-from-10]
+  - id: math.g1.subtract-fluently-within-10
+    name: Subtracting fluently within 10
+    subject: math
+    course: math.g1
+    level: g1
+    status: draft
+    prerequisites:
+      - topic: math.k.subtract-fluently-within-5
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g1.subtract-by-counting-back
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.k.split-6-to-10
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say differences from 6 and 7 from memory
+        key_prerequisites: [math.k.split-6-to-10]
+      - id: kp2
+        can_do: Say differences from 8 and 9 from memory
+        key_prerequisites: [math.k.split-6-to-10]
+      - id: kp3
+        can_do: Say differences from 10 from memory
+        key_prerequisites: [math.k.split-6-to-10]
+      - id: kp4
+        can_do: Take away zero or the whole number from memory
+        key_prerequisites: [math.k.subtract-fluently-within-5]
   - id: math.g1.add-in-either-order
     name: Adding in either order
     subject: math
@@ -663,11 +671,15 @@ topics:
       - topic: math.k.partner-to-make-10
         encompassing: 0.6
         confidence: high
-      - topic: math.k.teen-as-ten-and-ones
-        encompassing: 0.4
-        confidence: high
       - topic: math.g1.add-fluently-within-10
         encompassing: 0.35
+        confidence: high
+      - topic: math.g1.teen-as-ten-plus-ones-equation
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.k.teen-as-ten-and-ones
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -692,6 +704,9 @@ topics:
       - topic: math.g1.subtract-fluently-within-10
         encompassing: 0.45
         confidence: high
+      - topic: math.g1.count-back-from-20
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Subtract from a teen number down to 10
@@ -709,12 +724,16 @@ topics:
     level: g1
     status: draft
     prerequisites:
-      - topic: math.g1.subtraction-as-missing-addend
-        encompassing: 0.65
-        confidence: high
       - topic: math.g1.add-by-making-ten
         encompassing: 0.4
         confidence: medium
+      - topic: math.g1.fact-families
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g1.subtraction-as-missing-addend
+        encompassing: 0.65
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Use a known doubles fact to find a difference
@@ -1163,12 +1182,16 @@ topics:
     level: g1
     status: draft
     prerequisites:
-      - topic: math.k.compare-lengths
-        encompassing: 0.3
-        confidence: medium
       - topic: math.k.count-scattered-to-10
         encompassing: 0.4
         confidence: high
+      - topic: math.g1.compare-lengths-with-third-object
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.k.compare-lengths
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Lay objects end to end along a length and count them

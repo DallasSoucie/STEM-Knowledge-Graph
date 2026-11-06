@@ -232,6 +232,9 @@ topics:
       - topic: math.g5.pattern-rules-with-variables
         encompassing: 0.5
         confidence: medium
+      - topic: math.g5.words-to-expressions
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write an expression for a number plus or minus a variable
@@ -434,12 +437,16 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.place-value-system
-        encompassing: 0.35
-        confidence: medium
       - topic: math.g4.decimal-hundredths
         encompassing: 0.5
         confidence: high
+      - topic: math.g5.decimal-place-names
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g5.place-value-system
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Read a decimal to thousandths
@@ -477,12 +484,16 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.read-write-thousandths
-        encompassing: 0.45
-        confidence: high
       - topic: math.g4.expanded-form-large
         encompassing: 0.35
         confidence: medium
+      - topic: math.g5.decimals-in-words
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.read-write-thousandths
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Write a decimal in expanded form with decimals
@@ -523,11 +534,21 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.read-write-thousandths
-        encompassing: 0.45
-        confidence: high
       - topic: math.g4.compare-decimals
         encompassing: 0.65
+        confidence: high
+      - topic: math.g4.order-large-numbers
+        encompassing: 0.1
+        confidence: low
+      - topic: math.g5.expanded-form-decimals
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.g5.thousandths-on-number-line
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g5.read-write-thousandths
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
@@ -627,6 +648,9 @@ topics:
       - topic: math.g4.compare-with-benchmark
         encompassing: 0.5
         confidence: high
+      - topic: math.g4.compare-mixed-numbers
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Compare a fraction to 0, one half and 1
@@ -723,55 +747,6 @@ topics:
       - id: kp3
         can_do: Add the partial products
         key_prerequisites: [math.g4.two-by-two-area-model]
-  - id: math.g5.three-by-two-multiply
-    name: Multiplying a three-digit number by a two-digit number
-    subject: math
-    course: math.g5
-    level: g5
-    status: draft
-    prerequisites:
-      - topic: math.g5.multiply-with-algorithm
-        encompassing: 0.8
-        confidence: high
-      - topic: math.g5.three-by-two-area-model
-        encompassing: 0.25
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Multiply a three-digit number by a two-digit number without regrouping
-        key_prerequisites: [math.g5.multiply-with-algorithm]
-      - id: kp2
-        can_do: Multiply a three-digit number by a two-digit number with regrouping
-        key_prerequisites: [math.g5.multiply-with-algorithm]
-      - id: kp3
-        can_do: Connect the written rows to the area model
-        key_prerequisites: [math.g5.three-by-two-area-model]
-      - id: kp4
-        can_do: Multiply when the top number has a zero
-        key_prerequisites: [math.g5.multiply-with-algorithm]
-  - id: math.g5.multi-digit-multiply
-    name: Multiplying larger numbers
-    subject: math
-    course: math.g5
-    level: g5
-    status: draft
-    prerequisites:
-      - topic: math.g5.three-by-two-multiply
-        encompassing: 0.8
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Multiply a four-digit number by a two-digit number
-        key_prerequisites: [math.g5.three-by-two-multiply]
-      - id: kp2
-        can_do: Multiply two three-digit numbers
-        key_prerequisites: [math.g5.three-by-two-multiply]
-      - id: kp3
-        can_do: Multiply numbers that include zeros
-        key_prerequisites: [math.g5.three-by-two-multiply]
-      - id: kp4
-        can_do: Solve a story multiplying large numbers
-        key_prerequisites: [math.g5.three-by-two-multiply]
   - id: math.g5.multiply-ending-in-zeros
     name: Multiplying numbers ending in zeros
     subject: math
@@ -796,6 +771,62 @@ topics:
       - id: kp3
         can_do: Multiply a number with internal zeros
         key_prerequisites: [math.g5.multiply-with-algorithm]
+  - id: math.g5.three-by-two-multiply
+    name: Multiplying a three-digit number by a two-digit number
+    subject: math
+    course: math.g5
+    level: g5
+    status: draft
+    prerequisites:
+      - topic: math.g5.three-by-two-area-model
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g5.multiply-ending-in-zeros
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.multiply-with-algorithm
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply a three-digit number by a two-digit number without regrouping
+        key_prerequisites: [math.g5.multiply-with-algorithm]
+      - id: kp2
+        can_do: Multiply a three-digit number by a two-digit number with regrouping
+        key_prerequisites: [math.g5.multiply-with-algorithm]
+      - id: kp3
+        can_do: Connect the written rows to the area model
+        key_prerequisites: [math.g5.three-by-two-area-model]
+      - id: kp4
+        can_do: Multiply when the top number has a zero
+        key_prerequisites: [math.g5.multiply-with-algorithm]
+  - id: math.g5.multi-digit-multiply
+    name: Multiplying larger numbers
+    subject: math
+    course: math.g5
+    level: g5
+    status: draft
+    prerequisites:
+      - topic: math.g5.three-by-two-multiply
+        encompassing: 0.8
+        confidence: high
+      - topic: math.g4.four-digit-times-one
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply a four-digit number by a two-digit number
+        key_prerequisites: [math.g5.three-by-two-multiply]
+      - id: kp2
+        can_do: Multiply two three-digit numbers
+        key_prerequisites: [math.g5.three-by-two-multiply]
+      - id: kp3
+        can_do: Multiply numbers that include zeros
+        key_prerequisites: [math.g5.three-by-two-multiply]
+      - id: kp4
+        can_do: Solve a story multiplying large numbers
+        key_prerequisites: [math.g5.three-by-two-multiply]
   - id: math.g5.estimate-large-products
     name: Estimating large products
     subject: math
@@ -918,6 +949,9 @@ topics:
       - topic: math.g4.three-digit-divide
         encompassing: 0.45
         confidence: high
+      - topic: math.g5.partial-quotients-two-digit
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Divide a three-digit number with a two-digit quotient
@@ -984,6 +1018,10 @@ topics:
     level: g5
     status: draft
     prerequisites:
+      - topic: math.g5.adjust-quotient-digit
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.g5.two-digit-divisor
         encompassing: 0.75
         confidence: high
@@ -1049,11 +1087,15 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.two-digit-divisor
-        encompassing: 0.3
-        confidence: high
       - topic: math.g5.multiply-with-algorithm
         encompassing: 0.45
+        confidence: high
+      - topic: math.g5.divide-with-area-models
+        encompassing: 0.1
+        confidence: low
+    encompassed:
+      - topic: math.g5.two-digit-divisor
+        encompassing: 0.3
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1075,10 +1117,14 @@ topics:
       - topic: math.g5.four-digit-by-two-digit
         encompassing: 0.45
         confidence: high
-      - topic: math.g5.multi-digit-multiply
+      - topic: math.g4.multi-step-stories
         encompassing: 0.45
         confidence: high
-      - topic: math.g4.multi-step-stories
+      - topic: math.g5.estimate-large-products
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.multi-digit-multiply
         encompassing: 0.45
         confidence: high
     knowledge_points:
@@ -1241,6 +1287,13 @@ topics:
     level: g5
     status: draft
     prerequisites:
+      - topic: math.g5.add-different-places
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g5.subtract-different-places
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g5.add-thousandths
         encompassing: 0.5
         confidence: high
@@ -1458,11 +1511,15 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.decimal-divide-by-whole
-        encompassing: 0.45
-        confidence: high
       - topic: math.g5.decimal-point-shift
         encompassing: 0.35
+        confidence: high
+      - topic: math.g5.zeros-in-decimal-division
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g5.decimal-divide-by-whole
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1576,6 +1633,9 @@ topics:
       - topic: math.g5.decimal-divide-stories
         encompassing: 0.4
         confidence: high
+      - topic: math.g5.place-point-by-estimating
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Solve a two-step story adding and multiplying decimals
@@ -1714,6 +1774,10 @@ topics:
       - topic: math.g4.add-like-fractions
         encompassing: 0.6
         confidence: high
+      - topic: math.g5.least-common-denominator
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.g4.simplify-fractions
         encompassing: 0.2
         confidence: medium
@@ -1814,10 +1878,14 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.add-unlike-fractions
+      - topic: math.g4.add-mixed-like
         encompassing: 0.55
         confidence: high
-      - topic: math.g4.add-mixed-like
+      - topic: math.g5.simplify-answers
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.add-unlike-fractions
         encompassing: 0.55
         confidence: high
     knowledge_points:
@@ -1911,10 +1979,24 @@ topics:
     course: math.g5
     level: g5
     status: draft
+    justification: Stories using all unlike fraction skills, each with its own earlier topic
     prerequisites:
       - topic: math.g5.add-mixed-unlike
         encompassing: 0.5
         confidence: high
+      - topic: math.g4.like-fraction-stories
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g5.add-three-fractions
+        encompassing: 0.15
+        confidence: low
+      - topic: math.g5.subtract-unlike-mixed-regrouping
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g5.estimate-fraction-sums
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.g5.subtract-mixed-unlike
         encompassing: 0.5
         confidence: high
@@ -1984,11 +2066,15 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.fraction-as-division
-        encompassing: 0.45
-        confidence: high
       - topic: math.g4.whole-times-fraction
         encompassing: 0.5
+        confidence: high
+      - topic: math.g5.division-stories-fraction-answers
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.fraction-as-division
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2178,12 +2264,18 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.fraction-times-fraction
-        encompassing: 0.6
-        confidence: high
+      - topic: math.g5.simplify-before-multiplying
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g5.mixed-times-whole
+        encompassing: 0.35
+        confidence: medium
     encompassed:
       - topic: math.g4.improper-and-mixed
         encompassing: 0.45
+        confidence: high
+      - topic: math.g5.fraction-times-fraction
+        encompassing: 0.6
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2468,6 +2560,9 @@ topics:
       - topic: math.g5.convert-imperial
         encompassing: 0.45
         confidence: medium
+      - topic: math.g4.conversion-tables
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Convert a fraction of a metric unit to a smaller unit
@@ -2485,13 +2580,23 @@ topics:
     level: g5
     status: draft
     prerequisites:
+      - topic: math.g5.large-number-stories
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g4.distance-time-stories
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g4.mass-capacity-money-stories
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g5.convert-with-fractions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.g5.convert-metric
         encompassing: 0.45
         confidence: high
       - topic: math.g5.convert-imperial
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g5.large-number-stories
         encompassing: 0.4
         confidence: high
     knowledge_points:
@@ -2531,12 +2636,16 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g4.line-plot-fractions
-        encompassing: 0.45
-        confidence: high
       - topic: math.g5.fraction-times-fraction
         encompassing: 0.3
         confidence: medium
+      - topic: math.g5.line-plot-eighths
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.g4.line-plot-fractions
+        encompassing: 0.45
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find the total of values on a line plot
@@ -2556,6 +2665,9 @@ topics:
     prerequisites:
       - topic: math.g4.relative-time-units
         encompassing: 0.55
+        confidence: medium
+      - topic: math.g4.twelve-and-24-hour-clocks
+        encompassing: 0.3
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -2739,12 +2851,16 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.measure-volume-by-counting
-        encompassing: 0.55
-        confidence: high
       - topic: math.g4.area-perimeter-formulas
         encompassing: 0.3
         confidence: medium
+      - topic: math.g5.cubic-units
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g5.measure-volume-by-counting
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find how many cubes are in one layer
@@ -2814,6 +2930,9 @@ topics:
       - topic: math.g5.one-step-equations-variables
         encompassing: 0.45
         confidence: medium
+      - topic: math.g4.missing-side-from-area
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a missing height from a volume
@@ -2858,6 +2977,9 @@ topics:
         encompassing: 0.5
         confidence: high
       - topic: math.g5.large-number-stories
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g5.volume-unknown-edge
         encompassing: 0.25
         confidence: medium
     knowledge_points:
@@ -3005,12 +3127,16 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g5.plot-points
-        encompassing: 0.5
-        confidence: high
       - topic: math.g5.relate-two-patterns
         encompassing: 0.3
         confidence: medium
+      - topic: math.g5.points-in-context
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g5.plot-points
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve a problem by plotting points in context
@@ -3076,6 +3202,9 @@ topics:
       - topic: math.g5.shape-attribute-inheritance
         encompassing: 0.55
         confidence: medium
+      - topic: math.g4.classify-quadrilaterals
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Place quadrilaterals in a hierarchy
@@ -3095,6 +3224,9 @@ topics:
     prerequisites:
       - topic: math.g5.quadrilateral-hierarchy
         encompassing: 0.6
+        confidence: medium
+      - topic: math.g4.regular-irregular-polygons
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1

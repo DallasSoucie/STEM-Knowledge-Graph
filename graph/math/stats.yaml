@@ -116,6 +116,9 @@ topics:
       - topic: math.stats.histograms-shape
         encompassing: 0.45
         confidence: high
+      - topic: math.stats.stem-leaf-plots
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find the five-number summary
@@ -248,6 +251,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.describe-distribution-socs
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.stats.choose-summary-stats
         encompassing: 0.55
         confidence: high
@@ -292,6 +299,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.transform-data-effects
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.stats.standard-deviation-calc
         encompassing: 0.5
         confidence: high
@@ -378,6 +389,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.standard-normal-table
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
       - topic: math.stats.normal-calculations
         encompassing: 0.65
         confidence: medium
@@ -426,6 +441,9 @@ topics:
         confidence: medium
       - topic: math.stats.histograms-shape
         encompassing: 0.4
+        confidence: medium
+      - topic: math.stats.empirical-rule
+        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -487,11 +505,15 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.stats.scatter-association
-        encompassing: 0.55
-        confidence: high
       - topic: math.stats.standard-deviation-calc
         encompassing: 0.45
+        confidence: high
+      - topic: math.stats.correlation-properties
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.stats.scatter-association
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -559,15 +581,18 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.stats.interpret-regression
-        encompassing: 0.55
-        confidence: high
       - topic: math.alg1.residual-plot-read
         encompassing: 0.45
+        confidence: medium
+      - topic: math.stats.regression-prediction
+        encompassing: 0.3
         confidence: medium
     encompassed:
       - topic: math.alg1.residuals
         encompassing: 0.5
+        confidence: high
+      - topic: math.stats.interpret-regression
+        encompassing: 0.55
         confidence: high
     knowledge_points:
       - id: kp1
@@ -971,6 +996,16 @@ topics:
       - topic: math.stats.randomization-control-replication
         encompassing: 0.45
         confidence: high
+      - topic: math.stats.stratified-cluster-samples
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.stats.question-wording-bias
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.stats.confounding
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.stats.simple-random-sample
         encompassing: 0.45
         confidence: high
@@ -994,6 +1029,12 @@ topics:
       - topic: math.stats.scope-of-inference
         encompassing: 0.4
         confidence: low
+      - topic: math.stats.ethics-in-studies
+        encompassing: 0.15
+        confidence: low
+      - topic: math.stats.double-blind-placebo
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Link statistics to the scientific method
@@ -1097,6 +1138,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.disjoint-vs-independent
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.stats.conditional-independence
         encompassing: 0.6
         confidence: high
@@ -1193,52 +1238,6 @@ topics:
       - id: kp3
         can_do: Graph a distribution
         key_prerequisites: [math.stats.random-variables]
-  - id: math.stats.expected-value
-    name: Finding expected value and variance
-    subject: math
-    course: math.stats
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.stats.random-variables
-        encompassing: 0.6
-        confidence: high
-      - topic: math.stats.standard-deviation-calc
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find a mean of a random variable
-        key_prerequisites: [math.stats.random-variables]
-      - id: kp2
-        can_do: Find a variance and SD
-        key_prerequisites: [math.stats.standard-deviation-calc]
-      - id: kp3
-        can_do: Say what the mean means in the long run
-        key_prerequisites: [math.stats.random-variables]
-      - id: kp4
-        can_do: Find a fair game price
-        key_prerequisites: [math.stats.random-variables]
-  - id: math.stats.combine-random-variables
-    name: Combining random variables
-    subject: math
-    course: math.stats
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.stats.expected-value
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find a mean of a sum
-        key_prerequisites: [math.stats.expected-value]
-      - id: kp2
-        can_do: Find an SD of a sum
-        key_prerequisites: [math.stats.expected-value]
-      - id: kp3
-        can_do: Find one for a difference
-        key_prerequisites: [math.stats.expected-value]
   - id: math.stats.binomial-setting
     name: Recognizing a binomial setting
     subject: math
@@ -1285,6 +1284,79 @@ topics:
       - id: kp4
         can_do: Find a probability of at most k
         key_prerequisites: [math.stats.binomial-setting]
+  - id: math.stats.geometric-distribution
+    name: Using the geometric distribution
+    subject: math
+    course: math.stats
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.stats.binomial-setting
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a probability of first success
+        key_prerequisites: [math.stats.binomial-setting]
+      - id: kp2
+        can_do: Find a mean waiting time
+        key_prerequisites: [math.stats.binomial-setting]
+      - id: kp3
+        can_do: Find an at-most probability
+        key_prerequisites: [math.stats.binomial-setting]
+  - id: math.stats.expected-value
+    name: Finding expected value and variance
+    subject: math
+    course: math.stats
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.stats.standard-deviation-calc
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.stats.probability-distribution-tables
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.stats.geometric-distribution
+        encompassing: 0.05
+        confidence: low
+    encompassed:
+      - topic: math.stats.random-variables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean of a random variable
+        key_prerequisites: [math.stats.random-variables]
+      - id: kp2
+        can_do: Find a variance and SD
+        key_prerequisites: [math.stats.standard-deviation-calc]
+      - id: kp3
+        can_do: Say what the mean means in the long run
+        key_prerequisites: [math.stats.random-variables]
+      - id: kp4
+        can_do: Find a fair game price
+        key_prerequisites: [math.stats.random-variables]
+  - id: math.stats.combine-random-variables
+    name: Combining random variables
+    subject: math
+    course: math.stats
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.stats.expected-value
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a mean of a sum
+        key_prerequisites: [math.stats.expected-value]
+      - id: kp2
+        can_do: Find an SD of a sum
+        key_prerequisites: [math.stats.expected-value]
+      - id: kp3
+        can_do: Find one for a difference
+        key_prerequisites: [math.stats.expected-value]
   - id: math.stats.binomial-mean-sd
     name: Finding the mean and SD of a binomial
     subject: math
@@ -1308,26 +1380,6 @@ topics:
       - id: kp3
         can_do: Say whether a result is surprising
         key_prerequisites: [math.stats.binomial-calculations]
-  - id: math.stats.geometric-distribution
-    name: Using the geometric distribution
-    subject: math
-    course: math.stats
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: math.stats.binomial-setting
-        encompassing: 0.5
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Find a probability of first success
-        key_prerequisites: [math.stats.binomial-setting]
-      - id: kp2
-        can_do: Find a mean waiting time
-        key_prerequisites: [math.stats.binomial-setting]
-      - id: kp3
-        can_do: Find an at-most probability
-        key_prerequisites: [math.stats.binomial-setting]
   - id: math.stats.binomial-normal-approx
     name: Approximating a binomial with a normal
     subject: math
@@ -1410,6 +1462,10 @@ topics:
       - topic: math.stats.sampling-distribution-idea
         encompassing: 0.55
         confidence: high
+      - topic: math.stats.inverse-normal
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.stats.normal-calculations
         encompassing: 0.4
         confidence: high
@@ -1559,6 +1615,10 @@ topics:
       - topic: math.stats.ci-idea
         encompassing: 0.5
         confidence: high
+      - topic: math.stats.central-limit-theorem
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
       - topic: math.stats.sampling-mean
         encompassing: 0.5
         confidence: high
@@ -1579,6 +1639,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.margin-of-error-sample-size
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.stats.ci-idea
         encompassing: 0.45
         confidence: high
@@ -1689,6 +1753,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.test-conditions
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.stats.one-proportion-test
         encompassing: 0.6
         confidence: high
@@ -1735,6 +1803,12 @@ topics:
       - topic: math.stats.t-distribution
         encompassing: 0.5
         confidence: high
+      - topic: math.stats.normal-assess
+        encompassing: 0.1
+        confidence: low
+      - topic: math.stats.ci-mean-t
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a t statistic
@@ -1758,6 +1832,9 @@ topics:
       - topic: math.stats.one-mean-t-test
         encompassing: 0.6
         confidence: high
+      - topic: math.stats.combine-random-variables
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Test a difference of two means
@@ -1841,6 +1918,10 @@ topics:
     level: g12
     status: draft
     prerequisites:
+      - topic: math.stats.errors-and-power
+        encompassing: 0.15
+        confidence: low
+    encompassed:
       - topic: math.stats.p-value-meaning
         encompassing: 0.5
         confidence: medium
@@ -1861,10 +1942,17 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.stats.one-proportion-test
+      - topic: math.stats.ci-interpret
         encompassing: 0.4
         confidence: medium
-      - topic: math.stats.ci-interpret
+      - topic: math.stats.ci-difference-proportions
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.stats.ci-difference-of-means
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.stats.one-proportion-test
         encompassing: 0.4
         confidence: medium
     knowledge_points:
@@ -1931,11 +2019,21 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.stats.residual-analysis
-        encompassing: 0.5
-        confidence: medium
       - topic: math.stats.one-mean-t-test
         encompassing: 0.4
+        confidence: medium
+      - topic: math.stats.r-squared
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.stats.influential-points
+        encompassing: 0.15
+        confidence: low
+      - topic: math.stats.transform-to-linearity
+        encompassing: 0.1
+        confidence: low
+    encompassed:
+      - topic: math.stats.residual-analysis
+        encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1983,6 +2081,12 @@ topics:
       - topic: math.stats.two-mean-t-test
         encompassing: 0.4
         confidence: medium
+      - topic: math.stats.paired-t-test
+        encompassing: 0.15
+        confidence: low
+      - topic: math.stats.chi-square-independence
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Read output for a regression
@@ -2003,6 +2107,15 @@ topics:
       - topic: math.stats.software-in-statistics
         encompassing: 0.4
         confidence: medium
+      - topic: math.stats.quartiles-and-boxplot-compare
+        encompassing: 0.1
+        confidence: low
+      - topic: math.stats.simpsons-paradox
+        encompassing: 0.1
+        confidence: low
+      - topic: math.stats.randomization-tests
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write a result for a general reader

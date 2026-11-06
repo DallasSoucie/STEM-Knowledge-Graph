@@ -112,6 +112,9 @@ topics:
       - topic: math.g4.read-write-to-10000
         encompassing: 0.5
         confidence: high
+      - topic: math.g2.number-names
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Read a number to a million
@@ -449,18 +452,22 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g4.add-large-numbers
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g4.subtract-large-numbers
-        encompassing: 0.55
-        confidence: high
       - topic: math.g3.two-step-add-subtract-stories
         encompassing: 0.45
         confidence: high
       - topic: math.g4.estimate-large-sums
         encompassing: 0.2
         confidence: medium
+      - topic: math.g4.check-large-subtraction
+        encompassing: 0.15
+        confidence: low
+    encompassed:
+      - topic: math.g4.add-large-numbers
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g4.subtract-large-numbers
+        encompassing: 0.55
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve a one-step story with large numbers
@@ -521,12 +528,16 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g4.times-multiples-of-10-100-1000
-        encompassing: 0.4
-        confidence: medium
       - topic: math.g3.group-three-factors
         encompassing: 0.45
         confidence: high
+      - topic: math.g4.multiply-mentally-tens
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g4.times-multiples-of-10-100-1000
+        encompassing: 0.4
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Regroup factors to include a 10
@@ -1006,6 +1017,10 @@ topics:
     level: g4
     status: draft
     prerequisites:
+      - topic: math.g4.partial-quotients
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g4.two-digit-divide-regroup
         encompassing: 0.75
         confidence: high
@@ -1042,32 +1057,6 @@ topics:
       - id: kp3
         can_do: Divide a number with a zero in the dividend
         key_prerequisites: [math.g4.three-digit-divide]
-  - id: math.g4.four-digit-divide
-    name: Dividing a four-digit number by a one-digit number
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.zero-in-quotient
-        encompassing: 0.7
-        confidence: high
-      - topic: math.g4.estimate-quotients-one-digit
-        encompassing: 0.2
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Divide a four-digit number with a four-digit quotient
-        key_prerequisites: [math.g4.zero-in-quotient]
-      - id: kp2
-        can_do: Divide a four-digit number with a three-digit quotient
-        key_prerequisites: [math.g4.zero-in-quotient]
-      - id: kp3
-        can_do: Divide a four-digit number with a zero and a remainder
-        key_prerequisites: [math.g4.zero-in-quotient]
-      - id: kp4
-        can_do: Estimate a four-digit quotient and compare it
-        key_prerequisites: [math.g4.zero-in-quotient, math.g4.estimate-quotients-one-digit]
   - id: math.g4.check-division
     name: Checking division with multiplication
     subject: math
@@ -1091,6 +1080,35 @@ topics:
       - id: kp3
         can_do: Find a mistake in a division by checking it
         key_prerequisites: [math.g4.three-digit-divide]
+  - id: math.g4.four-digit-divide
+    name: Dividing a four-digit number by a one-digit number
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.zero-in-quotient
+        encompassing: 0.7
+        confidence: high
+      - topic: math.g4.estimate-quotients-one-digit
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g4.check-division
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Divide a four-digit number with a four-digit quotient
+        key_prerequisites: [math.g4.zero-in-quotient]
+      - id: kp2
+        can_do: Divide a four-digit number with a three-digit quotient
+        key_prerequisites: [math.g4.zero-in-quotient]
+      - id: kp3
+        can_do: Divide a four-digit number with a zero and a remainder
+        key_prerequisites: [math.g4.zero-in-quotient]
+      - id: kp4
+        can_do: Estimate a four-digit quotient and compare it
+        key_prerequisites: [math.g4.zero-in-quotient, math.g4.estimate-quotients-one-digit]
   - id: math.g4.times-as-many
     name: Understanding times as many
     subject: math
@@ -1161,6 +1179,10 @@ topics:
       - topic: math.g4.multiplicative-or-additive
         encompassing: 0.5
         confidence: high
+      - topic: math.g3.unknown-factor-stories
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g3.division-stories
         encompassing: 0.35
         confidence: medium
@@ -1248,59 +1270,6 @@ topics:
       - id: kp3
         can_do: Use parentheses to show which step comes first
         key_prerequisites: [math.g3.two-step-four-operation-stories]
-  - id: math.g4.multi-step-stories
-    name: Solving multi-step stories
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.interpret-remainders
-        encompassing: 0.25
-        confidence: medium
-      - topic: math.g4.write-multi-step-equations
-        encompassing: 0.3
-        confidence: medium
-    encompassed:
-      - topic: math.g3.two-step-four-operation-stories
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a story with three steps
-        key_prerequisites: [math.g3.two-step-four-operation-stories]
-      - id: kp2
-        can_do: Solve a multi-step story that needs a remainder decision
-        key_prerequisites: [math.g4.interpret-remainders]
-      - id: kp3
-        can_do: Write the equation and solve a multi-step story
-        key_prerequisites: [math.g4.write-multi-step-equations]
-      - id: kp4
-        can_do: Solve a multi-step story with more information than needed
-        key_prerequisites: [math.g4.write-multi-step-equations]
-  - id: math.g4.reasonableness-multi-step
-    name: Checking multi-step answers by estimating
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.multi-step-stories
-        encompassing: 0.4
-        confidence: medium
-      - topic: math.g4.estimate-products
-        encompassing: 0.4
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Estimate the answer to a multi-step story
-        key_prerequisites: [math.g4.estimate-products]
-      - id: kp2
-        can_do: Compare a multi-step answer with an estimate
-        key_prerequisites: [math.g4.multi-step-stories]
-      - id: kp3
-        can_do: Find which step went wrong when an answer is unreasonable
-        key_prerequisites: [math.g4.multi-step-stories]
   - id: math.g4.factor-pairs
     name: Finding factor pairs
     subject: math
@@ -1308,6 +1277,10 @@ topics:
     level: g4
     status: draft
     prerequisites:
+      - topic: math.g3.multiplication-table-patterns
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g3.products-from-memory
         encompassing: 0.5
         confidence: high
@@ -1376,6 +1349,10 @@ topics:
       - topic: math.g4.multiples-of-a-number
         encompassing: 0.35
         confidence: medium
+      - topic: math.g3.odd-even-products
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g2.odd-and-even
         encompassing: 0.3
         confidence: medium
@@ -1395,6 +1372,13 @@ topics:
     level: g4
     status: draft
     prerequisites:
+      - topic: math.g4.test-for-multiple
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g4.divisibility-rules
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.g4.factor-pairs
         encompassing: 0.65
         confidence: high
@@ -1440,6 +1424,9 @@ topics:
       - topic: math.g4.generate-rule-patterns
         encompassing: 0.6
         confidence: medium
+      - topic: math.g3.addition-table-patterns
+        encompassing: 0.2
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Notice a feature that the rule does not state
@@ -1501,6 +1488,12 @@ topics:
     prerequisites:
       - topic: math.g4.patterns-in-tables
         encompassing: 0.55
+        confidence: medium
+      - topic: math.g4.pattern-features
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g4.shape-patterns
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -1664,6 +1657,9 @@ topics:
       - topic: math.g4.compare-common-denominator
         encompassing: 0.65
         confidence: high
+      - topic: math.g4.compare-common-numerator
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Put three fractions in order with a common denominator
@@ -1687,6 +1683,9 @@ topics:
       - topic: math.g3.fractions-from-unit-parts
         encompassing: 0.5
         confidence: high
+      - topic: math.g3.equal-area-parts
+        encompassing: 0.1
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write a fraction as a sum of unit fractions
@@ -1846,6 +1845,10 @@ topics:
       - topic: math.g4.mixed-on-number-line
         encompassing: 0.45
         confidence: high
+      - topic: math.g4.order-fractions
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g4.compare-common-denominator
         encompassing: 0.45
         confidence: high
@@ -2055,12 +2058,16 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g4.whole-times-fraction
-        encompassing: 0.6
-        confidence: high
       - topic: math.g3.multiplication-stories
         encompassing: 0.3
         confidence: medium
+      - topic: math.g4.product-between-wholes
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.g4.whole-times-fraction
+        encompassing: 0.6
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Solve a story with equal groups of a fraction
@@ -2207,12 +2214,16 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g4.decimal-hundredths
-        encompassing: 0.5
-        confidence: high
       - topic: math.g1.comparison-symbols
         encompassing: 0.2
         confidence: medium
+      - topic: math.g4.equal-decimals
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.g4.decimal-hundredths
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Compare two decimals with a grid model
@@ -2265,6 +2276,9 @@ topics:
       - topic: math.g4.add-with-algorithm
         encompassing: 0.45
         confidence: high
+      - topic: math.g4.add-tenths-hundredths
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Line up decimal points to add
@@ -2304,29 +2318,6 @@ topics:
       - id: kp4
         can_do: Subtract a hundredths decimal from a tenths decimal
         key_prerequisites: [math.g4.decimal-hundredths, math.g4.subtract-with-algorithm]
-  - id: math.g4.decimal-add-subtract-stories
-    name: Solving decimal adding and subtracting stories
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.add-decimals-hundredths
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g4.subtract-decimals-hundredths
-        encompassing: 0.55
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a story adding decimals
-        key_prerequisites: [math.g4.add-decimals-hundredths]
-      - id: kp2
-        can_do: Solve a story subtracting decimals
-        key_prerequisites: [math.g4.subtract-decimals-hundredths]
-      - id: kp3
-        can_do: Solve a two-step story with decimals
-        key_prerequisites: [math.g4.add-decimals-hundredths, math.g4.subtract-decimals-hundredths]
   - id: math.g4.money-as-decimals
     name: Writing money amounts as decimals
     subject: math
@@ -2350,6 +2341,32 @@ topics:
       - id: kp3
         can_do: Compare two amounts of money
         key_prerequisites: [math.g3.dollars-and-cents]
+  - id: math.g4.decimal-add-subtract-stories
+    name: Solving decimal adding and subtracting stories
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.add-decimals-hundredths
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g4.subtract-decimals-hundredths
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g4.money-as-decimals
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story adding decimals
+        key_prerequisites: [math.g4.add-decimals-hundredths]
+      - id: kp2
+        can_do: Solve a story subtracting decimals
+        key_prerequisites: [math.g4.subtract-decimals-hundredths]
+      - id: kp3
+        can_do: Solve a two-step story with decimals
+        key_prerequisites: [math.g4.add-decimals-hundredths, math.g4.subtract-decimals-hundredths]
   - id: math.g4.relative-metric-length
     name: Comparing and converting metric lengths
     subject: math
@@ -2503,64 +2520,6 @@ topics:
       - id: kp3
         can_do: Find the rule from a conversion table
         key_prerequisites: [math.g4.patterns-in-tables]
-  - id: math.g4.distance-time-stories
-    name: Solving distance and time stories with conversions
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.relative-metric-length
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g4.relative-time-units
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g4.multi-step-stories
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a distance story that needs a conversion
-        key_prerequisites: [math.g4.relative-metric-length]
-      - id: kp2
-        can_do: Solve a time story that needs a conversion
-        key_prerequisites: [math.g4.relative-time-units]
-      - id: kp3
-        can_do: Solve a multi-step distance or time story
-        key_prerequisites: [math.g4.multi-step-stories]
-  - id: math.g4.mass-capacity-money-stories
-    name: Solving mass, capacity and money stories
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.relative-metric-mass-capacity
-        encompassing: 0.4
-        confidence: high
-      - topic: math.g4.relative-imperial-weight
-        encompassing: 0.3
-        confidence: medium
-      - topic: math.g4.multi-step-stories
-        encompassing: 0.45
-        confidence: high
-      - topic: math.g4.decimal-hundredths
-        encompassing: 0.2
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a metric mass or capacity story with a conversion
-        key_prerequisites: [math.g4.relative-metric-mass-capacity]
-      - id: kp2
-        can_do: Solve a pounds and ounces story
-        key_prerequisites: [math.g4.relative-imperial-weight]
-      - id: kp3
-        can_do: Solve a money story using decimals
-        key_prerequisites: [math.g4.decimal-hundredths]
-      - id: kp4
-        can_do: Solve a multi-step measurement story
-        key_prerequisites: [math.g4.multi-step-stories]
   - id: math.g4.elapsed-time-across-hours
     name: Finding elapsed time across hours
     subject: math
@@ -2588,12 +2547,16 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g3.time-to-the-minute
-        encompassing: 0.35
-        confidence: medium
       - topic: math.g2.am-and-pm
         encompassing: 0.4
         confidence: low
+      - topic: math.g4.elapsed-time-across-hours
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g3.time-to-the-minute
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Read a 24-hour clock
@@ -2614,6 +2577,10 @@ topics:
       - topic: math.g4.subtract-decimals-hundredths
         encompassing: 0.45
         confidence: high
+      - topic: math.g3.earning-and-payment
+        encompassing: 0.1
+        confidence: low
+    encompassed:
       - topic: math.g3.coins-and-bills-to-100
         encompassing: 0.4
         confidence: high
@@ -2666,6 +2633,9 @@ topics:
       - topic: math.g4.area-perimeter-formulas
         encompassing: 0.6
         confidence: high
+      - topic: math.g3.perimeter-unknown-side
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a missing side from an area
@@ -2676,29 +2646,6 @@ topics:
       - id: kp3
         can_do: Write the equation for a missing side
         key_prerequisites: [math.g4.area-perimeter-formulas]
-  - id: math.g4.area-perimeter-stories
-    name: Solving area and perimeter stories
-    subject: math
-    course: math.g4
-    level: g4
-    status: draft
-    prerequisites:
-      - topic: math.g4.area-perimeter-formulas
-        encompassing: 0.55
-        confidence: high
-      - topic: math.g4.multi-step-stories
-        encompassing: 0.3
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a story using an area formula
-        key_prerequisites: [math.g4.area-perimeter-formulas]
-      - id: kp2
-        can_do: Solve a story using a perimeter formula
-        key_prerequisites: [math.g4.area-perimeter-formulas]
-      - id: kp3
-        can_do: Solve a multi-step story with area or perimeter
-        key_prerequisites: [math.g4.multi-step-stories]
   - id: math.g4.perimeter-irregular-shapes
     name: Finding the perimeter of irregular shapes
     subject: math
@@ -2871,12 +2818,16 @@ topics:
     level: g4
     status: draft
     prerequisites:
-      - topic: math.g4.angles-from-rays
-        encompassing: 0.35
-        confidence: medium
       - topic: math.g3.unit-fractions
         encompassing: 0.25
         confidence: low
+      - topic: math.g4.angles-as-turns
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g4.angles-from-rays
+        encompassing: 0.35
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Say that a full turn is 360 degrees
@@ -2988,6 +2939,9 @@ topics:
       - topic: math.g4.parallel-and-perpendicular
         encompassing: 0.5
         confidence: high
+      - topic: math.g4.lines-angles-in-shapes
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.g4.classify-angles
         encompassing: 0.4
@@ -3014,6 +2968,9 @@ topics:
     prerequisites:
       - topic: math.g4.classify-by-lines-and-angles
         encompassing: 0.6
+        confidence: medium
+      - topic: math.g3.draw-other-quadrilaterals
+        encompassing: 0.25
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -3108,6 +3065,10 @@ topics:
     level: g4
     status: draft
     prerequisites:
+      - topic: math.g3.scaled-bar-graph-problems
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: math.g3.scaled-bar-graph
         encompassing: 0.55
         confidence: medium
@@ -3164,3 +3125,163 @@ topics:
       - id: kp3
         can_do: Solve a story and decide what the remainder means
         key_prerequisites: [math.g4.interpret-remainders]
+  - id: math.g4.multi-step-stories
+    name: Solving multi-step stories
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.write-multi-step-equations
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g4.large-multiplication-stories
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g4.comparison-stories
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g4.large-division-stories
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g3.two-step-four-operation-stories
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g4.interpret-remainders
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story with three steps
+        key_prerequisites: [math.g3.two-step-four-operation-stories]
+      - id: kp2
+        can_do: Solve a multi-step story that needs a remainder decision
+        key_prerequisites: [math.g4.interpret-remainders]
+      - id: kp3
+        can_do: Write the equation and solve a multi-step story
+        key_prerequisites: [math.g4.write-multi-step-equations]
+      - id: kp4
+        can_do: Solve a multi-step story with more information than needed
+        key_prerequisites: [math.g4.write-multi-step-equations]
+  - id: math.g4.reasonableness-multi-step
+    name: Checking multi-step answers by estimating
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.multi-step-stories
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g4.estimate-products
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g3.check-answers-by-estimating
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate the answer to a multi-step story
+        key_prerequisites: [math.g4.estimate-products]
+      - id: kp2
+        can_do: Compare a multi-step answer with an estimate
+        key_prerequisites: [math.g4.multi-step-stories]
+      - id: kp3
+        can_do: Find which step went wrong when an answer is unreasonable
+        key_prerequisites: [math.g4.multi-step-stories]
+  - id: math.g4.distance-time-stories
+    name: Solving distance and time stories with conversions
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.relative-metric-length
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g4.relative-time-units
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g4.multi-step-stories
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a distance story that needs a conversion
+        key_prerequisites: [math.g4.relative-metric-length]
+      - id: kp2
+        can_do: Solve a time story that needs a conversion
+        key_prerequisites: [math.g4.relative-time-units]
+      - id: kp3
+        can_do: Solve a multi-step distance or time story
+        key_prerequisites: [math.g4.multi-step-stories]
+  - id: math.g4.mass-capacity-money-stories
+    name: Solving mass, capacity and money stories
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    justification: Applications topic combining metric, imperial, money and multi-step skills
+    prerequisites:
+      - topic: math.g4.relative-metric-mass-capacity
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g4.relative-imperial-weight
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g4.multi-step-stories
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g3.mass-capacity-stories
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g4.decimal-add-subtract-stories
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.g4.decimal-hundredths
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a metric mass or capacity story with a conversion
+        key_prerequisites: [math.g4.relative-metric-mass-capacity]
+      - id: kp2
+        can_do: Solve a pounds and ounces story
+        key_prerequisites: [math.g4.relative-imperial-weight]
+      - id: kp3
+        can_do: Solve a money story using decimals
+        key_prerequisites: [math.g4.decimal-hundredths]
+      - id: kp4
+        can_do: Solve a multi-step measurement story
+        key_prerequisites: [math.g4.multi-step-stories]
+  - id: math.g4.area-perimeter-stories
+    name: Solving area and perimeter stories
+    subject: math
+    course: math.g4
+    level: g4
+    status: draft
+    prerequisites:
+      - topic: math.g4.area-perimeter-formulas
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g4.multi-step-stories
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.g3.area-of-rectilinear-shapes
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g3.area-stories
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story using an area formula
+        key_prerequisites: [math.g4.area-perimeter-formulas]
+      - id: kp2
+        can_do: Solve a story using a perimeter formula
+        key_prerequisites: [math.g4.area-perimeter-formulas]
+      - id: kp3
+        can_do: Solve a multi-step story with area or perimeter
+        key_prerequisites: [math.g4.multi-step-stories]
