@@ -131,3 +131,6 @@ Update this section as the tooling is built, and keep it accurate.
 - Textbooks: "C:\AI\Learn STEM\refs\Textbooks" 
 - Uni course descriptions with prerequisites: "C:\AI\Learn STEM\refs\uni_course_descriptions"
 - Common Core math standards: "C:\AI\Learn STEM\refs\common-core-standards\Math_Standards1.pdf". Compare against the BC curriculum and use best judgement where they differ.
+- Science and engineering standards (NGSS, AP science descriptions, ACS guidelines, MCAT outline, FE specifications, ABET criteria): "C:\AI\Learn STEM\refs\science-standards". AP files have separate clarifications documents; read them together. Skip earth and space content, which is out of scope.
+- AP math descriptions (Calculus AB/BC, Precalculus, Statistics overview): "C:\AI\Learn STEM\refs\bc-curriculum".
+- University syllabi used for course scoping, with an index of sources: "C:\AI\Learn STEM\refs\uni_syllabi\SOURCES.md". Download any new source looked up to refs and add it to the index.
