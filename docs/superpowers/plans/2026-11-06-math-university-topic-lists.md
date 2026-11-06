@@ -226,7 +226,7 @@ Draft for approval. In the Needs column, a plain name is a topic in the same cou
 | Using rationalizing substitutions | `rationalizing-substitutions` | `partial-fractions-linear` |
 | Integrating simple rational functions | `log-and-arctan-integrals` | `calc1.substitution-with-exp-log`, `calc1.substitution-inverse-trig` |
 | Integrating with quadratic factors | `partial-fractions-quadratic-integral` | `partial-fractions-linear`, `precalc.partial-fractions-quadratic`, `log-and-arctan-integrals` |
-| Choosing a method of integration | `strategy-for-integration` | `partial-fractions-quadratic-integral`, `parts-reduction-formula`, `trig-sub-definite`, `trig-sub-completing-square`, `partial-fractions-repeated-integral`, `long-division-first`, `rationalizing-substitutions` |
+| Choosing a method of integration | `strategy-for-integration` | `partial-fractions-quadratic-integral`, `parts-reduction-formula`, `trig-sub-definite`, `partial-fractions-repeated-integral` |
 | Splitting doubly infinite improper integrals | `improper-both-infinite` | `improper-infinite-limits` |
 | Evaluating improper integrals with discontinuities | `improper-discontinuous` | `improper-both-infinite` |
 | Handling a discontinuity inside the interval | `improper-interior-discontinuity` | `improper-discontinuous` |
@@ -557,7 +557,7 @@ Draft for approval. In the Needs column, a plain name is a topic in the same cou
 | Using Stokes' theorem | `stokes-theorem` | `flux-integrals`, `greens-theorem-circulation`, `curl-as-rotation` |
 | Using the divergence theorem | `divergence-theorem` | `flux-integrals`, `triple-spherical`, `divergence-as-expansion`, `greens-theorem-flux` |
 | Using Green's theorem on regions with holes | `greens-with-holes` | `greens-theorem-circulation` |
-| Choosing an integral theorem | `choose-integral-theorem` | `stokes-theorem`, `divergence-theorem`, `path-independence`, `greens-with-holes`, `curl-divergence-identities`, `potential-three-variables` |
+| Choosing an integral theorem | `choose-integral-theorem` | `stokes-theorem`, `divergence-theorem`, `path-independence`, `greens-with-holes` |
 | Interpreting vector calculus in physics | `physical-meaning-vector-calculus` | `choose-integral-theorem` |
 
 ## math.linalg: 161 topics, budget 180 (-11%)
@@ -1674,7 +1674,7 @@ Draft for approval. In the Needs column, a plain name is a topic in the same cou
 | Proving real n-space is complete | `rn-complete` | `complete-metric-spaces` |
 | Characterizing continuity with open sets | `continuity-open-sets` | `continuity-metric` |
 | Proving extreme values on compact metric spaces | `extreme-values-metric` | `compactness-metric`, `continuity-metric` |
-| Applying contraction to integral equations | `contraction-integral-equation` | `contraction-mapping`, `function-spaces-sup-norm`, `diffeq.picard-iteration` |
+| Applying contraction to integral equations | `contraction-integral-equation` | `contraction-mapping`, `function-spaces-sup-norm` |
 
 ## math.abstract: 136 topics, budget 160 (-15%)
 
@@ -1974,7 +1974,7 @@ Draft for approval. In the Needs column, a plain name is a topic in the same cou
 | Using Taylor methods | `taylor-methods` | `euler-numerical` |
 | Using midpoint and Heun's methods | `midpoint-heun` | `local-global-error` |
 | Using Runge-Kutta methods | `runge-kutta` | `taylor-methods`, `midpoint-heun` |
-| Solving systems and higher-order equations | `systems-higher-order-ode` | `runge-kutta`, `diffeq.numerical-systems` |
+| Solving systems and higher-order equations | `systems-higher-order-ode` | `runge-kutta` |
 | Using the shooting method | `boundary-shooting` | `systems-higher-order-ode`, `secant-method` |
 | Using consistency and convergence | `consistency-convergence-ode` | `local-global-error` |
 | Using multistep methods | `multistep-methods` | `runge-kutta`, `lagrange-form`, `consistency-convergence-ode` |
