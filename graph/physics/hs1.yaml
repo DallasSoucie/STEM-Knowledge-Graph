@@ -1,0 +1,802 @@
+course: physics.hs1
+topics:
+  - id: physics.hs1.si-units-and-prefixes
+    name: Using SI units and prefixes
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.g8.choose-scientific-units
+        encompassing: 0.3
+        confidence: medium
+      - topic: physics.ms.unit-conversions-speed
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name SI base units
+        key_prerequisites: [math.g8.choose-scientific-units]
+      - id: kp2
+        can_do: Convert with kilo, centi and milli
+        key_prerequisites: [math.g8.choose-scientific-units]
+      - id: kp3
+        can_do: Convert with micro, nano and mega
+        key_prerequisites: [math.g8.choose-scientific-units]
+      - id: kp4
+        can_do: Convert a derived unit such as kilometres per hour
+        key_prerequisites: [physics.ms.unit-conversions-speed]
+  - id: physics.hs1.significant-figures
+    name: Using significant figures
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.appropriate-precision
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs1.si-units-and-prefixes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count significant figures in a measurement
+        key_prerequisites: [math.alg1.appropriate-precision]
+      - id: kp2
+        can_do: Round a result to the right number of figures
+        key_prerequisites: [math.alg1.appropriate-precision]
+      - id: kp3
+        can_do: Apply figures to multiplication and division
+        key_prerequisites: [math.alg1.appropriate-precision]
+      - id: kp4
+        can_do: Apply figures to addition and subtraction
+        key_prerequisites: [math.alg1.appropriate-precision]
+  - id: physics.hs1.measurement-uncertainty
+    name: Estimating measurement uncertainty
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.significant-figures
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read uncertainty from an instrument
+        key_prerequisites: [physics.hs1.significant-figures]
+      - id: kp2
+        can_do: Tell precision from accuracy
+        key_prerequisites: [physics.hs1.significant-figures]
+      - id: kp3
+        can_do: Find a percent uncertainty
+        key_prerequisites: [physics.hs1.significant-figures]
+      - id: kp4
+        can_do: Compare two measurements with uncertainty
+        key_prerequisites: [physics.hs1.significant-figures]
+  - id: physics.hs1.order-of-magnitude
+    name: Making order-of-magnitude estimates
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.si-units-and-prefixes
+        encompassing: 0.45
+        confidence: medium
+    encompassed:
+      - topic: math.g8.compare-scientific
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate a quantity to a power of ten
+        key_prerequisites: [physics.hs1.si-units-and-prefixes]
+      - id: kp2
+        can_do: Compare two sizes by orders of magnitude
+        key_prerequisites: [math.g8.compare-scientific]
+      - id: kp3
+        can_do: Estimate a quantity from simple assumptions
+        key_prerequisites: [physics.hs1.si-units-and-prefixes]
+      - id: kp4
+        can_do: Check an answer's size for reasonableness
+        key_prerequisites: [physics.hs1.si-units-and-prefixes]
+  - id: physics.hs1.checking-with-units
+    name: Checking equations with units
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.si-units-and-prefixes
+        encompassing: 0.25
+        confidence: high
+      - topic: math.alg1.units-in-formulas
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find units of a derived quantity
+        key_prerequisites: [physics.hs1.si-units-and-prefixes]
+      - id: kp2
+        can_do: Check whether an equation's units agree
+        key_prerequisites: [math.alg1.units-in-formulas]
+      - id: kp3
+        can_do: Find a constant's units
+        key_prerequisites: [math.alg1.units-in-formulas]
+      - id: kp4
+        can_do: Spot an error from a unit mismatch
+        key_prerequisites: [math.alg1.units-in-formulas]
+  - id: physics.hs1.rearranging-physics-formulas
+    name: Rearranging physics formulas
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: math.alg1.formula-rearrange-science
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs1.checking-with-units
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a three-variable formula for any variable
+        key_prerequisites: [math.alg1.formula-rearrange-science]
+      - id: kp2
+        can_do: Solve a formula with a square
+        key_prerequisites: [math.alg1.formula-rearrange-science]
+      - id: kp3
+        can_do: Solve a formula with a sum
+        key_prerequisites: [math.alg1.formula-rearrange-science]
+      - id: kp4
+        can_do: Check a rearranged formula with units
+        key_prerequisites: [physics.hs1.checking-with-units]
+  - id: physics.hs1.graphing-lab-data
+    name: Graphing lab data with a best-fit line
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.measurement-uncertainty
+        encompassing: 0.3
+        confidence: high
+      - topic: math.alg1.fit-line-technology
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose axes and scales
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
+      - id: kp2
+        can_do: Plot points with error bars
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
+      - id: kp3
+        can_do: Draw a best-fit line by hand
+        key_prerequisites: [math.alg1.fit-line-technology]
+      - id: kp4
+        can_do: Find a best-fit line with technology
+        key_prerequisites: [math.alg1.fit-line-technology]
+  - id: physics.hs1.slope-meaning-in-data
+    name: Finding physical meaning in slope and intercept
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.graphing-lab-data
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg1.linear-interpret-parameters
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a slope with units
+        key_prerequisites: [physics.hs1.graphing-lab-data]
+      - id: kp2
+        can_do: Read a physical meaning from a slope
+        key_prerequisites: [math.alg1.linear-interpret-parameters]
+      - id: kp3
+        can_do: Read a physical meaning from an intercept
+        key_prerequisites: [math.alg1.linear-interpret-parameters]
+      - id: kp4
+        can_do: Find a quantity from a slope
+        key_prerequisites: [physics.hs1.graphing-lab-data]
+  - id: physics.hs1.linearizing-data
+    name: Linearizing data from a square or inverse pattern
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.slope-meaning-in-data
+        encompassing: 0.4
+        confidence: high
+      - topic: math.g8.square-roots
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a square pattern in data
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp2
+        can_do: Plot against a squared variable
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp3
+        can_do: Plot against an inverse variable
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp4
+        can_do: Plot against a square root
+        key_prerequisites: [math.g8.square-roots]
+  - id: physics.hs1.scalars-and-vectors-1d
+    name: Telling scalars from vectors
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.ms.velocity-with-direction
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sort quantities as scalar or vector
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp2
+        can_do: Show a vector with a sign along a line
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp3
+        can_do: Tell distance from displacement in one dimension
+        key_prerequisites: [physics.ms.velocity-with-direction]
+      - id: kp4
+        can_do: Add vectors along a line
+        key_prerequisites: [physics.ms.velocity-with-direction]
+  - id: physics.hs1.displacement-with-signs
+    name: Finding displacement with signs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.scalars-and-vectors-1d
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.ms.distance-and-displacement
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a positive direction
+        key_prerequisites: [physics.hs1.scalars-and-vectors-1d]
+      - id: kp2
+        can_do: Calculate a final minus initial position
+        key_prerequisites: [physics.hs1.scalars-and-vectors-1d]
+      - id: kp3
+        can_do: Find a displacement from several stages
+        key_prerequisites: [physics.hs1.scalars-and-vectors-1d]
+      - id: kp4
+        can_do: Compare distance and displacement
+        key_prerequisites: [physics.ms.distance-and-displacement]
+  - id: physics.hs1.average-velocity
+    name: Calculating average velocity
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.displacement-with-signs
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.rearranging-physics-formulas
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate average velocity with signs
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp2
+        can_do: Solve for displacement or time
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+      - id: kp3
+        can_do: Find an average velocity with two stages
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp4
+        can_do: Tell average velocity from average speed
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+  - id: physics.hs1.motion-diagrams
+    name: Drawing motion diagrams
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.displacement-with-signs
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw dots at equal time steps
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp2
+        can_do: Add velocity arrows
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp3
+        can_do: Add acceleration arrows
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+      - id: kp4
+        can_do: Match a diagram to a story
+        key_prerequisites: [physics.hs1.displacement-with-signs]
+  - id: physics.hs1.position-time-graphs
+    name: Analyzing position-time graphs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.average-velocity
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.ms.slope-as-speed
+        encompassing: 0.25
+        confidence: medium
+      - topic: physics.hs1.motion-diagrams
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity from a straight line's slope
+        key_prerequisites: [physics.ms.slope-as-speed]
+      - id: kp2
+        can_do: Read a stopped or reversing object
+        key_prerequisites: [physics.hs1.average-velocity]
+      - id: kp3
+        can_do: Match a position graph to a motion diagram
+        key_prerequisites: [physics.hs1.motion-diagrams]
+      - id: kp4
+        can_do: Find a meeting point of two objects on a graph
+        key_prerequisites: [physics.ms.slope-as-speed]
+  - id: physics.hs1.constant-velocity-model
+    name: Using the constant velocity model
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.position-time-graphs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.alg1.linear-model-from-context
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a position equation
+        key_prerequisites: [math.alg1.linear-model-from-context]
+      - id: kp2
+        can_do: Read the starting position and velocity
+        key_prerequisites: [physics.hs1.position-time-graphs]
+      - id: kp3
+        can_do: Find when an object reaches a place
+        key_prerequisites: [math.alg1.linear-model-from-context]
+      - id: kp4
+        can_do: Test whether data fit the model
+        key_prerequisites: [physics.hs1.position-time-graphs]
+  - id: physics.hs1.instantaneous-velocity
+    name: Finding instantaneous velocity from a curved graph
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.position-time-graphs
+        encompassing: 0.35
+        confidence: high
+      - topic: math.alg1.rate-of-change-intervals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell a curved graph means changing velocity
+        key_prerequisites: [physics.hs1.position-time-graphs]
+      - id: kp2
+        can_do: Draw a tangent to estimate velocity
+        key_prerequisites: [math.alg1.rate-of-change-intervals]
+      - id: kp3
+        can_do: Estimate with shrinking intervals
+        key_prerequisites: [math.alg1.rate-of-change-intervals]
+      - id: kp4
+        can_do: Compare velocities at two times
+        key_prerequisites: [physics.hs1.position-time-graphs]
+  - id: physics.hs1.acceleration-with-signs
+    name: Calculating acceleration with signs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.average-velocity
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.acceleration-intro
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.motion-diagrams
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate acceleration with signs
+        key_prerequisites: [physics.ms.acceleration-intro]
+      - id: kp2
+        can_do: Tell speeding up from slowing down
+        key_prerequisites: [physics.hs1.average-velocity]
+      - id: kp3
+        can_do: Spot when velocity and acceleration oppose
+        key_prerequisites: [physics.hs1.motion-diagrams]
+      - id: kp4
+        can_do: Find a change in velocity from acceleration
+        key_prerequisites: [physics.hs1.average-velocity]
+  - id: physics.hs1.velocity-time-graphs
+    name: Analyzing velocity-time graphs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.acceleration-with-signs
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.speed-time-graphs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find acceleration from slope
+        key_prerequisites: [physics.ms.speed-time-graphs]
+      - id: kp2
+        can_do: Read when an object changes direction
+        key_prerequisites: [physics.hs1.acceleration-with-signs]
+      - id: kp3
+        can_do: Compare speeds from a graph
+        key_prerequisites: [physics.ms.speed-time-graphs]
+      - id: kp4
+        can_do: Tell a position graph from a velocity graph
+        key_prerequisites: [physics.hs1.acceleration-with-signs]
+  - id: physics.hs1.displacement-from-area
+    name: Finding displacement from a velocity graph's area
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.velocity-time-graphs
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g6.area-of-triangles
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find area under a constant velocity graph
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp2
+        can_do: Find area with a triangle and rectangle
+        key_prerequisites: [math.g6.area-of-triangles]
+      - id: kp3
+        can_do: Treat area below the axis as negative
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp4
+        can_do: Find distance as total area
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+  - id: physics.hs1.acceleration-time-graphs
+    name: Analyzing acceleration-time graphs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.velocity-time-graphs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read constant acceleration from a graph
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp2
+        can_do: Find velocity change from area
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp3
+        can_do: Sketch from a velocity graph
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp4
+        can_do: Handle a piecewise acceleration
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+  - id: physics.hs1.translating-motion-graphs
+    name: Translating between motion graphs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.instantaneous-velocity
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.displacement-from-area
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.acceleration-time-graphs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a velocity graph from a position graph
+        key_prerequisites: [physics.hs1.instantaneous-velocity]
+      - id: kp2
+        can_do: Sketch a position graph from a velocity graph
+        key_prerequisites: [physics.hs1.displacement-from-area]
+      - id: kp3
+        can_do: Sketch an acceleration graph from a velocity graph
+        key_prerequisites: [physics.hs1.acceleration-time-graphs]
+      - id: kp4
+        can_do: Check all three graphs for one motion
+        key_prerequisites: [physics.hs1.instantaneous-velocity, physics.hs1.displacement-from-area, physics.hs1.acceleration-time-graphs]
+  - id: physics.hs1.velocity-equation
+    name: Using the velocity equation for constant acceleration
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.velocity-time-graphs
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.rearranging-physics-formulas
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the equation from a velocity graph
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp2
+        can_do: Find a final velocity
+        key_prerequisites: [physics.hs1.velocity-time-graphs]
+      - id: kp3
+        can_do: Find an acceleration
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+      - id: kp4
+        can_do: Find a time
+        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
+  - id: physics.hs1.displacement-equation
+    name: Using the displacement equation for constant acceleration
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.velocity-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.displacement-from-area
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the equation from area
+        key_prerequisites: [physics.hs1.displacement-from-area]
+      - id: kp2
+        can_do: Find a displacement
+        key_prerequisites: [physics.hs1.velocity-equation]
+      - id: kp3
+        can_do: Find an acceleration from displacement and time
+        key_prerequisites: [physics.hs1.velocity-equation]
+      - id: kp4
+        can_do: Find a starting velocity
+        key_prerequisites: [physics.hs1.velocity-equation]
+  - id: physics.hs1.velocity-squared-equation
+    name: Using the time-free motion equation
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.displacement-equation
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g8.square-roots
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the equation by removing time
+        key_prerequisites: [physics.hs1.displacement-equation]
+      - id: kp2
+        can_do: Find a final speed with a square root
+        key_prerequisites: [math.g8.square-roots]
+      - id: kp3
+        can_do: Find a displacement
+        key_prerequisites: [physics.hs1.displacement-equation]
+      - id: kp4
+        can_do: Find an acceleration
+        key_prerequisites: [physics.hs1.displacement-equation]
+  - id: physics.hs1.choosing-a-motion-equation
+    name: Choosing a motion equation
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.velocity-squared-equation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List known and unknown quantities
+        key_prerequisites: [physics.hs1.velocity-squared-equation]
+      - id: kp2
+        can_do: Choose an equation from the missing quantity
+        key_prerequisites: [physics.hs1.velocity-squared-equation]
+      - id: kp3
+        can_do: Solve a two-stage problem
+        key_prerequisites: [physics.hs1.velocity-squared-equation]
+      - id: kp4
+        can_do: Check a condition for constant acceleration
+        key_prerequisites: [physics.hs1.velocity-squared-equation]
+  - id: physics.hs1.time-from-a-quadratic
+    name: Solving for time with the quadratic formula
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.alg1.quadratic-formula
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a quadratic in time
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp2
+        can_do: Solve with the quadratic formula
+        key_prerequisites: [math.alg1.quadratic-formula]
+      - id: kp3
+        can_do: Reject a negative time
+        key_prerequisites: [math.alg1.quadratic-formula]
+      - id: kp4
+        can_do: Interpret two positive solutions
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+  - id: physics.hs1.two-object-meeting
+    name: Solving when two moving objects meet
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.alg1.systems-review-three-methods
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write position equations for two objects
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp2
+        can_do: Set the equations equal
+        key_prerequisites: [math.alg1.systems-review-three-methods]
+      - id: kp3
+        can_do: Solve a chase problem
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation, math.alg1.systems-review-three-methods]
+      - id: kp4
+        can_do: Check with a graph
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+  - id: physics.hs1.stopping-distance
+    name: Finding stopping distance and reaction time
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find distance during reaction time
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp2
+        can_do: Find braking distance
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp3
+        can_do: Find total stopping distance in metres
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp4
+        can_do: Show how doubled speed changes braking distance
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+  - id: physics.hs1.free-fall-equations
+    name: Solving free fall problems
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.free-fall
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a gravitational acceleration of 9.8 metres per second squared
+        key_prerequisites: [physics.ms.free-fall]
+      - id: kp2
+        can_do: Find a fall time
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp3
+        can_do: Find an impact speed
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+      - id: kp4
+        can_do: Solve a drop from a height
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+  - id: physics.hs1.thrown-upward
+    name: Solving upward-thrown motion
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.free-fall-equations
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs1.time-from-a-quadratic
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a peak height
+        key_prerequisites: [physics.hs1.free-fall-equations]
+      - id: kp2
+        can_do: Find a time to the top
+        key_prerequisites: [physics.hs1.free-fall-equations]
+      - id: kp3
+        can_do: Explain why acceleration stays the same at the top
+        key_prerequisites: [physics.hs1.free-fall-equations]
+      - id: kp4
+        can_do: Find a landing time from a height
+        key_prerequisites: [physics.hs1.time-from-a-quadratic]
+  - id: physics.hs1.free-fall-graphs
+    name: Reading free fall graphs
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.thrown-upward
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.translating-motion-graphs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch position against time
+        key_prerequisites: [physics.hs1.thrown-upward]
+      - id: kp2
+        can_do: Sketch velocity against time
+        key_prerequisites: [physics.hs1.translating-motion-graphs]
+      - id: kp3
+        can_do: Read acceleration from a free-fall graph
+        key_prerequisites: [physics.hs1.translating-motion-graphs]
+      - id: kp4
+        can_do: Compare two thrown objects
+        key_prerequisites: [physics.hs1.thrown-upward]
