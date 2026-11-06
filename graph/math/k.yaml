@@ -539,3 +539,528 @@ topics:
       - id: kp3
         can_do: Make two unequal groups equal by adding or removing objects
         key_prerequisites: [math.k.compare-groups-counting]
+  - id: math.k.say-numbers-to-20
+    name: Saying number names to 20
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.say-numbers-to-10
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say the number names 11 to 15 in order
+        key_prerequisites: [math.k.say-numbers-to-10]
+      - id: kp2
+        can_do: Say the number names 1 to 20 in order
+        key_prerequisites: [math.k.say-numbers-to-10]
+      - id: kp3
+        can_do: Say which number comes next, up to 20
+  - id: math.k.count-objects-to-20
+    name: Counting objects to 20
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-scattered-to-10
+        encompassing: 0.65
+        confidence: high
+      - topic: math.k.say-numbers-to-20
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count 11 to 15 objects in a line and say how many
+        key_prerequisites: [math.k.say-numbers-to-20, math.k.count-scattered-to-10]
+      - id: kp2
+        can_do: Count 16 to 20 objects in a line and say how many
+        key_prerequisites: [math.k.say-numbers-to-20, math.k.count-scattered-to-10]
+      - id: kp3
+        can_do: Count up to 20 objects in rows or a circle and say how many
+        key_prerequisites: [math.k.count-scattered-to-10]
+      - id: kp4
+        can_do: Take out up to 20 objects when asked
+        key_prerequisites: [math.k.count-scattered-to-10]
+  - id: math.k.read-write-numerals-11-to-20
+    name: Reading and writing numerals 11 to 20
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-numerals-6-to-10
+        encompassing: 0.4
+        confidence: high
+      - topic: math.k.count-objects-to-20
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say the name of a written numeral from 11 to 20
+      - id: kp2
+        can_do: Match a written numeral from 11 to 20 to a group of that size
+        key_prerequisites: [math.k.count-objects-to-20]
+      - id: kp3
+        can_do: Write a numeral from 11 to 20 when it is named
+        key_prerequisites: [math.k.write-numerals-6-to-10]
+      - id: kp4
+        can_do: Write the numeral that tells how many are in a group up to 20
+        key_prerequisites: [math.k.write-numerals-6-to-10, math.k.count-objects-to-20]
+  - id: math.k.teen-as-ten-and-ones
+    name: Seeing teen numbers as ten and some ones
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.five-and-some-more
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.k.read-write-numerals-11-to-20
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.k.ten-frame
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a teen number with a full ten frame and some ones
+        key_prerequisites: [math.k.ten-frame]
+      - id: kp2
+        can_do: Say how many ones are left after making a ten from a teen group
+        key_prerequisites: [math.k.five-and-some-more]
+      - id: kp3
+        can_do: Say the teen number shown by ten and some ones
+        key_prerequisites: [math.k.read-write-numerals-11-to-20]
+      - id: kp4
+        can_do: Split a teen number into ten and some ones in a drawing
+        key_prerequisites: [math.k.ten-frame, math.k.read-write-numerals-11-to-20]
+  - id: math.k.count-aloud-to-50
+    name: Counting aloud by ones to 50
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.say-numbers-to-20
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count aloud by ones from 1 to 29
+        key_prerequisites: [math.k.say-numbers-to-20]
+      - id: kp2
+        can_do: Count aloud by ones across 29 to 30 and 39 to 40
+      - id: kp3
+        can_do: Count aloud by ones from 1 to 50
+        key_prerequisites: [math.k.say-numbers-to-20]
+  - id: math.k.count-by-tens-to-100
+    name: Counting aloud by tens to 100
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-aloud-to-50
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count aloud by tens from 10 to 50
+        key_prerequisites: [math.k.count-aloud-to-50]
+      - id: kp2
+        can_do: Count aloud by tens from 10 to 100
+      - id: kp3
+        can_do: Say which ten comes next, up to 100
+  - id: math.k.count-aloud-to-100
+    name: Counting aloud by ones to 100
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-by-tens-to-100
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.k.count-aloud-to-50
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count aloud by ones from 50 to 79
+        key_prerequisites: [math.k.count-aloud-to-50]
+      - id: kp2
+        can_do: Count aloud by ones from 80 to 100
+        key_prerequisites: [math.k.count-aloud-to-50]
+      - id: kp3
+        can_do: Say the next ten when a count reaches a number ending in 9
+        key_prerequisites: [math.k.count-by-tens-to-100]
+  - id: math.k.count-on-from-any-number
+    name: Counting on from a number other than one
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.count-aloud-to-100
+        encompassing: 0.55
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count on from a given number up to 10
+      - id: kp2
+        can_do: Count on from a given number up to 20
+      - id: kp3
+        can_do: Count on from a given number up to 100
+        key_prerequisites: [math.k.count-aloud-to-100]
+  - id: math.k.split-up-to-5
+    name: Splitting numbers up to 5 into two parts
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.see-small-groups
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.k.count-out-to-5
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a group of 3 or fewer into two parts and say each part
+        key_prerequisites: [math.k.count-out-to-5]
+      - id: kp2
+        can_do: Split a group of 4 or 5 into two parts and say each part
+        key_prerequisites: [math.k.count-out-to-5, math.k.see-small-groups]
+      - id: kp3
+        can_do: Say the whole after seeing its two parts
+        key_prerequisites: [math.k.see-small-groups]
+  - id: math.k.ways-to-make-5
+    name: Finding the ways to make 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-up-to-5
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show two different ways to split 5
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp2
+        can_do: Find every way to split 5 into two parts
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp3
+        can_do: Say the other part of 5 when one part is shown
+        key_prerequisites: [math.k.split-up-to-5]
+  - id: math.k.split-6-to-10
+    name: Splitting numbers 6 to 10 into two parts
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.five-and-some-more
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.k.split-up-to-5
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a group of 6 or 7 into two parts in more than one way
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp2
+        can_do: Split a group of 8 to 10 into two parts in more than one way
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp3
+        can_do: Show the split of 6 to 9 that uses five and some more
+        key_prerequisites: [math.k.five-and-some-more]
+  - id: math.k.partner-to-make-10
+    name: Finding the partner that makes 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-6-to-10
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.k.ten-frame
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say how many empty spaces are left on a ten frame
+        key_prerequisites: [math.k.ten-frame]
+      - id: kp2
+        can_do: Find the partner that makes 10 for a number from 1 to 5
+        key_prerequisites: [math.k.split-6-to-10]
+      - id: kp3
+        can_do: Find the partner that makes 10 for a number from 6 to 9
+        key_prerequisites: [math.k.split-6-to-10]
+  - id: math.k.add-put-together-within-5
+    name: Adding by putting groups together within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-up-to-5
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Put two groups together and count the total
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp2
+        can_do: Add more objects to a group and count the new total
+      - id: kp3
+        can_do: Add zero to a group and say the total
+  - id: math.k.take-away-within-5
+    name: Taking away with objects within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-up-to-5
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Remove objects from a group and count what is left
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp2
+        can_do: Separate a group into two parts and say the size of one part
+        key_prerequisites: [math.k.split-up-to-5]
+      - id: kp3
+        can_do: Take away zero or the whole group and say what is left
+  - id: math.k.read-plus-minus-equals
+    name: Reading plus, minus and equals signs
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.read-numerals-1-to-5
+        encompassing: 0.5
+        confidence: high
+      - topic: math.k.add-put-together-within-5
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.k.take-away-within-5
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say what a plus sign, a minus sign and an equals sign mean
+      - id: kp2
+        can_do: Match a written addition equation within 5 to a picture
+        key_prerequisites: [math.k.add-put-together-within-5, math.k.read-numerals-1-to-5]
+      - id: kp3
+        can_do: Match a written subtraction equation within 5 to a picture
+        key_prerequisites: [math.k.take-away-within-5, math.k.read-numerals-1-to-5]
+  - id: math.k.write-addition-within-5
+    name: Writing addition equations within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-numerals-0-to-5
+        encompassing: 0.5
+        confidence: high
+      - topic: math.k.read-plus-minus-equals
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.k.split-up-to-5
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the addition equation for a picture of two groups
+        key_prerequisites: [math.k.read-plus-minus-equals, math.k.write-numerals-0-to-5]
+      - id: kp2
+        can_do: Solve and write the total of an addition within 5
+        key_prerequisites: [math.k.read-plus-minus-equals]
+      - id: kp3
+        can_do: Write a split as an equation with the total first
+        key_prerequisites: [math.k.split-up-to-5, math.k.read-plus-minus-equals]
+  - id: math.k.write-subtraction-within-5
+    name: Writing subtraction equations within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-numerals-0-to-5
+        encompassing: 0.45
+        confidence: high
+      - topic: math.k.read-plus-minus-equals
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the subtraction equation for a take-away picture
+        key_prerequisites: [math.k.read-plus-minus-equals, math.k.write-numerals-0-to-5]
+      - id: kp2
+        can_do: Solve and write the result of a subtraction within 5
+        key_prerequisites: [math.k.read-plus-minus-equals]
+      - id: kp3
+        can_do: Write a subtraction equation that has a result of zero
+        key_prerequisites: [math.k.write-numerals-0-to-5]
+  - id: math.k.add-within-10-with-objects
+    name: Adding within 10 with objects and pictures
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-6-to-10
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.k.add-put-together-within-5
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add two groups with a total of 6 or 7 using objects
+        key_prerequisites: [math.k.add-put-together-within-5]
+      - id: kp2
+        can_do: Add two groups with a total up to 10 using objects
+        key_prerequisites: [math.k.add-put-together-within-5]
+      - id: kp3
+        can_do: Add two groups with a total up to 10 using a drawing
+        key_prerequisites: [math.k.add-put-together-within-5, math.k.split-6-to-10]
+  - id: math.k.subtract-within-10-with-objects
+    name: Subtracting within 10 with objects and pictures
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.split-6-to-10
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.k.take-away-within-5
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take away from a group of 6 or 7 using objects
+        key_prerequisites: [math.k.take-away-within-5]
+      - id: kp2
+        can_do: Take away from a group up to 10 using objects
+        key_prerequisites: [math.k.take-away-within-5]
+      - id: kp3
+        can_do: Take away from a group up to 10 using a drawing
+        key_prerequisites: [math.k.take-away-within-5, math.k.split-6-to-10]
+  - id: math.k.addition-stories-within-10
+    name: Solving addition stories within 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-addition-within-5
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.k.add-within-10-with-objects
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a spoken story where more objects join a group
+        key_prerequisites: [math.k.add-within-10-with-objects]
+      - id: kp2
+        can_do: Solve a spoken story where two groups are put together
+        key_prerequisites: [math.k.add-within-10-with-objects]
+      - id: kp3
+        can_do: Draw a picture to solve an addition story
+        key_prerequisites: [math.k.add-within-10-with-objects]
+      - id: kp4
+        can_do: Choose the equation that fits an addition story within 5
+        key_prerequisites: [math.k.write-addition-within-5]
+  - id: math.k.subtraction-stories-within-10
+    name: Solving subtraction stories within 10
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.write-subtraction-within-5
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.k.subtract-within-10-with-objects
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a spoken story where objects are taken away
+        key_prerequisites: [math.k.subtract-within-10-with-objects]
+      - id: kp2
+        can_do: Solve a spoken story where a group is split into two kinds
+        key_prerequisites: [math.k.subtract-within-10-with-objects]
+      - id: kp3
+        can_do: Draw a picture to solve a subtraction story
+        key_prerequisites: [math.k.subtract-within-10-with-objects]
+      - id: kp4
+        can_do: Choose the equation that fits a subtraction story within 5
+        key_prerequisites: [math.k.write-subtraction-within-5]
+  - id: math.k.add-fluently-within-5
+    name: Adding fluently within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.ways-to-make-5
+        encompassing: 0.7
+        confidence: high
+      - topic: math.k.write-addition-within-5
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say sums up to 3 from memory
+        key_prerequisites: [math.k.write-addition-within-5]
+      - id: kp2
+        can_do: Say sums of 4 from memory
+        key_prerequisites: [math.k.ways-to-make-5, math.k.write-addition-within-5]
+      - id: kp3
+        can_do: Say sums of 5 from memory
+        key_prerequisites: [math.k.ways-to-make-5]
+  - id: math.k.subtract-fluently-within-5
+    name: Subtracting fluently within 5
+    subject: math
+    course: math.k
+    level: gk
+    status: draft
+    prerequisites:
+      - topic: math.k.ways-to-make-5
+        encompassing: 0.6
+        confidence: high
+      - topic: math.k.write-subtraction-within-5
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say differences from numbers up to 3 from memory
+        key_prerequisites: [math.k.write-subtraction-within-5]
+      - id: kp2
+        can_do: Say differences from 4 from memory
+        key_prerequisites: [math.k.ways-to-make-5, math.k.write-subtraction-within-5]
+      - id: kp3
+        can_do: Say differences from 5 from memory
+        key_prerequisites: [math.k.ways-to-make-5]
