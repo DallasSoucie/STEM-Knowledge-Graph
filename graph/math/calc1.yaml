@@ -1,0 +1,3786 @@
+course: math.calc1
+topics:
+  - id: math.calc1.limit-definition-informal
+    name: Defining a limit informally
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.limit-intuition
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State what a limit means in words
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp2
+        can_do: Read limit notation aloud
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp3
+        can_do: Tell a limit from a function value
+        key_prerequisites: [math.precalc.limit-intuition]
+      - id: kp4
+        can_do: Decide whether a value approached matters when the function is undefined there
+        key_prerequisites: [math.precalc.limit-intuition]
+  - id: math.calc1.limits-from-graphs
+    name: Reading limits from graphs
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-definition-informal
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a limit at a point on a smooth graph
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp2
+        can_do: Read a limit at a hole
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp3
+        can_do: Read a limit where the point is plotted elsewhere
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp4
+        can_do: Decide from a graph that a limit does not exist
+        key_prerequisites: [math.calc1.limit-definition-informal]
+  - id: math.calc1.limits-from-tables
+    name: Estimating limits from tables
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-definition-informal
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate a limit from a given table
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp2
+        can_do: Choose inputs closing in from both sides
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp3
+        can_do: Spot when a table misleads through oscillation
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp4
+        can_do: Spot when rounding misleads a table
+        key_prerequisites: [math.calc1.limit-definition-informal]
+  - id: math.calc1.one-sided-limit-notation
+    name: Using one-sided limit notation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-from-graphs
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.one-sided-limits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write left and right limits in notation
+        key_prerequisites: [math.precalc.one-sided-limits]
+      - id: kp2
+        can_do: Read one-sided limits from a graph
+        key_prerequisites: [math.calc1.limits-from-graphs]
+      - id: kp3
+        can_do: Read one-sided limits at a jump
+        key_prerequisites: [math.calc1.limits-from-graphs, math.precalc.one-sided-limits]
+      - id: kp4
+        can_do: Find one-sided limits from a formula
+        key_prerequisites: [math.precalc.one-sided-limits]
+  - id: math.calc1.limit-laws
+    name: Using the limit laws
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-definition-informal
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the sum and constant multiple laws
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp2
+        can_do: Use the product and quotient laws
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp3
+        can_do: Use the power and root laws
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp4
+        can_do: Combine limit laws given values of two limits
+        key_prerequisites: [math.calc1.limit-definition-informal]
+  - id: math.calc1.limits-by-substitution
+    name: Finding limits by direct substitution
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-laws
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit of a polynomial by substitution
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp2
+        can_do: Find a limit of a rational function by substitution
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp3
+        can_do: Find a limit with a root or trig function by substitution
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp4
+        can_do: Recognize when substitution fails with zero over zero
+        key_prerequisites: [math.calc1.limit-laws]
+  - id: math.calc1.limits-by-factoring
+    name: Finding limits by factoring
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-substitution
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.limits-algebraic-simple
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Cancel a simple linear factor
+        key_prerequisites: [math.precalc.limits-algebraic-simple]
+      - id: kp2
+        can_do: Factor a quadratic numerator and denominator
+        key_prerequisites: [math.precalc.limits-algebraic-simple]
+      - id: kp3
+        can_do: Factor a cubic with sums or differences of cubes
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp4
+        can_do: Tell a removable zero from a nonzero over zero
+        key_prerequisites: [math.calc1.limits-by-substitution]
+  - id: math.calc1.limits-by-conjugates
+    name: Finding limits with conjugates
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-factoring
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.radical-conjugate
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply by a conjugate with a root in the numerator
+        key_prerequisites: [math.alg2.radical-conjugate]
+      - id: kp2
+        can_do: Multiply by a conjugate with a root in the denominator
+        key_prerequisites: [math.alg2.radical-conjugate]
+      - id: kp3
+        can_do: Finish a conjugate limit by cancelling
+        key_prerequisites: [math.calc1.limits-by-factoring]
+      - id: kp4
+        can_do: Use a conjugate with a constant under the root
+        key_prerequisites: [math.calc1.limits-by-factoring, math.alg2.radical-conjugate]
+  - id: math.calc1.limits-of-complex-fractions
+    name: Finding limits by combining fractions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-factoring
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.complex-fractions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine two simple fractions before a limit
+        key_prerequisites: [math.alg2.complex-fractions]
+      - id: kp2
+        can_do: Combine fractions with a variable denominator
+        key_prerequisites: [math.alg2.complex-fractions]
+      - id: kp3
+        can_do: Cancel after combining and substitute
+        key_prerequisites: [math.calc1.limits-by-factoring]
+      - id: kp4
+        can_do: Evaluate a limit written as a difference of reciprocals
+        key_prerequisites: [math.calc1.limits-by-factoring, math.alg2.complex-fractions]
+  - id: math.calc1.limits-of-absolute-value
+    name: Finding limits with absolute values
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.one-sided-limit-notation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.absolute-value-as-piecewise
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite an absolute value as two cases
+        key_prerequisites: [math.alg2.absolute-value-as-piecewise]
+      - id: kp2
+        can_do: Find one-sided limits with an absolute value in the numerator
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp3
+        can_do: Find a limit of an absolute value over a linear factor
+        key_prerequisites: [math.calc1.one-sided-limit-notation, math.alg2.absolute-value-as-piecewise]
+      - id: kp4
+        can_do: Decide the two-sided limit from the cases
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+  - id: math.calc1.squeeze-theorem
+    name: Using the squeeze theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-substitution
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the squeeze theorem
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp2
+        can_do: Use given bounds to find a limit
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp3
+        can_do: Build bounds from the range of sine
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp4
+        can_do: Find a limit of x squared times a bounded oscillation
+        key_prerequisites: [math.calc1.limits-by-substitution]
+  - id: math.calc1.sinx-over-x
+    name: Finding the limit of sin x over x
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.squeeze-theorem
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.unit-circle-fluency
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the limit of sin x over x
+        key_prerequisites: [math.calc1.squeeze-theorem]
+      - id: kp2
+        can_do: Read the geometric argument for the limit
+        key_prerequisites: [math.calc1.squeeze-theorem, math.precalc.unit-circle-fluency]
+      - id: kp3
+        can_do: Find a limit of sin kx over x
+        key_prerequisites: [math.calc1.squeeze-theorem]
+      - id: kp4
+        can_do: Find a limit of sin ax over sin bx
+        key_prerequisites: [math.calc1.squeeze-theorem]
+  - id: math.calc1.trig-limits
+    name: Finding trigonometric limits
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sinx-over-x
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the limit of one minus cosine over x
+        key_prerequisites: [math.calc1.sinx-over-x]
+      - id: kp2
+        can_do: Rewrite tangent before a limit
+        key_prerequisites: [math.calc1.sinx-over-x]
+      - id: kp3
+        can_do: Multiply by a conjugate in a trig limit
+        key_prerequisites: [math.calc1.sinx-over-x]
+      - id: kp4
+        can_do: Combine trig identities in a limit
+        key_prerequisites: [math.calc1.sinx-over-x]
+  - id: math.calc1.infinite-limits
+    name: Finding infinite limits and vertical asymptotes
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.one-sided-limit-notation
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.alg2.vertical-asymptotes
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a one-sided infinite limit from a graph
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp2
+        can_do: Find a one-sided infinite limit from a formula by sign analysis
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp3
+        can_do: Write a vertical asymptote from an infinite limit
+        key_prerequisites: [math.alg2.vertical-asymptotes]
+      - id: kp4
+        can_do: Decide a two-sided infinite limit
+        key_prerequisites: [math.calc1.one-sided-limit-notation, math.alg2.vertical-asymptotes]
+  - id: math.calc1.limits-at-infinity-rational
+    name: Finding limits at infinity of rational functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-substitution
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.limits-at-infinity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit at infinity of one over a power
+        key_prerequisites: [math.precalc.limits-at-infinity]
+      - id: kp2
+        can_do: Compare degrees in a rational function
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp3
+        can_do: Divide by the highest power
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp4
+        can_do: Find a limit at negative infinity
+        key_prerequisites: [math.calc1.limits-by-substitution, math.precalc.limits-at-infinity]
+  - id: math.calc1.limits-at-infinity-roots
+    name: Finding limits at infinity with roots
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-rational
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Divide by the highest power under a root
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp2
+        can_do: Handle the sign of the root at negative infinity
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp3
+        can_do: Use a conjugate on a difference at infinity
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp4
+        can_do: Find two different limits at each infinity
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+  - id: math.calc1.limits-at-infinity-exp-log
+    name: Finding limits at infinity of exponentials and logs
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-rational
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.exponential-compare-growth-rates
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find limits of exponentials at both infinities
+        key_prerequisites: [math.precalc.exponential-compare-growth-rates]
+      - id: kp2
+        can_do: Find limits of logarithms at infinity
+        key_prerequisites: [math.precalc.exponential-compare-growth-rates]
+      - id: kp3
+        can_do: Divide by a dominant exponential
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp4
+        can_do: Compare exponential and polynomial growth in a limit
+        key_prerequisites: [math.precalc.exponential-compare-growth-rates]
+  - id: math.calc1.horizontal-asymptotes-limits
+    name: Finding horizontal asymptotes with limits
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-rational
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a horizontal asymptote from a limit
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp2
+        can_do: Find asymptotes of a rational function
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp3
+        can_do: Find asymptotes of a root function
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp4
+        can_do: Find two different horizontal asymptotes
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+  - id: math.calc1.epsilon-delta-intro
+    name: Understanding the epsilon-delta definition
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-laws
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read the epsilon-delta definition piece by piece
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp2
+        can_do: Find a delta from a graph
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp3
+        can_do: Find a delta for a linear function numerically
+        key_prerequisites: [math.calc1.limit-laws]
+      - id: kp4
+        can_do: Explain what the order of the quantifiers means
+        key_prerequisites: [math.calc1.limit-laws]
+  - id: math.calc1.epsilon-delta-linear
+    name: Proving a linear limit with epsilon and delta
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.epsilon-delta-intro
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Work backward from epsilon to delta for a line
+        key_prerequisites: [math.calc1.epsilon-delta-intro]
+      - id: kp2
+        can_do: Write the delta for a general line
+        key_prerequisites: [math.calc1.epsilon-delta-intro]
+      - id: kp3
+        can_do: Write the forward proof
+        key_prerequisites: [math.calc1.epsilon-delta-intro]
+      - id: kp4
+        can_do: Handle a negative slope with absolute values
+        key_prerequisites: [math.calc1.epsilon-delta-intro]
+  - id: math.calc1.limit-existence-from-one-sided
+    name: Deciding if a limit exists from one-sided limits
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.one-sided-limit-notation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare left and right limits to decide existence
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp2
+        can_do: Decide existence from a table of both sides
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp3
+        can_do: Decide existence from a piecewise formula
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+      - id: kp4
+        can_do: Find where a graph's limit fails to exist
+        key_prerequisites: [math.calc1.one-sided-limit-notation]
+  - id: math.calc1.limits-of-piecewise
+    name: Finding limits of piecewise functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-existence-from-one-sided
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.one-sided-limit-notation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a limit away from the boundary
+        key_prerequisites: [math.calc1.limit-existence-from-one-sided]
+      - id: kp2
+        can_do: Find one-sided limits at a boundary
+        key_prerequisites: [math.calc1.limit-existence-from-one-sided]
+      - id: kp3
+        can_do: Decide a limit with three pieces
+        key_prerequisites: [math.calc1.limit-existence-from-one-sided]
+      - id: kp4
+        can_do: Find a limit of a piece defined with absolute value
+        key_prerequisites: [math.calc1.limit-existence-from-one-sided]
+  - id: math.calc1.limits-of-composite-functions
+    name: Finding limits of composite functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-substitution
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Pull a limit inside a continuous outer function
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp2
+        can_do: Find a composite limit with a root
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp3
+        can_do: Find a composite limit from two graphs
+        key_prerequisites: [math.calc1.limits-by-substitution]
+      - id: kp4
+        can_do: Spot when the inner limit lands on a discontinuity
+        key_prerequisites: [math.calc1.limits-by-substitution]
+  - id: math.calc1.limits-with-parameters
+    name: Choosing a constant so a limit exists
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-factoring
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a constant to cancel a zero factor
+        key_prerequisites: [math.calc1.limits-by-factoring]
+      - id: kp2
+        can_do: Choose a constant so one-sided limits match
+        key_prerequisites: [math.calc1.limits-by-factoring]
+      - id: kp3
+        can_do: Solve for two constants from limit conditions
+        key_prerequisites: [math.calc1.limits-by-factoring]
+      - id: kp4
+        can_do: Find a limit value after choosing the constant
+        key_prerequisites: [math.calc1.limits-by-factoring]
+  - id: math.calc1.epsilon-delta-quadratic
+    name: Proving a quadratic limit with epsilon and delta
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.epsilon-delta-linear
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Factor the difference for a quadratic
+        key_prerequisites: [math.calc1.epsilon-delta-linear]
+      - id: kp2
+        can_do: Restrict delta to bound the extra factor
+        key_prerequisites: [math.calc1.epsilon-delta-linear]
+      - id: kp3
+        can_do: Choose delta as a minimum
+        key_prerequisites: [math.calc1.epsilon-delta-linear]
+      - id: kp4
+        can_do: Write the complete proof
+        key_prerequisites: [math.calc1.epsilon-delta-linear]
+  - id: math.calc1.continuity-at-a-point
+    name: Testing continuity at a point
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-of-piecewise
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.continuity-from-limits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the three conditions for continuity
+        key_prerequisites: [math.precalc.continuity-from-limits]
+      - id: kp2
+        can_do: Test continuity at a point on a graph
+        key_prerequisites: [math.precalc.continuity-from-limits]
+      - id: kp3
+        can_do: Test continuity of a rational function at a point
+        key_prerequisites: [math.calc1.limits-of-piecewise]
+      - id: kp4
+        can_do: Test continuity of a piecewise function at a boundary
+        key_prerequisites: [math.calc1.limits-of-piecewise]
+  - id: math.calc1.types-of-discontinuity
+    name: Classifying discontinuities
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.continuity-at-a-point
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify a removable discontinuity
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp2
+        can_do: Identify a jump discontinuity
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp3
+        can_do: Identify an infinite discontinuity
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp4
+        can_do: Classify discontinuities of a rational function
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+  - id: math.calc1.continuity-on-intervals
+    name: Finding intervals of continuity
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.continuity-at-a-point
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intervals of continuity for a polynomial or rational function
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp2
+        can_do: Find intervals with roots and logs
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp3
+        can_do: Use one-sided continuity at an endpoint
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+      - id: kp4
+        can_do: Find intervals for a piecewise function
+        key_prerequisites: [math.calc1.continuity-at-a-point]
+  - id: math.calc1.make-function-continuous
+    name: Choosing a value to make a function continuous
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-with-parameters
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc1.types-of-discontinuity
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.continuity-at-a-point
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a value to fill a hole
+        key_prerequisites: [math.calc1.types-of-discontinuity]
+      - id: kp2
+        can_do: Choose a constant to join two pieces
+        key_prerequisites: [math.calc1.limits-with-parameters]
+      - id: kp3
+        can_do: Choose two constants to join three pieces
+        key_prerequisites: [math.calc1.limits-with-parameters]
+      - id: kp4
+        can_do: Choose a value for a trig ratio at zero
+        key_prerequisites: [math.calc1.types-of-discontinuity]
+  - id: math.calc1.continuity-of-compositions
+    name: Using continuity of compositions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.continuity-on-intervals
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.limits-of-composite-functions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State continuity of a composition
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp2
+        can_do: Find where a composition is continuous
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp3
+        can_do: Move a limit inside a continuous function
+        key_prerequisites: [math.calc1.limits-of-composite-functions]
+      - id: kp4
+        can_do: Handle a composition with a restricted domain
+        key_prerequisites: [math.calc1.continuity-on-intervals, math.calc1.limits-of-composite-functions]
+  - id: math.calc1.intermediate-value-applications
+    name: Using the intermediate value theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.continuity-on-intervals
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.intermediate-value-theorem
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the hypotheses of the theorem
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp2
+        can_do: Show a solution exists on an interval
+        key_prerequisites: [math.precalc.intermediate-value-theorem]
+      - id: kp3
+        can_do: Show two functions cross
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp4
+        can_do: Locate a root in a shorter interval
+        key_prerequisites: [math.calc1.continuity-on-intervals, math.precalc.intermediate-value-theorem]
+  - id: math.calc1.average-to-instantaneous
+    name: Moving from average to instantaneous rate
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-definition-informal
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.precalc.rate-of-change-intuition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average velocity on shrinking intervals
+        key_prerequisites: [math.precalc.rate-of-change-intuition]
+      - id: kp2
+        can_do: Estimate instantaneous velocity from a table
+        key_prerequisites: [math.precalc.rate-of-change-intuition]
+      - id: kp3
+        can_do: Write instantaneous rate as a limit
+        key_prerequisites: [math.calc1.limit-definition-informal]
+      - id: kp4
+        can_do: Interpret the limit for a real quantity
+        key_prerequisites: [math.calc1.limit-definition-informal]
+  - id: math.calc1.tangent-as-limit
+    name: Defining the tangent line as a limit
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.average-to-instantaneous
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.tangent-line-intuition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a secant slope with a general h
+        key_prerequisites: [math.precalc.tangent-line-intuition]
+      - id: kp2
+        can_do: Find a tangent slope as a limit for a quadratic
+        key_prerequisites: [math.calc1.average-to-instantaneous]
+      - id: kp3
+        can_do: Find a tangent slope with the x approaches a form
+        key_prerequisites: [math.calc1.average-to-instantaneous]
+      - id: kp4
+        can_do: Spot a graph with no tangent at a point
+        key_prerequisites: [math.precalc.tangent-line-intuition]
+  - id: math.calc1.derivative-at-a-point
+    name: Finding the derivative at a point from the definition
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-as-limit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a derivative at a point for a quadratic
+        key_prerequisites: [math.calc1.tangent-as-limit]
+      - id: kp2
+        can_do: Find a derivative at a point for a reciprocal
+        key_prerequisites: [math.calc1.tangent-as-limit]
+      - id: kp3
+        can_do: Find a derivative at a point for a root
+        key_prerequisites: [math.calc1.tangent-as-limit]
+      - id: kp4
+        can_do: Recognize a limit as a derivative at a point
+        key_prerequisites: [math.calc1.tangent-as-limit]
+  - id: math.calc1.derivative-as-function
+    name: Finding the derivative function from the definition
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-at-a-point
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.precalc.difference-quotient-quadratic
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the derivative function of a quadratic
+        key_prerequisites: [math.precalc.difference-quotient-quadratic]
+      - id: kp2
+        can_do: Find the derivative function of a cubic
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp3
+        can_do: Find the derivative function with a constant parameter
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp4
+        can_do: Use the derivative function at several inputs
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+  - id: math.calc1.derivative-of-root-and-reciprocal
+    name: Using the definition for root and reciprocal functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-as-function
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.limits-by-conjugates
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.limits-of-complex-fractions
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.precalc.difference-quotient-rational-root
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the derivative of a square root from the definition
+        key_prerequisites: [math.calc1.limits-by-conjugates]
+      - id: kp2
+        can_do: Find the derivative of a reciprocal from the definition
+        key_prerequisites: [math.calc1.limits-of-complex-fractions]
+      - id: kp3
+        can_do: Find the derivative of a root of a linear function
+        key_prerequisites: [math.calc1.derivative-as-function, math.calc1.limits-by-conjugates]
+      - id: kp4
+        can_do: Find the derivative of a reciprocal of a linear function
+        key_prerequisites: [math.calc1.derivative-as-function, math.calc1.limits-of-complex-fractions]
+  - id: math.calc1.derivative-notation
+    name: Using derivative notation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-as-function
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use prime notation
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp2
+        can_do: Use Leibniz notation
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp3
+        can_do: Write a derivative at a point in each notation
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp4
+        can_do: Move between position and function naming of variables
+        key_prerequisites: [math.calc1.derivative-as-function]
+  - id: math.calc1.interpret-derivative-units
+    name: Interpreting a derivative with units
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-at-a-point
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Give the units of a derivative
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp2
+        can_do: Interpret a derivative value in words
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp3
+        can_do: Interpret a sign of a derivative
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp4
+        can_do: Estimate a small change from a derivative value
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+  - id: math.calc1.estimate-derivative-table
+    name: Estimating a derivative from a table or graph
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-at-a-point
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a one-sided difference from a table
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp2
+        can_do: Use a symmetric difference from a table
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp3
+        can_do: Estimate a slope from a graph
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp4
+        can_do: Choose the better estimate from uneven data
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+  - id: math.calc1.sketch-derivative-graph
+    name: Sketching a derivative from a graph
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-as-function
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Mark where the derivative is zero
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp2
+        can_do: Mark where the derivative is positive or negative
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp3
+        can_do: Sketch the derivative of a polynomial graph
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp4
+        can_do: Sketch a derivative with a corner in the graph
+        key_prerequisites: [math.calc1.derivative-as-function]
+  - id: math.calc1.tangent-line-equation
+    name: Writing the equation of a tangent line
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-at-a-point
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.alg1.point-slope-form
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a tangent line given a slope and a point
+        key_prerequisites: [math.alg1.point-slope-form]
+      - id: kp2
+        can_do: Write a tangent line from the definition
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp3
+        can_do: Find a tangent line with a fractional slope
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+      - id: kp4
+        can_do: Find a point given a tangent slope
+        key_prerequisites: [math.calc1.derivative-at-a-point]
+  - id: math.calc1.normal-line
+    name: Writing the equation of a normal line
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-line-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.alg1.perpendicular-lines
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a normal slope from a tangent slope
+        key_prerequisites: [math.alg1.perpendicular-lines]
+      - id: kp2
+        can_do: Write a normal line
+        key_prerequisites: [math.calc1.tangent-line-equation]
+      - id: kp3
+        can_do: Handle a horizontal or vertical tangent
+        key_prerequisites: [math.calc1.tangent-line-equation, math.alg1.perpendicular-lines]
+      - id: kp4
+        can_do: Find where a normal line meets the curve again
+        key_prerequisites: [math.calc1.tangent-line-equation]
+  - id: math.calc1.derivative-graph-features
+    name: Reading function behaviour from a derivative graph
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sketch-derivative-graph
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find increasing regions from a derivative graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp2
+        can_do: Find local maxima from a derivative graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp3
+        can_do: Compare slopes of the original from a derivative graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp4
+        can_do: Match functions to their derivative graphs
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+  - id: math.calc1.non-differentiable-points
+    name: Spotting corners, cusps and vertical tangents
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sketch-derivative-graph
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.limits-of-absolute-value
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a corner on a graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp2
+        can_do: Spot a cusp on a graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp3
+        can_do: Spot a vertical tangent on a graph
+        key_prerequisites: [math.calc1.sketch-derivative-graph]
+      - id: kp4
+        can_do: Show that an absolute value has no derivative at its corner
+        key_prerequisites: [math.calc1.limits-of-absolute-value]
+  - id: math.calc1.differentiability
+    name: Testing differentiability
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.non-differentiable-points
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.make-function-continuous
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.calc1.derivative-as-function
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc1.continuity-at-a-point
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare one-sided derivatives
+        key_prerequisites: [math.calc1.derivative-as-function]
+      - id: kp2
+        can_do: Test a piecewise function at a boundary
+        key_prerequisites: [math.calc1.non-differentiable-points, math.calc1.make-function-continuous]
+      - id: kp3
+        can_do: Choose constants to make a piecewise function differentiable
+        key_prerequisites: [math.calc1.make-function-continuous]
+      - id: kp4
+        can_do: Decide differentiability of a function with an absolute value
+        key_prerequisites: [math.calc1.non-differentiable-points]
+  - id: math.calc1.differentiability-implies-continuity
+    name: Showing differentiability implies continuity
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.differentiability
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the implication
+        key_prerequisites: [math.calc1.differentiability]
+      - id: kp2
+        can_do: Give a continuous function that is not differentiable
+        key_prerequisites: [math.calc1.differentiability]
+      - id: kp3
+        can_do: Write the limit argument
+        key_prerequisites: [math.calc1.differentiability]
+      - id: kp4
+        can_do: Use the implication to rule out differentiability
+        key_prerequisites: [math.calc1.differentiability]
+  - id: math.calc1.constant-and-power-rule
+    name: Using the constant and power rules
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-notation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a constant
+        key_prerequisites: [math.calc1.derivative-notation]
+      - id: kp2
+        can_do: Differentiate a positive integer power
+        key_prerequisites: [math.calc1.derivative-notation]
+      - id: kp3
+        can_do: Multiply a constant by a power before differentiating
+        key_prerequisites: [math.calc1.derivative-notation]
+      - id: kp4
+        can_do: Find a tangent slope with the power rule
+        key_prerequisites: [math.calc1.derivative-notation]
+  - id: math.calc1.rule-with-negative-rational-powers
+    name: Using the power rule with negative and rational powers
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.constant-and-power-rule
+        encompassing: 0.6
+        confidence: high
+      - topic: math.alg2.exponent-laws-rational
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the power rule with a negative integer exponent
+        key_prerequisites: [math.calc1.constant-and-power-rule]
+      - id: kp2
+        can_do: Use the power rule with a fractional exponent
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp3
+        can_do: Rewrite a root as a power before differentiating
+        key_prerequisites: [math.alg2.exponent-laws-rational]
+      - id: kp4
+        can_do: Rewrite a reciprocal power before differentiating
+        key_prerequisites: [math.calc1.constant-and-power-rule, math.alg2.exponent-laws-rational]
+  - id: math.calc1.sum-difference-multiple-rules
+    name: Using sum, difference and constant multiple rules
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.constant-and-power-rule
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a sum of powers
+        key_prerequisites: [math.calc1.constant-and-power-rule]
+      - id: kp2
+        can_do: Differentiate a constant multiple
+        key_prerequisites: [math.calc1.constant-and-power-rule]
+      - id: kp3
+        can_do: Differentiate a polynomial
+        key_prerequisites: [math.calc1.constant-and-power-rule]
+      - id: kp4
+        can_do: Evaluate a polynomial's derivative at a point
+        key_prerequisites: [math.calc1.constant-and-power-rule]
+  - id: math.calc1.rewrite-before-differentiating
+    name: Rewriting before differentiating
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.rule-with-negative-rational-powers
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a product of polynomials first
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Split a quotient into powers
+        key_prerequisites: [math.calc1.rule-with-negative-rational-powers]
+      - id: kp3
+        can_do: Rewrite with roots and reciprocals
+        key_prerequisites: [math.calc1.rule-with-negative-rational-powers]
+      - id: kp4
+        can_do: Combine rewriting moves
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules, math.calc1.rule-with-negative-rational-powers]
+  - id: math.calc1.product-rule-derivative
+    name: Using the product rule
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the product rule on two polynomials
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Use the product rule with roots
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp3
+        can_do: Use the product rule for three factors
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp4
+        can_do: Use the product rule with table values
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+  - id: math.calc1.quotient-rule-derivative
+    name: Using the quotient rule
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.product-rule-derivative
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the quotient rule on polynomials
+        key_prerequisites: [math.calc1.product-rule-derivative]
+      - id: kp2
+        can_do: Simplify a quotient rule answer
+        key_prerequisites: [math.calc1.product-rule-derivative]
+      - id: kp3
+        can_do: Use the quotient rule with a root
+        key_prerequisites: [math.calc1.product-rule-derivative]
+      - id: kp4
+        can_do: Use the quotient rule with table values
+        key_prerequisites: [math.calc1.product-rule-derivative]
+  - id: math.calc1.choose-a-rule
+    name: Choosing a rule to differentiate
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.quotient-rule-derivative
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.rewrite-before-differentiating
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Decide if rewriting beats the quotient rule
+        key_prerequisites: [math.calc1.rewrite-before-differentiating]
+      - id: kp2
+        can_do: Pick product or quotient for a given form
+        key_prerequisites: [math.calc1.quotient-rule-derivative]
+      - id: kp3
+        can_do: Differentiate a mixed expression
+        key_prerequisites: [math.calc1.quotient-rule-derivative, math.calc1.rewrite-before-differentiating]
+      - id: kp4
+        can_do: Find a tangent to a function needing several rules
+        key_prerequisites: [math.calc1.quotient-rule-derivative, math.calc1.rewrite-before-differentiating]
+  - id: math.calc1.higher-derivatives
+    name: Finding higher derivatives
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a second derivative of a polynomial
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Find a second derivative with a negative power
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp3
+        can_do: Find an nth derivative pattern
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp4
+        can_do: Use second derivative notation
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+  - id: math.calc1.derivatives-of-sine-cosine
+    name: Finding derivatives of sine and cosine
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.trig-limits
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the derivatives of sine and cosine
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Derive the sine derivative from limits
+        key_prerequisites: [math.calc1.trig-limits]
+      - id: kp3
+        can_do: Combine with sums and products
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp4
+        can_do: Find a tangent line to a trig function
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+  - id: math.calc1.derivatives-of-other-trig
+    name: Finding derivatives of other trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivatives-of-sine-cosine
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.quotient-rule-derivative
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the tangent derivative
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine, math.calc1.quotient-rule-derivative]
+      - id: kp2
+        can_do: Use tangent and secant derivatives
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine]
+      - id: kp3
+        can_do: Use cotangent and cosecant derivatives
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine]
+      - id: kp4
+        can_do: Differentiate trig products and quotients
+        key_prerequisites: [math.calc1.quotient-rule-derivative]
+  - id: math.calc1.chain-rule-power-of-function
+    name: Using the chain rule on a power of a function
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.decompose-function
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find inner and outer functions
+        key_prerequisites: [math.alg2.decompose-function]
+      - id: kp2
+        can_do: Differentiate a polynomial raised to a power
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp3
+        can_do: Differentiate a root of a polynomial
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp4
+        can_do: Differentiate a reciprocal of a polynomial
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules, math.alg2.decompose-function]
+  - id: math.calc1.chain-rule-general
+    name: Using the general chain rule
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-power-of-function
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the chain rule in both notations
+        key_prerequisites: [math.calc1.chain-rule-power-of-function]
+      - id: kp2
+        can_do: Use the chain rule with table values
+        key_prerequisites: [math.calc1.chain-rule-power-of-function]
+      - id: kp3
+        can_do: Use the chain rule with a named outer function
+        key_prerequisites: [math.calc1.chain-rule-power-of-function]
+      - id: kp4
+        can_do: Use the chain rule with composite formulas
+        key_prerequisites: [math.calc1.chain-rule-power-of-function]
+  - id: math.calc1.chain-rule-repeated
+    name: Applying the chain rule more than once
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate three nested functions
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Differentiate a power of a root of a polynomial
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Keep track of layers in writing
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp4
+        can_do: Evaluate at a point after repeated chains
+        key_prerequisites: [math.calc1.chain-rule-general]
+  - id: math.calc1.chain-rule-trig
+    name: Using the chain rule with trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivatives-of-other-trig
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.chain-rule-repeated
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate sine of a polynomial
+        key_prerequisites: [math.calc1.derivatives-of-other-trig]
+      - id: kp2
+        can_do: Differentiate a power of sine
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Differentiate tangent of a root
+        key_prerequisites: [math.calc1.derivatives-of-other-trig]
+      - id: kp4
+        can_do: Differentiate three-layer trig functions
+        key_prerequisites: [math.calc1.chain-rule-repeated]
+  - id: math.calc1.derivative-of-exponential
+    name: Finding derivatives of exponential functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.5
+        confidence: high
+      - topic: math.precalc.exponential-function-analysis
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate the natural exponential
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Explain why e has slope one at zero
+        key_prerequisites: [math.precalc.exponential-function-analysis]
+      - id: kp3
+        can_do: Differentiate with a linear exponent
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp4
+        can_do: Differentiate with a polynomial exponent
+        key_prerequisites: [math.calc1.chain-rule-general]
+  - id: math.calc1.rules-with-table-values
+    name: Using differentiation rules with table values
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a table for a chain rule value
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Use a table for a repeated composition
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Use graphs instead of a table
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp4
+        can_do: Combine chain and product with table values
+        key_prerequisites: [math.calc1.chain-rule-general]
+  - id: math.calc1.chain-with-product-quotient
+    name: Combining the chain rule with product and quotient rules
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.quotient-rule-derivative
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.rules-with-table-values
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the product rule with a chain inside
+        key_prerequisites: [math.calc1.quotient-rule-derivative]
+      - id: kp2
+        can_do: Use the quotient rule with a chain inside
+        key_prerequisites: [math.calc1.quotient-rule-derivative]
+      - id: kp3
+        can_do: Use a chain rule on a whole quotient
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp4
+        can_do: Factor and simplify a combined answer
+        key_prerequisites: [math.calc1.quotient-rule-derivative]
+  - id: math.calc1.implicit-differentiation
+    name: Using implicit differentiation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-with-product-quotient
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate y squared with respect to x
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Find a slope for a circle
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Use the product rule on a mixed term
+        key_prerequisites: [math.calc1.chain-with-product-quotient]
+      - id: kp4
+        can_do: Solve for the derivative with trig terms
+        key_prerequisites: [math.calc1.chain-with-product-quotient, math.calc1.chain-rule-general]
+  - id: math.calc1.implicit-second-derivative
+    name: Finding second derivatives implicitly
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.implicit-differentiation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a first implicit derivative
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp2
+        can_do: Replace the first derivative in the answer
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp3
+        can_do: Simplify with the original equation
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp4
+        can_do: Evaluate a second derivative at a point
+        key_prerequisites: [math.calc1.implicit-differentiation, math.calc1.higher-derivatives]
+  - id: math.calc1.tangent-to-implicit-curve
+    name: Finding tangents to implicit curves
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.implicit-differentiation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.tangent-line-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a tangent line at a given point
+        key_prerequisites: [math.calc1.implicit-differentiation, math.calc1.tangent-line-equation]
+      - id: kp2
+        can_do: Find horizontal tangents on a curve
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp3
+        can_do: Find vertical tangents on a curve
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp4
+        can_do: Find where a curve has a given slope
+        key_prerequisites: [math.calc1.implicit-differentiation]
+  - id: math.calc1.derivative-of-log
+    name: Finding derivatives of logarithms
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.implicit-differentiation
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate the natural log
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp2
+        can_do: Derive the log derivative implicitly
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp3
+        can_do: Differentiate log of a polynomial
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp4
+        can_do: Differentiate log of an absolute value
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+  - id: math.calc1.derivative-of-inverse-function
+    name: Finding derivatives of inverse functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.implicit-differentiation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.inverse-with-restricted-domains
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an inverse derivative at a point from a table
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp2
+        can_do: Use the reciprocal formula
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp3
+        can_do: Find an inverse derivative with an explicit function
+        key_prerequisites: [math.calc1.implicit-differentiation, math.precalc.inverse-with-restricted-domains]
+      - id: kp4
+        can_do: Interpret the reciprocal slope on a graph
+        key_prerequisites: [math.precalc.inverse-with-restricted-domains]
+  - id: math.calc1.derivatives-of-inverse-trig
+    name: Finding derivatives of inverse trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-inverse-function
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.inverse-trig-functions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the arcsine derivative
+        key_prerequisites: [math.calc1.derivative-of-inverse-function]
+      - id: kp2
+        can_do: Use arcsine and arccosine derivatives
+        key_prerequisites: [math.precalc.inverse-trig-functions]
+      - id: kp3
+        can_do: Use the arctangent derivative
+        key_prerequisites: [math.precalc.inverse-trig-functions]
+      - id: kp4
+        can_do: Combine with the chain rule
+        key_prerequisites: [math.calc1.derivative-of-inverse-function]
+  - id: math.calc1.tangent-with-rules
+    name: Writing tangent lines using rules
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-line-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a tangent to a polynomial using rules
+        key_prerequisites: [math.calc1.tangent-line-equation, math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Write a tangent to a rational power
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp3
+        can_do: Find the tangent through a given external point
+        key_prerequisites: [math.calc1.tangent-line-equation]
+      - id: kp4
+        can_do: Find a tangent parallel to a given line
+        key_prerequisites: [math.calc1.tangent-line-equation, math.calc1.sum-difference-multiple-rules]
+  - id: math.calc1.horizontal-tangents
+    name: Finding horizontal tangents
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-with-rules
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find horizontal tangents of a polynomial
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp2
+        can_do: Find horizontal tangents of a rational function
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp3
+        can_do: Find horizontal tangents on an interval for trig
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp4
+        can_do: Show that a curve has no horizontal tangent
+        key_prerequisites: [math.calc1.tangent-with-rules]
+  - id: math.calc1.chain-rule-exp
+    name: Using the chain rule with exponentials
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate the exponential of a composite
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp2
+        can_do: Differentiate with a trig exponent
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp3
+        can_do: Combine with the product rule
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp4
+        can_do: Differentiate a power of an exponential
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+  - id: math.calc1.derivative-of-general-exponential
+    name: Finding derivatives with any base
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-exp
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.3
+        confidence: high
+      - topic: math.alg2.change-of-base
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a base-b exponential
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp2
+        can_do: Differentiate with a composite exponent
+        key_prerequisites: [math.calc1.chain-rule-exp]
+      - id: kp3
+        can_do: Differentiate a base-b logarithm
+        key_prerequisites: [math.alg2.change-of-base]
+      - id: kp4
+        can_do: Compare base-e and base-b answers
+        key_prerequisites: [math.calc1.chain-rule-exp, math.calc1.derivative-of-exponential]
+  - id: math.calc1.chain-rule-log
+    name: Using the chain rule with logarithms
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-log
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate log of a composite
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp2
+        can_do: Simplify with log laws before differentiating
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp3
+        can_do: Differentiate a power of a log
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp4
+        can_do: Differentiate log of a trig function
+        key_prerequisites: [math.calc1.derivative-of-log]
+  - id: math.calc1.logarithmic-differentiation
+    name: Using logarithmic differentiation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.expand-condense-logs
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.chain-rule-log
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.derivative-of-general-exponential
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.calc1.derivative-of-log
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a product with logs before differentiating
+        key_prerequisites: [math.alg2.expand-condense-logs]
+      - id: kp2
+        can_do: Differentiate a large product quotient
+        key_prerequisites: [math.calc1.chain-rule-log]
+      - id: kp3
+        can_do: Differentiate a variable raised to a variable
+        key_prerequisites: [math.calc1.derivative-of-general-exponential]
+      - id: kp4
+        can_do: Differentiate a function raised to a function
+        key_prerequisites: [math.calc1.chain-rule-log, math.calc1.derivative-of-general-exponential]
+  - id: math.calc1.position-velocity-acceleration
+    name: Using position, velocity and acceleration
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.interpret-derivative-units
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity from position
+        key_prerequisites: [math.calc1.interpret-derivative-units]
+      - id: kp2
+        can_do: Find acceleration from position
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp3
+        can_do: Find motion values at a time with units
+        key_prerequisites: [math.calc1.interpret-derivative-units]
+      - id: kp4
+        can_do: Interpret a vertical motion model
+        key_prerequisites: [math.calc1.higher-derivatives, math.calc1.interpret-derivative-units]
+  - id: math.calc1.speed-and-direction
+    name: Finding speed and direction of motion
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.position-velocity-acceleration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find speed from velocity
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp2
+        can_do: Find when an object changes direction
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp3
+        can_do: Decide when an object speeds up
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp4
+        can_do: Find distance covered from a sign chart
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+  - id: math.calc1.rates-in-science-economics
+    name: Using derivatives in science and economics
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.interpret-derivative-units
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.choose-a-rule
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret a growth rate in biology
+        key_prerequisites: [math.calc1.interpret-derivative-units]
+      - id: kp2
+        can_do: Find a rate of change in chemistry or physics
+        key_prerequisites: [math.calc1.choose-a-rule]
+      - id: kp3
+        can_do: Find a rate of change in a density or flow setting
+        key_prerequisites: [math.calc1.choose-a-rule]
+      - id: kp4
+        can_do: Interpret a rate with composite models
+        key_prerequisites: [math.calc1.interpret-derivative-units, math.calc1.choose-a-rule]
+  - id: math.calc1.marginal-cost-revenue
+    name: Using marginal cost and revenue
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.rates-in-science-economics
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a marginal cost
+        key_prerequisites: [math.calc1.rates-in-science-economics]
+      - id: kp2
+        can_do: Find a marginal revenue
+        key_prerequisites: [math.calc1.rates-in-science-economics]
+      - id: kp3
+        can_do: Find a marginal profit
+        key_prerequisites: [math.calc1.rates-in-science-economics]
+      - id: kp4
+        can_do: Interpret marginal values against an exact change
+        key_prerequisites: [math.calc1.rates-in-science-economics]
+  - id: math.calc1.related-rates-setup
+    name: Setting up a related rates problem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.implicit-differentiation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name the variables and given rates
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp2
+        can_do: Write an equation connecting the quantities
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp3
+        can_do: Differentiate with respect to time
+        key_prerequisites: [math.calc1.implicit-differentiation]
+      - id: kp4
+        can_do: Substitute only after differentiating
+        key_prerequisites: [math.calc1.implicit-differentiation]
+  - id: math.calc1.related-rates-geometry
+    name: Solving related rates with geometry
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.related-rates-setup
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a related rate with a circle's area
+        key_prerequisites: [math.calc1.related-rates-setup]
+      - id: kp2
+        can_do: Solve a related rate with a sphere or cube
+        key_prerequisites: [math.calc1.related-rates-setup]
+      - id: kp3
+        can_do: Solve a related rate with a cylinder of fixed radius
+        key_prerequisites: [math.calc1.related-rates-setup]
+      - id: kp4
+        can_do: Solve a related rate with a fixed value removed first
+        key_prerequisites: [math.calc1.related-rates-setup]
+  - id: math.calc1.related-rates-pythagorean
+    name: Solving related rates with the Pythagorean theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.related-rates-geometry
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a sliding ladder problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp2
+        can_do: Solve a two moving objects problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp3
+        can_do: Solve a kite or rope problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp4
+        can_do: Find the missing side before substituting
+        key_prerequisites: [math.calc1.related-rates-geometry]
+  - id: math.calc1.linear-approximation
+    name: Using linear approximation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-with-rules
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.tangent-line-equation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a linearization at a point
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp2
+        can_do: Estimate a root with a linearization
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp3
+        can_do: Estimate a trig value with a linearization
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp4
+        can_do: Decide over or under estimate from curvature
+        key_prerequisites: [math.calc1.tangent-with-rules]
+  - id: math.calc1.differentials
+    name: Using differentials to estimate error
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.linear-approximation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write dy in terms of dx
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp2
+        can_do: Compare dy with the exact change
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp3
+        can_do: Estimate an error in a computed volume
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp4
+        can_do: Find relative and percent error
+        key_prerequisites: [math.calc1.linear-approximation]
+  - id: math.calc1.newtons-method
+    name: Using Newton's method
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.tangent-with-rules
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.tangent-line-equation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the iteration from a tangent line
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp2
+        can_do: Do two steps by hand
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp3
+        can_do: Estimate a root to a given accuracy
+        key_prerequisites: [math.calc1.tangent-with-rules]
+      - id: kp4
+        can_do: Spot a failing starting point
+        key_prerequisites: [math.calc1.tangent-with-rules]
+  - id: math.calc1.critical-numbers
+    name: Finding critical numbers
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.choose-a-rule
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.horizontal-tangents
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find critical numbers of a polynomial
+        key_prerequisites: [math.calc1.horizontal-tangents]
+      - id: kp2
+        can_do: Find critical numbers where the derivative is undefined
+        key_prerequisites: [math.calc1.choose-a-rule]
+      - id: kp3
+        can_do: Find critical numbers of a rational function
+        key_prerequisites: [math.calc1.choose-a-rule]
+      - id: kp4
+        can_do: Find critical numbers of a trig function on an interval
+        key_prerequisites: [math.calc1.choose-a-rule]
+  - id: math.calc1.extreme-value-theorem
+    name: Using the extreme value theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.critical-numbers
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.continuity-on-intervals
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem's hypotheses
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp2
+        can_do: Tell local from absolute extrema on a graph
+        key_prerequisites: [math.calc1.critical-numbers]
+      - id: kp3
+        can_do: Show why the theorem fails without a closed interval
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+      - id: kp4
+        can_do: Show why the theorem fails without continuity
+        key_prerequisites: [math.calc1.continuity-on-intervals]
+  - id: math.calc1.closed-interval-method
+    name: Finding absolute extrema on a closed interval
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.extreme-value-theorem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find absolute extrema of a polynomial
+        key_prerequisites: [math.calc1.extreme-value-theorem]
+      - id: kp2
+        can_do: Find absolute extrema with a root
+        key_prerequisites: [math.calc1.extreme-value-theorem]
+      - id: kp3
+        can_do: Find absolute extrema of a trig function
+        key_prerequisites: [math.calc1.extreme-value-theorem]
+      - id: kp4
+        can_do: Find absolute extrema with a non-differentiable point
+        key_prerequisites: [math.calc1.extreme-value-theorem]
+  - id: math.calc1.rolles-theorem
+    name: Using Rolle's theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.extreme-value-theorem
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.differentiability
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State Rolle's hypotheses
+        key_prerequisites: [math.calc1.differentiability]
+      - id: kp2
+        can_do: Find the number guaranteed for a polynomial
+        key_prerequisites: [math.calc1.extreme-value-theorem]
+      - id: kp3
+        can_do: Spot a failed hypothesis
+        key_prerequisites: [math.calc1.differentiability]
+      - id: kp4
+        can_do: Show an equation has at most one root
+        key_prerequisites: [math.calc1.extreme-value-theorem, math.calc1.differentiability]
+  - id: math.calc1.mean-value-theorem
+    name: Using the mean value theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.rolles-theorem
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem geometrically
+        key_prerequisites: [math.calc1.rolles-theorem]
+      - id: kp2
+        can_do: Find the number guaranteed for a polynomial
+        key_prerequisites: [math.calc1.rolles-theorem]
+      - id: kp3
+        can_do: Find the number guaranteed with a root
+        key_prerequisites: [math.calc1.rolles-theorem]
+      - id: kp4
+        can_do: Bound a change using a bound on the derivative
+        key_prerequisites: [math.calc1.rolles-theorem]
+  - id: math.calc1.mvt-consequences
+    name: Using consequences of the mean value theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.mean-value-theorem
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show zero derivative means constant
+        key_prerequisites: [math.calc1.mean-value-theorem]
+      - id: kp2
+        can_do: Show equal derivatives differ by a constant
+        key_prerequisites: [math.calc1.mean-value-theorem]
+      - id: kp3
+        can_do: Prove an inequality with the theorem
+        key_prerequisites: [math.calc1.mean-value-theorem]
+      - id: kp4
+        can_do: Show a sign of derivative gives monotonic behaviour
+        key_prerequisites: [math.calc1.mean-value-theorem]
+  - id: math.calc1.first-derivative-test
+    name: Using the first derivative test
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.mvt-consequences
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.critical-numbers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a sign chart for the derivative
+        key_prerequisites: [math.calc1.critical-numbers]
+      - id: kp2
+        can_do: Classify critical numbers of a polynomial
+        key_prerequisites: [math.calc1.mvt-consequences, math.calc1.critical-numbers]
+      - id: kp3
+        can_do: Classify at a non-differentiable point
+        key_prerequisites: [math.calc1.mvt-consequences, math.calc1.critical-numbers]
+      - id: kp4
+        can_do: Classify critical numbers of a function with exponentials
+        key_prerequisites: [math.calc1.mvt-consequences, math.calc1.critical-numbers]
+  - id: math.calc1.increasing-decreasing-derivative
+    name: Finding where a function increases or decreases
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.first-derivative-test
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intervals of increase for a polynomial
+        key_prerequisites: [math.calc1.first-derivative-test]
+      - id: kp2
+        can_do: Find intervals with a rational function
+        key_prerequisites: [math.calc1.first-derivative-test]
+      - id: kp3
+        can_do: Find intervals for a trig function
+        key_prerequisites: [math.calc1.first-derivative-test]
+      - id: kp4
+        can_do: Find intervals for a function with logs
+        key_prerequisites: [math.calc1.first-derivative-test]
+  - id: math.calc1.concavity
+    name: Finding concavity with the second derivative
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.increasing-decreasing-derivative
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Connect concavity to the second derivative sign
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp2
+        can_do: Find intervals of concavity for a polynomial
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp3
+        can_do: Find intervals of concavity with a rational function
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp4
+        can_do: Read concavity from a graph of the first derivative
+        key_prerequisites: [math.calc1.increasing-decreasing-derivative]
+  - id: math.calc1.inflection-points
+    name: Finding inflection points
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.concavity
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find candidates for inflection points
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp2
+        can_do: Confirm a change of concavity
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp3
+        can_do: Rule out a false candidate
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp4
+        can_do: Find inflection points with fractional powers
+        key_prerequisites: [math.calc1.concavity]
+  - id: math.calc1.second-derivative-test
+    name: Using the second derivative test
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.concavity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify a polynomial's critical numbers
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp2
+        can_do: Classify a trig function's critical numbers
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp3
+        can_do: Spot when the test fails
+        key_prerequisites: [math.calc1.concavity]
+      - id: kp4
+        can_do: Choose between first and second derivative tests
+        key_prerequisites: [math.calc1.concavity]
+  - id: math.calc1.curve-sketching-polynomial
+    name: Sketching polynomials with calculus
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.inflection-points
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.second-derivative-test
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List intercepts and critical numbers
+        key_prerequisites: [math.calc1.inflection-points]
+      - id: kp2
+        can_do: Sketch a cubic from a chart
+        key_prerequisites: [math.calc1.inflection-points, math.calc1.second-derivative-test]
+      - id: kp3
+        can_do: Sketch a quartic from a chart
+        key_prerequisites: [math.calc1.inflection-points, math.calc1.second-derivative-test]
+      - id: kp4
+        can_do: Sketch a function with a parameter
+        key_prerequisites: [math.calc1.second-derivative-test]
+  - id: math.calc1.curve-sketching-rational
+    name: Sketching rational functions with calculus
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.curve-sketching-polynomial
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.horizontal-asymptotes-limits
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.infinite-limits
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.limits-at-infinity-roots
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find domain and asymptotes first
+        key_prerequisites: [math.calc1.horizontal-asymptotes-limits, math.calc1.infinite-limits]
+      - id: kp2
+        can_do: Sketch a rational function with one vertical asymptote
+        key_prerequisites: [math.calc1.curve-sketching-polynomial, math.calc1.horizontal-asymptotes-limits]
+      - id: kp3
+        can_do: Sketch with a slant asymptote
+        key_prerequisites: [math.calc1.infinite-limits]
+      - id: kp4
+        can_do: Sketch a root function using limits at infinity
+        key_prerequisites: [math.calc1.limits-at-infinity-roots]
+  - id: math.calc1.curve-sketching-exp-log-trig
+    name: Sketching exponential, log and trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.curve-sketching-polynomial
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivatives-of-inverse-trig
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc1.derivative-of-log
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a product of polynomial and exponential
+        key_prerequisites: [math.calc1.curve-sketching-polynomial]
+      - id: kp2
+        can_do: Sketch with a log
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp3
+        can_do: Sketch a periodic function on one period
+        key_prerequisites: [math.calc1.curve-sketching-polynomial]
+      - id: kp4
+        can_do: Sketch with an arctangent asymptote
+        key_prerequisites: [math.calc1.derivatives-of-inverse-trig]
+  - id: math.calc1.graphs-of-f-fprime-fdoubleprime
+    name: Relating graphs of f, f prime and f double prime
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.inflection-points
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivative-graph-features
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.sketch-derivative-graph
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match f, f prime and f double prime
+        key_prerequisites: [math.calc1.inflection-points]
+      - id: kp2
+        can_do: Read f features from a graph of f prime
+        key_prerequisites: [math.calc1.derivative-graph-features]
+      - id: kp3
+        can_do: Read concavity from f prime
+        key_prerequisites: [math.calc1.inflection-points, math.calc1.derivative-graph-features]
+      - id: kp4
+        can_do: Sketch f from a graph of f prime
+        key_prerequisites: [math.calc1.derivative-graph-features, math.calc1.sketch-derivative-graph]
+  - id: math.calc1.indeterminate-forms
+    name: Recognizing indeterminate forms
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-at-infinity-rational
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell zero over zero from a nonzero over zero
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp2
+        can_do: Recognize infinity over infinity
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp3
+        can_do: Recognize products and differences of indeterminate form
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp4
+        can_do: Recognize indeterminate powers
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+  - id: math.calc1.lhopital-rule
+    name: Using L'Hopital's rule
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.indeterminate-forms
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.mean-value-theorem
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.calc1.choose-a-rule
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the hypotheses before applying
+        key_prerequisites: [math.calc1.indeterminate-forms]
+      - id: kp2
+        can_do: Use the rule on zero over zero
+        key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule]
+      - id: kp3
+        can_do: Use the rule on infinity over infinity
+        key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule]
+      - id: kp4
+        can_do: Apply the rule more than once
+        key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule]
+  - id: math.calc1.lhopital-products-differences
+    name: Using L'Hopital's rule with products and differences
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.lhopital-rule
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite a zero times infinity product
+        key_prerequisites: [math.calc1.lhopital-rule]
+      - id: kp2
+        can_do: Rewrite a difference by combining fractions
+        key_prerequisites: [math.calc1.lhopital-rule]
+      - id: kp3
+        can_do: Rewrite a difference with a conjugate
+        key_prerequisites: [math.calc1.lhopital-rule]
+      - id: kp4
+        can_do: Choose which factor to invert
+        key_prerequisites: [math.calc1.lhopital-rule]
+  - id: math.calc1.lhopital-powers
+    name: Using L'Hopital's rule with indeterminate powers
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.lhopital-products-differences
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.logarithmic-differentiation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take a log before the limit
+        key_prerequisites: [math.calc1.logarithmic-differentiation]
+      - id: kp2
+        can_do: Handle one to the infinity
+        key_prerequisites: [math.calc1.lhopital-products-differences, math.calc1.logarithmic-differentiation]
+      - id: kp3
+        can_do: Handle zero to the zero
+        key_prerequisites: [math.calc1.lhopital-products-differences, math.calc1.logarithmic-differentiation]
+      - id: kp4
+        can_do: Handle infinity to the zero
+        key_prerequisites: [math.calc1.lhopital-products-differences, math.calc1.logarithmic-differentiation]
+  - id: math.calc1.growth-rate-comparison
+    name: Comparing growth rates with limits
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.lhopital-rule
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.limits-at-infinity-exp-log
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare a power and an exponential
+        key_prerequisites: [math.calc1.lhopital-rule, math.calc1.limits-at-infinity-exp-log]
+      - id: kp2
+        can_do: Compare a log and a power
+        key_prerequisites: [math.calc1.lhopital-rule]
+      - id: kp3
+        can_do: Rank a list of functions by growth
+        key_prerequisites: [math.calc1.limits-at-infinity-exp-log]
+      - id: kp4
+        can_do: Find a limit that uses repeated comparison
+        key_prerequisites: [math.calc1.lhopital-rule]
+  - id: math.calc1.optimization-setup
+    name: Setting up an optimization problem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.closed-interval-method
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.function-from-description
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name variables and draw a figure
+        key_prerequisites: [math.precalc.function-from-description]
+      - id: kp2
+        can_do: Write the objective in one variable
+        key_prerequisites: [math.precalc.function-from-description]
+      - id: kp3
+        can_do: Find the feasible interval
+        key_prerequisites: [math.calc1.closed-interval-method]
+      - id: kp4
+        can_do: Solve a simple number problem
+        key_prerequisites: [math.calc1.closed-interval-method]
+  - id: math.calc1.optimization-geometry
+    name: Solving geometric optimization problems
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.optimization-setup
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Maximize a rectangular area with fixed fencing
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp2
+        can_do: Minimize material for a box or can
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp3
+        can_do: Maximize an inscribed figure
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp4
+        can_do: Check that the answer is the maximum
+        key_prerequisites: [math.calc1.optimization-setup]
+  - id: math.calc1.optimization-distance-time
+    name: Solving distance and time optimization problems
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.optimization-geometry
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Minimize distance to a curve
+        key_prerequisites: [math.calc1.optimization-geometry]
+      - id: kp2
+        can_do: Minimize travel time across two media
+        key_prerequisites: [math.calc1.optimization-geometry]
+      - id: kp3
+        can_do: Minimize a cost path
+        key_prerequisites: [math.calc1.optimization-geometry]
+      - id: kp4
+        can_do: Use a square of distance to simplify
+        key_prerequisites: [math.calc1.optimization-geometry]
+  - id: math.calc1.optimization-business
+    name: Solving business optimization problems
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.optimization-setup
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.marginal-cost-revenue
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Maximize revenue from a demand function
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp2
+        can_do: Maximize profit with marginal analysis
+        key_prerequisites: [math.calc1.marginal-cost-revenue]
+      - id: kp3
+        can_do: Minimize average cost
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp4
+        can_do: Find an optimal price with a linear demand change
+        key_prerequisites: [math.calc1.optimization-setup, math.calc1.marginal-cost-revenue]
+  - id: math.calc1.optimization-open-intervals
+    name: Justifying extrema on open intervals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.optimization-geometry
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.first-derivative-test
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Justify a single critical number as an absolute extremum
+        key_prerequisites: [math.calc1.first-derivative-test]
+      - id: kp2
+        can_do: Use the first derivative test as justification
+        key_prerequisites: [math.calc1.first-derivative-test]
+      - id: kp3
+        can_do: Use the second derivative for justification
+        key_prerequisites: [math.calc1.optimization-geometry]
+      - id: kp4
+        can_do: Rule out endpoint behaviour with limits
+        key_prerequisites: [math.calc1.optimization-geometry]
+  - id: math.calc1.related-rates-similar-triangles
+    name: Solving related rates with similar triangles
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.related-rates-geometry
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a conical tank problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp2
+        can_do: Solve a shadow problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp3
+        can_do: Solve a trough problem
+        key_prerequisites: [math.calc1.related-rates-geometry]
+      - id: kp4
+        can_do: Eliminate a variable with similar triangles
+        key_prerequisites: [math.calc1.related-rates-geometry]
+  - id: math.calc1.related-rates-trig
+    name: Solving related rates with trig
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-trig
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.related-rates-similar-triangles
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.related-rates-geometry
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a rotating spotlight problem
+        key_prerequisites: [math.calc1.chain-rule-trig]
+      - id: kp2
+        can_do: Solve an angle of elevation problem
+        key_prerequisites: [math.calc1.chain-rule-trig]
+      - id: kp3
+        can_do: Use the cosine law in a related rate
+        key_prerequisites: [math.calc1.chain-rule-trig, math.calc1.related-rates-similar-triangles]
+      - id: kp4
+        can_do: Solve a rate of changing angle in a triangle
+        key_prerequisites: [math.calc1.related-rates-similar-triangles]
+  - id: math.calc1.antiderivatives
+    name: Finding antiderivatives
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.mvt-consequences
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.sum-difference-multiple-rules
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reverse a power rule
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+      - id: kp2
+        can_do: Check an antiderivative by differentiating
+        key_prerequisites: [math.calc1.mvt-consequences]
+      - id: kp3
+        can_do: Explain the constant from the mean value consequences
+        key_prerequisites: [math.calc1.mvt-consequences]
+      - id: kp4
+        can_do: Find an antiderivative of a polynomial
+        key_prerequisites: [math.calc1.sum-difference-multiple-rules]
+  - id: math.calc1.indefinite-integral-notation
+    name: Using indefinite integral notation
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.antiderivatives
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read the integral sign and dx
+        key_prerequisites: [math.calc1.antiderivatives]
+      - id: kp2
+        can_do: Write the constant of integration
+        key_prerequisites: [math.calc1.antiderivatives]
+      - id: kp3
+        can_do: Write an indefinite integral for a given derivative
+        key_prerequisites: [math.calc1.antiderivatives]
+      - id: kp4
+        can_do: Check an integral statement by differentiating
+        key_prerequisites: [math.calc1.antiderivatives]
+  - id: math.calc1.basic-integral-rules
+    name: Using basic integration rules
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.indefinite-integral-notation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.derivatives-of-other-trig
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate powers including negative and fractional
+        key_prerequisites: [math.calc1.indefinite-integral-notation]
+      - id: kp2
+        can_do: Integrate exponentials and reciprocals
+        key_prerequisites: [math.calc1.indefinite-integral-notation]
+      - id: kp3
+        can_do: Integrate basic trig forms
+        key_prerequisites: [math.calc1.derivatives-of-other-trig]
+      - id: kp4
+        can_do: Integrate a linear combination of forms
+        key_prerequisites: [math.calc1.indefinite-integral-notation, math.calc1.derivatives-of-other-trig]
+  - id: math.calc1.integrate-after-rewriting
+    name: Rewriting before integrating
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.basic-integral-rules
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.rewrite-before-differentiating
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a product before integrating
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp2
+        can_do: Split a quotient before integrating
+        key_prerequisites: [math.calc1.rewrite-before-differentiating]
+      - id: kp3
+        can_do: Rewrite with an identity before integrating
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp4
+        can_do: Combine rewriting moves
+        key_prerequisites: [math.calc1.basic-integral-rules, math.calc1.rewrite-before-differentiating]
+  - id: math.calc1.initial-value-antiderivative
+    name: Solving initial value problems by antidifferentiating
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.basic-integral-rules
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a function from its derivative and a value
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp2
+        can_do: Find a function from its second derivative
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp3
+        can_do: Solve with trig or exponential derivatives
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp4
+        can_do: Find constants from two conditions
+        key_prerequisites: [math.calc1.basic-integral-rules]
+  - id: math.calc1.motion-from-acceleration
+    name: Finding motion from acceleration
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.initial-value-antiderivative
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.position-velocity-acceleration
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity from acceleration and an initial value
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+      - id: kp2
+        can_do: Find position from velocity and an initial value
+        key_prerequisites: [math.calc1.initial-value-antiderivative]
+      - id: kp3
+        can_do: Solve a constant gravity problem in metres per second
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp4
+        can_do: Solve a constant gravity problem in feet per second
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+  - id: math.calc1.sigma-for-riemann
+    name: Using sigma notation with area
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.sigma-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.sum-of-powers-formula
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a sigma expression
+        key_prerequisites: [math.alg2.sigma-properties]
+      - id: kp2
+        can_do: Use constant and linear sum formulas
+        key_prerequisites: [math.precalc.sum-of-powers-formula]
+      - id: kp3
+        can_do: Use square and cube sum formulas
+        key_prerequisites: [math.precalc.sum-of-powers-formula]
+      - id: kp4
+        can_do: Rewrite a sum in closed form in n
+        key_prerequisites: [math.alg2.sigma-properties, math.precalc.sum-of-powers-formula]
+  - id: math.calc1.area-by-rectangles
+    name: Estimating area with rectangles
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.sigma-for-riemann
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.area-under-curve-intuition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a rectangle estimate with four rectangles
+        key_prerequisites: [math.precalc.area-under-curve-intuition]
+      - id: kp2
+        can_do: Find width from an interval and n
+        key_prerequisites: [math.calc1.sigma-for-riemann]
+      - id: kp3
+        can_do: Write a sum in sigma notation
+        key_prerequisites: [math.calc1.sigma-for-riemann]
+      - id: kp4
+        can_do: Tell whether an estimate is high or low
+        key_prerequisites: [math.precalc.area-under-curve-intuition]
+  - id: math.calc1.riemann-left-right-midpoint
+    name: Using left, right and midpoint sums
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.area-by-rectangles
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use left endpoints
+        key_prerequisites: [math.calc1.area-by-rectangles]
+      - id: kp2
+        can_do: Use right endpoints
+        key_prerequisites: [math.calc1.area-by-rectangles]
+      - id: kp3
+        can_do: Use midpoints
+        key_prerequisites: [math.calc1.area-by-rectangles]
+      - id: kp4
+        can_do: Compare errors for monotonic functions
+        key_prerequisites: [math.calc1.area-by-rectangles]
+  - id: math.calc1.riemann-from-tables
+    name: Using Riemann sums from tables
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.riemann-left-right-midpoint
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a table with equal spacing
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp2
+        can_do: Use a table with unequal spacing
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp3
+        can_do: Estimate total distance from a velocity table
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp4
+        can_do: Interpret a table sum with units
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+  - id: math.calc1.limit-of-riemann-sum
+    name: Finding an area as a limit of a sum
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.riemann-left-right-midpoint
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.limits-at-infinity-rational
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a right-endpoint sum with general n
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp2
+        can_do: Simplify a sum with formulas
+        key_prerequisites: [math.calc1.riemann-left-right-midpoint]
+      - id: kp3
+        can_do: Take the limit for a linear function
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+      - id: kp4
+        can_do: Take the limit for a quadratic function
+        key_prerequisites: [math.calc1.limits-at-infinity-rational]
+  - id: math.calc1.definite-integral-definition
+    name: Defining the definite integral
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limit-of-riemann-sum
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the definition and notation
+        key_prerequisites: [math.calc1.limit-of-riemann-sum]
+      - id: kp2
+        can_do: Identify an integral from a limit of sums
+        key_prerequisites: [math.calc1.limit-of-riemann-sum]
+      - id: kp3
+        can_do: Write a limit of sums from an integral
+        key_prerequisites: [math.calc1.limit-of-riemann-sum]
+      - id: kp4
+        can_do: Explain signed area under the axis
+        key_prerequisites: [math.calc1.limit-of-riemann-sum]
+  - id: math.calc1.integral-as-signed-area
+    name: Evaluating integrals from geometry
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate with triangles and rectangles
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Evaluate with a semicircle
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Count area below the axis as negative
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Evaluate from a piecewise graph
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: math.calc1.properties-of-definite-integrals
+    name: Using properties of definite integrals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Use additivity over intervals
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Reverse the limits
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Use a zero-length interval
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: math.calc1.integral-comparison-bounds
+    name: Bounding an integral
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.properties-of-definite-integrals
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two integrals on an interval
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp2
+        can_do: Bound an integral with a maximum and minimum
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp3
+        can_do: Bound using a known function
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp4
+        can_do: Estimate an integral that has no simple form
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+  - id: math.calc1.u-substitution-indefinite
+    name: Using substitution on indefinite integrals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.integrate-after-rewriting
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.basic-integral-rules
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a substitution from a chain pattern
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Change the integral entirely to u
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Integrate with a power of a linear function
+        key_prerequisites: [math.calc1.chain-rule-general, math.calc1.basic-integral-rules]
+      - id: kp4
+        can_do: Back-substitute to the original variable
+        key_prerequisites: [math.calc1.chain-rule-general]
+  - id: math.calc1.substitution-adjusting-constants
+    name: Adjusting constants in a substitution
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-indefinite
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Adjust for a constant multiple
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+      - id: kp2
+        can_do: Adjust for a linear inside function
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+      - id: kp3
+        can_do: Solve for x when an extra x remains
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+      - id: kp4
+        can_do: Spot when a substitution cannot be adjusted
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+  - id: math.calc1.substitution-with-exp-log
+    name: Using substitution with exponentials and logs
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.derivative-of-log
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.substitution-adjusting-constants
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.u-substitution-indefinite
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate an exponential of a composite
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+      - id: kp2
+        can_do: Integrate a function over its inner derivative
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp3
+        can_do: Integrate a log power over x
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp4
+        can_do: Integrate an exponential ratio
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+  - id: math.calc1.substitution-with-trig
+    name: Using substitution with trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-adjusting-constants
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.u-substitution-indefinite
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate sine or cosine of a composite
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+      - id: kp2
+        can_do: Integrate a power of sine times cosine
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+      - id: kp3
+        can_do: Integrate tangent and cotangent
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+      - id: kp4
+        can_do: Integrate secant times tangent with a composite
+        key_prerequisites: [math.calc1.substitution-adjusting-constants]
+  - id: math.calc1.substitution-inverse-trig
+    name: Integrating to inverse trig functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-with-trig
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivatives-of-inverse-trig
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reach arctangent with a constant denominator
+        key_prerequisites: [math.calc1.derivatives-of-inverse-trig]
+      - id: kp2
+        can_do: Reach arcsine with a constant under a root
+        key_prerequisites: [math.calc1.derivatives-of-inverse-trig]
+      - id: kp3
+        can_do: Scale a variable to reach an inverse trig form
+        key_prerequisites: [math.calc1.substitution-with-trig, math.calc1.derivatives-of-inverse-trig]
+      - id: kp4
+        can_do: Split a numerator before integrating
+        key_prerequisites: [math.calc1.substitution-with-trig]
+  - id: math.calc1.integral-rules-with-tables
+    name: Evaluating integrals from table and graph values
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.properties-of-definite-integrals
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an integral from given integral values
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp2
+        can_do: Combine additivity and linearity with given values
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp3
+        can_do: Evaluate an integral defined by a graph region
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+      - id: kp4
+        can_do: Use reversed limits with given values
+        key_prerequisites: [math.calc1.properties-of-definite-integrals]
+  - id: math.calc1.ftc-part-2
+    name: Using the fundamental theorem to evaluate integrals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.basic-integral-rules
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.integral-rules-with-tables
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate a polynomial integral
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp2
+        can_do: Evaluate with exponentials and trig
+        key_prerequisites: [math.calc1.basic-integral-rules]
+      - id: kp3
+        can_do: Handle a discontinuous integrand mistake
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Evaluate using given integral values
+        key_prerequisites: [math.calc1.integral-rules-with-tables]
+  - id: math.calc1.ftc-part-1
+    name: Differentiating an integral function
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate an integral with variable upper limit
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Differentiate with a lower variable limit
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Build an antiderivative with an integral
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Use it to find extrema of an integral function
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: math.calc1.average-value
+    name: Finding the average value of a function
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute an average value of a polynomial
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Compute an average value of a trig function
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Interpret an average value in context
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Find a function value equal to the average
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: math.calc1.mvt-for-integrals
+    name: Using the mean value theorem for integrals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.average-value
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.mean-value-theorem
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.calc1.average-value, math.calc1.mean-value-theorem]
+      - id: kp2
+        can_do: Find the number guaranteed for a polynomial
+        key_prerequisites: [math.calc1.average-value]
+      - id: kp3
+        can_do: Find the number guaranteed for a trig function
+        key_prerequisites: [math.calc1.average-value]
+      - id: kp4
+        can_do: Explain the link to the mean value theorem
+        key_prerequisites: [math.calc1.mean-value-theorem]
+  - id: math.calc1.u-substitution-definite
+    name: Using substitution on definite integrals
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-indefinite
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Change limits along with the variable
+        key_prerequisites: [math.calc1.u-substitution-indefinite]
+      - id: kp2
+        can_do: Back-substitute instead of changing limits
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Evaluate a definite exponential or log integral
+        key_prerequisites: [math.calc1.u-substitution-indefinite, math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Evaluate a definite trig integral
+        key_prerequisites: [math.calc1.u-substitution-indefinite, math.calc1.ftc-part-2]
+  - id: math.calc1.integrate-even-odd
+    name: Using symmetry to integrate
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.alg2.even-odd-functions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify even and odd integrands
+        key_prerequisites: [math.alg2.even-odd-functions]
+      - id: kp2
+        can_do: Use symmetry for an even integrand
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp3
+        can_do: Use symmetry for an odd integrand
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Split a sum into even and odd parts
+        key_prerequisites: [math.calc1.u-substitution-definite, math.alg2.even-odd-functions]
+  - id: math.calc1.area-between-curves-x
+    name: Finding area between curves in x
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find area between two given curves on an interval
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Find the area between a parabola and a line
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Handle exponentials or trig in the integrand
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Write an area with a labeled representative rectangle
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: math.calc1.area-between-curves-y
+    name: Finding area between curves in y
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite curves as functions of y
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp2
+        can_do: Find area between curves in y
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Choose to integrate in x or y
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp4
+        can_do: Find an area that would take two x integrals
+        key_prerequisites: [math.calc1.area-between-curves-x]
+  - id: math.calc1.area-with-intersections
+    name: Finding area when curves cross
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intersections first
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp2
+        can_do: Split an area at a crossing
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Use an absolute value integrand
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp4
+        can_do: Find areas of three-curve regions
+        key_prerequisites: [math.calc1.area-between-curves-x]
+  - id: math.calc1.volume-by-disks
+    name: Finding volume by disks
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rotate a function around the x-axis
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp2
+        can_do: Rotate around the y-axis
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Find the volume of a known solid with disks
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp4
+        can_do: Write the disk integral with a labeled sketch
+        key_prerequisites: [math.calc1.area-between-curves-x]
+  - id: math.calc1.volume-by-washers
+    name: Finding volume by washers
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.volume-by-disks
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.area-between-curves-y
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.area-with-intersections
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a washer area
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp2
+        can_do: Rotate a region between curves around the x-axis
+        key_prerequisites: [math.calc1.volume-by-disks, math.calc1.area-with-intersections]
+      - id: kp3
+        can_do: Rotate around the y-axis
+        key_prerequisites: [math.calc1.area-between-curves-y]
+      - id: kp4
+        can_do: Rotate a region with a crossing
+        key_prerequisites: [math.calc1.area-with-intersections]
+  - id: math.calc1.volume-known-cross-sections
+    name: Finding volume by known cross sections
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.volume-by-disks
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find volume with square cross sections
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp2
+        can_do: Find volume with semicircular cross sections
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp3
+        can_do: Find volume with triangular cross sections
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp4
+        can_do: Build a pyramid's volume by slicing
+        key_prerequisites: [math.calc1.volume-by-disks]
+  - id: math.calc1.ftc-piecewise-absolute
+    name: Evaluating integrals of piecewise and absolute value functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.integral-as-signed-area
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split an integral at a boundary
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Evaluate a piecewise integrand
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Evaluate an absolute value integrand
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Check with signed area
+        key_prerequisites: [math.calc1.integral-as-signed-area]
+  - id: math.calc1.net-change-theorem
+    name: Using the net change theorem
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-piecewise-absolute
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the net change idea
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Find a total change from a rate
+        key_prerequisites: [math.calc1.ftc-piecewise-absolute]
+      - id: kp3
+        can_do: Find a final quantity from an initial value and a rate
+        key_prerequisites: [math.calc1.ftc-piecewise-absolute]
+      - id: kp4
+        can_do: Interpret an integral with units
+        key_prerequisites: [math.calc1.ftc-piecewise-absolute]
+  - id: math.calc1.displacement-distance
+    name: Finding displacement and total distance
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.net-change-theorem
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.motion-from-acceleration
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.speed-and-direction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find displacement from a velocity function
+        key_prerequisites: [math.calc1.net-change-theorem]
+      - id: kp2
+        can_do: Find total distance from a velocity function
+        key_prerequisites: [math.calc1.speed-and-direction]
+      - id: kp3
+        can_do: Find distance from an acceleration and an initial velocity
+        key_prerequisites: [math.calc1.motion-from-acceleration]
+      - id: kp4
+        can_do: Find total distance from a velocity graph
+        key_prerequisites: [math.calc1.net-change-theorem, math.calc1.speed-and-direction]
+  - id: math.calc1.accumulation-function-graphs
+    name: Reading graphs of accumulation functions
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.ftc-part-1
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate an accumulation function from a graph
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp2
+        can_do: Find where it increases from the integrand graph
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp3
+        can_do: Find its critical points and inflection points
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp4
+        can_do: Sketch it from the integrand graph
+        key_prerequisites: [math.calc1.ftc-part-1]
+  - id: math.calc1.ftc-with-chain-rule
+    name: Using the fundamental theorem with the chain rule
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.accumulation-function-graphs
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-1
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate with a composite upper limit
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp2
+        can_do: Differentiate with two variable limits
+        key_prerequisites: [math.calc1.ftc-part-1]
+      - id: kp3
+        can_do: Find a tangent line to an integral function
+        key_prerequisites: [math.calc1.accumulation-function-graphs]
+      - id: kp4
+        can_do: Find a limit of an integral with L'Hopital
+        key_prerequisites: [math.calc1.accumulation-function-graphs]
