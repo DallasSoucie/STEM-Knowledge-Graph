@@ -97,6 +97,8 @@ A topic is **near the limits** if it has 4 or more direct prerequisites, has a K
 
 ### Layout: curriculum bands
 
+Replaced by `2026-11-06-flow-layout-design.md`, once that is built.
+
 Positions are computed in Python and are repeatable.
 
 - **Columns:** the x axis has one column per level, from `gk` to `uni-upper`. Column width comes from the topic budgets in the manifest, not from current topic counts, so a growing course doesn't shift the columns.
