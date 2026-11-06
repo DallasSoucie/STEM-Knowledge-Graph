@@ -2353,6 +2353,32 @@ topics:
       - id: kp4
         can_do: Link the law to energy conservation
         key_prerequisites: [physics.hs2.faradays-law]
+  - id: physics.hs2.back-emf
+    name: Explaining back emf in a motor
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.lenzs-law
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.motor-torque
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why a spinning motor induces an opposing emf
+        key_prerequisites: [physics.hs2.lenzs-law]
+      - id: kp2
+        can_do: Find a net voltage across a motor's coil
+        key_prerequisites: [physics.hs2.lenzs-law, physics.hs2.motor-torque]
+      - id: kp3
+        can_do: Explain why a stalled motor draws a large current
+        key_prerequisites: [physics.hs2.motor-torque]
+      - id: kp4
+        can_do: Find a current at a given speed
+        key_prerequisites: [physics.hs2.motor-torque]
   - id: physics.hs2.motional-emf
     name: Calculating motional emf
     subject: physics
@@ -3081,13 +3107,16 @@ topics:
       - topic: physics.hs2.electromagnetic-wave-nature
         encompassing: 0.35
         confidence: high
+      - topic: physics.hs1.wave-refraction-and-diffraction
+        encompassing: 0.15
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Explain a historical wave argument
         key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
       - id: kp2
         can_do: Use interference as evidence
-        key_prerequisites: [physics.hs1.two-source-interference]
+        key_prerequisites: [physics.hs1.two-source-interference, physics.hs1.wave-refraction-and-diffraction]
       - id: kp3
         can_do: Compare particle and wave predictions
         key_prerequisites: [physics.hs1.two-source-interference, physics.hs2.electromagnetic-wave-nature]

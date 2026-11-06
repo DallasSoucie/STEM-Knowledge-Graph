@@ -75,6 +75,29 @@ topics:
       - id: kp4
         can_do: Compare two measurements with uncertainty
         key_prerequisites: [physics.hs1.significant-figures]
+  - id: physics.hs1.random-and-systematic-error
+    name: Telling random from systematic error
+    subject: physics
+    course: physics.hs1
+    level: g9
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.measurement-uncertainty
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot random error from scattered readings
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
+      - id: kp2
+        can_do: Spot systematic error from a shifted result
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
+      - id: kp3
+        can_do: Reduce each kind of error in a lab
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
+      - id: kp4
+        can_do: Calculate a percent error against an accepted value
+        key_prerequisites: [physics.hs1.measurement-uncertainty]
   - id: physics.hs1.order-of-magnitude
     name: Making order-of-magnitude estimates
     subject: physics
@@ -161,16 +184,20 @@ topics:
     level: g9
     status: draft
     prerequisites:
-      - topic: physics.hs1.measurement-uncertainty
-        encompassing: 0.3
-        confidence: high
       - topic: math.alg1.fit-line-technology
         encompassing: 0.3
         confidence: medium
+      - topic: physics.hs1.random-and-systematic-error
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: physics.hs1.measurement-uncertainty
+        encompassing: 0.15
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Choose axes and scales
-        key_prerequisites: [physics.hs1.measurement-uncertainty]
+        key_prerequisites: [physics.hs1.measurement-uncertainty, physics.hs1.random-and-systematic-error]
       - id: kp2
         can_do: Plot points with error bars
         key_prerequisites: [physics.hs1.measurement-uncertainty]
@@ -2318,6 +2345,32 @@ topics:
       - id: kp4
         can_do: Link gravity's work to potential energy
         key_prerequisites: [physics.hs1.work-energy-theorem]
+  - id: physics.hs1.gravitational-energy-at-a-distance
+    name: Using gravitational potential energy at a distance
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.universal-gravitation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.gravitational-energy-of-a-system
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why the zero level moves to infinity
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+      - id: kp2
+        can_do: Calculate energy with the distance formula
+        key_prerequisites: [physics.hs1.universal-gravitation]
+      - id: kp3
+        can_do: Find an energy change between two heights
+        key_prerequisites: [physics.hs1.universal-gravitation, physics.hs1.gravitational-energy-of-a-system]
+      - id: kp4
+        can_do: Show the near-surface formula as a special case
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
   - id: physics.hs1.elastic-potential-energy
     name: Calculating elastic potential energy
     subject: physics
@@ -2370,6 +2423,32 @@ topics:
       - id: kp4
         can_do: Solve a roller coaster at two points
         key_prerequisites: [physics.ms.energy-conservation]
+  - id: physics.hs1.escape-velocity
+    name: Calculating escape velocity
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.gravitational-energy-at-a-distance
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs1.conserving-mechanical-energy
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set total energy to zero for an escape
+        key_prerequisites: [physics.hs1.gravitational-energy-at-a-distance, physics.hs1.conserving-mechanical-energy]
+      - id: kp2
+        can_do: Calculate escape velocity from a planet
+        key_prerequisites: [physics.hs1.gravitational-energy-at-a-distance]
+      - id: kp3
+        can_do: Compare escape velocity on different planets
+        key_prerequisites: [physics.hs1.gravitational-energy-at-a-distance]
+      - id: kp4
+        can_do: Find a launch speed to reach a height
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy]
   - id: physics.hs1.energy-with-springs
     name: Solving energy problems with springs
     subject: physics
@@ -3315,8 +3394,12 @@ topics:
       - topic: physics.hs1.keplers-third-law
         encompassing: 0.25
         confidence: high
-      - topic: physics.hs1.gravitational-energy-of-a-system
+      - topic: physics.hs1.gravitational-energy-at-a-distance
         encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.gravitational-energy-of-a-system
+        encompassing: 0.15
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3327,7 +3410,7 @@ topics:
         key_prerequisites: [physics.hs1.conserving-angular-momentum]
       - id: kp3
         can_do: Find an energy to change orbit
-        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system, physics.hs1.gravitational-energy-at-a-distance]
       - id: kp4
         can_do: Explain an elliptical orbit with conservation
         key_prerequisites: [physics.hs1.conserving-angular-momentum, physics.hs1.keplers-third-law]
@@ -3775,6 +3858,32 @@ topics:
       - id: kp4
         can_do: Find a reflected pulse's inversion
         key_prerequisites: [physics.hs1.pulses-and-periodic-waves]
+  - id: physics.hs1.wave-refraction-and-diffraction
+    name: Predicting refraction and diffraction of waves
+    subject: physics
+    course: physics.hs1
+    level: g10
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.boundary-behaviour
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.wave-equation-problems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a wave changing direction in a new medium
+        key_prerequisites: [physics.hs1.wave-equation-problems]
+      - id: kp2
+        can_do: Relate a speed change to wavelength
+        key_prerequisites: [physics.hs1.wave-equation-problems]
+      - id: kp3
+        can_do: Show a wave spreading through a gap
+        key_prerequisites: [physics.hs1.boundary-behaviour]
+      - id: kp4
+        can_do: Predict how gap size changes diffraction
+        key_prerequisites: [physics.hs1.wave-equation-problems]
   - id: physics.hs1.superposition
     name: Using superposition
     subject: physics
