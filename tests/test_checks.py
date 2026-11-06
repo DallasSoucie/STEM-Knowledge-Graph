@@ -249,7 +249,6 @@ def test_severities_match_the_spec():
         "no-prereq-above-gk",
         "weight-clustering",
         "budget-variance",
-        "level-outside-course",
     }
     assert {n for n, r in RULES.items() if r.severity == "warning"} == warnings
     assert {i.severity for i in run_checks(redundant_edge()) if i.rule == "redundant-edge"} == {
@@ -461,6 +460,7 @@ def test_level_outside_course_ignores_stubs_and_in_range_topics():
     assert "level-outside-course" not in rules_fired(valid_graph())
     kg = level_outside_course()
     (found,) = [i for i in run_checks(kg) if i.rule == "level-outside-course"]
+    assert found.severity == "error"
     assert found.severity == "warning" and found.topic == "math.b.four"
 
 

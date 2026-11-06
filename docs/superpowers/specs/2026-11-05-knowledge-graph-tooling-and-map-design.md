@@ -69,7 +69,7 @@ The rules are those in the `CLAUDE.md` validation section, plus:
 - **Learner walk (error):** starting from nothing, walk each course sequence in order and confirm every topic becomes reachable. This stands in for Math Academy's practice of running the real model build until we have a model.
 - **Encompassed ancestry (error, new rule):** every `encompassed` topic must be an ancestor of the topic. Otherwise a student could get review credit for a topic they were never required to learn. Approving this spec approves this rule, and `CLAUDE.md` is updated to match.
 - **Lane overflow (error):** the map gives each subject row a fixed number of lanes. A manifest that needs more lanes than the row holds fails `validate`, so `export-map` never meets it.
-- **Level outside course (warning):** a non-stub topic whose level lies outside its course's level range in the manifest.
+- **Level outside course (error):** a non-stub topic whose level lies outside its course's level range in the manifest.
 
 If LibYAML parsing alone breaks the 10-second target, add a cache of parsed files, keyed on file hash. Build the cache only if the speed test fails.
 

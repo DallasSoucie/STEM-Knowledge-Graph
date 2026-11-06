@@ -102,7 +102,7 @@ These weights are what make the task-selection model work: Math Academy reported
 
 `refs/uni_course_descriptions` has only two universities, so it can't support this survey by itself. Use public syllabi as well. Survey for coverage only, and write topic names and order yourself, so that no single source shows through.
 
-**Expect cross-subject edges and only keep the real ones.** Math is the spine. The test for an edge is whether a student gets stuck without that prerequisite, and an uncertain link gets `confidence: low`.
+**Expect cross-subject edges and only keep the real ones.** Math is the spine. Prerequisites across all disciplines are the goal, so an early course in any subject may have first topics that depend on other subjects, including engineering's opening topics. When a course's topic list is approved, settle its `follows` links in `graph/courses.yaml` so real cross-discipline prerequisites can exist. The test for an edge is whether a student gets stuck without that prerequisite, and an uncertain link gets `confidence: low`.
 
 # Tooling
 

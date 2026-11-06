@@ -34,7 +34,7 @@ def prereq_above_level(kg: KnowledgeGraph, index: GraphIndex):
                 )
 
 
-@rule("level-outside-course", "warning")
+@rule("level-outside-course", "error")
 def level_outside_course(kg: KnowledgeGraph, index: GraphIndex):
     for tid, t in kg.topics.items():
         course = kg.courses.get(t.course_id)
