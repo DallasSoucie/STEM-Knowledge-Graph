@@ -565,3 +565,691 @@ topics:
         key_prerequisites: [math.g2.add-three-two-digit]
       - id: kp3
         can_do: Group four numbers to make the addition easier
+  - id: math.g2.subtract-tens-from-two-digit
+    name: Subtracting tens from a two-digit number
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g1.subtract-multiples-of-ten
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.ten-more-ten-less
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract 10 from a two-digit number
+        key_prerequisites: [math.g1.ten-more-ten-less]
+      - id: kp2
+        can_do: Subtract several tens using bundles
+        key_prerequisites: [math.g1.subtract-multiples-of-ten]
+      - id: kp3
+        can_do: Subtract several tens without bundles
+        key_prerequisites: [math.g1.subtract-multiples-of-ten]
+  - id: math.g2.subtract-ones-without-breaking
+    name: Subtracting ones without breaking a ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-fluently-within-20
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g1.two-digit-as-tens-and-ones
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract ones from a two-digit number using bundles
+        key_prerequisites: [math.g1.two-digit-as-tens-and-ones]
+      - id: kp2
+        can_do: Subtract ones using a known fact
+        key_prerequisites: [math.g2.subtract-fluently-within-20]
+      - id: kp3
+        can_do: Subtract all the ones to reach a multiple of ten
+        key_prerequisites: [math.g1.two-digit-as-tens-and-ones]
+  - id: math.g2.subtract-ones-breaking-ten
+    name: Subtracting ones by breaking a ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-ones-without-breaking
+        encompassing: 0.55
+        confidence: high
+    encompassed:
+      - topic: math.g1.subtract-through-ten
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trade one ten for ten ones using bundles
+        key_prerequisites: [math.g2.subtract-ones-without-breaking]
+      - id: kp2
+        can_do: Subtract ones from a multiple of ten
+        key_prerequisites: [math.g1.subtract-through-ten]
+      - id: kp3
+        can_do: Subtract ones that need a broken ten in a drawing or written method
+        key_prerequisites: [math.g1.subtract-through-ten]
+  - id: math.g2.subtract-two-digit-without-breaking
+    name: Subtracting two-digit numbers without breaking a ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-tens-from-two-digit
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g2.subtract-ones-without-breaking
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract a two-digit number using bundles
+        key_prerequisites: [math.g2.subtract-tens-from-two-digit, math.g2.subtract-ones-without-breaking]
+      - id: kp2
+        can_do: Subtract tens from tens and ones from ones in a drawing
+        key_prerequisites: [math.g2.subtract-tens-from-two-digit, math.g2.subtract-ones-without-breaking]
+      - id: kp3
+        can_do: Record the subtraction with a written method
+  - id: math.g2.subtract-two-digit-breaking-ten
+    name: Subtracting two-digit numbers by breaking a ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-ones-breaking-ten
+        encompassing: 0.65
+        confidence: high
+      - topic: math.g2.subtract-two-digit-without-breaking
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract a two-digit number and break a ten using bundles
+        key_prerequisites: [math.g2.subtract-ones-breaking-ten]
+      - id: kp2
+        can_do: Subtract a two-digit number with a broken ten in a drawing
+        key_prerequisites: [math.g2.subtract-ones-breaking-ten, math.g2.subtract-two-digit-without-breaking]
+      - id: kp3
+        can_do: Record the broken ten in a written method
+        key_prerequisites: [math.g2.subtract-two-digit-without-breaking]
+  - id: math.g2.subtract-on-number-line
+    name: Subtracting with jumps on a number line
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.number-line
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.g2.subtract-tens-from-two-digit
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a difference as jumps back on a number line
+        key_prerequisites: [math.g2.number-line]
+      - id: kp2
+        can_do: Jump back by tens and then ones on a number line
+        key_prerequisites: [math.g2.subtract-tens-from-two-digit]
+      - id: kp3
+        can_do: Choose jumps that land on a multiple of ten
+        key_prerequisites: [math.g2.number-line]
+  - id: math.g2.subtract-by-adding-up
+    name: Subtracting by adding up
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-two-digit-breaking-ten
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g1.subtract-using-addition
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a difference by adding up to the next ten
+        key_prerequisites: [math.g1.subtract-using-addition]
+      - id: kp2
+        can_do: Find a difference by adding up in tens and ones
+        key_prerequisites: [math.g1.subtract-using-addition]
+      - id: kp3
+        can_do: Choose adding up when the numbers are close together
+        key_prerequisites: [math.g2.subtract-two-digit-breaking-ten]
+  - id: math.g2.check-subtraction-with-addition
+    name: Checking subtraction with addition
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-two-digit-fluently
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g2.subtract-two-digit-breaking-ten
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the addition that checks a subtraction
+        key_prerequisites: [math.g2.subtract-two-digit-breaking-ten]
+      - id: kp2
+        can_do: Use addition to spot a wrong difference
+        key_prerequisites: [math.g2.add-two-digit-fluently]
+      - id: kp3
+        can_do: Correct a wrong difference after checking it
+        key_prerequisites: [math.g2.add-two-digit-fluently, math.g2.subtract-two-digit-breaking-ten]
+  - id: math.g2.choose-strategy-within-100
+    name: Choosing a strategy within 100
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-friendlier-numbers
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g2.subtract-on-number-line
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g2.subtract-by-adding-up
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose how to add two two-digit numbers and solve it
+        key_prerequisites: [math.g2.add-friendlier-numbers]
+      - id: kp2
+        can_do: Choose how to subtract two two-digit numbers and solve it
+        key_prerequisites: [math.g2.subtract-on-number-line, math.g2.subtract-by-adding-up]
+      - id: kp3
+        can_do: Solve a mixed set of sums and differences within 100
+        key_prerequisites: [math.g2.add-friendlier-numbers, math.g2.subtract-by-adding-up]
+  - id: math.g2.add-take-stories-within-100
+    name: Solving add and take-away stories within 100
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.choose-strategy-within-100
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.add-take-stories-within-20
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story where objects join a group, up to 100
+        key_prerequisites: [math.g2.choose-strategy-within-100, math.g1.add-take-stories-within-20]
+      - id: kp2
+        can_do: Solve a story where objects are taken away, up to 100
+        key_prerequisites: [math.g2.choose-strategy-within-100, math.g1.add-take-stories-within-20]
+      - id: kp3
+        can_do: Write an equation with a symbol for the unknown
+        key_prerequisites: [math.g1.add-take-stories-within-20]
+  - id: math.g2.unknown-stories-within-100
+    name: Solving stories with an unknown part, change or start
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-take-stories-within-100
+        encompassing: 0.6
+        confidence: high
+      - topic: math.g1.unknown-change-or-start-stories
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story with a missing part, up to 100
+        key_prerequisites: [math.g2.add-take-stories-within-100]
+      - id: kp2
+        can_do: Solve a story with an unknown change, up to 100
+        key_prerequisites: [math.g2.add-take-stories-within-100, math.g1.unknown-change-or-start-stories]
+      - id: kp3
+        can_do: Solve a story with an unknown start, up to 100
+        key_prerequisites: [math.g1.unknown-change-or-start-stories]
+  - id: math.g2.comparison-stories-within-100
+    name: Solving comparison stories within 100
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-take-stories-within-100
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.how-many-more-stories
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story asking how many more, up to 100
+        key_prerequisites: [math.g1.how-many-more-stories]
+      - id: kp2
+        can_do: Solve a story asking how many fewer, up to 100
+        key_prerequisites: [math.g1.how-many-more-stories]
+      - id: kp3
+        can_do: Solve a story that gives the difference and asks for a group's size
+        key_prerequisites: [math.g2.add-take-stories-within-100]
+  - id: math.g2.two-step-addition-stories
+    name: Solving two-step addition stories
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-take-stories-within-100
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story where more objects are added twice
+        key_prerequisites: [math.g2.add-take-stories-within-100]
+      - id: kp2
+        can_do: Say which step to do first in a two-step story
+      - id: kp3
+        can_do: Write an equation for each step of a story
+        key_prerequisites: [math.g2.add-take-stories-within-100]
+  - id: math.g2.two-step-mixed-stories
+    name: Solving two-step mixed stories
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.two-step-addition-stories
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a story that adds and then takes away
+        key_prerequisites: [math.g2.two-step-addition-stories]
+      - id: kp2
+        can_do: Solve a story that takes away and then adds
+        key_prerequisites: [math.g2.two-step-addition-stories]
+      - id: kp3
+        can_do: Solve a two-step story that asks how many fewer
+        key_prerequisites: [math.g2.two-step-addition-stories]
+  - id: math.g2.spot-increasing-patterns
+    name: Spotting increasing patterns
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g1.continue-longer-patterns
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.g1.count-by-2s
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Say how a growing pattern of objects changes at each step
+        key_prerequisites: [math.g1.continue-longer-patterns]
+      - id: kp2
+        can_do: Say what is added each time in a number pattern
+        key_prerequisites: [math.g1.count-by-2s]
+      - id: kp3
+        can_do: Build the next step of a growing pattern
+  - id: math.g2.continue-increasing-patterns
+    name: Continuing increasing patterns
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.spot-increasing-patterns
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Continue a number pattern that adds 2, 5 or 10
+        key_prerequisites: [math.g2.spot-increasing-patterns]
+      - id: kp2
+        can_do: Find a missing number in an increasing pattern
+        key_prerequisites: [math.g2.spot-increasing-patterns]
+      - id: kp3
+        can_do: Make an increasing pattern from a given rule
+        key_prerequisites: [math.g2.spot-increasing-patterns]
+  - id: math.g2.repeating-or-increasing
+    name: Telling repeating from increasing patterns
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.spot-increasing-patterns
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say whether a pictured pattern repeats or grows
+        key_prerequisites: [math.g2.spot-increasing-patterns]
+      - id: kp2
+        can_do: Say whether a number pattern repeats or grows
+        key_prerequisites: [math.g2.spot-increasing-patterns]
+      - id: kp3
+        can_do: Say what would come next in either kind of pattern
+  - id: math.g2.equal-not-equal-statements
+    name: Writing equal and not-equal statements
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g1.true-or-false-equations
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g1.comparison-symbols
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Say what the not-equal symbol means
+      - id: kp2
+        can_do: Write equals or not-equal between two sums
+        key_prerequisites: [math.g1.true-or-false-equations]
+      - id: kp3
+        can_do: Write greater-than, less-than or equals between two sums
+        key_prerequisites: [math.g1.comparison-symbols]
+  - id: math.g2.balance-equations
+    name: Balancing an equation with a sum on each side
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.equal-not-equal-statements
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g1.unknown-in-addition
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the unknown that balances a sum on each side
+        key_prerequisites: [math.g1.unknown-in-addition]
+      - id: kp2
+        can_do: Find the unknown without working out the sum first
+        key_prerequisites: [math.g2.equal-not-equal-statements]
+      - id: kp3
+        can_do: Say why an equation with a sum on each side is balanced
+  - id: math.g2.ten-or-hundred-more-less
+    name: Finding 10 or 100 more and less
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.three-digit-place-value
+        encompassing: 0.5
+        confidence: high
+      - topic: math.g1.ten-more-ten-less
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find 10 more or 10 less than a three-digit number
+        key_prerequisites: [math.g1.ten-more-ten-less]
+      - id: kp2
+        can_do: Find 100 more or 100 less than a three-digit number
+        key_prerequisites: [math.g2.three-digit-place-value]
+      - id: kp3
+        can_do: Say 10 or 100 more or less without counting
+        key_prerequisites: [math.g2.three-digit-place-value]
+  - id: math.g2.add-multiples-of-10-and-100
+    name: Adding multiples of 10 and 100
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.three-digit-place-value
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g1.add-multiples-of-ten
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add multiples of 100 using a known fact
+        key_prerequisites: [math.g2.three-digit-place-value]
+      - id: kp2
+        can_do: Add a multiple of 10 to a multiple of 100
+        key_prerequisites: [math.g2.three-digit-place-value]
+      - id: kp3
+        can_do: Add multiples of ten with a total over 100
+        key_prerequisites: [math.g1.add-multiples-of-ten]
+  - id: math.g2.add-three-digit-without-new-ten
+    name: Adding three-digit numbers without a new ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.ten-or-hundred-more-less
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.g2.add-multiples-of-10-and-100
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add hundreds, tens and ones using bundles
+        key_prerequisites: [math.g2.add-multiples-of-10-and-100]
+      - id: kp2
+        can_do: Add three-digit numbers in a drawing
+        key_prerequisites: [math.g2.add-multiples-of-10-and-100]
+      - id: kp3
+        can_do: Record the addition with a written method
+  - id: math.g2.add-three-digit-new-ten
+    name: Adding three-digit numbers with a new ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-two-digit-fluently
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g2.add-three-digit-without-new-ten
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add three-digit numbers and trade for a new ten using bundles
+        key_prerequisites: [math.g2.add-three-digit-without-new-ten]
+      - id: kp2
+        can_do: Add three-digit numbers with a new ten in a drawing
+        key_prerequisites: [math.g2.add-three-digit-without-new-ten]
+      - id: kp3
+        can_do: Record the new ten in a written method
+        key_prerequisites: [math.g2.add-two-digit-fluently]
+  - id: math.g2.add-three-digit-new-hundred
+    name: Adding three-digit numbers with a new hundred
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-three-digit-new-ten
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trade ten tens for a new hundred using bundles
+        key_prerequisites: [math.g2.add-three-digit-new-ten]
+      - id: kp2
+        can_do: Add three-digit numbers with a new hundred in a drawing
+        key_prerequisites: [math.g2.add-three-digit-new-ten]
+      - id: kp3
+        can_do: Record the new hundred in a written method
+        key_prerequisites: [math.g2.add-three-digit-new-ten]
+  - id: math.g2.add-three-digit-both
+    name: Adding three-digit numbers with both
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-three-digit-new-hundred
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add three-digit numbers with a new ten and a new hundred
+        key_prerequisites: [math.g2.add-three-digit-new-hundred]
+      - id: kp2
+        can_do: Add three-digit numbers with a total of exactly 1000
+        key_prerequisites: [math.g2.add-three-digit-new-hundred]
+      - id: kp3
+        can_do: Solve a mixed set of three-digit sums
+        key_prerequisites: [math.g2.add-three-digit-new-hundred]
+  - id: math.g2.subtract-multiples-of-10-and-100
+    name: Subtracting multiples of 10 and 100
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.three-digit-place-value
+        encompassing: 0.45
+        confidence: high
+      - topic: math.g1.subtract-multiples-of-ten
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract multiples of 100 using a known fact
+        key_prerequisites: [math.g2.three-digit-place-value]
+      - id: kp2
+        can_do: Subtract a multiple of 10 from a three-digit number
+        key_prerequisites: [math.g2.three-digit-place-value]
+      - id: kp3
+        can_do: Subtract a multiple of ten across a hundred
+        key_prerequisites: [math.g1.subtract-multiples-of-ten]
+  - id: math.g2.subtract-three-digit-without-breaking
+    name: Subtracting three-digit numbers without breaking
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.ten-or-hundred-more-less
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.g2.subtract-multiples-of-10-and-100
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract hundreds, tens and ones using bundles
+        key_prerequisites: [math.g2.subtract-multiples-of-10-and-100]
+      - id: kp2
+        can_do: Subtract three-digit numbers in a drawing
+        key_prerequisites: [math.g2.subtract-multiples-of-10-and-100]
+      - id: kp3
+        can_do: Record the subtraction with a written method
+  - id: math.g2.subtract-three-digit-breaking-ten
+    name: Subtracting three-digit numbers by breaking a ten
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-two-digit-breaking-ten
+        encompassing: 0.55
+        confidence: high
+      - topic: math.g2.subtract-three-digit-without-breaking
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract and break a ten using bundles
+        key_prerequisites: [math.g2.subtract-three-digit-without-breaking]
+      - id: kp2
+        can_do: Subtract with a broken ten in a drawing
+        key_prerequisites: [math.g2.subtract-two-digit-breaking-ten]
+      - id: kp3
+        can_do: Record the broken ten in a written method
+        key_prerequisites: [math.g2.subtract-two-digit-breaking-ten]
+  - id: math.g2.subtract-three-digit-breaking-hundred
+    name: Subtracting three-digit numbers by breaking a hundred
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-three-digit-breaking-ten
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trade one hundred for ten tens using bundles
+        key_prerequisites: [math.g2.subtract-three-digit-breaking-ten]
+      - id: kp2
+        can_do: Subtract with a broken hundred in a drawing
+        key_prerequisites: [math.g2.subtract-three-digit-breaking-ten]
+      - id: kp3
+        can_do: Subtract when both a ten and a hundred must be broken
+        key_prerequisites: [math.g2.subtract-three-digit-breaking-ten]
+  - id: math.g2.subtract-across-zero
+    name: Subtracting across a zero
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.subtract-three-digit-breaking-hundred
+        encompassing: 0.75
+        confidence: high
+      - topic: math.g2.zero-in-a-place
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Subtract from a number with a zero in the ones place
+        key_prerequisites: [math.g2.zero-in-a-place]
+      - id: kp2
+        can_do: Subtract from a number with a zero in the tens place
+        key_prerequisites: [math.g2.subtract-three-digit-breaking-hundred, math.g2.zero-in-a-place]
+      - id: kp3
+        can_do: Subtract from a multiple of 100
+        key_prerequisites: [math.g2.subtract-three-digit-breaking-hundred]
+  - id: math.g2.explain-strategies
+    name: Explaining why a strategy works
+    subject: math
+    course: math.g2
+    level: g2
+    status: draft
+    prerequisites:
+      - topic: math.g2.add-three-digit-both
+        encompassing: 0.25
+        confidence: medium
+      - topic: math.g2.subtract-across-zero
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use a drawing to show why a new ten is needed
+        key_prerequisites: [math.g2.add-three-digit-both]
+      - id: kp2
+        can_do: Use a drawing to show why a ten or hundred must be broken
+        key_prerequisites: [math.g2.subtract-across-zero]
+      - id: kp3
+        can_do: Compare two strategies for the same problem and say why both work
