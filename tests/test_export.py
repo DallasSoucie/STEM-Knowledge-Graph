@@ -10,8 +10,9 @@ from kg.checks import run_checks
 from kg.cli import app
 from kg.graph import KnowledgeGraph
 from kg.map.data import build_map_data
+from kg.map.layout import STAGE_SPACING, level_floors, topic_depths
 from kg.map.export import export_map
-from kg.model import Topic
+from kg.model import LEVELS, Topic
 
 runner = CliRunner()
 
@@ -101,11 +102,34 @@ def test_stub_and_near_limit_flags_are_exported():
 
 def test_topic_record_shape(sample_graph):
     data = build_map_data(sample_graph)
-    assert set(data) == {"levels", "subjects", "courses", "columns", "topics", "edges"}
+    assert set(data) == {
+        "levels", "subjects", "courses", "level_markers", "stage_spacing", "topics", "edges",
+    }
+    assert data["stage_spacing"] == STAGE_SPACING
+    assert all(set(s) == {"id"} for s in data["subjects"])
+    assert all("lane" not in c for c in data["courses"])
     t = data["topics"][0]
     assert set(t) == {
         "id", "name", "subject", "course", "level", "status", "x", "y", "near_limits", "kps",
     }
+
+
+def test_level_markers_sit_at_each_floor(sample_graph):
+    data = build_map_data(sample_graph)
+    floors = level_floors(sample_graph, topic_depths(sample_graph))
+    assert {m["level"]: m["x"] for m in data["level_markers"]} == {
+        lv: f * STAGE_SPACING for lv, f in floors.items()
+    }
+
+
+def test_stub_level_falls_back_to_its_courses_first_level():
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 2, levels=("g4", "g6"))}
+    add(kg, topic("math.a.one", level="g5"), Topic(id="math.a.later", name="L", status="stub"))
+    add(kg, Topic(id="math.nowhere.x", name="N", status="stub"))
+    by_id = {t["id"]: t for t in build_map_data(kg)["topics"]}
+    assert by_id["math.a.later"]["level"] == "g4"
+    assert by_id["math.nowhere.x"]["level"] == LEVELS[0]
 
 
 def test_empty_graph_exports(tmp_path):

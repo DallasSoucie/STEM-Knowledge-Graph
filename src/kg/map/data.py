@@ -2,30 +2,34 @@
 
 from kg.graph import KnowledgeGraph
 from kg.limits import is_near_limits
-from kg.map.layout import _subject_rows, column_bounds, compute_positions, lane_of, row_bounds
+from kg.map.layout import (
+    SUBJECT_ORDER,
+    STAGE_SPACING,
+    flow_positions,
+    level_floors,
+    topic_depths,
+)
 from kg.model import LEVELS
 
 
-def _level_at(bounds: dict[str, tuple[float, float]], x: float) -> str:
-    for level in LEVELS:
-        if x < bounds[level][1]:
-            return level
-    return LEVELS[-1]
+def _level_of(kg: KnowledgeGraph, t) -> str:
+    """A stub has no level of its own, so it shows its course's first one."""
+    if t.level:
+        return t.level
+    c = kg.courses.get(t.course_id)
+    return c.levels[0] if c else LEVELS[0]
 
 
 def build_map_data(kg: KnowledgeGraph) -> dict:
-    """Levels, subject rows, courses, columns, topics with positions, and weighted edges."""
-    positions = compute_positions(kg)
-    bounds = column_bounds(kg)
-    lanes = lane_of(kg)
-    rows = _subject_rows(kg)
-    row_ys = row_bounds(kg)
+    """Levels, subjects, courses, level markers, topics with positions, and weighted edges."""
+    positions = flow_positions(kg)
+    floors = level_floors(kg, topic_depths(kg))
     used = {t.id.split(".")[0] for t in kg.topics.values()} | {c.subject for c in kg.courses.values()}
-    subjects = [
-        {"id": s, "row": r, "y0": row_ys[s][0], "y1": row_ys[s][1]}
-        for s, r in sorted(rows.items(), key=lambda kv: kv[1])
-        if s in used
-    ]
+    # pinned subjects first, then any other in manifest order
+    manifest = dict.fromkeys(c.subject for c in kg.courses.values())
+    manifest.update(dict.fromkeys(t.id.split(".")[0] for t in kg.topics.values()))
+    ordered = [*SUBJECT_ORDER, *(s for s in manifest if s not in SUBJECT_ORDER)]
+    subjects = [{"id": s} for s in ordered if s in used]
 
     topics, index = [], {}
     for tid, t in kg.topics.items():
@@ -37,7 +41,7 @@ def build_map_data(kg: KnowledgeGraph) -> dict:
                 "name": t.name,
                 "subject": t.subject or tid.split(".")[0],
                 "course": t.course or t.course_id,
-                "level": t.level or _level_at(bounds, x),
+                "level": _level_of(kg, t),
                 "status": t.status,
                 "x": x,
                 "y": y,
@@ -62,17 +66,17 @@ def build_map_data(kg: KnowledgeGraph) -> dict:
             "subject": c.subject,
             "levels": list(c.levels),
             "budget": c.budget,
-            "lane": lanes[c.id][1] if c.id in lanes else None,
             "is_view": c.is_view,
         }
         for c in kg.courses.values()
     ]
-    columns = [{"level": lv, "x0": bounds[lv][0], "x1": bounds[lv][1]} for lv in LEVELS]
+    level_markers = [{"level": lv, "x": f * STAGE_SPACING} for lv, f in floors.items()]
     return {
         "levels": list(LEVELS),
         "subjects": subjects,
         "courses": courses,
-        "columns": columns,
+        "level_markers": level_markers,
+        "stage_spacing": STAGE_SPACING,
         "topics": topics,
         "edges": edges,
     }

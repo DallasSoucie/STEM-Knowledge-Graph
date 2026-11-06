@@ -445,7 +445,7 @@ def test_course_labels_never_overlap_at_any_zoom(page, tmp_path):
         rects = visible_rects(page, ".lbl-course")
         assert rects, f"no course labels after {steps} more zoom steps"
         assert_no_overlap(rects)
-        assert_no_overlap(rects, visible_rects(page, ".lbl-subject"))
+        assert_no_overlap(rects, visible_rects(page, ".lbl-level"))
         assert_no_overlap(page.evaluate("window.kgMap.labelRects()"))  # topic labels stay clear of them too
         seen.append(len(rects))
     assert seen[0] < n_courses  # culled, not piled up
@@ -500,7 +500,11 @@ def small_graph(*sizes):
 def named_course_graph(n=71):
     kg = KnowledgeGraph()
     kg.courses = {"math.a": course("math.a", 60, levels=("g4", "g4"))}
-    names = [topic(f"math.a.t{i:03d}", level="g4") for i in range(n)]
+    # nine parallel chains, so the topics form stages and rows rather than a single column
+    names = [
+        topic(f"math.a.t{i:03d}", [f"math.a.t{i - 9:03d}"] if i >= 9 else None, level="g4")
+        for i in range(n)
+    ]
     for i, t in enumerate(names):
         t.name = f"Solving a rather long kind of problem number {i}"
     add(kg, *names)
@@ -546,6 +550,44 @@ def test_small_graph_opens(page, tmp_path, sizes, size):
     assert page.locator("#nowebgl").count() == 0
     assert page.evaluate("window.kgMap.topicCount()") == sum(sizes)
     assert errors == []
+
+
+def test_graph_with_no_edges_opens_as_one_column(page, tmp_path):
+    errors = open_map(page, small_graph(60), tmp_path)
+    assert page.evaluate("window.kgMap.topicCount()") == 60 and errors == []
+
+
+def test_no_subject_gutter(sample_page):
+    assert sample_page.locator("#gutter").count() == 0
+
+
+def test_level_markers_show_and_never_overlap(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 3, levels=("gk", "g2"))}
+    add(
+        kg,
+        topic("math.a.t0", level="gk"),
+        topic("math.a.t1", ["math.a.t0"], level="g1"),
+        topic("math.a.t2", ["math.a.t1"], level="g2"),
+    )
+    open_map(page, kg, tmp_path)
+    rects = visible_rects(page, ".lbl-level")
+    assert [r["text"] for r in rects] == ["gk", "g1", "g2"]
+    assert_no_overlap(rects)
+
+
+def test_course_label_sits_at_its_largest_stage(page, tmp_path):
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 8, levels=("g4", "g4"))}
+    add(kg, topic("math.a.s0", level="g4"))
+    add(kg, *[topic(f"math.a.m{i}", ["math.a.s0"], level="g4") for i in range(5)])
+    add(kg, *[topic(f"math.a.e{i}", [f"math.a.m{i}"], level="g4") for i in range(2)])
+    open_map(page, kg, tmp_path)
+    label = visible_rects(page, ".lbl-course")[0]
+    left = page.locator("#map").bounding_box()["x"]
+    x0 = page.evaluate("id => window.kgMap.nodeViewport(id).x", "math.a.s0")
+    x1 = page.evaluate("id => window.kgMap.nodeViewport(id).x", "math.a.m0")
+    assert abs(label["x0"] - left - x1) <= x1 - x0
 
 
 def test_startup_failure_is_reported_as_itself(page, tmp_path):
@@ -606,13 +648,17 @@ def test_selecting_on_a_sparse_graph_keeps_neighbours_in_view(page, tmp_path, n,
 
 
 def test_selecting_on_a_dense_graph_separates_lines(page, tmp_path):
-    kg = manifest_graph(per_course=40)
+    kg = KnowledgeGraph()
+    kg.courses = {"math.a": course("math.a", 400, levels=("g4", "g4"))}
+    # one stage of 400 topics, so neighbours in it sit one line apart
+    add(kg, topic("math.a.root", level="g4"))
+    add(kg, *[topic(f"math.a.t{i:03d}", ["math.a.root"], level="g4") for i in range(400)])
     open_map(page, kg, tmp_path)
-    a, b = "math.g6.t0", "math.g6.t22"  # 170-budget course: 22 topics to a line, so one line apart
+    a, b = "math.a.t100", "math.a.t101"
     page.evaluate("id => window.kgMap.selectTopic(id)", a)
     page.wait_for_timeout(500)
     gap = page.evaluate("([a, b]) => window.kgMap.nodeViewport(b).y - window.kgMap.nodeViewport(a).y", [a, b])
-    assert 15 <= gap <= 30
+    assert 15 <= abs(gap) <= 30
 
 
 def test_ticking_a_subject_with_no_topics_yet_filters_to_nothing(page, tmp_path):

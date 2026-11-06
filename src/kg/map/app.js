@@ -174,7 +174,6 @@
 
   const mapEl = document.getElementById("map");
   const labelsEl = document.getElementById("labels");
-  const gutterEl = document.getElementById("gutter");
   const panelEl = document.getElementById("panel");
   const searchEl = document.getElementById("search");
   const resultsEl = document.getElementById("results");
@@ -589,8 +588,7 @@
     context.fillText(text, x, y);
   }
 
-  // ---- HTML label layers: subjects in the gutter; levels and courses over the map ----
-  const subjectLabels = [];
+  // ---- HTML label layers: levels and courses over the map ----
   const levelLabels = [];
   const courseLabels = [];
 
@@ -620,68 +618,51 @@
     }
   }
 
-  const subjectColour = (id) => {
-    const colour = SUBJECT_COLOURS[id] || FALLBACK_COLOUR;
-    return theme().lift ? mix(colour, theme().lift, 0.3) : colour;
-  };
-
-  function paintSubject(s) {
-    s.span.style.color = s.span.style.borderLeftColor = subjectColour(s.id);
-  }
-
   function buildOverlay() {
-    for (const s of data.subjects) {
-      const label = { ...addLabel(gutterEl, "lbl-subject", s.id), id: s.id, y0: s.y0, y1: s.y1 };
-      paintSubject(label);
-      subjectLabels.push(label);
-    }
-    for (const col of data.columns) {
-      const label = addLabel(labelsEl, "lbl-level", col.level);
-      levelLabels.push({ ...label, x0: col.x0, x1: col.x1, width: label.span.offsetWidth });
+    for (const m of data.level_markers) {
+      const label = addLabel(labelsEl, "lbl-level", m.level);
+      levelLabels.push({ ...label, x: m.x, width: label.span.offsetWidth });
     }
     const extent = new Map();
     for (const t of topics) {
-      const c = extent.get(t.course) || { x0: Infinity, x1: -Infinity, y0: Infinity, y1: -Infinity };
+      const c = extent.get(t.course) || { x0: Infinity, x1: -Infinity, y0: Infinity, y1: -Infinity, stages: new Map() };
       if (t.x < c.x0) c.x0 = t.x;
       if (t.x > c.x1) c.x1 = t.x;
       if (t.y < c.y0) c.y0 = t.y;
       if (t.y > c.y1) c.y1 = t.y;
+      const stage = c.stages.get(t.x) || { x: t.x, y: t.y, n: 0 };
+      stage.n++;
+      if (t.y < stage.y) stage.y = t.y;
+      c.stages.set(t.x, stage);
       extent.set(t.course, c);
     }
-    for (const [course, c] of extent) {
+    for (const [course, { stages, ...c }] of extent) {
+      // the label sits over the stage holding most of the course; the leftmost wins a tie
+      let anchor = null;
+      for (const stage of stages.values()) {
+        if (!anchor || stage.n > anchor.n || (stage.n === anchor.n && stage.x < anchor.x)) anchor = stage;
+      }
       const label = addLabel(labelsEl, "lbl-course", course);
-      courseLabels.push({ ...label, ...c, width: label.span.offsetWidth, order: courseLabels.length });
+      courseLabels.push({ ...label, ...c, anchorX: anchor.x, anchorY: anchor.y, width: label.span.offsetWidth, order: courseLabels.length });
     }
   }
 
   const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), Math.max(lo, hi));
 
-  function placeSubjects(h) {
-    for (const s of subjectLabels) {
-      // the row's strip, cut to the window: its name stays at the top of what is visible
-      const top = sigma.graphToViewport({ x: 0, y: -s.y0 }).y;
-      const bottom = sigma.graphToViewport({ x: 0, y: -s.y1 }).y;
-      if (bottom <= 0 || top >= h) {
-        hide(s);
-        continue;
-      }
-      const y = Math.max(top, 0);
-      place(s, 0, y);
-      s.span.style.height = Math.round(Math.min(bottom, h) - y) + "px";
-    }
-  }
-
   // Levels sit just above the map, sticking to the top of the window once zoomed in. Returns the y
   // below which course labels have to stay.
   function placeLevels(w) {
     const y = Math.max(2, sigma.graphToViewport({ x: 0, y: -spanY[0] }).y - COURSE_LABEL_HEIGHT * 2 - TOPIC_LABEL_HALF);
-    for (const col of levelLabels) {
-      const a = sigma.graphToViewport({ x: col.x0, y: 0 }).x;
-      const b = sigma.graphToViewport({ x: col.x1, y: 0 }).x;
-      // centred on the part of the column in view, so a zoomed-in view still names its level
-      const left = Math.max(a, 0), right = Math.min(b, w);
-      if (right - left > col.width) place(col, (left + right) / 2 - col.width / 2, y);
-      else hide(col);
+    const placed = [];
+    for (const m of levelLabels) {
+      const x = sigma.graphToViewport({ x: m.x, y: 0 }).x;
+      const right = x + m.width + 1;
+      if (right < 0 || x > w || placed.some((p) => x < p.right && p.x < right)) {
+        hide(m);
+        continue;
+      }
+      placed.push({ x, right });
+      place(m, x, y);
     }
     return y + COURSE_LABEL_HEIGHT;
   }
@@ -700,8 +681,9 @@
       const dy = Math.max(a.y - h / 2, h / 2 - b.y, 0);
       c.dist = dx * dx + dy * dy;
       // above its block, or kept in view while the block fills the window
-      c.px = clamp(a.x, 4, w - c.width - 4);
-      c.py = clamp(a.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, b.y - COURSE_LABEL_HEIGHT);
+      const anchor = sigma.graphToViewport({ x: c.anchorX, y: -c.anchorY });
+      c.px = clamp(anchor.x, 4, w - c.width - 4);
+      c.py = clamp(anchor.y - COURSE_LABEL_HEIGHT - TOPIC_LABEL_HALF - 1, top, b.y - COURSE_LABEL_HEIGHT);
       wanted.push(c);
     }
     wanted.sort((p, q) => p.dist - q.dist || p.order - q.order);
@@ -718,7 +700,6 @@
 
   function updateOverlay() {
     const w = mapEl.clientWidth, h = mapEl.clientHeight;
-    placeSubjects(h);
     placeCourses(w, h, placeLevels(w));
   }
 
@@ -734,7 +715,6 @@
     if (noWebGL) message.id = "nowebgl";
     mapEl.replaceChildren(message);
     labelsEl.replaceChildren();
-    gutterEl.replaceChildren();
   }
 
   // Dots are kept clear of the right edge only where names show at once; big overviews need the width.
@@ -784,7 +764,6 @@
       for (const t of topics) graph.mergeNodeAttributes(t.id, topicStyle(t));
       graph.forEachEdge((e) => graph.setEdgeAttribute(e, "color", theme().edge));
       sigma.setSetting("labelColor", { color: theme().fg });
-      for (const s of subjectLabels) paintSubject(s);
       sigma.refresh();
     });
     buildOverlay();
