@@ -1393,3 +1393,573 @@ topics:
       - id: kp4
         can_do: Find a voltage across each
         key_prerequisites: [physics.hs2.capacitance]
+  - id: physics.hs2.current-as-charge-flow
+    name: Calculating current from charge flow
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.ms.current-and-voltage
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.charge-conservation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate current from charge and time
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp2
+        can_do: Find charge from current and time
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp3
+        can_do: Find electrons per second
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp4
+        can_do: Explain conventional current
+        key_prerequisites: [physics.ms.current-and-voltage]
+  - id: physics.hs2.resistivity
+    name: Calculating resistance from resistivity
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.current-as-charge-flow
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.resistance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate resistance from dimensions
+        key_prerequisites: [physics.ms.resistance]
+      - id: kp2
+        can_do: Find a resistivity
+        key_prerequisites: [physics.ms.resistance]
+      - id: kp3
+        can_do: Compare wires of different gauge
+        key_prerequisites: [physics.ms.resistance]
+      - id: kp4
+        can_do: Explain resistance through electron collisions
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+  - id: physics.hs2.ohmic-devices
+    name: Telling ohmic from non-ohmic devices
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.resistivity
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.ms.ohms-law
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.slope-meaning-in-data
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use Ohm's law with resistance in a formula
+        key_prerequisites: [physics.ms.ohms-law]
+      - id: kp2
+        can_do: Plot current against voltage
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+      - id: kp3
+        can_do: Tell an ohmic resistor from a bulb
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp4
+        can_do: Find resistance from a slope
+        key_prerequisites: [physics.hs1.slope-meaning-in-data]
+  - id: physics.hs2.electric-power
+    name: Calculating power in circuit elements
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.ohmic-devices
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.electric-power-and-cost
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate power from current and voltage
+        key_prerequisites: [physics.hs2.ohmic-devices]
+      - id: kp2
+        can_do: Use the three forms of the formula
+        key_prerequisites: [physics.hs2.ohmic-devices]
+      - id: kp3
+        can_do: Find energy in joules and kilowatt-hours
+        key_prerequisites: [physics.ms.electric-power-and-cost]
+      - id: kp4
+        can_do: Find a resistor's rating
+        key_prerequisites: [physics.hs2.ohmic-devices]
+  - id: physics.hs2.circuit-diagrams
+    name: Drawing and reading circuit diagrams
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.ms.measuring-circuits
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a circuit with standard symbols
+        key_prerequisites: [physics.ms.measuring-circuits]
+      - id: kp2
+        can_do: Translate a real circuit to a diagram
+        key_prerequisites: [physics.ms.measuring-circuits]
+      - id: kp3
+        can_do: Spot a short circuit
+        key_prerequisites: [physics.ms.measuring-circuits]
+      - id: kp4
+        can_do: Identify series and parallel parts
+        key_prerequisites: [physics.ms.measuring-circuits]
+  - id: physics.hs2.series-resistors
+    name: Solving series resistors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.ohmic-devices
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.ms.series-circuits
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.circuit-diagrams
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent series resistance
+        key_prerequisites: [physics.hs2.ohmic-devices, physics.ms.series-circuits]
+      - id: kp2
+        can_do: Find current in a series circuit
+        key_prerequisites: [physics.hs2.ohmic-devices]
+      - id: kp3
+        can_do: Find voltage on each resistor
+        key_prerequisites: [physics.ms.series-circuits]
+      - id: kp4
+        can_do: Check voltages sum to a source
+        key_prerequisites: [physics.hs2.circuit-diagrams]
+  - id: physics.hs2.parallel-resistors
+    name: Solving parallel resistors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.series-resistors
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.parallel-circuits
+        encompassing: 0.2
+        confidence: high
+      - topic: math.alg2.add-subtract-rational
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent parallel resistance
+        key_prerequisites: [physics.hs2.series-resistors, math.alg2.add-subtract-rational]
+      - id: kp2
+        can_do: Find current in each branch
+        key_prerequisites: [physics.ms.parallel-circuits]
+      - id: kp3
+        can_do: Check currents sum to a total
+        key_prerequisites: [physics.hs2.series-resistors]
+      - id: kp4
+        can_do: Find when equal resistors divide current
+        key_prerequisites: [physics.hs2.series-resistors]
+  - id: physics.hs2.household-circuits
+    name: Explaining household circuits and safety
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-power
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.hs2.parallel-resistors
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why a home uses parallel wiring
+        key_prerequisites: [physics.hs2.parallel-resistors]
+      - id: kp2
+        can_do: Find a current from a device's power
+        key_prerequisites: [physics.hs2.electric-power]
+      - id: kp3
+        can_do: Explain fuses, breakers and grounding
+        key_prerequisites: [physics.hs2.electric-power]
+      - id: kp4
+        can_do: Find when a circuit overloads
+        key_prerequisites: [physics.hs2.electric-power, physics.hs2.parallel-resistors]
+  - id: physics.hs2.equivalent-resistance
+    name: Finding equivalent resistance by reduction
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.parallel-resistors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce a combination step by step
+        key_prerequisites: [physics.hs2.parallel-resistors]
+      - id: kp2
+        can_do: Reduce a circuit with three levels
+        key_prerequisites: [physics.hs2.parallel-resistors]
+      - id: kp3
+        can_do: Redraw a tangled circuit
+        key_prerequisites: [physics.hs2.parallel-resistors]
+      - id: kp4
+        can_do: Find a resistor from an equivalent
+        key_prerequisites: [physics.hs2.parallel-resistors]
+  - id: physics.hs2.combination-circuits
+    name: Solving combination circuits
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.equivalent-resistance
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.parallel-resistors
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find total current
+        key_prerequisites: [physics.hs2.equivalent-resistance]
+      - id: kp2
+        can_do: Find a branch current
+        key_prerequisites: [physics.hs2.parallel-resistors]
+      - id: kp3
+        can_do: Find voltage across a part
+        key_prerequisites: [physics.hs2.equivalent-resistance]
+      - id: kp4
+        can_do: Predict what happens when a part fails
+        key_prerequisites: [physics.hs2.equivalent-resistance]
+  - id: physics.hs2.power-in-combination-circuits
+    name: Comparing brightness and power in circuits
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.electric-power
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find power in each part
+        key_prerequisites: [physics.hs2.combination-circuits, physics.hs2.electric-power]
+      - id: kp2
+        can_do: Rank bulb brightness
+        key_prerequisites: [physics.hs2.electric-power]
+      - id: kp3
+        can_do: Predict a change from adding a bulb
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Find total power two ways
+        key_prerequisites: [physics.hs2.combination-circuits, physics.hs2.electric-power]
+  - id: physics.hs2.using-meters-in-circuits
+    name: Modelling meters in circuits
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.ms.measuring-circuits
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Place an ammeter in series
+        key_prerequisites: [physics.ms.measuring-circuits]
+      - id: kp2
+        can_do: Place a voltmeter in parallel
+        key_prerequisites: [physics.ms.measuring-circuits]
+      - id: kp3
+        can_do: Explain ideal meter resistances
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Find a meter's effect on a circuit
+        key_prerequisites: [physics.hs2.combination-circuits]
+  - id: physics.hs2.emf-and-internal-resistance
+    name: Using emf and internal resistance
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define emf and internal resistance
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp2
+        can_do: Find terminal voltage
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp3
+        can_do: Find internal resistance from data
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Find a short-circuit current
+        key_prerequisites: [physics.hs2.combination-circuits]
+  - id: physics.hs2.junction-rule
+    name: Using Kirchhoff's junction rule
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.charge-conservation
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the rule
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp2
+        can_do: Find an unknown current at a junction
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp3
+        can_do: Choose current directions
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Interpret a negative result
+        key_prerequisites: [physics.hs2.combination-circuits]
+  - id: physics.hs2.loop-rule
+    name: Using Kirchhoff's loop rule
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the rule as energy conservation
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp2
+        can_do: Write signs for a battery and a resistor
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp3
+        can_do: Write a loop equation
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Find a potential at a point
+        key_prerequisites: [physics.hs2.electric-potential]
+  - id: physics.hs2.multi-loop-circuits
+    name: Solving multi-loop circuits
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.junction-rule
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.loop-rule
+        encompassing: 0.25
+        confidence: high
+      - topic: math.alg2.systems-three-variables
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose branch currents
+        key_prerequisites: [physics.hs2.junction-rule]
+      - id: kp2
+        can_do: Write independent equations
+        key_prerequisites: [physics.hs2.junction-rule, physics.hs2.loop-rule]
+      - id: kp3
+        can_do: Solve a two-loop circuit
+        key_prerequisites: [math.alg2.systems-three-variables]
+      - id: kp4
+        can_do: Solve with two batteries
+        key_prerequisites: [math.alg2.systems-three-variables]
+  - id: physics.hs2.capacitor-charging
+    name: Describing a charging capacitor
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitors-in-circuits
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.combination-circuits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe current as a capacitor charges
+        key_prerequisites: [physics.hs2.capacitors-in-circuits]
+      - id: kp2
+        can_do: Sketch charge and voltage against time
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp3
+        can_do: Find initial and final current
+        key_prerequisites: [physics.hs2.combination-circuits]
+      - id: kp4
+        can_do: Treat a capacitor at start and end
+        key_prerequisites: [physics.hs2.capacitors-in-circuits]
+  - id: physics.hs2.drift-velocity
+    name: Finding drift velocity
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.current-as-charge-flow
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate current to drift velocity
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+      - id: kp2
+        can_do: Calculate a drift velocity
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+      - id: kp3
+        can_do: Compare drift with signal speed
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+      - id: kp4
+        can_do: Find an effect of a thinner wire
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+  - id: physics.hs2.temperature-and-resistance
+    name: Relating resistance to temperature
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.resistivity
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate resistance to temperature in metals
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp2
+        can_do: Calculate a resistance at a temperature
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp3
+        can_do: Explain a bulb's changing resistance
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp4
+        can_do: Name superconductors
+        key_prerequisites: [physics.hs2.resistivity]
+  - id: physics.hs2.voltage-dividers
+    name: Using voltage dividers
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.series-resistors
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an output from two resistors
+        key_prerequisites: [physics.hs2.series-resistors]
+      - id: kp2
+        can_do: Choose resistors for an output
+        key_prerequisites: [physics.hs2.series-resistors]
+      - id: kp3
+        can_do: Use a variable resistor
+        key_prerequisites: [physics.hs2.series-resistors]
+      - id: kp4
+        can_do: Find the effect of a load
+        key_prerequisites: [physics.hs2.series-resistors]
+  - id: physics.hs2.capacitor-discharging
+    name: Describing a discharging capacitor
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitor-charging
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe current during a discharge
+        key_prerequisites: [physics.hs2.capacitor-charging]
+      - id: kp2
+        can_do: Sketch charge against time
+        key_prerequisites: [physics.hs2.capacitor-charging]
+      - id: kp3
+        can_do: Compare to charging
+        key_prerequisites: [physics.hs2.capacitor-charging]
+      - id: kp4
+        can_do: Find an initial discharge current
+        key_prerequisites: [physics.hs2.capacitor-charging]
+  - id: physics.hs2.rc-time-constant
+    name: Calculating an RC time constant
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: math.alg2.graph-transformed-exponentials
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.capacitor-discharging
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.capacitor-charging
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a time constant
+        key_prerequisites: [physics.hs2.capacitor-discharging]
+      - id: kp2
+        can_do: Calculate a time constant
+        key_prerequisites: [physics.hs2.capacitor-discharging]
+      - id: kp3
+        can_do: Find a fraction left after one or more constants
+        key_prerequisites: [math.alg2.graph-transformed-exponentials]
+      - id: kp4
+        can_do: Find a time from an exponential
+        key_prerequisites: [math.alg2.graph-transformed-exponentials]
