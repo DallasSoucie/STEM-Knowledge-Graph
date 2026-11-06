@@ -628,3 +628,768 @@ topics:
       - id: kp4
         can_do: Solve steam condensing in water
         key_prerequisites: [physics.hs2.latent-heat]
+  - id: physics.hs2.charge-conservation
+    name: Using conservation of charge
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.ms.electric-charge
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State conservation of charge
+        key_prerequisites: [physics.ms.electric-charge]
+      - id: kp2
+        can_do: Use coulombs and the elementary charge
+        key_prerequisites: [physics.ms.electric-charge]
+      - id: kp3
+        can_do: Find a net charge from counts of electrons
+        key_prerequisites: [physics.ms.electric-charge]
+      - id: kp4
+        can_do: Find charges after two conductors touch
+        key_prerequisites: [physics.ms.electric-charge]
+  - id: physics.hs2.charging-processes
+    name: Explaining charging by friction, contact and induction
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.charge-conservation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.ms.current-and-voltage
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain charging by friction
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp2
+        can_do: Explain charging by contact
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp3
+        can_do: Explain charging by induction
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp4
+        can_do: Explain polarization of an insulator
+        key_prerequisites: [physics.ms.current-and-voltage]
+  - id: physics.hs2.coulombs-law
+    name: Using Coulomb's law
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.charge-conservation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.universal-gravitation
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate force between two charges
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp2
+        can_do: Predict a change in force with distance
+        key_prerequisites: [physics.hs1.universal-gravitation]
+      - id: kp3
+        can_do: Predict a change with charge
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp4
+        can_do: Find a charge or distance from a force
+        key_prerequisites: [physics.hs2.charge-conservation]
+  - id: physics.hs2.coulomb-forces-on-a-line
+    name: Adding electric forces along a line
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.coulombs-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.second-law-in-one-dimension
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add forces on a line
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp2
+        can_do: Find a net force on a middle charge
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp3
+        can_do: Find an acceleration from a net force
+        key_prerequisites: [physics.hs1.second-law-in-one-dimension]
+      - id: kp4
+        can_do: Find a position of zero net force
+        key_prerequisites: [physics.hs2.coulombs-law]
+  - id: physics.hs2.coulomb-forces-in-a-plane
+    name: Adding electric forces in a plane
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.coulomb-forces-on-a-line
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find components of each force
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp2
+        can_do: Add forces at a right angle
+        key_prerequisites: [physics.hs2.coulomb-forces-on-a-line]
+      - id: kp3
+        can_do: Solve a triangle of charges
+        key_prerequisites: [physics.hs2.coulomb-forces-on-a-line, physics.hs1.adding-by-components]
+      - id: kp4
+        can_do: Find a net direction
+        key_prerequisites: [physics.hs1.adding-by-components]
+  - id: physics.hs2.electric-field-concept
+    name: Defining the electric field
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.coulombs-law
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.ms.fields-at-a-distance
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define field as force per charge
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp2
+        can_do: Find a force from a field
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp3
+        can_do: Find a field from a test charge
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp4
+        can_do: Compare with gravitational field
+        key_prerequisites: [physics.ms.fields-at-a-distance]
+  - id: physics.hs2.field-of-a-point-charge
+    name: Calculating the field of a point charge
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-field-concept
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate a field at a distance
+        key_prerequisites: [physics.hs2.electric-field-concept]
+      - id: kp2
+        can_do: Find a field's direction from sign
+        key_prerequisites: [physics.hs2.electric-field-concept]
+      - id: kp3
+        can_do: Find a charge from a field
+        key_prerequisites: [physics.hs2.electric-field-concept]
+      - id: kp4
+        can_do: Find a change in a field with distance
+        key_prerequisites: [physics.hs2.electric-field-concept]
+  - id: physics.hs2.adding-electric-fields
+    name: Adding electric fields
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.field-of-a-point-charge
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add fields on a line
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+      - id: kp2
+        can_do: Add fields at a point in a plane
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp3
+        can_do: Find a field midway between two charges
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+      - id: kp4
+        can_do: Solve a square of charges with symmetry
+        key_prerequisites: [physics.hs1.adding-by-components]
+  - id: physics.hs2.field-lines
+    name: Drawing electric field lines
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.field-of-a-point-charge
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw lines for a single charge
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+      - id: kp2
+        can_do: Draw lines for two charges
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+      - id: kp3
+        can_do: Read strength from spacing
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+      - id: kp4
+        can_do: Spot invalid field line drawings
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+  - id: physics.hs2.uniform-electric-field
+    name: Using uniform electric fields
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.field-lines
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.second-law-with-motion
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find where a field is uniform
+        key_prerequisites: [physics.hs2.field-lines]
+      - id: kp2
+        can_do: Find force on a charge
+        key_prerequisites: [physics.hs2.field-lines]
+      - id: kp3
+        can_do: Find acceleration in a field
+        key_prerequisites: [physics.hs1.second-law-with-motion]
+      - id: kp4
+        can_do: Find motion across a uniform field
+        key_prerequisites: [physics.hs1.second-law-with-motion]
+  - id: physics.hs2.charge-in-a-field
+    name: Solving charged particle motion in a uniform field
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.uniform-electric-field
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.horizontal-launch
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat motion as a projectile
+        key_prerequisites: [physics.hs1.horizontal-launch]
+      - id: kp2
+        can_do: Find a deflection
+        key_prerequisites: [physics.hs2.uniform-electric-field, physics.hs1.horizontal-launch]
+      - id: kp3
+        can_do: Find a speed after a field
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp4
+        can_do: Compare a proton and an electron
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+  - id: physics.hs2.electric-potential-energy
+    name: Calculating electric potential energy
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.uniform-electric-field
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.gravitational-energy-of-a-system
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy in a uniform field
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp2
+        can_do: Compare with gravitational energy
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+      - id: kp3
+        can_do: Find a work done by a field
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp4
+        can_do: Choose a zero level
+        key_prerequisites: [physics.hs1.gravitational-energy-of-a-system]
+  - id: physics.hs2.electric-potential
+    name: Defining electric potential and potential difference
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-potential-energy
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.ms.current-and-voltage
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define potential as energy per charge
+        key_prerequisites: [physics.hs2.electric-potential-energy]
+      - id: kp2
+        can_do: Find a potential difference
+        key_prerequisites: [physics.ms.current-and-voltage]
+      - id: kp3
+        can_do: Find an energy change for a charge
+        key_prerequisites: [physics.hs2.electric-potential-energy]
+      - id: kp4
+        can_do: Tell potential from potential energy
+        key_prerequisites: [physics.hs2.electric-potential-energy]
+  - id: physics.hs2.potential-of-point-charges
+    name: Calculating potential of point charges
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.field-of-a-point-charge
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate a potential at a distance
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp2
+        can_do: Add potentials as scalars
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp3
+        can_do: Find a potential midway between charges
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp4
+        can_do: Compare field and potential at a point
+        key_prerequisites: [physics.hs2.field-of-a-point-charge]
+  - id: physics.hs2.millikan-idea
+    name: Finding charge from a balanced oil drop
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.uniform-electric-field
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: physics.hs1.first-law-in-one-dimension
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Balance an oil drop's forces
+        key_prerequisites: [physics.hs1.first-law-in-one-dimension]
+      - id: kp2
+        can_do: Find a drop's charge
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp3
+        can_do: Spot multiples of a charge in data
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp4
+        can_do: Explain the result's importance
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+  - id: physics.hs2.gravity-electric-comparison
+    name: Comparing gravitational and electric forces
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.coulombs-law
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.field-strength-from-gravitation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare the two force laws
+        key_prerequisites: [physics.hs2.coulombs-law, physics.hs1.field-strength-from-gravitation]
+      - id: kp2
+        can_do: Find a force ratio for a proton and an electron
+        key_prerequisites: [physics.hs2.coulombs-law]
+      - id: kp3
+        can_do: Explain why gravity dominates large scales
+        key_prerequisites: [physics.hs1.field-strength-from-gravitation]
+      - id: kp4
+        can_do: Compare field definitions
+        key_prerequisites: [physics.hs1.field-strength-from-gravitation]
+  - id: physics.hs2.electric-dipoles
+    name: Describing electric dipoles
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.adding-electric-fields
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a dipole's field
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp2
+        can_do: Find a field on an axis
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp3
+        can_do: Find a torque on a dipole
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp4
+        can_do: Relate dipoles to polar molecules
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+  - id: physics.hs2.zero-field-points
+    name: Finding where an electric field is zero
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.adding-electric-fields
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a side where a zero can occur
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp2
+        can_do: Solve an equation with squares
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp3
+        can_do: Solve for equal-sign charges
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp4
+        can_do: Solve for opposite-sign charges
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+  - id: physics.hs2.field-and-potential-difference
+    name: Relating field to potential difference
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.uniform-electric-field
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate field to voltage and distance
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp2
+        can_do: Find a field between plates
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp3
+        can_do: Find a voltage from a field
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp4
+        can_do: Use volts per metre
+        key_prerequisites: [physics.hs2.electric-potential]
+  - id: physics.hs2.accelerating-charges
+    name: Accelerating charges through a potential difference
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.conserving-mechanical-energy
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.field-and-potential-difference
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a speed after a voltage
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy]
+      - id: kp2
+        can_do: Find a kinetic energy gain
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp3
+        can_do: Find a voltage for a speed
+        key_prerequisites: [physics.hs2.field-and-potential-difference]
+      - id: kp4
+        can_do: Compare two particles
+        key_prerequisites: [physics.hs1.conserving-mechanical-energy]
+  - id: physics.hs2.potential-energy-of-charges
+    name: Calculating potential energy of charge pairs
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.potential-of-point-charges
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy of a pair of charges
+        key_prerequisites: [physics.hs2.potential-of-point-charges]
+      - id: kp2
+        can_do: Use a sign for attraction and repulsion
+        key_prerequisites: [physics.hs2.potential-of-point-charges]
+      - id: kp3
+        can_do: Find energy to assemble three charges
+        key_prerequisites: [physics.hs2.potential-of-point-charges]
+      - id: kp4
+        can_do: Find a closest approach
+        key_prerequisites: [physics.hs2.potential-of-point-charges]
+  - id: physics.hs2.work-moving-a-charge
+    name: Finding work done moving a charge
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work between two potentials
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp2
+        can_do: Find zero work on an equipotential
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp3
+        can_do: Set a sign for work
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp4
+        can_do: Find work against a field
+        key_prerequisites: [physics.hs2.electric-potential]
+  - id: physics.hs2.equipotential-lines
+    name: Drawing equipotential lines
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.work-moving-a-charge
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.15
+        confidence: high
+      - topic: physics.hs2.field-lines
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw lines around a point charge
+        key_prerequisites: [physics.hs2.field-lines]
+      - id: kp2
+        can_do: Show that lines meet field lines at right angles
+        key_prerequisites: [physics.hs2.field-lines]
+      - id: kp3
+        can_do: Find a field from line spacing
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp4
+        can_do: Find work between two lines
+        key_prerequisites: [physics.hs2.work-moving-a-charge]
+  - id: physics.hs2.conductors-in-equilibrium
+    name: Explaining charge on conductors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.equipotential-lines
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.charging-processes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a zero field inside a conductor
+        key_prerequisites: [physics.hs2.equipotential-lines]
+      - id: kp2
+        can_do: Show excess charge on the surface
+        key_prerequisites: [physics.hs2.charging-processes]
+      - id: kp3
+        can_do: Show the field is perpendicular to the surface
+        key_prerequisites: [physics.hs2.equipotential-lines]
+      - id: kp4
+        can_do: Explain a charge shield
+        key_prerequisites: [physics.hs2.equipotential-lines]
+  - id: physics.hs2.sharing-charge
+    name: Finding charge shared between conductors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.conductors-in-equilibrium
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a charge on identical spheres
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+      - id: kp2
+        can_do: Find equal potential for two spheres
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+      - id: kp3
+        can_do: Find charge ratios
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+      - id: kp4
+        can_do: Explain grounding
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+  - id: physics.hs2.capacitance
+    name: Defining capacitance
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.conductors-in-equilibrium
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.field-and-potential-difference
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define capacitance
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp2
+        can_do: Calculate charge from voltage
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp3
+        can_do: Use farads and microfarads
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+      - id: kp4
+        can_do: Find what a battery does to a capacitor
+        key_prerequisites: [physics.hs2.field-and-potential-difference]
+  - id: physics.hs2.parallel-plate-capacitors
+    name: Calculating parallel-plate capacitance
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate capacitance from area and gap
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp2
+        can_do: Find how area changes capacitance
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp3
+        can_do: Find how gap changes capacitance
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp4
+        can_do: Find a field inside a capacitor
+        key_prerequisites: [physics.hs2.capacitance]
+  - id: physics.hs2.dielectrics
+    name: Explaining dielectrics
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.parallel-plate-capacitors
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain a dielectric's effect
+        key_prerequisites: [physics.hs2.parallel-plate-capacitors]
+      - id: kp2
+        can_do: Calculate capacitance with a dielectric
+        key_prerequisites: [physics.hs2.parallel-plate-capacitors]
+      - id: kp3
+        can_do: Compare a connected and a disconnected capacitor
+        key_prerequisites: [physics.hs2.parallel-plate-capacitors]
+      - id: kp4
+        can_do: Explain dielectric breakdown
+        key_prerequisites: [physics.hs2.parallel-plate-capacitors]
+  - id: physics.hs2.capacitor-energy
+    name: Calculating capacitor energy
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitance
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.work-from-a-graph
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy from a charge-voltage graph
+        key_prerequisites: [physics.hs1.work-from-a-graph]
+      - id: kp2
+        can_do: Calculate stored energy
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp3
+        can_do: Compare each form of the formula
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp4
+        can_do: Find a change when plates move
+        key_prerequisites: [physics.hs2.capacitance]
+  - id: physics.hs2.capacitors-in-circuits
+    name: Combining capacitors
+    subject: physics
+    course: physics.hs2
+    level: g11
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitance
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.add-subtract-rational
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an equivalent parallel capacitance
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp2
+        can_do: Find an equivalent series capacitance
+        key_prerequisites: [math.alg2.add-subtract-rational]
+      - id: kp3
+        can_do: Find charge on each capacitor
+        key_prerequisites: [physics.hs2.capacitance]
+      - id: kp4
+        can_do: Find a voltage across each
+        key_prerequisites: [physics.hs2.capacitance]
