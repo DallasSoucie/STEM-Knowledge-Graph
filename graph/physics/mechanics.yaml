@@ -1,0 +1,703 @@
+course: physics.mechanics
+topics:
+  - id: physics.mechanics.velocity-as-derivative
+    name: Finding velocity as a derivative
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.instantaneous-velocity
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.position-velocity-acceleration
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write velocity as a limit
+        key_prerequisites: [physics.hs1.instantaneous-velocity]
+      - id: kp2
+        can_do: Differentiate a polynomial position function
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp3
+        can_do: Differentiate a trig or exponential position function
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+      - id: kp4
+        can_do: Evaluate velocity at a given time with units
+        key_prerequisites: [math.calc1.position-velocity-acceleration]
+  - id: physics.mechanics.acceleration-as-derivative
+    name: Finding acceleration as a second derivative
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-as-derivative
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.higher-derivatives
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate velocity to find acceleration
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+      - id: kp2
+        can_do: Find acceleration from a position function
+        key_prerequisites: [math.calc1.higher-derivatives]
+      - id: kp3
+        can_do: Find when acceleration is zero
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+      - id: kp4
+        can_do: Find jerk as a third derivative
+        key_prerequisites: [math.calc1.higher-derivatives]
+  - id: physics.mechanics.turning-points-of-motion
+    name: Finding turning points with derivatives
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-as-derivative
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.critical-numbers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set velocity to zero
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+      - id: kp2
+        can_do: Find where motion reverses
+        key_prerequisites: [math.calc1.critical-numbers]
+      - id: kp3
+        can_do: Find a maximum position
+        key_prerequisites: [math.calc1.critical-numbers]
+      - id: kp4
+        can_do: Find a total distance by splitting at turning points
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+  - id: physics.mechanics.velocity-from-acceleration-integral
+    name: Integrating acceleration to find velocity
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.acceleration-as-derivative
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.motion-from-acceleration
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate acceleration with an initial velocity
+        key_prerequisites: [math.calc1.motion-from-acceleration]
+      - id: kp2
+        can_do: Find a change in velocity as a definite integral
+        key_prerequisites: [math.calc1.motion-from-acceleration]
+      - id: kp3
+        can_do: Integrate a time-varying acceleration
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+      - id: kp4
+        can_do: Read a velocity change from area
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+  - id: physics.mechanics.position-from-velocity-integral
+    name: Integrating velocity to find position
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-from-acceleration-integral
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.displacement-distance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate velocity with an initial position
+        key_prerequisites: [physics.mechanics.velocity-from-acceleration-integral]
+      - id: kp2
+        can_do: Find a displacement as a definite integral
+        key_prerequisites: [math.calc1.displacement-distance]
+      - id: kp3
+        can_do: Find a distance with an absolute value
+        key_prerequisites: [math.calc1.displacement-distance]
+      - id: kp4
+        can_do: Find a position from acceleration in two steps
+        key_prerequisites: [physics.mechanics.velocity-from-acceleration-integral]
+  - id: physics.mechanics.deriving-motion-equations
+    name: Deriving the constant-acceleration equations
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-from-velocity-integral
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.choosing-a-motion-equation
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the velocity equation by integrating
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp2
+        can_do: Derive the displacement equation by integrating
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp3
+        can_do: Derive the time-free equation
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp4
+        can_do: State when the equations fail
+        key_prerequisites: [physics.hs1.choosing-a-motion-equation]
+  - id: physics.mechanics.time-varying-acceleration
+    name: Solving motion with time-varying acceleration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-from-velocity-integral
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve motion with acceleration as a polynomial
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp2
+        can_do: Solve motion with a sinusoidal acceleration
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp3
+        can_do: Solve motion with an exponential acceleration
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp4
+        can_do: Find average acceleration over an interval
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+  - id: physics.mechanics.velocity-dependent-acceleration
+    name: Solving motion with velocity-dependent acceleration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.time-varying-acceleration
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate velocity and time
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp2
+        can_do: Integrate to get velocity against time
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp3
+        can_do: Solve for an exponentially decaying velocity
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp4
+        can_do: Find distance travelled while slowing
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+  - id: physics.mechanics.position-dependent-acceleration
+    name: Solving motion with position-dependent acceleration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.time-varying-acceleration
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rewrite acceleration with the chain rule
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Integrate velocity against position
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp3
+        can_do: Find a speed at a position
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp4
+        can_do: Find a turning position
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+  - id: physics.mechanics.motion-graphs-with-calculus
+    name: Relating motion graphs with calculus
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-from-velocity-integral
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.translating-motion-graphs
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.acceleration-as-derivative
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a slope as a derivative
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+      - id: kp2
+        can_do: Read an area as an integral
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp3
+        can_do: Sketch all graphs for a given function
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral, physics.mechanics.acceleration-as-derivative]
+      - id: kp4
+        can_do: Find when an object speeds up
+        key_prerequisites: [physics.hs1.translating-motion-graphs]
+  - id: physics.mechanics.related-rates-in-motion
+    name: Solving related-rates motion problems
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-as-derivative
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.related-rates-setup
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate speeds along a rope
+        key_prerequisites: [math.calc1.related-rates-setup]
+      - id: kp2
+        can_do: Find a rate of changing distance between objects
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+      - id: kp3
+        can_do: Find a shadow's speed
+        key_prerequisites: [math.calc1.related-rates-setup]
+      - id: kp4
+        can_do: Find a rate of a changing angle
+        key_prerequisites: [math.calc1.related-rates-setup]
+  - id: physics.mechanics.dimensional-analysis
+    name: Predicting formulas with dimensional analysis
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.checking-with-units
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dimensions of a quantity
+        key_prerequisites: [physics.hs1.checking-with-units]
+      - id: kp2
+        can_do: Check a derived formula by dimensions
+        key_prerequisites: [physics.hs1.checking-with-units]
+      - id: kp3
+        can_do: Predict a pendulum's period by dimensions
+        key_prerequisites: [physics.hs1.checking-with-units]
+      - id: kp4
+        can_do: State what dimensions cannot tell
+        key_prerequisites: [physics.hs1.checking-with-units]
+  - id: physics.mechanics.unit-vector-notation
+    name: Using unit vector notation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.25
+        confidence: high
+      - topic: math.precalc.unit-vectors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a vector with i, j and k
+        key_prerequisites: [math.precalc.unit-vectors]
+      - id: kp2
+        can_do: Add vectors in unit vector notation
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp3
+        can_do: Find a vector's magnitude in three dimensions
+        key_prerequisites: [math.precalc.unit-vectors]
+      - id: kp4
+        can_do: Find a unit vector along a direction
+        key_prerequisites: [math.precalc.unit-vectors]
+  - id: physics.mechanics.position-vectors
+    name: Writing position vectors in three dimensions
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.vectors-in-3d
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a position vector
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp2
+        can_do: Find a displacement vector
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp3
+        can_do: Find a distance in three dimensions
+        key_prerequisites: [math.precalc.vectors-in-3d]
+      - id: kp4
+        can_do: Write a vector between two points
+        key_prerequisites: [math.precalc.vectors-in-3d]
+  - id: physics.mechanics.dot-product-in-physics
+    name: Using the dot product in physics
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.precalc.dot-product
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a dot product with components
+        key_prerequisites: [math.precalc.dot-product]
+      - id: kp2
+        can_do: Find an angle between vectors
+        key_prerequisites: [math.precalc.dot-product]
+      - id: kp3
+        can_do: Find a component along a direction
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp4
+        can_do: Find work from force and displacement vectors
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+  - id: physics.mechanics.cross-product-in-physics
+    name: Using the cross product in physics
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.precalc.determinants-3x3
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a cross product with a determinant
+        key_prerequisites: [math.precalc.determinants-3x3]
+      - id: kp2
+        can_do: Find a direction with the right-hand rule
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp3
+        can_do: Use unit vector cross products
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp4
+        can_do: Find an area from a cross product
+        key_prerequisites: [math.precalc.determinants-3x3]
+  - id: physics.mechanics.velocity-vector-derivative
+    name: Differentiating position vectors
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-vectors
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.velocity-as-derivative
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate each component
+        key_prerequisites: [physics.mechanics.position-vectors]
+      - id: kp2
+        can_do: Find a speed from a velocity vector
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+      - id: kp3
+        can_do: Find a direction of motion
+        key_prerequisites: [physics.mechanics.position-vectors]
+      - id: kp4
+        can_do: Explain why velocity is tangent to a path
+        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+  - id: physics.mechanics.acceleration-vectors
+    name: Finding acceleration vectors
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-vector-derivative
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.acceleration-as-derivative
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a velocity vector
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+      - id: kp2
+        can_do: Find magnitude and direction of acceleration
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+      - id: kp3
+        can_do: Tell when acceleration is perpendicular to velocity
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+      - id: kp4
+        can_do: Find acceleration on a curved path
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+  - id: physics.mechanics.path-from-position
+    name: Eliminating time to find a path
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-vector-derivative
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.parametric-eliminate
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Eliminate time for a line
+        key_prerequisites: [math.precalc.parametric-eliminate]
+      - id: kp2
+        can_do: Eliminate time for a parabola
+        key_prerequisites: [math.precalc.parametric-eliminate]
+      - id: kp3
+        can_do: Eliminate time for a circle
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+      - id: kp4
+        can_do: Sketch a path with direction
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+  - id: physics.mechanics.integrating-vector-motion
+    name: Integrating acceleration vectors
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.acceleration-vectors
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.position-from-velocity-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate each component
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+      - id: kp2
+        can_do: Use vector initial conditions
+        key_prerequisites: [physics.mechanics.acceleration-vectors]
+      - id: kp3
+        can_do: Find a position vector from acceleration
+        key_prerequisites: [physics.mechanics.acceleration-vectors]
+      - id: kp4
+        can_do: Find when a coordinate reaches a value
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral]
+  - id: physics.mechanics.tangential-and-normal-parts
+    name: Splitting acceleration along and across a path
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.acceleration-vectors
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.dot-product-in-physics
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a tangential component with a dot product
+        key_prerequisites: [physics.mechanics.dot-product-in-physics]
+      - id: kp2
+        can_do: Find a normal component
+        key_prerequisites: [physics.mechanics.acceleration-vectors]
+      - id: kp3
+        can_do: Relate a tangential part to speed change
+        key_prerequisites: [physics.mechanics.acceleration-vectors]
+      - id: kp4
+        can_do: Find a path's radius of curvature
+        key_prerequisites: [physics.mechanics.acceleration-vectors]
+  - id: physics.mechanics.projectiles-with-calculus
+    name: Deriving projectile motion with calculus
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.integrating-vector-motion
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.range-and-peak
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive velocity components
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+      - id: kp2
+        can_do: Derive a trajectory equation
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+      - id: kp3
+        can_do: Derive the range formula
+        key_prerequisites: [physics.hs1.range-and-peak]
+      - id: kp4
+        can_do: Find a launch from a trajectory equation
+        key_prerequisites: [physics.hs1.range-and-peak]
+  - id: physics.mechanics.optimizing-a-launch
+    name: Optimizing a launch angle
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.projectiles-with-calculus
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.optimization-setup
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an angle for greatest range
+        key_prerequisites: [physics.mechanics.projectiles-with-calculus]
+      - id: kp2
+        can_do: Find a greatest height over a slope
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp3
+        can_do: Find an angle to clear a wall
+        key_prerequisites: [physics.mechanics.projectiles-with-calculus]
+      - id: kp4
+        can_do: Find a launch on an incline
+        key_prerequisites: [math.calc1.optimization-setup]
+  - id: physics.mechanics.relative-position-vectors
+    name: Using relative position and velocity vectors
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-vector-derivative
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.relative-velocity-plane
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a relative position vector
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+      - id: kp2
+        can_do: Differentiate to find relative velocity
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative]
+      - id: kp3
+        can_do: Find a closest approach
+        key_prerequisites: [physics.hs1.relative-velocity-plane]
+      - id: kp4
+        can_do: Find an interception course
+        key_prerequisites: [physics.hs1.relative-velocity-plane]
+  - id: physics.mechanics.galilean-transformations
+    name: Using Galilean transformations
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.relative-position-vectors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a transformation between frames
+        key_prerequisites: [physics.mechanics.relative-position-vectors]
+      - id: kp2
+        can_do: Transform a velocity
+        key_prerequisites: [physics.mechanics.relative-position-vectors]
+      - id: kp3
+        can_do: Show acceleration is the same in both frames
+        key_prerequisites: [physics.mechanics.relative-position-vectors]
+      - id: kp4
+        can_do: Name the transformation's limits
+        key_prerequisites: [physics.mechanics.relative-position-vectors]
+  - id: physics.mechanics.circular-motion-derivation
+    name: Deriving centripetal acceleration with vectors
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-vector-derivative
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.derivatives-of-sine-cosine
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.centripetal-acceleration
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a circle's position vector
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine]
+      - id: kp2
+        can_do: Differentiate for velocity
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative, math.calc1.derivatives-of-sine-cosine]
+      - id: kp3
+        can_do: Differentiate for acceleration
+        key_prerequisites: [physics.mechanics.velocity-vector-derivative, math.calc1.derivatives-of-sine-cosine]
+      - id: kp4
+        can_do: Compare with the centripetal formula
+        key_prerequisites: [physics.hs1.centripetal-acceleration]
+  - id: physics.mechanics.nonuniform-circular-motion
+    name: Analyzing non-uniform circular motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.circular-motion-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.tangential-and-normal-parts
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tangential acceleration from speed change
+        key_prerequisites: [physics.mechanics.tangential-and-normal-parts]
+      - id: kp2
+        can_do: Find total acceleration
+        key_prerequisites: [physics.mechanics.circular-motion-derivation, physics.mechanics.tangential-and-normal-parts]
+      - id: kp3
+        can_do: Find an angle between total and centripetal acceleration
+        key_prerequisites: [physics.mechanics.tangential-and-normal-parts]
+      - id: kp4
+        can_do: Solve a car speeding up on a curve
+        key_prerequisites: [physics.mechanics.circular-motion-derivation]
