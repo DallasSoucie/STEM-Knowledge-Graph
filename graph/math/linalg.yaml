@@ -1,0 +1,4103 @@
+course: math.linalg
+topics:
+  - id: math.linalg.linear-equations-review
+    name: Recognizing linear equations in several variables
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.systems-three-variables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell linear from nonlinear equations
+        key_prerequisites: [math.alg2.systems-three-variables]
+      - id: kp2
+        can_do: Write a system with named coefficients
+        key_prerequisites: [math.alg2.systems-three-variables]
+      - id: kp3
+        can_do: Interpret a solution as a tuple
+        key_prerequisites: [math.alg2.systems-three-variables]
+      - id: kp4
+        can_do: Write a word problem as a system
+        key_prerequisites: [math.alg2.systems-three-variables]
+  - id: math.linalg.solution-check-system
+    name: Checking solutions of a linear system
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-equations-review
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a solution in a two-variable system
+        key_prerequisites: [math.linalg.linear-equations-review]
+      - id: kp2
+        can_do: Check a solution in a larger system
+        key_prerequisites: [math.linalg.linear-equations-review]
+      - id: kp3
+        can_do: Check a family of solutions
+        key_prerequisites: [math.linalg.linear-equations-review]
+      - id: kp4
+        can_do: Tell inconsistent from consistent by a check
+        key_prerequisites: [math.linalg.linear-equations-review]
+  - id: math.linalg.augmented-matrix
+    name: Writing a system as an augmented matrix
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.matrix-dimensions
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.solution-check-system
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-equations-review
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a matrix's size
+        key_prerequisites: [math.precalc.matrix-dimensions]
+      - id: kp2
+        can_do: Write a system as an augmented matrix
+        key_prerequisites: [math.linalg.solution-check-system]
+      - id: kp3
+        can_do: Handle missing variables with zeros
+        key_prerequisites: [math.linalg.solution-check-system]
+      - id: kp4
+        can_do: Write a system from a matrix
+        key_prerequisites: [math.linalg.linear-equations-review]
+  - id: math.linalg.elementary-row-operations
+    name: Using elementary row operations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.augmented-matrix
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Swap two rows
+        key_prerequisites: [math.linalg.augmented-matrix]
+      - id: kp2
+        can_do: Scale a row
+        key_prerequisites: [math.linalg.augmented-matrix]
+      - id: kp3
+        can_do: Add a multiple of a row
+        key_prerequisites: [math.linalg.augmented-matrix]
+      - id: kp4
+        can_do: Show why operations preserve solutions
+        key_prerequisites: [math.linalg.augmented-matrix]
+  - id: math.linalg.row-equivalence
+    name: Recognizing row-equivalent matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.elementary-row-operations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show two matrices are row equivalent
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp2
+        can_do: Undo a row operation
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp3
+        can_do: Tell row-equivalent matrices have the same solutions
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp4
+        can_do: Spot a non-equivalent pair
+        key_prerequisites: [math.linalg.elementary-row-operations]
+  - id: math.linalg.identify-echelon-forms
+    name: Recognizing echelon forms
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.elementary-row-operations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize echelon form
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp2
+        can_do: Recognize reduced form
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp3
+        can_do: Find leading entries
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp4
+        can_do: Fix a matrix that breaks a rule
+        key_prerequisites: [math.linalg.elementary-row-operations]
+  - id: math.linalg.row-echelon-form
+    name: Reducing to row echelon form
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.row-equivalence
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.identify-echelon-forms
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.linalg.elementary-row-operations
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce a two-by-three matrix
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp2
+        can_do: Reduce a three-by-four matrix
+        key_prerequisites: [math.linalg.row-equivalence]
+      - id: kp3
+        can_do: Swap rows for a zero pivot
+        key_prerequisites: [math.linalg.elementary-row-operations]
+      - id: kp4
+        can_do: Reduce with fractions avoided
+        key_prerequisites: [math.linalg.identify-echelon-forms]
+  - id: math.linalg.reduced-row-echelon
+    name: Reducing to reduced row echelon form
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.row-echelon-form
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Clear above a pivot
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp2
+        can_do: Scale pivots to one
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp3
+        can_do: Reduce a three-by-four matrix fully
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp4
+        can_do: Explain why the reduced form is unique
+        key_prerequisites: [math.linalg.row-echelon-form]
+  - id: math.linalg.gauss-jordan
+    name: Solving with Gauss-Jordan elimination
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.reduced-row-echelon
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a square system by full reduction
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp2
+        can_do: Read a solution from reduced form
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp3
+        can_do: Solve with a fractional answer
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp4
+        can_do: Solve several right sides at once
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+  - id: math.linalg.pivot-and-free-variables
+    name: Finding pivot and free variables
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.reduced-row-echelon
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pivot columns
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp2
+        can_do: Name basic and free variables
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp3
+        can_do: Count free variables
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+      - id: kp4
+        can_do: Find them in a wide matrix
+        key_prerequisites: [math.linalg.reduced-row-echelon]
+  - id: math.linalg.parametric-solutions
+    name: Writing solutions in parametric form
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.pivot-and-free-variables
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve basic variables for free ones
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp2
+        can_do: Write a one-parameter solution
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp3
+        can_do: Write a two-parameter solution
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp4
+        can_do: Write a solution in vector form
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+  - id: math.linalg.homogeneous-systems
+    name: Solving homogeneous systems
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.parametric-solutions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show the zero solution always exists
+        key_prerequisites: [math.linalg.parametric-solutions]
+      - id: kp2
+        can_do: Find nontrivial solutions
+        key_prerequisites: [math.linalg.parametric-solutions]
+      - id: kp3
+        can_do: Write a homogeneous solution in vector form
+        key_prerequisites: [math.linalg.parametric-solutions]
+      - id: kp4
+        can_do: Predict nontrivial solutions when variables outnumber equations
+        key_prerequisites: [math.linalg.parametric-solutions]
+  - id: math.linalg.back-substitution
+    name: Solving by back substitution
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.row-echelon-form
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve upward from the last row
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp2
+        can_do: Solve with a free variable
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp3
+        can_do: Solve with fractions
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp4
+        can_do: Detect an inconsistent row
+        key_prerequisites: [math.linalg.row-echelon-form]
+  - id: math.linalg.gaussian-elimination
+    name: Solving with Gaussian elimination
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.back-substitution
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.row-echelon-form
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a two-by-two system
+        key_prerequisites: [math.linalg.row-echelon-form]
+      - id: kp2
+        can_do: Solve a three-by-three system
+        key_prerequisites: [math.linalg.back-substitution]
+      - id: kp3
+        can_do: Solve a system with a parameter in the answer
+        key_prerequisites: [math.linalg.back-substitution]
+      - id: kp4
+        can_do: Solve a system with four variables
+        key_prerequisites: [math.linalg.back-substitution]
+  - id: math.linalg.rank-from-pivots
+    name: Finding rank from pivots
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.pivot-and-free-variables
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count pivots to find rank
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp2
+        can_do: Find a rank with row reduction
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp3
+        can_do: Compare rank to rows and columns
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp4
+        can_do: Tell full rank
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+  - id: math.linalg.geometry-of-systems
+    name: Picturing solution sets in space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-equations-review
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.vectors-in-3d
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Picture a two-line system
+        key_prerequisites: [math.linalg.linear-equations-review]
+      - id: kp2
+        can_do: Picture three planes
+        key_prerequisites: [math.precalc.vectors-in-3d]
+      - id: kp3
+        can_do: Match a solution set to a point, line or plane
+        key_prerequisites: [math.precalc.vectors-in-3d]
+      - id: kp4
+        can_do: Tell inconsistent planes
+        key_prerequisites: [math.linalg.linear-equations-review, math.precalc.vectors-in-3d]
+  - id: math.linalg.consistency-and-solutions
+    name: Deciding the number of solutions
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.rank-from-pivots
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.geometry-of-systems
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.linalg.pivot-and-free-variables
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a row with zero equals nonzero
+        key_prerequisites: [math.linalg.rank-from-pivots]
+      - id: kp2
+        can_do: Decide a unique solution
+        key_prerequisites: [math.linalg.rank-from-pivots]
+      - id: kp3
+        can_do: Decide infinitely many solutions
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp4
+        can_do: Compare coefficient rank to augmented rank
+        key_prerequisites: [math.linalg.rank-from-pivots]
+  - id: math.linalg.systems-with-parameters
+    name: Analyzing systems with a parameter
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.consistency-and-solutions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce with a parameter
+        key_prerequisites: [math.linalg.consistency-and-solutions]
+      - id: kp2
+        can_do: Find values with no solution
+        key_prerequisites: [math.linalg.consistency-and-solutions]
+      - id: kp3
+        can_do: Find values with a unique solution
+        key_prerequisites: [math.linalg.consistency-and-solutions]
+      - id: kp4
+        can_do: Find values with infinitely many solutions
+        key_prerequisites: [math.linalg.consistency-and-solutions]
+  - id: math.linalg.polynomial-through-points
+    name: Fitting a polynomial through points
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a parabola through three points
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve for coefficients
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp3
+        can_do: Fit a cubic through four points
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Explain when a fit is unique
+        key_prerequisites: [math.linalg.gaussian-elimination]
+  - id: math.linalg.applications-of-systems
+    name: Applying linear systems
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.polynomial-through-points
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Balance a chemical equation
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve a mixture or nutrition problem
+        key_prerequisites: [math.linalg.polynomial-through-points]
+      - id: kp3
+        can_do: Solve an economic input model
+        key_prerequisites: [math.linalg.polynomial-through-points]
+      - id: kp4
+        can_do: Fit a circle through points
+        key_prerequisites: [math.linalg.polynomial-through-points]
+  - id: math.linalg.network-balance-applications
+    name: Using systems for networks and balancing
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Balance flow at nodes
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve a traffic network
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp3
+        can_do: Use Kirchhoff's laws for a circuit
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Interpret a free variable in a network
+        key_prerequisites: [math.linalg.gaussian-elimination]
+  - id: math.linalg.vectors-in-rn
+    name: Working with vectors in n-space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.vector-add-subtract
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a vector in n-space
+        key_prerequisites: [math.precalc.vector-add-subtract]
+      - id: kp2
+        can_do: Add and scale vectors
+        key_prerequisites: [math.precalc.vector-add-subtract]
+      - id: kp3
+        can_do: Tell a column from a point
+        key_prerequisites: [math.precalc.vector-add-subtract]
+      - id: kp4
+        can_do: Find a zero vector in each space
+        key_prerequisites: [math.precalc.vector-add-subtract]
+  - id: math.linalg.vector-arithmetic-rn
+    name: Using vector algebra rules in n-space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.vectors-in-rn
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use commutative and associative laws
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp2
+        can_do: Use distributive laws
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp3
+        can_do: Solve a vector equation
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp4
+        can_do: Prove a simple vector identity
+        key_prerequisites: [math.linalg.vectors-in-rn]
+  - id: math.linalg.linear-combinations
+    name: Finding linear combinations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.vector-arithmetic-rn
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.linalg.vectors-in-rn
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a linear combination
+        key_prerequisites: [math.linalg.vector-arithmetic-rn]
+      - id: kp2
+        can_do: Write a vector as a combination by inspection
+        key_prerequisites: [math.linalg.vector-arithmetic-rn]
+      - id: kp3
+        can_do: Set up a combination problem as a system
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Find coefficients with elimination
+        key_prerequisites: [math.linalg.gaussian-elimination]
+  - id: math.linalg.span-of-vectors
+    name: Finding the span of vectors
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-combinations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a span
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp2
+        can_do: List vectors in a span
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp3
+        can_do: Describe a span by a parameter
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp4
+        can_do: Describe a span by equations
+        key_prerequisites: [math.linalg.linear-combinations]
+  - id: math.linalg.matrix-times-vector
+    name: Multiplying a matrix by a vector as a combination
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-combinations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.matrix-multiply
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute as a combination of columns
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp2
+        can_do: Compute row by row
+        key_prerequisites: [math.precalc.matrix-multiply]
+      - id: kp3
+        can_do: Use linearity of the product
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp4
+        can_do: Find an unknown from a product
+        key_prerequisites: [math.precalc.matrix-multiply]
+  - id: math.linalg.vector-equation-of-system
+    name: Writing a system as a vector equation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a system as a vector equation
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Write it as Ax equals b
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp3
+        can_do: Interpret consistency as a span question
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Read columns as directions
+        key_prerequisites: [math.linalg.matrix-times-vector]
+  - id: math.linalg.solution-set-structure
+    name: Describing solution sets of Ax = b
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.vector-equation-of-system
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.homogeneous-systems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the solutions of Ax equals zero
+        key_prerequisites: [math.linalg.homogeneous-systems]
+      - id: kp2
+        can_do: Write the solutions of Ax equals b
+        key_prerequisites: [math.linalg.vector-equation-of-system]
+      - id: kp3
+        can_do: Sketch a translated line
+        key_prerequisites: [math.linalg.vector-equation-of-system, math.linalg.homogeneous-systems]
+      - id: kp4
+        can_do: Explain consistency from columns
+        key_prerequisites: [math.linalg.vector-equation-of-system]
+  - id: math.linalg.membership-in-span
+    name: Testing whether a vector is in a span
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.span-of-vectors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test membership with row reduction
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp2
+        can_do: Find the coefficients
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp3
+        can_do: Find when a parameter puts a vector in a span
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp4
+        can_do: Find equations a span satisfies
+        key_prerequisites: [math.linalg.span-of-vectors]
+  - id: math.linalg.span-geometric
+    name: Describing spans geometrically
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.span-of-vectors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Picture a span of one vector
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp2
+        can_do: Picture a span of two vectors
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp3
+        can_do: Decide if two spans are equal
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp4
+        can_do: Find a plane equation for a span
+        key_prerequisites: [math.linalg.span-of-vectors]
+  - id: math.linalg.linear-independence-definition
+    name: Defining linear independence
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.homogeneous-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.membership-in-span
+        encompassing: 0.2
+        confidence: high
+      - topic: math.linalg.span-geometric
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.span-of-vectors
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the definition
+        key_prerequisites: [math.linalg.homogeneous-systems]
+      - id: kp2
+        can_do: Show two vectors independent
+        key_prerequisites: [math.linalg.homogeneous-systems]
+      - id: kp3
+        can_do: Connect dependence to redundant spans
+        key_prerequisites: [math.linalg.span-geometric, math.linalg.span-of-vectors]
+      - id: kp4
+        can_do: Connect independence to a trivial solution
+        key_prerequisites: [math.linalg.homogeneous-systems]
+  - id: math.linalg.spanning-rn-test
+    name: Testing whether vectors span n-space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.membership-in-span
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count pivots for spanning
+        key_prerequisites: [math.linalg.membership-in-span]
+      - id: kp2
+        can_do: Find a vector outside a span
+        key_prerequisites: [math.linalg.membership-in-span]
+      - id: kp3
+        can_do: Tell too few vectors from span
+        key_prerequisites: [math.linalg.membership-in-span]
+      - id: kp4
+        can_do: Decide spanning for a set with a parameter
+        key_prerequisites: [math.linalg.membership-in-span]
+  - id: math.linalg.independence-geometric
+    name: Picturing linear independence
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-independence-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Picture dependent pairs
+        key_prerequisites: [math.linalg.linear-independence-definition]
+      - id: kp2
+        can_do: Picture three vectors in a plane
+        key_prerequisites: [math.linalg.linear-independence-definition]
+      - id: kp3
+        can_do: Decide independence from a sketch
+        key_prerequisites: [math.linalg.linear-independence-definition]
+      - id: kp4
+        can_do: Explain dependence as one vector in the span of others
+        key_prerequisites: [math.linalg.linear-independence-definition]
+  - id: math.linalg.linear-independence-test
+    name: Testing for linear independence
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.independence-geometric
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-independence-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Row reduce with columns
+        key_prerequisites: [math.linalg.independence-geometric]
+      - id: kp2
+        can_do: Read independence from pivots
+        key_prerequisites: [math.linalg.independence-geometric]
+      - id: kp3
+        can_do: Use the zero-vector shortcut
+        key_prerequisites: [math.linalg.linear-independence-definition]
+      - id: kp4
+        can_do: Find a parameter making vectors dependent
+        key_prerequisites: [math.linalg.independence-geometric]
+  - id: math.linalg.independence-by-inspection
+    name: Spotting dependence by inspection
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Spot a zero vector
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp2
+        can_do: Spot a scalar multiple
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp3
+        can_do: Spot too many vectors
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp4
+        can_do: Spot echelon-shaped independent vectors
+        key_prerequisites: [math.linalg.linear-independence-test]
+  - id: math.linalg.dependence-relations
+    name: Finding dependence relations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.independence-by-inspection
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a dependence relation
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp2
+        can_do: Express one vector through the others
+        key_prerequisites: [math.linalg.independence-by-inspection]
+      - id: kp3
+        can_do: Find which vectors to remove
+        key_prerequisites: [math.linalg.independence-by-inspection]
+      - id: kp4
+        can_do: Read a relation from reduced form
+        key_prerequisites: [math.linalg.independence-by-inspection]
+  - id: math.linalg.particular-plus-homogeneous
+    name: Writing a solution as particular plus homogeneous
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.solution-set-structure
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a particular solution
+        key_prerequisites: [math.linalg.solution-set-structure]
+      - id: kp2
+        can_do: Find the homogeneous solutions
+        key_prerequisites: [math.linalg.solution-set-structure]
+      - id: kp3
+        can_do: Write the general solution
+        key_prerequisites: [math.linalg.solution-set-structure]
+      - id: kp4
+        can_do: Show why adding keeps a solution
+        key_prerequisites: [math.linalg.solution-set-structure]
+  - id: math.linalg.matrix-product-three-views
+    name: Viewing matrix products in several ways
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute by the entry rule
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Compute by columns
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp3
+        can_do: Compute by rows
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Tell when a product is defined
+        key_prerequisites: [math.linalg.matrix-times-vector]
+  - id: math.linalg.transpose
+    name: Finding transposes
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a transpose
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp2
+        can_do: Find transposes of products by example
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp3
+        can_do: Recognize symmetric matrices
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp4
+        can_do: Write a dot product with a transpose
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: math.linalg.block-matrices
+    name: Working with block matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Partition a matrix into blocks
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp2
+        can_do: Multiply block matrices
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp3
+        can_do: Find an inverse of a block triangular matrix
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp4
+        can_do: Use blocks to read a product's columns
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: math.linalg.product-noncommutative
+    name: Spotting failures of commutativity and cancellation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a pair with different products
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp2
+        can_do: Find zero divisors
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp3
+        can_do: Show cancellation can fail
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp4
+        can_do: Expand a binomial of matrices carefully
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: math.linalg.matrix-algebra-rules
+    name: Using rules of matrix algebra
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.product-noncommutative
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use associative and distributive laws
+        key_prerequisites: [math.linalg.product-noncommutative]
+      - id: kp2
+        can_do: Use the identity matrix
+        key_prerequisites: [math.linalg.product-noncommutative]
+      - id: kp3
+        can_do: Simplify a matrix expression
+        key_prerequisites: [math.linalg.product-noncommutative]
+      - id: kp4
+        can_do: Solve a simple matrix equation by rules
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: math.linalg.powers-of-matrices
+    name: Finding powers of matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute small powers
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp2
+        can_do: Find a pattern in powers
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp3
+        can_do: Use powers of a diagonal matrix
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp4
+        can_do: Spot a nilpotent matrix
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+  - id: math.linalg.invertible-matrices
+    name: Defining invertible matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.inverse-matrix-2x2
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an inverse
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp2
+        can_do: Check a claimed inverse
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp3
+        can_do: Use the two-by-two formula
+        key_prerequisites: [math.precalc.inverse-matrix-2x2]
+      - id: kp4
+        can_do: Spot a noninvertible matrix
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+  - id: math.linalg.inverse-by-row-reduction
+    name: Finding an inverse by row reduction
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.invertible-matrices
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.gauss-jordan
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the augmented matrix with the identity
+        key_prerequisites: [math.linalg.gauss-jordan]
+      - id: kp2
+        can_do: Find a three-by-three inverse
+        key_prerequisites: [math.linalg.gauss-jordan]
+      - id: kp3
+        can_do: Detect no inverse
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp4
+        can_do: Find an inverse with a parameter
+        key_prerequisites: [math.linalg.gauss-jordan]
+  - id: math.linalg.elementary-matrices
+    name: Using elementary matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.inverse-by-row-reduction
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write an elementary matrix
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp2
+        can_do: Read an operation from a matrix
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp3
+        can_do: Factor an inverse as elementary matrices
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp4
+        can_do: Invert an elementary matrix
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+  - id: math.linalg.lu-factorization
+    name: Finding an LU factorization
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.elementary-matrices
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find L and U without swaps
+        key_prerequisites: [math.linalg.elementary-matrices]
+      - id: kp2
+        can_do: Store multipliers in L
+        key_prerequisites: [math.linalg.elementary-matrices]
+      - id: kp3
+        can_do: Find an LU factorization of a three-by-three matrix
+        key_prerequisites: [math.linalg.elementary-matrices]
+      - id: kp4
+        can_do: Explain when no LU factorization exists
+        key_prerequisites: [math.linalg.elementary-matrices]
+  - id: math.linalg.solve-with-lu
+    name: Solving with an LU factorization
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.lu-factorization
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve Ly equals b
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp2
+        can_do: Solve Ux equals y
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp3
+        can_do: Reuse a factorization for a new right side
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp4
+        can_do: Compare costs with full elimination
+        key_prerequisites: [math.linalg.lu-factorization]
+  - id: math.linalg.transpose-rules
+    name: Using rules for transposes
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.transpose
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transpose a sum
+        key_prerequisites: [math.linalg.transpose]
+      - id: kp2
+        can_do: Transpose a product
+        key_prerequisites: [math.linalg.transpose, math.linalg.matrix-algebra-rules]
+      - id: kp3
+        can_do: Transpose an inverse
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp4
+        can_do: Prove a matrix times its transpose is symmetric
+        key_prerequisites: [math.linalg.transpose, math.linalg.matrix-algebra-rules]
+  - id: math.linalg.special-matrices
+    name: Using diagonal, triangular and symmetric matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.transpose-rules
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.transpose
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply diagonal matrices
+        key_prerequisites: [math.linalg.transpose-rules]
+      - id: kp2
+        can_do: Multiply triangular matrices
+        key_prerequisites: [math.linalg.transpose-rules]
+      - id: kp3
+        can_do: Split a matrix into symmetric and skew parts
+        key_prerequisites: [math.linalg.transpose]
+      - id: kp4
+        can_do: Invert diagonal and triangular matrices
+        key_prerequisites: [math.linalg.transpose-rules]
+  - id: math.linalg.inverse-properties
+    name: Using properties of inverses
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.invertible-matrices
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Invert an inverse
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp2
+        can_do: Invert a product
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp3
+        can_do: Invert a transpose
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp4
+        can_do: Simplify an expression with inverses
+        key_prerequisites: [math.linalg.invertible-matrices]
+  - id: math.linalg.invertible-matrix-theorem-basic
+    name: Using equivalent conditions for invertibility
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.inverse-by-row-reduction
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.spanning-rn-test
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.inverse-properties
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Connect invertibility to pivots
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp2
+        can_do: Connect to independent columns
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp3
+        can_do: Connect to spanning columns
+        key_prerequisites: [math.linalg.spanning-rn-test]
+      - id: kp4
+        can_do: Use one condition to conclude the others
+        key_prerequisites: [math.linalg.inverse-by-row-reduction, math.linalg.linear-independence-test, math.linalg.spanning-rn-test, math.linalg.inverse-properties]
+  - id: math.linalg.solve-with-inverse
+    name: Solving systems with an inverse
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.invertible-matrices
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a solution with an inverse
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp2
+        can_do: Solve a two-by-two system
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp3
+        can_do: Solve for several right sides
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp4
+        can_do: Tell when row reduction is cheaper
+        key_prerequisites: [math.linalg.invertible-matrices]
+  - id: math.linalg.matrix-equations
+    name: Solving matrix equations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.inverse-properties
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.solve-with-inverse
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve AX equals B
+        key_prerequisites: [math.linalg.solve-with-inverse]
+      - id: kp2
+        can_do: Solve XA equals B
+        key_prerequisites: [math.linalg.inverse-properties]
+      - id: kp3
+        can_do: Solve an equation with a transpose
+        key_prerequisites: [math.linalg.inverse-properties]
+      - id: kp4
+        can_do: Solve an equation with a sum of unknowns
+        key_prerequisites: [math.linalg.inverse-properties, math.linalg.solve-with-inverse]
+  - id: math.linalg.permuted-lu
+    name: Using a permuted LU factorization
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.lu-factorization
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Spot when a swap is needed
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp2
+        can_do: Write a permutation matrix
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp3
+        can_do: Find a permuted factorization
+        key_prerequisites: [math.linalg.lu-factorization]
+      - id: kp4
+        can_do: Solve with a permuted factorization
+        key_prerequisites: [math.linalg.lu-factorization]
+  - id: math.linalg.trace-of-matrix
+    name: Finding the trace
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a trace
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp2
+        can_do: Use linearity of the trace
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp3
+        can_do: Show trace of AB equals trace of BA
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp4
+        can_do: Use trace to rule out a matrix equation
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+  - id: math.linalg.matrix-as-transformation
+    name: Treating a matrix as a transformation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute an image of a vector
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Find a domain and codomain
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp3
+        can_do: Find an input for a given output
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Sketch an image in the plane
+        key_prerequisites: [math.linalg.matrix-times-vector]
+  - id: math.linalg.linear-transformation-definition
+    name: Defining linear transformations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-as-transformation
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the two linearity rules
+        key_prerequisites: [math.linalg.matrix-as-transformation]
+      - id: kp2
+        can_do: Use linearity on given images
+        key_prerequisites: [math.linalg.matrix-as-transformation]
+      - id: kp3
+        can_do: Show a matrix map is linear
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Find the image of a combination
+        key_prerequisites: [math.linalg.matrix-as-transformation]
+  - id: math.linalg.test-linear-or-not
+    name: Testing whether a map is linear
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-transformation-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test with the zero vector
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+      - id: kp2
+        can_do: Test with sums
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+      - id: kp3
+        can_do: Test with scalars
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+      - id: kp4
+        can_do: Show a map with a square is nonlinear
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+  - id: math.linalg.standard-matrix
+    name: Finding the standard matrix
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.test-linear-or-not
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-transformation-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find columns from basis images
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+      - id: kp2
+        can_do: Find a matrix from a formula
+        key_prerequisites: [math.linalg.test-linear-or-not]
+      - id: kp3
+        can_do: Find a matrix for a two-step description
+        key_prerequisites: [math.linalg.test-linear-or-not]
+      - id: kp4
+        can_do: Use a matrix to compute images
+        key_prerequisites: [math.linalg.test-linear-or-not]
+  - id: math.linalg.one-to-one-and-onto
+    name: Testing one-to-one and onto
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.standard-matrix
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.pivot-and-free-variables
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define one-to-one and onto
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp2
+        can_do: Test one-to-one with pivots
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp3
+        can_do: Test onto with pivots
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp4
+        can_do: Decide from matrix size
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+  - id: math.linalg.composition-matrix-product
+    name: Composing transformations with matrix products
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.standard-matrix
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a matrix for a composition
+        key_prerequisites: [math.linalg.standard-matrix, math.linalg.matrix-algebra-rules]
+      - id: kp2
+        can_do: Explain the order of a product
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp3
+        can_do: Compose two rotations
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp4
+        can_do: Find a composition that reverses a shear
+        key_prerequisites: [math.linalg.standard-matrix]
+  - id: math.linalg.invertible-transformations
+    name: Finding inverse transformations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.composition-matrix-product
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.inverse-by-row-reduction
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.one-to-one-and-onto
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Link an inverse map to an inverse matrix
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp2
+        can_do: Find an inverse transformation
+        key_prerequisites: [math.linalg.composition-matrix-product, math.linalg.inverse-by-row-reduction]
+      - id: kp3
+        can_do: Connect to one-to-one and onto
+        key_prerequisites: [math.linalg.one-to-one-and-onto]
+      - id: kp4
+        can_do: Undo a reflection and rotation
+        key_prerequisites: [math.linalg.composition-matrix-product]
+  - id: math.linalg.shear-projection-matrices
+    name: Using matrices for shears and projections
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.standard-matrix
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a shear's matrix
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp2
+        can_do: Find a projection onto an axis or line
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp3
+        can_do: Find a scaling matrix
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp4
+        can_do: Sketch each action on a square
+        key_prerequisites: [math.linalg.standard-matrix]
+  - id: math.linalg.geometric-transformations-matrices
+    name: Using matrices for rotations and reflections
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.matrix-rotation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.shear-projection-matrices
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.standard-matrix
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a rotation matrix
+        key_prerequisites: [math.precalc.matrix-rotation]
+      - id: kp2
+        can_do: Write a reflection matrix
+        key_prerequisites: [math.linalg.shear-projection-matrices]
+      - id: kp3
+        can_do: Compose a rotation and a reflection
+        key_prerequisites: [math.precalc.matrix-rotation, math.linalg.shear-projection-matrices]
+      - id: kp4
+        can_do: Rotate about an axis in space
+        key_prerequisites: [math.precalc.matrix-rotation]
+  - id: math.linalg.image-of-a-shape
+    name: Finding the image of a shape under a transformation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.standard-matrix
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an image of a square
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp2
+        can_do: Find an image of a line
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp3
+        can_do: Find an image of a circle as an ellipse
+        key_prerequisites: [math.linalg.standard-matrix]
+      - id: kp4
+        can_do: Find an area scale on a parallelogram
+        key_prerequisites: [math.linalg.standard-matrix]
+  - id: math.linalg.determinant-cofactors
+    name: Finding determinants by cofactors
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.determinants-3x3
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minors and cofactors
+        key_prerequisites: [math.precalc.determinants-3x3]
+      - id: kp2
+        can_do: Expand a three-by-three matrix
+        key_prerequisites: [math.precalc.determinants-3x3]
+      - id: kp3
+        can_do: Expand a four-by-four matrix
+        key_prerequisites: [math.precalc.determinants-3x3]
+      - id: kp4
+        can_do: Use cofactor signs correctly
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+  - id: math.linalg.cofactor-expansion-choice
+    name: Choosing a row for expansion
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-cofactors
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a row with many zeros
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp2
+        can_do: Expand along a column
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp3
+        can_do: Evaluate a sparse four-by-four
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp4
+        can_do: Compare effort across choices
+        key_prerequisites: [math.linalg.determinant-cofactors]
+  - id: math.linalg.det-of-triangular
+    name: Finding determinants of triangular matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-cofactors
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a triangular determinant
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp2
+        can_do: Find a diagonal determinant
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp3
+        can_do: Find a block triangular determinant
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp4
+        can_do: Spot a zero on the diagonal
+        key_prerequisites: [math.linalg.determinant-cofactors]
+  - id: math.linalg.determinant-row-reduction
+    name: Finding determinants by row reduction
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.cofactor-expansion-choice
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.det-of-triangular
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.determinant-cofactors
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.linalg.row-echelon-form
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Track a swap
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp2
+        can_do: Track a scale
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp3
+        can_do: Track a row addition
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp4
+        can_do: Reduce and compute a four-by-four
+        key_prerequisites: [math.linalg.cofactor-expansion-choice, math.linalg.det-of-triangular]
+  - id: math.linalg.det-row-op-effects
+    name: Tracking row operations in a determinant
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-row-reduction
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a determinant after a scale
+        key_prerequisites: [math.linalg.determinant-row-reduction]
+      - id: kp2
+        can_do: Find a determinant after swaps
+        key_prerequisites: [math.linalg.determinant-row-reduction]
+      - id: kp3
+        can_do: Find a determinant from a related matrix
+        key_prerequisites: [math.linalg.determinant-row-reduction]
+      - id: kp4
+        can_do: Use a repeated row to conclude zero
+        key_prerequisites: [math.linalg.determinant-row-reduction]
+  - id: math.linalg.determinant-properties
+    name: Using properties of determinants
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.det-row-op-effects
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.determinant-row-reduction
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a determinant of a transpose
+        key_prerequisites: [math.linalg.det-row-op-effects]
+      - id: kp2
+        can_do: Use a scaled matrix's determinant
+        key_prerequisites: [math.linalg.det-row-op-effects]
+      - id: kp3
+        can_do: Spot dependent rows
+        key_prerequisites: [math.linalg.det-row-op-effects]
+      - id: kp4
+        can_do: Use multilinearity in a row
+        key_prerequisites: [math.linalg.determinant-row-reduction]
+  - id: math.linalg.cramers-rule-general
+    name: Using Cramer's rule and the adjugate
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up Cramer's rule
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp2
+        can_do: Solve a three-variable system
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp3
+        can_do: Find one variable alone
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp4
+        can_do: Compare cost with elimination
+        key_prerequisites: [math.linalg.determinant-properties]
+  - id: math.linalg.determinant-as-volume
+    name: Seeing a determinant as a volume
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-properties
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.geometric-transformations-matrices
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.image-of-a-shape
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an area from a determinant
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp2
+        can_do: Find a volume from a determinant
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp3
+        can_do: Scale an area under a transformation
+        key_prerequisites: [math.linalg.image-of-a-shape]
+      - id: kp4
+        can_do: Interpret a negative sign as orientation
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+  - id: math.linalg.det-invertibility
+    name: Testing invertibility with a determinant
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.determinant-properties
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.invertible-matrix-theorem-basic
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.linalg.invertible-matrices
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the determinant test
+        key_prerequisites: [math.linalg.invertible-matrix-theorem-basic]
+      - id: kp2
+        can_do: Test a numeric matrix
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp3
+        can_do: Find values making a matrix singular
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp4
+        can_do: Add the condition to the equivalent list
+        key_prerequisites: [math.linalg.invertible-matrix-theorem-basic, math.linalg.invertible-matrices]
+  - id: math.linalg.determinant-of-products
+    name: Using determinants of products
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.det-invertibility
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.determinant-properties
+        encompassing: 0.15
+        confidence: high
+      - topic: math.linalg.invertible-matrices
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the determinant of a product
+        key_prerequisites: [math.linalg.det-invertibility]
+      - id: kp2
+        can_do: Use a determinant of an inverse
+        key_prerequisites: [math.linalg.invertible-matrices]
+      - id: kp3
+        can_do: Find a determinant of a power
+        key_prerequisites: [math.linalg.determinant-properties]
+      - id: kp4
+        can_do: Show similar-looking products share a determinant
+        key_prerequisites: [math.linalg.determinant-properties]
+  - id: math.linalg.det-with-parameter
+    name: Finding when a determinant vanishes
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.det-invertibility
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.systems-with-parameters
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a determinant as a polynomial in a parameter
+        key_prerequisites: [math.linalg.det-invertibility]
+      - id: kp2
+        can_do: Solve where it vanishes
+        key_prerequisites: [math.linalg.det-invertibility]
+      - id: kp3
+        can_do: Decide solutions of a system from it
+        key_prerequisites: [math.linalg.systems-with-parameters]
+      - id: kp4
+        can_do: Find a parameter making rows dependent
+        key_prerequisites: [math.linalg.det-invertibility]
+  - id: math.linalg.adjugate-inverse
+    name: Finding an inverse with the adjugate
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.cramers-rule-general
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a cofactor matrix
+        key_prerequisites: [math.linalg.cramers-rule-general]
+      - id: kp2
+        can_do: Write an adjugate
+        key_prerequisites: [math.linalg.cramers-rule-general]
+      - id: kp3
+        can_do: Find an inverse by the adjugate
+        key_prerequisites: [math.linalg.cramers-rule-general]
+      - id: kp4
+        can_do: Find one entry of an inverse
+        key_prerequisites: [math.linalg.cramers-rule-general]
+  - id: math.linalg.vector-space-axioms
+    name: Understanding the vector space axioms
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-combinations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read the axioms
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp2
+        can_do: Check an axiom for a new addition
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp3
+        can_do: Prove a zero vector is unique
+        key_prerequisites: [math.linalg.linear-combinations]
+      - id: kp4
+        can_do: Prove a scalar zero gives the zero vector
+        key_prerequisites: [math.linalg.linear-combinations]
+  - id: math.linalg.examples-of-vector-spaces
+    name: Working with polynomial and function spaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.vector-space-axioms
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Work with polynomials as vectors
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp2
+        can_do: Work with matrices as vectors
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp3
+        can_do: Work with functions as vectors
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp4
+        can_do: Find a zero in each example
+        key_prerequisites: [math.linalg.vector-space-axioms]
+  - id: math.linalg.general-linear-transformations
+    name: Working with abstract linear transformations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.linear-transformation-definition
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.examples-of-vector-spaces
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test a map on polynomials
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp2
+        can_do: Test the derivative as a map
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp3
+        can_do: Test the trace as a map
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp4
+        can_do: Find an image on a matrix space
+        key_prerequisites: [math.linalg.linear-transformation-definition]
+  - id: math.linalg.test-vector-space
+    name: Checking whether a set is a vector space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.vector-space-axioms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test closure under addition
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp2
+        can_do: Test closure under scalar multiplication
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp3
+        can_do: Spot a failed zero vector
+        key_prerequisites: [math.linalg.vector-space-axioms]
+      - id: kp4
+        can_do: Reject a set with a broken axiom
+        key_prerequisites: [math.linalg.vector-space-axioms]
+  - id: math.linalg.subspaces
+    name: Testing subspaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.examples-of-vector-spaces
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.test-vector-space
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the subspace test
+        key_prerequisites: [math.linalg.test-vector-space]
+      - id: kp2
+        can_do: Test a subset in n-space
+        key_prerequisites: [math.linalg.test-vector-space]
+      - id: kp3
+        can_do: Test a subset of polynomials
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp4
+        can_do: Test a subset of matrices
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+  - id: math.linalg.span-as-subspace
+    name: Showing a span is a subspace
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.subspaces
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.span-of-vectors
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove any span is a subspace
+        key_prerequisites: [math.linalg.subspaces]
+      - id: kp2
+        can_do: Write a set as a span
+        key_prerequisites: [math.linalg.span-of-vectors]
+      - id: kp3
+        can_do: Find spanning sets for a polynomial subspace
+        key_prerequisites: [math.linalg.subspaces]
+      - id: kp4
+        can_do: Compare two spans
+        key_prerequisites: [math.linalg.span-of-vectors]
+  - id: math.linalg.null-space
+    name: Finding the null space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.subspaces
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.particular-plus-homogeneous
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.parametric-solutions
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spanning vectors from reduced form
+        key_prerequisites: [math.linalg.parametric-solutions]
+      - id: kp2
+        can_do: Test membership in a null space
+        key_prerequisites: [math.linalg.subspaces]
+      - id: kp3
+        can_do: Find a null space of a wide matrix
+        key_prerequisites: [math.linalg.parametric-solutions]
+      - id: kp4
+        can_do: Explain the solution set as translation
+        key_prerequisites: [math.linalg.particular-plus-homogeneous]
+  - id: math.linalg.column-space
+    name: Finding the column space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.subspaces
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.pivot-and-free-variables
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a column space
+        key_prerequisites: [math.linalg.subspaces]
+      - id: kp2
+        can_do: Test membership in it
+        key_prerequisites: [math.linalg.subspaces]
+      - id: kp3
+        can_do: Find pivot columns for a basis
+        key_prerequisites: [math.linalg.pivot-and-free-variables]
+      - id: kp4
+        can_do: Compare with the null space
+        key_prerequisites: [math.linalg.subspaces]
+  - id: math.linalg.row-space
+    name: Finding the row space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.column-space
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.transpose
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a row space
+        key_prerequisites: [math.linalg.transpose]
+      - id: kp2
+        can_do: Find a basis from nonzero rows
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp3
+        can_do: Show row operations preserve it
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp4
+        can_do: Compare with column space dimensions
+        key_prerequisites: [math.linalg.column-space]
+  - id: math.linalg.independence-function-spaces
+    name: Testing independence of polynomials and functions
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.examples-of-vector-spaces
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test polynomials with coefficients
+        key_prerequisites: [math.linalg.linear-independence-test]
+      - id: kp2
+        can_do: Test matrices by flattening
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp3
+        can_do: Test functions with chosen inputs
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp4
+        can_do: Test functions with a Wronskian idea
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+  - id: math.linalg.basis-definition
+    name: Defining a basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.span-as-subspace
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.independence-function-spaces
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the definition
+        key_prerequisites: [math.linalg.span-as-subspace]
+      - id: kp2
+        can_do: Test a set as a basis
+        key_prerequisites: [math.linalg.span-as-subspace, math.linalg.linear-independence-test]
+      - id: kp3
+        can_do: Show a basis gives unique coordinates
+        key_prerequisites: [math.linalg.span-as-subspace]
+      - id: kp4
+        can_do: Find an example failing each condition
+        key_prerequisites: [math.linalg.independence-function-spaces]
+  - id: math.linalg.standard-bases
+    name: Using standard bases of common spaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.basis-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List a standard basis of n-space
+        key_prerequisites: [math.linalg.basis-definition]
+      - id: kp2
+        can_do: List one for polynomials
+        key_prerequisites: [math.linalg.basis-definition]
+      - id: kp3
+        can_do: List one for matrices
+        key_prerequisites: [math.linalg.basis-definition]
+      - id: kp4
+        can_do: Write a vector from a standard basis
+        key_prerequisites: [math.linalg.basis-definition]
+  - id: math.linalg.finding-a-basis
+    name: Finding a basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.standard-bases
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.dependence-relations
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.basis-definition
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a basis of a spanned set
+        key_prerequisites: [math.linalg.dependence-relations]
+      - id: kp2
+        can_do: Find a basis from a constraint
+        key_prerequisites: [math.linalg.standard-bases]
+      - id: kp3
+        can_do: Find a basis of a polynomial subspace
+        key_prerequisites: [math.linalg.basis-definition]
+      - id: kp4
+        can_do: Find a basis of a matrix subspace
+        key_prerequisites: [math.linalg.basis-definition]
+  - id: math.linalg.coordinates-relative-to-basis
+    name: Finding coordinates relative to a basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.finding-a-basis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coordinates in n-space
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp2
+        can_do: Find coordinates of a polynomial
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp3
+        can_do: Convert coordinates back
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp4
+        can_do: Use coordinates to test independence
+        key_prerequisites: [math.linalg.finding-a-basis]
+  - id: math.linalg.change-of-basis
+    name: Changing basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.coordinates-relative-to-basis
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.inverse-by-row-reduction
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a change-of-basis matrix to the standard basis
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+      - id: kp2
+        can_do: Find one between two bases
+        key_prerequisites: [math.linalg.inverse-by-row-reduction]
+      - id: kp3
+        can_do: Convert coordinates
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+      - id: kp4
+        can_do: Change basis for polynomials
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+  - id: math.linalg.matrix-of-transformation
+    name: Finding the matrix of a transformation in a basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.general-linear-transformations
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.coordinates-relative-to-basis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a matrix in non-standard bases
+        key_prerequisites: [math.linalg.general-linear-transformations, math.linalg.coordinates-relative-to-basis]
+      - id: kp2
+        can_do: Find a matrix for differentiation
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+      - id: kp3
+        can_do: Compute an image through coordinates
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+      - id: kp4
+        can_do: Find a matrix for a transpose map
+        key_prerequisites: [math.linalg.coordinates-relative-to-basis]
+  - id: math.linalg.extend-reduce-to-basis
+    name: Extending and reducing to a basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.finding-a-basis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce a spanning set
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp2
+        can_do: Extend an independent set
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp3
+        can_do: Extend with standard vectors
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp4
+        can_do: Find a basis containing a given vector
+        key_prerequisites: [math.linalg.finding-a-basis]
+  - id: math.linalg.dimension
+    name: Finding dimension
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.extend-reduce-to-basis
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.finding-a-basis
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State that every basis has the same size
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp2
+        can_do: Find the dimension of a space
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp3
+        can_do: Use size to reject a basis
+        key_prerequisites: [math.linalg.extend-reduce-to-basis]
+      - id: kp4
+        can_do: Decide with the right count alone
+        key_prerequisites: [math.linalg.extend-reduce-to-basis]
+  - id: math.linalg.dimension-of-subspaces
+    name: Finding dimensions of subspaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.dimension
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a subspace's dimension
+        key_prerequisites: [math.linalg.dimension]
+      - id: kp2
+        can_do: Show a subspace has lower dimension
+        key_prerequisites: [math.linalg.dimension]
+      - id: kp3
+        can_do: Find the dimension of a matrix subspace
+        key_prerequisites: [math.linalg.dimension]
+      - id: kp4
+        can_do: Find a sum's dimension
+        key_prerequisites: [math.linalg.dimension]
+  - id: math.linalg.transition-matrix
+    name: Finding a transition matrix
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.change-of-basis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a matrix from old to new
+        key_prerequisites: [math.linalg.change-of-basis]
+      - id: kp2
+        can_do: Invert a transition matrix
+        key_prerequisites: [math.linalg.change-of-basis]
+      - id: kp3
+        can_do: Use one to compare bases
+        key_prerequisites: [math.linalg.change-of-basis]
+      - id: kp4
+        can_do: Find a transition with polynomials
+        key_prerequisites: [math.linalg.change-of-basis]
+  - id: math.linalg.basis-of-column-space
+    name: Finding a basis for a column space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.column-space
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.finding-a-basis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read pivot columns
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp2
+        can_do: Use the original columns
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp3
+        can_do: Find a basis of a span of polynomials
+        key_prerequisites: [math.linalg.finding-a-basis]
+      - id: kp4
+        can_do: Find a dimension of a column space
+        key_prerequisites: [math.linalg.finding-a-basis]
+  - id: math.linalg.rank-nullity
+    name: Using the rank-nullity theorem
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.null-space
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.dimension-of-subspaces
+        encompassing: 0.2
+        confidence: high
+      - topic: math.linalg.basis-of-column-space
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.column-space
+        encompassing: 0.1
+        confidence: high
+      - topic: math.linalg.dimension
+        encompassing: 0.1
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.linalg.column-space, math.linalg.dimension]
+      - id: kp2
+        can_do: Find nullity from rank
+        key_prerequisites: [math.linalg.null-space]
+      - id: kp3
+        can_do: Decide sizes of solution sets
+        key_prerequisites: [math.linalg.dimension-of-subspaces]
+      - id: kp4
+        can_do: Check with a basis count
+        key_prerequisites: [math.linalg.basis-of-column-space]
+  - id: math.linalg.kernel-and-range
+    name: Finding kernel and range
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.general-linear-transformations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.rank-nullity
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define kernel and range
+        key_prerequisites: [math.linalg.general-linear-transformations]
+      - id: kp2
+        can_do: Find a kernel on polynomials
+        key_prerequisites: [math.linalg.general-linear-transformations]
+      - id: kp3
+        can_do: Find a range on polynomials
+        key_prerequisites: [math.linalg.general-linear-transformations]
+      - id: kp4
+        can_do: Use rank-nullity to find a dimension
+        key_prerequisites: [math.linalg.rank-nullity]
+  - id: math.linalg.isomorphism-of-spaces
+    name: Recognizing isomorphic spaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.kernel-and-range
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.linalg.invertible-transformations
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define an isomorphism
+        key_prerequisites: [math.linalg.kernel-and-range]
+      - id: kp2
+        can_do: Show polynomials match n-space
+        key_prerequisites: [math.linalg.kernel-and-range]
+      - id: kp3
+        can_do: Use dimensions to decide isomorphism
+        key_prerequisites: [math.linalg.kernel-and-range]
+      - id: kp4
+        can_do: Use coordinates as an isomorphism
+        key_prerequisites: [math.linalg.invertible-transformations]
+  - id: math.linalg.solvability-from-rank
+    name: Deciding solvability from rank
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.rank-nullity
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Decide consistency for all right sides
+        key_prerequisites: [math.linalg.rank-nullity]
+      - id: kp2
+        can_do: Decide uniqueness from rank
+        key_prerequisites: [math.linalg.rank-nullity]
+      - id: kp3
+        can_do: Decide from matrix size
+        key_prerequisites: [math.linalg.rank-nullity]
+      - id: kp4
+        can_do: Find constraints on the right side
+        key_prerequisites: [math.linalg.rank-nullity]
+  - id: math.linalg.four-fundamental-subspaces
+    name: Relating the four fundamental subspaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.row-space
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.solvability-from-rank
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.rank-nullity
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name the four subspaces
+        key_prerequisites: [math.linalg.row-space]
+      - id: kp2
+        can_do: Find their dimensions
+        key_prerequisites: [math.linalg.rank-nullity]
+      - id: kp3
+        can_do: Find a basis of each
+        key_prerequisites: [math.linalg.row-space]
+      - id: kp4
+        can_do: Picture how they split domains
+        key_prerequisites: [math.linalg.solvability-from-rank]
+  - id: math.linalg.matrix-of-composition
+    name: Finding matrices of compositions
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-of-transformation
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.composition-matrix-product
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a composition's matrix in bases
+        key_prerequisites: [math.linalg.matrix-of-transformation, math.linalg.composition-matrix-product]
+      - id: kp2
+        can_do: Multiply in the right order
+        key_prerequisites: [math.linalg.composition-matrix-product]
+      - id: kp3
+        can_do: Find a matrix for an inverse map
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+      - id: kp4
+        can_do: Use matrices for repeated differentiation
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+  - id: math.linalg.similar-matrices
+    name: Using similar matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.transition-matrix
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.matrix-of-composition
+        encompassing: 0.2
+        confidence: high
+      - topic: math.linalg.determinant-of-products
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.linalg.matrix-of-transformation
+        encompassing: 0.15
+        confidence: high
+      - topic: math.linalg.change-of-basis
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define similarity
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+      - id: kp2
+        can_do: Find one transformation's matrix in two bases
+        key_prerequisites: [math.linalg.transition-matrix, math.linalg.matrix-of-transformation]
+      - id: kp3
+        can_do: Show similar matrices share a determinant
+        key_prerequisites: [math.linalg.determinant-of-products]
+      - id: kp4
+        can_do: Show similar matrices share a trace
+        key_prerequisites: [math.linalg.change-of-basis]
+  - id: math.linalg.eigen-definition
+    name: Defining eigenvalues and eigenvectors
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.null-space
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an eigenvalue and an eigenvector
+        key_prerequisites: [math.linalg.null-space]
+      - id: kp2
+        can_do: Connect to a null space
+        key_prerequisites: [math.linalg.null-space]
+      - id: kp3
+        can_do: Picture a stretched direction
+        key_prerequisites: [math.linalg.null-space]
+      - id: kp4
+        can_do: Find an eigenspace of a simple matrix
+        key_prerequisites: [math.linalg.null-space]
+  - id: math.linalg.eigen-check
+    name: Checking an eigenvector
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.eigen-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a given vector
+        key_prerequisites: [math.linalg.eigen-definition]
+      - id: kp2
+        can_do: Find a value from a vector
+        key_prerequisites: [math.linalg.eigen-definition]
+      - id: kp3
+        can_do: Check a given value with a null space
+        key_prerequisites: [math.linalg.eigen-definition]
+      - id: kp4
+        can_do: Reject the zero vector
+        key_prerequisites: [math.linalg.eigen-definition]
+  - id: math.linalg.characteristic-polynomial
+    name: Finding the characteristic polynomial
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.det-with-parameter
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.eigen-check
+        encompassing: 0.2
+        confidence: high
+    encompassed:
+      - topic: math.linalg.eigen-definition
+        encompassing: 0.15
+        confidence: high
+      - topic: math.linalg.determinant-properties
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the characteristic equation
+        key_prerequisites: [math.linalg.det-with-parameter, math.linalg.determinant-properties]
+      - id: kp2
+        can_do: Find a two-by-two polynomial
+        key_prerequisites: [math.linalg.det-with-parameter]
+      - id: kp3
+        can_do: Find a three-by-three polynomial
+        key_prerequisites: [math.linalg.det-with-parameter, math.linalg.determinant-properties]
+      - id: kp4
+        can_do: Read a polynomial's trace and determinant
+        key_prerequisites: [math.linalg.det-with-parameter]
+  - id: math.linalg.find-eigenvalues
+    name: Finding eigenvalues
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.characteristic-polynomial
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.solve-polynomial-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a quadratic characteristic equation
+        key_prerequisites: [math.linalg.characteristic-polynomial]
+      - id: kp2
+        can_do: Solve a factorable cubic
+        key_prerequisites: [math.alg2.solve-polynomial-equations]
+      - id: kp3
+        can_do: Use known roots to factor
+        key_prerequisites: [math.alg2.solve-polynomial-equations]
+      - id: kp4
+        can_do: Find eigenvalues of a triangular matrix
+        key_prerequisites: [math.linalg.characteristic-polynomial]
+  - id: math.linalg.find-eigenvectors
+    name: Finding eigenvectors
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.null-space
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for an eigenvector
+        key_prerequisites: [math.linalg.null-space]
+      - id: kp2
+        can_do: Find all eigenspaces of a two-by-two matrix
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp3
+        can_do: Find all eigenspaces of a three-by-three matrix
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp4
+        can_do: Check against the original matrix
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.linalg.eigenspaces-multiplicity
+    name: Comparing algebraic and geometric multiplicity
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find algebraic multiplicity
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp2
+        can_do: Find geometric multiplicity
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp3
+        can_do: Compare the two
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp4
+        can_do: Spot a defective matrix
+        key_prerequisites: [math.linalg.find-eigenvectors]
+  - id: math.linalg.eigen-triangular-tricks
+    name: Using trace and triangular shortcuts
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.special-matrices
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.trace-of-matrix
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read eigenvalues of a triangular matrix
+        key_prerequisites: [math.linalg.special-matrices]
+      - id: kp2
+        can_do: Use trace as a sum
+        key_prerequisites: [math.linalg.trace-of-matrix]
+      - id: kp3
+        can_do: Use determinant as a product
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp4
+        can_do: Find eigenvalues of a power or inverse
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.linalg.complex-eigenvalues
+    name: Working with complex eigenvalues
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.35
+        confidence: high
+      - topic: math.alg2.quadratics-complex-solutions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find complex eigenvalues of a two-by-two matrix
+        key_prerequisites: [math.alg2.quadratics-complex-solutions]
+      - id: kp2
+        can_do: Find a complex eigenvector
+        key_prerequisites: [math.linalg.find-eigenvalues]
+      - id: kp3
+        can_do: Use conjugate pairs
+        key_prerequisites: [math.alg2.quadratics-complex-solutions]
+      - id: kp4
+        can_do: Spot real matrices with no real eigenvectors
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: math.linalg.eigen-geometric
+    name: Picturing eigenvectors geometrically
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.eigen-definition
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.geometric-transformations-matrices
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find eigenvectors of a projection
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp2
+        can_do: Find eigenvectors of a reflection
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp3
+        can_do: Find eigenvectors of a shear
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp4
+        can_do: Explain a rotation with no real eigenvectors
+        key_prerequisites: [math.linalg.eigen-definition]
+  - id: math.linalg.rotation-scaling-form
+    name: Reading rotation and scaling from complex eigenvalues
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.complex-eigenvalues
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.linalg.eigen-geometric
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: math.linalg.geometric-transformations-matrices
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a scale from a complex eigenvalue
+        key_prerequisites: [math.linalg.complex-eigenvalues]
+      - id: kp2
+        can_do: Find a rotation angle
+        key_prerequisites: [math.linalg.complex-eigenvalues]
+      - id: kp3
+        can_do: Rewrite a matrix in rotation-scaling form
+        key_prerequisites: [math.linalg.complex-eigenvalues, math.linalg.eigen-geometric]
+      - id: kp4
+        can_do: Sketch a spiral iteration
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+  - id: math.linalg.cayley-hamilton
+    name: Using the Cayley-Hamilton theorem
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.characteristic-polynomial
+        encompassing: 0.45
+        confidence: medium
+      - topic: math.linalg.powers-of-matrices
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.linalg.characteristic-polynomial]
+      - id: kp2
+        can_do: Check it on a two-by-two matrix
+        key_prerequisites: [math.linalg.characteristic-polynomial]
+      - id: kp3
+        can_do: Find an inverse with it
+        key_prerequisites: [math.linalg.characteristic-polynomial]
+      - id: kp4
+        can_do: Reduce a high power with it
+        key_prerequisites: [math.linalg.powers-of-matrices]
+  - id: math.linalg.diagonalizable-test
+    name: Testing whether a matrix is diagonalizable
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.eigenspaces-multiplicity
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check distinct eigenvalues
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+      - id: kp2
+        can_do: Count eigenvectors
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+      - id: kp3
+        can_do: Decide with repeated eigenvalues
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+      - id: kp4
+        can_do: Spot non-diagonalizable shears
+        key_prerequisites: [math.linalg.eigenspaces-multiplicity]
+  - id: math.linalg.eigenvector-independence
+    name: Proving eigenvectors for distinct eigenvalues are independent
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.linalg.linear-independence-test
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp2
+        can_do: Prove it for two eigenvalues
+        key_prerequisites: [math.linalg.find-eigenvectors, math.linalg.linear-independence-test]
+      - id: kp3
+        can_do: Use it to conclude diagonalizable
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp4
+        can_do: Use it for a basis of eigenvectors
+        key_prerequisites: [math.linalg.find-eigenvectors]
+  - id: math.linalg.diagonalization
+    name: Diagonalizing a matrix
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.similar-matrices
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.diagonalizable-test
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.eigenvector-independence
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.eigenspaces-multiplicity
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build P and D
+        key_prerequisites: [math.linalg.eigenvector-independence]
+      - id: kp2
+        can_do: Check with a product
+        key_prerequisites: [math.linalg.similar-matrices]
+      - id: kp3
+        can_do: Diagonalize a three-by-three matrix
+        key_prerequisites: [math.linalg.diagonalizable-test, math.linalg.eigenspaces-multiplicity]
+      - id: kp4
+        can_do: Read a transformation in an eigenbasis
+        key_prerequisites: [math.linalg.similar-matrices]
+  - id: math.linalg.powers-by-diagonalization
+    name: Finding matrix powers by diagonalizing
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.diagonalization
+        encompassing: 0.6
+        confidence: high
+      - topic: math.linalg.powers-of-matrices
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a power as P D to the k P inverse
+        key_prerequisites: [math.linalg.diagonalization, math.linalg.powers-of-matrices]
+      - id: kp2
+        can_do: Compute a high power
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp3
+        can_do: Find a closed form for entries
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp4
+        can_do: Find a limit of powers
+        key_prerequisites: [math.linalg.diagonalization]
+  - id: math.linalg.markov-chains
+    name: Using Markov chains
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.powers-by-diagonalization
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a stochastic matrix
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp2
+        can_do: Iterate a state vector
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp3
+        can_do: Find a long-run behaviour with eigenvalues
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp4
+        can_do: Solve a market share problem
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+  - id: math.linalg.discrete-dynamical-systems
+    name: Modelling with discrete dynamical systems
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.powers-by-diagonalization
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a recurrence as a matrix iteration
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp2
+        can_do: Solve with an eigenbasis
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp3
+        can_do: Find a long-term growth rate
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+      - id: kp4
+        can_do: Solve the Fibonacci recursion
+        key_prerequisites: [math.linalg.powers-by-diagonalization]
+  - id: math.linalg.systems-of-odes-preview
+    name: Using eigenvalues on systems of differential equations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.diagonalization
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a system in matrix form
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp2
+        can_do: Decouple with an eigenbasis
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp3
+        can_do: Write exponential solutions
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp4
+        can_do: Read growth or decay from eigenvalues
+        key_prerequisites: [math.linalg.diagonalization]
+  - id: math.linalg.eigen-of-transformation
+    name: Finding eigenvalues of a linear transformation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.matrix-of-transformation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find eigenvectors of differentiation
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+      - id: kp2
+        can_do: Find eigenvectors of a transpose map
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+      - id: kp3
+        can_do: Find them through a matrix
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp4
+        can_do: Translate an eigenvector back from coordinates
+        key_prerequisites: [math.linalg.matrix-of-transformation, math.linalg.find-eigenvectors]
+  - id: math.linalg.jordan-form-intro
+    name: Exploring Jordan form
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.diagonalizable-test
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize a Jordan block
+        key_prerequisites: [math.linalg.diagonalizable-test]
+      - id: kp2
+        can_do: Find a generalized eigenvector
+        key_prerequisites: [math.linalg.diagonalizable-test]
+      - id: kp3
+        can_do: Write a small Jordan form
+        key_prerequisites: [math.linalg.diagonalizable-test]
+      - id: kp4
+        can_do: Compute a power of a Jordan block
+        key_prerequisites: [math.linalg.diagonalizable-test]
+  - id: math.linalg.stationary-distribution
+    name: Finding a steady state
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.markov-chains
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a steady-state equation
+        key_prerequisites: [math.linalg.markov-chains]
+      - id: kp2
+        can_do: Solve for a probability vector
+        key_prerequisites: [math.linalg.markov-chains]
+      - id: kp3
+        can_do: Interpret a steady state
+        key_prerequisites: [math.linalg.markov-chains]
+      - id: kp4
+        can_do: Tell when a steady state is unique
+        key_prerequisites: [math.linalg.markov-chains]
+  - id: math.linalg.pagerank-example
+    name: Applying eigenvectors to ranking
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.stationary-distribution
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: math.linalg.markov-chains
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a link matrix
+        key_prerequisites: [math.linalg.markov-chains]
+      - id: kp2
+        can_do: Add a damping factor
+        key_prerequisites: [math.linalg.stationary-distribution]
+      - id: kp3
+        can_do: Find a rank vector
+        key_prerequisites: [math.linalg.stationary-distribution]
+      - id: kp4
+        can_do: Interpret a ranking result
+        key_prerequisites: [math.linalg.stationary-distribution]
+  - id: math.linalg.inner-product-rn
+    name: Using the inner product in n-space
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.vectors-in-rn
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a dot product in n-space
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp2
+        can_do: Use properties of the dot product
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp3
+        can_do: Write it as a matrix product
+        key_prerequisites: [math.linalg.vectors-in-rn]
+      - id: kp4
+        can_do: Find a vector's length
+        key_prerequisites: [math.linalg.vectors-in-rn]
+  - id: math.linalg.length-angle-orthogonal
+    name: Finding lengths, angles and orthogonality
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.inner-product-rn
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a length and normalize
+        key_prerequisites: [math.linalg.inner-product-rn]
+      - id: kp2
+        can_do: Find an angle
+        key_prerequisites: [math.linalg.inner-product-rn]
+      - id: kp3
+        can_do: Test orthogonality
+        key_prerequisites: [math.linalg.inner-product-rn]
+      - id: kp4
+        can_do: Find a distance
+        key_prerequisites: [math.linalg.inner-product-rn]
+  - id: math.linalg.orthogonal-complements
+    name: Finding orthogonal complements
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.four-fundamental-subspaces
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the complement of a line
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp2
+        can_do: Find the complement of a span
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp3
+        can_do: Connect null space and row space
+        key_prerequisites: [math.linalg.four-fundamental-subspaces]
+      - id: kp4
+        can_do: Find a complement's dimension
+        key_prerequisites: [math.linalg.four-fundamental-subspaces]
+  - id: math.linalg.orthogonal-sets
+    name: Using orthogonal sets and bases
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.finding-a-basis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test a set for orthogonality
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp2
+        can_do: Show an orthogonal set is independent
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp3
+        can_do: Normalize a set
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp4
+        can_do: Extend to an orthogonal basis
+        key_prerequisites: [math.linalg.finding-a-basis]
+  - id: math.linalg.cauchy-schwarz-triangle
+    name: Using the Cauchy-Schwarz and triangle inequalities
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Cauchy-Schwarz inequality
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp2
+        can_do: Use it to bound a dot product
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp3
+        can_do: Prove the triangle inequality
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp4
+        can_do: Find the equality case
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+  - id: math.linalg.inner-product-spaces
+    name: Working with general inner product spaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.examples-of-vector-spaces
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.cauchy-schwarz-triangle
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the inner product rules
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp2
+        can_do: Compute on polynomials by integrals
+        key_prerequisites: [math.linalg.examples-of-vector-spaces]
+      - id: kp3
+        can_do: Find a norm and an angle of functions
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp4
+        can_do: Use a weighted inner product
+        key_prerequisites: [math.linalg.cauchy-schwarz-triangle]
+  - id: math.linalg.orthogonal-coordinates
+    name: Finding coordinates in an orthogonal basis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-sets
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coordinates by dot products
+        key_prerequisites: [math.linalg.orthogonal-sets]
+      - id: kp2
+        can_do: Compare with solving a system
+        key_prerequisites: [math.linalg.orthogonal-sets]
+      - id: kp3
+        can_do: Write a vector in an orthonormal basis
+        key_prerequisites: [math.linalg.orthogonal-sets]
+      - id: kp4
+        can_do: Use a formula for the length
+        key_prerequisites: [math.linalg.orthogonal-sets]
+  - id: math.linalg.orthonormal-matrices
+    name: Using orthogonal matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.transpose
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.orthogonal-coordinates
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.linalg.orthogonal-sets
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test a matrix with its transpose
+        key_prerequisites: [math.linalg.transpose]
+      - id: kp2
+        can_do: Invert by transposing
+        key_prerequisites: [math.linalg.transpose]
+      - id: kp3
+        can_do: Show lengths are preserved
+        key_prerequisites: [math.linalg.orthogonal-coordinates]
+      - id: kp4
+        can_do: Find an orthogonal matrix's determinant
+        key_prerequisites: [math.linalg.orthogonal-sets]
+  - id: math.linalg.project-onto-line
+    name: Projecting onto a line
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.length-angle-orthogonal
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Project onto a line
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp2
+        can_do: Find the error vector
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp3
+        can_do: Find a distance to a line
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+      - id: kp4
+        can_do: Find a projection matrix for a line
+        key_prerequisites: [math.linalg.length-angle-orthogonal]
+  - id: math.linalg.orthogonal-projection
+    name: Finding orthogonal projections
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-coordinates
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.project-onto-line
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.orthogonal-sets
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Project with an orthogonal basis
+        key_prerequisites: [math.linalg.orthogonal-coordinates]
+      - id: kp2
+        can_do: Check the residual
+        key_prerequisites: [math.linalg.orthogonal-coordinates]
+      - id: kp3
+        can_do: Decompose a vector
+        key_prerequisites: [math.linalg.project-onto-line]
+      - id: kp4
+        can_do: Project onto a plane
+        key_prerequisites: [math.linalg.orthogonal-sets]
+  - id: math.linalg.projection-matrix
+    name: Finding projection matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.matrix-algebra-rules
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the projection formula
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp2
+        can_do: Find a matrix with a basis
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp3
+        can_do: Show it is idempotent and symmetric
+        key_prerequisites: [math.linalg.matrix-algebra-rules]
+      - id: kp4
+        can_do: Find its eigenvalues
+        key_prerequisites: [math.linalg.orthogonal-projection]
+  - id: math.linalg.closest-point
+    name: Finding the closest point in a subspace
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the best approximation theorem
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp2
+        can_do: Find a closest point
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp3
+        can_do: Find a distance to a subspace
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp4
+        can_do: Show nothing is closer
+        key_prerequisites: [math.linalg.orthogonal-projection]
+  - id: math.linalg.least-squares-normal
+    name: Solving least squares with normal equations
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-complements
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.closest-point
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the residual's orthogonality
+        key_prerequisites: [math.linalg.orthogonal-complements]
+      - id: kp2
+        can_do: Write the normal equations
+        key_prerequisites: [math.linalg.orthogonal-complements]
+      - id: kp3
+        can_do: Solve a small problem
+        key_prerequisites: [math.linalg.closest-point]
+      - id: kp4
+        can_do: Find a least squares residual
+        key_prerequisites: [math.linalg.closest-point]
+  - id: math.linalg.least-squares-line-fit
+    name: Fitting lines and curves with least squares
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit a line
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp2
+        can_do: Fit a parabola
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp3
+        can_do: Fit an exponential after a log
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp4
+        can_do: Interpret the residuals
+        key_prerequisites: [math.linalg.least-squares-normal]
+  - id: math.linalg.split-into-orthogonal-parts
+    name: Splitting a vector into orthogonal parts
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split along a line
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp2
+        can_do: Split along a plane
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp3
+        can_do: Find the two parts' lengths
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp4
+        can_do: Use the Pythagorean check
+        key_prerequisites: [math.linalg.orthogonal-projection]
+  - id: math.linalg.gram-schmidt
+    name: Using the Gram-Schmidt process
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.split-into-orthogonal-parts
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Orthogonalize two vectors
+        key_prerequisites: [math.linalg.split-into-orthogonal-parts]
+      - id: kp2
+        can_do: Orthogonalize three vectors
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp3
+        can_do: Normalize a result
+        key_prerequisites: [math.linalg.split-into-orthogonal-parts]
+      - id: kp4
+        can_do: Orthogonalize polynomials
+        key_prerequisites: [math.linalg.orthogonal-projection]
+  - id: math.linalg.qr-factorization
+    name: Finding a QR factorization
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.gram-schmidt
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build Q from Gram-Schmidt
+        key_prerequisites: [math.linalg.gram-schmidt]
+      - id: kp2
+        can_do: Find R by products
+        key_prerequisites: [math.linalg.gram-schmidt]
+      - id: kp3
+        can_do: Check a factorization
+        key_prerequisites: [math.linalg.gram-schmidt]
+      - id: kp4
+        can_do: Find QR of a tall matrix
+        key_prerequisites: [math.linalg.gram-schmidt]
+  - id: math.linalg.least-squares-uniqueness
+    name: Deciding uniqueness of least squares
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test independent columns
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp2
+        can_do: Find a family of solutions
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp3
+        can_do: Find a minimal-length choice
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp4
+        can_do: Connect to invertibility of a matrix product
+        key_prerequisites: [math.linalg.least-squares-normal]
+  - id: math.linalg.least-squares-qr
+    name: Solving least squares with QR
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.qr-factorization
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.least-squares-uniqueness
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce with QR
+        key_prerequisites: [math.linalg.qr-factorization]
+      - id: kp2
+        can_do: Solve a triangular system
+        key_prerequisites: [math.linalg.qr-factorization]
+      - id: kp3
+        can_do: Compare accuracy with normal equations
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp4
+        can_do: Use uniqueness conditions
+        key_prerequisites: [math.linalg.least-squares-uniqueness]
+  - id: math.linalg.function-space-projection
+    name: Finding projections in function spaces
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.inner-product-spaces
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.linalg.orthogonal-projection
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Project a function onto constants
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp2
+        can_do: Project onto a line function
+        key_prerequisites: [math.linalg.orthogonal-projection]
+      - id: kp3
+        can_do: Find a best polynomial approximation
+        key_prerequisites: [math.linalg.inner-product-spaces]
+      - id: kp4
+        can_do: Find a Fourier coefficient as a projection
+        key_prerequisites: [math.linalg.inner-product-spaces]
+  - id: math.linalg.spectral-theorem
+    name: Diagonalizing symmetric matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.diagonalization
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.orthonormal-matrices
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp2
+        can_do: Show real eigenvalues for two-by-two
+        key_prerequisites: [math.linalg.diagonalization]
+      - id: kp3
+        can_do: Show eigenvectors from different eigenvalues are orthogonal
+        key_prerequisites: [math.linalg.orthonormal-matrices]
+      - id: kp4
+        can_do: Write a spectral decomposition
+        key_prerequisites: [math.linalg.diagonalization, math.linalg.orthonormal-matrices]
+  - id: math.linalg.orthogonal-diagonalization
+    name: Orthogonally diagonalizing a matrix
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Normalize eigenvectors
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp2
+        can_do: Handle a repeated eigenvalue with Gram-Schmidt
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp3
+        can_do: Write Q and D
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp4
+        can_do: Check a factorization
+        key_prerequisites: [math.linalg.spectral-theorem]
+  - id: math.linalg.quadratic-forms
+    name: Working with quadratic forms
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.orthogonal-diagonalization
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a form as a matrix
+        key_prerequisites: [math.linalg.orthogonal-diagonalization]
+      - id: kp2
+        can_do: Find a form's value
+        key_prerequisites: [math.linalg.orthogonal-diagonalization]
+      - id: kp3
+        can_do: Remove cross terms
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp4
+        can_do: Classify by eigenvalue signs
+        key_prerequisites: [math.linalg.spectral-theorem]
+  - id: math.linalg.positive-definite
+    name: Testing positive definiteness
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.quadratic-forms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test by eigenvalues
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp2
+        can_do: Test by pivots or minors
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp3
+        can_do: Tell semidefinite cases
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp4
+        can_do: Connect to second derivatives
+        key_prerequisites: [math.linalg.quadratic-forms]
+  - id: math.linalg.principal-axes
+    name: Using the principal axes theorem
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.quadratic-forms
+        encompassing: 0.35
+        confidence: high
+      - topic: math.precalc.rotated-conic-intro
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find axes for a conic
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp2
+        can_do: Rotate to remove a cross term
+        key_prerequisites: [math.precalc.rotated-conic-intro]
+      - id: kp3
+        can_do: Identify the conic
+        key_prerequisites: [math.precalc.rotated-conic-intro]
+      - id: kp4
+        can_do: Sketch with new axes
+        key_prerequisites: [math.linalg.quadratic-forms]
+  - id: math.linalg.constrained-quadratic
+    name: Optimizing a quadratic form on the unit sphere
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.quadratic-forms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a max on the unit circle
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp2
+        can_do: Find a min with eigenvalues
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp3
+        can_do: Find where the extreme occurs
+        key_prerequisites: [math.linalg.quadratic-forms]
+      - id: kp4
+        can_do: Use a second eigenvector for a constrained max
+        key_prerequisites: [math.linalg.quadratic-forms]
+  - id: math.linalg.singular-values
+    name: Finding singular values
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.rank-nullity
+        encompassing: 0.25
+        confidence: high
+      - topic: math.linalg.constrained-quadratic
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form A transpose A
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp2
+        can_do: Find singular values
+        key_prerequisites: [math.linalg.constrained-quadratic]
+      - id: kp3
+        can_do: Find rank from singular values
+        key_prerequisites: [math.linalg.rank-nullity]
+      - id: kp4
+        can_do: Compare to eigenvalues
+        key_prerequisites: [math.linalg.spectral-theorem]
+  - id: math.linalg.svd-compute
+    name: Finding a singular value decomposition
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.singular-values
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find V from eigenvectors
+        key_prerequisites: [math.linalg.singular-values]
+      - id: kp2
+        can_do: Find U from A times V
+        key_prerequisites: [math.linalg.singular-values]
+      - id: kp3
+        can_do: Write the full factorization
+        key_prerequisites: [math.linalg.singular-values]
+      - id: kp4
+        can_do: Handle a rank-deficient case
+        key_prerequisites: [math.linalg.singular-values]
+  - id: math.linalg.pseudoinverse
+    name: Using the pseudoinverse
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.svd-compute
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build the pseudoinverse
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp2
+        can_do: Solve a least squares problem with it
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp3
+        can_do: Find a minimal-length solution
+        key_prerequisites: [math.linalg.least-squares-normal]
+      - id: kp4
+        can_do: Check its defining properties
+        key_prerequisites: [math.linalg.svd-compute]
+  - id: math.linalg.svd-geometric
+    name: Picturing the SVD geometrically
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.svd-compute
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Picture rotate, stretch, rotate
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp2
+        can_do: Find an ellipse's axes
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp3
+        can_do: Read a matrix's largest stretch
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp4
+        can_do: Find a matrix's action on the unit sphere
+        key_prerequisites: [math.linalg.svd-compute]
+  - id: math.linalg.low-rank-approximation
+    name: Using low-rank approximation
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.svd-geometric
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.linalg.svd-compute
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Keep the largest singular values
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp2
+        can_do: Find a rank-one approximation
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp3
+        can_do: Find the approximation error
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp4
+        can_do: Explain image compression
+        key_prerequisites: [math.linalg.svd-geometric]
+  - id: math.linalg.principal-component-analysis
+    name: Applying principal component analysis
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.low-rank-approximation
+        encompassing: 0.35
+        confidence: medium
+    encompassed:
+      - topic: math.linalg.svd-compute
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Center a data matrix
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp2
+        can_do: Find principal directions
+        key_prerequisites: [math.linalg.svd-compute]
+      - id: kp3
+        can_do: Find the variance explained
+        key_prerequisites: [math.linalg.low-rank-approximation]
+      - id: kp4
+        can_do: Project data onto components
+        key_prerequisites: [math.linalg.low-rank-approximation]
+  - id: math.linalg.hermitian-intro
+    name: Exploring Hermitian matrices
+    subject: math
+    course: math.linalg
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.linalg.complex-eigenvalues
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a conjugate transpose
+        key_prerequisites: [math.linalg.complex-eigenvalues]
+      - id: kp2
+        can_do: Test a Hermitian matrix
+        key_prerequisites: [math.linalg.complex-eigenvalues]
+      - id: kp3
+        can_do: Show real eigenvalues
+        key_prerequisites: [math.linalg.spectral-theorem, math.linalg.complex-eigenvalues]
+      - id: kp4
+        can_do: Use a unitary diagonalization
+        key_prerequisites: [math.linalg.spectral-theorem]
