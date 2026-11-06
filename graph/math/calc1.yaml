@@ -538,6 +538,38 @@ topics:
       - id: kp4
         can_do: Find a limit of a piece defined with absolute value
         key_prerequisites: [math.calc1.limit-existence-from-one-sided]
+  - id: math.calc1.choose-limit-method
+    name: Choosing a method for a limit
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.limits-by-conjugates
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.limits-of-complex-fractions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.trig-limits
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.limits-of-piecewise
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Decide from a limit's form whether substitution is enough
+        key_prerequisites: [math.calc1.limits-by-conjugates]
+      - id: kp2
+        can_do: Choose between factoring and a conjugate
+        key_prerequisites: [math.calc1.limits-by-conjugates, math.calc1.limits-of-complex-fractions]
+      - id: kp3
+        can_do: Choose a method for a trig or piecewise limit
+        key_prerequisites: [math.calc1.trig-limits, math.calc1.limits-of-piecewise]
+      - id: kp4
+        can_do: Sort and evaluate a mixed list of limits
+        key_prerequisites: [math.calc1.limits-by-conjugates, math.calc1.limits-of-complex-fractions, math.calc1.trig-limits, math.calc1.limits-of-piecewise]
   - id: math.calc1.limits-of-composite-functions
     name: Finding limits of composite functions
     subject: math
@@ -614,11 +646,15 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: math.calc1.limits-of-piecewise
-        encompassing: 0.5
-        confidence: high
       - topic: math.precalc.continuity-from-limits
         encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.choose-limit-method
+        encompassing: 0.2
+        confidence: low
+    encompassed:
+      - topic: math.calc1.limits-of-piecewise
+        encompassing: 0.15
         confidence: high
     knowledge_points:
       - id: kp1
@@ -629,7 +665,7 @@ topics:
         key_prerequisites: [math.precalc.continuity-from-limits]
       - id: kp3
         can_do: Test continuity of a rational function at a point
-        key_prerequisites: [math.calc1.limits-of-piecewise]
+        key_prerequisites: [math.calc1.limits-of-piecewise, math.calc1.choose-limit-method]
       - id: kp4
         can_do: Test continuity of a piecewise function at a boundary
         key_prerequisites: [math.calc1.limits-of-piecewise]
@@ -2341,10 +2377,13 @@ topics:
       - topic: math.calc1.higher-derivatives
         encompassing: 0.45
         confidence: high
+      - topic: math.precalc.concavity-from-rates
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Connect concavity to the second derivative sign
-        key_prerequisites: [math.calc1.higher-derivatives]
+        key_prerequisites: [math.calc1.higher-derivatives, math.precalc.concavity-from-rates]
       - id: kp2
         can_do: Find intervals of concavity for a polynomial
         key_prerequisites: [math.calc1.higher-derivatives]
@@ -3273,6 +3312,33 @@ topics:
       - id: kp4
         can_do: Integrate an exponential ratio
         key_prerequisites: [math.calc1.substitution-adjusting-constants]
+  - id: math.calc1.integrate-simple-division
+    name: Integrating after simple division
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.alg2.polynomial-long-division
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Divide before integrating over a linear denominator
+        key_prerequisites: [math.alg2.polynomial-long-division]
+      - id: kp2
+        can_do: Integrate a quotient and a log remainder
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp3
+        can_do: Divide by a quadratic with a simple remainder
+        key_prerequisites: [math.alg2.polynomial-long-division]
+      - id: kp4
+        can_do: Evaluate a definite integral after dividing
+        key_prerequisites: [math.calc1.substitution-with-exp-log, math.alg2.polynomial-long-division]
   - id: math.calc1.substitution-with-trig
     name: Using substitution with trig functions
     subject: math
@@ -3326,6 +3392,33 @@ topics:
       - id: kp4
         can_do: Split a numerator before integrating
         key_prerequisites: [math.calc1.substitution-with-trig]
+  - id: math.calc1.integrate-completing-square
+    name: Integrating after completing the square
+    subject: math
+    course: math.calc1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.calc1.substitution-inverse-trig
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.alg1.complete-the-square-expression
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Complete a square in a denominator
+        key_prerequisites: [math.alg1.complete-the-square-expression]
+      - id: kp2
+        can_do: Integrate to an arctangent after completing a square
+        key_prerequisites: [math.calc1.substitution-inverse-trig, math.alg1.complete-the-square-expression]
+      - id: kp3
+        can_do: Integrate to an arcsine with a completed square under a root
+        key_prerequisites: [math.calc1.substitution-inverse-trig, math.alg1.complete-the-square-expression]
+      - id: kp4
+        can_do: Split a linear numerator after completing a square
+        key_prerequisites: [math.calc1.substitution-inverse-trig]
   - id: math.calc1.integral-rules-with-tables
     name: Evaluating integrals from table and graph values
     subject: math

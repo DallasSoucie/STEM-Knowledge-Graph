@@ -301,6 +301,58 @@ topics:
       - id: kp3
         can_do: Say what a rate means in context
         key_prerequisites: [math.alg2.compare-function-properties]
+  - id: math.precalc.sequences-linear-exponential
+    name: Connecting sequences to linear and exponential functions
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.alg2.identify-sequence-type
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.rate-of-change-of-families
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show linear functions add a constant over equal input steps
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp2
+        can_do: Show exponential functions multiply by a constant over equal input steps
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp3
+        can_do: Write an arithmetic or geometric sequence as a function
+        key_prerequisites: [math.alg2.identify-sequence-type]
+      - id: kp4
+        can_do: Find a function through two terms of each type
+        key_prerequisites: [math.alg2.identify-sequence-type, math.precalc.rate-of-change-of-families]
+  - id: math.precalc.concavity-from-rates
+    name: Relating changing rates to concavity
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.rate-of-change-of-families
+        encompassing: 0.45
+        confidence: high
+      - topic: math.precalc.local-global-extrema
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Tell from a table if average rates increase over equal intervals
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp2
+        can_do: Link increasing rates to concave up
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp3
+        can_do: Link decreasing rates to concave down
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp4
+        can_do: Locate an inflection point on a polynomial graph
+        key_prerequisites: [math.precalc.rate-of-change-of-families, math.precalc.local-global-extrema]
   - id: math.precalc.transformations-combined
     name: Applying combined transformations
     subject: math
@@ -3644,6 +3696,32 @@ topics:
       - id: kp3
         can_do: Recognize lemniscates
         key_prerequisites: [math.precalc.polar-equations]
+  - id: math.precalc.polar-rates
+    name: Reading rates of change on polar graphs
+    subject: math
+    course: math.precalc
+    level: g12
+    status: draft
+    prerequisites:
+      - topic: math.precalc.polar-curves
+        encompassing: 0.45
+        confidence: high
+      - topic: math.precalc.rate-of-change-of-families
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read where r increases from a graph of r against angle
+        key_prerequisites: [math.precalc.polar-curves]
+      - id: kp2
+        can_do: Tell when a curve moves away from the pole
+        key_prerequisites: [math.precalc.polar-curves]
+      - id: kp3
+        can_do: Find an average rate of change of r over an angle interval
+        key_prerequisites: [math.precalc.rate-of-change-of-families]
+      - id: kp4
+        can_do: Handle a negative r when judging distance from the pole
+        key_prerequisites: [math.precalc.polar-curves]
   - id: math.precalc.rose-curves
     name: Graphing rose curves
     subject: math
@@ -4598,13 +4676,16 @@ topics:
       - topic: math.precalc.recursive-to-explicit
         encompassing: 0.4
         confidence: medium
+      - topic: math.precalc.sequences-linear-exponential
+        encompassing: 0.15
+        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Find a limit of a sequence
         key_prerequisites: [math.precalc.limits-at-infinity, math.precalc.recursive-to-explicit]
       - id: kp2
         can_do: Say when a sequence diverges
-        key_prerequisites: [math.precalc.limits-at-infinity]
+        key_prerequisites: [math.precalc.limits-at-infinity, math.precalc.sequences-linear-exponential]
       - id: kp3
         can_do: Find a limit of a recursive sequence
         key_prerequisites: [math.precalc.recursive-to-explicit]
