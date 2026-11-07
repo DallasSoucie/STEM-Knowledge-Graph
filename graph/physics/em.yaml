@@ -685,3 +685,784 @@ topics:
       - id: kp4
         can_do: Sketch a field with regions
         key_prerequisites: [physics.em.conductors-with-gauss]
+  - id: physics.em.potential-as-a-line-integral
+    name: Finding potential difference as an integral
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.electric-potential
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.work-as-a-dot-product
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write potential difference as an integral
+        key_prerequisites: [physics.mechanics.work-as-a-dot-product]
+      - id: kp2
+        can_do: Find a difference in a uniform field
+        key_prerequisites: [physics.hs2.electric-potential]
+      - id: kp3
+        can_do: Find a difference with a varying field
+        key_prerequisites: [physics.mechanics.work-as-a-dot-product]
+      - id: kp4
+        can_do: Show path independence
+        key_prerequisites: [physics.mechanics.work-as-a-dot-product]
+  - id: physics.em.potential-of-point-charges-derivation
+    name: Deriving the potential of a point charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.potential-from-force
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate from infinity
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp2
+        can_do: Choose a zero of potential
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp3
+        can_do: Compare with potential energy
+        key_prerequisites: [physics.mechanics.potential-from-force]
+      - id: kp4
+        can_do: Find a potential from two charges
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+  - id: physics.em.potential-of-a-charged-line
+    name: Finding potential from continuous charge on a line
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-point-charges-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.charge-densities
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a potential integral
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation, physics.em.charge-densities]
+      - id: kp2
+        can_do: Find a potential on a line's axis
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp3
+        can_do: Find a potential on a perpendicular line
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp4
+        can_do: Compare with the field method
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+  - id: physics.em.potential-of-a-ring-and-disk
+    name: Finding potential of a ring and disk
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-a-charged-line
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.field-of-a-ring
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a potential on a ring's axis
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp2
+        can_do: Find a potential on a disk's axis
+        key_prerequisites: [physics.em.potential-of-a-charged-line]
+      - id: kp3
+        can_do: Check a limit far away
+        key_prerequisites: [physics.em.potential-of-a-charged-line]
+      - id: kp4
+        can_do: Find a field from these potentials
+        key_prerequisites: [physics.em.potential-of-a-charged-line]
+  - id: physics.em.field-from-potential
+    name: Finding a field from potential by differentiating
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.force-from-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate potential to find a field
+        key_prerequisites: [physics.mechanics.force-from-potential]
+      - id: kp2
+        can_do: Find a field from a function in one dimension
+        key_prerequisites: [physics.mechanics.force-from-potential]
+      - id: kp3
+        can_do: Find a field's direction from a potential
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp4
+        can_do: Find a field on a graph of potential
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+  - id: physics.em.potential-of-spheres
+    name: Finding potential inside and outside a sphere
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.gauss-for-spheres
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a potential outside a sphere
+        key_prerequisites: [physics.em.potential-as-a-line-integral, physics.em.gauss-for-spheres]
+      - id: kp2
+        can_do: Find a potential inside a conductor
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp3
+        can_do: Find a potential inside a uniform sphere
+        key_prerequisites: [physics.em.potential-as-a-line-integral, physics.em.gauss-for-spheres]
+      - id: kp4
+        can_do: Sketch potential against radius
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+  - id: physics.em.potential-of-cylinders
+    name: Finding potential near a charged cylinder
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.gauss-for-cylinders
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate a line's field
+        key_prerequisites: [physics.em.potential-as-a-line-integral, physics.em.gauss-for-cylinders]
+      - id: kp2
+        can_do: Explain why infinity fails as a reference
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp3
+        can_do: Find a difference between two radii
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp4
+        can_do: Find a potential outside a charged cylinder
+        key_prerequisites: [physics.em.gauss-for-cylinders]
+  - id: physics.em.energy-of-charge-systems
+    name: Finding the energy of a system of charges
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-point-charges-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.potential-energy-of-charges
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work to assemble charges
+        key_prerequisites: [physics.hs2.potential-energy-of-charges]
+      - id: kp2
+        can_do: Find total energy of a square
+        key_prerequisites: [physics.hs2.potential-energy-of-charges]
+      - id: kp3
+        can_do: Interpret a negative total
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+      - id: kp4
+        can_do: Find a speed when charges fly apart
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+  - id: physics.em.energy-to-assemble-a-sphere
+    name: Finding the energy to assemble a charged sphere
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.energy-of-charge-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.potential-of-spheres
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add charge in thin shells
+        key_prerequisites: [physics.em.energy-of-charge-systems, physics.em.potential-of-spheres]
+      - id: kp2
+        can_do: Find energy of a charged shell
+        key_prerequisites: [physics.em.energy-of-charge-systems]
+      - id: kp3
+        can_do: Find energy of a uniform sphere
+        key_prerequisites: [physics.em.potential-of-spheres]
+      - id: kp4
+        can_do: Estimate a nucleus's electric energy
+        key_prerequisites: [physics.em.energy-of-charge-systems]
+  - id: physics.em.isolated-conductors-at-potential
+    name: Connecting charged conductors by a wire
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-spheres
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.sharing-charge
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set two spheres at equal potential
+        key_prerequisites: [physics.em.potential-of-spheres]
+      - id: kp2
+        can_do: Find shared charge
+        key_prerequisites: [physics.hs2.sharing-charge]
+      - id: kp3
+        can_do: Find surface fields
+        key_prerequisites: [physics.em.potential-of-spheres]
+      - id: kp4
+        can_do: Explain why sharp points have strong fields
+        key_prerequisites: [physics.em.potential-of-spheres]
+  - id: physics.em.deriving-plate-capacitance
+    name: Deriving parallel-plate capacitance with Gauss's law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-for-planes
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.parallel-plate-capacitors
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field with Gauss's law
+        key_prerequisites: [physics.em.gauss-for-planes]
+      - id: kp2
+        can_do: Find a voltage
+        key_prerequisites: [physics.em.gauss-for-planes]
+      - id: kp3
+        can_do: Derive the formula
+        key_prerequisites: [physics.em.gauss-for-planes]
+      - id: kp4
+        can_do: Compare with the given formula
+        key_prerequisites: [physics.hs2.parallel-plate-capacitors]
+  - id: physics.em.cylindrical-capacitors
+    name: Deriving capacitance of cylindrical capacitors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-cylinders
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.coaxial-and-concentric-shells
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field between cylinders
+        key_prerequisites: [physics.em.coaxial-and-concentric-shells]
+      - id: kp2
+        can_do: Integrate for a voltage
+        key_prerequisites: [physics.em.potential-of-cylinders]
+      - id: kp3
+        can_do: Derive capacitance per length
+        key_prerequisites: [physics.em.potential-of-cylinders]
+      - id: kp4
+        can_do: Find a coaxial cable's capacitance
+        key_prerequisites: [physics.em.coaxial-and-concentric-shells]
+  - id: physics.em.spherical-capacitors
+    name: Deriving capacitance of spherical capacitors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-spheres
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.coaxial-and-concentric-shells
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field between spheres
+        key_prerequisites: [physics.em.coaxial-and-concentric-shells]
+      - id: kp2
+        can_do: Integrate for a voltage
+        key_prerequisites: [physics.em.potential-of-spheres]
+      - id: kp3
+        can_do: Derive the capacitance
+        key_prerequisites: [physics.em.potential-of-spheres]
+      - id: kp4
+        can_do: Find an isolated sphere's limit
+        key_prerequisites: [physics.em.potential-of-spheres]
+  - id: physics.em.capacitor-energy-integral
+    name: Deriving capacitor energy by integration
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.deriving-plate-capacitance
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.capacitor-energy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add charge in small steps
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+      - id: kp2
+        can_do: Integrate to find stored energy
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+      - id: kp3
+        can_do: Compare to a graph area
+        key_prerequisites: [physics.hs2.capacitor-energy]
+      - id: kp4
+        can_do: Find energy when plates are disconnected and moved
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+  - id: physics.em.energy-density-of-electric-field
+    name: Using energy density of the electric field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.capacitor-energy-integral
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive energy per volume
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp2
+        can_do: Find total energy by integrating around a charge
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp3
+        can_do: Find energy in a capacitor by density
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp4
+        can_do: Find energy in a spherical shell's field
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+  - id: physics.em.force-on-capacitor-plates
+    name: Finding force on capacitor plates
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.capacitor-energy-integral
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.force-from-potential
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a force from energy change
+        key_prerequisites: [physics.em.capacitor-energy-integral, physics.mechanics.force-from-potential]
+      - id: kp2
+        can_do: Compare with a field calculation
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp3
+        can_do: Find a force at constant charge
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp4
+        can_do: Find a force at constant voltage
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+  - id: physics.em.gauss-with-dielectrics
+    name: Using Gauss's law with dielectrics
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.deriving-plate-capacitance
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.dielectrics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the free charge form
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+      - id: kp2
+        can_do: Find a field in a dielectric
+        key_prerequisites: [physics.hs2.dielectrics]
+      - id: kp3
+        can_do: Find induced surface charge
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+      - id: kp4
+        can_do: Find a filled capacitor's capacitance
+        key_prerequisites: [physics.hs2.dielectrics]
+  - id: physics.em.partly-filled-capacitors
+    name: Solving partly filled capacitors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-with-dielectrics
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.capacitors-in-circuits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat layers as series capacitors
+        key_prerequisites: [physics.em.gauss-with-dielectrics, physics.hs2.capacitors-in-circuits]
+      - id: kp2
+        can_do: Treat side-by-side parts as parallel
+        key_prerequisites: [physics.em.gauss-with-dielectrics, physics.hs2.capacitors-in-circuits]
+      - id: kp3
+        can_do: Solve with a varying dielectric constant
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+      - id: kp4
+        can_do: Find energy in each part
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+  - id: physics.em.polarization-microscopic
+    name: Explaining polarization of dielectrics
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-with-dielectrics
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.em.dipole-in-a-field
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe induced dipoles
+        key_prerequisites: [physics.em.dipole-in-a-field]
+      - id: kp2
+        can_do: Define polarization
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+      - id: kp3
+        can_do: Link polarization to bound charge
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+      - id: kp4
+        can_do: Explain a material's dielectric constant
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+  - id: physics.em.current-as-a-derivative
+    name: Finding current as a rate of charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.current-as-charge-flow
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.chain-rule-general
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write current as a derivative
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp2
+        can_do: Find current from a charge function
+        key_prerequisites: [math.calc1.chain-rule-general]
+      - id: kp3
+        can_do: Integrate current for charge
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+      - id: kp4
+        can_do: Find charge from a current graph
+        key_prerequisites: [physics.hs2.current-as-charge-flow]
+  - id: physics.em.current-density
+    name: Using current density
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.current-as-a-derivative
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.drift-velocity
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define current density
+        key_prerequisites: [physics.em.current-as-a-derivative]
+      - id: kp2
+        can_do: Relate density to drift velocity
+        key_prerequisites: [physics.hs2.drift-velocity]
+      - id: kp3
+        can_do: Find current with a varying density
+        key_prerequisites: [physics.em.current-as-a-derivative]
+      - id: kp4
+        can_do: Find density in a thinning wire
+        key_prerequisites: [physics.em.current-as-a-derivative]
+  - id: physics.em.microscopic-ohms-law
+    name: Using the microscopic form of Ohm's law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.current-density
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.resistivity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate current density and field
+        key_prerequisites: [physics.em.current-density]
+      - id: kp2
+        can_do: Find conductivity
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp3
+        can_do: Derive resistance from the relation
+        key_prerequisites: [physics.hs2.resistivity]
+      - id: kp4
+        can_do: Describe electron collisions behind the law
+        key_prerequisites: [physics.em.current-density]
+  - id: physics.em.resistance-by-integration
+    name: Finding resistance of a nonuniform conductor
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.microscopic-ohms-law
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resistance of a tapered wire
+        key_prerequisites: [physics.em.microscopic-ohms-law, math.calc1.substitution-with-exp-log]
+      - id: kp2
+        can_do: Find resistance of a cylindrical shell
+        key_prerequisites: [physics.em.microscopic-ohms-law, math.calc1.substitution-with-exp-log]
+      - id: kp3
+        can_do: Find resistance of a varying material
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+      - id: kp4
+        can_do: Check a limit with a uniform wire
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+  - id: physics.em.power-in-a-resistor-maximum
+    name: Finding maximum power transfer
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.emf-and-internal-resistance
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.optimization-setup
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write output power in terms of load
+        key_prerequisites: [physics.hs2.emf-and-internal-resistance]
+      - id: kp2
+        can_do: Find a greatest power with a derivative
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp3
+        can_do: Show load matches internal resistance
+        key_prerequisites: [math.calc1.optimization-setup]
+      - id: kp4
+        can_do: Find efficiency at greatest power
+        key_prerequisites: [physics.hs2.emf-and-internal-resistance]
+  - id: physics.em.kirchhoff-general
+    name: Solving general circuits with Kirchhoff's rules
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.multi-loop-circuits
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.junction-rule
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count independent equations
+        key_prerequisites: [physics.hs2.multi-loop-circuits]
+      - id: kp2
+        can_do: Set up equations by matrix
+        key_prerequisites: [physics.hs2.multi-loop-circuits]
+      - id: kp3
+        can_do: Solve circuits with several sources
+        key_prerequisites: [physics.hs2.multi-loop-circuits]
+      - id: kp4
+        can_do: Find a power balance
+        key_prerequisites: [physics.hs2.junction-rule]
+  - id: physics.em.rc-charging-equation
+    name: Writing the charging equation of an RC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.capacitor-charging
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.kirchhoff-general
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc2.verify-de-solutions
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a loop equation with a capacitor
+        key_prerequisites: [physics.em.kirchhoff-general]
+      - id: kp2
+        can_do: Rewrite as a differential equation
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp3
+        can_do: Check a solution by substitution
+        key_prerequisites: [math.calc2.verify-de-solutions]
+      - id: kp4
+        can_do: Find initial and final values
+        key_prerequisites: [physics.hs2.capacitor-charging]
+  - id: physics.em.rc-solving-charging
+    name: Solving RC charging by separating variables
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.rc-charging-equation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate variables for charge
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp2
+        can_do: Integrate to find charge against time
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Find current against time
+        key_prerequisites: [physics.em.rc-charging-equation]
+      - id: kp4
+        can_do: Find voltage on each element
+        key_prerequisites: [physics.em.rc-charging-equation]
+  - id: physics.em.rc-solving-discharging
+    name: Solving RC discharging by separating variables
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.rc-solving-charging
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.rc-time-constant
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the discharge equation
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp2
+        can_do: Solve for charge against time
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp3
+        can_do: Find energy remaining
+        key_prerequisites: [physics.hs2.rc-time-constant]
+      - id: kp4
+        can_do: Find a time to reach a fraction
+        key_prerequisites: [physics.hs2.rc-time-constant]
+  - id: physics.em.rc-energy-accounting
+    name: Tracking energy in an RC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.rc-solving-charging
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.capacitor-energy-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy from a battery
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp2
+        can_do: Find energy stored
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp3
+        can_do: Find energy lost in a resistor
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp4
+        can_do: Show half the energy is lost
+        key_prerequisites: [physics.em.rc-solving-charging, physics.em.capacitor-energy-integral]
+  - id: physics.em.rc-in-larger-circuits
+    name: Solving RC transients in larger circuits
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.rc-solving-discharging
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find behaviour at start and end
+        key_prerequisites: [physics.em.rc-solving-discharging]
+      - id: kp2
+        can_do: Find an equivalent time constant
+        key_prerequisites: [physics.em.rc-solving-discharging]
+      - id: kp3
+        can_do: Solve a transient with a parallel resistor
+        key_prerequisites: [physics.em.rc-solving-discharging]
+      - id: kp4
+        can_do: Find a switch-open transient
+        key_prerequisites: [physics.em.rc-solving-discharging]
