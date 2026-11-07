@@ -1,0 +1,1064 @@
+course: engr.digital-logic
+topics:
+  - id: engr.digital-logic.binary-and-hex-codes
+    name: Converting among binary, octal and hexadecimal
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.discrete.number-bases
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert binary to hexadecimal and octal
+        key_prerequisites: [math.discrete.number-bases]
+      - id: kp2
+        can_do: Convert hexadecimal to binary
+        key_prerequisites: [math.discrete.number-bases]
+      - id: kp3
+        can_do: Convert decimal to hexadecimal
+        key_prerequisites: [math.discrete.number-bases]
+      - id: kp4
+        can_do: Read memory addresses written in hexadecimal
+        key_prerequisites: [math.discrete.number-bases]
+  - id: engr.digital-logic.unsigned-binary-arithmetic
+    name: Adding and subtracting unsigned binary
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.binary-and-hex-codes
+        encompassing: 0.45
+        confidence: high
+      - topic: math.discrete.base-arithmetic
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add unsigned binary numbers
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes, math.discrete.base-arithmetic]
+      - id: kp2
+        can_do: Subtract unsigned binary numbers
+        key_prerequisites: [math.discrete.base-arithmetic]
+      - id: kp3
+        can_do: Find the range of n-bit unsigned numbers
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+      - id: kp4
+        can_do: Detect unsigned carry out
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes, math.discrete.base-arithmetic]
+  - id: engr.digital-logic.twos-complement
+    name: Representing signed numbers in two's complement
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.unsigned-binary-arithmetic
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent negative numbers in two's complement
+        key_prerequisites: [engr.digital-logic.unsigned-binary-arithmetic]
+      - id: kp2
+        can_do: Negate a two's complement number
+        key_prerequisites: [engr.digital-logic.unsigned-binary-arithmetic]
+      - id: kp3
+        can_do: Find the range of n-bit signed numbers
+        key_prerequisites: [engr.digital-logic.unsigned-binary-arithmetic]
+      - id: kp4
+        can_do: Sign-extend a number
+        key_prerequisites: [engr.digital-logic.unsigned-binary-arithmetic]
+  - id: engr.digital-logic.overflow-detection
+    name: Detecting overflow
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.twos-complement
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect signed overflow in addition
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp2
+        can_do: Detect overflow in subtraction
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp3
+        can_do: Tell carry from overflow
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp4
+        can_do: Design an overflow detector
+        key_prerequisites: [engr.digital-logic.twos-complement]
+  - id: engr.digital-logic.binary-codes
+    name: Using BCD, Gray and character codes
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.binary-and-hex-codes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode digits in BCD
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+      - id: kp2
+        can_do: Convert to and from Gray code
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+      - id: kp3
+        can_do: Encode characters in ASCII
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+      - id: kp4
+        can_do: Explain why Gray code helps sensors
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+  - id: engr.digital-logic.error-detecting-codes
+    name: Detecting errors with parity bits
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.binary-codes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add even and odd parity bits
+        key_prerequisites: [engr.digital-logic.binary-codes]
+      - id: kp2
+        can_do: Detect single-bit errors with parity
+        key_prerequisites: [engr.digital-logic.binary-codes]
+      - id: kp3
+        can_do: Correct single-bit errors with a Hamming code
+        key_prerequisites: [engr.digital-logic.binary-codes]
+      - id: kp4
+        can_do: Find the Hamming distance of a code
+        key_prerequisites: [engr.digital-logic.binary-codes]
+  - id: engr.digital-logic.fixed-point-numbers
+    name: Representing fractions in fixed point
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.twos-complement
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent fractions in fixed point
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp2
+        can_do: Choose integer and fraction bits
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp3
+        can_do: Add and multiply fixed-point numbers
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp4
+        can_do: Find the resolution and range of a format
+        key_prerequisites: [engr.digital-logic.twos-complement]
+  - id: engr.digital-logic.gate-level-circuits
+    name: Analyzing gate-level circuits
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.discrete.boolean-algebra
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.discrete.digital-logic-gates
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the output of a gate network
+        key_prerequisites: [math.discrete.boolean-algebra, math.discrete.digital-logic-gates]
+      - id: kp2
+        can_do: Write a Boolean expression for a circuit
+        key_prerequisites: [math.discrete.boolean-algebra]
+      - id: kp3
+        can_do: Draw a circuit from an expression
+        key_prerequisites: [math.discrete.digital-logic-gates]
+      - id: kp4
+        can_do: Find equivalent circuits by algebra
+        key_prerequisites: [math.discrete.boolean-algebra]
+  - id: engr.digital-logic.truth-table-to-circuit
+    name: Designing a circuit from a truth table
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.gate-level-circuits
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.discrete.normal-forms
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a sum of products from a truth table
+        key_prerequisites: [engr.digital-logic.gate-level-circuits, math.discrete.normal-forms]
+      - id: kp2
+        can_do: Write a product of sums from a truth table
+        key_prerequisites: [math.discrete.normal-forms]
+      - id: kp3
+        can_do: Draw a two-level circuit
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp4
+        can_do: Design a circuit from a word description
+        key_prerequisites: [engr.digital-logic.gate-level-circuits, math.discrete.normal-forms]
+  - id: engr.digital-logic.minterms-and-maxterms
+    name: Writing minterm and maxterm expansions
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.truth-table-to-circuit
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write minterm lists
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp2
+        can_do: Write maxterm lists
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp3
+        can_do: Convert between minterm and maxterm forms
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp4
+        can_do: Expand an expression to canonical form
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+  - id: engr.digital-logic.kmap-with-dont-cares
+    name: Minimizing with don't-care conditions
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.minterms-and-maxterms
+        encompassing: 0.35
+        confidence: high
+      - topic: math.discrete.karnaugh-maps
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Mark don't-care conditions in a map
+        key_prerequisites: [engr.digital-logic.minterms-and-maxterms, math.discrete.karnaugh-maps]
+      - id: kp2
+        can_do: Group cells with don't-cares
+        key_prerequisites: [math.discrete.karnaugh-maps]
+      - id: kp3
+        can_do: Minimize a product of sums with a map
+        key_prerequisites: [math.discrete.karnaugh-maps]
+      - id: kp4
+        can_do: Minimize a BCD detector
+        key_prerequisites: [engr.digital-logic.minterms-and-maxterms, math.discrete.karnaugh-maps]
+  - id: engr.digital-logic.multilevel-nand-nor
+    name: Implementing logic with NAND and NOR gates
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.truth-table-to-circuit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build circuits from NAND gates only
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp2
+        can_do: Build circuits from NOR gates only
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp3
+        can_do: Convert two-level circuits to NAND form
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp4
+        can_do: Count gates in multilevel designs
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+  - id: engr.digital-logic.multiple-output-circuits
+    name: Minimizing multiple-output circuits
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.kmap-with-dont-cares
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Share terms between outputs
+        key_prerequisites: [engr.digital-logic.kmap-with-dont-cares]
+      - id: kp2
+        can_do: Minimize a seven-segment decoder
+        key_prerequisites: [engr.digital-logic.kmap-with-dont-cares]
+      - id: kp3
+        can_do: Compare shared and separate designs
+        key_prerequisites: [engr.digital-logic.kmap-with-dont-cares]
+      - id: kp4
+        can_do: Count gates in multiple-output designs
+        key_prerequisites: [engr.digital-logic.kmap-with-dont-cares]
+  - id: engr.digital-logic.gate-delays-and-hazards
+    name: Finding propagation delays and hazards
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.gate-level-circuits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find propagation delay of a circuit
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp2
+        can_do: Find the critical path
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp3
+        can_do: Identify static hazards
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp4
+        can_do: Remove hazards with extra terms
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+  - id: engr.digital-logic.multiplexers
+    name: Designing with multiplexers
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.truth-table-to-circuit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe multiplexer operation
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp2
+        can_do: Implement functions with a multiplexer
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp3
+        can_do: Build large multiplexers from small ones
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp4
+        can_do: Use multiplexers for data selection
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+  - id: engr.digital-logic.decoders-and-encoders
+    name: Using decoders and encoders
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.truth-table-to-circuit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe decoder operation
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp2
+        can_do: Implement functions with decoders
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp3
+        can_do: Design priority encoders
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp4
+        can_do: Build large decoders from small ones
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+  - id: engr.digital-logic.adders
+    name: Building half and full adders
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.truth-table-to-circuit
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.digital-logic.unsigned-binary-arithmetic
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design a half adder
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+      - id: kp2
+        can_do: Design a full adder
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit, engr.digital-logic.unsigned-binary-arithmetic]
+      - id: kp3
+        can_do: Add multibit numbers by chaining adders
+        key_prerequisites: [engr.digital-logic.unsigned-binary-arithmetic]
+      - id: kp4
+        can_do: Find adder delay
+        key_prerequisites: [engr.digital-logic.truth-table-to-circuit]
+  - id: engr.digital-logic.ripple-carry-adders
+    name: Building ripple-carry adders and subtractors
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.adders
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.digital-logic.twos-complement
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a ripple-carry adder
+        key_prerequisites: [engr.digital-logic.adders]
+      - id: kp2
+        can_do: Build an adder-subtractor
+        key_prerequisites: [engr.digital-logic.adders, engr.digital-logic.twos-complement]
+      - id: kp3
+        can_do: Detect overflow in an adder-subtractor
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp4
+        can_do: Find ripple-carry delay
+        key_prerequisites: [engr.digital-logic.adders]
+  - id: engr.digital-logic.carry-lookahead
+    name: Speeding addition with carry lookahead
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.ripple-carry-adders
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.gate-delays-and-hazards
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write generate and propagate signals
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+      - id: kp2
+        can_do: Build a carry-lookahead adder
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders, engr.digital-logic.gate-delays-and-hazards]
+      - id: kp3
+        can_do: Compare delay with ripple carry
+        key_prerequisites: [engr.digital-logic.gate-delays-and-hazards]
+      - id: kp4
+        can_do: Build hierarchical lookahead
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders, engr.digital-logic.gate-delays-and-hazards]
+  - id: engr.digital-logic.comparators
+    name: Building magnitude comparators
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.adders
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design an equality comparator
+        key_prerequisites: [engr.digital-logic.adders]
+      - id: kp2
+        can_do: Design a magnitude comparator
+        key_prerequisites: [engr.digital-logic.adders]
+      - id: kp3
+        can_do: Cascade comparators
+        key_prerequisites: [engr.digital-logic.adders]
+      - id: kp4
+        can_do: Compare with subtraction
+        key_prerequisites: [engr.digital-logic.adders]
+  - id: engr.digital-logic.alu-design
+    name: Designing a simple arithmetic logic unit
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.ripple-carry-adders
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.multiplexers
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select operations with control signals
+        key_prerequisites: [engr.digital-logic.multiplexers]
+      - id: kp2
+        can_do: Design an arithmetic logic unit slice
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders, engr.digital-logic.multiplexers]
+      - id: kp3
+        can_do: Generate status flags
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+      - id: kp4
+        can_do: Build a multibit ALU
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders, engr.digital-logic.multiplexers]
+  - id: engr.digital-logic.multipliers
+    name: Building array multipliers
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.ripple-carry-adders
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply binary numbers by hand
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+      - id: kp2
+        can_do: Build an array multiplier
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+      - id: kp3
+        can_do: Find array multiplier delay
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+      - id: kp4
+        can_do: Multiply by shifting
+        key_prerequisites: [engr.digital-logic.ripple-carry-adders]
+  - id: engr.digital-logic.latches
+    name: Building SR and D latches
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.gate-level-circuits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze an SR latch
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp2
+        can_do: Analyze a D latch
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp3
+        can_do: Explain latch transparency
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp4
+        can_do: Find forbidden inputs
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+  - id: engr.digital-logic.flip-flops
+    name: Using edge-triggered flip-flops
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.latches
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe edge-triggered D flip-flops
+        key_prerequisites: [engr.digital-logic.latches]
+      - id: kp2
+        can_do: Use set and reset inputs
+        key_prerequisites: [engr.digital-logic.latches]
+      - id: kp3
+        can_do: Compare latches and flip-flops
+        key_prerequisites: [engr.digital-logic.latches]
+      - id: kp4
+        can_do: Trace flip-flop outputs on a clock
+        key_prerequisites: [engr.digital-logic.latches]
+  - id: engr.digital-logic.flip-flop-types
+    name: Converting among D, JK and T flip-flops
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.flip-flops
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use JK flip-flops
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp2
+        can_do: Use T flip-flops
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp3
+        can_do: Write characteristic equations
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp4
+        can_do: Convert one flip-flop type to another
+        key_prerequisites: [engr.digital-logic.flip-flops]
+  - id: engr.digital-logic.timing-diagrams
+    name: Reading timing diagrams for sequential circuits
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.flip-flops
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw timing diagrams for flip-flops
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp2
+        can_do: Read clock-to-output delays
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp3
+        can_do: Trace a register on a timing diagram
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp4
+        can_do: Find glitches on a timing diagram
+        key_prerequisites: [engr.digital-logic.flip-flops]
+  - id: engr.digital-logic.setup-and-hold
+    name: Checking setup and hold times
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.timing-diagrams
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.gate-delays-and-hazards
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check setup time
+        key_prerequisites: [engr.digital-logic.timing-diagrams, engr.digital-logic.gate-delays-and-hazards]
+      - id: kp2
+        can_do: Check hold time
+        key_prerequisites: [engr.digital-logic.timing-diagrams, engr.digital-logic.gate-delays-and-hazards]
+      - id: kp3
+        can_do: Find maximum clock frequency
+        key_prerequisites: [engr.digital-logic.gate-delays-and-hazards]
+      - id: kp4
+        can_do: Explain metastability
+        key_prerequisites: [engr.digital-logic.timing-diagrams]
+  - id: engr.digital-logic.registers
+    name: Building registers and shift registers
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.flip-flops
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build parallel-load registers
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp2
+        can_do: Build shift registers
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp3
+        can_do: Convert serial to parallel data
+        key_prerequisites: [engr.digital-logic.flip-flops]
+      - id: kp4
+        can_do: Use shift registers for multiplying by two
+        key_prerequisites: [engr.digital-logic.flip-flops]
+  - id: engr.digital-logic.counters
+    name: Designing synchronous counters
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.flip-flop-types
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.registers
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design synchronous binary counters
+        key_prerequisites: [engr.digital-logic.flip-flop-types, engr.digital-logic.registers]
+      - id: kp2
+        can_do: Design up-down counters
+        key_prerequisites: [engr.digital-logic.flip-flop-types, engr.digital-logic.registers]
+      - id: kp3
+        can_do: Design modulo-n counters
+        key_prerequisites: [engr.digital-logic.flip-flop-types]
+      - id: kp4
+        can_do: Design ring and Johnson counters
+        key_prerequisites: [engr.digital-logic.registers]
+  - id: engr.digital-logic.sequential-circuit-analysis
+    name: Analyzing a clocked sequential circuit
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.flip-flop-types
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write next-state equations
+        key_prerequisites: [engr.digital-logic.flip-flop-types]
+      - id: kp2
+        can_do: Build state tables
+        key_prerequisites: [engr.digital-logic.flip-flop-types]
+      - id: kp3
+        can_do: Draw state diagrams from circuits
+        key_prerequisites: [engr.digital-logic.flip-flop-types]
+      - id: kp4
+        can_do: Predict output sequences
+        key_prerequisites: [engr.digital-logic.flip-flop-types]
+  - id: engr.digital-logic.state-diagrams
+    name: Drawing state diagrams
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.sequential-circuit-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw state diagrams from descriptions
+        key_prerequisites: [engr.digital-logic.sequential-circuit-analysis]
+      - id: kp2
+        can_do: Read transitions and outputs
+        key_prerequisites: [engr.digital-logic.sequential-circuit-analysis]
+      - id: kp3
+        can_do: Check for missing transitions
+        key_prerequisites: [engr.digital-logic.sequential-circuit-analysis]
+      - id: kp4
+        can_do: Trace input sequences
+        key_prerequisites: [engr.digital-logic.sequential-circuit-analysis]
+  - id: engr.digital-logic.moore-and-mealy
+    name: Comparing Moore and Mealy machines
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.state-diagrams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Moore machines
+        key_prerequisites: [engr.digital-logic.state-diagrams]
+      - id: kp2
+        can_do: Describe Mealy machines
+        key_prerequisites: [engr.digital-logic.state-diagrams]
+      - id: kp3
+        can_do: Convert between Moore and Mealy
+        key_prerequisites: [engr.digital-logic.state-diagrams]
+      - id: kp4
+        can_do: Compare output timing
+        key_prerequisites: [engr.digital-logic.state-diagrams]
+  - id: engr.digital-logic.fsm-design
+    name: Designing a finite state machine
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.moore-and-mealy
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.digital-logic.kmap-with-dont-cares
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a state table from a diagram
+        key_prerequisites: [engr.digital-logic.moore-and-mealy]
+      - id: kp2
+        can_do: Derive next-state logic
+        key_prerequisites: [engr.digital-logic.moore-and-mealy, engr.digital-logic.kmap-with-dont-cares]
+      - id: kp3
+        can_do: Derive output logic
+        key_prerequisites: [engr.digital-logic.moore-and-mealy, engr.digital-logic.kmap-with-dont-cares]
+      - id: kp4
+        can_do: Implement a machine with flip-flops
+        key_prerequisites: [engr.digital-logic.moore-and-mealy]
+  - id: engr.digital-logic.state-assignment
+    name: Choosing state encodings
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use binary state encoding
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp2
+        can_do: Use one-hot encoding
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Use Gray code encoding
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp4
+        can_do: Compare logic cost of encodings
+        key_prerequisites: [engr.digital-logic.fsm-design]
+  - id: engr.digital-logic.state-minimization
+    name: Minimizing states
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent states
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp2
+        can_do: Use partitioning to merge states
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Use implication tables
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp4
+        can_do: Check a minimized machine
+        key_prerequisites: [engr.digital-logic.fsm-design]
+  - id: engr.digital-logic.sequence-detectors
+    name: Designing sequence detectors
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design overlapping sequence detectors
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp2
+        can_do: Design nonoverlapping detectors
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Design Moore and Mealy detectors
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp4
+        can_do: Test a detector with input sequences
+        key_prerequisites: [engr.digital-logic.fsm-design]
+  - id: engr.digital-logic.datapath-and-controller
+    name: Splitting a design into datapath and controller
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.digital-logic.alu-design
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.digital-logic.registers
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split a design into datapath and controller
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp2
+        can_do: Design a controller for a datapath
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Build a datapath with registers and an ALU
+        key_prerequisites: [engr.digital-logic.alu-design, engr.digital-logic.registers]
+      - id: kp4
+        can_do: Design a simple multiply unit
+        key_prerequisites: [engr.digital-logic.fsm-design, engr.digital-logic.alu-design, engr.digital-logic.registers]
+  - id: engr.digital-logic.hdl-combinational
+    name: Describing combinational logic in a hardware description language
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.multiplexers
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.programming.if-else-chains
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe gates with continuous assignment
+        key_prerequisites: [engr.digital-logic.multiplexers]
+      - id: kp2
+        can_do: Describe multiplexers with conditional statements
+        key_prerequisites: [engr.digital-logic.multiplexers, engr.programming.if-else-chains]
+      - id: kp3
+        can_do: Describe adders with vectors
+        key_prerequisites: [engr.digital-logic.multiplexers]
+      - id: kp4
+        can_do: Avoid inferred latches
+        key_prerequisites: [engr.programming.if-else-chains]
+  - id: engr.digital-logic.hdl-sequential
+    name: Describing registers and state machines in a hardware description language
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.hdl-combinational
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe flip-flops with clocked blocks
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+      - id: kp2
+        can_do: Describe registers and counters
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+      - id: kp3
+        can_do: Describe state machines
+        key_prerequisites: [engr.digital-logic.fsm-design]
+      - id: kp4
+        can_do: Use blocking and nonblocking assignments correctly
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+  - id: engr.digital-logic.hdl-testbenches
+    name: Writing testbenches
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.hdl-sequential
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a testbench
+        key_prerequisites: [engr.digital-logic.hdl-sequential]
+      - id: kp2
+        can_do: Generate clocks and stimuli
+        key_prerequisites: [engr.digital-logic.hdl-sequential]
+      - id: kp3
+        can_do: Check outputs automatically
+        key_prerequisites: [engr.digital-logic.hdl-sequential]
+      - id: kp4
+        can_do: Read simulation waveforms
+        key_prerequisites: [engr.digital-logic.hdl-sequential]
+  - id: engr.digital-logic.programmable-logic
+    name: Explaining programmable logic devices and FPGAs
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.hdl-combinational
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe PLAs and PALs
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+      - id: kp2
+        can_do: Describe FPGA lookup tables
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+      - id: kp3
+        can_do: Describe the synthesis flow
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+      - id: kp4
+        can_do: Map logic to lookup tables
+        key_prerequisites: [engr.digital-logic.hdl-combinational]
+  - id: engr.digital-logic.memory-arrays
+    name: Organizing ROM and RAM arrays
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.decoders-and-encoders
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.digital-logic.registers
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Organize ROM as a decoder array
+        key_prerequisites: [engr.digital-logic.decoders-and-encoders]
+      - id: kp2
+        can_do: Organize RAM arrays
+        key_prerequisites: [engr.digital-logic.registers]
+      - id: kp3
+        can_do: Find address and data widths
+        key_prerequisites: [engr.digital-logic.decoders-and-encoders, engr.digital-logic.registers]
+      - id: kp4
+        can_do: Build large memories from chips
+        key_prerequisites: [engr.digital-logic.decoders-and-encoders, engr.digital-logic.registers]
+  - id: engr.digital-logic.asynchronous-inputs
+    name: Synchronizing asynchronous inputs
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.setup-and-hold
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain metastability from asynchronous inputs
+        key_prerequisites: [engr.digital-logic.setup-and-hold]
+      - id: kp2
+        can_do: Use two-flip-flop synchronizers
+        key_prerequisites: [engr.digital-logic.setup-and-hold]
+      - id: kp3
+        can_do: Synchronize button presses
+        key_prerequisites: [engr.digital-logic.setup-and-hold]
+      - id: kp4
+        can_do: Find mean time between failures
+        key_prerequisites: [engr.digital-logic.setup-and-hold]
+  - id: engr.digital-logic.cmos-gates
+    name: Building gates from CMOS transistors
+    subject: engr
+    course: engr.digital-logic
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.gate-level-circuits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build an inverter from transistors
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp2
+        can_do: Build NAND and NOR gates in CMOS
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp3
+        can_do: Build complex gates in CMOS
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
+      - id: kp4
+        can_do: Explain why CMOS uses little static power
+        key_prerequisites: [engr.digital-logic.gate-level-circuits]
