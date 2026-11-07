@@ -1,0 +1,856 @@
+course: engr.em-fields
+topics:
+  - id: engr.em-fields.distributed-line-model
+    name: Modelling transmission lines with distributed parameters
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.coaxial-transmission-lines
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.phasors-and-impedance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw distributed line models
+        key_prerequisites: [physics.em-theory.coaxial-transmission-lines, engr.circuits.phasors-and-impedance]
+      - id: kp2
+        can_do: Explain when circuits need line models
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp3
+        can_do: Find per-unit-length parameters
+        key_prerequisites: [physics.em-theory.coaxial-transmission-lines]
+      - id: kp4
+        can_do: Relate line models to wave propagation
+        key_prerequisites: [physics.em-theory.coaxial-transmission-lines]
+  - id: engr.em-fields.line-parameters
+    name: Finding line parameters for coaxial and two-wire lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.distributed-line-model
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.em.inductance-of-coax-and-toroid
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find parameters of coaxial lines
+        key_prerequisites: [engr.em-fields.distributed-line-model, physics.em.inductance-of-coax-and-toroid]
+      - id: kp2
+        can_do: Find parameters of two-wire lines
+        key_prerequisites: [engr.em-fields.distributed-line-model]
+      - id: kp3
+        can_do: Find parameters of parallel-plate lines
+        key_prerequisites: [engr.em-fields.distributed-line-model]
+      - id: kp4
+        can_do: Find conductance from dielectric loss
+        key_prerequisites: [physics.em.inductance-of-coax-and-toroid]
+  - id: engr.em-fields.telegrapher-equations
+    name: Solving the telegrapher's equations
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.distributed-line-model
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.pde.deriving-wave-equation
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the telegrapher's equations
+        key_prerequisites: [engr.em-fields.distributed-line-model, math.pde.deriving-wave-equation]
+      - id: kp2
+        can_do: Find wave solutions on lines
+        key_prerequisites: [engr.em-fields.distributed-line-model]
+      - id: kp3
+        can_do: Find phasor solutions
+        key_prerequisites: [math.pde.deriving-wave-equation]
+      - id: kp4
+        can_do: Find propagation and attenuation constants
+        key_prerequisites: [engr.em-fields.distributed-line-model]
+  - id: engr.em-fields.characteristic-impedance
+    name: Finding characteristic impedance and propagation constant
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.telegrapher-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find characteristic impedance
+        key_prerequisites: [engr.em-fields.telegrapher-equations]
+      - id: kp2
+        can_do: Find phase velocity
+        key_prerequisites: [engr.em-fields.telegrapher-equations]
+      - id: kp3
+        can_do: Find attenuation of lossy lines
+        key_prerequisites: [engr.em-fields.telegrapher-equations]
+      - id: kp4
+        can_do: Use low-loss approximations
+        key_prerequisites: [engr.em-fields.telegrapher-equations]
+  - id: engr.em-fields.reflection-coefficient-and-swr
+    name: Finding reflection coefficient and standing wave ratio
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.characteristic-impedance
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find load reflection coefficient
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp2
+        can_do: Find standing wave ratio
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp3
+        can_do: Find voltage maxima and minima
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp4
+        can_do: Find load impedance from SWR measurements
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+  - id: engr.em-fields.input-impedance
+    name: Finding input impedance of terminated lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.reflection-coefficient-and-swr
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find input impedance of terminated lines
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp2
+        can_do: Find impedance along lines
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp3
+        can_do: Find reflection coefficient along lines
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp4
+        can_do: Find voltage at the load
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+  - id: engr.em-fields.special-terminations
+    name: Analyzing shorted, open and quarter-wave lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.input-impedance
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impedance of shorted lines
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp2
+        can_do: Find impedance of open lines
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp3
+        can_do: Use quarter-wave and half-wave lines
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp4
+        can_do: Use lines as inductors and capacitors
+        key_prerequisites: [engr.em-fields.input-impedance]
+  - id: engr.em-fields.power-flow-on-lines
+    name: Finding power flow on lossless and lossy lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.input-impedance
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find power delivered to loads
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp2
+        can_do: Find reflected power
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp3
+        can_do: Find return loss
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp4
+        can_do: Find power with lossy lines
+        key_prerequisites: [engr.em-fields.input-impedance]
+  - id: engr.em-fields.smith-chart
+    name: Using the Smith chart
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.input-impedance
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plot impedances on the Smith chart
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp2
+        can_do: Find input impedance with the chart
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp3
+        can_do: Find SWR from the chart
+        key_prerequisites: [engr.em-fields.input-impedance]
+      - id: kp4
+        can_do: Convert impedance and admittance
+        key_prerequisites: [engr.em-fields.input-impedance]
+  - id: engr.em-fields.quarter-wave-matching
+    name: Matching with quarter-wave transformers
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.special-terminations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design quarter-wave transformers
+        key_prerequisites: [engr.em-fields.special-terminations]
+      - id: kp2
+        can_do: Match complex loads with line sections
+        key_prerequisites: [engr.em-fields.special-terminations]
+      - id: kp3
+        can_do: Find matching bandwidth
+        key_prerequisites: [engr.em-fields.special-terminations]
+      - id: kp4
+        can_do: Design multisection transformers
+        key_prerequisites: [engr.em-fields.special-terminations]
+  - id: engr.em-fields.stub-matching
+    name: Matching with single stubs
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.smith-chart
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design single shunt stubs
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp2
+        can_do: Design series stubs
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp3
+        can_do: Find stub positions and lengths
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp4
+        can_do: Compare open and shorted stubs
+        key_prerequisites: [engr.em-fields.smith-chart]
+  - id: engr.em-fields.lumped-element-matching
+    name: Matching with lumped elements
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.smith-chart
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design L-section matching networks
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp2
+        can_do: Choose matching network topology
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp3
+        can_do: Find matching component values
+        key_prerequisites: [engr.em-fields.smith-chart]
+      - id: kp4
+        can_do: Find matching bandwidth
+        key_prerequisites: [engr.em-fields.smith-chart]
+  - id: engr.em-fields.line-transients
+    name: Analyzing transients with bounce diagrams
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.reflection-coefficient-and-swr
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transient voltages on lines
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp2
+        can_do: Draw bounce diagrams
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp3
+        can_do: Find step responses of mismatched lines
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+      - id: kp4
+        can_do: Find time-domain reflectometry results
+        key_prerequisites: [engr.em-fields.reflection-coefficient-and-swr]
+  - id: engr.em-fields.scattering-parameters
+    name: Using scattering parameters
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.power-flow-on-lines
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.two-port-parameters
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define scattering parameters
+        key_prerequisites: [engr.circuits.two-port-parameters]
+      - id: kp2
+        can_do: Find S-parameters of networks
+        key_prerequisites: [engr.em-fields.power-flow-on-lines, engr.circuits.two-port-parameters]
+      - id: kp3
+        can_do: Find insertion and return loss
+        key_prerequisites: [engr.em-fields.power-flow-on-lines]
+      - id: kp4
+        can_do: Convert between S and impedance parameters
+        key_prerequisites: [engr.circuits.two-port-parameters]
+  - id: engr.em-fields.microstrip-lines
+    name: Designing microstrip lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.characteristic-impedance
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective permittivity of microstrip
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp2
+        can_do: Find microstrip characteristic impedance
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp3
+        can_do: Design microstrip widths
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+      - id: kp4
+        can_do: Find microstrip losses
+        key_prerequisites: [engr.em-fields.characteristic-impedance]
+  - id: engr.em-fields.capacitance-by-field-methods
+    name: Finding capacitance of engineering geometries
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.poisson-and-laplace-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find capacitance of coaxial geometries
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp2
+        can_do: Find capacitance of wire pairs
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp3
+        can_do: Find capacitance of fringing fields
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp4
+        can_do: Find capacitance with conformal mapping results
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+  - id: engr.em-fields.numerical-field-solutions
+    name: Solving Laplace's equation numerically
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.capacitance-by-field-methods
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em-theory.relaxation-method
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve Laplace's equation by finite differences
+        key_prerequisites: [engr.em-fields.capacitance-by-field-methods, physics.em-theory.relaxation-method]
+      - id: kp2
+        can_do: Find fields from numerical potentials
+        key_prerequisites: [engr.em-fields.capacitance-by-field-methods]
+      - id: kp3
+        can_do: Find capacitance numerically
+        key_prerequisites: [engr.em-fields.capacitance-by-field-methods]
+      - id: kp4
+        can_do: Check numerical solutions
+        key_prerequisites: [physics.em-theory.relaxation-method]
+  - id: engr.em-fields.inductance-calculations
+    name: Finding inductance of engineering conductors
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.line-parameters
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.em-theory.vector-potential
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find inductance of coaxial cables
+        key_prerequisites: [engr.em-fields.line-parameters, physics.em-theory.vector-potential]
+      - id: kp2
+        can_do: Find inductance of wire pairs
+        key_prerequisites: [engr.em-fields.line-parameters]
+      - id: kp3
+        can_do: Find internal inductance
+        key_prerequisites: [engr.em-fields.line-parameters]
+      - id: kp4
+        can_do: Find mutual inductance of conductors
+        key_prerequisites: [physics.em-theory.vector-potential]
+  - id: engr.em-fields.magnetic-circuits-engineering
+    name: Analyzing magnetic circuits with air gaps
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.magnetic-circuits
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reluctance of magnetic paths
+        key_prerequisites: [physics.em-theory.magnetic-circuits]
+      - id: kp2
+        can_do: Solve magnetic circuits with air gaps
+        key_prerequisites: [physics.em-theory.magnetic-circuits]
+      - id: kp3
+        can_do: Find flux in cores
+        key_prerequisites: [physics.em-theory.magnetic-circuits]
+      - id: kp4
+        can_do: Include fringing at gaps
+        key_prerequisites: [physics.em-theory.magnetic-circuits]
+  - id: engr.em-fields.skin-effect-resistance
+    name: Finding AC resistance from skin depth
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find skin depth
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp2
+        can_do: Find AC resistance of wires
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp3
+        can_do: Find losses in conductors
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp4
+        can_do: Reduce skin effect losses
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+  - id: engr.em-fields.shielding
+    name: Estimating shielding effectiveness
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.skin-effect-resistance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find absorption loss of shields
+        key_prerequisites: [engr.em-fields.skin-effect-resistance]
+      - id: kp2
+        can_do: Find reflection loss of shields
+        key_prerequisites: [engr.em-fields.skin-effect-resistance]
+      - id: kp3
+        can_do: Find shielding effectiveness
+        key_prerequisites: [engr.em-fields.skin-effect-resistance]
+      - id: kp4
+        can_do: Choose shield materials
+        key_prerequisites: [engr.em-fields.skin-effect-resistance]
+  - id: engr.em-fields.emc-basics
+    name: Describing crosstalk and electromagnetic compatibility
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.line-parameters
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.em-fields.shielding
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe crosstalk
+        key_prerequisites: [engr.em-fields.line-parameters]
+      - id: kp2
+        can_do: Describe conducted and radiated emissions
+        key_prerequisites: [engr.em-fields.shielding]
+      - id: kp3
+        can_do: Find coupling between lines
+        key_prerequisites: [engr.em-fields.line-parameters]
+      - id: kp4
+        can_do: Choose layout to reduce interference
+        key_prerequisites: [engr.em-fields.line-parameters, engr.em-fields.shielding]
+  - id: engr.em-fields.plane-waves-engineering
+    name: Finding plane-wave parameters in lossy media
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.em-theory.waves-in-linear-media
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find propagation constant in lossy media
+        key_prerequisites: [physics.em-theory.waves-in-conductors, physics.em-theory.waves-in-linear-media]
+      - id: kp2
+        can_do: Find intrinsic impedance
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp3
+        can_do: Classify good conductors and dielectrics
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp4
+        can_do: Find attenuation in lossy media
+        key_prerequisites: [physics.em-theory.waves-in-conductors, physics.em-theory.waves-in-linear-media]
+  - id: engr.em-fields.oblique-incidence-engineering
+    name: Finding reflection at dielectric boundaries for design
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.plane-waves-engineering
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em-theory.fresnel-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reflection at oblique incidence
+        key_prerequisites: [engr.em-fields.plane-waves-engineering, physics.em-theory.fresnel-equations]
+      - id: kp2
+        can_do: Find transmission coefficients
+        key_prerequisites: [engr.em-fields.plane-waves-engineering]
+      - id: kp3
+        can_do: Find total internal reflection
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+      - id: kp4
+        can_do: Find polarization effects
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+  - id: engr.em-fields.multilayer-reflection
+    name: Designing antireflection layers with impedance transformation
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.oblique-incidence-engineering
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.em-fields.quarter-wave-matching
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reflection from multiple layers
+        key_prerequisites: [engr.em-fields.oblique-incidence-engineering]
+      - id: kp2
+        can_do: Design antireflection layers
+        key_prerequisites: [engr.em-fields.oblique-incidence-engineering, engr.em-fields.quarter-wave-matching]
+      - id: kp3
+        can_do: Find radome thickness
+        key_prerequisites: [engr.em-fields.oblique-incidence-engineering]
+      - id: kp4
+        can_do: Use impedance transformation for layers
+        key_prerequisites: [engr.em-fields.quarter-wave-matching]
+  - id: engr.em-fields.waveguide-mode-design
+    name: Choosing waveguide dimensions for single-mode operation
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waveguide-cutoff-and-group-velocity
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cutoff frequencies of modes
+        key_prerequisites: [physics.em-theory.waveguide-cutoff-and-group-velocity]
+      - id: kp2
+        can_do: Choose single-mode bands
+        key_prerequisites: [physics.em-theory.waveguide-cutoff-and-group-velocity]
+      - id: kp3
+        can_do: Find guide wavelength
+        key_prerequisites: [physics.em-theory.waveguide-cutoff-and-group-velocity]
+      - id: kp4
+        can_do: Find waveguide impedance
+        key_prerequisites: [physics.em-theory.waveguide-cutoff-and-group-velocity]
+  - id: engr.em-fields.waveguide-attenuation
+    name: Finding waveguide attenuation
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.waveguide-mode-design
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.em-fields.skin-effect-resistance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find conductor losses in waveguides
+        key_prerequisites: [engr.em-fields.waveguide-mode-design, engr.em-fields.skin-effect-resistance]
+      - id: kp2
+        can_do: Find attenuation below cutoff
+        key_prerequisites: [engr.em-fields.waveguide-mode-design]
+      - id: kp3
+        can_do: Find power capacity of waveguides
+        key_prerequisites: [engr.em-fields.waveguide-mode-design]
+      - id: kp4
+        can_do: Compare waveguides and coaxial lines
+        key_prerequisites: [engr.em-fields.skin-effect-resistance]
+  - id: engr.em-fields.optical-fibers
+    name: Describing optical fiber modes and dispersion
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.waveguide-mode-design
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.fiber-acceptance-angle
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find numerical aperture
+        key_prerequisites: [physics.waves-thermo-optics.fiber-acceptance-angle]
+      - id: kp2
+        can_do: Find number of fiber modes
+        key_prerequisites: [engr.em-fields.waveguide-mode-design]
+      - id: kp3
+        can_do: Find fiber dispersion
+        key_prerequisites: [engr.em-fields.waveguide-mode-design]
+      - id: kp4
+        can_do: Find fiber attenuation budgets
+        key_prerequisites: [engr.em-fields.waveguide-mode-design, physics.waves-thermo-optics.fiber-acceptance-angle]
+  - id: engr.em-fields.antenna-parameters
+    name: Using directivity, gain and efficiency
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.radiated-power-and-pattern
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find directivity
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp2
+        can_do: Find antenna gain and efficiency
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp3
+        can_do: Read radiation patterns
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp4
+        can_do: Find beamwidth
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+  - id: engr.em-fields.dipole-antennas
+    name: Analyzing short and half-wave dipoles
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.antenna-parameters
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.radiation-resistance
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find radiation of short dipoles
+        key_prerequisites: [engr.em-fields.antenna-parameters, physics.em-theory.radiation-resistance]
+      - id: kp2
+        can_do: Find radiation of half-wave dipoles
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+      - id: kp3
+        can_do: Find radiation resistance
+        key_prerequisites: [physics.em-theory.radiation-resistance]
+      - id: kp4
+        can_do: Find input impedance of dipoles
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+  - id: engr.em-fields.antenna-impedance-matching
+    name: Matching antennas to lines
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.dipole-antennas
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.em-fields.stub-matching
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match dipoles to lines
+        key_prerequisites: [engr.em-fields.dipole-antennas, engr.em-fields.stub-matching]
+      - id: kp2
+        can_do: Design baluns
+        key_prerequisites: [engr.em-fields.dipole-antennas]
+      - id: kp3
+        can_do: Find mismatch losses
+        key_prerequisites: [engr.em-fields.stub-matching]
+      - id: kp4
+        can_do: Find bandwidth of antennas
+        key_prerequisites: [engr.em-fields.dipole-antennas]
+  - id: engr.em-fields.antenna-arrays
+    name: Analyzing uniform linear arrays
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.dipole-antennas
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.multi-slit-intensity
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find array factor
+        key_prerequisites: [engr.em-fields.dipole-antennas, physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp2
+        can_do: Find patterns of two-element arrays
+        key_prerequisites: [engr.em-fields.dipole-antennas]
+      - id: kp3
+        can_do: Steer array beams
+        key_prerequisites: [engr.em-fields.dipole-antennas]
+      - id: kp4
+        can_do: Find array directivity
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+  - id: engr.em-fields.effective-aperture
+    name: Using effective aperture
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.antenna-parameters
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective aperture
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+      - id: kp2
+        can_do: Relate gain and aperture
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+      - id: kp3
+        can_do: Find aperture efficiency
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+      - id: kp4
+        can_do: Find aperture of dish antennas
+        key_prerequisites: [engr.em-fields.antenna-parameters]
+  - id: engr.em-fields.friis-link-budget
+    name: Finding received power with the Friis equation
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.effective-aperture
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Friis equation
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp2
+        can_do: Find received power
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp3
+        can_do: Find required transmit power
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp4
+        can_do: Include losses in links
+        key_prerequisites: [engr.em-fields.effective-aperture]
+  - id: engr.em-fields.aperture-antennas
+    name: Describing aperture and reflector antennas
+    subject: engr
+    course: engr.em-fields
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.effective-aperture
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe horn antennas
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp2
+        can_do: Describe reflector antennas
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp3
+        can_do: Find gain of dishes
+        key_prerequisites: [engr.em-fields.effective-aperture]
+      - id: kp4
+        can_do: Describe patch antennas
+        key_prerequisites: [engr.em-fields.effective-aperture]
