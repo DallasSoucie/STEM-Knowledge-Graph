@@ -1596,3 +1596,681 @@ topics:
       - id: kp4
         can_do: Compare with the gyroscope approximation
         key_prerequisites: [physics.mechanics.precession]
+  - id: physics.classical.coupled-oscillator-matrices
+    name: Writing coupled oscillators in matrix form
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.coupled-oscillators
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.classical.small-oscillations-lagrangian
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.matrix-form-systems
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a Lagrangian for two coupled masses
+        key_prerequisites: [physics.mechanics.coupled-oscillators, physics.classical.small-oscillations-lagrangian]
+      - id: kp2
+        can_do: Write mass and stiffness matrices
+        key_prerequisites: [physics.classical.small-oscillations-lagrangian]
+      - id: kp3
+        can_do: Write equations of motion in matrix form
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+      - id: kp4
+        can_do: Find matrices for a double pendulum near equilibrium
+        key_prerequisites: [physics.classical.small-oscillations-lagrangian]
+  - id: physics.classical.normal-modes-by-eigenvalues
+    name: Finding normal modes as an eigenvalue problem
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.coupled-oscillator-matrices
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the frequency determinant
+        key_prerequisites: [physics.classical.coupled-oscillator-matrices, math.linalg.find-eigenvectors]
+      - id: kp2
+        can_do: Find normal mode frequencies
+        key_prerequisites: [physics.classical.coupled-oscillator-matrices, math.linalg.find-eigenvectors]
+      - id: kp3
+        can_do: Find mode shapes
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp4
+        can_do: Describe motion in each mode
+        key_prerequisites: [physics.classical.coupled-oscillator-matrices]
+  - id: physics.classical.normal-coordinates
+    name: Changing to normal coordinates
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.normal-modes-by-eigenvalues
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.diagonalization
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define normal coordinates
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp2
+        can_do: Decouple equations with normal coordinates
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues, math.linalg.diagonalization]
+      - id: kp3
+        can_do: Write general motion as a mode sum
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp4
+        can_do: Fit initial conditions with modes
+        key_prerequisites: [math.linalg.diagonalization]
+  - id: physics.classical.weak-coupling-and-energy-exchange
+    name: Analyzing weak coupling and energy exchange
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.normal-modes-by-eigenvalues
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mode frequencies with a weak spring
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp2
+        can_do: Find beat period of energy exchange
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp3
+        can_do: Describe energy passing between pendulums
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp4
+        can_do: Find time for full energy transfer
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+  - id: physics.classical.driven-coupled-oscillators
+    name: Finding the response of driven coupled systems
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.normal-coordinates
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.driven-damped-steady-state
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Drive one mass of a coupled pair
+        key_prerequisites: [physics.classical.normal-coordinates, physics.classical.driven-damped-steady-state]
+      - id: kp2
+        can_do: Find resonances at mode frequencies
+        key_prerequisites: [physics.classical.normal-coordinates]
+      - id: kp3
+        can_do: Find an antiresonance
+        key_prerequisites: [physics.classical.driven-damped-steady-state]
+      - id: kp4
+        can_do: Explain a vibration absorber
+        key_prerequisites: [physics.classical.normal-coordinates]
+  - id: physics.classical.three-mass-chains
+    name: Finding modes of three-mass chains and molecules
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.normal-modes-by-eigenvalues
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find modes of three masses on springs
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp2
+        can_do: Find modes of a linear triatomic molecule
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp3
+        can_do: Sketch mode shapes
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp4
+        can_do: Count modes from degrees of freedom
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+  - id: physics.classical.zero-frequency-modes
+    name: Recognizing zero-frequency modes
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.normal-modes-by-eigenvalues
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a zero-frequency mode
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp2
+        can_do: Interpret it as free translation or rotation
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp3
+        can_do: Remove it with center of mass motion
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp4
+        can_do: Find zero modes of a free molecule
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+  - id: physics.classical.loaded-string-continuum-limit
+    name: Taking a chain of masses to a continuous string
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.three-mass-chains
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find modes of many beads on a string
+        key_prerequisites: [physics.classical.three-mass-chains]
+      - id: kp2
+        can_do: Find the dispersion relation of a bead chain
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+      - id: kp3
+        can_do: Take the limit of many beads
+        key_prerequisites: [physics.classical.three-mass-chains, math.diffeq.boundary-value-eigenproblems]
+      - id: kp4
+        can_do: Recover the wave equation
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+  - id: physics.classical.lagrangian-density-string
+    name: Writing a Lagrangian density for a string
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.loaded-string-continuum-limit
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.classical.hamiltons-principle
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write kinetic and potential energy per length
+        key_prerequisites: [physics.classical.loaded-string-continuum-limit]
+      - id: kp2
+        can_do: Define a Lagrangian density
+        key_prerequisites: [physics.classical.loaded-string-continuum-limit, physics.classical.hamiltons-principle]
+      - id: kp3
+        can_do: Derive the wave equation from the density
+        key_prerequisites: [physics.classical.hamiltons-principle]
+      - id: kp4
+        can_do: Find energy density of a string wave
+        key_prerequisites: [physics.classical.loaded-string-continuum-limit]
+  - id: physics.classical.legendre-transform
+    name: Using the Legendre transformation
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.cyclic-coordinates
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define the Legendre transformation
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Apply it to a simple function
+        key_prerequisites: [physics.classical.cyclic-coordinates, math.calc3.partial-derivatives-compute]
+      - id: kp3
+        can_do: Find the inverse transformation
+        key_prerequisites: [physics.classical.cyclic-coordinates]
+      - id: kp4
+        can_do: Link it to changing variables in a function
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+  - id: physics.classical.hamiltonian-function
+    name: Building the Hamiltonian from the Lagrangian
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.legendre-transform
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.energy-function
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the Hamiltonian
+        key_prerequisites: [physics.classical.legendre-transform]
+      - id: kp2
+        can_do: Build the Hamiltonian for a spring
+        key_prerequisites: [physics.classical.legendre-transform, physics.classical.energy-function]
+      - id: kp3
+        can_do: Build the Hamiltonian in polar coordinates
+        key_prerequisites: [physics.classical.legendre-transform]
+      - id: kp4
+        can_do: Show when it equals energy
+        key_prerequisites: [physics.classical.energy-function]
+  - id: physics.classical.hamiltons-equations
+    name: Solving problems with Hamilton's equations
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.hamiltonian-function
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Hamilton's equations
+        key_prerequisites: [physics.classical.hamiltonian-function]
+      - id: kp2
+        can_do: Solve a mass on a spring with Hamilton's equations
+        key_prerequisites: [physics.classical.hamiltonian-function]
+      - id: kp3
+        can_do: Solve a pendulum with Hamilton's equations
+        key_prerequisites: [physics.classical.hamiltonian-function]
+      - id: kp4
+        can_do: Compare with Lagrange's equations
+        key_prerequisites: [physics.classical.hamiltonian-function]
+  - id: physics.classical.hamiltonian-for-central-forces
+    name: Writing Hamiltonians for central forces
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.hamiltons-equations
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.central-force-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the central force Hamiltonian
+        key_prerequisites: [physics.classical.hamiltons-equations, physics.classical.central-force-equations]
+      - id: kp2
+        can_do: Find conserved momenta
+        key_prerequisites: [physics.classical.hamiltons-equations]
+      - id: kp3
+        can_do: Reduce to radial motion
+        key_prerequisites: [physics.classical.central-force-equations]
+      - id: kp4
+        can_do: Find orbits with Hamilton's equations
+        key_prerequisites: [physics.classical.hamiltons-equations]
+  - id: physics.classical.phase-space-and-liouville
+    name: Using phase space and Liouville's theorem
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.hamiltons-equations
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.classical.phase-space-of-oscillators
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc3.divergence
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw phase space trajectories from Hamilton's equations
+        key_prerequisites: [physics.classical.hamiltons-equations, physics.classical.phase-space-of-oscillators]
+      - id: kp2
+        can_do: Show phase space area is preserved
+        key_prerequisites: [physics.classical.hamiltons-equations, math.calc3.divergence]
+      - id: kp3
+        can_do: State Liouville's theorem
+        key_prerequisites: [physics.classical.hamiltons-equations]
+      - id: kp4
+        can_do: Apply Liouville's theorem to a beam of particles
+        key_prerequisites: [physics.classical.hamiltons-equations]
+  - id: physics.classical.poisson-brackets
+    name: Computing Poisson brackets
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.hamiltons-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the Poisson bracket
+        key_prerequisites: [physics.classical.hamiltons-equations]
+      - id: kp2
+        can_do: Compute brackets of position and momentum
+        key_prerequisites: [physics.classical.hamiltons-equations]
+      - id: kp3
+        can_do: Write time evolution with brackets
+        key_prerequisites: [physics.classical.hamiltons-equations]
+      - id: kp4
+        can_do: Compute brackets of angular momentum components
+        key_prerequisites: [physics.classical.hamiltons-equations]
+  - id: physics.classical.conserved-quantities-from-brackets
+    name: Finding conserved quantities with Poisson brackets
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.poisson-brackets
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.noether-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test conservation with a bracket
+        key_prerequisites: [physics.classical.poisson-brackets]
+      - id: kp2
+        can_do: Find conserved quantities of a central force
+        key_prerequisites: [physics.classical.poisson-brackets, physics.classical.noether-theorem]
+      - id: kp3
+        can_do: Use the Jacobi identity for new constants
+        key_prerequisites: [physics.classical.poisson-brackets]
+      - id: kp4
+        can_do: Link brackets to symmetry
+        key_prerequisites: [physics.classical.noether-theorem]
+  - id: physics.classical.canonical-transformations
+    name: Testing canonical transformations
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.poisson-brackets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define canonical transformations
+        key_prerequisites: [physics.classical.poisson-brackets]
+      - id: kp2
+        can_do: Test a transformation with brackets
+        key_prerequisites: [physics.classical.poisson-brackets]
+      - id: kp3
+        can_do: Find a transformation that simplifies an oscillator
+        key_prerequisites: [physics.classical.poisson-brackets]
+      - id: kp4
+        can_do: Show time evolution is canonical
+        key_prerequisites: [physics.classical.poisson-brackets]
+  - id: physics.classical.canonical-generating-functions
+    name: Using generating functions for canonical transformations
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.canonical-transformations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the four kinds of generating functions
+        key_prerequisites: [physics.classical.canonical-transformations]
+      - id: kp2
+        can_do: Find a transformation from a generating function
+        key_prerequisites: [physics.classical.canonical-transformations]
+      - id: kp3
+        can_do: Find a generating function for a given transformation
+        key_prerequisites: [physics.classical.canonical-transformations]
+      - id: kp4
+        can_do: Use a generating function on an oscillator
+        key_prerequisites: [physics.classical.canonical-transformations]
+  - id: physics.classical.hamilton-jacobi-equation
+    name: Solving problems with the Hamilton-Jacobi equation
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.canonical-generating-functions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Hamilton-Jacobi equation
+        key_prerequisites: [physics.classical.canonical-generating-functions]
+      - id: kp2
+        can_do: Separate variables in it
+        key_prerequisites: [physics.classical.canonical-generating-functions]
+      - id: kp3
+        can_do: Solve an oscillator with it
+        key_prerequisites: [physics.classical.canonical-generating-functions]
+      - id: kp4
+        can_do: Solve free fall with it
+        key_prerequisites: [physics.classical.canonical-generating-functions]
+  - id: physics.classical.action-angle-variables
+    name: Using action-angle variables
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.hamilton-jacobi-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the action variable
+        key_prerequisites: [physics.classical.hamilton-jacobi-equation]
+      - id: kp2
+        can_do: Find frequency from the action
+        key_prerequisites: [physics.classical.hamilton-jacobi-equation]
+      - id: kp3
+        can_do: Find action for an oscillator
+        key_prerequisites: [physics.classical.hamilton-jacobi-equation]
+      - id: kp4
+        can_do: Find action for a particle in a box
+        key_prerequisites: [physics.classical.hamilton-jacobi-equation]
+  - id: physics.classical.adiabatic-invariants
+    name: Using adiabatic invariants
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.action-angle-variables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define slow changes
+        key_prerequisites: [physics.classical.action-angle-variables]
+      - id: kp2
+        can_do: Show the action stays constant
+        key_prerequisites: [physics.classical.action-angle-variables]
+      - id: kp3
+        can_do: Find amplitude change of a lengthening pendulum
+        key_prerequisites: [physics.classical.action-angle-variables]
+      - id: kp4
+        can_do: Link adiabatic invariants to quantization
+        key_prerequisites: [physics.classical.action-angle-variables]
+  - id: physics.classical.driven-damped-pendulum-chaos
+    name: Describing chaos in a driven damped pendulum
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.diffeq.nonlinear-pendulum
+        encompassing: 0.3
+        confidence: high
+      - topic: math.diffeq.bifurcations-intro
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.classical.driven-damped-steady-state
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the driven damped pendulum equation
+        key_prerequisites: [math.diffeq.nonlinear-pendulum, physics.classical.driven-damped-steady-state]
+      - id: kp2
+        can_do: Describe periodic responses
+        key_prerequisites: [physics.classical.driven-damped-steady-state]
+      - id: kp3
+        can_do: Describe chaotic responses
+        key_prerequisites: [math.diffeq.nonlinear-pendulum, math.diffeq.bifurcations-intro]
+      - id: kp4
+        can_do: Find drive strength where behaviour changes
+        key_prerequisites: [math.diffeq.bifurcations-intro]
+  - id: physics.classical.period-doubling
+    name: Recognizing period doubling routes to chaos
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.driven-damped-pendulum-chaos
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize period doubling in a response
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp2
+        can_do: Read a bifurcation diagram
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp3
+        can_do: Describe the cascade to chaos
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp4
+        can_do: Find the Feigenbaum ratio from data
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+  - id: physics.classical.logistic-map
+    name: Iterating the logistic map
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.period-doubling
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.recursive-sequence-limits
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Iterate the logistic map
+        key_prerequisites: [physics.classical.period-doubling]
+      - id: kp2
+        can_do: Find fixed points and their stability
+        key_prerequisites: [math.calc2.recursive-sequence-limits]
+      - id: kp3
+        can_do: Find period doubling in the map
+        key_prerequisites: [physics.classical.period-doubling]
+      - id: kp4
+        can_do: Find chaotic parameter ranges
+        key_prerequisites: [physics.classical.period-doubling]
+  - id: physics.classical.lyapunov-exponents
+    name: Estimating Lyapunov exponents
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.logistic-map
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.classical.driven-damped-pendulum-chaos
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Measure divergence of nearby trajectories
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp2
+        can_do: Define the Lyapunov exponent
+        key_prerequisites: [physics.classical.logistic-map]
+      - id: kp3
+        can_do: Estimate it for the logistic map
+        key_prerequisites: [physics.classical.logistic-map]
+      - id: kp4
+        can_do: Interpret positive exponents
+        key_prerequisites: [physics.classical.logistic-map, physics.classical.driven-damped-pendulum-chaos]
+  - id: physics.classical.poincare-sections
+    name: Reading Poincare sections
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.driven-damped-pendulum-chaos
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.phase-space-of-oscillators
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sample a trajectory once per drive period
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp2
+        can_do: Read periodic orbits on a section
+        key_prerequisites: [physics.classical.phase-space-of-oscillators]
+      - id: kp3
+        can_do: Read chaotic orbits on a section
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+      - id: kp4
+        can_do: Compare sections for different drives
+        key_prerequisites: [physics.classical.driven-damped-pendulum-chaos]
+  - id: physics.classical.strange-attractors
+    name: Describing strange attractors and fractal dimension
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.poincare-sections
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe an attractor
+        key_prerequisites: [physics.classical.poincare-sections]
+      - id: kp2
+        can_do: Describe fractal structure
+        key_prerequisites: [physics.classical.poincare-sections]
+      - id: kp3
+        can_do: Estimate a box-counting dimension
+        key_prerequisites: [physics.classical.poincare-sections]
+      - id: kp4
+        can_do: Describe the Lorenz attractor
+        key_prerequisites: [physics.classical.poincare-sections]
