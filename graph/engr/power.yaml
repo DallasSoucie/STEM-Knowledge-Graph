@@ -1,0 +1,1052 @@
+course: engr.power
+topics:
+  - id: engr.power.single-phase-power-review
+    name: Finding complex power in single-phase systems
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.complex-power
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find complex power of loads
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp2
+        can_do: Find power factor of combined loads
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp3
+        can_do: Find line losses in single-phase feeders
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp4
+        can_do: Correct power factor of a plant
+        key_prerequisites: [engr.circuits.complex-power]
+  - id: engr.power.balanced-three-phase-analysis
+    name: Analyzing balanced three-phase systems by per-phase equivalents
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.three-phase-power
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw per-phase equivalent circuits
+        key_prerequisites: [engr.circuits.three-phase-power]
+      - id: kp2
+        can_do: Convert delta loads to equivalent wye
+        key_prerequisites: [engr.circuits.three-phase-power]
+      - id: kp3
+        can_do: Find line currents and voltages
+        key_prerequisites: [engr.circuits.three-phase-power]
+      - id: kp4
+        can_do: Find power in three-phase systems
+        key_prerequisites: [engr.circuits.three-phase-power]
+  - id: engr.power.three-phase-power-measurement
+    name: Measuring three-phase power with wattmeters
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.balanced-three-phase-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the two-wattmeter method
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp2
+        can_do: Find power factor from wattmeter readings
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp3
+        can_do: Measure reactive power
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp4
+        can_do: Measure unbalanced loads
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+  - id: engr.power.per-unit-system
+    name: Using the per-unit system
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.balanced-three-phase-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose base quantities
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp2
+        can_do: Convert to per-unit values
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp3
+        can_do: Change per-unit bases
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+      - id: kp4
+        can_do: Draw per-unit one-line diagrams
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+  - id: engr.power.practical-transformer-model
+    name: Using the practical transformer equivalent circuit
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ideal-transformers
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.em-fields.magnetic-circuits-engineering
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the transformer equivalent circuit
+        key_prerequisites: [engr.circuits.ideal-transformers, engr.em-fields.magnetic-circuits-engineering]
+      - id: kp2
+        can_do: Refer impedances across transformers
+        key_prerequisites: [engr.circuits.ideal-transformers]
+      - id: kp3
+        can_do: Include core losses and magnetizing current
+        key_prerequisites: [engr.em-fields.magnetic-circuits-engineering]
+      - id: kp4
+        can_do: Find simplified equivalent circuits
+        key_prerequisites: [engr.circuits.ideal-transformers]
+  - id: engr.power.transformer-tests
+    name: Finding transformer parameters from open- and short-circuit tests
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.practical-transformer-model
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find parameters from open-circuit tests
+        key_prerequisites: [engr.power.practical-transformer-model]
+      - id: kp2
+        can_do: Find parameters from short-circuit tests
+        key_prerequisites: [engr.power.practical-transformer-model]
+      - id: kp3
+        can_do: Find copper and core losses
+        key_prerequisites: [engr.power.practical-transformer-model]
+      - id: kp4
+        can_do: Build equivalent circuits from test data
+        key_prerequisites: [engr.power.practical-transformer-model]
+  - id: engr.power.voltage-regulation-and-efficiency
+    name: Finding transformer regulation and efficiency
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.transformer-tests
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find voltage regulation
+        key_prerequisites: [engr.power.transformer-tests]
+      - id: kp2
+        can_do: Find efficiency at load
+        key_prerequisites: [engr.power.transformer-tests]
+      - id: kp3
+        can_do: Find load for maximum efficiency
+        key_prerequisites: [engr.power.transformer-tests]
+      - id: kp4
+        can_do: Find all-day efficiency
+        key_prerequisites: [engr.power.transformer-tests]
+  - id: engr.power.three-phase-transformers
+    name: Analyzing three-phase transformer connections
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.practical-transformer-model
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.power.per-unit-system
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze wye and delta transformer connections
+        key_prerequisites: [engr.power.practical-transformer-model]
+      - id: kp2
+        can_do: Find phase shifts in connections
+        key_prerequisites: [engr.power.practical-transformer-model]
+      - id: kp3
+        can_do: Find per-unit impedance of three-phase transformers
+        key_prerequisites: [engr.power.per-unit-system]
+      - id: kp4
+        can_do: Choose transformer connections
+        key_prerequisites: [engr.power.practical-transformer-model, engr.power.per-unit-system]
+  - id: engr.power.autotransformers-and-taps
+    name: Analyzing autotransformers and tap changers
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.three-phase-transformers
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze autotransformers
+        key_prerequisites: [engr.power.three-phase-transformers]
+      - id: kp2
+        can_do: Find autotransformer ratings
+        key_prerequisites: [engr.power.three-phase-transformers]
+      - id: kp3
+        can_do: Use tap changers for voltage control
+        key_prerequisites: [engr.power.three-phase-transformers]
+      - id: kp4
+        can_do: Model off-nominal taps
+        key_prerequisites: [engr.power.three-phase-transformers]
+  - id: engr.power.electromechanical-energy-conversion
+    name: Finding forces and torques from coenergy
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.magnetic-circuits-engineering
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.controls.electromechanical-models
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy and coenergy
+        key_prerequisites: [engr.em-fields.magnetic-circuits-engineering]
+      - id: kp2
+        can_do: Find force from coenergy
+        key_prerequisites: [engr.em-fields.magnetic-circuits-engineering, engr.controls.electromechanical-models]
+      - id: kp3
+        can_do: Find torque in rotating systems
+        key_prerequisites: [engr.em-fields.magnetic-circuits-engineering, engr.controls.electromechanical-models]
+      - id: kp4
+        can_do: Find forces in electromagnets
+        key_prerequisites: [engr.controls.electromechanical-models]
+  - id: engr.power.rotating-magnetic-fields
+    name: Explaining rotating magnetic fields
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.electromechanical-energy-conversion
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.power.balanced-three-phase-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain rotating fields from three-phase windings
+        key_prerequisites: [engr.power.electromechanical-energy-conversion, engr.power.balanced-three-phase-analysis]
+      - id: kp2
+        can_do: Find synchronous speed
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+      - id: kp3
+        can_do: Find induced voltage in windings
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+      - id: kp4
+        can_do: Describe winding arrangements
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+  - id: engr.power.synchronous-generator-model
+    name: Using the synchronous generator equivalent circuit
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.rotating-magnetic-fields
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the synchronous generator equivalent circuit
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp2
+        can_do: Find internal voltage
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp3
+        can_do: Find synchronous reactance from tests
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp4
+        can_do: Draw phasor diagrams of generators
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+  - id: engr.power.synchronous-power-angle
+    name: Using the power-angle relation
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.synchronous-generator-model
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the power-angle equation
+        key_prerequisites: [engr.power.synchronous-generator-model]
+      - id: kp2
+        can_do: Find maximum power
+        key_prerequisites: [engr.power.synchronous-generator-model]
+      - id: kp3
+        can_do: Find steady-state stability limit
+        key_prerequisites: [engr.power.synchronous-generator-model]
+      - id: kp4
+        can_do: Find reactive power output
+        key_prerequisites: [engr.power.synchronous-generator-model]
+  - id: engr.power.synchronous-motors
+    name: Analyzing synchronous motors and power factor control
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.synchronous-power-angle
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze synchronous motors
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp2
+        can_do: Find field current for power factor
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp3
+        can_do: Draw V curves
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp4
+        can_do: Use synchronous condensers
+        key_prerequisites: [engr.power.synchronous-power-angle]
+  - id: engr.power.parallel-generators
+    name: Operating generators in parallel
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.synchronous-power-angle
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Synchronize generators
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp2
+        can_do: Share load between generators
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp3
+        can_do: Use frequency droop
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp4
+        can_do: Operate generators on infinite buses
+        key_prerequisites: [engr.power.synchronous-power-angle]
+  - id: engr.power.induction-motor-model
+    name: Using the induction motor equivalent circuit
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.rotating-magnetic-fields
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slip
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp2
+        can_do: Draw the induction motor equivalent circuit
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp3
+        can_do: Find rotor current and power
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+      - id: kp4
+        can_do: Find power flow in induction motors
+        key_prerequisites: [engr.power.rotating-magnetic-fields]
+  - id: engr.power.induction-torque-speed
+    name: Finding induction motor torque-speed characteristics
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.induction-motor-model
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find induced torque
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp2
+        can_do: Find maximum torque and slip
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp3
+        can_do: Find starting torque
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp4
+        can_do: Plot torque-speed curves
+        key_prerequisites: [engr.power.induction-motor-model]
+  - id: engr.power.induction-motor-tests
+    name: Finding induction motor parameters from tests
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.induction-motor-model
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find parameters from no-load tests
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp2
+        can_do: Find parameters from blocked-rotor tests
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp3
+        can_do: Find stator resistance
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp4
+        can_do: Build equivalent circuits from tests
+        key_prerequisites: [engr.power.induction-motor-model]
+  - id: engr.power.induction-starting-and-speed-control
+    name: Analyzing starting and speed control
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.induction-torque-speed
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find starting current
+        key_prerequisites: [engr.power.induction-torque-speed]
+      - id: kp2
+        can_do: Choose starting methods
+        key_prerequisites: [engr.power.induction-torque-speed]
+      - id: kp3
+        can_do: Control speed by frequency
+        key_prerequisites: [engr.power.induction-torque-speed]
+      - id: kp4
+        can_do: Control speed by voltage and rotor resistance
+        key_prerequisites: [engr.power.induction-torque-speed]
+  - id: engr.power.dc-machines
+    name: Analyzing DC motors and generators
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.electromechanical-energy-conversion
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find induced voltage in DC machines
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+      - id: kp2
+        can_do: Find torque of DC motors
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+      - id: kp3
+        can_do: Find speed of shunt and series motors
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+      - id: kp4
+        can_do: Find terminal voltage of DC generators
+        key_prerequisites: [engr.power.electromechanical-energy-conversion]
+  - id: engr.power.single-phase-motors
+    name: Describing single-phase motors
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.induction-motor-model
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe single-phase induction motors
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp2
+        can_do: Describe split-phase and capacitor motors
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp3
+        can_do: Describe universal motors
+        key_prerequisites: [engr.power.induction-motor-model]
+      - id: kp4
+        can_do: Choose single-phase motors
+        key_prerequisites: [engr.power.induction-motor-model]
+  - id: engr.power.motor-drives
+    name: Analyzing variable-frequency and DC drives
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.induction-starting-and-speed-control
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.inverters-and-thyristors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe variable-frequency drives
+        key_prerequisites: [engr.power.induction-starting-and-speed-control, engr.electronics.inverters-and-thyristors]
+      - id: kp2
+        can_do: Find constant volts-per-hertz control
+        key_prerequisites: [engr.power.induction-starting-and-speed-control]
+      - id: kp3
+        can_do: Describe DC drives
+        key_prerequisites: [engr.electronics.inverters-and-thyristors]
+      - id: kp4
+        can_do: Choose drives for loads
+        key_prerequisites: [engr.power.induction-starting-and-speed-control, engr.electronics.inverters-and-thyristors]
+  - id: engr.power.line-parameters-power
+    name: Finding resistance, inductance and capacitance of overhead lines
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.em-fields.inductance-calculations
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.power.per-unit-system
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resistance of conductors
+        key_prerequisites: [engr.power.per-unit-system]
+      - id: kp2
+        can_do: Find inductance of three-phase lines
+        key_prerequisites: [engr.em-fields.inductance-calculations, engr.power.per-unit-system]
+      - id: kp3
+        can_do: Find capacitance of three-phase lines
+        key_prerequisites: [engr.em-fields.inductance-calculations]
+      - id: kp4
+        can_do: Use bundled conductors
+        key_prerequisites: [engr.em-fields.inductance-calculations]
+  - id: engr.power.short-and-medium-lines
+    name: Modelling short and medium lines
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.line-parameters-power
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model short lines
+        key_prerequisites: [engr.power.line-parameters-power]
+      - id: kp2
+        can_do: Model medium lines with pi circuits
+        key_prerequisites: [engr.power.line-parameters-power]
+      - id: kp3
+        can_do: Find sending-end voltage
+        key_prerequisites: [engr.power.line-parameters-power]
+      - id: kp4
+        can_do: Find line efficiency and regulation
+        key_prerequisites: [engr.power.line-parameters-power]
+  - id: engr.power.long-line-model
+    name: Modelling long lines
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.short-and-medium-lines
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.em-fields.telegrapher-equations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ABCD parameters of long lines
+        key_prerequisites: [engr.power.short-and-medium-lines, engr.em-fields.telegrapher-equations]
+      - id: kp2
+        can_do: Find equivalent pi circuits
+        key_prerequisites: [engr.power.short-and-medium-lines]
+      - id: kp3
+        can_do: Find surge impedance loading
+        key_prerequisites: [engr.em-fields.telegrapher-equations]
+      - id: kp4
+        can_do: Find Ferranti effect
+        key_prerequisites: [engr.power.short-and-medium-lines]
+  - id: engr.power.line-power-flow-limits
+    name: Finding power transfer limits of lines
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.long-line-model
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.power.synchronous-power-angle
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find power transfer over lines
+        key_prerequisites: [engr.power.long-line-model, engr.power.synchronous-power-angle]
+      - id: kp2
+        can_do: Find maximum power transfer
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp3
+        can_do: Find voltage profiles
+        key_prerequisites: [engr.power.long-line-model]
+      - id: kp4
+        can_do: Find thermal and stability limits
+        key_prerequisites: [engr.power.long-line-model, engr.power.synchronous-power-angle]
+  - id: engr.power.reactive-compensation
+    name: Compensating lines with reactive power
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.line-power-flow-limits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shunt compensation
+        key_prerequisites: [engr.power.line-power-flow-limits]
+      - id: kp2
+        can_do: Find series compensation
+        key_prerequisites: [engr.power.line-power-flow-limits]
+      - id: kp3
+        can_do: Find effect of compensation on voltage
+        key_prerequisites: [engr.power.line-power-flow-limits]
+      - id: kp4
+        can_do: Find effect of compensation on power transfer
+        key_prerequisites: [engr.power.line-power-flow-limits]
+  - id: engr.power.bus-admittance-matrix
+    name: Building the bus admittance matrix
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.short-and-medium-lines
+        encompassing: 0.3
+        confidence: high
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build bus admittance matrices
+        key_prerequisites: [engr.power.short-and-medium-lines, math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Include transformers in admittance matrices
+        key_prerequisites: [engr.power.short-and-medium-lines]
+      - id: kp3
+        can_do: Modify matrices for changes
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Find bus impedance matrices
+        key_prerequisites: [math.linalg.matrix-times-vector]
+  - id: engr.power.power-flow-equations
+    name: Writing the power flow equations
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.bus-admittance-matrix
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write power flow equations
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+      - id: kp2
+        can_do: Classify bus types
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+      - id: kp3
+        can_do: Find mismatch equations
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+      - id: kp4
+        can_do: Solve a two-bus system
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+  - id: engr.power.gauss-seidel-power-flow
+    name: Solving power flow by Gauss-Seidel
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.power-flow-equations
+        encompassing: 0.7
+        confidence: high
+      - topic: math.numerical.gauss-seidel
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Gauss-Seidel to power flow
+        key_prerequisites: [engr.power.power-flow-equations, math.numerical.gauss-seidel]
+      - id: kp2
+        can_do: Handle PV buses
+        key_prerequisites: [engr.power.power-flow-equations]
+      - id: kp3
+        can_do: Use acceleration factors
+        key_prerequisites: [math.numerical.gauss-seidel]
+      - id: kp4
+        can_do: Check convergence
+        key_prerequisites: [engr.power.power-flow-equations, math.numerical.gauss-seidel]
+  - id: engr.power.newton-raphson-power-flow
+    name: Solving power flow by Newton-Raphson
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.power-flow-equations
+        encompassing: 0.6
+        confidence: high
+      - topic: math.numerical.systems-nonlinear-newton
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build the power flow Jacobian
+        key_prerequisites: [engr.power.power-flow-equations, math.numerical.systems-nonlinear-newton]
+      - id: kp2
+        can_do: Apply Newton-Raphson to power flow
+        key_prerequisites: [engr.power.power-flow-equations, math.numerical.systems-nonlinear-newton]
+      - id: kp3
+        can_do: Use decoupled power flow
+        key_prerequisites: [engr.power.power-flow-equations]
+      - id: kp4
+        can_do: Compare power flow methods
+        key_prerequisites: [math.numerical.systems-nonlinear-newton]
+  - id: engr.power.voltage-control
+    name: Controlling voltage with taps and reactive power
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.newton-raphson-power-flow
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.power.autotransformers-and-taps
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Control voltage with reactive power
+        key_prerequisites: [engr.power.newton-raphson-power-flow]
+      - id: kp2
+        can_do: Control voltage with taps
+        key_prerequisites: [engr.power.autotransformers-and-taps]
+      - id: kp3
+        can_do: Find reactive power limits
+        key_prerequisites: [engr.power.newton-raphson-power-flow]
+      - id: kp4
+        can_do: Find voltage sensitivity
+        key_prerequisites: [engr.power.newton-raphson-power-flow, engr.power.autotransformers-and-taps]
+  - id: engr.power.economic-dispatch
+    name: Solving economic dispatch
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.power-flow-equations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.lagrange-one-constraint
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find incremental costs
+        key_prerequisites: [engr.power.power-flow-equations]
+      - id: kp2
+        can_do: Solve economic dispatch without losses
+        key_prerequisites: [engr.power.power-flow-equations, math.calc3.lagrange-one-constraint]
+      - id: kp3
+        can_do: Include generator limits
+        key_prerequisites: [engr.power.power-flow-equations, math.calc3.lagrange-one-constraint]
+      - id: kp4
+        can_do: Include transmission losses
+        key_prerequisites: [math.calc3.lagrange-one-constraint]
+  - id: engr.power.symmetrical-faults
+    name: Finding symmetrical fault currents
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.bus-admittance-matrix
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.power.synchronous-generator-model
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fault currents with Thevenin equivalents
+        key_prerequisites: [engr.power.bus-admittance-matrix, engr.power.synchronous-generator-model]
+      - id: kp2
+        can_do: Find fault currents with the impedance matrix
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+      - id: kp3
+        can_do: Find subtransient fault currents
+        key_prerequisites: [engr.power.synchronous-generator-model]
+      - id: kp4
+        can_do: Find breaker ratings
+        key_prerequisites: [engr.power.bus-admittance-matrix]
+  - id: engr.power.symmetrical-components
+    name: Using symmetrical components
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.balanced-three-phase-analysis
+        encompassing: 0.7
+        confidence: high
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform phase quantities to sequence components
+        key_prerequisites: [engr.power.balanced-three-phase-analysis, math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Transform sequence to phase quantities
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp3
+        can_do: Find sequence components of unbalanced sets
+        key_prerequisites: [engr.power.balanced-three-phase-analysis, math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Find power in sequence components
+        key_prerequisites: [engr.power.balanced-three-phase-analysis]
+  - id: engr.power.sequence-networks
+    name: Building sequence networks
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.symmetrical-components
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.power.three-phase-transformers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build positive, negative and zero sequence networks
+        key_prerequisites: [engr.power.symmetrical-components, engr.power.three-phase-transformers]
+      - id: kp2
+        can_do: Find sequence impedances of machines
+        key_prerequisites: [engr.power.symmetrical-components]
+      - id: kp3
+        can_do: Model transformer connections in sequence networks
+        key_prerequisites: [engr.power.three-phase-transformers]
+      - id: kp4
+        can_do: Model grounding impedance
+        key_prerequisites: [engr.power.symmetrical-components, engr.power.three-phase-transformers]
+  - id: engr.power.unsymmetrical-faults
+    name: Finding unsymmetrical fault currents
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.sequence-networks
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.power.symmetrical-faults
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find single line-to-ground fault currents
+        key_prerequisites: [engr.power.sequence-networks, engr.power.symmetrical-faults]
+      - id: kp2
+        can_do: Find line-to-line fault currents
+        key_prerequisites: [engr.power.sequence-networks, engr.power.symmetrical-faults]
+      - id: kp3
+        can_do: Find double line-to-ground fault currents
+        key_prerequisites: [engr.power.sequence-networks]
+      - id: kp4
+        can_do: Find fault voltages
+        key_prerequisites: [engr.power.symmetrical-faults]
+  - id: engr.power.protective-relays
+    name: Describing relays, breakers and protection coordination
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.unsymmetrical-faults
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe overcurrent relays
+        key_prerequisites: [engr.power.unsymmetrical-faults]
+      - id: kp2
+        can_do: Coordinate relays
+        key_prerequisites: [engr.power.unsymmetrical-faults]
+      - id: kp3
+        can_do: Describe distance and differential protection
+        key_prerequisites: [engr.power.unsymmetrical-faults]
+      - id: kp4
+        can_do: Describe circuit breakers
+        key_prerequisites: [engr.power.unsymmetrical-faults]
+  - id: engr.power.swing-equation
+    name: Using the swing equation
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.synchronous-power-angle
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.dynamics.fixed-axis-kinetics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the swing equation
+        key_prerequisites: [engr.power.synchronous-power-angle, engr.dynamics.fixed-axis-kinetics]
+      - id: kp2
+        can_do: Find inertia constant
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics]
+      - id: kp3
+        can_do: Find rotor angle dynamics
+        key_prerequisites: [engr.power.synchronous-power-angle]
+      - id: kp4
+        can_do: Find natural frequency of rotor oscillation
+        key_prerequisites: [engr.power.synchronous-power-angle, engr.dynamics.fixed-axis-kinetics]
+  - id: engr.power.equal-area-criterion
+    name: Applying the equal-area criterion
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.swing-equation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the equal-area criterion
+        key_prerequisites: [engr.power.swing-equation]
+      - id: kp2
+        can_do: Find critical clearing angle
+        key_prerequisites: [engr.power.swing-equation]
+      - id: kp3
+        can_do: Find critical clearing time
+        key_prerequisites: [engr.power.swing-equation]
+      - id: kp4
+        can_do: Judge transient stability
+        key_prerequisites: [engr.power.swing-equation]
+  - id: engr.power.renewable-integration
+    name: Describing wind and solar integration
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.line-power-flow-limits
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.electronics.inverters-and-thyristors
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe wind generation
+        key_prerequisites: [engr.power.line-power-flow-limits]
+      - id: kp2
+        can_do: Describe solar inverters
+        key_prerequisites: [engr.electronics.inverters-and-thyristors]
+      - id: kp3
+        can_do: Find effects of variable generation
+        key_prerequisites: [engr.power.line-power-flow-limits]
+      - id: kp4
+        can_do: Describe storage and grid support
+        key_prerequisites: [engr.power.line-power-flow-limits, engr.electronics.inverters-and-thyristors]
+  - id: engr.power.power-quality-and-harmonics
+    name: Analyzing harmonics and power quality
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-fourier-series
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.power.single-phase-power-review
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find harmonic content of currents
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp2
+        can_do: Find total harmonic distortion
+        key_prerequisites: [engr.signals.continuous-fourier-series, engr.power.single-phase-power-review]
+      - id: kp3
+        can_do: Find harmonic effects on equipment
+        key_prerequisites: [engr.power.single-phase-power-review]
+      - id: kp4
+        can_do: Design harmonic filters
+        key_prerequisites: [engr.signals.continuous-fourier-series, engr.power.single-phase-power-review]
+  - id: engr.power.grounding-and-safety
+    name: Describing grounding and electrical safety
+    subject: engr
+    course: engr.power
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.power.protective-relays
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe grounding systems
+        key_prerequisites: [engr.power.protective-relays]
+      - id: kp2
+        can_do: Find touch and step voltages
+        key_prerequisites: [engr.power.protective-relays]
+      - id: kp3
+        can_do: Describe ground fault protection
+        key_prerequisites: [engr.power.protective-relays]
+      - id: kp4
+        can_do: Describe electrical safety practices
+        key_prerequisites: [engr.power.protective-relays]
