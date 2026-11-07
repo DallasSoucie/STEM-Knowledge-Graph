@@ -1,0 +1,866 @@
+course: physics.em-theory
+topics:
+  - id: physics.em-theory.curvilinear-vector-derivatives
+    name: Using gradient, divergence and curl in curvilinear coordinates
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.curl
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.spherical-coordinates
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the gradient in spherical coordinates
+        key_prerequisites: [math.calc3.curl, math.calc3.spherical-coordinates]
+      - id: kp2
+        can_do: Write the divergence in spherical coordinates
+        key_prerequisites: [math.calc3.curl, math.calc3.spherical-coordinates]
+      - id: kp3
+        can_do: Write the curl in cylindrical coordinates
+        key_prerequisites: [math.calc3.curl]
+      - id: kp4
+        can_do: Compute the Laplacian of a radial function
+        key_prerequisites: [math.calc3.spherical-coordinates]
+  - id: physics.em-theory.dirac-delta-in-three-dimensions
+    name: Using the three-dimensional delta function
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.pde.delta-function-pde
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the three-dimensional delta function
+        key_prerequisites: [math.pde.delta-function-pde]
+      - id: kp2
+        can_do: Integrate a function against a delta
+        key_prerequisites: [math.pde.delta-function-pde]
+      - id: kp3
+        can_do: Write a point charge density with a delta
+        key_prerequisites: [math.pde.delta-function-pde]
+      - id: kp4
+        can_do: Use the divergence theorem with a delta
+        key_prerequisites: [math.calc3.divergence-theorem]
+  - id: physics.em-theory.divergence-of-inverse-square-field
+    name: Finding the divergence of a point-charge field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.dirac-delta-in-three-dimensions
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em-theory.curvilinear-vector-derivatives
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find divergence of an inverse-square field away from the origin
+        key_prerequisites: [physics.em-theory.curvilinear-vector-derivatives]
+      - id: kp2
+        can_do: Find the flux through a sphere around the origin
+        key_prerequisites: [physics.em-theory.dirac-delta-in-three-dimensions]
+      - id: kp3
+        can_do: Write the divergence as a delta function
+        key_prerequisites: [physics.em-theory.dirac-delta-in-three-dimensions, physics.em-theory.curvilinear-vector-derivatives]
+      - id: kp4
+        can_do: Find the Laplacian of one over distance
+        key_prerequisites: [physics.em-theory.dirac-delta-in-three-dimensions]
+  - id: physics.em-theory.helmholtz-theorem
+    name: Stating the Helmholtz theorem
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.curvilinear-vector-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.curl-divergence-identities
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Helmholtz theorem
+        key_prerequisites: [physics.em-theory.curvilinear-vector-derivatives]
+      - id: kp2
+        can_do: Explain why divergence and curl fix a field
+        key_prerequisites: [physics.em-theory.curvilinear-vector-derivatives, math.calc3.curl-divergence-identities]
+      - id: kp3
+        can_do: Find a field from given divergence and curl
+        key_prerequisites: [physics.em-theory.curvilinear-vector-derivatives]
+      - id: kp4
+        can_do: Explain conditions at infinity
+        key_prerequisites: [math.calc3.curl-divergence-identities]
+  - id: physics.em-theory.vector-identities-for-fields
+    name: Using product rules for vector derivatives
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.curl-divergence-identities
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the product rule for divergence
+        key_prerequisites: [math.calc3.curl-divergence-identities]
+      - id: kp2
+        can_do: Use the product rule for curl
+        key_prerequisites: [math.calc3.curl-divergence-identities]
+      - id: kp3
+        can_do: Use the curl of a curl identity
+        key_prerequisites: [math.calc3.curl-divergence-identities]
+      - id: kp4
+        can_do: Show curl of a gradient vanishes
+        key_prerequisites: [math.calc3.curl-divergence-identities]
+  - id: physics.em-theory.differential-gauss-law
+    name: Deriving Gauss's law in differential form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-law-statement
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em-theory.divergence-of-inverse-square-field
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the divergence theorem to Gauss's law
+        key_prerequisites: [physics.em.gauss-law-statement, physics.em-theory.divergence-of-inverse-square-field]
+      - id: kp2
+        can_do: Write Gauss's law in differential form
+        key_prerequisites: [physics.em-theory.divergence-of-inverse-square-field]
+      - id: kp3
+        can_do: Find charge density from a field
+        key_prerequisites: [physics.em-theory.divergence-of-inverse-square-field]
+      - id: kp4
+        can_do: Find field divergence from a density
+        key_prerequisites: [physics.em.gauss-law-statement]
+  - id: physics.em-theory.curl-of-electrostatic-field
+    name: Showing electrostatic fields are curl-free
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.stokes-theorem
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use path independence of potential
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp2
+        can_do: Apply Stokes' theorem to show zero curl
+        key_prerequisites: [math.calc3.stokes-theorem]
+      - id: kp3
+        can_do: Test whether a field can be electrostatic
+        key_prerequisites: [math.calc3.stokes-theorem]
+      - id: kp4
+        can_do: Write field as minus gradient of potential
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+  - id: physics.em-theory.poisson-and-laplace-equations
+    name: Deriving Poisson's and Laplace's equations
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.differential-gauss-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.curl-of-electrostatic-field
+        encompassing: 0.25
+        confidence: high
+      - topic: math.pde.poisson-equation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine Gauss's law with the potential
+        key_prerequisites: [physics.em-theory.differential-gauss-law, physics.em-theory.curl-of-electrostatic-field]
+      - id: kp2
+        can_do: Write Poisson's equation
+        key_prerequisites: [physics.em-theory.differential-gauss-law, math.pde.poisson-equation]
+      - id: kp3
+        can_do: Write Laplace's equation for empty regions
+        key_prerequisites: [physics.em-theory.differential-gauss-law]
+      - id: kp4
+        can_do: Solve Poisson's equation in one dimension
+        key_prerequisites: [math.pde.poisson-equation]
+  - id: physics.em-theory.potential-of-continuous-distributions
+    name: Finding potentials of volume charge distributions
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-a-ring-and-disk
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc3.triple-spherical
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a potential integral for a volume
+        key_prerequisites: [math.calc3.triple-spherical]
+      - id: kp2
+        can_do: Find potential of a uniform sphere by integration
+        key_prerequisites: [physics.em.potential-of-a-ring-and-disk, math.calc3.triple-spherical]
+      - id: kp3
+        can_do: Find potential of a charged shell by integration
+        key_prerequisites: [math.calc3.triple-spherical]
+      - id: kp4
+        can_do: Compare with field integration
+        key_prerequisites: [physics.em.potential-of-a-ring-and-disk]
+  - id: physics.em-theory.boundary-conditions-on-fields
+    name: Deriving boundary conditions at surface charges
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.differential-gauss-law
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.curl-of-electrostatic-field
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the jump in normal field at a surface charge
+        key_prerequisites: [physics.em-theory.differential-gauss-law]
+      - id: kp2
+        can_do: Show the tangential field is continuous
+        key_prerequisites: [physics.em-theory.curl-of-electrostatic-field]
+      - id: kp3
+        can_do: Show potential is continuous
+        key_prerequisites: [physics.em-theory.curl-of-electrostatic-field]
+      - id: kp4
+        can_do: Find surface charge from a field jump
+        key_prerequisites: [physics.em-theory.differential-gauss-law]
+  - id: physics.em-theory.electrostatic-energy-in-fields
+    name: Finding electrostatic energy from fields
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.energy-density-of-electric-field
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.poisson-and-laplace-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write energy as an integral over charge and potential
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp2
+        can_do: Write energy as an integral of field squared
+        key_prerequisites: [physics.em.energy-density-of-electric-field]
+      - id: kp3
+        can_do: Find energy of a charged sphere both ways
+        key_prerequisites: [physics.em.energy-density-of-electric-field, physics.em-theory.poisson-and-laplace-equations]
+      - id: kp4
+        can_do: Explain self-energy of point charges
+        key_prerequisites: [physics.em.energy-density-of-electric-field]
+  - id: physics.em-theory.conductors-and-surface-pressure
+    name: Finding surface charge and pressure on conductors
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.boundary-conditions-on-fields
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.conductors-with-gauss
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find surface charge from the field outside a conductor
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+      - id: kp2
+        can_do: Find electrostatic pressure on a surface
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+      - id: kp3
+        can_do: Find force on half of a charged sphere
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+      - id: kp4
+        can_do: Explain why fields are normal at a conductor
+        key_prerequisites: [physics.em.conductors-with-gauss]
+  - id: physics.em-theory.uniqueness-theorems
+    name: Using uniqueness theorems
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.poisson-and-laplace-equations
+        encompassing: 0.45
+        confidence: high
+      - topic: math.pde.uniqueness-laplace
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the first uniqueness theorem
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp2
+        can_do: State the second uniqueness theorem
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations]
+      - id: kp3
+        can_do: Use uniqueness to justify a guessed solution
+        key_prerequisites: [physics.em-theory.poisson-and-laplace-equations, math.pde.uniqueness-laplace]
+      - id: kp4
+        can_do: Explain why a cavity has no field
+        key_prerequisites: [math.pde.uniqueness-laplace]
+  - id: physics.em-theory.method-of-images-plane
+    name: Solving a charge near a grounded plane by images
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.uniqueness-theorems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Place an image charge for a grounded plane
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+      - id: kp2
+        can_do: Find potential above the plane
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+      - id: kp3
+        can_do: Check boundary conditions
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+      - id: kp4
+        can_do: Find images for two perpendicular planes
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+  - id: physics.em-theory.induced-charge-and-force-images
+    name: Finding induced charge and force from images
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.method-of-images-plane
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find induced surface charge on a plane
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp2
+        can_do: Find total induced charge
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp3
+        can_do: Find force on the real charge
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp4
+        can_do: Find work to bring a charge to the plane
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+  - id: physics.em-theory.method-of-images-sphere
+    name: Solving a charge near a grounded sphere by images
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.method-of-images-plane
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Place an image for a grounded sphere
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp2
+        can_do: Find the image position and charge
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp3
+        can_do: Find potential outside the sphere
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+      - id: kp4
+        can_do: Find force on the charge
+        key_prerequisites: [physics.em-theory.method-of-images-plane]
+  - id: physics.em-theory.separation-cartesian
+    name: Solving Laplace's equation in Cartesian coordinates
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.uniqueness-theorems
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.pde.laplace-rectangle
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Separate Laplace's equation in two dimensions
+        key_prerequisites: [physics.em-theory.uniqueness-theorems, math.pde.laplace-rectangle]
+      - id: kp2
+        can_do: Solve a slot with one side at fixed potential
+        key_prerequisites: [math.pde.laplace-rectangle]
+      - id: kp3
+        can_do: Match boundary values with a Fourier series
+        key_prerequisites: [physics.em-theory.uniqueness-theorems, math.pde.laplace-rectangle]
+      - id: kp4
+        can_do: Solve a rectangular pipe problem
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+  - id: physics.em-theory.separation-spherical-legendre
+    name: Solving azimuthally symmetric problems with Legendre polynomials
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.uniqueness-theorems
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.spherical-laplace
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.pde.legendre-expansions
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Separate Laplace's equation with azimuthal symmetry
+        key_prerequisites: [math.pde.spherical-laplace]
+      - id: kp2
+        can_do: Write the general solution with Legendre polynomials
+        key_prerequisites: [math.pde.spherical-laplace, math.pde.legendre-expansions]
+      - id: kp3
+        can_do: Find potential with a given surface potential
+        key_prerequisites: [physics.em-theory.uniqueness-theorems, math.pde.legendre-expansions]
+      - id: kp4
+        can_do: Find coefficients for inside and outside regions
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+  - id: physics.em-theory.sphere-in-uniform-field
+    name: Finding fields of a conducting sphere in a uniform field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.separation-spherical-legendre
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set boundary conditions for a conducting sphere in a field
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+      - id: kp2
+        can_do: Find the potential outside
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+      - id: kp3
+        can_do: Find induced surface charge
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+      - id: kp4
+        can_do: Find the induced dipole moment
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+  - id: physics.em-theory.separation-cylindrical
+    name: Solving Laplace's equation in cylindrical coordinates
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.uniqueness-theorems
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.cylindrical-laplace
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate Laplace's equation in polar coordinates
+        key_prerequisites: [physics.em-theory.uniqueness-theorems, math.pde.cylindrical-laplace]
+      - id: kp2
+        can_do: Write the general cylindrical solution
+        key_prerequisites: [math.pde.cylindrical-laplace]
+      - id: kp3
+        can_do: Find fields of a cylinder in a uniform field
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+      - id: kp4
+        can_do: Find potential with a given surface potential
+        key_prerequisites: [physics.em-theory.uniqueness-theorems]
+  - id: physics.em-theory.relaxation-method
+    name: Solving Laplace's equation numerically by relaxation
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.separation-cartesian
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.pde.mean-value-maximum-laplace
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the averaging rule for a grid
+        key_prerequisites: [math.pde.mean-value-maximum-laplace]
+      - id: kp2
+        can_do: Iterate a grid toward a solution
+        key_prerequisites: [physics.em-theory.separation-cartesian]
+      - id: kp3
+        can_do: Check convergence of a grid solution
+        key_prerequisites: [physics.em-theory.separation-cartesian]
+      - id: kp4
+        can_do: Compare with an exact solution
+        key_prerequisites: [physics.em-theory.separation-cartesian]
+  - id: physics.em-theory.greens-function-electrostatics
+    name: Using Green's functions for boundary problems
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.method-of-images-sphere
+        encompassing: 0.3
+        confidence: high
+      - topic: math.pde.greens-functions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a Green's function for a region
+        key_prerequisites: [math.pde.greens-functions]
+      - id: kp2
+        can_do: Build a Green's function from images
+        key_prerequisites: [physics.em-theory.method-of-images-sphere]
+      - id: kp3
+        can_do: Find potential with a Green's function
+        key_prerequisites: [physics.em-theory.method-of-images-sphere, math.pde.greens-functions]
+      - id: kp4
+        can_do: Find potential with given boundary values
+        key_prerequisites: [math.pde.greens-functions]
+  - id: physics.em-theory.multipole-expansion
+    name: Expanding potentials in multipoles
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.separation-spherical-legendre
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.binomial-series
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand the inverse distance in Legendre polynomials
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre, math.calc2.binomial-series]
+      - id: kp2
+        can_do: Write the multipole series for a potential
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+      - id: kp3
+        can_do: Find the leading term far away
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+      - id: kp4
+        can_do: Explain why higher terms fall faster
+        key_prerequisites: [math.calc2.binomial-series]
+  - id: physics.em-theory.monopole-and-dipole-terms
+    name: Finding monopole and dipole terms
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.multipole-expansion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the monopole term
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp2
+        can_do: Find the dipole moment of a distribution
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp3
+        can_do: Find the dipole term of the potential
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp4
+        can_do: Find the dipole moment of a continuous distribution
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+  - id: physics.em-theory.dipole-moment-origin-dependence
+    name: Finding how the dipole moment depends on origin
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.monopole-and-dipole-terms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Shift the origin of a distribution
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+      - id: kp2
+        can_do: Find when the dipole moment changes
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+      - id: kp3
+        can_do: Show neutral distributions have fixed dipole moments
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+      - id: kp4
+        can_do: Find the dipole moment about a new origin
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+  - id: physics.em-theory.dipole-field-coordinate-free
+    name: Writing the dipole field in coordinate-free form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.monopole-and-dipole-terms
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.electric-dipole-field
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dipole field from its potential
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+      - id: kp2
+        can_do: Write the field without coordinates
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms]
+      - id: kp3
+        can_do: Compare with the on-axis result
+        key_prerequisites: [physics.em.electric-dipole-field]
+      - id: kp4
+        can_do: Find a field at a general point
+        key_prerequisites: [physics.em-theory.monopole-and-dipole-terms, physics.em.electric-dipole-field]
+  - id: physics.em-theory.quadrupole-terms
+    name: Finding quadrupole terms
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.multipole-expansion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the quadrupole term for linear charges
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp2
+        can_do: Find the potential of a linear quadrupole
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp3
+        can_do: Find quadrupole terms for a square arrangement
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp4
+        can_do: Find the angular pattern of a quadrupole
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+  - id: physics.em-theory.polarization-and-bound-charge
+    name: Finding bound charges from polarization
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.polarization-microscopic
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.differential-gauss-law
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define polarization
+        key_prerequisites: [physics.em.polarization-microscopic]
+      - id: kp2
+        can_do: Find bound surface charge
+        key_prerequisites: [physics.em.polarization-microscopic]
+      - id: kp3
+        can_do: Find bound volume charge
+        key_prerequisites: [physics.em-theory.differential-gauss-law]
+      - id: kp4
+        can_do: Find the field of a uniformly polarized sphere
+        key_prerequisites: [physics.em.polarization-microscopic, physics.em-theory.differential-gauss-law]
+  - id: physics.em-theory.displacement-field
+    name: Using the displacement field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.polarization-and-bound-charge
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the displacement field
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp2
+        can_do: Write Gauss's law for free charge
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp3
+        can_do: Find displacement from free charge
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp4
+        can_do: Explain why displacement is not fixed by free charge alone
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+  - id: physics.em-theory.linear-dielectrics
+    name: Solving linear dielectric problems
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.displacement-field
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.em.gauss-with-dielectrics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define susceptibility and permittivity
+        key_prerequisites: [physics.em-theory.displacement-field]
+      - id: kp2
+        can_do: Find the field in a dielectric from free charge
+        key_prerequisites: [physics.em-theory.displacement-field, physics.em.gauss-with-dielectrics]
+      - id: kp3
+        can_do: Find bound charges in a linear dielectric
+        key_prerequisites: [physics.em-theory.displacement-field]
+      - id: kp4
+        can_do: Find capacitance with a dielectric
+        key_prerequisites: [physics.em.gauss-with-dielectrics]
+  - id: physics.em-theory.dielectric-boundary-conditions
+    name: Applying boundary conditions at dielectric interfaces
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.displacement-field
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.boundary-conditions-on-fields
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the jump in normal displacement
+        key_prerequisites: [physics.em-theory.displacement-field]
+      - id: kp2
+        can_do: Show tangential field is continuous
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+      - id: kp3
+        can_do: Find how field lines bend at an interface
+        key_prerequisites: [physics.em-theory.displacement-field]
+      - id: kp4
+        can_do: Find bound surface charge at an interface
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+  - id: physics.em-theory.dielectric-sphere-in-field
+    name: Finding fields of a dielectric sphere in a uniform field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.dielectric-boundary-conditions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.sphere-in-uniform-field
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set boundary conditions for a dielectric sphere
+        key_prerequisites: [physics.em-theory.dielectric-boundary-conditions]
+      - id: kp2
+        can_do: Find the field inside
+        key_prerequisites: [physics.em-theory.dielectric-boundary-conditions, physics.em-theory.sphere-in-uniform-field]
+      - id: kp3
+        can_do: Find the field outside
+        key_prerequisites: [physics.em-theory.sphere-in-uniform-field]
+      - id: kp4
+        can_do: Find the induced polarization
+        key_prerequisites: [physics.em-theory.dielectric-boundary-conditions]
+  - id: physics.em-theory.energy-and-forces-in-dielectrics
+    name: Finding energy and forces in dielectric systems
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.linear-dielectrics
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.force-on-capacitor-plates
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy in a dielectric system
+        key_prerequisites: [physics.em-theory.linear-dielectrics]
+      - id: kp2
+        can_do: Find force pulling a dielectric into a capacitor
+        key_prerequisites: [physics.em-theory.linear-dielectrics, physics.em.force-on-capacitor-plates]
+      - id: kp3
+        can_do: Find force at constant charge
+        key_prerequisites: [physics.em.force-on-capacitor-plates]
+      - id: kp4
+        can_do: Find force at constant voltage
+        key_prerequisites: [physics.em.force-on-capacitor-plates]
+  - id: physics.em-theory.clausius-mossotti
+    name: Linking molecular polarizability to susceptibility
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.linear-dielectrics
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define atomic polarizability
+        key_prerequisites: [physics.em-theory.linear-dielectrics]
+      - id: kp2
+        can_do: Find the local field in a dielectric
+        key_prerequisites: [physics.em-theory.linear-dielectrics]
+      - id: kp3
+        can_do: Derive the Clausius-Mossotti relation
+        key_prerequisites: [physics.em-theory.linear-dielectrics]
+      - id: kp4
+        can_do: Find polarizability from dielectric constant
+        key_prerequisites: [physics.em-theory.linear-dielectrics]
