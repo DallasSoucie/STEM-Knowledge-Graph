@@ -832,3 +832,767 @@ topics:
       - id: kp4
         can_do: Find frequency of a bead on a rotating hoop
         key_prerequisites: [math.calc2.taylor-series]
+  - id: physics.classical.reduced-two-body-lagrangian
+    name: Reducing the two-body problem with a Lagrangian
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.lagranges-equations
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.two-body-problem
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a two-body Lagrangian
+        key_prerequisites: [physics.classical.lagranges-equations, physics.mechanics.two-body-problem]
+      - id: kp2
+        can_do: Separate center of mass and relative motion
+        key_prerequisites: [physics.mechanics.two-body-problem]
+      - id: kp3
+        can_do: Find reduced mass
+        key_prerequisites: [physics.mechanics.two-body-problem]
+      - id: kp4
+        can_do: Show the relative motion stays in a plane
+        key_prerequisites: [physics.classical.lagranges-equations]
+  - id: physics.classical.central-force-equations
+    name: Deriving radial and angular equations
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.reduced-two-body-lagrangian
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.classical.cyclic-coordinates
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Lagrangian in polar coordinates
+        key_prerequisites: [physics.classical.reduced-two-body-lagrangian]
+      - id: kp2
+        can_do: Find conserved angular momentum
+        key_prerequisites: [physics.classical.cyclic-coordinates]
+      - id: kp3
+        can_do: Derive the radial equation
+        key_prerequisites: [physics.classical.reduced-two-body-lagrangian]
+      - id: kp4
+        can_do: Reduce to one-dimensional motion
+        key_prerequisites: [physics.classical.reduced-two-body-lagrangian, physics.classical.cyclic-coordinates]
+  - id: physics.classical.effective-potential-analysis
+    name: Classifying orbits with the effective potential
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.central-force-equations
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.effective-potential-orbits
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an effective potential
+        key_prerequisites: [physics.classical.central-force-equations]
+      - id: kp2
+        can_do: Find turning points from energy
+        key_prerequisites: [physics.classical.central-force-equations]
+      - id: kp3
+        can_do: Find circular orbit radius from a minimum
+        key_prerequisites: [physics.classical.central-force-equations, physics.mechanics.effective-potential-orbits]
+      - id: kp4
+        can_do: Classify bound and unbound orbits
+        key_prerequisites: [physics.mechanics.effective-potential-orbits]
+  - id: physics.classical.orbit-equation
+    name: Deriving the orbit equation in inverse radius
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.central-force-equations
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.undetermined-coefficients-poly-exp
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Change variables to inverse radius
+        key_prerequisites: [physics.classical.central-force-equations]
+      - id: kp2
+        can_do: Derive the orbit equation
+        key_prerequisites: [physics.classical.central-force-equations, math.diffeq.undetermined-coefficients-poly-exp]
+      - id: kp3
+        can_do: Solve the orbit equation for inverse-square force
+        key_prerequisites: [math.diffeq.undetermined-coefficients-poly-exp]
+      - id: kp4
+        can_do: Find the force law from a given orbit
+        key_prerequisites: [physics.classical.central-force-equations]
+  - id: physics.classical.kepler-orbits-from-orbit-equation
+    name: Deriving conic orbits for inverse-square forces
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.orbit-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc2.conics-with-calculus
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a conic orbit from the solution
+        key_prerequisites: [physics.classical.orbit-equation, math.calc2.conics-with-calculus]
+      - id: kp2
+        can_do: Relate eccentricity to energy
+        key_prerequisites: [physics.classical.orbit-equation]
+      - id: kp3
+        can_do: Find perihelion and aphelion
+        key_prerequisites: [math.calc2.conics-with-calculus]
+      - id: kp4
+        can_do: Classify orbits by eccentricity
+        key_prerequisites: [physics.classical.orbit-equation]
+  - id: physics.classical.kepler-third-law-derivation
+    name: Deriving Kepler's third law for elliptical orbits
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.kepler-orbits-from-orbit-equation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find area swept per time
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp2
+        can_do: Find period from area and rate
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp3
+        can_do: Derive the period against semi-major axis relation
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp4
+        can_do: Find a planet's mass from a moon's orbit
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+  - id: physics.classical.orbital-maneuvers
+    name: Finding orbit changes from impulses
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.kepler-orbits-from-orbit-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.transfer-orbits
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find speed change to circularize an orbit
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp2
+        can_do: Find a transfer orbit's speeds
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation, physics.mechanics.transfer-orbits]
+      - id: kp3
+        can_do: Find total speed change for a transfer
+        key_prerequisites: [physics.mechanics.transfer-orbits]
+      - id: kp4
+        can_do: Find an orbit after a radial kick
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+  - id: physics.classical.stability-of-circular-orbits
+    name: Testing stability of circular orbits
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.effective-potential-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find second derivative of an effective potential
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp2
+        can_do: Test stability of a circular orbit
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp3
+        can_do: Find stable orbits for power-law forces
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp4
+        can_do: Find frequency of radial oscillation
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+  - id: physics.classical.precession-of-orbits
+    name: Finding precession for nearly inverse-square forces
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.stability-of-circular-orbits
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.classical.orbit-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare radial and orbital frequencies
+        key_prerequisites: [physics.classical.stability-of-circular-orbits]
+      - id: kp2
+        can_do: Find precession for a small extra force
+        key_prerequisites: [physics.classical.orbit-equation]
+      - id: kp3
+        can_do: Find precession rate per orbit
+        key_prerequisites: [physics.classical.stability-of-circular-orbits, physics.classical.orbit-equation]
+      - id: kp4
+        can_do: Describe Mercury's precession qualitatively
+        key_prerequisites: [physics.classical.stability-of-circular-orbits]
+  - id: physics.classical.laplace-runge-lenz
+    name: Using the Laplace-Runge-Lenz vector
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.kepler-orbits-from-orbit-equation
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define the Laplace-Runge-Lenz vector
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation, physics.mechanics.cross-product-in-physics]
+      - id: kp2
+        can_do: Show it is conserved
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Find its direction and magnitude
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp4
+        can_do: Use it to find the orbit shape
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+  - id: physics.classical.scattering-cross-sections
+    name: Defining differential cross sections
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.effective-potential-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define impact parameter
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp2
+        can_do: Define differential cross section
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp3
+        can_do: Relate impact parameter to scattering angle
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+      - id: kp4
+        can_do: Find total cross section
+        key_prerequisites: [physics.classical.effective-potential-analysis]
+  - id: physics.classical.rutherford-cross-section
+    name: Deriving the Rutherford cross section
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.scattering-cross-sections
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.classical.kepler-orbits-from-orbit-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angle against impact parameter for Coulomb scattering
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp2
+        can_do: Derive the Rutherford cross section
+        key_prerequisites: [physics.classical.scattering-cross-sections, physics.classical.kepler-orbits-from-orbit-equation]
+      - id: kp3
+        can_do: Find how scattering depends on angle
+        key_prerequisites: [physics.classical.scattering-cross-sections]
+      - id: kp4
+        can_do: Find closest approach for a head-on collision
+        key_prerequisites: [physics.classical.kepler-orbits-from-orbit-equation]
+  - id: physics.classical.hard-sphere-scattering
+    name: Finding hard-sphere cross sections
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.scattering-cross-sections
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angle against impact parameter for a hard sphere
+        key_prerequisites: [physics.classical.scattering-cross-sections]
+      - id: kp2
+        can_do: Find differential cross section
+        key_prerequisites: [physics.classical.scattering-cross-sections]
+      - id: kp3
+        can_do: Find total cross section
+        key_prerequisites: [physics.classical.scattering-cross-sections]
+      - id: kp4
+        can_do: Show scattering is uniform in all directions
+        key_prerequisites: [physics.classical.scattering-cross-sections]
+  - id: physics.classical.rotating-frame-transformation
+    name: Deriving velocity and acceleration in rotating frames
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.rotating-frames
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.angular-velocity-vectors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate a vector in a rotating frame
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+      - id: kp2
+        can_do: Derive velocity in a rotating frame
+        key_prerequisites: [physics.mechanics.rotating-frames, physics.mechanics.angular-velocity-vectors]
+      - id: kp3
+        can_do: Derive acceleration in a rotating frame
+        key_prerequisites: [physics.mechanics.rotating-frames, physics.mechanics.angular-velocity-vectors]
+      - id: kp4
+        can_do: Name each acceleration term
+        key_prerequisites: [physics.mechanics.rotating-frames]
+  - id: physics.classical.centrifugal-and-coriolis-forces
+    name: Finding fictitious forces in rotating frames
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.rotating-frame-transformation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.coriolis-effect
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write fictitious forces
+        key_prerequisites: [physics.classical.rotating-frame-transformation]
+      - id: kp2
+        can_do: Find centrifugal force on Earth's surface
+        key_prerequisites: [physics.classical.rotating-frame-transformation]
+      - id: kp3
+        can_do: Find Coriolis force on a moving object
+        key_prerequisites: [physics.mechanics.coriolis-effect]
+      - id: kp4
+        can_do: Explain weather rotation qualitatively
+        key_prerequisites: [physics.mechanics.coriolis-effect]
+  - id: physics.classical.foucault-pendulum
+    name: Analyzing the Foucault pendulum
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.centrifugal-and-coriolis-forces
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.pendulum-derivation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write pendulum equations with Coriolis force
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces, physics.mechanics.pendulum-derivation]
+      - id: kp2
+        can_do: Find precession rate at a latitude
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+      - id: kp3
+        can_do: Find precession period at the poles
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+      - id: kp4
+        can_do: Find precession period at the equator
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+  - id: physics.classical.free-fall-on-rotating-earth
+    name: Finding deflection in free fall on Earth
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.centrifugal-and-coriolis-forces
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find eastward deflection of a falling object
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+      - id: kp2
+        can_do: Find deflection for a vertical throw
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+      - id: kp3
+        can_do: Find deflection of a projectile
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+      - id: kp4
+        can_do: Compare deflection with latitude
+        key_prerequisites: [physics.classical.centrifugal-and-coriolis-forces]
+  - id: physics.classical.tides
+    name: Explaining tidal forces
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.gravitation-in-vector-form
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.binomial-series
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tidal acceleration from a moon
+        key_prerequisites: [physics.mechanics.gravitation-in-vector-form, math.calc2.binomial-series]
+      - id: kp2
+        can_do: Explain two tidal bulges
+        key_prerequisites: [physics.mechanics.gravitation-in-vector-form]
+      - id: kp3
+        can_do: Compare solar and lunar tides
+        key_prerequisites: [physics.mechanics.gravitation-in-vector-form]
+      - id: kp4
+        can_do: Find the Roche limit roughly
+        key_prerequisites: [math.calc2.binomial-series]
+  - id: physics.classical.rotation-matrices
+    name: Using rotation matrices for rigid bodies
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.geometric-transformations-matrices
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.angular-velocity-vectors
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a rotation matrix about an axis
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp2
+        can_do: Combine rotations by multiplication
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp3
+        can_do: Show rotations do not commute
+        key_prerequisites: [math.linalg.geometric-transformations-matrices]
+      - id: kp4
+        can_do: Relate small rotations to angular velocity
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+  - id: physics.classical.inertia-tensor
+    name: Computing the inertia tensor
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-composite-bodies
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.matrix-as-transformation
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc3.change-of-variables-triple
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the inertia tensor
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies, math.linalg.matrix-as-transformation]
+      - id: kp2
+        can_do: Compute the tensor for point masses
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies]
+      - id: kp3
+        can_do: Compute the tensor for a cube
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies, math.calc3.change-of-variables-triple]
+      - id: kp4
+        can_do: Find products of inertia
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies]
+  - id: physics.classical.angular-momentum-with-inertia-tensor
+    name: Finding angular momentum from the inertia tensor
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.inertia-tensor
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.angular-momentum-of-systems
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular momentum from the tensor
+        key_prerequisites: [physics.classical.inertia-tensor]
+      - id: kp2
+        can_do: Show angular momentum may not align with rotation
+        key_prerequisites: [physics.classical.inertia-tensor, physics.mechanics.angular-momentum-of-systems]
+      - id: kp3
+        can_do: Find torque on an unbalanced wheel
+        key_prerequisites: [physics.mechanics.angular-momentum-of-systems]
+      - id: kp4
+        can_do: Find angular momentum of a tilted rod
+        key_prerequisites: [physics.classical.inertia-tensor]
+  - id: physics.classical.principal-axes
+    name: Finding principal axes as eigenvectors
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.inertia-tensor
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find principal moments as eigenvalues
+        key_prerequisites: [physics.classical.inertia-tensor, math.linalg.spectral-theorem]
+      - id: kp2
+        can_do: Find principal axes as eigenvectors
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp3
+        can_do: Find principal axes by symmetry
+        key_prerequisites: [physics.classical.inertia-tensor]
+      - id: kp4
+        can_do: Find principal axes of a cube corner
+        key_prerequisites: [physics.classical.inertia-tensor, math.linalg.spectral-theorem]
+  - id: physics.classical.rotational-energy-with-tensor
+    name: Finding kinetic energy with the inertia tensor
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.angular-momentum-with-inertia-tensor
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find kinetic energy with the tensor
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+      - id: kp2
+        can_do: Find energy about principal axes
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+      - id: kp3
+        can_do: Find energy for rotation about a tilted axis
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+      - id: kp4
+        can_do: Compare energy with angular momentum
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+  - id: physics.classical.inertia-tensor-shifts
+    name: Shifting the inertia tensor to a new origin
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.inertia-tensor
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.parallel-axis-theorem
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Shift the tensor to a new origin
+        key_prerequisites: [physics.classical.inertia-tensor, physics.mechanics.parallel-axis-theorem]
+      - id: kp2
+        can_do: Find tensor of a cube about a corner
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+      - id: kp3
+        can_do: Find tensor of composite bodies
+        key_prerequisites: [physics.classical.inertia-tensor]
+      - id: kp4
+        can_do: Check shift results with symmetry
+        key_prerequisites: [physics.classical.inertia-tensor]
+  - id: physics.classical.euler-equations
+    name: Deriving Euler's equations for rigid bodies
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.angular-momentum-with-inertia-tensor
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.classical.principal-axes
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.classical.rotating-frame-transformation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write angular momentum in a body frame
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor, physics.classical.principal-axes]
+      - id: kp2
+        can_do: Apply the rotating frame derivative
+        key_prerequisites: [physics.classical.rotating-frame-transformation]
+      - id: kp3
+        can_do: Derive Euler's equations
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+      - id: kp4
+        can_do: Apply Euler's equations to a spinning body
+        key_prerequisites: [physics.classical.angular-momentum-with-inertia-tensor]
+  - id: physics.classical.torque-free-symmetric-top
+    name: Solving torque-free motion of a symmetric body
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.euler-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve Euler's equations without torque
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp2
+        can_do: Find precession of the rotation axis
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp3
+        can_do: Find the precession rate in the body frame
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp4
+        can_do: Describe the Earth's wobble
+        key_prerequisites: [physics.classical.euler-equations]
+  - id: physics.classical.stability-of-rotation-axes
+    name: Testing stability of rotation about principal axes
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.euler-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Linearize Euler's equations about an axis
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp2
+        can_do: Find stable axes
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp3
+        can_do: Find the unstable middle axis
+        key_prerequisites: [physics.classical.euler-equations]
+      - id: kp4
+        can_do: Explain the tennis racket effect
+        key_prerequisites: [physics.classical.euler-equations]
+  - id: physics.classical.euler-angles
+    name: Describing orientation with Euler angles
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.rotation-matrices
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define three Euler angles
+        key_prerequisites: [physics.classical.rotation-matrices]
+      - id: kp2
+        can_do: Write a rotation from Euler angles
+        key_prerequisites: [physics.classical.rotation-matrices]
+      - id: kp3
+        can_do: Write angular velocity in Euler angles
+        key_prerequisites: [physics.classical.rotation-matrices]
+      - id: kp4
+        can_do: Choose angles for a spinning top
+        key_prerequisites: [physics.classical.rotation-matrices]
+  - id: physics.classical.heavy-symmetric-top
+    name: Analyzing a heavy symmetric top with a Lagrangian
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.euler-angles
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.classical.lagranges-equations
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.classical.torque-free-symmetric-top
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a top's Lagrangian in Euler angles
+        key_prerequisites: [physics.classical.euler-angles, physics.classical.lagranges-equations]
+      - id: kp2
+        can_do: Find conserved momenta
+        key_prerequisites: [physics.classical.lagranges-equations]
+      - id: kp3
+        can_do: Find an effective potential for the tilt
+        key_prerequisites: [physics.classical.euler-angles]
+      - id: kp4
+        can_do: Find steady precession
+        key_prerequisites: [physics.classical.torque-free-symmetric-top]
+  - id: physics.classical.nutation-and-precession
+    name: Finding precession and nutation of a top
+    subject: physics
+    course: physics.classical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.classical.heavy-symmetric-top
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.precession
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slow and fast precession rates
+        key_prerequisites: [physics.classical.heavy-symmetric-top, physics.mechanics.precession]
+      - id: kp2
+        can_do: Describe nutation between tilt limits
+        key_prerequisites: [physics.classical.heavy-symmetric-top]
+      - id: kp3
+        can_do: Find conditions for a sleeping top
+        key_prerequisites: [physics.classical.heavy-symmetric-top]
+      - id: kp4
+        can_do: Compare with the gyroscope approximation
+        key_prerequisites: [physics.mechanics.precession]
