@@ -1,0 +1,992 @@
+course: engr.hydraulics
+topics:
+  - id: engr.hydraulics.hydrologic-cycle-budgets
+    name: Writing hydrologic budgets
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.control-volume-mass
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the hydrologic cycle
+        key_prerequisites: [engr.fluids.control-volume-mass]
+      - id: kp2
+        can_do: Write a water budget for a watershed
+        key_prerequisites: [engr.fluids.control-volume-mass]
+      - id: kp3
+        can_do: Find storage change from inflow and outflow
+        key_prerequisites: [engr.fluids.control-volume-mass]
+      - id: kp4
+        can_do: Find runoff from a water budget
+        key_prerequisites: [engr.fluids.control-volume-mass]
+  - id: engr.hydraulics.precipitation-analysis
+    name: Finding average precipitation over a watershed
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydrologic-cycle-budgets
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average rainfall by arithmetic mean
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp2
+        can_do: Find average rainfall by Thiessen polygons
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp3
+        can_do: Find average rainfall by isohyets
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp4
+        can_do: Fill missing rainfall records
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+  - id: engr.hydraulics.idf-curves
+    name: Using intensity-duration-frequency curves
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.precipitation-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read intensity-duration-frequency curves
+        key_prerequisites: [engr.hydraulics.precipitation-analysis]
+      - id: kp2
+        can_do: Find design rainfall intensity
+        key_prerequisites: [engr.hydraulics.precipitation-analysis]
+      - id: kp3
+        can_do: Build design storms
+        key_prerequisites: [engr.hydraulics.precipitation-analysis]
+      - id: kp4
+        can_do: Use IDF equations
+        key_prerequisites: [engr.hydraulics.precipitation-analysis]
+  - id: engr.hydraulics.infiltration-models
+    name: Estimating infiltration with Horton and Green-Ampt models
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydrologic-cycle-budgets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Horton's infiltration equation
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp2
+        can_do: Use the Green-Ampt model
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp3
+        can_do: Use the phi index
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp4
+        can_do: Find excess rainfall
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+  - id: engr.hydraulics.evaporation-and-et
+    name: Estimating evaporation and evapotranspiration
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydrologic-cycle-budgets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate lake evaporation with pan data
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp2
+        can_do: Estimate evaporation with energy methods
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp3
+        can_do: Estimate evapotranspiration
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp4
+        can_do: Use crop coefficients
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+  - id: engr.hydraulics.rational-method
+    name: Estimating peak runoff with the rational method
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.idf-curves
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find runoff coefficients
+        key_prerequisites: [engr.hydraulics.idf-curves]
+      - id: kp2
+        can_do: Find peak runoff with the rational method
+        key_prerequisites: [engr.hydraulics.idf-curves]
+      - id: kp3
+        can_do: Find composite runoff coefficients
+        key_prerequisites: [engr.hydraulics.idf-curves]
+      - id: kp4
+        can_do: State limits of the rational method
+        key_prerequisites: [engr.hydraulics.idf-curves]
+  - id: engr.hydraulics.scs-curve-number
+    name: Estimating runoff with the curve number method
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.infiltration-models
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find curve numbers for land uses
+        key_prerequisites: [engr.hydraulics.infiltration-models]
+      - id: kp2
+        can_do: Find runoff depth with the curve number method
+        key_prerequisites: [engr.hydraulics.infiltration-models]
+      - id: kp3
+        can_do: Adjust curve numbers for moisture
+        key_prerequisites: [engr.hydraulics.infiltration-models]
+      - id: kp4
+        can_do: Find composite curve numbers
+        key_prerequisites: [engr.hydraulics.infiltration-models]
+  - id: engr.hydraulics.time-of-concentration
+    name: Finding time of concentration
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.rational-method
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find overland flow time
+        key_prerequisites: [engr.hydraulics.rational-method]
+      - id: kp2
+        can_do: Find channel travel time
+        key_prerequisites: [engr.hydraulics.rational-method]
+      - id: kp3
+        can_do: Find time of concentration with formulas
+        key_prerequisites: [engr.hydraulics.rational-method]
+      - id: kp4
+        can_do: Choose the critical flow path
+        key_prerequisites: [engr.hydraulics.rational-method]
+  - id: engr.hydraulics.hydrograph-components
+    name: Separating hydrograph components
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.scs-curve-number
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify hydrograph components
+        key_prerequisites: [engr.hydraulics.scs-curve-number]
+      - id: kp2
+        can_do: Separate baseflow
+        key_prerequisites: [engr.hydraulics.scs-curve-number]
+      - id: kp3
+        can_do: Find direct runoff volume
+        key_prerequisites: [engr.hydraulics.scs-curve-number]
+      - id: kp4
+        can_do: Find effective rainfall from hydrographs
+        key_prerequisites: [engr.hydraulics.scs-curve-number]
+  - id: engr.hydraulics.unit-hydrograph
+    name: Deriving and applying unit hydrographs
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydrograph-components
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a unit hydrograph from data
+        key_prerequisites: [engr.hydraulics.hydrograph-components]
+      - id: kp2
+        can_do: Apply a unit hydrograph to a storm
+        key_prerequisites: [engr.hydraulics.hydrograph-components]
+      - id: kp3
+        can_do: Convolve rainfall with a unit hydrograph
+        key_prerequisites: [engr.hydraulics.hydrograph-components]
+      - id: kp4
+        can_do: Check unit hydrograph volume
+        key_prerequisites: [engr.hydraulics.hydrograph-components]
+  - id: engr.hydraulics.s-curve-hydrograph
+    name: Changing unit hydrograph duration with the S-curve
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.unit-hydrograph
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build an S-curve hydrograph
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+      - id: kp2
+        can_do: Change unit hydrograph duration
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+      - id: kp3
+        can_do: Lag unit hydrographs
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+      - id: kp4
+        can_do: Find hydrographs for long storms
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+  - id: engr.hydraulics.synthetic-unit-hydrographs
+    name: Building synthetic unit hydrographs
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.unit-hydrograph
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.time-of-concentration
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build Snyder unit hydrographs
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+      - id: kp2
+        can_do: Build SCS dimensionless unit hydrographs
+        key_prerequisites: [engr.hydraulics.unit-hydrograph, engr.hydraulics.time-of-concentration]
+      - id: kp3
+        can_do: Find lag time from watershed data
+        key_prerequisites: [engr.hydraulics.time-of-concentration]
+      - id: kp4
+        can_do: Find peak discharge from synthetic hydrographs
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+  - id: engr.hydraulics.return-periods-and-risk
+    name: Relating return period to risk
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.probstat.geometric-distribution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate return period to probability
+        key_prerequisites: [math.probstat.geometric-distribution]
+      - id: kp2
+        can_do: Find risk over a design life
+        key_prerequisites: [math.probstat.geometric-distribution]
+      - id: kp3
+        can_do: Choose design return periods
+        key_prerequisites: [math.probstat.geometric-distribution]
+      - id: kp4
+        can_do: Find return period for an accepted risk
+        key_prerequisites: [math.probstat.geometric-distribution]
+  - id: engr.hydraulics.flood-frequency-analysis
+    name: Fitting flood frequency distributions
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.return-periods-and-risk
+        encompassing: 0.5
+        confidence: high
+      - topic: math.probstat.lognormal
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit lognormal distributions to floods
+        key_prerequisites: [engr.hydraulics.return-periods-and-risk, math.probstat.lognormal]
+      - id: kp2
+        can_do: Use frequency factors
+        key_prerequisites: [engr.hydraulics.return-periods-and-risk]
+      - id: kp3
+        can_do: Fit Gumbel and log-Pearson distributions
+        key_prerequisites: [math.probstat.lognormal]
+      - id: kp4
+        can_do: Find design flood for a return period
+        key_prerequisites: [engr.hydraulics.return-periods-and-risk, math.probstat.lognormal]
+  - id: engr.hydraulics.reservoir-routing
+    name: Routing floods through reservoirs
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.unit-hydrograph
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc2.eulers-method-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the storage equation
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+      - id: kp2
+        can_do: Build storage-indication curves
+        key_prerequisites: [engr.hydraulics.unit-hydrograph, math.calc2.eulers-method-intro]
+      - id: kp3
+        can_do: Route floods through reservoirs
+        key_prerequisites: [engr.hydraulics.unit-hydrograph, math.calc2.eulers-method-intro]
+      - id: kp4
+        can_do: Find peak attenuation
+        key_prerequisites: [engr.hydraulics.unit-hydrograph]
+  - id: engr.hydraulics.channel-routing
+    name: Routing floods through channels with Muskingum
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.reservoir-routing
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Muskingum method
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+      - id: kp2
+        can_do: Find Muskingum coefficients
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+      - id: kp3
+        can_do: Route hydrographs through reaches
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+      - id: kp4
+        can_do: Compare reservoir and channel routing
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+  - id: engr.hydraulics.detention-pond-design
+    name: Sizing stormwater detention ponds
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.reservoir-routing
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.rational-method
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find required detention volume
+        key_prerequisites: [engr.hydraulics.reservoir-routing, engr.hydraulics.rational-method]
+      - id: kp2
+        can_do: Size outlet structures
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+      - id: kp3
+        can_do: Route design storms through ponds
+        key_prerequisites: [engr.hydraulics.reservoir-routing]
+      - id: kp4
+        can_do: Check post-development peaks
+        key_prerequisites: [engr.hydraulics.rational-method]
+  - id: engr.hydraulics.open-channel-geometry
+    name: Finding hydraulic radius and channel geometry
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.noncircular-ducts
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find area and wetted perimeter
+        key_prerequisites: [engr.fluids.noncircular-ducts]
+      - id: kp2
+        can_do: Find hydraulic radius and depth
+        key_prerequisites: [engr.fluids.noncircular-ducts]
+      - id: kp3
+        can_do: Find geometry of trapezoidal channels
+        key_prerequisites: [engr.fluids.noncircular-ducts]
+      - id: kp4
+        can_do: Find geometry of circular conduits flowing partly full
+        key_prerequisites: [engr.fluids.noncircular-ducts]
+  - id: engr.hydraulics.uniform-flow-manning
+    name: Finding uniform flow with Manning's equation
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.open-channel-geometry
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.fluids.moody-chart
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity with Manning's equation
+        key_prerequisites: [engr.hydraulics.open-channel-geometry, engr.fluids.moody-chart]
+      - id: kp2
+        can_do: Find normal depth
+        key_prerequisites: [engr.hydraulics.open-channel-geometry]
+      - id: kp3
+        can_do: Find channel slope for a design flow
+        key_prerequisites: [engr.hydraulics.open-channel-geometry]
+      - id: kp4
+        can_do: Find composite roughness
+        key_prerequisites: [engr.fluids.moody-chart]
+  - id: engr.hydraulics.best-hydraulic-section
+    name: Finding the best hydraulic section
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.uniform-flow-manning
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find best rectangular sections
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp2
+        can_do: Find best trapezoidal sections
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp3
+        can_do: Design channels for minimum area
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp4
+        can_do: Design lined channels
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+  - id: engr.hydraulics.specific-energy
+    name: Using specific energy and critical depth
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.open-channel-geometry
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find specific energy
+        key_prerequisites: [engr.hydraulics.open-channel-geometry, engr.fluids.dimensionless-numbers]
+      - id: kp2
+        can_do: Find critical depth
+        key_prerequisites: [engr.hydraulics.open-channel-geometry]
+      - id: kp3
+        can_do: Find alternate depths
+        key_prerequisites: [engr.hydraulics.open-channel-geometry]
+      - id: kp4
+        can_do: Classify subcritical and supercritical flow
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+  - id: engr.hydraulics.transitions-and-humps
+    name: Analyzing channel transitions and humps
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.specific-energy
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find depth over humps
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp2
+        can_do: Find depth in contractions
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp3
+        can_do: Find choking conditions
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp4
+        can_do: Design channel transitions
+        key_prerequisites: [engr.hydraulics.specific-energy]
+  - id: engr.hydraulics.momentum-function
+    name: Using the momentum function
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.specific-energy
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.linear-momentum-cv
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the momentum function
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp2
+        can_do: Find conjugate depths
+        key_prerequisites: [engr.hydraulics.specific-energy, engr.fluids.linear-momentum-cv]
+      - id: kp3
+        can_do: Find forces on obstacles in channels
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp4
+        can_do: Relate momentum and energy in channels
+        key_prerequisites: [engr.hydraulics.specific-energy]
+  - id: engr.hydraulics.hydraulic-jump
+    name: Analyzing hydraulic jumps
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.momentum-function
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sequent depth of a jump
+        key_prerequisites: [engr.hydraulics.momentum-function]
+      - id: kp2
+        can_do: Find energy loss in a jump
+        key_prerequisites: [engr.hydraulics.momentum-function]
+      - id: kp3
+        can_do: Find length of a jump
+        key_prerequisites: [engr.hydraulics.momentum-function]
+      - id: kp4
+        can_do: Classify jumps by Froude number
+        key_prerequisites: [engr.hydraulics.momentum-function]
+  - id: engr.hydraulics.gradually-varied-flow
+    name: Classifying gradually varied flow profiles
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.uniform-flow-manning
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.specific-energy
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the gradually varied flow equation
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning, engr.hydraulics.specific-energy]
+      - id: kp2
+        can_do: Classify water surface profiles
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning, engr.hydraulics.specific-energy]
+      - id: kp3
+        can_do: Sketch profiles in series of channels
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp4
+        can_do: Find control points
+        key_prerequisites: [engr.hydraulics.specific-energy]
+  - id: engr.hydraulics.gvf-computation
+    name: Computing water surface profiles by the step method
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.gradually-varied-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute profiles with the direct step method
+        key_prerequisites: [engr.hydraulics.gradually-varied-flow]
+      - id: kp2
+        can_do: Compute profiles with the standard step method
+        key_prerequisites: [engr.hydraulics.gradually-varied-flow]
+      - id: kp3
+        can_do: Find backwater lengths
+        key_prerequisites: [engr.hydraulics.gradually-varied-flow]
+      - id: kp4
+        can_do: Compute profiles with software
+        key_prerequisites: [engr.hydraulics.gradually-varied-flow]
+  - id: engr.hydraulics.weirs
+    name: Measuring flow with weirs
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.specific-energy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flow over sharp-crested weirs
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp2
+        can_do: Find flow over broad-crested weirs
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp3
+        can_do: Find flow over V-notch weirs
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp4
+        can_do: Choose weirs for measurement
+        key_prerequisites: [engr.hydraulics.specific-energy]
+  - id: engr.hydraulics.spillways-and-energy-dissipation
+    name: Designing spillways and stilling basins
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydraulic-jump
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.weirs
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spillway discharge
+        key_prerequisites: [engr.hydraulics.weirs]
+      - id: kp2
+        can_do: Design stilling basins
+        key_prerequisites: [engr.hydraulics.hydraulic-jump]
+      - id: kp3
+        can_do: Find tailwater requirements
+        key_prerequisites: [engr.hydraulics.hydraulic-jump]
+      - id: kp4
+        can_do: Choose energy dissipators
+        key_prerequisites: [engr.hydraulics.hydraulic-jump, engr.hydraulics.weirs]
+  - id: engr.hydraulics.culverts
+    name: Analyzing culvert flow
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.specific-energy
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.fluids.minor-losses
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify culvert flow types
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp2
+        can_do: Find inlet-controlled capacity
+        key_prerequisites: [engr.hydraulics.specific-energy]
+      - id: kp3
+        can_do: Find outlet-controlled capacity
+        key_prerequisites: [engr.hydraulics.specific-energy, engr.fluids.minor-losses]
+      - id: kp4
+        can_do: Size culverts
+        key_prerequisites: [engr.hydraulics.specific-energy, engr.fluids.minor-losses]
+  - id: engr.hydraulics.water-demand
+    name: Estimating water demand
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.hydrologic-cycle-budgets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate per capita water demand
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp2
+        can_do: Find peak demand factors
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp3
+        can_do: Estimate fire flow
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+      - id: kp4
+        can_do: Forecast population for design
+        key_prerequisites: [engr.hydraulics.hydrologic-cycle-budgets]
+  - id: engr.hydraulics.pump-station-design
+    name: Selecting pumps for water systems
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pumps-in-series-parallel
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.water-demand
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find design flows for pump stations
+        key_prerequisites: [engr.hydraulics.water-demand]
+      - id: kp2
+        can_do: Select pumps for systems
+        key_prerequisites: [engr.fluids.pumps-in-series-parallel]
+      - id: kp3
+        can_do: Choose pump arrangements
+        key_prerequisites: [engr.fluids.pumps-in-series-parallel]
+      - id: kp4
+        can_do: Size wet wells
+        key_prerequisites: [engr.fluids.pumps-in-series-parallel, engr.hydraulics.water-demand]
+  - id: engr.hydraulics.distribution-network-analysis
+    name: Analyzing water distribution networks
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pipe-networks
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.water-demand
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model distribution networks
+        key_prerequisites: [engr.fluids.pipe-networks]
+      - id: kp2
+        can_do: Find pressures at nodes
+        key_prerequisites: [engr.fluids.pipe-networks, engr.hydraulics.water-demand]
+      - id: kp3
+        can_do: Find flows in network pipes
+        key_prerequisites: [engr.fluids.pipe-networks]
+      - id: kp4
+        can_do: Check minimum pressures under demand
+        key_prerequisites: [engr.hydraulics.water-demand]
+  - id: engr.hydraulics.storage-tanks
+    name: Sizing distribution storage
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.distribution-network-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size equalizing storage
+        key_prerequisites: [engr.hydraulics.distribution-network-analysis]
+      - id: kp2
+        can_do: Size fire storage
+        key_prerequisites: [engr.hydraulics.distribution-network-analysis]
+      - id: kp3
+        can_do: Find tank elevation
+        key_prerequisites: [engr.hydraulics.distribution-network-analysis]
+      - id: kp4
+        can_do: Find emergency storage
+        key_prerequisites: [engr.hydraulics.distribution-network-analysis]
+  - id: engr.hydraulics.water-hammer
+    name: Estimating water hammer pressures
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pipe-flow-problem-types
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.speed-of-sound-derivation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wave speed in pipes
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types, physics.waves-thermo-optics.speed-of-sound-derivation]
+      - id: kp2
+        can_do: Find pressure rise from sudden closure
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp3
+        can_do: Find pressure rise from slow closure
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp4
+        can_do: Choose surge protection
+        key_prerequisites: [physics.waves-thermo-optics.speed-of-sound-derivation]
+  - id: engr.hydraulics.sewer-design
+    name: Designing gravity sewers
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.uniform-flow-manning
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.water-demand
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wastewater flows
+        key_prerequisites: [engr.hydraulics.water-demand]
+      - id: kp2
+        can_do: Size gravity sewers
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp3
+        can_do: Check minimum velocity
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning]
+      - id: kp4
+        can_do: Find flows in partly full pipes
+        key_prerequisites: [engr.hydraulics.uniform-flow-manning, engr.hydraulics.water-demand]
+  - id: engr.hydraulics.storm-sewer-design
+    name: Designing storm sewers
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.sewer-design
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.hydraulics.rational-method
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find inlet flows
+        key_prerequisites: [engr.hydraulics.rational-method]
+      - id: kp2
+        can_do: Size storm sewers
+        key_prerequisites: [engr.hydraulics.sewer-design]
+      - id: kp3
+        can_do: Find travel times in sewer systems
+        key_prerequisites: [engr.hydraulics.sewer-design, engr.hydraulics.rational-method]
+      - id: kp4
+        can_do: Design a storm sewer layout
+        key_prerequisites: [engr.hydraulics.sewer-design, engr.hydraulics.rational-method]
+  - id: engr.hydraulics.aquifer-properties
+    name: Describing aquifer properties
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.soil-mechanics.darcys-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe confined and unconfined aquifers
+        key_prerequisites: [engr.soil-mechanics.darcys-law]
+      - id: kp2
+        can_do: Find transmissivity
+        key_prerequisites: [engr.soil-mechanics.darcys-law]
+      - id: kp3
+        can_do: Find storativity and specific yield
+        key_prerequisites: [engr.soil-mechanics.darcys-law]
+      - id: kp4
+        can_do: Find flow through aquifers
+        key_prerequisites: [engr.soil-mechanics.darcys-law]
+  - id: engr.hydraulics.confined-well-flow
+    name: Finding steady flow to wells in confined aquifers
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.aquifer-properties
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Thiem equation
+        key_prerequisites: [engr.hydraulics.aquifer-properties]
+      - id: kp2
+        can_do: Find drawdown at a distance
+        key_prerequisites: [engr.hydraulics.aquifer-properties]
+      - id: kp3
+        can_do: Find transmissivity from pumping tests
+        key_prerequisites: [engr.hydraulics.aquifer-properties]
+      - id: kp4
+        can_do: Find radius of influence
+        key_prerequisites: [engr.hydraulics.aquifer-properties]
+  - id: engr.hydraulics.unconfined-well-flow
+    name: Finding steady flow to wells in unconfined aquifers
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.confined-well-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Dupuit equation
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp2
+        can_do: Find drawdown in unconfined aquifers
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp3
+        can_do: Find well yield
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp4
+        can_do: Compare confined and unconfined wells
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+  - id: engr.hydraulics.transient-well-flow
+    name: Analyzing transient well flow with the Theis method
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.confined-well-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Theis equation
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp2
+        can_do: Use the Cooper-Jacob approximation
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp3
+        can_do: Find aquifer properties from transient tests
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+      - id: kp4
+        can_do: Predict drawdown over time
+        key_prerequisites: [engr.hydraulics.confined-well-flow]
+  - id: engr.hydraulics.well-interference
+    name: Superposing drawdown from multiple wells
+    subject: engr
+    course: engr.hydraulics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.transient-well-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Superpose drawdowns from wells
+        key_prerequisites: [engr.hydraulics.transient-well-flow]
+      - id: kp2
+        can_do: Use image wells for boundaries
+        key_prerequisites: [engr.hydraulics.transient-well-flow]
+      - id: kp3
+        can_do: Find spacing of wells
+        key_prerequisites: [engr.hydraulics.transient-well-flow]
+      - id: kp4
+        can_do: Find total drawdown in well fields
+        key_prerequisites: [engr.hydraulics.transient-well-flow]
