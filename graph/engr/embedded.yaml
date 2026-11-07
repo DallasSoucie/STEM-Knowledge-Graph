@@ -1,0 +1,571 @@
+course: engr.embedded
+topics:
+  - id: engr.embedded.microcontroller-architecture
+    name: Describing microcontroller architecture
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.io-and-buses
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe microcontroller cores and memory
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp2
+        can_do: Describe on-chip peripherals
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp3
+        can_do: Read a microcontroller datasheet
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp4
+        can_do: Choose a microcontroller
+        key_prerequisites: [engr.architecture.io-and-buses]
+  - id: engr.embedded.memory-mapped-registers
+    name: Configuring peripherals through memory-mapped registers
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.microcontroller-architecture
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.programming.integer-division-and-remainder
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read and write peripheral registers
+        key_prerequisites: [engr.embedded.microcontroller-architecture]
+      - id: kp2
+        can_do: Use register maps from datasheets
+        key_prerequisites: [engr.embedded.microcontroller-architecture]
+      - id: kp3
+        can_do: Configure peripherals in C
+        key_prerequisites: [engr.embedded.microcontroller-architecture, engr.programming.integer-division-and-remainder]
+      - id: kp4
+        can_do: Use pointers to registers
+        key_prerequisites: [engr.programming.integer-division-and-remainder]
+  - id: engr.embedded.bit-manipulation
+    name: Setting and clearing bits with masks
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.memory-mapped-registers
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.binary-and-hex-codes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Set and clear bits with masks
+        key_prerequisites: [engr.embedded.memory-mapped-registers, engr.digital-logic.binary-and-hex-codes]
+      - id: kp2
+        can_do: Toggle and test bits
+        key_prerequisites: [engr.embedded.memory-mapped-registers]
+      - id: kp3
+        can_do: Write bit fields
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+      - id: kp4
+        can_do: Use shifts in register code
+        key_prerequisites: [engr.embedded.memory-mapped-registers]
+  - id: engr.embedded.gpio
+    name: Using general-purpose input and output
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.bit-manipulation
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.voltage-and-current-dividers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Configure pins as inputs and outputs
+        key_prerequisites: [engr.embedded.bit-manipulation]
+      - id: kp2
+        can_do: Drive LEDs with current limiting
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp3
+        can_do: Read buttons with pull-up resistors
+        key_prerequisites: [engr.embedded.bit-manipulation, engr.circuits.voltage-and-current-dividers]
+      - id: kp4
+        can_do: Find pin current limits
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+  - id: engr.embedded.switch-debouncing
+    name: Debouncing switches
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.gpio
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain switch bounce
+        key_prerequisites: [engr.embedded.gpio]
+      - id: kp2
+        can_do: Debounce in software
+        key_prerequisites: [engr.embedded.gpio]
+      - id: kp3
+        can_do: Debounce with RC filters
+        key_prerequisites: [engr.embedded.gpio]
+      - id: kp4
+        can_do: Detect button edges
+        key_prerequisites: [engr.embedded.gpio]
+  - id: engr.embedded.interrupt-service-routines
+    name: Writing interrupt service routines
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.gpio
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: engr.architecture.exceptions-and-interrupts-hw
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write interrupt service routines
+        key_prerequisites: [engr.embedded.gpio]
+      - id: kp2
+        can_do: Enable and clear interrupts
+        key_prerequisites: [engr.embedded.gpio, engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp3
+        can_do: Use interrupt vectors
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp4
+        can_do: Keep handlers short
+        key_prerequisites: [engr.embedded.gpio]
+  - id: engr.embedded.interrupt-priorities-and-latency
+    name: Managing interrupt priorities and latency
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.interrupt-service-routines
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set interrupt priorities
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp2
+        can_do: Find interrupt latency
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp3
+        can_do: Handle nested interrupts
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp4
+        can_do: Find missed interrupts
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+  - id: engr.embedded.shared-data-and-volatile
+    name: Protecting shared data in interrupts
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.interrupt-service-routines
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.operating-systems.race-conditions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use volatile variables
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp2
+        can_do: Protect shared data with critical sections
+        key_prerequisites: [engr.embedded.interrupt-service-routines, engr.operating-systems.race-conditions]
+      - id: kp3
+        can_do: Use atomic operations
+        key_prerequisites: [engr.operating-systems.race-conditions]
+      - id: kp4
+        can_do: Find shared-data bugs
+        key_prerequisites: [engr.embedded.interrupt-service-routines, engr.operating-systems.race-conditions]
+  - id: engr.embedded.hardware-timers
+    name: Using hardware timers
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.interrupt-service-routines
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Configure timer prescalers
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp2
+        can_do: Generate periodic interrupts
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp3
+        can_do: Find timer period values
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp4
+        can_do: Measure elapsed time
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+  - id: engr.embedded.pwm-output
+    name: Generating PWM signals
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.hardware-timers
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Generate PWM signals
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp2
+        can_do: Find duty cycle settings
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp3
+        can_do: Control LED brightness and motor speed
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp4
+        can_do: Find PWM resolution
+        key_prerequisites: [engr.embedded.hardware-timers]
+  - id: engr.embedded.input-capture
+    name: Measuring signals with input capture
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.hardware-timers
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure pulse widths
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp2
+        can_do: Measure frequency
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp3
+        can_do: Use capture with interrupts
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp4
+        can_do: Read encoders
+        key_prerequisites: [engr.embedded.hardware-timers]
+  - id: engr.embedded.adc-interfacing
+    name: Reading analog inputs with an ADC
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.gpio
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.electronics.data-converters
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Configure ADC channels
+        key_prerequisites: [engr.embedded.gpio]
+      - id: kp2
+        can_do: Convert readings to voltage
+        key_prerequisites: [engr.embedded.gpio, engr.electronics.data-converters]
+      - id: kp3
+        can_do: Choose sampling rates
+        key_prerequisites: [engr.electronics.data-converters]
+      - id: kp4
+        can_do: Average readings to reduce noise
+        key_prerequisites: [engr.embedded.gpio]
+  - id: engr.embedded.dac-and-filtering
+    name: Producing analog output with DACs and PWM filtering
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.pwm-output
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.circuits.passive-filters
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Produce voltages with a DAC
+        key_prerequisites: [engr.embedded.pwm-output]
+      - id: kp2
+        can_do: Filter PWM into analog levels
+        key_prerequisites: [engr.embedded.pwm-output, engr.circuits.passive-filters]
+      - id: kp3
+        can_do: Find filter cutoff for PWM
+        key_prerequisites: [engr.circuits.passive-filters]
+      - id: kp4
+        can_do: Generate waveforms
+        key_prerequisites: [engr.embedded.pwm-output]
+  - id: engr.embedded.sensor-signal-conditioning
+    name: Conditioning sensor signals for an ADC
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.adc-interfacing
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.circuits.inverting-and-noninverting
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Scale sensor signals to ADC range
+        key_prerequisites: [engr.embedded.adc-interfacing, engr.circuits.inverting-and-noninverting]
+      - id: kp2
+        can_do: Add offset to sensor signals
+        key_prerequisites: [engr.embedded.adc-interfacing]
+      - id: kp3
+        can_do: Filter sensor noise
+        key_prerequisites: [engr.embedded.adc-interfacing]
+      - id: kp4
+        can_do: Protect ADC inputs
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+  - id: engr.embedded.uart
+    name: Communicating over UART
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.interrupt-service-routines
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Configure UART baud rate
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp2
+        can_do: Send and receive bytes
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp3
+        can_do: Use UART interrupts and buffers
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp4
+        can_do: Describe UART framing
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+  - id: engr.embedded.spi
+    name: Communicating over SPI
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.uart
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe SPI signals
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp2
+        can_do: Configure SPI modes
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp3
+        can_do: Read SPI sensors
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp4
+        can_do: Daisy-chain SPI devices
+        key_prerequisites: [engr.embedded.uart]
+  - id: engr.embedded.i2c
+    name: Communicating over I2C
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.uart
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe I2C signals and addressing
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp2
+        can_do: Read and write I2C registers
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp3
+        can_do: Handle acknowledgements
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp4
+        can_do: Find bus speed limits
+        key_prerequisites: [engr.embedded.uart]
+  - id: engr.embedded.communication-protocol-choice
+    name: Choosing a serial protocol
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.spi
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.embedded.i2c
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare UART, SPI and I2C
+        key_prerequisites: [engr.embedded.spi, engr.embedded.i2c]
+      - id: kp2
+        can_do: Choose protocols for sensors
+        key_prerequisites: [engr.embedded.spi]
+      - id: kp3
+        can_do: Choose protocols for distance
+        key_prerequisites: [engr.embedded.i2c]
+      - id: kp4
+        can_do: Describe CAN and USB
+        key_prerequisites: [engr.embedded.spi, engr.embedded.i2c]
+  - id: engr.embedded.superloop-and-state-machines
+    name: Structuring firmware with loops and state machines
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.interrupt-service-routines
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Structure firmware as a superloop
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp2
+        can_do: Write firmware state machines
+        key_prerequisites: [engr.embedded.interrupt-service-routines, engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Combine loops with interrupts
+        key_prerequisites: [engr.embedded.interrupt-service-routines]
+      - id: kp4
+        can_do: Find timing problems in loops
+        key_prerequisites: [engr.digital-logic.fsm-design]
+  - id: engr.embedded.rtos-tasks
+    name: Structuring firmware with RTOS tasks
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.superloop-and-state-machines
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.operating-systems.real-time-scheduling
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Create RTOS tasks
+        key_prerequisites: [engr.embedded.superloop-and-state-machines]
+      - id: kp2
+        can_do: Use queues and semaphores
+        key_prerequisites: [engr.embedded.superloop-and-state-machines, engr.operating-systems.real-time-scheduling]
+      - id: kp3
+        can_do: Choose task priorities
+        key_prerequisites: [engr.operating-systems.real-time-scheduling]
+      - id: kp4
+        can_do: Find task timing problems
+        key_prerequisites: [engr.embedded.superloop-and-state-machines, engr.operating-systems.real-time-scheduling]
+  - id: engr.embedded.low-power-design
+    name: Reducing power with sleep modes
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.hardware-timers
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use sleep modes
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp2
+        can_do: Wake on interrupts
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp3
+        can_do: Find battery life
+        key_prerequisites: [engr.embedded.hardware-timers]
+      - id: kp4
+        can_do: Reduce peripheral power
+        key_prerequisites: [engr.embedded.hardware-timers]
+  - id: engr.embedded.motor-control-embedded
+    name: Controlling motors from a microcontroller
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.pwm-output
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.digital-controller-implementation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Drive DC motors with H-bridges
+        key_prerequisites: [engr.embedded.pwm-output]
+      - id: kp2
+        can_do: Control motor speed with feedback
+        key_prerequisites: [engr.embedded.pwm-output, engr.controls.digital-controller-implementation]
+      - id: kp3
+        can_do: Drive stepper motors
+        key_prerequisites: [engr.embedded.pwm-output]
+      - id: kp4
+        can_do: Implement control loops in firmware
+        key_prerequisites: [engr.controls.digital-controller-implementation]
+  - id: engr.embedded.embedded-debugging
+    name: Debugging embedded systems
+    subject: engr
+    course: engr.embedded
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.embedded.uart
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Debug with print output
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp2
+        can_do: Use debuggers and breakpoints
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp3
+        can_do: Use oscilloscopes and logic analyzers
+        key_prerequisites: [engr.embedded.uart]
+      - id: kp4
+        can_do: Find hardware faults
+        key_prerequisites: [engr.embedded.uart]
