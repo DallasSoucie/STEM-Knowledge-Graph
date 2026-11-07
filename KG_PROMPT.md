@@ -13,13 +13,13 @@ Math Academy runs about 2,500 topics on math alone. Matching that density across
 | Scope | Courses | Topics (estimate) |
 |---|---|---|
 | Math | 27 | 4,370 |
-| Physics | 12 | 1,370 |
-| Chemistry | 12 | 1,850 |
+| Physics | 12 | 1,335 |
+| Chemistry | 12 | 790 |
 | Biology | 15 | 2,310 |
 | Engineering common core | 11 | 1,630 |
 | **Core graph** | **77** | **~12,000** |
 | Engineering discipline courses | 26 | 3,640 |
-| **Full graph** | **103** | **~15,200** |
+| **Full graph** | **103** | **~14,100** |
 
 At about 3.4 KPs and 5 weighted relationships per topic, the full graph holds roughly 53,000 KPs and 78,000 weights.
 
@@ -40,12 +40,12 @@ The number after each course is its topic budget. Confirm or revise this list in
 - University: calc1 180, calc2 180, calc3 180, linalg 180, diffeq 190, discrete 170, probstat 190, proofs 110, analysis 160, abstract 160, numerical 130, pde 140, complex 120
 
 **Physics**
-- School: elem 40, ms 80, hs1 200, hs2 200
+- School: elem 40, ms 80, hs1 200, hs2 165
 - University: mechanics 140, em 140, waves-thermo-optics 115, modern 100, classical 95, em-theory 100, quantum 95, stat-thermal 65
 
 **Chemistry**
-- School: elem 30, ms 70, hs1 180, hs2 180
-- University: gen1 190, gen2 190, org1 190, org2 190, analytical 140, inorganic 150, pchem1 170, pchem2 170
+- School: elem 25, ms 55, hs1 125, hs2 90
+- University: gen1 55, gen2 55, org1 100, org2 80, analytical 55, inorganic 50, pchem1 50, pchem2 50
 
 **Biology**
 - School: elem 50, ms 90, hs1 180, hs2 180
