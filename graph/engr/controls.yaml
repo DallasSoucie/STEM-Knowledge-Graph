@@ -1,0 +1,1046 @@
+course: engr.controls
+topics:
+  - id: engr.controls.control-system-concepts
+    name: Describing open-loop and closed-loop control
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.network-transfer-functions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare open-loop and closed-loop control
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp2
+        can_do: Identify plant, controller, sensor and actuator
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp3
+        can_do: Describe control design objectives
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp4
+        can_do: Find closed-loop transfer functions of simple loops
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+  - id: engr.controls.translational-mechanical-models
+    name: Modelling translational mechanical systems
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.control-system-concepts
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.dynamics.equations-of-motion-rectangular
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model mass-spring-damper systems
+        key_prerequisites: [engr.controls.control-system-concepts, engr.dynamics.equations-of-motion-rectangular]
+      - id: kp2
+        can_do: Find transfer functions of mechanical systems
+        key_prerequisites: [engr.controls.control-system-concepts]
+      - id: kp3
+        can_do: Model systems with several masses
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+      - id: kp4
+        can_do: Draw free-body diagrams for modelling
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+  - id: engr.controls.rotational-mechanical-models
+    name: Modelling rotational systems with gears
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.translational-mechanical-models
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.fixed-axis-kinetics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model rotational inertia, springs and dampers
+        key_prerequisites: [engr.controls.translational-mechanical-models, engr.dynamics.fixed-axis-kinetics]
+      - id: kp2
+        can_do: Model gear trains
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp3
+        can_do: Reflect impedances through gears
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp4
+        can_do: Find transfer functions of rotational systems
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics]
+  - id: engr.controls.electrical-network-models
+    name: Modelling electrical networks with transfer functions
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.control-system-concepts
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.s-domain-analysis
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transfer functions of RLC networks
+        key_prerequisites: [engr.controls.control-system-concepts, engr.circuits.s-domain-analysis]
+      - id: kp2
+        can_do: Find transfer functions of op-amp networks
+        key_prerequisites: [engr.circuits.s-domain-analysis]
+      - id: kp3
+        can_do: Use impedance methods for modelling
+        key_prerequisites: [engr.circuits.s-domain-analysis]
+      - id: kp4
+        can_do: Find analogies between electrical and mechanical systems
+        key_prerequisites: [engr.controls.control-system-concepts]
+  - id: engr.controls.electromechanical-models
+    name: Modelling DC motors
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.rotational-mechanical-models
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.electrical-network-models
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model armature-controlled DC motors
+        key_prerequisites: [engr.controls.rotational-mechanical-models, engr.controls.electrical-network-models]
+      - id: kp2
+        can_do: Find motor constants from data
+        key_prerequisites: [engr.controls.rotational-mechanical-models]
+      - id: kp3
+        can_do: Find motor transfer functions with loads
+        key_prerequisites: [engr.controls.rotational-mechanical-models, engr.controls.electrical-network-models]
+      - id: kp4
+        can_do: Find speed and position transfer functions
+        key_prerequisites: [engr.controls.electrical-network-models]
+  - id: engr.controls.thermal-and-fluid-models
+    name: Modelling thermal and fluid systems
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.translational-mechanical-models
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model thermal capacitance and resistance
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp2
+        can_do: Model liquid-level systems
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp3
+        can_do: Model pneumatic systems
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp4
+        can_do: Find transfer functions of thermal systems
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+  - id: engr.controls.linearization-for-control
+    name: Linearizing nonlinear models about an operating point
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.translational-mechanical-models
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.linearization-multivariable
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find operating points
+        key_prerequisites: [engr.controls.translational-mechanical-models]
+      - id: kp2
+        can_do: Linearize nonlinear equations
+        key_prerequisites: [engr.controls.translational-mechanical-models, math.calc3.linearization-multivariable]
+      - id: kp3
+        can_do: Linearize pendulum models
+        key_prerequisites: [engr.controls.translational-mechanical-models, math.calc3.linearization-multivariable]
+      - id: kp4
+        can_do: Find validity range of linear models
+        key_prerequisites: [math.calc3.linearization-multivariable]
+  - id: engr.controls.block-diagram-reduction
+    name: Reducing block diagrams
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.control-system-concepts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce series and parallel blocks
+        key_prerequisites: [engr.controls.control-system-concepts]
+      - id: kp2
+        can_do: Reduce feedback loops
+        key_prerequisites: [engr.controls.control-system-concepts]
+      - id: kp3
+        can_do: Move blocks past summing points
+        key_prerequisites: [engr.controls.control-system-concepts]
+      - id: kp4
+        can_do: Find transfer functions of complex diagrams
+        key_prerequisites: [engr.controls.control-system-concepts]
+  - id: engr.controls.signal-flow-graphs
+    name: Using signal-flow graphs and Mason's rule
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw signal-flow graphs
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp2
+        can_do: Find loops and paths
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp3
+        can_do: Apply Mason's gain rule
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp4
+        can_do: Convert block diagrams to graphs
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+  - id: engr.controls.first-order-system-response
+    name: Finding first-order system response
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.impulse-and-step-response-s
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find step response of first-order systems
+        key_prerequisites: [engr.controls.block-diagram-reduction, engr.circuits.impulse-and-step-response-s]
+      - id: kp2
+        can_do: Find time constant from data
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp3
+        can_do: Find rise and settling time
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp4
+        can_do: Find steady-state value
+        key_prerequisites: [engr.circuits.impulse-and-step-response-s]
+  - id: engr.controls.second-order-system-response
+    name: Finding second-order system response
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.first-order-system-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural frequency and damping ratio
+        key_prerequisites: [engr.controls.first-order-system-response]
+      - id: kp2
+        can_do: Classify responses by damping ratio
+        key_prerequisites: [engr.controls.first-order-system-response]
+      - id: kp3
+        can_do: Find step responses of second-order systems
+        key_prerequisites: [engr.controls.first-order-system-response]
+      - id: kp4
+        can_do: Find damped frequency
+        key_prerequisites: [engr.controls.first-order-system-response]
+  - id: engr.controls.transient-specifications
+    name: Relating overshoot, settling and rise time to poles
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.second-order-system-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find percent overshoot
+        key_prerequisites: [engr.controls.second-order-system-response]
+      - id: kp2
+        can_do: Find peak and settling time
+        key_prerequisites: [engr.controls.second-order-system-response]
+      - id: kp3
+        can_do: Find damping from overshoot
+        key_prerequisites: [engr.controls.second-order-system-response]
+      - id: kp4
+        can_do: Map specifications to pole regions
+        key_prerequisites: [engr.controls.second-order-system-response]
+  - id: engr.controls.higher-order-and-zeros
+    name: Approximating higher-order systems and effects of zeros
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.transient-specifications
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Approximate higher-order systems with dominant poles
+        key_prerequisites: [engr.controls.transient-specifications]
+      - id: kp2
+        can_do: Find effects of added poles
+        key_prerequisites: [engr.controls.transient-specifications]
+      - id: kp3
+        can_do: Find effects of zeros on response
+        key_prerequisites: [engr.controls.transient-specifications]
+      - id: kp4
+        can_do: Find effects of nonminimum-phase zeros
+        key_prerequisites: [engr.controls.transient-specifications]
+  - id: engr.controls.routh-hurwitz
+    name: Testing stability with the Routh-Hurwitz criterion
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a Routh array
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp2
+        can_do: Count right-half-plane poles
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp3
+        can_do: Test stability of closed loops
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp4
+        can_do: Find stability of characteristic polynomials
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+  - id: engr.controls.routh-special-cases
+    name: Handling special cases in the Routh array
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.routh-hurwitz
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Handle zeros in the first column
+        key_prerequisites: [engr.controls.routh-hurwitz]
+      - id: kp2
+        can_do: Handle rows of zeros
+        key_prerequisites: [engr.controls.routh-hurwitz]
+      - id: kp3
+        can_do: Find imaginary-axis poles
+        key_prerequisites: [engr.controls.routh-hurwitz]
+      - id: kp4
+        can_do: Find poles symmetric about the origin
+        key_prerequisites: [engr.controls.routh-hurwitz]
+  - id: engr.controls.stability-with-gain
+    name: Finding gain ranges for stability
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.routh-special-cases
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain ranges for stability
+        key_prerequisites: [engr.controls.routh-special-cases]
+      - id: kp2
+        can_do: Find frequency of oscillation at marginal gain
+        key_prerequisites: [engr.controls.routh-special-cases]
+      - id: kp3
+        can_do: Find stability with two parameters
+        key_prerequisites: [engr.controls.routh-special-cases]
+      - id: kp4
+        can_do: Design gain for stability margins
+        key_prerequisites: [engr.controls.routh-special-cases]
+  - id: engr.controls.system-type-and-error-constants
+    name: Finding steady-state error from system type
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.laplace-properties
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find system type
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp2
+        can_do: Find position, velocity and acceleration constants
+        key_prerequisites: [engr.controls.block-diagram-reduction, math.diffeq.laplace-properties]
+      - id: kp3
+        can_do: Find steady-state error for standard inputs
+        key_prerequisites: [engr.controls.block-diagram-reduction, math.diffeq.laplace-properties]
+      - id: kp4
+        can_do: Design gain for steady-state error
+        key_prerequisites: [math.diffeq.laplace-properties]
+  - id: engr.controls.disturbance-rejection
+    name: Finding steady-state error due to disturbances
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.system-type-and-error-constants
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady-state error from disturbances
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp2
+        can_do: Compare controller and plant integrators
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp3
+        can_do: Design for disturbance rejection
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp4
+        can_do: Find disturbance transfer functions
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+  - id: engr.controls.sensitivity-to-parameters
+    name: Finding sensitivity to parameter changes
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.system-type-and-error-constants
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sensitivity of closed loops
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp2
+        can_do: Compare open-loop and closed-loop sensitivity
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp3
+        can_do: Find sensitivity to gain changes
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp4
+        can_do: Explain robustness from feedback
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+  - id: engr.controls.root-locus-sketching
+    name: Sketching the root locus
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.stability-with-gain
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.transient-specifications
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find root locus on the real axis
+        key_prerequisites: [engr.controls.stability-with-gain]
+      - id: kp2
+        can_do: Find asymptotes
+        key_prerequisites: [engr.controls.stability-with-gain, engr.controls.transient-specifications]
+      - id: kp3
+        can_do: Sketch root loci
+        key_prerequisites: [engr.controls.stability-with-gain, engr.controls.transient-specifications]
+      - id: kp4
+        can_do: Check points on the locus
+        key_prerequisites: [engr.controls.transient-specifications]
+  - id: engr.controls.root-locus-refinements
+    name: Finding breakaway points and jω crossings
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.root-locus-sketching
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find breakaway and break-in points
+        key_prerequisites: [engr.controls.root-locus-sketching]
+      - id: kp2
+        can_do: Find jω-axis crossings
+        key_prerequisites: [engr.controls.root-locus-sketching]
+      - id: kp3
+        can_do: Find departure and arrival angles
+        key_prerequisites: [engr.controls.root-locus-sketching]
+      - id: kp4
+        can_do: Refine root locus sketches
+        key_prerequisites: [engr.controls.root-locus-sketching]
+  - id: engr.controls.gain-from-root-locus
+    name: Choosing gain from the root locus
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.root-locus-refinements
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain at a desired pole
+        key_prerequisites: [engr.controls.root-locus-refinements]
+      - id: kp2
+        can_do: Find gain for a damping ratio
+        key_prerequisites: [engr.controls.root-locus-refinements]
+      - id: kp3
+        can_do: Find response from chosen poles
+        key_prerequisites: [engr.controls.root-locus-refinements]
+      - id: kp4
+        can_do: Check approximations from the locus
+        key_prerequisites: [engr.controls.root-locus-refinements]
+  - id: engr.controls.pid-controller-actions
+    name: Describing proportional, integral and derivative action
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.system-type-and-error-constants
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.transient-specifications
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe proportional control effects
+        key_prerequisites: [engr.controls.system-type-and-error-constants, engr.controls.transient-specifications]
+      - id: kp2
+        can_do: Describe integral control effects
+        key_prerequisites: [engr.controls.system-type-and-error-constants]
+      - id: kp3
+        can_do: Describe derivative control effects
+        key_prerequisites: [engr.controls.transient-specifications]
+      - id: kp4
+        can_do: Compare P, PI, PD and PID
+        key_prerequisites: [engr.controls.system-type-and-error-constants, engr.controls.transient-specifications]
+  - id: engr.controls.lead-compensation-root-locus
+    name: Designing lead compensators with the root locus
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.gain-from-root-locus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design lead compensators for transient response
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp2
+        can_do: Place compensator zeros and poles
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp3
+        can_do: Find compensator gain
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp4
+        can_do: Check designs by simulation
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+  - id: engr.controls.lag-compensation-root-locus
+    name: Designing lag compensators with the root locus
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.gain-from-root-locus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design lag compensators for steady-state error
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp2
+        can_do: Place lag poles and zeros
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp3
+        can_do: Keep transient response unchanged
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+      - id: kp4
+        can_do: Check lag designs
+        key_prerequisites: [engr.controls.gain-from-root-locus]
+  - id: engr.controls.pid-design-root-locus
+    name: Designing PID controllers with the root locus
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.lead-compensation-root-locus
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.controls.lag-compensation-root-locus
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.controls.pid-controller-actions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design PD controllers
+        key_prerequisites: [engr.controls.lead-compensation-root-locus]
+      - id: kp2
+        can_do: Design PI controllers
+        key_prerequisites: [engr.controls.lag-compensation-root-locus]
+      - id: kp3
+        can_do: Design PID controllers
+        key_prerequisites: [engr.controls.lead-compensation-root-locus, engr.controls.lag-compensation-root-locus, engr.controls.pid-controller-actions]
+      - id: kp4
+        can_do: Design lead-lag compensators
+        key_prerequisites: [engr.controls.lead-compensation-root-locus, engr.controls.lag-compensation-root-locus]
+  - id: engr.controls.frequency-response-of-loops
+    name: Finding open-loop frequency response
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.bode-phase
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find open-loop frequency response
+        key_prerequisites: [engr.circuits.bode-phase, engr.controls.block-diagram-reduction]
+      - id: kp2
+        can_do: Draw Bode plots of loop transfer functions
+        key_prerequisites: [engr.circuits.bode-phase]
+      - id: kp3
+        can_do: Draw polar plots
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+      - id: kp4
+        can_do: Find frequency response from data
+        key_prerequisites: [engr.circuits.bode-phase]
+  - id: engr.controls.nyquist-criterion
+    name: Applying the Nyquist stability criterion
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.frequency-response-of-loops
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw Nyquist plots
+        key_prerequisites: [engr.controls.frequency-response-of-loops]
+      - id: kp2
+        can_do: Apply the Nyquist criterion
+        key_prerequisites: [engr.controls.frequency-response-of-loops]
+      - id: kp3
+        can_do: Find closed-loop stability from Nyquist plots
+        key_prerequisites: [engr.controls.frequency-response-of-loops]
+      - id: kp4
+        can_do: Handle open-loop poles on the axis
+        key_prerequisites: [engr.controls.frequency-response-of-loops]
+  - id: engr.controls.gain-and-phase-margins
+    name: Finding gain and phase margins
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.nyquist-criterion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain margin
+        key_prerequisites: [engr.controls.nyquist-criterion]
+      - id: kp2
+        can_do: Find phase margin
+        key_prerequisites: [engr.controls.nyquist-criterion]
+      - id: kp3
+        can_do: Find margins from Bode plots
+        key_prerequisites: [engr.controls.nyquist-criterion]
+      - id: kp4
+        can_do: Find margins from Nyquist plots
+        key_prerequisites: [engr.controls.nyquist-criterion]
+  - id: engr.controls.margins-and-transient-response
+    name: Relating margins to closed-loop transient response
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.gain-and-phase-margins
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.transient-specifications
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate phase margin to damping
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp2
+        can_do: Relate bandwidth to speed of response
+        key_prerequisites: [engr.controls.gain-and-phase-margins, engr.controls.transient-specifications]
+      - id: kp3
+        can_do: Find closed-loop response from open-loop plots
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp4
+        can_do: Design gain for a phase margin
+        key_prerequisites: [engr.controls.transient-specifications]
+  - id: engr.controls.time-delay-systems
+    name: Analyzing systems with time delay
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.gain-and-phase-margins
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model time delay
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp2
+        can_do: Find phase lag of time delay
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp3
+        can_do: Find stability limits with delay
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp4
+        can_do: Approximate delay with Pade
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+  - id: engr.controls.lead-lag-design-frequency
+    name: Designing lead and lag compensators with Bode plots
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.margins-and-transient-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design lead compensators with Bode plots
+        key_prerequisites: [engr.controls.margins-and-transient-response]
+      - id: kp2
+        can_do: Design lag compensators with Bode plots
+        key_prerequisites: [engr.controls.margins-and-transient-response]
+      - id: kp3
+        can_do: Design lag-lead compensators
+        key_prerequisites: [engr.controls.margins-and-transient-response]
+      - id: kp4
+        can_do: Check designs against specifications
+        key_prerequisites: [engr.controls.margins-and-transient-response]
+  - id: engr.controls.pid-tuning-rules
+    name: Tuning PID controllers with empirical rules
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.pid-design-root-locus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tune PID with Ziegler-Nichols step method
+        key_prerequisites: [engr.controls.pid-design-root-locus]
+      - id: kp2
+        can_do: Tune PID with ultimate gain method
+        key_prerequisites: [engr.controls.pid-design-root-locus]
+      - id: kp3
+        can_do: Adjust tuned controllers
+        key_prerequisites: [engr.controls.pid-design-root-locus]
+      - id: kp4
+        can_do: Compare tuning methods
+        key_prerequisites: [engr.controls.pid-design-root-locus]
+  - id: engr.controls.integrator-windup
+    name: Preventing integrator windup
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.pid-tuning-rules
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain integrator windup
+        key_prerequisites: [engr.controls.pid-tuning-rules]
+      - id: kp2
+        can_do: Add anti-windup schemes
+        key_prerequisites: [engr.controls.pid-tuning-rules]
+      - id: kp3
+        can_do: Handle actuator saturation
+        key_prerequisites: [engr.controls.pid-tuning-rules]
+      - id: kp4
+        can_do: Simulate windup effects
+        key_prerequisites: [engr.controls.pid-tuning-rules]
+  - id: engr.controls.feedforward-control
+    name: Adding feedforward control
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.disturbance-rejection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design feedforward from a disturbance model
+        key_prerequisites: [engr.controls.disturbance-rejection]
+      - id: kp2
+        can_do: Combine feedforward and feedback
+        key_prerequisites: [engr.controls.disturbance-rejection]
+      - id: kp3
+        can_do: Design reference feedforward
+        key_prerequisites: [engr.controls.disturbance-rejection]
+      - id: kp4
+        can_do: Explain limits of feedforward
+        key_prerequisites: [engr.controls.disturbance-rejection]
+  - id: engr.controls.state-space-models
+    name: Writing state-space models
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.linearization-for-control
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write state equations from differential equations
+        key_prerequisites: [engr.controls.linearization-for-control, math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Choose state variables
+        key_prerequisites: [engr.controls.linearization-for-control]
+      - id: kp3
+        can_do: Write state models of mechanical and electrical systems
+        key_prerequisites: [engr.controls.linearization-for-control]
+      - id: kp4
+        can_do: Write output equations
+        key_prerequisites: [math.linalg.matrix-times-vector]
+  - id: engr.controls.transfer-function-to-state-space
+    name: Converting between transfer functions and state space
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.state-space-models
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert transfer functions to controllable form
+        key_prerequisites: [engr.controls.state-space-models]
+      - id: kp2
+        can_do: Convert transfer functions to observable form
+        key_prerequisites: [engr.controls.state-space-models]
+      - id: kp3
+        can_do: Find transfer functions from state models
+        key_prerequisites: [engr.controls.state-space-models]
+      - id: kp4
+        can_do: Find poles from the system matrix
+        key_prerequisites: [engr.controls.state-space-models]
+  - id: engr.controls.state-space-response
+    name: Solving state equations
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.transfer-function-to-state-space
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.matrix-exponential
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find state transition matrix
+        key_prerequisites: [engr.controls.transfer-function-to-state-space, math.diffeq.matrix-exponential]
+      - id: kp2
+        can_do: Solve state equations
+        key_prerequisites: [engr.controls.transfer-function-to-state-space, math.diffeq.matrix-exponential]
+      - id: kp3
+        can_do: Find step response from state models
+        key_prerequisites: [engr.controls.transfer-function-to-state-space]
+      - id: kp4
+        can_do: Find eigenvalues and stability
+        key_prerequisites: [math.diffeq.matrix-exponential]
+  - id: engr.controls.controllability
+    name: Testing controllability
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.state-space-response
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.linalg.rank-from-pivots
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find controllability matrix
+        key_prerequisites: [engr.controls.state-space-response, math.linalg.rank-from-pivots]
+      - id: kp2
+        can_do: Test controllability
+        key_prerequisites: [engr.controls.state-space-response, math.linalg.rank-from-pivots]
+      - id: kp3
+        can_do: Explain uncontrollable modes
+        key_prerequisites: [engr.controls.state-space-response]
+      - id: kp4
+        can_do: Find controllable canonical form
+        key_prerequisites: [engr.controls.state-space-response]
+  - id: engr.controls.pole-placement
+    name: Designing state feedback by pole placement
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.controllability
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design state feedback by pole placement
+        key_prerequisites: [engr.controls.controllability]
+      - id: kp2
+        can_do: Use Ackermann's formula
+        key_prerequisites: [engr.controls.controllability]
+      - id: kp3
+        can_do: Add integral action to state feedback
+        key_prerequisites: [engr.controls.controllability]
+      - id: kp4
+        can_do: Choose desired pole locations
+        key_prerequisites: [engr.controls.controllability]
+  - id: engr.controls.observability-and-observers
+    name: Designing observers
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.pole-placement
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test observability
+        key_prerequisites: [engr.controls.pole-placement]
+      - id: kp2
+        can_do: Design full-order observers
+        key_prerequisites: [engr.controls.pole-placement]
+      - id: kp3
+        can_do: Combine observers with state feedback
+        key_prerequisites: [engr.controls.pole-placement]
+      - id: kp4
+        can_do: Choose observer pole locations
+        key_prerequisites: [engr.controls.pole-placement]
+  - id: engr.controls.sampled-data-systems
+    name: Modelling sampled-data control systems
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.system-functions-z
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.first-order-system-response
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model sample and hold
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp2
+        can_do: Find z-domain transfer functions
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp3
+        can_do: Find stability of sampled systems
+        key_prerequisites: [engr.signals.system-functions-z, engr.controls.first-order-system-response]
+      - id: kp4
+        can_do: Find effects of sampling rate
+        key_prerequisites: [engr.controls.first-order-system-response]
+  - id: engr.controls.digital-controller-implementation
+    name: Implementing digital controllers
+    subject: engr
+    course: engr.controls
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.sampled-data-systems
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.pid-tuning-rules
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Discretize controllers with Tustin's method
+        key_prerequisites: [engr.controls.sampled-data-systems]
+      - id: kp2
+        can_do: Write difference equations for controllers
+        key_prerequisites: [engr.controls.sampled-data-systems, engr.controls.pid-tuning-rules]
+      - id: kp3
+        can_do: Choose sampling rates for controllers
+        key_prerequisites: [engr.controls.sampled-data-systems]
+      - id: kp4
+        can_do: Implement PID in code
+        key_prerequisites: [engr.controls.pid-tuning-rules]
