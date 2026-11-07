@@ -41,7 +41,7 @@ The number after each course is its topic budget. Confirm or revise this list in
 
 **Physics**
 - School: elem 40, ms 80, hs1 200, hs2 200
-- University: mechanics 190, em 190, waves-thermo-optics 170, modern 150, classical 160, em-theory 170, quantum 180, stat-thermal 150
+- University: mechanics 140, em 140, waves-thermo-optics 170, modern 150, classical 160, em-theory 170, quantum 180, stat-thermal 150
 
 **Chemistry**
 - School: elem 30, ms 70, hs1 180, hs2 180
