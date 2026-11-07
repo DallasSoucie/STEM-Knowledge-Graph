@@ -1,0 +1,998 @@
+course: engr.operating-systems
+topics:
+  - id: engr.operating-systems.os-roles-and-kernel
+    name: Describing operating system roles and the kernel
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.exceptions-and-interrupts-hw
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe operating system roles
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp2
+        can_do: Describe kernel structures
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp3
+        can_do: Compare monolithic and microkernels
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp4
+        can_do: Describe boot process
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+  - id: engr.operating-systems.system-calls
+    name: Using system calls
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.os-roles-and-kernel
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.architecture.procedure-calls-and-stack
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Make system calls
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+      - id: kp2
+        can_do: Trace a system call into the kernel
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel, engr.architecture.procedure-calls-and-stack]
+      - id: kp3
+        can_do: Classify system calls
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+      - id: kp4
+        can_do: Compare library calls and system calls
+        key_prerequisites: [engr.architecture.procedure-calls-and-stack]
+  - id: engr.operating-systems.dual-mode-protection
+    name: Explaining dual-mode operation and protection
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.os-roles-and-kernel
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe user and kernel mode
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+      - id: kp2
+        can_do: Describe privileged instructions
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+      - id: kp3
+        can_do: Describe timers for protection
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+      - id: kp4
+        can_do: Explain mode switches
+        key_prerequisites: [engr.operating-systems.os-roles-and-kernel]
+  - id: engr.operating-systems.processes
+    name: Describing processes and their states
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.system-calls
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe process states
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp2
+        can_do: Describe process control blocks
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp3
+        can_do: Describe process memory layout
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp4
+        can_do: Trace state transitions
+        key_prerequisites: [engr.operating-systems.system-calls]
+  - id: engr.operating-systems.process-creation
+    name: Creating processes with fork and exec
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.processes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Create processes with fork
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp2
+        can_do: Run programs with exec
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp3
+        can_do: Wait for child processes
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp4
+        can_do: Describe zombies and orphans
+        key_prerequisites: [engr.operating-systems.processes]
+  - id: engr.operating-systems.context-switching
+    name: Explaining context switches
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.processes
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.operating-systems.dual-mode-protection
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe context switches
+        key_prerequisites: [engr.operating-systems.processes, engr.operating-systems.dual-mode-protection]
+      - id: kp2
+        can_do: Find context switch overhead
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp3
+        can_do: Save and restore state
+        key_prerequisites: [engr.operating-systems.dual-mode-protection]
+      - id: kp4
+        can_do: Explain scheduler invocation
+        key_prerequisites: [engr.operating-systems.processes]
+  - id: engr.operating-systems.interprocess-communication
+    name: Communicating between processes with pipes and shared memory
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.process-creation
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use pipes
+        key_prerequisites: [engr.operating-systems.process-creation]
+      - id: kp2
+        can_do: Use shared memory
+        key_prerequisites: [engr.operating-systems.process-creation]
+      - id: kp3
+        can_do: Use message passing
+        key_prerequisites: [engr.operating-systems.process-creation]
+      - id: kp4
+        can_do: Compare IPC mechanisms
+        key_prerequisites: [engr.operating-systems.process-creation]
+  - id: engr.operating-systems.threads
+    name: Using threads
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.processes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Create threads
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp2
+        can_do: Compare threads and processes
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp3
+        can_do: Share data between threads
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp4
+        can_do: Describe thread benefits
+        key_prerequisites: [engr.operating-systems.processes]
+  - id: engr.operating-systems.thread-models
+    name: Comparing user and kernel threads
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.threads
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare user and kernel threads
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp2
+        can_do: Describe threading models
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp3
+        can_do: Describe thread pools
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp4
+        can_do: Describe thread cancellation
+        key_prerequisites: [engr.operating-systems.threads]
+  - id: engr.operating-systems.scheduling-criteria
+    name: Choosing scheduling criteria
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.context-switching
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define throughput and turnaround time
+        key_prerequisites: [engr.operating-systems.context-switching]
+      - id: kp2
+        can_do: Define waiting and response time
+        key_prerequisites: [engr.operating-systems.context-switching]
+      - id: kp3
+        can_do: Choose criteria for workloads
+        key_prerequisites: [engr.operating-systems.context-switching]
+      - id: kp4
+        can_do: Describe preemptive scheduling
+        key_prerequisites: [engr.operating-systems.context-switching]
+  - id: engr.operating-systems.fcfs-sjf-scheduling
+    name: Scheduling with FCFS, SJF and SRTF
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.scheduling-criteria
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule with FCFS
+        key_prerequisites: [engr.operating-systems.scheduling-criteria]
+      - id: kp2
+        can_do: Schedule with SJF
+        key_prerequisites: [engr.operating-systems.scheduling-criteria]
+      - id: kp3
+        can_do: Schedule with SRTF
+        key_prerequisites: [engr.operating-systems.scheduling-criteria]
+      - id: kp4
+        can_do: Find average waiting time
+        key_prerequisites: [engr.operating-systems.scheduling-criteria]
+  - id: engr.operating-systems.round-robin-and-priority
+    name: Scheduling with round robin and priorities
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.fcfs-sjf-scheduling
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule with round robin
+        key_prerequisites: [engr.operating-systems.fcfs-sjf-scheduling]
+      - id: kp2
+        can_do: Choose time quantum
+        key_prerequisites: [engr.operating-systems.fcfs-sjf-scheduling]
+      - id: kp3
+        can_do: Schedule with priorities
+        key_prerequisites: [engr.operating-systems.fcfs-sjf-scheduling]
+      - id: kp4
+        can_do: Prevent starvation with aging
+        key_prerequisites: [engr.operating-systems.fcfs-sjf-scheduling]
+  - id: engr.operating-systems.multilevel-feedback-queues
+    name: Scheduling with multilevel feedback queues
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.round-robin-and-priority
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe multilevel queues
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp2
+        can_do: Schedule with feedback queues
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp3
+        can_do: Tune feedback queue parameters
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp4
+        can_do: Compare schedulers
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+  - id: engr.operating-systems.multiprocessor-scheduling
+    name: Scheduling on multiprocessors
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.multilevel-feedback-queues
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.operating-systems.thread-models
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe load balancing
+        key_prerequisites: [engr.operating-systems.multilevel-feedback-queues, engr.operating-systems.thread-models]
+      - id: kp2
+        can_do: Describe processor affinity
+        key_prerequisites: [engr.operating-systems.multilevel-feedback-queues]
+      - id: kp3
+        can_do: Schedule threads on multicores
+        key_prerequisites: [engr.operating-systems.thread-models]
+      - id: kp4
+        can_do: Describe gang scheduling
+        key_prerequisites: [engr.operating-systems.multilevel-feedback-queues]
+  - id: engr.operating-systems.real-time-scheduling
+    name: Scheduling real-time tasks
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.round-robin-and-priority
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule with rate monotonic priorities
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp2
+        can_do: Schedule with earliest deadline first
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp3
+        can_do: Check schedulability
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+      - id: kp4
+        can_do: Describe priority inversion
+        key_prerequisites: [engr.operating-systems.round-robin-and-priority]
+  - id: engr.operating-systems.race-conditions
+    name: Identifying race conditions and critical sections
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.threads
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify race conditions
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp2
+        can_do: Identify critical sections
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp3
+        can_do: State requirements for critical section solutions
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp4
+        can_do: Show interleavings that cause errors
+        key_prerequisites: [engr.operating-systems.threads]
+  - id: engr.operating-systems.locks
+    name: Implementing locks with atomic instructions
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.race-conditions
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.architecture.multicore-and-coherence
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement spinlocks with atomic instructions
+        key_prerequisites: [engr.operating-systems.race-conditions, engr.architecture.multicore-and-coherence]
+      - id: kp2
+        can_do: Use mutex locks
+        key_prerequisites: [engr.operating-systems.race-conditions]
+      - id: kp3
+        can_do: Compare spinning and blocking
+        key_prerequisites: [engr.operating-systems.race-conditions]
+      - id: kp4
+        can_do: Explain cache effects of locks
+        key_prerequisites: [engr.architecture.multicore-and-coherence]
+  - id: engr.operating-systems.semaphores
+    name: Synchronizing with semaphores
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.locks
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use counting semaphores
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp2
+        can_do: Use binary semaphores
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp3
+        can_do: Implement semaphores
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp4
+        can_do: Order events with semaphores
+        key_prerequisites: [engr.operating-systems.locks]
+  - id: engr.operating-systems.condition-variables-and-monitors
+    name: Synchronizing with condition variables and monitors
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.locks
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use condition variables
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp2
+        can_do: Use monitors
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp3
+        can_do: Compare signal semantics
+        key_prerequisites: [engr.operating-systems.locks]
+      - id: kp4
+        can_do: Avoid lost wakeups
+        key_prerequisites: [engr.operating-systems.locks]
+  - id: engr.operating-systems.classic-synchronization-problems
+    name: Solving producer-consumer and readers-writers problems
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.semaphores
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.operating-systems.condition-variables-and-monitors
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve producer-consumer
+        key_prerequisites: [engr.operating-systems.semaphores, engr.operating-systems.condition-variables-and-monitors]
+      - id: kp2
+        can_do: Solve readers-writers
+        key_prerequisites: [engr.operating-systems.semaphores]
+      - id: kp3
+        can_do: Solve dining philosophers
+        key_prerequisites: [engr.operating-systems.condition-variables-and-monitors]
+      - id: kp4
+        can_do: Compare solutions for fairness
+        key_prerequisites: [engr.operating-systems.semaphores, engr.operating-systems.condition-variables-and-monitors]
+  - id: engr.operating-systems.deadlock-conditions
+    name: Explaining deadlock conditions
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.classic-synchronization-problems
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State conditions for deadlock
+        key_prerequisites: [engr.operating-systems.classic-synchronization-problems]
+      - id: kp2
+        can_do: Draw resource allocation graphs
+        key_prerequisites: [engr.operating-systems.classic-synchronization-problems]
+      - id: kp3
+        can_do: Find deadlocks in graphs
+        key_prerequisites: [engr.operating-systems.classic-synchronization-problems]
+      - id: kp4
+        can_do: Compare deadlock and starvation
+        key_prerequisites: [engr.operating-systems.classic-synchronization-problems]
+  - id: engr.operating-systems.deadlock-prevention-avoidance
+    name: Preventing and avoiding deadlock with the banker's algorithm
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.deadlock-conditions
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prevent deadlock by breaking conditions
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+      - id: kp2
+        can_do: Order resources
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+      - id: kp3
+        can_do: Use the banker's algorithm
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+      - id: kp4
+        can_do: Find safe states
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+  - id: engr.operating-systems.deadlock-detection
+    name: Detecting and recovering from deadlock
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.deadlock-conditions
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.data-structures.cycle-detection
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect deadlock with wait-for graphs
+        key_prerequisites: [engr.operating-systems.deadlock-conditions, engr.data-structures.cycle-detection]
+      - id: kp2
+        can_do: Detect deadlock with several instances
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+      - id: kp3
+        can_do: Recover from deadlock
+        key_prerequisites: [engr.operating-systems.deadlock-conditions]
+      - id: kp4
+        can_do: Choose detection frequency
+        key_prerequisites: [engr.data-structures.cycle-detection]
+  - id: engr.operating-systems.address-spaces
+    name: Describing address spaces and binding
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.processes
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.architecture.virtual-memory-hw
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe logical and physical addresses
+        key_prerequisites: [engr.operating-systems.processes, engr.architecture.virtual-memory-hw]
+      - id: kp2
+        can_do: Describe address binding
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp3
+        can_do: Use base and limit registers
+        key_prerequisites: [engr.operating-systems.processes]
+      - id: kp4
+        can_do: Describe swapping
+        key_prerequisites: [engr.architecture.virtual-memory-hw]
+  - id: engr.operating-systems.contiguous-allocation
+    name: Allocating memory contiguously
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.address-spaces
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Allocate memory with first-fit
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp2
+        can_do: Compare best-fit and worst-fit
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp3
+        can_do: Find external fragmentation
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp4
+        can_do: Use compaction
+        key_prerequisites: [engr.operating-systems.address-spaces]
+  - id: engr.operating-systems.paging
+    name: Managing memory with paging
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.address-spaces
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Translate addresses with paging
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp2
+        can_do: Find page table entries
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp3
+        can_do: Find internal fragmentation
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp4
+        can_do: Share pages between processes
+        key_prerequisites: [engr.operating-systems.address-spaces]
+  - id: engr.operating-systems.multilevel-page-tables
+    name: Using multilevel page tables
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.paging
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use two-level page tables
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp2
+        can_do: Find page table size
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp3
+        can_do: Use inverted page tables
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp4
+        can_do: Use hashed page tables
+        key_prerequisites: [engr.operating-systems.paging]
+  - id: engr.operating-systems.demand-paging
+    name: Implementing demand paging
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.paging
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe demand paging
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp2
+        can_do: Handle page faults
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp3
+        can_do: Find effective access time
+        key_prerequisites: [engr.operating-systems.paging]
+      - id: kp4
+        can_do: Use copy-on-write
+        key_prerequisites: [engr.operating-systems.paging]
+  - id: engr.operating-systems.page-replacement
+    name: Comparing page replacement algorithms
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.demand-paging
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use FIFO replacement
+        key_prerequisites: [engr.operating-systems.demand-paging]
+      - id: kp2
+        can_do: Use optimal replacement
+        key_prerequisites: [engr.operating-systems.demand-paging]
+      - id: kp3
+        can_do: Use LRU and clock replacement
+        key_prerequisites: [engr.operating-systems.demand-paging]
+      - id: kp4
+        can_do: Explain Belady's anomaly
+        key_prerequisites: [engr.operating-systems.demand-paging]
+  - id: engr.operating-systems.thrashing-and-working-sets
+    name: Explaining thrashing and working sets
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.page-replacement
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain thrashing
+        key_prerequisites: [engr.operating-systems.page-replacement]
+      - id: kp2
+        can_do: Find working sets
+        key_prerequisites: [engr.operating-systems.page-replacement]
+      - id: kp3
+        can_do: Use page fault frequency
+        key_prerequisites: [engr.operating-systems.page-replacement]
+      - id: kp4
+        can_do: Allocate frames to processes
+        key_prerequisites: [engr.operating-systems.page-replacement]
+  - id: engr.operating-systems.memory-allocators
+    name: Implementing heap allocators
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.contiguous-allocation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement free lists
+        key_prerequisites: [engr.operating-systems.contiguous-allocation]
+      - id: kp2
+        can_do: Use buddy allocation
+        key_prerequisites: [engr.operating-systems.contiguous-allocation]
+      - id: kp3
+        can_do: Use slab allocation
+        key_prerequisites: [engr.operating-systems.contiguous-allocation]
+      - id: kp4
+        can_do: Find allocator fragmentation
+        key_prerequisites: [engr.operating-systems.contiguous-allocation]
+  - id: engr.operating-systems.file-system-interface
+    name: Using files and directories
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.system-calls
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use file operations
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp2
+        can_do: Describe directories and paths
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp3
+        can_do: Describe file metadata
+        key_prerequisites: [engr.operating-systems.system-calls]
+      - id: kp4
+        can_do: Describe mounting
+        key_prerequisites: [engr.operating-systems.system-calls]
+  - id: engr.operating-systems.disk-scheduling
+    name: Scheduling disk requests
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.storage-devices
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule disks with FCFS and SSTF
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp2
+        can_do: Schedule disks with SCAN and C-SCAN
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp3
+        can_do: Find total head movement
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp4
+        can_do: Describe SSD scheduling
+        key_prerequisites: [engr.architecture.storage-devices]
+  - id: engr.operating-systems.file-allocation-methods
+    name: Comparing file allocation methods
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.file-system-interface
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use contiguous allocation
+        key_prerequisites: [engr.operating-systems.file-system-interface]
+      - id: kp2
+        can_do: Use linked allocation
+        key_prerequisites: [engr.operating-systems.file-system-interface]
+      - id: kp3
+        can_do: Use indexed allocation
+        key_prerequisites: [engr.operating-systems.file-system-interface]
+      - id: kp4
+        can_do: Compare allocation methods
+        key_prerequisites: [engr.operating-systems.file-system-interface]
+  - id: engr.operating-systems.directory-and-inode-structures
+    name: Implementing directories and inodes
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.file-allocation-methods
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe inodes
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp2
+        can_do: Find maximum file size with indirect blocks
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp3
+        can_do: Implement directories
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp4
+        can_do: Use hard and symbolic links
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+  - id: engr.operating-systems.free-space-management
+    name: Managing free space
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.file-allocation-methods
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use bitmaps
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp2
+        can_do: Use free lists
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp3
+        can_do: Use grouping
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+      - id: kp4
+        can_do: Find free-space overhead
+        key_prerequisites: [engr.operating-systems.file-allocation-methods]
+  - id: engr.operating-systems.journaling-and-recovery
+    name: Recovering file systems with journaling
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.directory-and-inode-structures
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe consistency checking
+        key_prerequisites: [engr.operating-systems.directory-and-inode-structures]
+      - id: kp2
+        can_do: Describe journaling
+        key_prerequisites: [engr.operating-systems.directory-and-inode-structures]
+      - id: kp3
+        can_do: Compare metadata and data journaling
+        key_prerequisites: [engr.operating-systems.directory-and-inode-structures]
+      - id: kp4
+        can_do: Describe copy-on-write file systems
+        key_prerequisites: [engr.operating-systems.directory-and-inode-structures]
+  - id: engr.operating-systems.raid
+    name: Using RAID
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.disk-scheduling
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare RAID levels
+        key_prerequisites: [engr.operating-systems.disk-scheduling]
+      - id: kp2
+        can_do: Find RAID capacity
+        key_prerequisites: [engr.operating-systems.disk-scheduling]
+      - id: kp3
+        can_do: Find RAID reliability
+        key_prerequisites: [engr.operating-systems.disk-scheduling]
+      - id: kp4
+        can_do: Choose RAID levels
+        key_prerequisites: [engr.operating-systems.disk-scheduling]
+  - id: engr.operating-systems.access-control
+    name: Implementing access control
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.dual-mode-protection
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.operating-systems.file-system-interface
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use access control lists
+        key_prerequisites: [engr.operating-systems.dual-mode-protection, engr.operating-systems.file-system-interface]
+      - id: kp2
+        can_do: Use capabilities
+        key_prerequisites: [engr.operating-systems.dual-mode-protection]
+      - id: kp3
+        can_do: Use Unix permissions
+        key_prerequisites: [engr.operating-systems.file-system-interface]
+      - id: kp4
+        can_do: Apply least privilege
+        key_prerequisites: [engr.operating-systems.dual-mode-protection]
+  - id: engr.operating-systems.security-threats-os
+    name: Describing operating system security threats
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.access-control
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe buffer overflow attacks
+        key_prerequisites: [engr.operating-systems.access-control]
+      - id: kp2
+        can_do: Describe malware
+        key_prerequisites: [engr.operating-systems.access-control]
+      - id: kp3
+        can_do: Describe authentication
+        key_prerequisites: [engr.operating-systems.access-control]
+      - id: kp4
+        can_do: Describe defenses against attacks
+        key_prerequisites: [engr.operating-systems.access-control]
+  - id: engr.operating-systems.virtual-machines
+    name: Explaining virtual machines and hypervisors
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.dual-mode-protection
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.operating-systems.address-spaces
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe hypervisor types
+        key_prerequisites: [engr.operating-systems.dual-mode-protection]
+      - id: kp2
+        can_do: Describe trap-and-emulate
+        key_prerequisites: [engr.operating-systems.dual-mode-protection]
+      - id: kp3
+        can_do: Describe memory virtualization
+        key_prerequisites: [engr.operating-systems.address-spaces]
+      - id: kp4
+        can_do: Describe uses of virtual machines
+        key_prerequisites: [engr.operating-systems.dual-mode-protection, engr.operating-systems.address-spaces]
+  - id: engr.operating-systems.containers
+    name: Explaining containers
+    subject: engr
+    course: engr.operating-systems
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.virtual-machines
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.operating-systems.process-creation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe containers
+        key_prerequisites: [engr.operating-systems.virtual-machines, engr.operating-systems.process-creation]
+      - id: kp2
+        can_do: Compare containers and virtual machines
+        key_prerequisites: [engr.operating-systems.virtual-machines]
+      - id: kp3
+        can_do: Describe namespaces and control groups
+        key_prerequisites: [engr.operating-systems.process-creation]
+      - id: kp4
+        can_do: Describe container images
+        key_prerequisites: [engr.operating-systems.virtual-machines]
