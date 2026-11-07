@@ -1,0 +1,561 @@
+course: engr.measurements
+topics:
+  - id: engr.measurements.measurement-system-elements
+    name: Describing elements of a measurement system
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.probstat.sample-mean-moments
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe sensor, conditioning and output stages
+        key_prerequisites: [math.probstat.sample-mean-moments]
+      - id: kp2
+        can_do: Define accuracy, precision and resolution
+        key_prerequisites: [math.probstat.sample-mean-moments]
+      - id: kp3
+        can_do: Classify measurement errors
+        key_prerequisites: [math.probstat.sample-mean-moments]
+      - id: kp4
+        can_do: Describe calibration
+        key_prerequisites: [math.probstat.sample-mean-moments]
+  - id: engr.measurements.static-calibration
+    name: Finding sensitivity and linearity from calibration
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.measurement-system-elements
+        encompassing: 0.6
+        confidence: high
+      - topic: math.probstat.simple-linear-model
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sensitivity from calibration data
+        key_prerequisites: [engr.measurements.measurement-system-elements, math.probstat.simple-linear-model]
+      - id: kp2
+        can_do: Find linearity and hysteresis errors
+        key_prerequisites: [engr.measurements.measurement-system-elements]
+      - id: kp3
+        can_do: Fit calibration curves
+        key_prerequisites: [math.probstat.simple-linear-model]
+      - id: kp4
+        can_do: Find zero and span errors
+        key_prerequisites: [engr.measurements.measurement-system-elements]
+  - id: engr.measurements.first-order-instruments
+    name: Finding time constants of first-order instruments
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.static-calibration
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.controls.first-order-system-response
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find time constant of thermometers
+        key_prerequisites: [engr.measurements.static-calibration, engr.controls.first-order-system-response]
+      - id: kp2
+        can_do: Find response to step inputs
+        key_prerequisites: [engr.controls.first-order-system-response]
+      - id: kp3
+        can_do: Find response to periodic inputs
+        key_prerequisites: [engr.measurements.static-calibration, engr.controls.first-order-system-response]
+      - id: kp4
+        can_do: Find dynamic error
+        key_prerequisites: [engr.measurements.static-calibration]
+  - id: engr.measurements.second-order-instruments
+    name: Finding response of second-order instruments
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.first-order-instruments
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.controls.second-order-system-response
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural frequency of instruments
+        key_prerequisites: [engr.measurements.first-order-instruments, engr.controls.second-order-system-response]
+      - id: kp2
+        can_do: Find response to steps
+        key_prerequisites: [engr.controls.second-order-system-response]
+      - id: kp3
+        can_do: Find amplitude ratio and phase lag
+        key_prerequisites: [engr.measurements.first-order-instruments, engr.controls.second-order-system-response]
+      - id: kp4
+        can_do: Choose damping for instruments
+        key_prerequisites: [engr.measurements.first-order-instruments]
+  - id: engr.measurements.measurement-statistics
+    name: Describing measurements with finite statistics
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.measurement-system-elements
+        encompassing: 0.3
+        confidence: high
+      - topic: math.probstat.ci-small-sample-t
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mean and standard deviation of measurements
+        key_prerequisites: [engr.measurements.measurement-system-elements]
+      - id: kp2
+        can_do: Find confidence intervals for means
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp3
+        can_do: Use the t distribution for small samples
+        key_prerequisites: [math.probstat.ci-small-sample-t]
+      - id: kp4
+        can_do: Pool data from several samples
+        key_prerequisites: [engr.measurements.measurement-system-elements, math.probstat.ci-small-sample-t]
+  - id: engr.measurements.outlier-rejection
+    name: Rejecting outliers with Chauvenet's criterion
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.measurement-statistics
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Chauvenet's criterion
+        key_prerequisites: [engr.measurements.measurement-statistics]
+      - id: kp2
+        can_do: Apply Thompson tau test
+        key_prerequisites: [engr.measurements.measurement-statistics]
+      - id: kp3
+        can_do: Decide when to reject data
+        key_prerequisites: [engr.measurements.measurement-statistics]
+      - id: kp4
+        can_do: Recompute statistics after rejection
+        key_prerequisites: [engr.measurements.measurement-statistics]
+  - id: engr.measurements.uncertainty-propagation
+    name: Propagating uncertainty in calculated results
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.measurement-statistics
+        encompassing: 0.65
+        confidence: high
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Propagate uncertainty in sums and products
+        key_prerequisites: [engr.measurements.measurement-statistics, math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Use partial derivatives for propagation
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+      - id: kp3
+        can_do: Find dominant uncertainty sources
+        key_prerequisites: [engr.measurements.measurement-statistics]
+      - id: kp4
+        can_do: Find uncertainty of computed results
+        key_prerequisites: [engr.measurements.measurement-statistics, math.calc3.partial-derivatives-compute]
+  - id: engr.measurements.design-stage-uncertainty
+    name: Estimating design-stage uncertainty
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.uncertainty-propagation
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find zero-order uncertainty
+        key_prerequisites: [engr.measurements.uncertainty-propagation]
+      - id: kp2
+        can_do: Find instrument uncertainty
+        key_prerequisites: [engr.measurements.uncertainty-propagation]
+      - id: kp3
+        can_do: Combine design-stage uncertainty
+        key_prerequisites: [engr.measurements.uncertainty-propagation]
+      - id: kp4
+        can_do: Choose instruments for target uncertainty
+        key_prerequisites: [engr.measurements.uncertainty-propagation]
+  - id: engr.measurements.regression-uncertainty
+    name: Finding uncertainty in curve fits
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.uncertainty-propagation
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.inference-for-regression
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find standard error of fit
+        key_prerequisites: [engr.measurements.uncertainty-propagation, math.probstat.inference-for-regression]
+      - id: kp2
+        can_do: Find confidence bands for fits
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp3
+        can_do: Find uncertainty of slope
+        key_prerequisites: [math.probstat.inference-for-regression]
+      - id: kp4
+        can_do: Judge fit quality
+        key_prerequisites: [engr.measurements.uncertainty-propagation]
+  - id: engr.measurements.wheatstone-bridges
+    name: Analyzing Wheatstone bridges
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.voltage-and-current-dividers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bridge output voltage
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp2
+        can_do: Balance bridges
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp3
+        can_do: Find bridge sensitivity
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp4
+        can_do: Compare quarter, half and full bridges
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+  - id: engr.measurements.instrumentation-amplifiers
+    name: Using instrumentation amplifiers
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.summing-and-difference-amps
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find instrumentation amplifier gain
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp2
+        can_do: Find common-mode rejection
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp3
+        can_do: Choose amplifiers for bridges
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp4
+        can_do: Find output range
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+  - id: engr.measurements.analog-filters-for-measurement
+    name: Choosing analog filters for measurement
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.active-filters
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose filter type for noise
+        key_prerequisites: [engr.circuits.active-filters]
+      - id: kp2
+        can_do: Find filter cutoff for signals
+        key_prerequisites: [engr.circuits.active-filters]
+      - id: kp3
+        can_do: Find filter phase distortion
+        key_prerequisites: [engr.circuits.active-filters]
+      - id: kp4
+        can_do: Design anti-alias filters
+        key_prerequisites: [engr.circuits.active-filters]
+  - id: engr.measurements.adc-resolution
+    name: Finding ADC resolution and quantization error
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.quantization
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ADC resolution
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp2
+        can_do: Find quantization error
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp3
+        can_do: Choose number of bits
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp4
+        can_do: Find input range of converters
+        key_prerequisites: [engr.signals.quantization]
+  - id: engr.measurements.daq-sampling
+    name: Choosing sampling rate and anti-alias filters
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.aliasing
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.measurements.analog-filters-for-measurement
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose sampling rate
+        key_prerequisites: [engr.signals.aliasing]
+      - id: kp2
+        can_do: Choose anti-alias filter cutoff
+        key_prerequisites: [engr.measurements.analog-filters-for-measurement]
+      - id: kp3
+        can_do: Find aliased frequencies in data
+        key_prerequisites: [engr.signals.aliasing]
+      - id: kp4
+        can_do: Plan multichannel sampling
+        key_prerequisites: [engr.signals.aliasing, engr.measurements.analog-filters-for-measurement]
+  - id: engr.measurements.spectral-analysis-of-data
+    name: Finding frequency content of measured signals
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.daq-sampling
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.signals.parseval-and-bandwidth
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spectra of measured signals
+        key_prerequisites: [engr.measurements.daq-sampling, engr.signals.parseval-and-bandwidth]
+      - id: kp2
+        can_do: Find frequency resolution
+        key_prerequisites: [engr.measurements.daq-sampling]
+      - id: kp3
+        can_do: Use windows on data
+        key_prerequisites: [engr.measurements.daq-sampling]
+      - id: kp4
+        can_do: Identify vibration frequencies in data
+        key_prerequisites: [engr.signals.parseval-and-bandwidth]
+  - id: engr.measurements.strain-gauges
+    name: Measuring strain with strain gauges
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.wheatstone-bridges
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.strain-rosettes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gauge factor
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp2
+        can_do: Find strain from bridge output
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp3
+        can_do: Compensate for temperature
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp4
+        can_do: Find stress from rosette gauges
+        key_prerequisites: [engr.mech-materials.strain-rosettes]
+  - id: engr.measurements.temperature-sensors
+    name: Measuring temperature with thermocouples, RTDs and thermistors
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.wheatstone-bridges
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use thermocouple tables
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp2
+        can_do: Find RTD resistance at temperature
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp3
+        can_do: Find thermistor temperature
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+      - id: kp4
+        can_do: Choose temperature sensors
+        key_prerequisites: [engr.measurements.wheatstone-bridges]
+  - id: engr.measurements.pressure-transducers
+    name: Measuring pressure with transducers
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.strain-gauges
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe strain-gauge pressure transducers
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp2
+        can_do: Describe piezoelectric transducers
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp3
+        can_do: Find transducer output
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp4
+        can_do: Choose pressure transducers
+        key_prerequisites: [engr.measurements.strain-gauges]
+  - id: engr.measurements.flow-sensors
+    name: Choosing flow measurement devices
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.flow-measurement
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose flow meters
+        key_prerequisites: [engr.fluids.flow-measurement]
+      - id: kp2
+        can_do: Find flow from turbine meters
+        key_prerequisites: [engr.fluids.flow-measurement]
+      - id: kp3
+        can_do: Describe hot-wire anemometers
+        key_prerequisites: [engr.fluids.flow-measurement]
+      - id: kp4
+        can_do: Describe ultrasonic and magnetic meters
+        key_prerequisites: [engr.fluids.flow-measurement]
+  - id: engr.measurements.motion-sensors
+    name: Measuring displacement and acceleration
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.second-order-instruments
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe LVDTs and encoders
+        key_prerequisites: [engr.measurements.second-order-instruments]
+      - id: kp2
+        can_do: Describe accelerometers
+        key_prerequisites: [engr.measurements.second-order-instruments]
+      - id: kp3
+        can_do: Find displacement from sensor output
+        key_prerequisites: [engr.measurements.second-order-instruments]
+      - id: kp4
+        can_do: Choose motion sensors
+        key_prerequisites: [engr.measurements.second-order-instruments]
+  - id: engr.measurements.force-and-torque-sensors
+    name: Measuring force and torque
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.strain-gauges
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe load cells
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp2
+        can_do: Find force from load cell output
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp3
+        can_do: Describe torque sensors
+        key_prerequisites: [engr.measurements.strain-gauges]
+      - id: kp4
+        can_do: Choose force sensors
+        key_prerequisites: [engr.measurements.strain-gauges]
+  - id: engr.measurements.actuators
+    name: Choosing motors and actuators
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.controls.electromechanical-models
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose DC motors
+        key_prerequisites: [engr.controls.electromechanical-models]
+      - id: kp2
+        can_do: Choose stepper and servo motors
+        key_prerequisites: [engr.controls.electromechanical-models]
+      - id: kp3
+        can_do: Describe hydraulic and pneumatic actuators
+        key_prerequisites: [engr.controls.electromechanical-models]
+      - id: kp4
+        can_do: Size actuators for loads
+        key_prerequisites: [engr.controls.electromechanical-models]
+  - id: engr.measurements.microcontroller-interfacing
+    name: Interfacing sensors with microcontrollers
+    subject: engr
+    course: engr.measurements
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.measurements.adc-resolution
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.programming.simulation-loops
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read sensors with a microcontroller
+        key_prerequisites: [engr.measurements.adc-resolution, engr.programming.simulation-loops]
+      - id: kp2
+        can_do: Scale ADC readings to units
+        key_prerequisites: [engr.measurements.adc-resolution]
+      - id: kp3
+        can_do: Log data to storage
+        key_prerequisites: [engr.programming.simulation-loops]
+      - id: kp4
+        can_do: Control outputs from measurements
+        key_prerequisites: [engr.measurements.adc-resolution, engr.programming.simulation-loops]
