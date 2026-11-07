@@ -1,0 +1,850 @@
+course: engr.concrete-design
+topics:
+  - id: engr.concrete-design.concrete-properties
+    name: Describing concrete strength and stress-strain behaviour
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.construction-materials
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe compressive strength of concrete
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp2
+        can_do: Find modulus of elasticity of concrete
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp3
+        can_do: Describe tensile strength and modulus of rupture
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp4
+        can_do: Describe creep and shrinkage
+        key_prerequisites: [engr.materials.construction-materials]
+  - id: engr.concrete-design.reinforcing-steel
+    name: Describing reinforcing bars
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.concrete-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe bar sizes and grades
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp2
+        can_do: Find bar areas
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp3
+        can_do: Describe the steel stress-strain curve
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp4
+        can_do: Choose bar arrangements
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+  - id: engr.concrete-design.concrete-mix-design
+    name: Proportioning concrete mixes
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.concrete-properties
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose water-cement ratio
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp2
+        can_do: Find cement and water content
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp3
+        can_do: Proportion aggregates
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp4
+        can_do: Adjust mixes for air and moisture
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+  - id: engr.concrete-design.strength-design-method
+    name: Explaining the strength design method
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.concrete-properties
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.structural-analysis.load-combinations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain strength design assumptions
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+      - id: kp2
+        can_do: Apply load factors
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp3
+        can_do: Apply strength reduction factors
+        key_prerequisites: [engr.concrete-design.concrete-properties, engr.structural-analysis.load-combinations]
+      - id: kp4
+        can_do: Compare strength and working stress design
+        key_prerequisites: [engr.concrete-design.concrete-properties]
+  - id: engr.concrete-design.cracked-section-behaviour
+    name: Analyzing uncracked and cracked sections
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.reinforcing-steel
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mech-materials.composite-beams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cracking moment
+        key_prerequisites: [engr.concrete-design.reinforcing-steel]
+      - id: kp2
+        can_do: Find stresses in uncracked sections
+        key_prerequisites: [engr.mech-materials.composite-beams]
+      - id: kp3
+        can_do: Find stresses in cracked sections
+        key_prerequisites: [engr.concrete-design.reinforcing-steel, engr.mech-materials.composite-beams]
+      - id: kp4
+        can_do: Find neutral axis of cracked sections
+        key_prerequisites: [engr.mech-materials.composite-beams]
+  - id: engr.concrete-design.whitney-stress-block
+    name: Using the equivalent rectangular stress block
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.cracked-section-behaviour
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.concrete-design.strength-design-method
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the equivalent stress block depth
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour, engr.concrete-design.strength-design-method]
+      - id: kp2
+        can_do: Find beta1 for concrete strengths
+        key_prerequisites: [engr.concrete-design.strength-design-method]
+      - id: kp3
+        can_do: Find compression force in concrete
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour]
+      - id: kp4
+        can_do: Find nominal moment from the stress block
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour, engr.concrete-design.strength-design-method]
+  - id: engr.concrete-design.singly-reinforced-analysis
+    name: Finding flexural strength of singly reinforced beams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.whitney-stress-block
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find nominal moment strength
+        key_prerequisites: [engr.concrete-design.whitney-stress-block]
+      - id: kp2
+        can_do: Check steel yielding
+        key_prerequisites: [engr.concrete-design.whitney-stress-block]
+      - id: kp3
+        can_do: Find design moment strength
+        key_prerequisites: [engr.concrete-design.whitney-stress-block]
+      - id: kp4
+        can_do: Analyze rectangular beams
+        key_prerequisites: [engr.concrete-design.whitney-stress-block]
+  - id: engr.concrete-design.strain-limits-and-phi
+    name: Classifying sections by strain and finding strength reduction factors
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find net tensile strain
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp2
+        can_do: Classify tension-controlled sections
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp3
+        can_do: Find phi from strain
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp4
+        can_do: Check minimum reinforcement
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+  - id: engr.concrete-design.singly-reinforced-design
+    name: Designing singly reinforced beams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.strain-limits-and-phi
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size beams for moment
+        key_prerequisites: [engr.concrete-design.strain-limits-and-phi]
+      - id: kp2
+        can_do: Find required steel area
+        key_prerequisites: [engr.concrete-design.strain-limits-and-phi]
+      - id: kp3
+        can_do: Choose bars and spacing
+        key_prerequisites: [engr.concrete-design.strain-limits-and-phi]
+      - id: kp4
+        can_do: Check design limits
+        key_prerequisites: [engr.concrete-design.strain-limits-and-phi]
+  - id: engr.concrete-design.doubly-reinforced-beams
+    name: Analyzing and designing doubly reinforced beams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze doubly reinforced beams
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp2
+        can_do: Check compression steel yielding
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Design doubly reinforced beams
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Explain uses of compression steel
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+  - id: engr.concrete-design.t-beams
+    name: Analyzing and designing T-beams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective flange width
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp2
+        can_do: Analyze T-beams
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Design T-beams
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Handle negative moment in T-beams
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+  - id: engr.concrete-design.one-way-slabs
+    name: Designing one-way slabs
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slab thickness
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp2
+        can_do: Design one-way slab steel
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Add shrinkage and temperature steel
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Choose bar spacing in slabs
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+  - id: engr.concrete-design.continuous-beams-concrete
+    name: Designing continuous beams with moment coefficients
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.t-beams
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.structural-analysis.moment-distribution-beams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use ACI moment coefficients
+        key_prerequisites: [engr.concrete-design.t-beams, engr.structural-analysis.moment-distribution-beams]
+      - id: kp2
+        can_do: Design positive and negative moment steel
+        key_prerequisites: [engr.concrete-design.t-beams]
+      - id: kp3
+        can_do: Pattern live loads
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+      - id: kp4
+        can_do: Redistribute moments
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+  - id: engr.concrete-design.shear-strength-concrete
+    name: Finding concrete shear strength
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find concrete shear strength
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp2
+        can_do: Find critical section for shear
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp3
+        can_do: Find shear strength with axial load
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp4
+        can_do: Check minimum shear reinforcement
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+  - id: engr.concrete-design.stirrup-design
+    name: Designing shear reinforcement
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.shear-strength-concrete
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find required stirrup spacing
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+      - id: kp2
+        can_do: Check maximum spacing
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+      - id: kp3
+        can_do: Design stirrups along a beam
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+      - id: kp4
+        can_do: Choose stirrup sizes
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+  - id: engr.concrete-design.torsion-in-concrete
+    name: Designing for torsion
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.stirrup-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find threshold torsion
+        key_prerequisites: [engr.concrete-design.stirrup-design]
+      - id: kp2
+        can_do: Design closed stirrups for torsion
+        key_prerequisites: [engr.concrete-design.stirrup-design]
+      - id: kp3
+        can_do: Design longitudinal torsion steel
+        key_prerequisites: [engr.concrete-design.stirrup-design]
+      - id: kp4
+        can_do: Combine shear and torsion
+        key_prerequisites: [engr.concrete-design.stirrup-design]
+  - id: engr.concrete-design.development-length
+    name: Finding development length of bars
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.concrete-design.reinforcing-steel
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find tension development length
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design, engr.concrete-design.reinforcing-steel]
+      - id: kp2
+        can_do: Apply modification factors
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Find compression development length
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Check development at supports
+        key_prerequisites: [engr.concrete-design.reinforcing-steel]
+  - id: engr.concrete-design.hooks-and-splices
+    name: Detailing hooks and splices
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.development-length
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find development of hooked bars
+        key_prerequisites: [engr.concrete-design.development-length]
+      - id: kp2
+        can_do: Design lap splices
+        key_prerequisites: [engr.concrete-design.development-length]
+      - id: kp3
+        can_do: Classify splices
+        key_prerequisites: [engr.concrete-design.development-length]
+      - id: kp4
+        can_do: Detail bars at joints
+        key_prerequisites: [engr.concrete-design.development-length]
+  - id: engr.concrete-design.bar-cutoffs
+    name: Locating bar cutoffs
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.development-length
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.continuous-beams-concrete
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find theoretical cutoff points
+        key_prerequisites: [engr.concrete-design.development-length, engr.concrete-design.continuous-beams-concrete]
+      - id: kp2
+        can_do: Extend bars beyond cutoffs
+        key_prerequisites: [engr.concrete-design.development-length]
+      - id: kp3
+        can_do: Detail bars at inflection points
+        key_prerequisites: [engr.concrete-design.continuous-beams-concrete]
+      - id: kp4
+        can_do: Check cutoffs in tension zones
+        key_prerequisites: [engr.concrete-design.development-length]
+  - id: engr.concrete-design.immediate-deflection-concrete
+    name: Finding immediate deflection with effective moment of inertia
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.cracked-section-behaviour
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.deflection-by-superposition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective moment of inertia
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour]
+      - id: kp2
+        can_do: Find immediate deflection
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour, engr.mech-materials.deflection-by-superposition]
+      - id: kp3
+        can_do: Find deflection of continuous beams
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+      - id: kp4
+        can_do: Check deflection limits
+        key_prerequisites: [engr.concrete-design.cracked-section-behaviour, engr.mech-materials.deflection-by-superposition]
+  - id: engr.concrete-design.long-term-deflection
+    name: Finding long-term deflection
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.immediate-deflection-concrete
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find long-term multiplier
+        key_prerequisites: [engr.concrete-design.immediate-deflection-concrete]
+      - id: kp2
+        can_do: Find total long-term deflection
+        key_prerequisites: [engr.concrete-design.immediate-deflection-concrete]
+      - id: kp3
+        can_do: Include compression steel effects
+        key_prerequisites: [engr.concrete-design.immediate-deflection-concrete]
+      - id: kp4
+        can_do: Check sustained load deflection
+        key_prerequisites: [engr.concrete-design.immediate-deflection-concrete]
+  - id: engr.concrete-design.crack-control
+    name: Controlling cracking by bar spacing
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum bar spacing
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp2
+        can_do: Check crack widths
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Distribute reinforcement
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Explain cracking in service
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+  - id: engr.concrete-design.short-column-axial
+    name: Finding axial strength of short columns
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.strength-design-method
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find axial strength of short columns
+        key_prerequisites: [engr.concrete-design.strength-design-method]
+      - id: kp2
+        can_do: Find maximum design axial load
+        key_prerequisites: [engr.concrete-design.strength-design-method]
+      - id: kp3
+        can_do: Check reinforcement limits
+        key_prerequisites: [engr.concrete-design.strength-design-method]
+      - id: kp4
+        can_do: Design columns for axial load
+        key_prerequisites: [engr.concrete-design.strength-design-method]
+  - id: engr.concrete-design.tied-and-spiral-columns
+    name: Detailing tied and spiral columns
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.short-column-axial
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detail ties
+        key_prerequisites: [engr.concrete-design.short-column-axial]
+      - id: kp2
+        can_do: Design spiral reinforcement
+        key_prerequisites: [engr.concrete-design.short-column-axial]
+      - id: kp3
+        can_do: Compare tied and spiral columns
+        key_prerequisites: [engr.concrete-design.short-column-axial]
+      - id: kp4
+        can_do: Choose column bar layouts
+        key_prerequisites: [engr.concrete-design.short-column-axial]
+  - id: engr.concrete-design.interaction-diagrams
+    name: Constructing column interaction diagrams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.short-column-axial
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.strain-limits-and-phi
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find balanced failure point
+        key_prerequisites: [engr.concrete-design.short-column-axial]
+      - id: kp2
+        can_do: Find points for compression-controlled failure
+        key_prerequisites: [engr.concrete-design.short-column-axial, engr.concrete-design.strain-limits-and-phi]
+      - id: kp3
+        can_do: Find points for tension-controlled failure
+        key_prerequisites: [engr.concrete-design.short-column-axial, engr.concrete-design.strain-limits-and-phi]
+      - id: kp4
+        can_do: Plot interaction diagrams
+        key_prerequisites: [engr.concrete-design.strain-limits-and-phi]
+  - id: engr.concrete-design.column-design-with-moment
+    name: Designing columns for axial load and moment
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.interaction-diagrams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design columns with charts
+        key_prerequisites: [engr.concrete-design.interaction-diagrams]
+      - id: kp2
+        can_do: Find steel for a load and moment
+        key_prerequisites: [engr.concrete-design.interaction-diagrams]
+      - id: kp3
+        can_do: Check columns for biaxial bending
+        key_prerequisites: [engr.concrete-design.interaction-diagrams]
+      - id: kp4
+        can_do: Choose column sizes
+        key_prerequisites: [engr.concrete-design.interaction-diagrams]
+  - id: engr.concrete-design.slender-columns
+    name: Designing slender columns by moment magnification
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.column-design-with-moment
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.structural-analysis.frame-buckling-concepts
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check slenderness limits
+        key_prerequisites: [engr.concrete-design.column-design-with-moment]
+      - id: kp2
+        can_do: Find moment magnification for braced columns
+        key_prerequisites: [engr.concrete-design.column-design-with-moment, engr.structural-analysis.frame-buckling-concepts]
+      - id: kp3
+        can_do: Find magnification for sway columns
+        key_prerequisites: [engr.concrete-design.column-design-with-moment, engr.structural-analysis.frame-buckling-concepts]
+      - id: kp4
+        can_do: Design slender columns
+        key_prerequisites: [engr.concrete-design.column-design-with-moment]
+  - id: engr.concrete-design.two-way-slabs
+    name: Designing two-way slabs
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.one-way-slabs
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minimum slab thickness
+        key_prerequisites: [engr.concrete-design.one-way-slabs]
+      - id: kp2
+        can_do: Use the direct design method
+        key_prerequisites: [engr.concrete-design.one-way-slabs]
+      - id: kp3
+        can_do: Distribute moments to strips
+        key_prerequisites: [engr.concrete-design.one-way-slabs]
+      - id: kp4
+        can_do: Design two-way slab steel
+        key_prerequisites: [engr.concrete-design.one-way-slabs]
+  - id: engr.concrete-design.punching-shear
+    name: Checking punching shear
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.two-way-slabs
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.shear-strength-concrete
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find critical perimeter
+        key_prerequisites: [engr.concrete-design.two-way-slabs]
+      - id: kp2
+        can_do: Find punching shear strength
+        key_prerequisites: [engr.concrete-design.two-way-slabs, engr.concrete-design.shear-strength-concrete]
+      - id: kp3
+        can_do: Check columns for punching shear
+        key_prerequisites: [engr.concrete-design.two-way-slabs, engr.concrete-design.shear-strength-concrete]
+      - id: kp4
+        can_do: Add shear reinforcement in slabs
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+  - id: engr.concrete-design.wall-footings
+    name: Designing wall footings
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.soil-mechanics.footing-sizing
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.shear-strength-concrete
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find footing width
+        key_prerequisites: [engr.soil-mechanics.footing-sizing]
+      - id: kp2
+        can_do: Check one-way shear
+        key_prerequisites: [engr.concrete-design.shear-strength-concrete]
+      - id: kp3
+        can_do: Design footing flexural steel
+        key_prerequisites: [engr.soil-mechanics.footing-sizing, engr.concrete-design.shear-strength-concrete]
+      - id: kp4
+        can_do: Check development in footings
+        key_prerequisites: [engr.soil-mechanics.footing-sizing]
+  - id: engr.concrete-design.column-footings
+    name: Designing isolated column footings
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.wall-footings
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.punching-shear
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size column footings
+        key_prerequisites: [engr.concrete-design.wall-footings]
+      - id: kp2
+        can_do: Check punching shear in footings
+        key_prerequisites: [engr.concrete-design.punching-shear]
+      - id: kp3
+        can_do: Design footing steel in both directions
+        key_prerequisites: [engr.concrete-design.wall-footings]
+      - id: kp4
+        can_do: Check bearing at column interface
+        key_prerequisites: [engr.concrete-design.wall-footings, engr.concrete-design.punching-shear]
+  - id: engr.concrete-design.retaining-wall-design
+    name: Designing reinforced retaining walls
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.soil-mechanics.retaining-wall-stability
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.concrete-design.singly-reinforced-design
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stem moments
+        key_prerequisites: [engr.soil-mechanics.retaining-wall-stability]
+      - id: kp2
+        can_do: Design stem reinforcement
+        key_prerequisites: [engr.soil-mechanics.retaining-wall-stability, engr.concrete-design.singly-reinforced-design]
+      - id: kp3
+        can_do: Design heel and toe
+        key_prerequisites: [engr.soil-mechanics.retaining-wall-stability, engr.concrete-design.singly-reinforced-design]
+      - id: kp4
+        can_do: Check shear in wall parts
+        key_prerequisites: [engr.concrete-design.singly-reinforced-design]
+  - id: engr.concrete-design.prestressing-concepts
+    name: Explaining prestressing
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.singly-reinforced-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain prestressing
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp2
+        can_do: Compare pretensioning and post-tensioning
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp3
+        can_do: Describe prestressing steel
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+      - id: kp4
+        can_do: Explain load balancing
+        key_prerequisites: [engr.concrete-design.singly-reinforced-analysis]
+  - id: engr.concrete-design.prestress-stresses
+    name: Finding stresses in prestressed beams
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.prestressing-concepts
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.combined-loadings
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stresses at transfer
+        key_prerequisites: [engr.concrete-design.prestressing-concepts, engr.mech-materials.combined-loadings]
+      - id: kp2
+        can_do: Find stresses at service
+        key_prerequisites: [engr.concrete-design.prestressing-concepts, engr.mech-materials.combined-loadings]
+      - id: kp3
+        can_do: Check allowable stresses
+        key_prerequisites: [engr.concrete-design.prestressing-concepts]
+      - id: kp4
+        can_do: Find tendon profiles
+        key_prerequisites: [engr.mech-materials.combined-loadings]
+  - id: engr.concrete-design.prestress-losses
+    name: Estimating prestress losses
+    subject: engr
+    course: engr.concrete-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.concrete-design.prestress-stresses
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find elastic shortening loss
+        key_prerequisites: [engr.concrete-design.prestress-stresses]
+      - id: kp2
+        can_do: Find creep and shrinkage losses
+        key_prerequisites: [engr.concrete-design.prestress-stresses]
+      - id: kp3
+        can_do: Find relaxation and friction losses
+        key_prerequisites: [engr.concrete-design.prestress-stresses]
+      - id: kp4
+        can_do: Find total prestress loss
+        key_prerequisites: [engr.concrete-design.prestress-stresses]
