@@ -1,0 +1,1119 @@
+course: engr.machine-design
+topics:
+  - id: engr.machine-design.design-factors-and-reliability
+    name: Choosing design factors and estimating reliability
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.allowable-stress-design
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.normal-distribution-pdf
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose design factors
+        key_prerequisites: [engr.mech-materials.allowable-stress-design]
+      - id: kp2
+        can_do: Find reliability from normal distributions
+        key_prerequisites: [math.probstat.normal-distribution-pdf]
+      - id: kp3
+        can_do: Find interference of stress and strength
+        key_prerequisites: [engr.mech-materials.allowable-stress-design, math.probstat.normal-distribution-pdf]
+      - id: kp4
+        can_do: Find factor of safety from design factor
+        key_prerequisites: [engr.mech-materials.allowable-stress-design]
+  - id: engr.machine-design.static-failure-ductile
+    name: Applying distortion-energy and maximum-shear theories
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.failure-theories-intro
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply maximum shear stress theory
+        key_prerequisites: [engr.mech-materials.failure-theories-intro]
+      - id: kp2
+        can_do: Apply distortion energy theory
+        key_prerequisites: [engr.mech-materials.failure-theories-intro]
+      - id: kp3
+        can_do: Find von Mises stress
+        key_prerequisites: [engr.mech-materials.failure-theories-intro]
+      - id: kp4
+        can_do: Find factor of safety for ductile parts
+        key_prerequisites: [engr.mech-materials.failure-theories-intro]
+  - id: engr.machine-design.static-failure-brittle
+    name: Applying Coulomb-Mohr and modified Mohr theories
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.static-failure-ductile
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Coulomb-Mohr theory
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp2
+        can_do: Apply modified Mohr theory
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp3
+        can_do: Find factor of safety for brittle parts
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp4
+        can_do: Choose a failure theory
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+  - id: engr.machine-design.stress-concentration-design
+    name: Using stress concentration and notch sensitivity
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.static-failure-ductile
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.materials.fracture-toughness
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stress concentration factors from charts
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp2
+        can_do: Apply concentration to ductile and brittle parts
+        key_prerequisites: [engr.machine-design.static-failure-ductile, engr.materials.fracture-toughness]
+      - id: kp3
+        can_do: Reduce concentrations by design
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp4
+        can_do: Combine concentration with failure theories
+        key_prerequisites: [engr.materials.fracture-toughness]
+  - id: engr.machine-design.endurance-limit
+    name: Estimating endurance limits
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.fatigue-basics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate endurance limit from tensile strength
+        key_prerequisites: [engr.materials.fatigue-basics]
+      - id: kp2
+        can_do: Find fatigue strength at finite life
+        key_prerequisites: [engr.materials.fatigue-basics]
+      - id: kp3
+        can_do: Build S-N diagrams
+        key_prerequisites: [engr.materials.fatigue-basics]
+      - id: kp4
+        can_do: Find life at a stress level
+        key_prerequisites: [engr.materials.fatigue-basics]
+  - id: engr.machine-design.marin-factors
+    name: Modifying endurance limits with Marin factors
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.endurance-limit
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find surface factor
+        key_prerequisites: [engr.machine-design.endurance-limit]
+      - id: kp2
+        can_do: Find size factor
+        key_prerequisites: [engr.machine-design.endurance-limit]
+      - id: kp3
+        can_do: Find load, temperature and reliability factors
+        key_prerequisites: [engr.machine-design.endurance-limit]
+      - id: kp4
+        can_do: Find modified endurance limit
+        key_prerequisites: [engr.machine-design.endurance-limit]
+  - id: engr.machine-design.fatigue-stress-concentration
+    name: Applying fatigue stress concentration factors
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.marin-factors
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.machine-design.stress-concentration-design
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find notch sensitivity
+        key_prerequisites: [engr.machine-design.marin-factors, engr.machine-design.stress-concentration-design]
+      - id: kp2
+        can_do: Find fatigue stress concentration factor
+        key_prerequisites: [engr.machine-design.marin-factors]
+      - id: kp3
+        can_do: Apply concentration to fatigue stress
+        key_prerequisites: [engr.machine-design.marin-factors]
+      - id: kp4
+        can_do: Compare notch effects for materials
+        key_prerequisites: [engr.machine-design.stress-concentration-design]
+  - id: engr.machine-design.fluctuating-stresses
+    name: Analyzing fluctuating stresses with Goodman and Gerber criteria
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.fatigue-stress-concentration
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find alternating and mean stresses
+        key_prerequisites: [engr.machine-design.fatigue-stress-concentration]
+      - id: kp2
+        can_do: Apply the Goodman criterion
+        key_prerequisites: [engr.machine-design.fatigue-stress-concentration]
+      - id: kp3
+        can_do: Apply Gerber and ASME-elliptic criteria
+        key_prerequisites: [engr.machine-design.fatigue-stress-concentration]
+      - id: kp4
+        can_do: Check first-cycle yielding
+        key_prerequisites: [engr.machine-design.fatigue-stress-concentration]
+  - id: engr.machine-design.combined-fatigue-loading
+    name: Analyzing combined fatigue loading
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.fluctuating-stresses
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find von Mises alternating and mean stresses
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp2
+        can_do: Apply fatigue criteria to combined loads
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp3
+        can_do: Find factor of safety for combined fatigue
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp4
+        can_do: Handle varying loads on shafts
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+  - id: engr.machine-design.cumulative-fatigue-damage
+    name: Using Miner's rule
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.fluctuating-stresses
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Miner's rule
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp2
+        can_do: Find life under several stress levels
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp3
+        can_do: Find damage from load spectra
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp4
+        can_do: Explain limits of Miner's rule
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+  - id: engr.machine-design.shaft-layout
+    name: Laying out shafts and attachments
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.power-transmission-shafts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Lay out shaft steps and shoulders
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts]
+      - id: kp2
+        can_do: Locate bearings and gears on shafts
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts]
+      - id: kp3
+        can_do: Choose shaft materials
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts]
+      - id: kp4
+        can_do: Find shaft loads from components
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts]
+  - id: engr.machine-design.shaft-stress-design
+    name: Designing shafts for fatigue
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.shaft-layout
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.machine-design.combined-fatigue-loading
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stresses at critical locations
+        key_prerequisites: [engr.machine-design.shaft-layout]
+      - id: kp2
+        can_do: Find shaft diameters for fatigue
+        key_prerequisites: [engr.machine-design.shaft-layout, engr.machine-design.combined-fatigue-loading]
+      - id: kp3
+        can_do: Check yielding of shafts
+        key_prerequisites: [engr.machine-design.shaft-layout]
+      - id: kp4
+        can_do: Iterate shaft designs
+        key_prerequisites: [engr.machine-design.combined-fatigue-loading]
+  - id: engr.machine-design.shaft-deflection
+    name: Checking shaft deflection and slope
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.shaft-stress-design
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.deflection-by-superposition
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shaft deflections
+        key_prerequisites: [engr.machine-design.shaft-stress-design, engr.mech-materials.deflection-by-superposition]
+      - id: kp2
+        can_do: Find slopes at bearings
+        key_prerequisites: [engr.machine-design.shaft-stress-design, engr.mech-materials.deflection-by-superposition]
+      - id: kp3
+        can_do: Check deflection limits
+        key_prerequisites: [engr.machine-design.shaft-stress-design]
+      - id: kp4
+        can_do: Size shafts for stiffness
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+  - id: engr.machine-design.critical-speeds
+    name: Finding critical speeds of shafts
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.shaft-deflection
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.undamped-free-vibration
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find critical speed with Rayleigh's method
+        key_prerequisites: [engr.machine-design.shaft-deflection, engr.dynamics.undamped-free-vibration]
+      - id: kp2
+        can_do: Find critical speed of shafts with several masses
+        key_prerequisites: [engr.machine-design.shaft-deflection]
+      - id: kp3
+        can_do: Compare operating and critical speeds
+        key_prerequisites: [engr.dynamics.undamped-free-vibration]
+      - id: kp4
+        can_do: Raise critical speed by design
+        key_prerequisites: [engr.machine-design.shaft-deflection]
+  - id: engr.machine-design.keys-and-couplings
+    name: Designing keys and couplings
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.shaft-stress-design
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size keys for torque
+        key_prerequisites: [engr.machine-design.shaft-stress-design]
+      - id: kp2
+        can_do: Check keys for shear and crushing
+        key_prerequisites: [engr.machine-design.shaft-stress-design]
+      - id: kp3
+        can_do: Choose retaining rings and pins
+        key_prerequisites: [engr.machine-design.shaft-stress-design]
+      - id: kp4
+        can_do: Choose couplings
+        key_prerequisites: [engr.machine-design.shaft-stress-design]
+  - id: engr.machine-design.limits-and-fits
+    name: Choosing limits and fits
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.shaft-layout
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use standard tolerance grades
+        key_prerequisites: [engr.machine-design.shaft-layout]
+      - id: kp2
+        can_do: Choose clearance and interference fits
+        key_prerequisites: [engr.machine-design.shaft-layout]
+      - id: kp3
+        can_do: Find limits from fit tables
+        key_prerequisites: [engr.machine-design.shaft-layout]
+      - id: kp4
+        can_do: Find interference pressure
+        key_prerequisites: [engr.machine-design.shaft-layout]
+  - id: engr.machine-design.power-screws
+    name: Analyzing power screws
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.square-threaded-screws
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find torque to raise and lower loads
+        key_prerequisites: [engr.statics.square-threaded-screws]
+      - id: kp2
+        can_do: Find power screw efficiency
+        key_prerequisites: [engr.statics.square-threaded-screws]
+      - id: kp3
+        can_do: Check self-locking
+        key_prerequisites: [engr.statics.square-threaded-screws]
+      - id: kp4
+        can_do: Find stresses in screw threads
+        key_prerequisites: [engr.statics.square-threaded-screws]
+  - id: engr.machine-design.bolted-joint-stiffness
+    name: Finding bolt and member stiffness
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bolt stiffness
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp2
+        can_do: Find member stiffness
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp3
+        can_do: Find joint constant
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp4
+        can_do: Find bolt and member load shares
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+  - id: engr.machine-design.bolt-preload
+    name: Designing bolt preload for static loads
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.bolted-joint-stiffness
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find recommended preload
+        key_prerequisites: [engr.machine-design.bolted-joint-stiffness]
+      - id: kp2
+        can_do: Find bolt load under external load
+        key_prerequisites: [engr.machine-design.bolted-joint-stiffness]
+      - id: kp3
+        can_do: Find factor of safety against separation
+        key_prerequisites: [engr.machine-design.bolted-joint-stiffness]
+      - id: kp4
+        can_do: Find tightening torque
+        key_prerequisites: [engr.machine-design.bolted-joint-stiffness]
+  - id: engr.machine-design.fatigue-of-bolted-joints
+    name: Analyzing fatigue of bolted joints
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.bolt-preload
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.machine-design.fluctuating-stresses
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find alternating bolt stress
+        key_prerequisites: [engr.machine-design.bolt-preload, engr.machine-design.fluctuating-stresses]
+      - id: kp2
+        can_do: Apply fatigue criteria to bolts
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp3
+        can_do: Find effect of preload on fatigue
+        key_prerequisites: [engr.machine-design.bolt-preload]
+      - id: kp4
+        can_do: Choose bolts for fatigue
+        key_prerequisites: [engr.machine-design.bolt-preload, engr.machine-design.fluctuating-stresses]
+  - id: engr.machine-design.bolts-in-shear
+    name: Analyzing bolted joints in shear
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.bolt-preload
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear loads on bolt patterns
+        key_prerequisites: [engr.machine-design.bolt-preload]
+      - id: kp2
+        can_do: Check bolts in shear
+        key_prerequisites: [engr.machine-design.bolt-preload]
+      - id: kp3
+        can_do: Check bearing of members
+        key_prerequisites: [engr.machine-design.bolt-preload]
+      - id: kp4
+        can_do: Design shear joints
+        key_prerequisites: [engr.machine-design.bolt-preload]
+  - id: engr.machine-design.welded-joints
+    name: Designing welded joints
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.static-failure-ductile
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mech-materials.shear-flow-built-up
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear stress in welds
+        key_prerequisites: [engr.machine-design.static-failure-ductile, engr.mech-materials.shear-flow-built-up]
+      - id: kp2
+        can_do: Find stress in welds under bending
+        key_prerequisites: [engr.machine-design.static-failure-ductile]
+      - id: kp3
+        can_do: Find stress in welds under torsion
+        key_prerequisites: [engr.mech-materials.shear-flow-built-up]
+      - id: kp4
+        can_do: Design welds for fatigue
+        key_prerequisites: [engr.machine-design.static-failure-ductile, engr.mech-materials.shear-flow-built-up]
+  - id: engr.machine-design.helical-compression-springs
+    name: Finding stress and deflection of helical springs
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.torsion-of-circular-shafts
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear stress in springs
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp2
+        can_do: Find spring rate
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp3
+        can_do: Find spring deflection
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp4
+        can_do: Find Wahl factor
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+  - id: engr.machine-design.spring-design
+    name: Designing helical compression springs
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.helical-compression-springs
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose spring materials
+        key_prerequisites: [engr.machine-design.helical-compression-springs]
+      - id: kp2
+        can_do: Design springs for static loads
+        key_prerequisites: [engr.machine-design.helical-compression-springs]
+      - id: kp3
+        can_do: Check buckling of springs
+        key_prerequisites: [engr.machine-design.helical-compression-springs]
+      - id: kp4
+        can_do: Find solid and free lengths
+        key_prerequisites: [engr.machine-design.helical-compression-springs]
+  - id: engr.machine-design.spring-fatigue
+    name: Designing springs for fatigue
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.spring-design
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.machine-design.fluctuating-stresses
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find alternating and mean spring stresses
+        key_prerequisites: [engr.machine-design.spring-design, engr.machine-design.fluctuating-stresses]
+      - id: kp2
+        can_do: Design springs for fatigue
+        key_prerequisites: [engr.machine-design.fluctuating-stresses]
+      - id: kp3
+        can_do: Check surge frequency
+        key_prerequisites: [engr.machine-design.spring-design]
+      - id: kp4
+        can_do: Choose shot-peened springs
+        key_prerequisites: [engr.machine-design.spring-design]
+  - id: engr.machine-design.extension-and-torsion-springs
+    name: Designing extension and torsion springs
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.spring-design
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design extension springs
+        key_prerequisites: [engr.machine-design.spring-design]
+      - id: kp2
+        can_do: Check hook stresses
+        key_prerequisites: [engr.machine-design.spring-design]
+      - id: kp3
+        can_do: Design torsion springs
+        key_prerequisites: [engr.machine-design.spring-design]
+      - id: kp4
+        can_do: Find torsion spring rate
+        key_prerequisites: [engr.machine-design.spring-design]
+  - id: engr.machine-design.rolling-bearing-life
+    name: Finding rolling bearing life
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.design-factors-and-reliability
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bearing life from load ratings
+        key_prerequisites: [engr.machine-design.design-factors-and-reliability]
+      - id: kp2
+        can_do: Find life at a reliability
+        key_prerequisites: [engr.machine-design.design-factors-and-reliability]
+      - id: kp3
+        can_do: Find equivalent radial load
+        key_prerequisites: [engr.machine-design.design-factors-and-reliability]
+      - id: kp4
+        can_do: Find catalog rating for a design
+        key_prerequisites: [engr.machine-design.design-factors-and-reliability]
+  - id: engr.machine-design.rolling-bearing-selection
+    name: Selecting rolling bearings for combined loads
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.rolling-bearing-life
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select ball bearings
+        key_prerequisites: [engr.machine-design.rolling-bearing-life]
+      - id: kp2
+        can_do: Select tapered roller bearings
+        key_prerequisites: [engr.machine-design.rolling-bearing-life]
+      - id: kp3
+        can_do: Find combined radial and thrust loads
+        key_prerequisites: [engr.machine-design.rolling-bearing-life]
+      - id: kp4
+        can_do: Choose bearing lubrication
+        key_prerequisites: [engr.machine-design.rolling-bearing-life]
+  - id: engr.machine-design.journal-bearing-lubrication
+    name: Analyzing hydrodynamic journal bearings
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.couette-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe hydrodynamic lubrication
+        key_prerequisites: [engr.fluids.couette-flow]
+      - id: kp2
+        can_do: Use the Petroff equation
+        key_prerequisites: [engr.fluids.couette-flow]
+      - id: kp3
+        can_do: Use the Sommerfeld number
+        key_prerequisites: [engr.fluids.couette-flow]
+      - id: kp4
+        can_do: Find film thickness from charts
+        key_prerequisites: [engr.fluids.couette-flow]
+  - id: engr.machine-design.gear-geometry
+    name: Describing spur gear geometry
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.linkage-velocity-analysis
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use gear terminology
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp2
+        can_do: Find pitch diameter and module
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp3
+        can_do: Find contact ratio
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp4
+        can_do: Check interference
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+  - id: engr.machine-design.gear-trains
+    name: Analyzing simple, compound and planetary gear trains
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.gear-geometry
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find train value of simple trains
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp2
+        can_do: Find speeds in compound trains
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp3
+        can_do: Find speeds in planetary trains
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp4
+        can_do: Design trains for a speed ratio
+        key_prerequisites: [engr.machine-design.gear-geometry]
+  - id: engr.machine-design.gear-force-analysis
+    name: Finding forces on spur and helical gears
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.gear-geometry
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find forces on spur gears
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp2
+        can_do: Find forces on helical gears
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp3
+        can_do: Find forces on bevel and worm gears
+        key_prerequisites: [engr.machine-design.gear-geometry]
+      - id: kp4
+        can_do: Find bearing reactions from gear forces
+        key_prerequisites: [engr.machine-design.gear-geometry]
+  - id: engr.machine-design.lewis-bending-stress
+    name: Finding gear bending stress with the Lewis equation
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.gear-force-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Lewis equation
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp2
+        can_do: Find velocity factors
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp3
+        can_do: Size gears for bending
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp4
+        can_do: Find form factors
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+  - id: engr.machine-design.agma-bending-and-contact
+    name: Checking gears with AGMA bending and contact equations
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.lewis-bending-stress
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find AGMA bending stress
+        key_prerequisites: [engr.machine-design.lewis-bending-stress]
+      - id: kp2
+        can_do: Find AGMA contact stress
+        key_prerequisites: [engr.machine-design.lewis-bending-stress]
+      - id: kp3
+        can_do: Apply AGMA factors
+        key_prerequisites: [engr.machine-design.lewis-bending-stress]
+      - id: kp4
+        can_do: Find gear safety factors
+        key_prerequisites: [engr.machine-design.lewis-bending-stress]
+  - id: engr.machine-design.helical-bevel-worm-gears
+    name: Describing helical, bevel and worm gears
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.gear-force-analysis
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe helical gear geometry
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp2
+        can_do: Describe bevel gears
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp3
+        can_do: Describe worm gears
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+      - id: kp4
+        can_do: Find efficiency of worm drives
+        key_prerequisites: [engr.machine-design.gear-force-analysis]
+  - id: engr.machine-design.belt-drives
+    name: Designing flat and V-belt drives
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.belt-friction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find belt tensions
+        key_prerequisites: [engr.statics.belt-friction]
+      - id: kp2
+        can_do: Find power capacity of flat belts
+        key_prerequisites: [engr.statics.belt-friction]
+      - id: kp3
+        can_do: Select V-belts
+        key_prerequisites: [engr.statics.belt-friction]
+      - id: kp4
+        can_do: Find belt length
+        key_prerequisites: [engr.statics.belt-friction]
+  - id: engr.machine-design.chain-drives
+    name: Selecting roller chains
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.belt-drives
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select roller chains
+        key_prerequisites: [engr.machine-design.belt-drives]
+      - id: kp2
+        can_do: Find chain length
+        key_prerequisites: [engr.machine-design.belt-drives]
+      - id: kp3
+        can_do: Find power ratings
+        key_prerequisites: [engr.machine-design.belt-drives]
+      - id: kp4
+        can_do: Explain chordal speed variation
+        key_prerequisites: [engr.machine-design.belt-drives]
+  - id: engr.machine-design.clutches-and-brakes
+    name: Analyzing clutches and brakes
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.bearing-and-disk-friction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze disk clutches
+        key_prerequisites: [engr.statics.bearing-and-disk-friction]
+      - id: kp2
+        can_do: Analyze drum brakes
+        key_prerequisites: [engr.statics.bearing-and-disk-friction]
+      - id: kp3
+        can_do: Analyze band brakes
+        key_prerequisites: [engr.statics.bearing-and-disk-friction]
+      - id: kp4
+        can_do: Find energy and temperature rise
+        key_prerequisites: [engr.statics.bearing-and-disk-friction]
+  - id: engr.machine-design.flywheels
+    name: Sizing flywheels
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rigid-work-energy
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy fluctuation
+        key_prerequisites: [engr.dynamics.rigid-work-energy]
+      - id: kp2
+        can_do: Find flywheel inertia
+        key_prerequisites: [engr.dynamics.rigid-work-energy]
+      - id: kp3
+        can_do: Find coefficient of speed fluctuation
+        key_prerequisites: [engr.dynamics.rigid-work-energy]
+      - id: kp4
+        can_do: Size flywheels
+        key_prerequisites: [engr.dynamics.rigid-work-energy]
+  - id: engr.machine-design.linkage-synthesis
+    name: Synthesizing four-bar linkages graphically
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.linkage-velocity-analysis
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Synthesize two-position linkages
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp2
+        can_do: Synthesize three-position linkages
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp3
+        can_do: Synthesize function generators
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+      - id: kp4
+        can_do: Check linkage designs
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+  - id: engr.machine-design.grashof-condition
+    name: Classifying linkages with the Grashof condition
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.linkage-synthesis
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the Grashof condition
+        key_prerequisites: [engr.machine-design.linkage-synthesis]
+      - id: kp2
+        can_do: Classify linkages
+        key_prerequisites: [engr.machine-design.linkage-synthesis]
+      - id: kp3
+        can_do: Find transmission angle
+        key_prerequisites: [engr.machine-design.linkage-synthesis]
+      - id: kp4
+        can_do: Find toggle positions
+        key_prerequisites: [engr.machine-design.linkage-synthesis]
+  - id: engr.machine-design.cam-profiles
+    name: Designing cam displacement profiles
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.linkage-acceleration-analysis
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose follower motion programs
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis]
+      - id: kp2
+        can_do: Find velocity, acceleration and jerk of followers
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis]
+      - id: kp3
+        can_do: Design cam profiles
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis]
+      - id: kp4
+        can_do: Find pressure angle
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis]
+  - id: engr.machine-design.dynamic-force-analysis
+    name: Finding dynamic forces in mechanisms
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.linkage-acceleration-analysis
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.dynamics.general-plane-motion-kinetics
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find inertia forces in linkages
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis, engr.dynamics.general-plane-motion-kinetics]
+      - id: kp2
+        can_do: Find joint forces in moving linkages
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp3
+        can_do: Find input torque of mechanisms
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis, engr.dynamics.general-plane-motion-kinetics]
+      - id: kp4
+        can_do: Find shaking forces
+        key_prerequisites: [engr.dynamics.linkage-acceleration-analysis]
+  - id: engr.machine-design.balancing
+    name: Balancing rotating and reciprocating masses
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.dynamic-force-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Balance rotating masses in one plane
+        key_prerequisites: [engr.machine-design.dynamic-force-analysis]
+      - id: kp2
+        can_do: Balance rotating masses in two planes
+        key_prerequisites: [engr.machine-design.dynamic-force-analysis]
+      - id: kp3
+        can_do: Balance reciprocating masses
+        key_prerequisites: [engr.machine-design.dynamic-force-analysis]
+      - id: kp4
+        can_do: Find unbalance from measurements
+        key_prerequisites: [engr.machine-design.dynamic-force-analysis]
+  - id: engr.machine-design.pressure-vessels-and-press-fits
+    name: Analyzing thick-walled cylinders and press fits
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.thin-walled-pressure-vessels
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.machine-design.limits-and-fits
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stresses in thick-walled cylinders
+        key_prerequisites: [engr.mech-materials.thin-walled-pressure-vessels]
+      - id: kp2
+        can_do: Find interference pressure of press fits
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp3
+        can_do: Find stresses from press fits
+        key_prerequisites: [engr.mech-materials.thin-walled-pressure-vessels, engr.machine-design.limits-and-fits]
+      - id: kp4
+        can_do: Find torque capacity of press fits
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+  - id: engr.machine-design.finite-element-basics
+    name: Explaining finite element analysis for machine parts
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.truss-matrix-solution
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe finite element modelling
+        key_prerequisites: [engr.statics.truss-matrix-solution]
+      - id: kp2
+        can_do: Write element stiffness for bars
+        key_prerequisites: [engr.statics.truss-matrix-solution, engr.mech-materials.axial-deformation]
+      - id: kp3
+        can_do: Choose meshes and boundary conditions
+        key_prerequisites: [engr.statics.truss-matrix-solution]
+      - id: kp4
+        can_do: Check finite element results
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+  - id: engr.machine-design.gdt-basics
+    name: Reading geometric dimensioning and tolerancing
+    subject: engr
+    course: engr.machine-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.limits-and-fits
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read feature control frames
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp2
+        can_do: Use datums
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp3
+        can_do: Apply form and orientation tolerances
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp4
+        can_do: Apply position tolerances
+        key_prerequisites: [engr.machine-design.limits-and-fits]
