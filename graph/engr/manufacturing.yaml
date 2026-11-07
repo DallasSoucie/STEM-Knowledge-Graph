@@ -1,0 +1,756 @@
+course: engr.manufacturing
+topics:
+  - id: engr.manufacturing.dimensional-metrology
+    name: Measuring parts and surface finish
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.machine-design.limits-and-fits
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure with calipers and micrometers
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp2
+        can_do: Use gauge blocks and coordinate measuring machines
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp3
+        can_do: Measure surface roughness
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+      - id: kp4
+        can_do: Check parts against tolerances
+        key_prerequisites: [engr.machine-design.limits-and-fits]
+  - id: engr.manufacturing.process-capability
+    name: Finding process capability indices
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.dimensional-metrology
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.normal-distribution-pdf
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find process capability ratio
+        key_prerequisites: [engr.manufacturing.dimensional-metrology, math.probstat.normal-distribution-pdf]
+      - id: kp2
+        can_do: Find capability index with off-centre mean
+        key_prerequisites: [engr.manufacturing.dimensional-metrology, math.probstat.normal-distribution-pdf]
+      - id: kp3
+        can_do: Find fraction of parts out of tolerance
+        key_prerequisites: [math.probstat.normal-distribution-pdf]
+      - id: kp4
+        can_do: Choose processes for tolerances
+        key_prerequisites: [engr.manufacturing.dimensional-metrology]
+  - id: engr.manufacturing.statistical-process-control
+    name: Using control charts
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.process-capability
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build x-bar and R charts
+        key_prerequisites: [engr.manufacturing.process-capability]
+      - id: kp2
+        can_do: Find control limits
+        key_prerequisites: [engr.manufacturing.process-capability]
+      - id: kp3
+        can_do: Identify out-of-control patterns
+        key_prerequisites: [engr.manufacturing.process-capability]
+      - id: kp4
+        can_do: Build charts for attributes
+        key_prerequisites: [engr.manufacturing.process-capability]
+  - id: engr.manufacturing.casting-processes
+    name: Comparing casting processes
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.microstructure-development
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare sand casting and die casting
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp2
+        can_do: Compare investment and permanent mold casting
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp3
+        can_do: Describe solidification of metals
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp4
+        can_do: Choose casting processes
+        key_prerequisites: [engr.materials.microstructure-development]
+  - id: engr.manufacturing.solidification-time
+    name: Finding solidification time with Chvorinov's rule
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.casting-processes
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Chvorinov's rule
+        key_prerequisites: [engr.manufacturing.casting-processes]
+      - id: kp2
+        can_do: Find solidification time of shapes
+        key_prerequisites: [engr.manufacturing.casting-processes]
+      - id: kp3
+        can_do: Compare solidification of riser and casting
+        key_prerequisites: [engr.manufacturing.casting-processes]
+      - id: kp4
+        can_do: Find mold constant from data
+        key_prerequisites: [engr.manufacturing.casting-processes]
+  - id: engr.manufacturing.gating-and-risers
+    name: Designing gating systems and risers
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.solidification-time
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.bernoulli-applications
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pouring velocity
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp2
+        can_do: Size sprues and gates
+        key_prerequisites: [engr.manufacturing.solidification-time, engr.fluids.bernoulli-applications]
+      - id: kp3
+        can_do: Size risers
+        key_prerequisites: [engr.manufacturing.solidification-time]
+      - id: kp4
+        can_do: Place risers
+        key_prerequisites: [engr.manufacturing.solidification-time]
+  - id: engr.manufacturing.casting-defects
+    name: Diagnosing casting defects
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.gating-and-risers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify shrinkage defects
+        key_prerequisites: [engr.manufacturing.gating-and-risers]
+      - id: kp2
+        can_do: Identify gas porosity
+        key_prerequisites: [engr.manufacturing.gating-and-risers]
+      - id: kp3
+        can_do: Identify misruns and cold shuts
+        key_prerequisites: [engr.manufacturing.gating-and-risers]
+      - id: kp4
+        can_do: Prevent casting defects by design
+        key_prerequisites: [engr.manufacturing.gating-and-risers]
+  - id: engr.manufacturing.plastic-flow-stress
+    name: Using flow stress and strain hardening
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.true-stress-strain
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use flow curves
+        key_prerequisites: [engr.materials.true-stress-strain]
+      - id: kp2
+        can_do: Find average flow stress
+        key_prerequisites: [engr.materials.true-stress-strain]
+      - id: kp3
+        can_do: Compare hot and cold working
+        key_prerequisites: [engr.materials.true-stress-strain]
+      - id: kp4
+        can_do: Include strain rate effects
+        key_prerequisites: [engr.materials.true-stress-strain]
+  - id: engr.manufacturing.rolling-process
+    name: Finding forces and power in rolling
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.plastic-flow-stress
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find draft and reduction in rolling
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp2
+        can_do: Find rolling force
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp3
+        can_do: Find rolling power
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp4
+        can_do: Find maximum possible draft
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+  - id: engr.manufacturing.forging
+    name: Finding forging forces
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.plastic-flow-stress
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find forging force
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp2
+        can_do: Include friction in forging
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp3
+        can_do: Compare open-die and impression-die forging
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp4
+        can_do: Describe forging defects
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+  - id: engr.manufacturing.extrusion-and-drawing
+    name: Finding extrusion and drawing forces
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.plastic-flow-stress
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find extrusion pressure
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp2
+        can_do: Find extrusion force
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp3
+        can_do: Find wire drawing stress
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp4
+        can_do: Find maximum reduction in drawing
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+  - id: engr.manufacturing.sheet-metal-forming
+    name: Analyzing shearing, bending and deep drawing
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.plastic-flow-stress
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shearing force
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp2
+        can_do: Find bending allowance and springback
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp3
+        can_do: Find deep drawing force
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp4
+        can_do: Find limiting draw ratio
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+  - id: engr.manufacturing.forming-limits
+    name: Using forming limit diagrams
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.sheet-metal-forming
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read forming limit diagrams
+        key_prerequisites: [engr.manufacturing.sheet-metal-forming]
+      - id: kp2
+        can_do: Find strain paths
+        key_prerequisites: [engr.manufacturing.sheet-metal-forming]
+      - id: kp3
+        can_do: Predict failure in forming
+        key_prerequisites: [engr.manufacturing.sheet-metal-forming]
+      - id: kp4
+        can_do: Choose materials for formability
+        key_prerequisites: [engr.manufacturing.sheet-metal-forming]
+  - id: engr.manufacturing.cutting-mechanics
+    name: Analyzing orthogonal cutting
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.plastic-flow-stress
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe orthogonal cutting
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp2
+        can_do: Find chip thickness ratio
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp3
+        can_do: Find shear plane angle
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+      - id: kp4
+        can_do: Use the Merchant equation
+        key_prerequisites: [engr.manufacturing.plastic-flow-stress]
+  - id: engr.manufacturing.cutting-forces-and-power
+    name: Finding cutting forces and power
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.cutting-mechanics
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cutting and thrust forces
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp2
+        can_do: Find cutting power
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp3
+        can_do: Find specific energy
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp4
+        can_do: Find temperature effects in cutting
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+  - id: engr.manufacturing.tool-life
+    name: Predicting tool life with Taylor's equation
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.cutting-forces-and-power
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Taylor's tool life equation
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp2
+        can_do: Find tool life constants
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp3
+        can_do: Describe tool wear
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp4
+        can_do: Choose tool materials
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+  - id: engr.manufacturing.turning-milling-drilling
+    name: Finding machining time for turning, milling and drilling
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.cutting-forces-and-power
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find machining time in turning
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp2
+        can_do: Find machining time in milling
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp3
+        can_do: Find machining time in drilling
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+      - id: kp4
+        can_do: Find material removal rate
+        key_prerequisites: [engr.manufacturing.cutting-forces-and-power]
+  - id: engr.manufacturing.machining-economics
+    name: Choosing cutting speed for minimum cost
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.tool-life
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.manufacturing.turning-milling-drilling
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cost per part
+        key_prerequisites: [engr.manufacturing.tool-life, engr.manufacturing.turning-milling-drilling]
+      - id: kp2
+        can_do: Find speed for minimum cost
+        key_prerequisites: [engr.manufacturing.tool-life]
+      - id: kp3
+        can_do: Find speed for maximum production
+        key_prerequisites: [engr.manufacturing.tool-life]
+      - id: kp4
+        can_do: Compare cost and production rate
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+  - id: engr.manufacturing.grinding-and-finishing
+    name: Describing grinding and finishing processes
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.cutting-mechanics
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe grinding
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp2
+        can_do: Find specific energy in grinding
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp3
+        can_do: Describe honing and lapping
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+      - id: kp4
+        can_do: Choose finishing processes
+        key_prerequisites: [engr.manufacturing.cutting-mechanics]
+  - id: engr.manufacturing.nontraditional-machining
+    name: Describing EDM, laser and waterjet machining
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.turning-milling-drilling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe electrical discharge machining
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp2
+        can_do: Describe laser and waterjet cutting
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp3
+        can_do: Describe chemical machining
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp4
+        can_do: Choose nontraditional processes
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+  - id: engr.manufacturing.injection-molding
+    name: Analyzing injection molding
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.polymer-mechanical-behaviour
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe injection molding cycles
+        key_prerequisites: [engr.materials.polymer-mechanical-behaviour]
+      - id: kp2
+        can_do: Find clamping force
+        key_prerequisites: [engr.materials.polymer-mechanical-behaviour]
+      - id: kp3
+        can_do: Find cooling time
+        key_prerequisites: [engr.materials.polymer-mechanical-behaviour]
+      - id: kp4
+        can_do: Identify molding defects
+        key_prerequisites: [engr.materials.polymer-mechanical-behaviour]
+  - id: engr.manufacturing.other-polymer-processes
+    name: Describing extrusion, blow molding and thermoforming
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.injection-molding
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe polymer extrusion
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp2
+        can_do: Describe blow molding
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp3
+        can_do: Describe thermoforming
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp4
+        can_do: Choose polymer processes
+        key_prerequisites: [engr.manufacturing.injection-molding]
+  - id: engr.manufacturing.powder-metallurgy
+    name: Describing powder metallurgy
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.ceramic-structures
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe powder production
+        key_prerequisites: [engr.materials.ceramic-structures]
+      - id: kp2
+        can_do: Describe compaction and sintering
+        key_prerequisites: [engr.materials.ceramic-structures]
+      - id: kp3
+        can_do: Find density after sintering
+        key_prerequisites: [engr.materials.ceramic-structures]
+      - id: kp4
+        can_do: Choose powder metallurgy parts
+        key_prerequisites: [engr.materials.ceramic-structures]
+  - id: engr.manufacturing.additive-manufacturing
+    name: Comparing additive manufacturing processes
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.injection-molding
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare material extrusion and powder bed fusion
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp2
+        can_do: Compare vat photopolymerization
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp3
+        can_do: Describe design rules for additive parts
+        key_prerequisites: [engr.manufacturing.injection-molding]
+      - id: kp4
+        can_do: Choose additive processes
+        key_prerequisites: [engr.manufacturing.injection-molding]
+  - id: engr.manufacturing.composite-fabrication
+    name: Describing composite fabrication
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.fiber-composites
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe layup and curing
+        key_prerequisites: [engr.materials.fiber-composites]
+      - id: kp2
+        can_do: Describe filament winding and pultrusion
+        key_prerequisites: [engr.materials.fiber-composites]
+      - id: kp3
+        can_do: Describe resin transfer molding
+        key_prerequisites: [engr.materials.fiber-composites]
+      - id: kp4
+        can_do: Choose composite processes
+        key_prerequisites: [engr.materials.fiber-composites]
+  - id: engr.manufacturing.fusion-welding
+    name: Comparing fusion welding processes
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.microstructure-development
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe arc welding processes
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp2
+        can_do: Describe gas and resistance welding
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp3
+        can_do: Describe heat-affected zones
+        key_prerequisites: [engr.materials.microstructure-development]
+      - id: kp4
+        can_do: Identify weld defects
+        key_prerequisites: [engr.materials.microstructure-development]
+  - id: engr.manufacturing.welding-heat-input
+    name: Finding welding heat input
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.fusion-welding
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat input
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp2
+        can_do: Find melting efficiency
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp3
+        can_do: Find weld travel speed
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp4
+        can_do: Find cooling rate effects
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+  - id: engr.manufacturing.solid-state-joining
+    name: Describing brazing, soldering and solid-state joining
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.fusion-welding
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe brazing and soldering
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp2
+        can_do: Describe friction welding
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp3
+        can_do: Describe diffusion and ultrasonic welding
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+      - id: kp4
+        can_do: Choose joining processes
+        key_prerequisites: [engr.manufacturing.fusion-welding]
+  - id: engr.manufacturing.cnc-programming
+    name: Writing basic CNC part programs
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.turning-milling-drilling
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write G-code moves
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp2
+        can_do: Use tool offsets
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp3
+        can_do: Program turning and milling paths
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+      - id: kp4
+        can_do: Simulate tool paths
+        key_prerequisites: [engr.manufacturing.turning-milling-drilling]
+  - id: engr.manufacturing.process-selection
+    name: Selecting a manufacturing process
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.casting-defects
+        encompassing: 0.25
+        confidence: high
+      - topic: engr.manufacturing.forming-limits
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.manufacturing.machining-economics
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.manufacturing.additive-manufacturing
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare processes by tolerance and finish
+        key_prerequisites: [engr.manufacturing.machining-economics, engr.manufacturing.additive-manufacturing]
+      - id: kp2
+        can_do: Compare processes by cost and volume
+        key_prerequisites: [engr.manufacturing.casting-defects, engr.manufacturing.forming-limits]
+      - id: kp3
+        can_do: Select a process for a part
+        key_prerequisites: [engr.manufacturing.casting-defects, engr.manufacturing.forming-limits, engr.manufacturing.machining-economics, engr.manufacturing.additive-manufacturing]
+      - id: kp4
+        can_do: Combine processes in a sequence
+        key_prerequisites: [engr.manufacturing.casting-defects, engr.manufacturing.forming-limits]
+  - id: engr.manufacturing.design-for-manufacture
+    name: Applying design for manufacture and assembly
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.process-selection
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply design for assembly rules
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp2
+        can_do: Simplify parts for manufacture
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp3
+        can_do: Choose tolerances for cost
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp4
+        can_do: Evaluate designs for manufacturability
+        key_prerequisites: [engr.manufacturing.process-selection]
+  - id: engr.manufacturing.production-systems
+    name: Analyzing production rates and line balancing
+    subject: engr
+    course: engr.manufacturing
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.manufacturing.process-selection
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find production rates
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp2
+        can_do: Balance assembly lines
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp3
+        can_do: Find line efficiency
+        key_prerequisites: [engr.manufacturing.process-selection]
+      - id: kp4
+        can_do: Describe automation and flexible manufacturing
+        key_prerequisites: [engr.manufacturing.process-selection]
