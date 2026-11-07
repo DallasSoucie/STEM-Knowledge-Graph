@@ -1561,3 +1561,623 @@ topics:
       - id: kp4
         can_do: Explain water's unusual melting line
         key_prerequisites: [physics.hs2.latent-heat]
+  - id: physics.waves-thermo-optics.work-as-pressure-integral
+    name: Finding work as an integral of pressure
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.work-on-a-gas
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write work as an integral of pressure over volume
+        key_prerequisites: [physics.hs2.work-on-a-gas, math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Find work at constant pressure
+        key_prerequisites: [physics.hs2.work-on-a-gas]
+      - id: kp3
+        can_do: Find work along a straight-line path on a diagram
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Find work for pressure that varies as a power of volume
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: physics.waves-thermo-optics.state-functions-and-path-dependence
+    name: Telling state functions from path functions
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.work-as-pressure-integral
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.first-law-of-thermodynamics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find work along two different paths
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral]
+      - id: kp2
+        can_do: Show heat depends on path
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics]
+      - id: kp3
+        can_do: Show internal energy change does not depend on path
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics]
+      - id: kp4
+        can_do: Find heat for a path from the first law
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral, physics.hs2.first-law-of-thermodynamics]
+  - id: physics.waves-thermo-optics.internal-energy-of-ideal-gases
+    name: Finding internal energy of ideal gases
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.heat-capacities-of-gases
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.internal-energy
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show internal energy depends only on temperature
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacities-of-gases]
+      - id: kp2
+        can_do: Find internal energy change from heat capacity
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacities-of-gases]
+      - id: kp3
+        can_do: Find internal energy of a diatomic gas
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacities-of-gases]
+      - id: kp4
+        can_do: Find internal energy change on a diagram
+        key_prerequisites: [physics.hs2.internal-energy]
+  - id: physics.waves-thermo-optics.isothermal-processes
+    name: Analyzing isothermal processes with integrals
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.work-as-pressure-integral
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.internal-energy-of-ideal-gases
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.integrate-simple-division
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate to find isothermal work
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral, math.calc1.integrate-simple-division]
+      - id: kp2
+        can_do: Show internal energy stays constant
+        key_prerequisites: [physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp3
+        can_do: Find heat added in an isothermal process
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral, physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp4
+        can_do: Find final pressure from volume ratio
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral]
+  - id: physics.waves-thermo-optics.isobaric-and-isochoric-processes
+    name: Analyzing constant pressure and constant volume processes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.work-as-pressure-integral
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.internal-energy-of-ideal-gases
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work and heat at constant pressure
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral, physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp2
+        can_do: Find heat at constant volume
+        key_prerequisites: [physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp3
+        can_do: Find temperature changes for each process
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral]
+      - id: kp4
+        can_do: Compare heat needed for each process
+        key_prerequisites: [physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+  - id: physics.waves-thermo-optics.cp-cv-relation
+    name: Deriving the relation between heat capacities
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.isobaric-and-isochoric-processes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the difference of molar heat capacities
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp2
+        can_do: Find the ratio of heat capacities for common gases
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp3
+        can_do: Find heat capacity at constant pressure from degrees of freedom
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp4
+        can_do: Use the ratio to identify a gas
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+  - id: physics.waves-thermo-optics.adiabatic-processes
+    name: Deriving the adiabatic relation
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.cp-cv-relation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the first law with no heat
+        key_prerequisites: [physics.waves-thermo-optics.cp-cv-relation]
+      - id: kp2
+        can_do: Separate variables to find the adiabatic relation
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Find final temperature after adiabatic compression
+        key_prerequisites: [physics.waves-thermo-optics.cp-cv-relation]
+      - id: kp4
+        can_do: Compare adiabatic and isothermal curves
+        key_prerequisites: [physics.waves-thermo-optics.cp-cv-relation]
+  - id: physics.waves-thermo-optics.adiabatic-work
+    name: Finding work in adiabatic processes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.adiabatic-processes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work from the internal energy change
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp2
+        can_do: Find work by integrating pressure
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp3
+        can_do: Find work in an adiabatic expansion
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp4
+        can_do: Find temperature drop of an expanding gas
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-processes]
+  - id: physics.waves-thermo-optics.cycle-analysis
+    name: Finding net work and heat in a cycle
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.isothermal-processes
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.adiabatic-processes
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.thermal-cycles
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find net work from enclosed area
+        key_prerequisites: [physics.hs2.thermal-cycles]
+      - id: kp2
+        can_do: Find heat for each step of a cycle
+        key_prerequisites: [physics.waves-thermo-optics.isothermal-processes, physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp3
+        can_do: Find total heat in and out
+        key_prerequisites: [physics.waves-thermo-optics.isothermal-processes, physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp4
+        can_do: Check the first law over a full cycle
+        key_prerequisites: [physics.waves-thermo-optics.isothermal-processes]
+  - id: physics.waves-thermo-optics.free-expansion
+    name: Analyzing free expansion
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.state-functions-and-path-dependence
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe free expansion into a vacuum
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp2
+        can_do: Show no work or heat is exchanged
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp3
+        can_do: Find final state of a gas after free expansion
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp4
+        can_do: Explain why free expansion is irreversible
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+  - id: physics.waves-thermo-optics.enthalpy
+    name: Using enthalpy for constant pressure processes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.isobaric-and-isochoric-processes
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define enthalpy
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp2
+        can_do: Show heat at constant pressure equals enthalpy change
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp3
+        can_do: Find enthalpy change of an ideal gas
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+      - id: kp4
+        can_do: Use enthalpy for a phase change
+        key_prerequisites: [physics.waves-thermo-optics.isobaric-and-isochoric-processes]
+  - id: physics.waves-thermo-optics.heat-engine-efficiency
+    name: Finding efficiency of heat engines
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.cycle-analysis
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.heat-engines
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define engine efficiency
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp2
+        can_do: Find efficiency from heat flows
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp3
+        can_do: Find efficiency of a given cycle
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp4
+        can_do: Compare engines by efficiency
+        key_prerequisites: [physics.hs2.heat-engines]
+  - id: physics.waves-thermo-optics.carnot-cycle-derivation
+    name: Deriving Carnot efficiency from the cycle
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.heat-engine-efficiency
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.isothermal-processes
+        encompassing: 0.15
+        confidence: medium
+      - topic: physics.waves-thermo-optics.adiabatic-processes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the four steps of a Carnot cycle
+        key_prerequisites: [physics.waves-thermo-optics.heat-engine-efficiency]
+      - id: kp2
+        can_do: Find heat in each isothermal step
+        key_prerequisites: [physics.waves-thermo-optics.isothermal-processes]
+      - id: kp3
+        can_do: Relate volumes using the adiabatic steps
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-processes]
+      - id: kp4
+        can_do: Derive the Carnot efficiency
+        key_prerequisites: [physics.waves-thermo-optics.heat-engine-efficiency, physics.waves-thermo-optics.isothermal-processes, physics.waves-thermo-optics.adiabatic-processes]
+  - id: physics.waves-thermo-optics.otto-and-diesel-cycles
+    name: Analyzing Otto and Diesel cycles
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.cycle-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.adiabatic-work
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the Otto cycle
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp2
+        can_do: Derive Otto efficiency from compression ratio
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis, physics.waves-thermo-optics.adiabatic-work]
+      - id: kp3
+        can_do: Draw the Diesel cycle
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp4
+        can_do: Compare Otto and Diesel efficiencies
+        key_prerequisites: [physics.waves-thermo-optics.adiabatic-work]
+  - id: physics.waves-thermo-optics.refrigerator-performance
+    name: Finding performance of refrigerators and heat pumps
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.carnot-cycle-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.refrigerators-and-heat-pumps
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define coefficient of performance
+        key_prerequisites: [physics.hs2.refrigerators-and-heat-pumps]
+      - id: kp2
+        can_do: Find Carnot limit for a refrigerator
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp3
+        can_do: Find Carnot limit for a heat pump
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp4
+        can_do: Find work needed to remove heat
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation, physics.hs2.refrigerators-and-heat-pumps]
+  - id: physics.waves-thermo-optics.second-law-statements
+    name: Linking the Kelvin and Clausius statements
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.carnot-cycle-derivation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Kelvin statement
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp2
+        can_do: State the Clausius statement
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp3
+        can_do: Show the two statements are equivalent
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp4
+        can_do: Show no engine beats Carnot
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+  - id: physics.waves-thermo-optics.entropy-definition
+    name: Defining entropy from reversible heat
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.carnot-cycle-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.entropy-and-second-law
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define entropy change from reversible heat
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp2
+        can_do: Show entropy is a state function
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp3
+        can_do: Use a reversible path to find entropy change
+        key_prerequisites: [physics.waves-thermo-optics.carnot-cycle-derivation]
+      - id: kp4
+        can_do: Relate entropy to the second law
+        key_prerequisites: [physics.hs2.entropy-and-second-law]
+  - id: physics.waves-thermo-optics.entropy-change-of-ideal-gas
+    name: Finding entropy change of an ideal gas
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.isothermal-processes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy change for an isothermal process
+        key_prerequisites: [physics.waves-thermo-optics.isothermal-processes]
+      - id: kp2
+        can_do: Find entropy change for a temperature change at constant volume
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp3
+        can_do: Combine into a general formula
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition, physics.waves-thermo-optics.isothermal-processes]
+      - id: kp4
+        can_do: Find entropy change between two states
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+  - id: physics.waves-thermo-optics.entropy-in-heating-and-melting
+    name: Finding entropy change in heating and phase change
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.heat-capacity-with-calculus
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy change for heating with constant heat capacity
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacity-with-calculus]
+      - id: kp2
+        can_do: Find entropy change for melting
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp3
+        can_do: Find entropy change with varying heat capacity
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacity-with-calculus]
+      - id: kp4
+        can_do: Combine heating and phase change
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition, physics.waves-thermo-optics.heat-capacity-with-calculus]
+  - id: physics.waves-thermo-optics.entropy-of-irreversible-processes
+    name: Finding entropy change in irreversible processes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-change-of-ideal-gas
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.free-expansion
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Replace an irreversible process with a reversible path
+        key_prerequisites: [physics.waves-thermo-optics.entropy-change-of-ideal-gas]
+      - id: kp2
+        can_do: Find entropy change of a free expansion
+        key_prerequisites: [physics.waves-thermo-optics.free-expansion]
+      - id: kp3
+        can_do: Find entropy change when two bodies reach equilibrium
+        key_prerequisites: [physics.waves-thermo-optics.entropy-change-of-ideal-gas]
+      - id: kp4
+        can_do: Find entropy change of a reservoir
+        key_prerequisites: [physics.waves-thermo-optics.entropy-change-of-ideal-gas]
+  - id: physics.waves-thermo-optics.entropy-of-the-universe
+    name: Using total entropy to judge processes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-of-irreversible-processes
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.entropy-in-heating-and-melting
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add system and surroundings entropy changes
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-irreversible-processes]
+      - id: kp2
+        can_do: Show heat flow from hot to cold raises entropy
+        key_prerequisites: [physics.waves-thermo-optics.entropy-in-heating-and-melting]
+      - id: kp3
+        can_do: Judge whether a process can happen
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-irreversible-processes]
+      - id: kp4
+        can_do: Find entropy generated by a real engine
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-irreversible-processes]
+  - id: physics.waves-thermo-optics.ts-diagrams
+    name: Reading temperature-entropy diagrams
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.cycle-analysis
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a temperature-entropy diagram
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp2
+        can_do: Find heat as area on the diagram
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp3
+        can_do: Draw a Carnot cycle on the diagram
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+      - id: kp4
+        can_do: Compare cycles by their diagrams
+        key_prerequisites: [physics.waves-thermo-optics.cycle-analysis]
+  - id: physics.waves-thermo-optics.microstates-and-entropy
+    name: Linking entropy to counting microstates
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.combinations
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count arrangements of particles in two halves
+        key_prerequisites: [math.alg2.combinations]
+      - id: kp2
+        can_do: Relate entropy to the number of arrangements
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp3
+        can_do: Explain why free expansion is overwhelmingly likely
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+      - id: kp4
+        can_do: Estimate entropy from a microstate count
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition, math.alg2.combinations]
+  - id: physics.waves-thermo-optics.available-work
+    name: Finding lost work and available energy
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.entropy-of-the-universe
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find lost work from entropy generation
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
+      - id: kp2
+        can_do: Find maximum work from a hot body
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
+      - id: kp3
+        can_do: Find exergy of a reservoir pair
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
+      - id: kp4
+        can_do: Compare actual and maximum work
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
