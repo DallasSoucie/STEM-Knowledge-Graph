@@ -13,13 +13,13 @@ Math Academy runs about 2,500 topics on math alone. Matching that density across
 | Scope | Courses | Topics (estimate) |
 |---|---|---|
 | Math | 27 | 4,370 |
-| Physics | 12 | 1,880 |
+| Physics | 12 | 1,780 |
 | Chemistry | 12 | 1,850 |
 | Biology | 15 | 2,310 |
 | Engineering common core | 11 | 1,630 |
 | **Core graph** | **77** | **~12,000** |
 | Engineering discipline courses | 26 | 3,640 |
-| **Full graph** | **103** | **~15,700** |
+| **Full graph** | **103** | **~15,600** |
 
 At about 3.4 KPs and 5 weighted relationships per topic, the full graph holds roughly 53,000 KPs and 78,000 weights.
 
@@ -41,7 +41,7 @@ The number after each course is its topic budget. Confirm or revise this list in
 
 **Physics**
 - School: elem 40, ms 80, hs1 200, hs2 200
-- University: mechanics 190, em 190, waves-thermo-optics 170, modern 150, classical 160, em-theory 170, quantum 180, stat-thermal 150
+- University: mechanics 140, em 140, waves-thermo-optics 170, modern 150, classical 160, em-theory 170, quantum 180, stat-thermal 150
 
 **Chemistry**
 - School: elem 30, ms 70, hs1 180, hs2 180
