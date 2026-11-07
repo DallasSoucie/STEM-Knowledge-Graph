@@ -1,0 +1,653 @@
+course: engr.theory
+topics:
+  - id: engr.theory.alphabets-strings-languages
+    name: Defining alphabets, strings and languages
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.set-operations
+        encompassing: 0.35
+        confidence: high
+      - topic: math.discrete.induction-structural
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define alphabets and strings
+        key_prerequisites: [math.discrete.set-operations]
+      - id: kp2
+        can_do: Use string operations
+        key_prerequisites: [math.discrete.set-operations]
+      - id: kp3
+        can_do: Define languages as sets
+        key_prerequisites: [math.discrete.set-operations, math.discrete.induction-structural]
+      - id: kp4
+        can_do: Define strings recursively
+        key_prerequisites: [math.discrete.induction-structural]
+  - id: engr.theory.dfa
+    name: Designing deterministic finite automata
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.alphabets-strings-languages
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design DFAs for languages
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp2
+        can_do: Draw state diagrams of DFAs
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp3
+        can_do: Write formal DFA definitions
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp4
+        can_do: Trace DFAs on inputs
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+  - id: engr.theory.nfa
+    name: Designing nondeterministic finite automata
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.dfa
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design NFAs
+        key_prerequisites: [engr.theory.dfa]
+      - id: kp2
+        can_do: Use epsilon transitions
+        key_prerequisites: [engr.theory.dfa]
+      - id: kp3
+        can_do: Trace NFA computations
+        key_prerequisites: [engr.theory.dfa]
+      - id: kp4
+        can_do: Compare NFAs and DFAs
+        key_prerequisites: [engr.theory.dfa]
+  - id: engr.theory.nfa-to-dfa
+    name: Converting NFAs to DFAs
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.nfa
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert NFAs to DFAs by subset construction
+        key_prerequisites: [engr.theory.nfa]
+      - id: kp2
+        can_do: Handle epsilon closures
+        key_prerequisites: [engr.theory.nfa]
+      - id: kp3
+        can_do: Find state blowup
+        key_prerequisites: [engr.theory.nfa]
+      - id: kp4
+        can_do: Prove equivalence of NFAs and DFAs
+        key_prerequisites: [engr.theory.nfa]
+  - id: engr.theory.regular-operations-closure
+    name: Proving closure under regular operations
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.nfa-to-dfa
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove closure under union
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp2
+        can_do: Prove closure under concatenation
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp3
+        can_do: Prove closure under star
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp4
+        can_do: Prove closure under complement and intersection
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+  - id: engr.theory.regular-expressions
+    name: Writing regular expressions
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.alphabets-strings-languages
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write regular expressions
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp2
+        can_do: Find languages of expressions
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp3
+        can_do: Simplify regular expressions
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+      - id: kp4
+        can_do: Use regular expressions in practice
+        key_prerequisites: [engr.theory.alphabets-strings-languages]
+  - id: engr.theory.regex-nfa-equivalence
+    name: Converting between regular expressions and automata
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.regular-expressions
+        encompassing: 0.55
+        confidence: high
+      - topic: engr.theory.nfa-to-dfa
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert expressions to NFAs
+        key_prerequisites: [engr.theory.regular-expressions, engr.theory.nfa-to-dfa]
+      - id: kp2
+        can_do: Convert DFAs to expressions
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp3
+        can_do: Use generalized NFAs
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp4
+        can_do: Prove equivalence of expressions and automata
+        key_prerequisites: [engr.theory.regular-expressions]
+  - id: engr.theory.dfa-minimization
+    name: Minimizing DFAs
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.nfa-to-dfa
+        encompassing: 0.65
+        confidence: high
+      - topic: math.discrete.equivalence-classes-discrete
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent states
+        key_prerequisites: [engr.theory.nfa-to-dfa, math.discrete.equivalence-classes-discrete]
+      - id: kp2
+        can_do: Minimize DFAs
+        key_prerequisites: [engr.theory.nfa-to-dfa]
+      - id: kp3
+        can_do: Use the Myhill-Nerode theorem
+        key_prerequisites: [math.discrete.equivalence-classes-discrete]
+      - id: kp4
+        can_do: Prove a DFA is minimal
+        key_prerequisites: [engr.theory.nfa-to-dfa, math.discrete.equivalence-classes-discrete]
+  - id: engr.theory.pumping-lemma-regular
+    name: Proving languages nonregular with the pumping lemma
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.regular-operations-closure
+        encompassing: 0.35
+        confidence: high
+      - topic: math.discrete.pigeonhole
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the pumping lemma for regular languages
+        key_prerequisites: [engr.theory.regular-operations-closure]
+      - id: kp2
+        can_do: Prove languages nonregular
+        key_prerequisites: [engr.theory.regular-operations-closure, math.discrete.pigeonhole]
+      - id: kp3
+        can_do: Choose strings for pumping proofs
+        key_prerequisites: [math.discrete.pigeonhole]
+      - id: kp4
+        can_do: Use closure to prove nonregularity
+        key_prerequisites: [engr.theory.regular-operations-closure]
+  - id: engr.theory.context-free-grammars
+    name: Writing context-free grammars
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.regular-expressions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write grammars for languages
+        key_prerequisites: [engr.theory.regular-expressions]
+      - id: kp2
+        can_do: Derive strings from grammars
+        key_prerequisites: [engr.theory.regular-expressions]
+      - id: kp3
+        can_do: Write grammars for arithmetic expressions
+        key_prerequisites: [engr.theory.regular-expressions]
+      - id: kp4
+        can_do: Convert regular languages to grammars
+        key_prerequisites: [engr.theory.regular-expressions]
+  - id: engr.theory.parse-trees-and-ambiguity
+    name: Drawing parse trees and finding ambiguity
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.context-free-grammars
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw parse trees
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp2
+        can_do: Find ambiguous grammars
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp3
+        can_do: Remove ambiguity
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp4
+        can_do: Use leftmost derivations
+        key_prerequisites: [engr.theory.context-free-grammars]
+  - id: engr.theory.chomsky-normal-form
+    name: Converting grammars to Chomsky normal form
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.context-free-grammars
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Remove epsilon and unit productions
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp2
+        can_do: Convert grammars to Chomsky normal form
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp3
+        can_do: Find derivation lengths
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp4
+        can_do: Use normal forms in proofs
+        key_prerequisites: [engr.theory.context-free-grammars]
+  - id: engr.theory.pushdown-automata
+    name: Designing pushdown automata
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.context-free-grammars
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.theory.nfa
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design pushdown automata
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp2
+        can_do: Trace PDA computations
+        key_prerequisites: [engr.theory.context-free-grammars, engr.theory.nfa]
+      - id: kp3
+        can_do: Write formal PDA definitions
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp4
+        can_do: Compare deterministic and nondeterministic PDAs
+        key_prerequisites: [engr.theory.nfa]
+  - id: engr.theory.cfg-pda-equivalence
+    name: Converting between grammars and pushdown automata
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.pushdown-automata
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert grammars to PDAs
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp2
+        can_do: Convert PDAs to grammars
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp3
+        can_do: Prove equivalence
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp4
+        can_do: Use equivalence in proofs
+        key_prerequisites: [engr.theory.pushdown-automata]
+  - id: engr.theory.pumping-lemma-context-free
+    name: Proving languages not context-free
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.cfg-pda-equivalence
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.theory.pumping-lemma-regular
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the pumping lemma for context-free languages
+        key_prerequisites: [engr.theory.cfg-pda-equivalence]
+      - id: kp2
+        can_do: Prove languages not context-free
+        key_prerequisites: [engr.theory.cfg-pda-equivalence, engr.theory.pumping-lemma-regular]
+      - id: kp3
+        can_do: Use closure properties of context-free languages
+        key_prerequisites: [engr.theory.cfg-pda-equivalence]
+      - id: kp4
+        can_do: Choose strings for proofs
+        key_prerequisites: [engr.theory.pumping-lemma-regular]
+  - id: engr.theory.cyk-parsing
+    name: Parsing with the CYK algorithm
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.chomsky-normal-form
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Parse with the CYK algorithm
+        key_prerequisites: [engr.theory.chomsky-normal-form, engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Fill CYK tables
+        key_prerequisites: [engr.theory.chomsky-normal-form, engr.algorithms.dp-principles]
+      - id: kp3
+        can_do: Find CYK running time
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Test membership in context-free languages
+        key_prerequisites: [engr.theory.chomsky-normal-form]
+  - id: engr.theory.turing-machines
+    name: Designing Turing machines
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.pushdown-automata
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design Turing machines
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp2
+        can_do: Trace Turing machine computations
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp3
+        can_do: Write formal definitions
+        key_prerequisites: [engr.theory.pushdown-automata]
+      - id: kp4
+        can_do: Describe configurations
+        key_prerequisites: [engr.theory.pushdown-automata]
+  - id: engr.theory.tm-variants
+    name: Showing equivalence of Turing machine variants
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.turing-machines
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show multitape machines are equivalent
+        key_prerequisites: [engr.theory.turing-machines]
+      - id: kp2
+        can_do: Show nondeterministic machines are equivalent
+        key_prerequisites: [engr.theory.turing-machines]
+      - id: kp3
+        can_do: Describe enumerators
+        key_prerequisites: [engr.theory.turing-machines]
+      - id: kp4
+        can_do: Describe high-level machine descriptions
+        key_prerequisites: [engr.theory.turing-machines]
+  - id: engr.theory.church-turing-thesis
+    name: Explaining the Church-Turing thesis
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.tm-variants
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Church-Turing thesis
+        key_prerequisites: [engr.theory.tm-variants]
+      - id: kp2
+        can_do: Describe algorithms as Turing machines
+        key_prerequisites: [engr.theory.tm-variants]
+      - id: kp3
+        can_do: Encode objects as strings
+        key_prerequisites: [engr.theory.tm-variants]
+      - id: kp4
+        can_do: Explain limits of computation
+        key_prerequisites: [engr.theory.tm-variants]
+  - id: engr.theory.decidable-languages
+    name: Proving languages decidable
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.church-turing-thesis
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove DFA acceptance decidable
+        key_prerequisites: [engr.theory.church-turing-thesis]
+      - id: kp2
+        can_do: Prove CFG problems decidable
+        key_prerequisites: [engr.theory.church-turing-thesis]
+      - id: kp3
+        can_do: Describe deciders and recognizers
+        key_prerequisites: [engr.theory.church-turing-thesis]
+      - id: kp4
+        can_do: Prove emptiness problems decidable
+        key_prerequisites: [engr.theory.church-turing-thesis]
+  - id: engr.theory.diagonalization-and-halting
+    name: Proving the halting problem undecidable
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.decidable-languages
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.countable-sets
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use diagonalization
+        key_prerequisites: [engr.theory.decidable-languages, math.discrete.countable-sets]
+      - id: kp2
+        can_do: Prove the halting problem undecidable
+        key_prerequisites: [engr.theory.decidable-languages]
+      - id: kp3
+        can_do: Find unrecognizable languages
+        key_prerequisites: [engr.theory.decidable-languages, math.discrete.countable-sets]
+      - id: kp4
+        can_do: Explain uncountably many languages
+        key_prerequisites: [math.discrete.countable-sets]
+  - id: engr.theory.mapping-reductions
+    name: Proving undecidability by mapping reductions
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.diagonalization-and-halting
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mapping reductions
+        key_prerequisites: [engr.theory.diagonalization-and-halting]
+      - id: kp2
+        can_do: Prove undecidability by reduction
+        key_prerequisites: [engr.theory.diagonalization-and-halting]
+      - id: kp3
+        can_do: Reduce from the halting problem
+        key_prerequisites: [engr.theory.diagonalization-and-halting]
+      - id: kp4
+        can_do: Use reductions for unrecognizability
+        key_prerequisites: [engr.theory.diagonalization-and-halting]
+  - id: engr.theory.rices-theorem
+    name: Using Rice's theorem
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.mapping-reductions
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Rice's theorem
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp2
+        can_do: Apply Rice's theorem
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp3
+        can_do: Find properties Rice's theorem covers
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp4
+        can_do: Explain limits of Rice's theorem
+        key_prerequisites: [engr.theory.mapping-reductions]
+  - id: engr.theory.recognizable-languages
+    name: Classifying recognizable and co-recognizable languages
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.mapping-reductions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify recognizable languages
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp2
+        can_do: Prove co-recognizable languages
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp3
+        can_do: Prove a language decidable from both
+        key_prerequisites: [engr.theory.mapping-reductions]
+      - id: kp4
+        can_do: Find languages neither recognizable nor co-recognizable
+        key_prerequisites: [engr.theory.mapping-reductions]
+  - id: engr.theory.time-complexity-classes
+    name: Defining time complexity classes
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.turing-machines
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.algorithms.p-and-np
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define time complexity classes
+        key_prerequisites: [engr.theory.turing-machines]
+      - id: kp2
+        can_do: Compare deterministic and nondeterministic time
+        key_prerequisites: [engr.theory.turing-machines, engr.algorithms.p-and-np]
+      - id: kp3
+        can_do: Define P and NP with machines
+        key_prerequisites: [engr.algorithms.p-and-np]
+      - id: kp4
+        can_do: Find complexity of problems
+        key_prerequisites: [engr.theory.turing-machines]
+  - id: engr.theory.cook-levin
+    name: Explaining the Cook-Levin theorem
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.time-complexity-classes
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.algorithms.np-completeness-proofs
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Cook-Levin theorem
+        key_prerequisites: [engr.theory.time-complexity-classes]
+      - id: kp2
+        can_do: Describe the SAT encoding
+        key_prerequisites: [engr.theory.time-complexity-classes, engr.algorithms.np-completeness-proofs]
+      - id: kp3
+        can_do: Use SAT as a starting point for reductions
+        key_prerequisites: [engr.algorithms.np-completeness-proofs]
+      - id: kp4
+        can_do: Explain why SAT is NP-complete
+        key_prerequisites: [engr.theory.time-complexity-classes]
+  - id: engr.theory.space-complexity-classes
+    name: Defining space complexity classes
+    subject: engr
+    course: engr.theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.time-complexity-classes
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define space complexity classes
+        key_prerequisites: [engr.theory.time-complexity-classes]
+      - id: kp2
+        can_do: State Savitch's theorem
+        key_prerequisites: [engr.theory.time-complexity-classes]
+      - id: kp3
+        can_do: Describe PSPACE
+        key_prerequisites: [engr.theory.time-complexity-classes]
+      - id: kp4
+        can_do: Compare time and space classes
+        key_prerequisites: [engr.theory.time-complexity-classes]
