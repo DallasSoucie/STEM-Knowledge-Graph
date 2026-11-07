@@ -454,244 +454,323 @@ courses:
   - id: engr.programming
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 170
+    budget: 100
     follows:
-      - math.alg2
+      - math.precalc
   - id: engr.data-structures
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 170
+    budget: 60
     follows:
       - engr.programming
+      - math.discrete
   - id: engr.statics
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 130
+    budget: 65
     follows:
       - physics.mechanics
+      - math.calc3
+      - math.linalg
   - id: engr.dynamics
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 140
+    budget: 50
     follows:
       - engr.statics
   - id: engr.mech-materials
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 150
+    budget: 60
     follows:
       - engr.statics
+      - math.diffeq
+      - physics.waves-thermo-optics
   - id: engr.thermo
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 160
+    budget: 80
     follows:
       - physics.waves-thermo-optics
-      - math.calc2
+      - math.calc3
   - id: engr.fluids
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 150
+    budget: 65
     follows:
       - engr.dynamics
+      - engr.thermo
       - math.calc3
   - id: engr.circuits
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 170
+    budget: 70
     follows:
       - physics.em
       - math.diffeq
+      - math.linalg
   - id: engr.materials
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 120
+    budget: 65
     follows:
-      - chem.gen1
+      - chem.gen2
       - engr.mech-materials
+      - math.stats
   - id: engr.digital-logic
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 130
+    budget: 50
     follows:
       - math.discrete
+      - engr.programming
   - id: engr.signals
     subject: engr
     levels: [uni-lower, uni-lower]
-    budget: 140
+    budget: 50
     follows:
       - engr.circuits
-      - math.diffeq
+  - id: engr.economics
+    subject: engr
+    levels: [uni-lower, uni-lower]
+    budget: 40
+    follows:
+      - math.precalc
+      - math.stats
+  - id: engr.controls
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 50
+    follows:
+      - engr.signals
+      - engr.dynamics
   - id: engr.structural-analysis
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 55
     follows:
-      - engr.statics
       - engr.mech-materials
+      - engr.dynamics
+      - math.linalg
   - id: engr.soil-mechanics
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 60
     follows:
-      - engr.mech-materials
+      - engr.materials
       - engr.fluids
   - id: engr.hydraulics
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 45
     follows:
-      - engr.fluids
+      - engr.soil-mechanics
+      - math.probstat
+  - id: engr.steel-design
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 35
+    follows:
+      - engr.structural-analysis
+      - engr.materials
   - id: engr.concrete-design
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 40
     follows:
       - engr.structural-analysis
+      - engr.soil-mechanics
   - id: engr.transportation
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 40
     follows:
+      - engr.soil-mechanics
       - math.probstat
+  - id: engr.environmental
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 35
+    follows:
+      - engr.hydraulics
+      - chem.gen2
+      - bio.micro
   - id: engr.mass-energy-balances
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 40
     follows:
-      - chem.gen1
-      - math.calc2
-  - id: engr.transport
-    subject: engr
-    levels: [uni-upper, uni-upper]
-    budget: 140
-    follows:
-      - engr.mass-energy-balances
-      - engr.fluids
-  - id: engr.separations
-    subject: engr
-    levels: [uni-upper, uni-upper]
-    budget: 140
-    follows:
-      - engr.transport
       - engr.thermo
-  - id: engr.reactors
+      - chem.pchem1
+      - math.diffeq
+      - math.linalg
+  - id: engr.cheme-thermo
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 40
     follows:
       - engr.mass-energy-balances
       - chem.pchem1
+  - id: engr.mass-transfer
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 30
+    follows:
+      - engr.mass-energy-balances
+      - engr.heat-transfer
+  - id: engr.separations
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 40
+    follows:
+      - engr.mass-transfer
+      - engr.cheme-thermo
+  - id: engr.reactors
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 40
+    follows:
+      - engr.mass-transfer
+      - engr.cheme-thermo
   - id: engr.process-control
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 30
     follows:
-      - engr.mass-energy-balances
-      - math.diffeq
+      - engr.controls
+      - engr.reactors
   - id: engr.heat-transfer
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 65
     follows:
       - engr.thermo
       - engr.fluids
+      - math.diffeq
   - id: engr.machine-design
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 55
     follows:
-      - engr.mech-materials
-      - engr.dynamics
+      - engr.materials
+      - engr.fluids
+      - math.probstat
   - id: engr.vibrations
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 35
     follows:
       - engr.dynamics
       - math.diffeq
-  - id: engr.controls
-    subject: engr
-    levels: [uni-upper, uni-upper]
-    budget: 140
-    follows:
-      - engr.signals
-      - engr.dynamics
+      - math.linalg
   - id: engr.manufacturing
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 35
     follows:
-      - engr.materials
+      - engr.machine-design
+  - id: engr.measurements
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 25
+    follows:
+      - engr.controls
+      - engr.fluids
+      - engr.mech-materials
+      - math.probstat
+      - engr.programming
   - id: engr.electronics
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 65
     follows:
-      - engr.circuits
+      - engr.controls
+      - engr.digital-logic
+      - physics.modern
   - id: engr.em-fields
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 40
     follows:
-      - physics.em
-      - math.calc3
+      - physics.em-theory
+      - engr.circuits
   - id: engr.power
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 50
     follows:
-      - engr.circuits
       - engr.em-fields
+      - engr.electronics
+      - math.numerical
   - id: engr.communications
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 45
     follows:
+      - engr.em-fields
       - engr.signals
       - math.probstat
-  - id: engr.control-systems
+      - math.discrete
+  - id: engr.dsp
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 40
     follows:
       - engr.signals
+      - engr.digital-logic
+      - math.numerical
   - id: engr.algorithms
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 50
     follows:
       - engr.data-structures
       - math.discrete
+      - math.probstat
+      - math.linalg
   - id: engr.architecture
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 45
     follows:
       - engr.digital-logic
       - engr.programming
   - id: engr.operating-systems
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 50
     follows:
       - engr.architecture
       - engr.data-structures
   - id: engr.databases
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 40
     follows:
-      - engr.data-structures
+      - engr.operating-systems
   - id: engr.networks
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 35
     follows:
       - engr.operating-systems
+      - engr.algorithms
   - id: engr.software-engineering
     subject: engr
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 35
     follows:
-      - engr.data-structures
+      - engr.algorithms
+  - id: engr.embedded
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 25
+    follows:
+      - engr.operating-systems
+      - engr.electronics
+  - id: engr.theory
+    subject: engr
+    levels: [uni-upper, uni-upper]
+    budget: 30
+    follows:
+      - engr.algorithms

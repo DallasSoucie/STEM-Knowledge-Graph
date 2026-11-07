@@ -17,18 +17,18 @@ def _courses():
 
 
 def test_manifest_has_103_courses():
-    assert len(_courses()) == 103
+    assert len(_courses()) == 110
 
 
-def test_budgets_total_12520():
-    assert sum(c.budget for c in _courses()) == 12520
+def test_budgets_total_9350():
+    assert sum(c.budget for c in _courses()) == 9350
 
 
 def test_subject_totals():
     totals = Counter()
     for c in _courses():
         totals[c.subject] += c.budget
-    assert totals == {"math": 4370, "physics": 1335, "chem": 790, "bio": 755, "engr": 5270}
+    assert totals == {"math": 4370, "physics": 1335, "chem": 790, "bio": 755, "engr": 2100}
 
 
 def test_ids_follows_and_levels_are_consistent():

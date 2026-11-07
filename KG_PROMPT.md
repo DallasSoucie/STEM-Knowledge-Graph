@@ -16,12 +16,12 @@ Math Academy runs about 2,500 topics on math alone. Matching that density across
 | Physics | 12 | 1,335 |
 | Chemistry | 12 | 790 |
 | Biology | 15 | 755 |
-| Engineering common core | 11 | 1,630 |
-| **Core graph** | **77** | **~12,000** |
-| Engineering discipline courses | 26 | 3,640 |
-| **Full graph** | **103** | **~12,500** |
+| Engineering common core | 13 | 805 |
+| **Core graph** | **79** | **~8.1k** |
+| Engineering discipline courses | 31 | 1,295 |
+| **Full graph** | **110** | **~9,350** |
 
-At about 3.4 KPs and 5 weighted relationships per topic, the full graph holds roughly 53,000 KPs and 78,000 weights.
+At about 3.4 KPs and 5 weighted relationships per topic, the full graph holds roughly 32,000 KPs and 47,000 weights.
 
 These are planning budgets, and they are my estimates rather than Math Academy's figures. Topic counts should come out of honest granularity:
 
@@ -52,14 +52,15 @@ The number after each course is its topic budget. Confirm or revise this list in
 - University: intro1 35, intro2 55, cell-mol 55, genetics 45, biochem 55, ecology 35, evolution 35, micro 40, anat-phys1 60, anat-phys2 60, neuro 45
 
 **Engineering common core**
-- programming 170, data-structures 170, statics 130, dynamics 140, mech-materials 150, thermo 160, fluids 150, circuits 170, materials 120, digital-logic 130, signals 140
+- programming 100, data-structures 60, statics 65, dynamics 50, mech-materials 60, thermo 80, fluids 65, circuits 70, materials 65, digital-logic 50, signals 50, economics 40
+- Shared upper course: controls 50 (mechanical, electrical and chemical)
 
 **Engineering discipline courses** (built after the core graph)
-- Civil, 5 courses at about 130 each: structural analysis, soil mechanics, hydraulics, concrete design, transportation
-- Chemical, 5 at about 140: mass and energy balances, transport, separations, reactors, process control
-- Mechanical, 5 at about 140: heat transfer, machine design, vibrations, controls, manufacturing
-- Electrical, 5 at about 150: electronics, EM fields, power, communications, control systems
-- Computer/software, 6 at about 140: algorithms, architecture, operating systems, databases, networks, software engineering
+- Civil: structural-analysis 55, soil-mechanics 60, hydraulics 45, steel-design 35, concrete-design 40, transportation 40, environmental 35
+- Chemical: mass-energy-balances 40, cheme-thermo 40, mass-transfer 30, separations 40, reactors 40, process-control 30
+- Mechanical: heat-transfer 65, machine-design 55, vibrations 35, manufacturing 35, measurements 25
+- Electrical: electronics 65, em-fields 40, power 50, communications 45, dsp 40
+- Computer/software: algorithms 50, architecture 45, operating-systems 50, databases 40, networks 35, software-engineering 35, embedded 25, theory 30
 
 Each topic has exactly one home course, where it is first taught. Vectors live in math, and "resolving forces into components" lives in physics with a prerequisite on math vectors. Courses that repackage existing material (AP Calculus, for example) are views in the manifest that list existing topic IDs. They add no new topics.
 
