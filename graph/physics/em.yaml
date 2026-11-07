@@ -1466,3 +1466,586 @@ topics:
       - id: kp4
         can_do: Find a switch-open transient
         key_prerequisites: [physics.em.rc-solving-discharging]
+  - id: physics.em.lorentz-force
+    name: Writing the Lorentz force as a cross product
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.force-on-a-moving-charge
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write magnetic force as a cross product
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp2
+        can_do: Find a force from components
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Combine electric and magnetic force
+        key_prerequisites: [physics.hs2.force-on-a-moving-charge]
+      - id: kp4
+        can_do: Show that the force does no work
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+  - id: physics.em.helical-motion
+    name: Finding helical motion in a magnetic field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lorentz-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.circular-path-in-a-field
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split velocity relative to a field
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp2
+        can_do: Find a helix's radius
+        key_prerequisites: [physics.hs2.circular-path-in-a-field]
+      - id: kp3
+        can_do: Find a helix's pitch
+        key_prerequisites: [physics.em.lorentz-force, physics.hs2.circular-path-in-a-field]
+      - id: kp4
+        can_do: Describe a magnetic mirror qualitatively
+        key_prerequisites: [physics.em.lorentz-force]
+  - id: physics.em.hall-effect
+    name: Using the Hall effect
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lorentz-force
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.current-density
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.crossed-fields
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain charge pile-up
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp2
+        can_do: Find a Hall voltage
+        key_prerequisites: [physics.hs2.crossed-fields]
+      - id: kp3
+        can_do: Find a carrier density
+        key_prerequisites: [physics.em.current-density]
+      - id: kp4
+        can_do: Find a carrier's sign
+        key_prerequisites: [physics.em.lorentz-force]
+  - id: physics.em.force-on-curved-wires
+    name: Finding force on a curved wire
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lorentz-force
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.force-on-a-wire
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a small piece's force
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp2
+        can_do: Find force on a semicircle
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Show a closed loop's net force in a uniform field
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp4
+        can_do: Find force in a nonuniform field
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: physics.em.magnetic-dipole-moment
+    name: Finding the magnetic moment of a loop
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.force-on-curved-wires
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.motor-torque
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define magnetic moment
+        key_prerequisites: [physics.hs2.motor-torque]
+      - id: kp2
+        can_do: Find moment of a loop
+        key_prerequisites: [physics.em.force-on-curved-wires]
+      - id: kp3
+        can_do: Find moment of a coil
+        key_prerequisites: [physics.hs2.motor-torque]
+      - id: kp4
+        can_do: Find moment of a rotating charge
+        key_prerequisites: [physics.em.force-on-curved-wires]
+  - id: physics.em.torque-and-energy-of-a-loop
+    name: Finding torque and energy of a current loop
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.magnetic-dipole-moment
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.dipole-in-a-field
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write torque as a cross product
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+      - id: kp2
+        can_do: Find potential energy of a loop
+        key_prerequisites: [physics.em.magnetic-dipole-moment, physics.em.dipole-in-a-field]
+      - id: kp3
+        can_do: Find stable orientations
+        key_prerequisites: [physics.em.dipole-in-a-field]
+      - id: kp4
+        can_do: Find a loop's oscillation
+        key_prerequisites: [physics.em.dipole-in-a-field]
+  - id: physics.em.cyclotrons
+    name: Analyzing cyclotrons
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.helical-motion
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.accelerating-charges
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a cyclotron frequency
+        key_prerequisites: [physics.em.helical-motion]
+      - id: kp2
+        can_do: Show frequency does not depend on speed
+        key_prerequisites: [physics.em.helical-motion]
+      - id: kp3
+        can_do: Find an exit energy
+        key_prerequisites: [physics.hs2.accelerating-charges]
+      - id: kp4
+        can_do: Describe a limit at high speed
+        key_prerequisites: [physics.em.helical-motion]
+  - id: physics.em.biot-savart-law
+    name: Stating the Biot-Savart law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lorentz-force
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.setting-up-field-integrals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp2
+        can_do: Find a direction of a field element
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp3
+        can_do: Compare with a charge's field integral
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp4
+        can_do: Set up an integral for a segment
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+  - id: physics.em.biot-savart-straight-wire
+    name: Finding the field of a finite straight wire
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em.field-of-a-finite-line
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field of a finite wire
+        key_prerequisites: [physics.em.biot-savart-law, physics.em.field-of-a-finite-line]
+      - id: kp2
+        can_do: Find a long-wire limit
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp3
+        can_do: Find a field near a wire's end
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp4
+        can_do: Find a field of a square loop
+        key_prerequisites: [physics.em.biot-savart-law]
+  - id: physics.em.biot-savart-arc
+    name: Finding the field at the center of an arc
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field at an arc's center
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp2
+        can_do: Find a field of a full loop's center
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp3
+        can_do: Find a field of a wire with a bend
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp4
+        can_do: Combine arcs and straight parts
+        key_prerequisites: [physics.em.biot-savart-law]
+  - id: physics.em.biot-savart-loop-axis
+    name: Finding the field on the axis of a loop
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.field-of-a-ring
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a loop's axial field
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp2
+        can_do: Use symmetry to cancel components
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp3
+        can_do: Find a far-field dipole form
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp4
+        can_do: Find a field at a chosen point
+        key_prerequisites: [physics.em.biot-savart-law]
+  - id: physics.em.helmholtz-coils
+    name: Finding the field of paired coils
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-loop-axis
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add fields of two coils
+        key_prerequisites: [physics.em.biot-savart-loop-axis]
+      - id: kp2
+        can_do: Find a uniform region
+        key_prerequisites: [physics.em.biot-savart-loop-axis]
+      - id: kp3
+        can_do: Find a spacing that flattens a field
+        key_prerequisites: [physics.em.biot-savart-loop-axis]
+      - id: kp4
+        can_do: Name a use of paired coils
+        key_prerequisites: [physics.em.biot-savart-loop-axis]
+  - id: physics.em.field-of-moving-charge
+    name: Finding the field of a moving charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a field of a moving charge
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp2
+        can_do: Find a direction of its field
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp3
+        can_do: Compare with a current segment
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp4
+        can_do: Find a force between moving charges
+        key_prerequisites: [physics.em.biot-savart-law]
+  - id: physics.em.force-between-wires-derivation
+    name: Deriving the force between parallel wires
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-straight-wire
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.force-on-curved-wires
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field from one wire
+        key_prerequisites: [physics.em.biot-savart-straight-wire]
+      - id: kp2
+        can_do: Find force on another wire
+        key_prerequisites: [physics.em.force-on-curved-wires]
+      - id: kp3
+        can_do: Derive force per length
+        key_prerequisites: [physics.em.biot-savart-straight-wire, physics.em.force-on-curved-wires]
+      - id: kp4
+        can_do: Find a direction for each case
+        key_prerequisites: [physics.em.force-on-curved-wires]
+  - id: physics.em.amperes-law-statement
+    name: Stating Ampere's law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.biot-savart-straight-wire
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law
+        key_prerequisites: [physics.em.biot-savart-straight-wire]
+      - id: kp2
+        can_do: Evaluate a line integral around a wire
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp3
+        can_do: Set a sign for enclosed current
+        key_prerequisites: [physics.em.biot-savart-straight-wire]
+      - id: kp4
+        can_do: Tell when symmetry makes it useful
+        key_prerequisites: [physics.em.biot-savart-straight-wire]
+  - id: physics.em.amperes-law-long-wire
+    name: Using Ampere's law inside and outside a wire
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-statement
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field outside a wire
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp2
+        can_do: Find a field inside a uniform wire
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp3
+        can_do: Sketch a field against radius
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp4
+        can_do: Find the greatest field
+        key_prerequisites: [physics.em.amperes-law-statement]
+  - id: physics.em.amperes-law-nonuniform-current
+    name: Using Ampere's law with nonuniform current
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-long-wire
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.current-density
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate current density for enclosed current
+        key_prerequisites: [physics.em.current-density]
+      - id: kp2
+        can_do: Find a field inside
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp3
+        can_do: Find a total current
+        key_prerequisites: [physics.em.current-density]
+      - id: kp4
+        can_do: Sketch a field
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+  - id: physics.em.amperes-law-solenoid
+    name: Deriving a solenoid's field with Ampere's law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-statement
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.field-of-a-solenoid
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a rectangular loop
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp2
+        can_do: Derive a solenoid's field
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp3
+        can_do: Explain a zero outside field
+        key_prerequisites: [physics.hs2.field-of-a-solenoid]
+      - id: kp4
+        can_do: Find a field with a core
+        key_prerequisites: [physics.hs2.field-of-a-solenoid]
+  - id: physics.em.amperes-law-toroid
+    name: Finding a toroid's field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-solenoid
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a circular loop
+        key_prerequisites: [physics.em.amperes-law-solenoid]
+      - id: kp2
+        can_do: Find a field inside a toroid
+        key_prerequisites: [physics.em.amperes-law-solenoid]
+      - id: kp3
+        can_do: Find a field outside a toroid
+        key_prerequisites: [physics.em.amperes-law-solenoid]
+      - id: kp4
+        can_do: Compare to a solenoid
+        key_prerequisites: [physics.em.amperes-law-solenoid]
+  - id: physics.em.amperes-law-sheet
+    name: Finding the field of a current sheet
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-statement
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a rectangular loop
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp2
+        can_do: Find a field of a current sheet
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp3
+        can_do: Find a field of two sheets
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp4
+        can_do: Compare with a charged sheet
+        key_prerequisites: [physics.em.amperes-law-statement]
+  - id: physics.em.coaxial-cable-field
+    name: Finding the field of a coaxial cable
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-long-wire
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field in each region
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp2
+        can_do: Find a field outside a coaxial cable
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp3
+        can_do: Handle a thick outer conductor
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp4
+        can_do: Sketch a field across a cable
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+  - id: physics.em.gauss-law-for-magnetism
+    name: Stating Gauss's law for magnetism
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-law-statement
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp2
+        can_do: Find a flux through a closed surface
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp3
+        can_do: Explain no isolated poles
+        key_prerequisites: [physics.em.biot-savart-law]
+      - id: kp4
+        can_do: Compare with Gauss's law for charge
+        key_prerequisites: [physics.em.gauss-law-statement]
+  - id: physics.em.magnetic-materials
+    name: Describing paramagnetic, diamagnetic and ferromagnetic materials
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.magnetic-dipole-moment
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.amperes-law-solenoid
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe atomic moments
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+      - id: kp2
+        can_do: Tell paramagnetic from diamagnetic
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+      - id: kp3
+        can_do: Describe ferromagnetic domains
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+      - id: kp4
+        can_do: Read a hysteresis loop
+        key_prerequisites: [physics.em.amperes-law-solenoid]
