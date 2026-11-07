@@ -1,0 +1,1283 @@
+course: chem.gen2
+topics:
+  - id: chem.gen2.arrhenius-equation
+    name: Using the Arrhenius equation
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.energy-distributions-and-temperature
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs2.rate-constant-units
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Arrhenius equation
+        key_prerequisites: [chem.hs2.energy-distributions-and-temperature, chem.hs2.rate-constant-units]
+      - id: kp2
+        can_do: Find a rate constant at a new temperature
+        key_prerequisites: [chem.hs2.energy-distributions-and-temperature, chem.hs2.rate-constant-units]
+      - id: kp3
+        can_do: Explain the frequency factor
+        key_prerequisites: [chem.hs2.energy-distributions-and-temperature]
+      - id: kp4
+        can_do: Estimate how much a temperature rise speeds a reaction
+        key_prerequisites: [chem.hs2.energy-distributions-and-temperature]
+  - id: chem.gen2.activation-energy-from-data
+    name: Finding activation energy from rate data
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.arrhenius-equation
+        encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.linearize-with-logs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plot ln k against reciprocal temperature
+        key_prerequisites: [chem.gen2.arrhenius-equation, math.alg2.linearize-with-logs]
+      - id: kp2
+        can_do: Find activation energy from the slope
+        key_prerequisites: [chem.gen2.arrhenius-equation]
+      - id: kp3
+        can_do: Find activation energy from two points
+        key_prerequisites: [chem.gen2.arrhenius-equation]
+      - id: kp4
+        can_do: Find the frequency factor from the intercept
+        key_prerequisites: [math.alg2.linearize-with-logs]
+  - id: chem.gen2.orientation-factor
+    name: Explaining the orientation factor in collisions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.arrhenius-equation
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.collision-theory
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why orientation matters in collisions
+        key_prerequisites: [chem.hs2.collision-theory]
+      - id: kp2
+        can_do: Compare collision frequency with reaction rate
+        key_prerequisites: [chem.gen2.arrhenius-equation]
+      - id: kp3
+        can_do: Find the steric factor from data
+        key_prerequisites: [chem.gen2.arrhenius-equation]
+      - id: kp4
+        can_do: Explain small steric factors for complex molecules
+        key_prerequisites: [chem.gen2.arrhenius-equation, chem.hs2.collision-theory]
+  - id: chem.gen2.mechanisms-with-fast-equilibrium
+    name: Deriving rate laws with a fast pre-equilibrium
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.rate-determining-step
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a rate law when a fast equilibrium precedes the slow step
+        key_prerequisites: [chem.hs2.rate-determining-step, chem.hs2.equilibrium-expressions]
+      - id: kp2
+        can_do: Replace intermediates with equilibrium expressions
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp3
+        can_do: Test a proposed mechanism against data
+        key_prerequisites: [chem.hs2.rate-determining-step]
+      - id: kp4
+        can_do: Find which mechanism fits an observed rate law
+        key_prerequisites: [chem.hs2.rate-determining-step]
+  - id: chem.gen2.steady-state-intermediates
+    name: Using the steady-state approximation for intermediates
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.mechanisms-with-fast-equilibrium
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the steady-state approximation
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+      - id: kp2
+        can_do: Solve for an intermediate's concentration
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+      - id: kp3
+        can_do: Derive a rate law with the steady-state approximation
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+      - id: kp4
+        can_do: Compare with the fast-equilibrium result
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+  - id: chem.gen2.pseudo-first-order
+    name: Using pseudo-first-order conditions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.first-order-integrated-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain pseudo-first-order conditions
+        key_prerequisites: [chem.hs2.first-order-integrated-law]
+      - id: kp2
+        can_do: Find a rate constant with one reactant in excess
+        key_prerequisites: [chem.hs2.first-order-integrated-law]
+      - id: kp3
+        can_do: Find the true rate constant from a pseudo constant
+        key_prerequisites: [chem.hs2.first-order-integrated-law]
+      - id: kp4
+        can_do: Design an experiment with flooding
+        key_prerequisites: [chem.hs2.first-order-integrated-law]
+  - id: chem.gen2.homogeneous-and-heterogeneous-catalysis
+    name: Comparing homogeneous and heterogeneous catalysis
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.reaction-mechanisms
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.catalysts
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe homogeneous catalysis
+        key_prerequisites: [chem.hs2.reaction-mechanisms]
+      - id: kp2
+        can_do: Describe heterogeneous catalysis on surfaces
+        key_prerequisites: [chem.hs2.reaction-mechanisms]
+      - id: kp3
+        can_do: Explain catalytic converters
+        key_prerequisites: [chem.hs2.reaction-mechanisms, chem.hs2.catalysts]
+      - id: kp4
+        can_do: Compare catalyst types by separation and selectivity
+        key_prerequisites: [chem.hs2.catalysts]
+  - id: chem.gen2.enzyme-kinetics-intro
+    name: Describing enzyme kinetics and saturation
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.homogeneous-and-heterogeneous-catalysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe enzyme-substrate binding
+        key_prerequisites: [chem.gen2.homogeneous-and-heterogeneous-catalysis]
+      - id: kp2
+        can_do: Explain rate saturation at high substrate
+        key_prerequisites: [chem.gen2.homogeneous-and-heterogeneous-catalysis]
+      - id: kp3
+        can_do: Read a rate against substrate graph
+        key_prerequisites: [chem.gen2.homogeneous-and-heterogeneous-catalysis]
+      - id: kp4
+        can_do: Describe effects of temperature and pH on enzymes
+        key_prerequisites: [chem.gen2.homogeneous-and-heterogeneous-catalysis]
+  - id: chem.gen2.heterogeneous-equilibria
+    name: Writing expressions for heterogeneous equilibria
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write expressions for equilibria with solids and liquids
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp2
+        can_do: Explain why pure phases are omitted
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp3
+        can_do: Find K for decomposition of a solid
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp4
+        can_do: Predict effect of adding a solid
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+  - id: chem.gen2.simultaneous-equilibria
+    name: Solving coupled equilibria
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.combining-equilibrium-constants
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.ice-with-quadratics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine two equilibria sharing a species
+        key_prerequisites: [chem.hs2.combining-equilibrium-constants]
+      - id: kp2
+        can_do: Find concentrations in coupled equilibria
+        key_prerequisites: [chem.hs2.combining-equilibrium-constants, chem.hs2.ice-with-quadratics]
+      - id: kp3
+        can_do: Find an overall K for a sequence
+        key_prerequisites: [chem.hs2.combining-equilibrium-constants]
+      - id: kp4
+        can_do: Decide which equilibrium dominates
+        key_prerequisites: [chem.hs2.ice-with-quadratics]
+  - id: chem.gen2.equilibrium-with-changing-volume
+    name: Finding new equilibria after volume changes
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.le-chatelier-pressure-temperature
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs2.kp-and-kc
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find new equilibrium after compression
+        key_prerequisites: [chem.hs2.le-chatelier-pressure-temperature, chem.hs2.kp-and-kc]
+      - id: kp2
+        can_do: Find new equilibrium pressures
+        key_prerequisites: [chem.hs2.kp-and-kc]
+      - id: kp3
+        can_do: Compare Q with K after a volume change
+        key_prerequisites: [chem.hs2.le-chatelier-pressure-temperature]
+      - id: kp4
+        can_do: Find degree of dissociation at a new pressure
+        key_prerequisites: [chem.hs2.kp-and-kc]
+  - id: chem.gen2.polyprotic-species-concentrations
+    name: Finding species concentrations in polyprotic solutions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.polyprotic-acids
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.weak-acid-ph
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find concentrations of all species in a diprotic acid
+        key_prerequisites: [chem.hs2.polyprotic-acids, chem.hs2.weak-acid-ph]
+      - id: kp2
+        can_do: Find the second anion concentration
+        key_prerequisites: [chem.hs2.polyprotic-acids]
+      - id: kp3
+        can_do: Find pH of a triprotic acid
+        key_prerequisites: [chem.hs2.polyprotic-acids]
+      - id: kp4
+        can_do: Find species concentrations at a given pH
+        key_prerequisites: [chem.hs2.weak-acid-ph]
+  - id: chem.gen2.amphiprotic-salt-ph
+    name: Finding pH of amphiprotic salt solutions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.polyprotic-species-concentrations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.amphiprotic-species
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pH of a hydrogen carbonate solution
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations, chem.hs2.amphiprotic-species]
+      - id: kp2
+        can_do: Use the average of two pKa values
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations]
+      - id: kp3
+        can_do: Explain why concentration barely matters
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations]
+      - id: kp4
+        can_do: Find pH of a hydrogen phosphate solution
+        key_prerequisites: [chem.hs2.amphiprotic-species]
+  - id: chem.gen2.fractional-composition
+    name: Finding fractions of acid species against pH
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.polyprotic-species-concentrations
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs2.henderson-hasselbalch
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fraction of each species at a pH
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations, chem.hs2.henderson-hasselbalch]
+      - id: kp2
+        can_do: Sketch fraction plots for a diprotic acid
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations]
+      - id: kp3
+        can_do: Read dominant species from a fraction plot
+        key_prerequisites: [chem.hs2.henderson-hasselbalch]
+      - id: kp4
+        can_do: Find pH where two species are equal
+        key_prerequisites: [chem.hs2.henderson-hasselbalch]
+  - id: chem.gen2.buffer-preparation
+    name: Preparing a buffer of given pH
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.henderson-hasselbalch
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.preparing-solutions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find masses needed for a buffer
+        key_prerequisites: [chem.hs2.henderson-hasselbalch, chem.hs1.preparing-solutions]
+      - id: kp2
+        can_do: Prepare a buffer by partial neutralization
+        key_prerequisites: [chem.hs2.henderson-hasselbalch]
+      - id: kp3
+        can_do: Choose a buffer pair for a target pH
+        key_prerequisites: [chem.hs2.henderson-hasselbalch]
+      - id: kp4
+        can_do: Find buffer pH after dilution
+        key_prerequisites: [chem.hs1.preparing-solutions]
+  - id: chem.gen2.buffer-capacity
+    name: Finding pH change when acid or base is added to a buffer
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.buffer-preparation
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs1.solution-stoichiometry
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pH after adding strong acid to a buffer
+        key_prerequisites: [chem.gen2.buffer-preparation, chem.hs1.solution-stoichiometry]
+      - id: kp2
+        can_do: Find pH after adding strong base to a buffer
+        key_prerequisites: [chem.gen2.buffer-preparation, chem.hs1.solution-stoichiometry]
+      - id: kp3
+        can_do: Define buffer capacity
+        key_prerequisites: [chem.gen2.buffer-preparation]
+      - id: kp4
+        can_do: Find when a buffer is exhausted
+        key_prerequisites: [chem.gen2.buffer-preparation]
+  - id: chem.gen2.titration-curve-calculations
+    name: Calculating pH throughout a weak acid titration
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.weak-acid-strong-base-titration
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.buffer-capacity
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pH before any base is added
+        key_prerequisites: [chem.hs2.weak-acid-strong-base-titration]
+      - id: kp2
+        can_do: Find pH in the buffer region
+        key_prerequisites: [chem.gen2.buffer-capacity]
+      - id: kp3
+        can_do: Find pH at the equivalence point
+        key_prerequisites: [chem.hs2.weak-acid-strong-base-titration]
+      - id: kp4
+        can_do: Find pH after the equivalence point
+        key_prerequisites: [chem.hs2.weak-acid-strong-base-titration]
+  - id: chem.gen2.polyprotic-titrations
+    name: Analyzing titrations of polyprotic acids
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.titration-curve-calculations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.polyprotic-species-concentrations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a diprotic acid titration curve
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp2
+        can_do: Find pH at each half-equivalence point
+        key_prerequisites: [chem.gen2.titration-curve-calculations, chem.gen2.polyprotic-species-concentrations]
+      - id: kp3
+        can_do: Find both equivalence volumes
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp4
+        can_do: Find pKa values from a curve
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations]
+  - id: chem.gen2.weak-base-strong-acid-titration
+    name: Analyzing weak base-strong acid titrations
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.titration-curve-calculations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.weak-base-ph
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch a weak base titration curve
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp2
+        can_do: Find pH at the equivalence point
+        key_prerequisites: [chem.gen2.titration-curve-calculations, chem.hs2.weak-base-ph]
+      - id: kp3
+        can_do: Find pH in the buffer region
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp4
+        can_do: Choose an indicator for a weak base titration
+        key_prerequisites: [chem.hs2.weak-base-ph]
+  - id: chem.gen2.selective-precipitation
+    name: Separating ions by selective precipitation
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.predicting-precipitation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find which ion precipitates first
+        key_prerequisites: [chem.hs2.predicting-precipitation]
+      - id: kp2
+        can_do: Find concentration of the first ion when the second begins to precipitate
+        key_prerequisites: [chem.hs2.predicting-precipitation]
+      - id: kp3
+        can_do: Choose a reagent to separate ions
+        key_prerequisites: [chem.hs2.predicting-precipitation]
+      - id: kp4
+        can_do: Judge whether a separation is complete
+        key_prerequisites: [chem.hs2.predicting-precipitation]
+  - id: chem.gen2.ph-and-solubility
+    name: Finding how pH changes solubility
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.ksp-and-solubility
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.salt-solutions-ph
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain higher solubility of basic salts in acid
+        key_prerequisites: [chem.hs2.ksp-and-solubility, chem.hs2.salt-solutions-ph]
+      - id: kp2
+        can_do: Find solubility of a hydroxide at a given pH
+        key_prerequisites: [chem.hs2.ksp-and-solubility]
+      - id: kp3
+        can_do: Predict which salts dissolve in acid
+        key_prerequisites: [chem.hs2.salt-solutions-ph]
+      - id: kp4
+        can_do: Explain tooth enamel dissolving in acid
+        key_prerequisites: [chem.hs2.ksp-and-solubility]
+  - id: chem.gen2.complex-ion-formation
+    name: Using formation constants for complex ions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.lewis-acids-and-bases
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write formation equilibria of complex ions
+        key_prerequisites: [chem.hs2.lewis-acids-and-bases, chem.hs2.equilibrium-expressions]
+      - id: kp2
+        can_do: Use formation constants
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp3
+        can_do: Find free metal ion concentration
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp4
+        can_do: Explain stepwise formation
+        key_prerequisites: [chem.hs2.lewis-acids-and-bases]
+  - id: chem.gen2.solubility-with-complexation
+    name: Finding solubility when complexes form
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs2.ksp-and-solubility
+        encompassing: 0.3
+        confidence: high
+      - topic: chem.hs2.combining-equilibrium-constants
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine Ksp and formation constant
+        key_prerequisites: [chem.gen2.complex-ion-formation, chem.hs2.ksp-and-solubility, chem.hs2.combining-equilibrium-constants]
+      - id: kp2
+        can_do: Find solubility of silver chloride in ammonia
+        key_prerequisites: [chem.gen2.complex-ion-formation, chem.hs2.ksp-and-solubility]
+      - id: kp3
+        can_do: Predict dissolving of a precipitate by a ligand
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp4
+        can_do: Find ligand needed to dissolve a precipitate
+        key_prerequisites: [chem.hs2.combining-equilibrium-constants]
+  - id: chem.gen2.qualitative-analysis
+    name: Identifying ions by qualitative analysis
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.selective-precipitation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a qualitative analysis scheme
+        key_prerequisites: [chem.gen2.selective-precipitation]
+      - id: kp2
+        can_do: Separate ion groups with reagents
+        key_prerequisites: [chem.gen2.selective-precipitation, chem.gen2.complex-ion-formation]
+      - id: kp3
+        can_do: Identify ions from test results
+        key_prerequisites: [chem.gen2.selective-precipitation]
+      - id: kp4
+        can_do: Explain the chemistry of each separation step
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+  - id: chem.gen2.second-law-in-chemistry
+    name: Applying the second law to chemical systems
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.standard-entropies
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.entropy-and-second-law
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the second law for chemical systems
+        key_prerequisites: [physics.hs2.entropy-and-second-law]
+      - id: kp2
+        can_do: Find total entropy change of a reaction and surroundings
+        key_prerequisites: [chem.hs2.standard-entropies]
+      - id: kp3
+        can_do: Predict spontaneity from total entropy
+        key_prerequisites: [chem.hs2.standard-entropies]
+      - id: kp4
+        can_do: Explain why some exothermic reactions are not spontaneous
+        key_prerequisites: [chem.hs2.standard-entropies]
+  - id: chem.gen2.entropy-of-surroundings
+    name: Finding entropy change of surroundings from enthalpy
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.second-law-in-chemistry
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.enthalpy-of-reaction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy change of surroundings from heat
+        key_prerequisites: [chem.gen2.second-law-in-chemistry, chem.hs1.enthalpy-of-reaction]
+      - id: kp2
+        can_do: Explain temperature dependence of surroundings entropy
+        key_prerequisites: [chem.gen2.second-law-in-chemistry]
+      - id: kp3
+        can_do: Combine system and surroundings entropy
+        key_prerequisites: [chem.gen2.second-law-in-chemistry]
+      - id: kp4
+        can_do: Link total entropy to Gibbs energy
+        key_prerequisites: [chem.hs1.enthalpy-of-reaction]
+  - id: chem.gen2.standard-gibbs-of-formation
+    name: Using standard Gibbs energies of formation
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.gibbs-energy-spontaneity
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.enthalpy-of-formation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use standard Gibbs energies of formation
+        key_prerequisites: [chem.hs2.gibbs-energy-spontaneity, chem.hs2.enthalpy-of-formation]
+      - id: kp2
+        can_do: Find reaction Gibbs energy from tables
+        key_prerequisites: [chem.hs2.gibbs-energy-spontaneity]
+      - id: kp3
+        can_do: Compare tabulated and calculated Gibbs energies
+        key_prerequisites: [chem.hs2.enthalpy-of-formation]
+      - id: kp4
+        can_do: Explain zero Gibbs energy of formation for elements
+        key_prerequisites: [chem.hs2.gibbs-energy-spontaneity]
+  - id: chem.gen2.gibbs-energy-nonstandard
+    name: Finding Gibbs energy change under nonstandard conditions
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.standard-gibbs-of-formation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.reaction-quotient
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate Gibbs energy with the reaction quotient
+        key_prerequisites: [chem.gen2.standard-gibbs-of-formation, chem.hs2.reaction-quotient]
+      - id: kp2
+        can_do: Predict direction under nonstandard conditions
+        key_prerequisites: [chem.hs2.reaction-quotient]
+      - id: kp3
+        can_do: Find Gibbs energy at equilibrium
+        key_prerequisites: [chem.gen2.standard-gibbs-of-formation]
+      - id: kp4
+        can_do: Explain why reactions stop at equilibrium
+        key_prerequisites: [chem.gen2.standard-gibbs-of-formation]
+  - id: chem.gen2.gibbs-energy-and-k
+    name: Relating standard Gibbs energy to the equilibrium constant
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-nonstandard
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.equilibrium-constant-size
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate standard Gibbs energy to K
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard, chem.hs2.equilibrium-constant-size]
+      - id: kp2
+        can_do: Find K from Gibbs energy
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp3
+        can_do: Find Gibbs energy from K
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp4
+        can_do: Interpret positive and negative Gibbs energy as K size
+        key_prerequisites: [chem.hs2.equilibrium-constant-size]
+  - id: chem.gen2.vant-hoff-equation
+    name: Finding how K changes with temperature
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-and-k
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.le-chatelier-pressure-temperature
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the van't Hoff equation
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp2
+        can_do: Find K at a new temperature
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k, chem.hs2.le-chatelier-pressure-temperature]
+      - id: kp3
+        can_do: Find reaction enthalpy from K at two temperatures
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp4
+        can_do: Explain shifts with temperature quantitatively
+        key_prerequisites: [chem.hs2.le-chatelier-pressure-temperature]
+  - id: chem.gen2.coupled-reactions
+    name: Driving reactions by coupling
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-and-k
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add Gibbs energies of coupled reactions
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp2
+        can_do: Explain driving an unfavourable reaction
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp3
+        can_do: Describe coupling in metal extraction
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp4
+        can_do: Describe coupling with ATP
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+  - id: chem.gen2.gibbs-energy-and-cell-potential
+    name: Relating cell potential to Gibbs energy
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.standard-cell-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.standard-gibbs-of-formation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate Gibbs energy to cell potential
+        key_prerequisites: [chem.hs2.standard-cell-potential, chem.gen2.standard-gibbs-of-formation]
+      - id: kp2
+        can_do: Find electrons transferred
+        key_prerequisites: [chem.hs2.standard-cell-potential]
+      - id: kp3
+        can_do: Find Gibbs energy from cell potential
+        key_prerequisites: [chem.hs2.standard-cell-potential]
+      - id: kp4
+        can_do: Find cell potential from Gibbs energy
+        key_prerequisites: [chem.gen2.standard-gibbs-of-formation]
+  - id: chem.gen2.cell-potential-and-k
+    name: Relating cell potential to the equilibrium constant
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-and-cell-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-and-k
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate cell potential to K
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential, chem.gen2.gibbs-energy-and-k]
+      - id: kp2
+        can_do: Find K from standard cell potential
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp3
+        can_do: Find cell potential from K
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp4
+        can_do: Compare the three related quantities
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential, chem.gen2.gibbs-energy-and-k]
+  - id: chem.gen2.nernst-equation
+    name: Using the Nernst equation
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-and-cell-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-nonstandard
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Nernst equation
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp2
+        can_do: Find cell potential at nonstandard concentrations
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential, chem.gen2.gibbs-energy-nonstandard]
+      - id: kp3
+        can_do: Find concentration from cell potential
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp4
+        can_do: Explain potential falling as a battery runs down
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+  - id: chem.gen2.concentration-cells
+    name: Analyzing concentration cells
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a concentration cell
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp2
+        can_do: Find the potential of a concentration cell
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp3
+        can_do: Find unknown concentration from a concentration cell
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp4
+        can_do: Explain nerve cell potentials qualitatively
+        key_prerequisites: [chem.gen2.nernst-equation]
+  - id: chem.gen2.ph-from-cell-potential
+    name: Finding pH from cell potential
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.ph-and-poh
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pH from a hydrogen electrode potential
+        key_prerequisites: [chem.gen2.nernst-equation, chem.hs2.ph-and-poh]
+      - id: kp2
+        can_do: Explain how a pH meter measures potential
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp3
+        can_do: Find pH from a measured cell potential
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp4
+        can_do: Find potential change per pH unit
+        key_prerequisites: [chem.hs2.ph-and-poh]
+  - id: chem.gen2.ksp-from-cell-potential
+    name: Finding Ksp from standard potentials
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.cell-potential-and-k
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.solubility-product
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine half-reactions to give a dissolving reaction
+        key_prerequisites: [chem.gen2.cell-potential-and-k]
+      - id: kp2
+        can_do: Find Ksp from standard potentials
+        key_prerequisites: [chem.gen2.cell-potential-and-k, chem.hs2.solubility-product]
+      - id: kp3
+        can_do: Find standard potential from Ksp
+        key_prerequisites: [chem.gen2.cell-potential-and-k, chem.hs2.solubility-product]
+      - id: kp4
+        can_do: Explain electrodes coated with salts
+        key_prerequisites: [chem.hs2.solubility-product]
+  - id: chem.gen2.industrial-electrolysis
+    name: Describing industrial electrolysis processes
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.electrolysis-calculations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe chlor-alkali electrolysis
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+      - id: kp2
+        can_do: Describe aluminium production
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+      - id: kp3
+        can_do: Describe electrorefining of copper
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+      - id: kp4
+        can_do: Find energy cost of electrolysis
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+  - id: chem.gen2.coordination-compound-structure
+    name: Describing coordination compounds and ligands
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify central metal and ligands
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp2
+        can_do: Find coordination number
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp3
+        can_do: Classify ligands by denticity
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp4
+        can_do: Find oxidation state of the metal
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+  - id: chem.gen2.naming-coordination-compounds
+    name: Naming coordination compounds
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.transition-metal-names
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name complex ions
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp2
+        can_do: Name coordination compounds
+        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.transition-metal-names]
+      - id: kp3
+        can_do: Write formulas from names
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp4
+        can_do: Name compounds with complex anions
+        key_prerequisites: [chem.hs1.transition-metal-names]
+  - id: chem.gen2.isomers-of-complexes
+    name: Identifying isomers of coordination compounds
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs1.vsepr-shapes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify cis and trans isomers
+        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.vsepr-shapes]
+      - id: kp2
+        can_do: Identify fac and mer isomers
+        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.vsepr-shapes]
+      - id: kp3
+        can_do: Identify optical isomers of complexes
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp4
+        can_do: Identify linkage and ionization isomers
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+  - id: chem.gen2.crystal-field-splitting
+    name: Describing crystal field splitting
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.orbital-shapes-and-nodes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe d orbital splitting in octahedral fields
+        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.gen1.orbital-shapes-and-nodes]
+      - id: kp2
+        can_do: Fill split d orbitals
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp3
+        can_do: Find crystal field stabilization energy simply
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp4
+        can_do: Explain splitting with ligand repulsion
+        key_prerequisites: [chem.gen1.orbital-shapes-and-nodes]
+  - id: chem.gen2.high-and-low-spin
+    name: Predicting high-spin and low-spin complexes
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.crystal-field-splitting
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.atomic-magnetism
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare splitting energy with pairing energy
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+      - id: kp2
+        can_do: Predict high-spin and low-spin configurations
+        key_prerequisites: [chem.gen2.crystal-field-splitting, chem.gen1.atomic-magnetism]
+      - id: kp3
+        can_do: Predict magnetism of complexes
+        key_prerequisites: [chem.gen1.atomic-magnetism]
+      - id: kp4
+        can_do: Use ligand strength to predict spin
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+  - id: chem.gen2.color-of-complexes
+    name: Explaining colours of complexes
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.crystal-field-splitting
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.emission-and-absorption
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate splitting to absorbed colour
+        key_prerequisites: [chem.gen2.crystal-field-splitting, chem.hs1.emission-and-absorption]
+      - id: kp2
+        can_do: Find complementary colours
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+      - id: kp3
+        can_do: Explain colour changes with ligand changes
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+      - id: kp4
+        can_do: Explain colourless complexes
+        key_prerequisites: [chem.hs1.emission-and-absorption]
+  - id: chem.gen2.chelate-effect
+    name: Explaining the chelate effect
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.gen2.second-law-in-chemistry
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe chelating ligands
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp2
+        can_do: Explain the chelate effect with entropy
+        key_prerequisites: [chem.gen2.complex-ion-formation, chem.gen2.second-law-in-chemistry]
+      - id: kp3
+        can_do: Describe EDTA complexes
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp4
+        can_do: Describe chelation therapy
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+  - id: chem.gen2.periodic-properties-of-oxides
+    name: Classifying oxides as acidic, basic or amphoteric
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.acid-base-definitions
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.metallic-character-trend
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify oxides as acidic, basic or amphoteric
+        key_prerequisites: [chem.hs2.acid-base-definitions, chem.hs1.metallic-character-trend]
+      - id: kp2
+        can_do: Write reactions of oxides with water
+        key_prerequisites: [chem.hs2.acid-base-definitions]
+      - id: kp3
+        can_do: Explain trends across a period
+        key_prerequisites: [chem.hs1.metallic-character-trend]
+      - id: kp4
+        can_do: Explain acid rain from nonmetal oxides
+        key_prerequisites: [chem.hs2.acid-base-definitions]
+  - id: chem.gen2.alkali-and-alkaline-earth-reactions
+    name: Predicting reactions of alkali and alkaline earth metals
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.single-replacement-activity
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.periodic-properties-of-oxides
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict reactions of alkali metals with water
+        key_prerequisites: [chem.hs1.single-replacement-activity, chem.gen2.periodic-properties-of-oxides]
+      - id: kp2
+        can_do: Predict reactions of alkaline earth metals
+        key_prerequisites: [chem.hs1.single-replacement-activity]
+      - id: kp3
+        can_do: Explain reactivity trends down groups
+        key_prerequisites: [chem.hs1.single-replacement-activity]
+      - id: kp4
+        can_do: Describe flame and oxide chemistry of these metals
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+  - id: chem.gen2.halogen-and-noble-gas-chemistry
+    name: Describing halogen and noble gas chemistry
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.oxidation-numbers
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.electronegativity-trend
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Predict halogen displacement reactions
+        key_prerequisites: [chem.hs2.oxidation-numbers]
+      - id: kp2
+        can_do: Explain halogen reactivity trends
+        key_prerequisites: [chem.hs2.oxidation-numbers, chem.hs1.electronegativity-trend]
+      - id: kp3
+        can_do: Describe interhalogens and oxyacids
+        key_prerequisites: [chem.hs2.oxidation-numbers]
+      - id: kp4
+        can_do: Describe noble gas compounds
+        key_prerequisites: [chem.hs1.electronegativity-trend]
+  - id: chem.gen2.transition-metal-properties
+    name: Describing properties of transition metals
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.crystal-field-splitting
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.configurations-of-ions
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain variable oxidation states
+        key_prerequisites: [chem.hs1.configurations-of-ions]
+      - id: kp2
+        can_do: Explain coloured compounds
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+      - id: kp3
+        can_do: Explain catalytic activity
+        key_prerequisites: [chem.gen2.crystal-field-splitting]
+      - id: kp4
+        can_do: Compare transition metal trends across a period
+        key_prerequisites: [chem.gen2.crystal-field-splitting, chem.hs1.configurations-of-ions]
+  - id: chem.gen2.metallurgy
+    name: Describing extraction and refining of metals
+    subject: chem
+    course: chem.gen2
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.transition-metal-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.industrial-electrolysis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ore concentration
+        key_prerequisites: [chem.gen2.transition-metal-properties]
+      - id: kp2
+        can_do: Describe reduction of oxides with carbon
+        key_prerequisites: [chem.gen2.transition-metal-properties]
+      - id: kp3
+        can_do: Describe electrolytic refining
+        key_prerequisites: [chem.gen2.industrial-electrolysis]
+      - id: kp4
+        can_do: Explain metal extraction by reactivity
+        key_prerequisites: [chem.gen2.transition-metal-properties]

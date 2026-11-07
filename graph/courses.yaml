@@ -190,10 +190,11 @@ courses:
   - id: physics.hs2
     subject: physics
     levels: [g11, g12]
-    budget: 200
+    budget: 165
     follows:
       - physics.hs1
       - math.alg2
+      - chem.hs1
   - id: physics.mechanics
     subject: physics
     levels: [uni-lower, uni-lower]
@@ -217,6 +218,7 @@ courses:
       - physics.mechanics
       - physics.hs2
       - math.calc3
+      - chem.gen1
   - id: physics.modern
     subject: physics
     levels: [uni-lower, uni-lower]
@@ -260,78 +262,93 @@ courses:
   - id: chem.elem
     subject: chem
     levels: [gk, g5]
-    budget: 30
+    budget: 25
+    follows:
+      - physics.elem
   - id: chem.ms
     subject: chem
     levels: [g6, g8]
-    budget: 70
+    budget: 55
     follows:
       - chem.elem
+      - physics.ms
   - id: chem.hs1
     subject: chem
     levels: [g9, g11]
-    budget: 180
+    budget: 125
     follows:
       - chem.ms
+      - physics.hs1
       - math.alg1
   - id: chem.hs2
     subject: chem
     levels: [g11, g12]
-    budget: 180
+    budget: 90
     follows:
       - chem.hs1
       - math.alg2
   - id: chem.gen1
     subject: chem
     levels: [uni-lower, uni-lower]
-    budget: 190
+    budget: 55
     follows:
       - chem.hs2
+      - physics.hs2
   - id: chem.gen2
     subject: chem
     levels: [uni-lower, uni-lower]
-    budget: 190
+    budget: 55
     follows:
       - chem.gen1
   - id: chem.org1
     subject: chem
     levels: [uni-lower, uni-lower]
-    budget: 190
+    budget: 100
     follows:
       - chem.gen2
   - id: chem.org2
     subject: chem
     levels: [uni-upper, uni-upper]
-    budget: 190
+    budget: 80
     follows:
       - chem.org1
   - id: chem.analytical
     subject: chem
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 55
     follows:
       - chem.gen2
+      - math.stats
   - id: chem.inorganic
     subject: chem
     levels: [uni-upper, uni-upper]
-    budget: 150
+    budget: 50
     follows:
       - chem.gen2
+      - chem.org1
+      - math.linalg
   - id: chem.pchem1
     subject: chem
     levels: [uni-upper, uni-upper]
-    budget: 170
+    budget: 50
     follows:
       - chem.gen2
       - math.calc2
       - physics.mechanics
+      - physics.waves-thermo-optics
+      - physics.stat-thermal
+      - math.diffeq
+      - chem.analytical
   - id: chem.pchem2
     subject: chem
     levels: [uni-upper, uni-upper]
-    budget: 170
+    budget: 50
     follows:
       - chem.pchem1
       - math.linalg
+      - physics.modern
+      - physics.quantum
+      - chem.org2
   - id: bio.elem
     subject: bio
     levels: [gk, g5]

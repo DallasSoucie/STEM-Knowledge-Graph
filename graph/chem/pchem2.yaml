@@ -1,0 +1,1248 @@
+course: chem.pchem2
+topics:
+  - id: chem.pchem2.born-oppenheimer-approximation
+    name: Applying the Born-Oppenheimer approximation
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hydrogen-molecule-ion
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.two-particle-wave-functions
+        encompassing: 0.3
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Separate nuclear and electronic motion
+        key_prerequisites: [physics.quantum.two-particle-wave-functions]
+      - id: kp2
+        can_do: Explain why nuclei can be treated as fixed
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+      - id: kp3
+        can_do: Find a potential energy curve from electronic energies
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+      - id: kp4
+        can_do: Explain when the approximation fails
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion, physics.quantum.two-particle-wave-functions]
+  - id: chem.pchem2.lcao-integrals
+    name: Evaluating overlap, Coulomb and exchange integrals
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hydrogen-molecule-ion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write molecular orbitals as combinations of atomic orbitals
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+      - id: kp2
+        can_do: Evaluate overlap integrals qualitatively
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+      - id: kp3
+        can_do: Interpret Coulomb integrals
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+      - id: kp4
+        can_do: Interpret exchange integrals
+        key_prerequisites: [physics.quantum.hydrogen-molecule-ion]
+  - id: chem.pchem2.secular-determinants
+    name: Setting up secular determinants
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.lcao-integrals
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.determinant-cofactors
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the secular equations
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+      - id: kp2
+        can_do: Write the secular determinant
+        key_prerequisites: [chem.pchem2.lcao-integrals, math.linalg.determinant-cofactors]
+      - id: kp3
+        can_do: Solve a two-orbital problem
+        key_prerequisites: [math.linalg.determinant-cofactors]
+      - id: kp4
+        can_do: Find orbital coefficients
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+  - id: chem.pchem2.hydrogen-molecule-mo-and-vb
+    name: Comparing molecular orbital and valence bond descriptions of hydrogen
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.lcao-integrals
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.symmetrization
+        encompassing: 0.25
+        confidence: high
+      - topic: chem.gen1.valence-bond-theory
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the molecular orbital wave function of hydrogen
+        key_prerequisites: [chem.pchem2.lcao-integrals, physics.quantum.symmetrization]
+      - id: kp2
+        can_do: Write the valence bond wave function of hydrogen
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+      - id: kp3
+        can_do: Compare ionic terms in each description
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+      - id: kp4
+        can_do: Explain why both improve with refinement
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+  - id: chem.pchem2.diatomic-orbitals-from-quantum
+    name: Building diatomic molecular orbitals from atomic orbitals
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.secular-determinants
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.heteronuclear-diatomic-orbitals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bonding and antibonding energies from integrals
+        key_prerequisites: [chem.pchem2.secular-determinants]
+      - id: kp2
+        can_do: Explain s-p mixing from orbital energies
+        key_prerequisites: [chem.gen1.heteronuclear-diatomic-orbitals]
+      - id: kp3
+        can_do: Find orbital polarity in heteronuclear molecules
+        key_prerequisites: [chem.pchem2.secular-determinants, chem.gen1.heteronuclear-diatomic-orbitals]
+      - id: kp4
+        can_do: Compare calculated and experimental bond energies
+        key_prerequisites: [chem.pchem2.secular-determinants]
+  - id: chem.pchem2.atomic-term-symbols
+    name: Assigning atomic term symbols
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.shell-structure-from-quantum
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.quantum.addition-of-angular-momentum
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find microstates of a configuration
+        key_prerequisites: [physics.quantum.addition-of-angular-momentum]
+      - id: kp2
+        can_do: Find Russell-Saunders terms
+        key_prerequisites: [physics.quantum.shell-structure-from-quantum, physics.quantum.addition-of-angular-momentum]
+      - id: kp3
+        can_do: Find ground terms with Hund's rules
+        key_prerequisites: [physics.quantum.shell-structure-from-quantum]
+      - id: kp4
+        can_do: Find spin-orbit levels
+        key_prerequisites: [physics.quantum.addition-of-angular-momentum]
+  - id: chem.pchem2.molecular-term-symbols
+    name: Assigning molecular term symbols
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.diatomic-orbitals-from-quantum
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.atomic-term-symbols
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find molecular term symbols of diatomics
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum, chem.pchem2.atomic-term-symbols]
+      - id: kp2
+        can_do: Explain the triplet ground state of oxygen
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum]
+      - id: kp3
+        can_do: Use symmetry labels in molecular terms
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum]
+      - id: kp4
+        can_do: Find excited molecular terms
+        key_prerequisites: [chem.pchem2.atomic-term-symbols]
+  - id: chem.pchem2.hybrid-orbitals-from-quantum
+    name: Building hybrid orbitals as combinations of atomic orbitals
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.lcao-integrals
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.hybridization
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write sp hybrids as orbital combinations
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+      - id: kp2
+        can_do: Write sp2 and sp3 hybrids
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+      - id: kp3
+        can_do: Show hybrids are orthonormal
+        key_prerequisites: [chem.pchem2.lcao-integrals]
+      - id: kp4
+        can_do: Relate hybrid character to bond angle
+        key_prerequisites: [chem.gen1.hybridization]
+  - id: chem.pchem2.huckel-theory
+    name: Finding pi energies with Huckel theory
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.secular-determinants
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.find-eigenvalues
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the Huckel approximations
+        key_prerequisites: [chem.pchem2.secular-determinants]
+      - id: kp2
+        can_do: Find pi energies of ethene
+        key_prerequisites: [chem.pchem2.secular-determinants]
+      - id: kp3
+        can_do: Find pi energies of butadiene
+        key_prerequisites: [chem.pchem2.secular-determinants, math.linalg.find-eigenvalues]
+      - id: kp4
+        can_do: Find delocalization energy
+        key_prerequisites: [math.linalg.find-eigenvalues]
+  - id: chem.pchem2.huckel-rings-and-chains
+    name: Applying Huckel theory to rings and chains
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.huckel-theory
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.org2.aromaticity-rules
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Huckel theory to benzene
+        key_prerequisites: [chem.pchem2.huckel-theory]
+      - id: kp2
+        can_do: Explain aromaticity with Huckel energies
+        key_prerequisites: [chem.pchem2.huckel-theory, chem.org2.aromaticity-rules]
+      - id: kp3
+        can_do: Use the circle mnemonic for rings
+        key_prerequisites: [chem.pchem2.huckel-theory]
+      - id: kp4
+        can_do: Find charge densities and bond orders
+        key_prerequisites: [chem.pchem2.huckel-theory]
+  - id: chem.pchem2.hartree-fock-method
+    name: Describing the Hartree-Fock method
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.helium-atom
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.quantum.variational-principle
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the self-consistent field idea
+        key_prerequisites: [physics.quantum.helium-atom]
+      - id: kp2
+        can_do: Explain the orbital approximation
+        key_prerequisites: [physics.quantum.variational-principle]
+      - id: kp3
+        can_do: Explain Hartree-Fock energies
+        key_prerequisites: [physics.quantum.helium-atom]
+      - id: kp4
+        can_do: Explain the Hartree-Fock limit
+        key_prerequisites: [physics.quantum.helium-atom]
+  - id: chem.pchem2.basis-sets
+    name: Choosing basis sets for calculations
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.hartree-fock-method
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Slater and Gaussian functions
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp2
+        can_do: Compare minimal and split-valence basis sets
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp3
+        can_do: Explain polarization and diffuse functions
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp4
+        can_do: Choose a basis set for a problem
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+  - id: chem.pchem2.correlation-and-density-functionals
+    name: Describing electron correlation and density functional methods
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.hartree-fock-method
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define correlation energy
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp2
+        can_do: Describe configuration interaction
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp3
+        can_do: Describe density functional methods
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+      - id: kp4
+        can_do: Compare costs of methods
+        key_prerequisites: [chem.pchem2.hartree-fock-method]
+  - id: chem.pchem2.computational-chemistry-results
+    name: Interpreting results of quantum chemistry calculations
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.basis-sets
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.correlation-and-density-functionals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret calculated orbital energies
+        key_prerequisites: [chem.pchem2.basis-sets]
+      - id: kp2
+        can_do: Interpret optimized geometries
+        key_prerequisites: [chem.pchem2.basis-sets]
+      - id: kp3
+        can_do: Interpret calculated vibrational frequencies
+        key_prerequisites: [chem.pchem2.correlation-and-density-functionals]
+      - id: kp4
+        can_do: Judge reliability of a calculation
+        key_prerequisites: [chem.pchem2.basis-sets, chem.pchem2.correlation-and-density-functionals]
+  - id: chem.pchem2.rotational-selection-rules
+    name: Using rotational selection rules
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.rigid-rotor
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.quantum.selection-rules-derived
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.modern.molecular-rotation-spectra
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply rotational selection rules
+        key_prerequisites: [physics.quantum.rigid-rotor, physics.quantum.selection-rules-derived]
+      - id: kp2
+        can_do: Find microwave line spacing
+        key_prerequisites: [physics.modern.molecular-rotation-spectra]
+      - id: kp3
+        can_do: Find bond length from a microwave spectrum
+        key_prerequisites: [physics.modern.molecular-rotation-spectra]
+      - id: kp4
+        can_do: Explain why nonpolar molecules lack rotational spectra
+        key_prerequisites: [physics.quantum.selection-rules-derived]
+  - id: chem.pchem2.centrifugal-distortion
+    name: Correcting rotational lines for centrifugal distortion
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.rotational-selection-rules
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain centrifugal distortion
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+      - id: kp2
+        can_do: Correct rotational energy levels
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+      - id: kp3
+        can_do: Find distortion constants from spectra
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+      - id: kp4
+        can_do: Relate distortion to bond stiffness
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+  - id: chem.pchem2.morse-oscillator
+    name: Using the Morse potential for anharmonic vibrations
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.molecular-vibration-spectra
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.oscillator-matrix-elements
+        encompassing: 0.3
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Morse potential
+        key_prerequisites: [physics.modern.molecular-vibration-spectra]
+      - id: kp2
+        can_do: Find anharmonic energy levels
+        key_prerequisites: [physics.modern.molecular-vibration-spectra, physics.quantum.oscillator-matrix-elements]
+      - id: kp3
+        can_do: Find dissociation energy from levels
+        key_prerequisites: [physics.modern.molecular-vibration-spectra]
+      - id: kp4
+        can_do: Explain overtones
+        key_prerequisites: [physics.quantum.oscillator-matrix-elements]
+  - id: chem.pchem2.vibrational-selection-rules
+    name: Using vibrational selection rules
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.oscillator-matrix-elements
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.selection-rules-derived
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply vibrational selection rules
+        key_prerequisites: [physics.quantum.oscillator-matrix-elements, physics.quantum.selection-rules-derived]
+      - id: kp2
+        can_do: Explain infrared activity from dipole changes
+        key_prerequisites: [physics.quantum.selection-rules-derived]
+      - id: kp3
+        can_do: Explain overtone intensity
+        key_prerequisites: [physics.quantum.oscillator-matrix-elements]
+      - id: kp4
+        can_do: Find fundamental frequencies
+        key_prerequisites: [physics.quantum.oscillator-matrix-elements]
+  - id: chem.pchem2.vibration-rotation-spectra
+    name: Interpreting vibration-rotation spectra
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.vibrational-selection-rules
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem2.rotational-selection-rules
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify P and R branches
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules, chem.pchem2.rotational-selection-rules]
+      - id: kp2
+        can_do: Find bond length from a vibration-rotation spectrum
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+      - id: kp3
+        can_do: Explain the missing Q branch
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules]
+      - id: kp4
+        can_do: Explain intensity patterns from populations
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+  - id: chem.pchem2.isotope-shifts-in-spectra
+    name: Predicting isotope shifts in spectra
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.vibration-rotation-spectra
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict isotope shifts in vibrational frequency
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra]
+      - id: kp2
+        can_do: Predict isotope shifts in rotational constants
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra]
+      - id: kp3
+        can_do: Identify isotopes from spectra
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra]
+      - id: kp4
+        can_do: Explain zero-point energy differences
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra]
+  - id: chem.pchem2.polyatomic-normal-modes
+    name: Counting normal modes of polyatomic molecules
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.vibrational-selection-rules
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count normal modes of polyatomics
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules]
+      - id: kp2
+        can_do: Describe stretches and bends
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules]
+      - id: kp3
+        can_do: Find infrared active modes of simple molecules
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules]
+      - id: kp4
+        can_do: Explain combination bands
+        key_prerequisites: [chem.pchem2.vibrational-selection-rules]
+  - id: chem.pchem2.raman-spectroscopy
+    name: Interpreting Raman spectra
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.polyatomic-normal-modes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Raman scattering
+        key_prerequisites: [chem.pchem2.polyatomic-normal-modes]
+      - id: kp2
+        can_do: Explain Stokes and anti-Stokes lines
+        key_prerequisites: [chem.pchem2.polyatomic-normal-modes]
+      - id: kp3
+        can_do: Apply Raman selection rules
+        key_prerequisites: [chem.pchem2.polyatomic-normal-modes]
+      - id: kp4
+        can_do: Compare Raman and infrared spectra
+        key_prerequisites: [chem.pchem2.polyatomic-normal-modes]
+  - id: chem.pchem2.nuclear-spin-statistics
+    name: Explaining intensity alternation from nuclear spin statistics
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.vibration-rotation-spectra
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.quantum.symmetrization
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain intensity alternation in rotational lines
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra]
+      - id: kp2
+        can_do: Explain ortho and para hydrogen
+        key_prerequisites: [physics.quantum.symmetrization]
+      - id: kp3
+        can_do: Find statistical weights from nuclear spin
+        key_prerequisites: [chem.pchem2.vibration-rotation-spectra, physics.quantum.symmetrization]
+      - id: kp4
+        can_do: Explain missing lines in symmetric molecules
+        key_prerequisites: [physics.quantum.symmetrization]
+  - id: chem.pchem2.franck-condon-principle
+    name: Applying the Franck-Condon principle
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.morse-oscillator
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.absorption-and-stimulated-emission
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain vertical transitions
+        key_prerequisites: [chem.pchem2.morse-oscillator]
+      - id: kp2
+        can_do: Find vibrational structure of electronic bands
+        key_prerequisites: [chem.pchem2.morse-oscillator]
+      - id: kp3
+        can_do: Relate band shape to geometry change
+        key_prerequisites: [chem.pchem2.morse-oscillator]
+      - id: kp4
+        can_do: Explain dissociative transitions
+        key_prerequisites: [physics.quantum.absorption-and-stimulated-emission]
+  - id: chem.pchem2.jablonski-diagrams
+    name: Using Jablonski diagrams for fluorescence and phosphorescence
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.franck-condon-principle
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.spontaneous-emission-and-lifetimes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a Jablonski diagram
+        key_prerequisites: [chem.pchem2.franck-condon-principle]
+      - id: kp2
+        can_do: Explain internal conversion and intersystem crossing
+        key_prerequisites: [chem.pchem2.franck-condon-principle]
+      - id: kp3
+        can_do: Compare fluorescence and phosphorescence
+        key_prerequisites: [chem.pchem2.franck-condon-principle, physics.quantum.spontaneous-emission-and-lifetimes]
+      - id: kp4
+        can_do: Explain the Stokes shift
+        key_prerequisites: [physics.quantum.spontaneous-emission-and-lifetimes]
+  - id: chem.pchem2.conjugated-molecule-spectra
+    name: Predicting electronic spectra of conjugated molecules
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.huckel-rings-and-chains
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.org2.uv-vis-of-conjugated-systems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transition energies with Huckel theory
+        key_prerequisites: [chem.pchem2.huckel-rings-and-chains]
+      - id: kp2
+        can_do: Use the particle-in-a-box model for dyes
+        key_prerequisites: [chem.org2.uv-vis-of-conjugated-systems]
+      - id: kp3
+        can_do: Predict colour from conjugation length
+        key_prerequisites: [chem.pchem2.huckel-rings-and-chains, chem.org2.uv-vis-of-conjugated-systems]
+      - id: kp4
+        can_do: Compare model and observed wavelengths
+        key_prerequisites: [chem.org2.uv-vis-of-conjugated-systems]
+  - id: chem.pchem2.quantum-yield
+    name: Calculating quantum yields
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.jablonski-diagrams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define quantum yield
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+      - id: kp2
+        can_do: Find quantum yield from rates
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+      - id: kp3
+        can_do: Find quantum yield from photon counts
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+      - id: kp4
+        can_do: Explain chain reactions with large yields
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+  - id: chem.pchem2.photochemical-kinetics
+    name: Analyzing photochemical kinetics and quenching
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.quantum-yield
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate laws for photochemical steps
+        key_prerequisites: [chem.pchem2.quantum-yield, chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Use Stern-Volmer quenching analysis
+        key_prerequisites: [chem.pchem2.quantum-yield]
+      - id: kp3
+        can_do: Find fluorescence lifetimes
+        key_prerequisites: [chem.pchem2.quantum-yield]
+      - id: kp4
+        can_do: Explain photosensitization
+        key_prerequisites: [chem.pchem2.quantum-yield]
+  - id: chem.pchem2.lasers-in-chemistry
+    name: Describing lasers used in chemistry
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.jablonski-diagrams
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.modern.laser-principles
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe laser types used in chemistry
+        key_prerequisites: [chem.pchem2.jablonski-diagrams, physics.modern.laser-principles]
+      - id: kp2
+        can_do: Describe ultrafast spectroscopy
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+      - id: kp3
+        can_do: Describe laser-induced fluorescence
+        key_prerequisites: [chem.pchem2.jablonski-diagrams]
+      - id: kp4
+        can_do: Explain laser selectivity in chemistry
+        key_prerequisites: [physics.modern.laser-principles]
+  - id: chem.pchem2.molecular-photoelectron-spectra
+    name: Interpreting molecular photoelectron spectra
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.diatomic-orbitals-from-quantum
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs2.photoelectron-spectroscopy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate ionization energies to orbital energies
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum]
+      - id: kp2
+        can_do: Identify bonding and nonbonding bands
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum]
+      - id: kp3
+        can_do: Explain vibrational fine structure in bands
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum]
+      - id: kp4
+        can_do: Compare spectra of nitrogen and carbon monoxide
+        key_prerequisites: [chem.pchem2.diatomic-orbitals-from-quantum, chem.hs2.photoelectron-spectroscopy]
+  - id: chem.pchem2.nmr-theory
+    name: Explaining NMR with nuclear spin in a field
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.magnetic-resonance
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.org1.proton-nmr-shifts
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find nuclear spin energy levels in a field
+        key_prerequisites: [physics.quantum.magnetic-resonance]
+      - id: kp2
+        can_do: Find the Larmor frequency
+        key_prerequisites: [physics.quantum.magnetic-resonance]
+      - id: kp3
+        can_do: Explain population differences
+        key_prerequisites: [physics.quantum.magnetic-resonance]
+      - id: kp4
+        can_do: Explain why higher fields improve spectra
+        key_prerequisites: [chem.org1.proton-nmr-shifts]
+  - id: chem.pchem2.chemical-shift-shielding
+    name: Explaining chemical shifts as shielding
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.nmr-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain shielding by electrons
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp2
+        can_do: Explain ring current effects
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp3
+        can_do: Relate shielding to the chemical shift scale
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp4
+        can_do: Explain anisotropy of multiple bonds
+        key_prerequisites: [chem.pchem2.nmr-theory]
+  - id: chem.pchem2.spin-coupling-theory
+    name: Explaining spin-spin coupling
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.nmr-theory
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.addition-of-angular-momentum
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain coupling through bonds
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp2
+        can_do: Find splitting patterns from spin states
+        key_prerequisites: [chem.pchem2.nmr-theory, physics.quantum.addition-of-angular-momentum]
+      - id: kp3
+        can_do: Explain first-order and second-order spectra
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp4
+        can_do: Explain magnetic equivalence
+        key_prerequisites: [physics.quantum.addition-of-angular-momentum]
+  - id: chem.pchem2.nmr-relaxation
+    name: Describing NMR relaxation times
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.nmr-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define spin-lattice relaxation
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp2
+        can_do: Define spin-spin relaxation
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp3
+        can_do: Relate relaxation to linewidth
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp4
+        can_do: Explain relaxation contrast in imaging
+        key_prerequisites: [chem.pchem2.nmr-theory]
+  - id: chem.pchem2.pulsed-fourier-nmr
+    name: Describing pulsed Fourier transform NMR
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.nmr-theory
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.3
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a pulse experiment
+        key_prerequisites: [chem.pchem2.nmr-theory]
+      - id: kp2
+        can_do: Explain free induction decay
+        key_prerequisites: [chem.pchem2.nmr-theory, math.pde.fourier-transform-definition]
+      - id: kp3
+        can_do: Transform signals to spectra
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp4
+        can_do: Describe two-dimensional NMR briefly
+        key_prerequisites: [chem.pchem2.nmr-theory]
+  - id: chem.pchem2.epr-spectroscopy
+    name: Interpreting EPR spectra
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.spin-coupling-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain electron spin resonance
+        key_prerequisites: [chem.pchem2.spin-coupling-theory]
+      - id: kp2
+        can_do: Find g values
+        key_prerequisites: [chem.pchem2.spin-coupling-theory]
+      - id: kp3
+        can_do: Find hyperfine splitting patterns
+        key_prerequisites: [chem.pchem2.spin-coupling-theory]
+      - id: kp4
+        can_do: Identify radicals from spectra
+        key_prerequisites: [chem.pchem2.spin-coupling-theory]
+  - id: chem.pchem2.rotational-partition-symmetry-numbers
+    name: Using symmetry numbers in rotational partition functions
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.molecular-heat-capacities
+        encompassing: 0.4
+        confidence: medium
+      - topic: chem.pchem2.rotational-selection-rules
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the rotational partition function
+        key_prerequisites: [physics.stat-thermal.molecular-heat-capacities, chem.pchem2.rotational-selection-rules]
+      - id: kp2
+        can_do: Use symmetry numbers
+        key_prerequisites: [physics.stat-thermal.molecular-heat-capacities]
+      - id: kp3
+        can_do: Find rotational temperature from spectra
+        key_prerequisites: [chem.pchem2.rotational-selection-rules]
+      - id: kp4
+        can_do: Find rotational contribution to entropy
+        key_prerequisites: [physics.stat-thermal.molecular-heat-capacities]
+  - id: chem.pchem2.electronic-partition-function
+    name: Finding electronic partition functions
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.atomic-term-symbols
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the electronic partition function
+        key_prerequisites: [physics.stat-thermal.partition-function]
+      - id: kp2
+        can_do: Include degenerate ground states
+        key_prerequisites: [chem.pchem2.atomic-term-symbols]
+      - id: kp3
+        can_do: Include low-lying excited states
+        key_prerequisites: [physics.stat-thermal.partition-function, chem.pchem2.atomic-term-symbols]
+      - id: kp4
+        can_do: Find electronic contribution to energy
+        key_prerequisites: [physics.stat-thermal.partition-function]
+  - id: chem.pchem2.molecular-partition-function
+    name: Combining partition functions of a molecule
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.rotational-partition-symmetry-numbers
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.electronic-partition-function
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.stat-thermal.ideal-gas-partition-function
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Combine translational, rotational, vibrational and electronic parts
+        key_prerequisites: [chem.pchem2.rotational-partition-symmetry-numbers, chem.pchem2.electronic-partition-function, physics.stat-thermal.ideal-gas-partition-function]
+      - id: kp2
+        can_do: Choose energy zero for partition functions
+        key_prerequisites: [chem.pchem2.rotational-partition-symmetry-numbers]
+      - id: kp3
+        can_do: Find molecular partition function of a diatomic
+        key_prerequisites: [chem.pchem2.rotational-partition-symmetry-numbers, chem.pchem2.electronic-partition-function]
+      - id: kp4
+        can_do: Find contributions to heat capacity
+        key_prerequisites: [chem.pchem2.electronic-partition-function]
+  - id: chem.pchem2.thermodynamic-functions-of-real-gases
+    name: Finding entropy and heat capacity of real molecules from partition functions
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.molecular-partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.free-energy-from-partition-function
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of a diatomic gas from partition functions
+        key_prerequisites: [chem.pchem2.molecular-partition-function, physics.stat-thermal.free-energy-from-partition-function]
+      - id: kp2
+        can_do: Find heat capacity against temperature
+        key_prerequisites: [chem.pchem2.molecular-partition-function]
+      - id: kp3
+        can_do: Compare calculated and calorimetric entropy
+        key_prerequisites: [chem.pchem2.molecular-partition-function]
+      - id: kp4
+        can_do: Find Gibbs energy functions
+        key_prerequisites: [physics.stat-thermal.free-energy-from-partition-function]
+  - id: chem.pchem2.equilibrium-constants-from-partition-functions
+    name: Calculating equilibrium constants from partition functions
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.molecular-partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.law-of-mass-action
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write K from partition functions
+        key_prerequisites: [chem.pchem2.molecular-partition-function, physics.stat-thermal.law-of-mass-action]
+      - id: kp2
+        can_do: Find K for a dissociation reaction
+        key_prerequisites: [chem.pchem2.molecular-partition-function]
+      - id: kp3
+        can_do: Find K for an isomerization
+        key_prerequisites: [chem.pchem2.molecular-partition-function]
+      - id: kp4
+        can_do: Compare calculated and measured K
+        key_prerequisites: [physics.stat-thermal.law-of-mass-action]
+  - id: chem.pchem2.isotope-exchange-equilibria
+    name: Predicting isotope exchange equilibria
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.equilibrium-constants-from-partition-functions
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.isotope-shifts-in-spectra
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find K for isotope exchange
+        key_prerequisites: [chem.pchem2.equilibrium-constants-from-partition-functions]
+      - id: kp2
+        can_do: Explain zero-point energy effects
+        key_prerequisites: [chem.pchem2.isotope-shifts-in-spectra]
+      - id: kp3
+        can_do: Explain symmetry number contributions
+        key_prerequisites: [chem.pchem2.equilibrium-constants-from-partition-functions]
+      - id: kp4
+        can_do: Predict isotope fractionation
+        key_prerequisites: [chem.pchem2.equilibrium-constants-from-partition-functions, chem.pchem2.isotope-shifts-in-spectra]
+  - id: chem.pchem2.residual-entropy
+    name: Explaining residual entropy of crystals
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.thermodynamic-functions-of-real-gases
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.third-law
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain residual entropy
+        key_prerequisites: [physics.stat-thermal.third-law]
+      - id: kp2
+        can_do: Find residual entropy of carbon monoxide
+        key_prerequisites: [chem.pchem2.thermodynamic-functions-of-real-gases]
+      - id: kp3
+        can_do: Find residual entropy of ice
+        key_prerequisites: [chem.pchem2.thermodynamic-functions-of-real-gases]
+      - id: kp4
+        can_do: Compare spectroscopic and calorimetric entropy
+        key_prerequisites: [chem.pchem2.thermodynamic-functions-of-real-gases, physics.stat-thermal.third-law]
+  - id: chem.pchem2.potential-energy-surfaces
+    name: Reading potential energy surfaces
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.born-oppenheimer-approximation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.collision-theory-rate-constants
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read a potential energy surface
+        key_prerequisites: [chem.pchem2.born-oppenheimer-approximation]
+      - id: kp2
+        can_do: Find transition states as saddle points
+        key_prerequisites: [chem.pchem2.born-oppenheimer-approximation]
+      - id: kp3
+        can_do: Trace a reaction path
+        key_prerequisites: [chem.pchem2.born-oppenheimer-approximation]
+      - id: kp4
+        can_do: Relate surfaces to collision outcomes
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants]
+  - id: chem.pchem2.transition-state-theory
+    name: Deriving rate constants with transition state theory
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.potential-energy-surfaces
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.equilibrium-constants-from-partition-functions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State transition state theory assumptions
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+      - id: kp2
+        can_do: Derive the Eyring equation
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces, chem.pchem2.equilibrium-constants-from-partition-functions]
+      - id: kp3
+        can_do: Find rate constants from partition functions
+        key_prerequisites: [chem.pchem2.equilibrium-constants-from-partition-functions]
+      - id: kp4
+        can_do: Compare with collision theory
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+  - id: chem.pchem2.eyring-activation-parameters
+    name: Finding activation enthalpy and entropy with the Eyring equation
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.transition-state-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find activation enthalpy from Eyring plots
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp2
+        can_do: Find activation entropy
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp3
+        can_do: Interpret activation entropy
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp4
+        can_do: Find activation volume from pressure data
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+  - id: chem.pchem2.kinetic-isotope-effects
+    name: Predicting kinetic isotope effects
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.transition-state-theory
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem2.isotope-shifts-in-spectra
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict primary isotope effects
+        key_prerequisites: [chem.pchem2.transition-state-theory, chem.pchem2.isotope-shifts-in-spectra]
+      - id: kp2
+        can_do: Explain secondary isotope effects
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp3
+        can_do: Use isotope effects to find mechanisms
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp4
+        can_do: Explain tunneling isotope effects
+        key_prerequisites: [chem.pchem2.isotope-shifts-in-spectra]
+  - id: chem.pchem2.molecular-beam-dynamics
+    name: Describing molecular beam experiments
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.potential-energy-surfaces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe crossed molecular beams
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+      - id: kp2
+        can_do: Explain angular distributions of products
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+      - id: kp3
+        can_do: Relate energy disposal to surfaces
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+      - id: kp4
+        can_do: Describe state-resolved dynamics
+        key_prerequisites: [chem.pchem2.potential-energy-surfaces]
+  - id: chem.pchem2.marcus-theory
+    name: Using Marcus theory for electron transfer
+    subject: chem
+    course: chem.pchem2
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem2.transition-state-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Marcus equation
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp2
+        can_do: Find reorganization energy
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp3
+        can_do: Explain the inverted region
+        key_prerequisites: [chem.pchem2.transition-state-theory]
+      - id: kp4
+        can_do: Relate Marcus theory to electron transfer rates
+        key_prerequisites: [chem.pchem2.transition-state-theory]

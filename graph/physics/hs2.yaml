@@ -80,107 +80,6 @@ topics:
       - id: kp4
         can_do: Explain water's unusual expansion near freezing
         key_prerequisites: [physics.hs2.absolute-temperature]
-  - id: physics.hs2.specific-heat
-    name: Calculating with specific heat
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.ms.heat-capacity-factors
-        encompassing: 0.35
-        confidence: high
-      - topic: physics.hs1.rearranging-physics-formulas
-        encompassing: 0.3
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Define specific heat capacity
-        key_prerequisites: [physics.ms.heat-capacity-factors]
-      - id: kp2
-        can_do: Calculate energy to warm a substance
-        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
-      - id: kp3
-        can_do: Find a temperature change from energy
-        key_prerequisites: [physics.hs1.rearranging-physics-formulas]
-      - id: kp4
-        can_do: Compare heating water and metal
-        key_prerequisites: [physics.ms.heat-capacity-factors]
-  - id: physics.hs2.calorimetry
-    name: Solving calorimetry problems
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.specific-heat
-        encompassing: 0.35
-        confidence: high
-      - topic: physics.ms.thermal-equilibrium
-        encompassing: 0.3
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Set heat lost equal to heat gained
-        key_prerequisites: [physics.ms.thermal-equilibrium]
-      - id: kp2
-        can_do: Find a final temperature
-        key_prerequisites: [physics.hs2.specific-heat]
-      - id: kp3
-        can_do: Find a specific heat from a calorimeter
-        key_prerequisites: [physics.hs2.specific-heat]
-      - id: kp4
-        can_do: Account for a calorimeter's heat
-        key_prerequisites: [physics.ms.thermal-equilibrium]
-  - id: physics.hs2.latent-heat
-    name: Calculating with latent heat
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.specific-heat
-        encompassing: 0.5
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Define latent heat of fusion and vaporization
-        key_prerequisites: [physics.hs2.specific-heat]
-      - id: kp2
-        can_do: Calculate energy to melt or boil
-        key_prerequisites: [physics.hs2.specific-heat]
-      - id: kp3
-        can_do: Explain why temperature holds during a phase change
-        key_prerequisites: [physics.hs2.specific-heat]
-      - id: kp4
-        can_do: Compare cooling by sweat
-        key_prerequisites: [physics.hs2.specific-heat]
-  - id: physics.hs2.heating-curves
-    name: Reading heating curves
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.latent-heat
-        encompassing: 0.4
-        confidence: high
-      - topic: physics.hs2.calorimetry
-        encompassing: 0.3
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Read each stage of a heating curve
-        key_prerequisites: [physics.hs2.latent-heat]
-      - id: kp2
-        can_do: Find energy for a stage
-        key_prerequisites: [physics.hs2.latent-heat]
-      - id: kp3
-        can_do: Find total energy across stages
-        key_prerequisites: [physics.hs2.latent-heat, physics.hs2.calorimetry]
-      - id: kp4
-        can_do: Sketch a curve from data
-        key_prerequisites: [physics.hs2.calorimetry]
   - id: physics.hs2.conduction-rate
     name: Calculating the rate of thermal conduction
     subject: physics
@@ -188,7 +87,7 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: physics.hs2.specific-heat
+      - topic: chem.hs1.specific-heat
         encompassing: 0.25
         confidence: high
       - topic: physics.ms.thermal-insulation
@@ -203,7 +102,7 @@ topics:
         key_prerequisites: [physics.hs1.power-from-work]
       - id: kp2
         can_do: Find how thickness and area change the rate
-        key_prerequisites: [physics.hs2.specific-heat]
+        key_prerequisites: [chem.hs1.specific-heat]
       - id: kp3
         can_do: Compare materials by conductivity
         key_prerequisites: [physics.ms.thermal-insulation]
@@ -237,7 +136,7 @@ topics:
         can_do: Find net radiated power
         key_prerequisites: [physics.hs2.absolute-temperature]
   - id: physics.hs2.ideal-gas-law
-    name: Using the ideal gas law
+    name: Using the ideal gas law with particle counts
     subject: physics
     course: physics.hs2
     level: g11
@@ -246,13 +145,17 @@ topics:
       - topic: physics.hs2.absolute-temperature
         encompassing: 0.4
         confidence: high
-      - topic: physics.hs1.pressure-in-fluids
-        encompassing: 0.25
+      - topic: chem.hs1.ideal-gas-law-with-moles
+        encompassing: 0.4
         confidence: high
+    encompassed:
+      - topic: physics.hs1.pressure-in-fluids
+        encompassing: 0.15
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Relate pressure, volume, temperature and particle number
-        key_prerequisites: [physics.hs2.absolute-temperature]
+        key_prerequisites: [physics.hs2.absolute-temperature, chem.hs1.ideal-gas-law-with-moles]
       - id: kp2
         can_do: Use the law with a count of particles
         key_prerequisites: [physics.hs2.absolute-temperature]
@@ -262,32 +165,6 @@ topics:
       - id: kp4
         can_do: Find a gas pressure in kilopascals
         key_prerequisites: [physics.hs1.pressure-in-fluids]
-  - id: physics.hs2.gas-law-relationships
-    name: Solving gas problems with two states
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.ideal-gas-law
-        encompassing: 0.4
-        confidence: high
-      - topic: math.alg2.inverse-variation
-        encompassing: 0.25
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Solve a change at constant temperature
-        key_prerequisites: [math.alg2.inverse-variation]
-      - id: kp2
-        can_do: Solve a change at constant pressure
-        key_prerequisites: [physics.hs2.ideal-gas-law]
-      - id: kp3
-        can_do: Solve a change at constant volume
-        key_prerequisites: [physics.hs2.ideal-gas-law]
-      - id: kp4
-        can_do: Graph a gas law
-        key_prerequisites: [math.alg2.inverse-variation]
   - id: physics.hs2.kinetic-theory-of-gases
     name: Explaining gas pressure with kinetic theory
     subject: physics
@@ -354,7 +231,7 @@ topics:
       - topic: physics.hs2.internal-energy
         encompassing: 0.45
         confidence: high
-      - topic: physics.hs2.calorimetry
+      - topic: chem.hs1.calorimetry
         encompassing: 0.2
         confidence: high
     knowledge_points:
@@ -363,7 +240,7 @@ topics:
         key_prerequisites: [physics.hs2.internal-energy]
       - id: kp2
         can_do: Find an internal energy change
-        key_prerequisites: [physics.hs2.calorimetry]
+        key_prerequisites: [chem.hs1.calorimetry]
       - id: kp3
         can_do: Find heat or work
         key_prerequisites: [physics.hs2.internal-energy]
@@ -400,22 +277,22 @@ topics:
     level: g11
     status: draft
     prerequisites:
-      - topic: physics.hs2.gas-law-relationships
+      - topic: chem.hs1.gas-law-relationships
         encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Plot a state on a diagram
-        key_prerequisites: [physics.hs2.gas-law-relationships]
+        key_prerequisites: [chem.hs1.gas-law-relationships]
       - id: kp2
         can_do: Read a process's path
-        key_prerequisites: [physics.hs2.gas-law-relationships]
+        key_prerequisites: [chem.hs1.gas-law-relationships]
       - id: kp3
         can_do: Find a temperature at a point
-        key_prerequisites: [physics.hs2.gas-law-relationships]
+        key_prerequisites: [chem.hs1.gas-law-relationships]
       - id: kp4
         can_do: Sketch an isotherm
-        key_prerequisites: [physics.hs2.gas-law-relationships]
+        key_prerequisites: [chem.hs1.gas-law-relationships]
   - id: physics.hs2.work-on-a-gas
     name: Finding work on a gas from a pressure-volume graph
     subject: physics
@@ -460,7 +337,7 @@ topics:
         encompassing: 0.5
         confidence: high
     encompassed:
-      - topic: physics.hs2.gas-law-relationships
+      - topic: chem.hs1.gas-law-relationships
         encompassing: 0.15
         confidence: high
     knowledge_points:
@@ -475,7 +352,7 @@ topics:
         key_prerequisites: [physics.hs2.work-on-a-gas]
       - id: kp4
         can_do: Analyze a no-heat process
-        key_prerequisites: [physics.hs2.gas-law-relationships]
+        key_prerequisites: [chem.hs1.gas-law-relationships]
   - id: physics.hs2.thermal-cycles
     name: Analyzing a thermal cycle
     subject: physics
@@ -602,32 +479,6 @@ topics:
       - id: kp4
         can_do: Explain why a refrigerator warms a room
         key_prerequisites: [physics.hs2.heat-engines]
-  - id: physics.hs2.calorimetry-with-phase-change
-    name: Solving calorimetry with a phase change
-    subject: physics
-    course: physics.hs2
-    level: g11
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.calorimetry
-        encompassing: 0.35
-        confidence: high
-      - topic: physics.hs2.latent-heat
-        encompassing: 0.45
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Set up an ice melting problem
-        key_prerequisites: [physics.hs2.calorimetry, physics.hs2.latent-heat]
-      - id: kp2
-        can_do: Decide whether all ice melts
-        key_prerequisites: [physics.hs2.calorimetry, physics.hs2.latent-heat]
-      - id: kp3
-        can_do: Find a final temperature with melting
-        key_prerequisites: [physics.hs2.calorimetry, physics.hs2.latent-heat]
-      - id: kp4
-        can_do: Solve steam condensing in water
-        key_prerequisites: [physics.hs2.latent-heat]
   - id: physics.hs2.charge-conservation
     name: Using conservation of charge
     subject: physics
@@ -3296,36 +3147,6 @@ topics:
       - id: kp4
         can_do: Explain Planck's quantum idea
         key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
-  - id: physics.hs2.photon-energy
-    name: Calculating photon energy
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.electromagnetic-wave-nature
-        encompassing: 0.35
-        confidence: high
-      - topic: physics.ms.light-wave-and-particle
-        encompassing: 0.25
-        confidence: medium
-    encompassed:
-      - topic: math.g8.multiply-divide-scientific
-        encompassing: 0.1
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Calculate energy from frequency
-        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
-      - id: kp2
-        can_do: Calculate energy from wavelength
-        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
-      - id: kp3
-        can_do: Compare photon energies across bands
-        key_prerequisites: [physics.ms.light-wave-and-particle]
-      - id: kp4
-        can_do: Use scientific notation with Planck's constant
-        key_prerequisites: [math.g8.multiply-divide-scientific]
   - id: physics.hs2.electron-volts
     name: Using electron volts
     subject: physics
@@ -3333,7 +3154,7 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.photon-energy
+      - topic: chem.hs1.photon-energy
         encompassing: 0.35
         confidence: high
       - topic: physics.hs2.accelerating-charges
@@ -3345,10 +3166,10 @@ topics:
         key_prerequisites: [physics.hs2.accelerating-charges]
       - id: kp2
         can_do: Convert between joules and electron volts
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp3
         can_do: Find a photon's energy in electron volts
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp4
         can_do: Find an electron's energy after a voltage
         key_prerequisites: [physics.hs2.accelerating-charges]
@@ -3409,7 +3230,7 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.photon-energy
+      - topic: chem.hs1.photon-energy
         encompassing: 0.25
         confidence: high
       - topic: physics.hs1.momentum
@@ -3427,7 +3248,7 @@ topics:
         key_prerequisites: [physics.hs1.momentum]
       - id: kp4
         can_do: Find a wavelength after an accelerating voltage
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
   - id: physics.hs2.bohr-model
     name: Using the Bohr model
     subject: physics
@@ -3441,6 +3262,9 @@ topics:
       - topic: physics.hs1.centripetal-force
         encompassing: 0.25
         confidence: medium
+      - topic: chem.hs1.electron-energy-levels
+        encompassing: 0.3
+        confidence: high
     encompassed:
       - topic: physics.hs2.coulombs-law
         encompassing: 0.15
@@ -3448,7 +3272,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: State the model's assumptions
-        key_prerequisites: [physics.hs2.electron-volts]
+        key_prerequisites: [physics.hs2.electron-volts, chem.hs1.electron-energy-levels]
       - id: kp2
         can_do: Find energies of hydrogen levels
         key_prerequisites: [physics.hs2.electron-volts]
@@ -3458,56 +3282,6 @@ topics:
       - id: kp4
         can_do: Explain the model's limits
         key_prerequisites: [physics.hs2.electron-volts]
-  - id: physics.hs2.energy-level-diagrams
-    name: Reading energy level diagrams
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.bohr-model
-        encompassing: 0.6
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Read a level diagram
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp2
-        can_do: Find an energy gap
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp3
-        can_do: Find a level from data
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp4
-        can_do: Find an ionization energy
-        key_prerequisites: [physics.hs2.bohr-model]
-  - id: physics.hs2.emission-and-absorption
-    name: Explaining emission and absorption spectra
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.energy-level-diagrams
-        encompassing: 0.4
-        confidence: high
-    encompassed:
-      - topic: physics.hs2.photon-energy
-        encompassing: 0.2
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Explain emission lines
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
-      - id: kp2
-        can_do: Explain absorption lines
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
-      - id: kp3
-        can_do: Find a photon from a jump
-        key_prerequisites: [physics.hs2.photon-energy]
-      - id: kp4
-        can_do: Identify an element from lines
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
   - id: physics.hs2.lasers
     name: Explaining how lasers work
     subject: physics
@@ -3515,22 +3289,22 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.emission-and-absorption
+      - topic: chem.hs1.emission-and-absorption
         encompassing: 0.5
         confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Explain stimulated emission
-        key_prerequisites: [physics.hs2.emission-and-absorption]
+        key_prerequisites: [chem.hs1.emission-and-absorption]
       - id: kp2
         can_do: Explain population inversion
-        key_prerequisites: [physics.hs2.emission-and-absorption]
+        key_prerequisites: [chem.hs1.emission-and-absorption]
       - id: kp3
         can_do: Explain a laser's single colour
-        key_prerequisites: [physics.hs2.emission-and-absorption]
+        key_prerequisites: [chem.hs1.emission-and-absorption]
       - id: kp4
         can_do: Name uses of lasers
-        key_prerequisites: [physics.hs2.emission-and-absorption]
+        key_prerequisites: [chem.hs1.emission-and-absorption]
   - id: physics.hs2.photon-momentum
     name: Calculating photon momentum
     subject: physics
@@ -3538,22 +3312,22 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.photon-energy
+      - topic: chem.hs1.photon-energy
         encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Calculate a photon's momentum
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp2
         can_do: Compare momentum across bands
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp3
         can_do: Explain radiation pressure
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp4
         can_do: Find a force from absorbed light
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
   - id: physics.hs2.compton-scattering
     name: Explaining Compton scattering
     subject: physics
@@ -3568,7 +3342,7 @@ topics:
         encompassing: 0.3
         confidence: high
     encompassed:
-      - topic: physics.hs2.photon-energy
+      - topic: chem.hs1.photon-energy
         encompassing: 0.15
         confidence: high
     knowledge_points:
@@ -3580,7 +3354,7 @@ topics:
         key_prerequisites: [physics.hs2.photon-momentum]
       - id: kp3
         can_do: Use the shift formula
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp4
         can_do: Link to collisions
         key_prerequisites: [physics.hs1.collisions-in-two-dimensions]
@@ -3591,7 +3365,7 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.photon-energy
+      - topic: chem.hs1.photon-energy
         encompassing: 0.4
         confidence: high
       - topic: physics.hs1.power-from-work
@@ -3600,16 +3374,16 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find photons per second from power
-        key_prerequisites: [physics.hs2.photon-energy, physics.hs1.power-from-work]
+        key_prerequisites: [chem.hs1.photon-energy, physics.hs1.power-from-work]
       - id: kp2
         can_do: Find power from a photon count
         key_prerequisites: [physics.hs1.power-from-work]
       - id: kp3
         can_do: Compare a dim and a bright beam
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
       - id: kp4
         can_do: Find a current from a photon rate
-        key_prerequisites: [physics.hs2.photon-energy]
+        key_prerequisites: [chem.hs1.photon-energy]
   - id: physics.hs2.electron-diffraction
     name: Using electron diffraction as evidence
     subject: physics
@@ -3689,56 +3463,6 @@ topics:
       - id: kp4
         can_do: Explain why it is not a measurement error
         key_prerequisites: [physics.hs2.wave-particle-duality]
-  - id: physics.hs2.hydrogen-spectrum
-    name: Finding hydrogen spectral lines
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.emission-and-absorption
-        encompassing: 0.35
-        confidence: high
-    encompassed:
-      - topic: physics.hs2.energy-level-diagrams
-        encompassing: 0.15
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Find a line's wavelength
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
-      - id: kp2
-        can_do: Name visible and ultraviolet series
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
-      - id: kp3
-        can_do: Find a series limit
-        key_prerequisites: [physics.hs2.energy-level-diagrams]
-      - id: kp4
-        can_do: Match lines with jumps
-        key_prerequisites: [physics.hs2.emission-and-absorption]
-  - id: physics.hs2.nuclear-notation
-    name: Reading nuclear notation
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.bohr-model
-        encompassing: 0.2
-        confidence: low
-    knowledge_points:
-      - id: kp1
-        can_do: Read mass and atomic numbers
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp2
-        can_do: Find protons and neutrons
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp3
-        can_do: Tell isotopes apart
-        key_prerequisites: [physics.hs2.bohr-model]
-      - id: kp4
-        can_do: Compare sizes of nucleus and atom
-        key_prerequisites: [physics.hs2.bohr-model]
   - id: physics.hs2.strong-force
     name: Explaining nuclear stability
     subject: physics
@@ -3746,10 +3470,9 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.nuclear-notation
+      - topic: chem.hs1.nuclear-notation
         encompassing: 0.4
         confidence: high
-    encompassed:
       - topic: physics.hs2.coulombs-law
         encompassing: 0.2
         confidence: high
@@ -3759,13 +3482,13 @@ topics:
         key_prerequisites: [physics.hs2.coulombs-law]
       - id: kp2
         can_do: State the range of the strong force
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
       - id: kp3
         can_do: Read a stability band
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
       - id: kp4
         can_do: Find why heavy nuclei need more neutrons
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
   - id: physics.hs2.mass-energy
     name: Using mass-energy equivalence
     subject: physics
@@ -3773,26 +3496,25 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.nuclear-notation
+      - topic: chem.hs1.nuclear-notation
         encompassing: 0.4
         confidence: high
-    encompassed:
       - topic: math.g8.multiply-divide-scientific
         encompassing: 0.15
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Use mass-energy equivalence
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
       - id: kp2
         can_do: Convert atomic mass units to energy
         key_prerequisites: [math.g8.multiply-divide-scientific]
       - id: kp3
         can_do: Find a mass change for an energy
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
       - id: kp4
         can_do: Find an energy from a mass difference
-        key_prerequisites: [physics.hs2.nuclear-notation]
+        key_prerequisites: [chem.hs1.nuclear-notation]
   - id: physics.hs2.binding-energy
     name: Calculating binding energy
     subject: physics
@@ -3819,86 +3541,6 @@ topics:
       - id: kp4
         can_do: Explain why bound nuclei have less mass
         key_prerequisites: [physics.hs2.strong-force]
-  - id: physics.hs2.alpha-beta-gamma
-    name: Comparing alpha, beta and gamma radiation
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.strong-force
-        encompassing: 0.35
-        confidence: high
-    encompassed:
-      - topic: physics.hs2.electromagnetic-wave-nature
-        encompassing: 0.15
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Compare charge and mass
-        key_prerequisites: [physics.hs2.strong-force]
-      - id: kp2
-        can_do: Compare penetration
-        key_prerequisites: [physics.hs2.strong-force]
-      - id: kp3
-        can_do: Compare ionizing power
-        key_prerequisites: [physics.hs2.strong-force]
-      - id: kp4
-        can_do: Identify gamma rays as waves
-        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
-  - id: physics.hs2.decay-equations
-    name: Balancing nuclear decay equations
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.alpha-beta-gamma
-        encompassing: 0.4
-        confidence: high
-    encompassed:
-      - topic: physics.hs2.charge-conservation
-        encompassing: 0.2
-        confidence: high
-    knowledge_points:
-      - id: kp1
-        can_do: Balance an alpha decay
-        key_prerequisites: [physics.hs2.alpha-beta-gamma]
-      - id: kp2
-        can_do: Balance a beta decay
-        key_prerequisites: [physics.hs2.charge-conservation]
-      - id: kp3
-        can_do: Balance a gamma decay
-        key_prerequisites: [physics.hs2.alpha-beta-gamma]
-      - id: kp4
-        can_do: Find a missing particle
-        key_prerequisites: [physics.hs2.charge-conservation]
-  - id: physics.hs2.half-life
-    name: Calculating with half-life
-    subject: physics
-    course: physics.hs2
-    level: g12
-    status: draft
-    prerequisites:
-      - topic: physics.hs2.decay-equations
-        encompassing: 0.3
-        confidence: high
-      - topic: math.alg2.solve-exponential-with-logs
-        encompassing: 0.3
-        confidence: medium
-    knowledge_points:
-      - id: kp1
-        can_do: Define half-life
-        key_prerequisites: [physics.hs2.decay-equations]
-      - id: kp2
-        can_do: Find a remainder after whole half-lives
-        key_prerequisites: [physics.hs2.decay-equations]
-      - id: kp3
-        can_do: Find a remainder at other times
-        key_prerequisites: [math.alg2.solve-exponential-with-logs]
-      - id: kp4
-        can_do: Find a time from a remainder
-        key_prerequisites: [math.alg2.solve-exponential-with-logs]
   - id: physics.hs2.radiation-dose
     name: Evaluating radiation dose and safety
     subject: physics
@@ -3906,7 +3548,7 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.alpha-beta-gamma
+      - topic: chem.hs1.alpha-beta-gamma
         encompassing: 0.3
         confidence: high
       - topic: physics.hs2.radiation-and-health
@@ -3915,13 +3557,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Name dose units
-        key_prerequisites: [physics.hs2.alpha-beta-gamma]
+        key_prerequisites: [chem.hs1.alpha-beta-gamma]
       - id: kp2
         can_do: Compare exposure sources
         key_prerequisites: [physics.hs2.radiation-and-health]
       - id: kp3
         can_do: Use time, distance and shielding
-        key_prerequisites: [physics.hs2.alpha-beta-gamma]
+        key_prerequisites: [chem.hs1.alpha-beta-gamma]
       - id: kp4
         can_do: Evaluate a medical use against risk
         key_prerequisites: [physics.hs2.radiation-and-health]
@@ -3978,7 +3620,7 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.decay-equations
+      - topic: chem.hs1.decay-equations
         encompassing: 0.25
         confidence: high
       - topic: physics.hs2.binding-energy-curve
@@ -3991,13 +3633,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Balance a fission equation
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
       - id: kp2
         can_do: Find energy from a mass difference
         key_prerequisites: [physics.hs2.binding-energy]
       - id: kp3
         can_do: Explain a chain reaction
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
       - id: kp4
         can_do: Explain critical mass
         key_prerequisites: [physics.hs2.binding-energy-curve]
@@ -4035,22 +3677,22 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.decay-equations
+      - topic: chem.hs1.decay-equations
         encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Follow a chain of decays
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
       - id: kp2
         can_do: Find a stable end product
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
       - id: kp3
         can_do: Find numbers of alpha and beta decays
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
       - id: kp4
         can_do: Explain radon in homes
-        key_prerequisites: [physics.hs2.decay-equations]
+        key_prerequisites: [chem.hs1.decay-equations]
   - id: physics.hs2.decay-curves
     name: Graphing decay curves
     subject: physics
@@ -4058,25 +3700,31 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: physics.hs2.half-life
+      - topic: chem.hs1.half-life
         encompassing: 0.4
         confidence: high
       - topic: math.alg2.graph-transformed-exponentials
         encompassing: 0.25
         confidence: high
+      - topic: math.alg2.solve-exponential-with-logs
+        encompassing: 0.25
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Sketch a decay curve
-        key_prerequisites: [physics.hs2.half-life]
+        key_prerequisites: [chem.hs1.half-life]
       - id: kp2
         can_do: Read half-life from a curve
-        key_prerequisites: [physics.hs2.half-life]
+        key_prerequisites: [chem.hs1.half-life]
       - id: kp3
         can_do: Use a log plot to find half-life
         key_prerequisites: [math.alg2.graph-transformed-exponentials]
       - id: kp4
         can_do: Compare two isotopes
-        key_prerequisites: [physics.hs2.half-life]
+        key_prerequisites: [chem.hs1.half-life]
+      - id: kp5
+        can_do: Find a time from a remainder with logarithms
+        key_prerequisites: [math.alg2.solve-exponential-with-logs, chem.hs1.half-life]
   - id: physics.hs2.activity-and-dating
     name: Using decay activity and dating
     subject: physics
@@ -4088,7 +3736,7 @@ topics:
         encompassing: 0.45
         confidence: high
     encompassed:
-      - topic: physics.hs2.half-life
+      - topic: chem.hs1.half-life
         encompassing: 0.15
         confidence: high
     knowledge_points:
@@ -4100,7 +3748,7 @@ topics:
         key_prerequisites: [physics.hs2.decay-curves]
       - id: kp3
         can_do: Date a sample with carbon
-        key_prerequisites: [physics.hs2.half-life]
+        key_prerequisites: [chem.hs1.half-life]
       - id: kp4
         can_do: Choose an isotope for dating
         key_prerequisites: [physics.hs2.decay-curves]

@@ -1,0 +1,1214 @@
+course: chem.inorganic
+topics:
+  - id: chem.inorganic.symmetry-elements
+    name: Identifying symmetry elements and operations
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.expanded-octet-shapes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify rotation axes
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+      - id: kp2
+        can_do: Identify mirror planes
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+      - id: kp3
+        can_do: Identify inversion centres and improper axes
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+      - id: kp4
+        can_do: List symmetry operations of a molecule
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+  - id: chem.inorganic.point-groups
+    name: Assigning point groups
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.symmetry-elements
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a flow chart to assign point groups
+        key_prerequisites: [chem.inorganic.symmetry-elements]
+      - id: kp2
+        can_do: Assign point groups of linear molecules
+        key_prerequisites: [chem.inorganic.symmetry-elements]
+      - id: kp3
+        can_do: Assign high-symmetry point groups
+        key_prerequisites: [chem.inorganic.symmetry-elements]
+      - id: kp4
+        can_do: Assign point groups of complexes
+        key_prerequisites: [chem.inorganic.symmetry-elements]
+  - id: chem.inorganic.symmetry-chirality-and-polarity
+    name: Predicting chirality and polarity from point groups
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.point-groups
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.org1.chirality
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict chirality from point group
+        key_prerequisites: [chem.inorganic.point-groups, chem.org1.chirality]
+      - id: kp2
+        can_do: Predict polarity from point group
+        key_prerequisites: [chem.inorganic.point-groups]
+      - id: kp3
+        can_do: Explain why molecules with inversion centres are nonpolar
+        key_prerequisites: [chem.inorganic.point-groups]
+      - id: kp4
+        can_do: Find chiral complexes by symmetry
+        key_prerequisites: [chem.org1.chirality]
+  - id: chem.inorganic.symmetry-operation-matrices
+    name: Representing symmetry operations with matrices
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.point-groups
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write matrices for symmetry operations
+        key_prerequisites: [chem.inorganic.point-groups, math.linalg.matrix-product-three-views]
+      - id: kp2
+        can_do: Multiply operation matrices
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+      - id: kp3
+        can_do: Build a group multiplication table
+        key_prerequisites: [chem.inorganic.point-groups]
+      - id: kp4
+        can_do: Find the trace of a matrix representation
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: chem.inorganic.character-tables
+    name: Reading character tables
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.symmetry-operation-matrices
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read irreducible representations
+        key_prerequisites: [chem.inorganic.symmetry-operation-matrices]
+      - id: kp2
+        can_do: Use Mulliken labels
+        key_prerequisites: [chem.inorganic.symmetry-operation-matrices]
+      - id: kp3
+        can_do: Find how orbitals transform from a table
+        key_prerequisites: [chem.inorganic.symmetry-operation-matrices]
+      - id: kp4
+        can_do: Find how coordinates transform from a table
+        key_prerequisites: [chem.inorganic.symmetry-operation-matrices]
+  - id: chem.inorganic.reducing-representations
+    name: Reducing representations
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.character-tables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a reducible representation
+        key_prerequisites: [chem.inorganic.character-tables]
+      - id: kp2
+        can_do: Apply the reduction formula
+        key_prerequisites: [chem.inorganic.character-tables]
+      - id: kp3
+        can_do: Find irreducible components
+        key_prerequisites: [chem.inorganic.character-tables]
+      - id: kp4
+        can_do: Check a reduction by dimension
+        key_prerequisites: [chem.inorganic.character-tables]
+  - id: chem.inorganic.vibrational-modes-by-symmetry
+    name: Finding IR and Raman active modes by symmetry
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.reducing-representations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count vibrational modes with symmetry
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp2
+        can_do: Find infrared active modes
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp3
+        can_do: Find Raman active modes
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp4
+        can_do: Apply the exclusion rule
+        key_prerequisites: [chem.inorganic.reducing-representations]
+  - id: chem.inorganic.salc-construction
+    name: Building symmetry-adapted linear combinations
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.reducing-representations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build ligand group orbitals
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp2
+        can_do: Use projection operators
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp3
+        can_do: Find symmetry labels of group orbitals
+        key_prerequisites: [chem.inorganic.reducing-representations]
+      - id: kp4
+        can_do: Match group orbitals with central atom orbitals
+        key_prerequisites: [chem.inorganic.reducing-representations]
+  - id: chem.inorganic.polyatomic-molecular-orbitals
+    name: Building molecular orbitals of polyatomic molecules
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.salc-construction
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.heteronuclear-diatomic-orbitals
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build an orbital diagram for water
+        key_prerequisites: [chem.inorganic.salc-construction]
+      - id: kp2
+        can_do: Build an orbital diagram for ammonia
+        key_prerequisites: [chem.inorganic.salc-construction]
+      - id: kp3
+        can_do: Compare orbital and Lewis descriptions
+        key_prerequisites: [chem.gen1.heteronuclear-diatomic-orbitals]
+      - id: kp4
+        can_do: Explain photoelectron spectra with orbitals
+        key_prerequisites: [chem.inorganic.salc-construction]
+  - id: chem.inorganic.hsab-theory
+    name: Predicting reactions with hard and soft acid-base theory
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.lewis-acids-and-bases
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify acids and bases as hard or soft
+        key_prerequisites: [chem.gen2.complex-ion-formation, chem.hs2.lewis-acids-and-bases]
+      - id: kp2
+        can_do: Predict complex stability with hardness
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp3
+        can_do: Predict mineral formation with hardness
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp4
+        can_do: Explain hardness with polarizability
+        key_prerequisites: [chem.hs2.lewis-acids-and-bases]
+  - id: chem.inorganic.oxoacid-strength
+    name: Predicting oxoacid strength
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.acid-strength-and-structure
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply rules for oxoacid strength
+        key_prerequisites: [chem.hs2.acid-strength-and-structure]
+      - id: kp2
+        can_do: Rank oxoacids by oxygen count
+        key_prerequisites: [chem.hs2.acid-strength-and-structure]
+      - id: kp3
+        can_do: Predict pKa of oxoacids
+        key_prerequisites: [chem.hs2.acid-strength-and-structure]
+      - id: kp4
+        can_do: Explain acidity of hydrated metal ions
+        key_prerequisites: [chem.hs2.acid-strength-and-structure]
+  - id: chem.inorganic.nonaqueous-acid-base-chemistry
+    name: Describing acid-base chemistry in nonaqueous solvents and superacids
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.hsab-theory
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.inorganic.oxoacid-strength
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe acid-base chemistry in liquid ammonia
+        key_prerequisites: [chem.inorganic.hsab-theory]
+      - id: kp2
+        can_do: Explain the levelling effect
+        key_prerequisites: [chem.inorganic.oxoacid-strength]
+      - id: kp3
+        can_do: Describe superacids
+        key_prerequisites: [chem.inorganic.hsab-theory]
+      - id: kp4
+        can_do: Describe solvent systems definitions
+        key_prerequisites: [chem.inorganic.oxoacid-strength]
+  - id: chem.inorganic.radius-ratio-rules
+    name: Predicting ionic structures from radius ratios
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.ionic-crystal-structures
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.ionic-radius-trend
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate radius ratios
+        key_prerequisites: [chem.gen1.ionic-crystal-structures, chem.hs1.ionic-radius-trend]
+      - id: kp2
+        can_do: Predict coordination numbers from ratios
+        key_prerequisites: [chem.gen1.ionic-crystal-structures]
+      - id: kp3
+        can_do: Predict ionic structure types
+        key_prerequisites: [chem.gen1.ionic-crystal-structures]
+      - id: kp4
+        can_do: Explain failures of radius ratio rules
+        key_prerequisites: [chem.hs1.ionic-radius-trend]
+  - id: chem.inorganic.lattice-energy-equations
+    name: Estimating lattice energies with Born-Lande and Kapustinskii equations
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.born-haber-cycle
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Born-Lande equation
+        key_prerequisites: [chem.gen1.born-haber-cycle]
+      - id: kp2
+        can_do: Use the Kapustinskii equation
+        key_prerequisites: [chem.gen1.born-haber-cycle]
+      - id: kp3
+        can_do: Compare equation and cycle values
+        key_prerequisites: [chem.gen1.born-haber-cycle]
+      - id: kp4
+        can_do: Explain covalent character from mismatches
+        key_prerequisites: [chem.gen1.born-haber-cycle]
+  - id: chem.inorganic.crystal-defects
+    name: Describing defects and nonstoichiometry in crystals
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.radius-ratio-rules
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Schottky and Frenkel defects
+        key_prerequisites: [chem.inorganic.radius-ratio-rules]
+      - id: kp2
+        can_do: Describe nonstoichiometric compounds
+        key_prerequisites: [chem.inorganic.radius-ratio-rules]
+      - id: kp3
+        can_do: Explain ionic conduction through defects
+        key_prerequisites: [chem.inorganic.radius-ratio-rules]
+      - id: kp4
+        can_do: Describe doping in solids
+        key_prerequisites: [chem.inorganic.radius-ratio-rules]
+  - id: chem.inorganic.hydrides
+    name: Classifying hydrides
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.periodic-properties-of-oxides
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify ionic, covalent and metallic hydrides
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp2
+        can_do: Predict hydride reactions with water
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp3
+        can_do: Describe hydrogen storage
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp4
+        can_do: Explain trends in hydride boiling points
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+  - id: chem.inorganic.boranes-and-wades-rules
+    name: Describing boranes with Wade's rules
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.hydrides
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.polyatomic-molecular-orbitals
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe three-centre two-electron bonds
+        key_prerequisites: [chem.inorganic.polyatomic-molecular-orbitals]
+      - id: kp2
+        can_do: Count skeletal electron pairs
+        key_prerequisites: [chem.inorganic.hydrides]
+      - id: kp3
+        can_do: Classify boranes as closo, nido or arachno
+        key_prerequisites: [chem.inorganic.hydrides]
+      - id: kp4
+        can_do: Predict borane structures
+        key_prerequisites: [chem.inorganic.hydrides, chem.inorganic.polyatomic-molecular-orbitals]
+  - id: chem.inorganic.group-14-chemistry
+    name: Describing chemistry of carbon to lead
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.periodic-properties-of-oxides
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the inert pair effect
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp2
+        can_do: Describe silicates
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp3
+        can_do: Compare carbon and silicon chemistry
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+      - id: kp4
+        can_do: Describe tin and lead compounds
+        key_prerequisites: [chem.gen2.periodic-properties-of-oxides]
+  - id: chem.inorganic.group-15-chemistry
+    name: Describing chemistry of nitrogen and phosphorus
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.group-14-chemistry
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe nitrogen oxides and oxoacids
+        key_prerequisites: [chem.inorganic.group-14-chemistry]
+      - id: kp2
+        can_do: Describe phosphorus allotropes and acids
+        key_prerequisites: [chem.inorganic.group-14-chemistry]
+      - id: kp3
+        can_do: Compare nitrogen and phosphorus bonding
+        key_prerequisites: [chem.inorganic.group-14-chemistry]
+      - id: kp4
+        can_do: Describe industrial nitrogen chemistry
+        key_prerequisites: [chem.inorganic.group-14-chemistry]
+  - id: chem.inorganic.group-16-chemistry
+    name: Describing chemistry of oxygen and sulfur
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.group-15-chemistry
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe oxygen allotropes and oxides
+        key_prerequisites: [chem.inorganic.group-15-chemistry]
+      - id: kp2
+        can_do: Describe sulfur oxides and acids
+        key_prerequisites: [chem.inorganic.group-15-chemistry]
+      - id: kp3
+        can_do: Compare oxygen and sulfur bonding
+        key_prerequisites: [chem.inorganic.group-15-chemistry]
+      - id: kp4
+        can_do: Describe industrial sulfuric acid production
+        key_prerequisites: [chem.inorganic.group-15-chemistry]
+  - id: chem.inorganic.interhalogens-and-oxoanions
+    name: Describing interhalogens and halogen oxoanions
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.halogen-and-noble-gas-chemistry
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict interhalogen structures
+        key_prerequisites: [chem.gen2.halogen-and-noble-gas-chemistry]
+      - id: kp2
+        can_do: Describe halogen oxoanions
+        key_prerequisites: [chem.gen2.halogen-and-noble-gas-chemistry]
+      - id: kp3
+        can_do: Explain oxidizing strength of oxoanions
+        key_prerequisites: [chem.gen2.halogen-and-noble-gas-chemistry]
+      - id: kp4
+        can_do: Describe uses of halogen compounds
+        key_prerequisites: [chem.gen2.halogen-and-noble-gas-chemistry]
+  - id: chem.inorganic.noble-gas-compounds
+    name: Predicting structures of noble gas compounds
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.interhalogens-and-oxoanions
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.expanded-octet-shapes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe xenon fluorides
+        key_prerequisites: [chem.inorganic.interhalogens-and-oxoanions]
+      - id: kp2
+        can_do: Predict noble gas compound shapes
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+      - id: kp3
+        can_do: Explain why only heavy noble gases react
+        key_prerequisites: [chem.inorganic.interhalogens-and-oxoanions]
+      - id: kp4
+        can_do: Describe xenon oxides
+        key_prerequisites: [chem.inorganic.interhalogens-and-oxoanions]
+  - id: chem.inorganic.latimer-and-frost-diagrams
+    name: Using Latimer and Frost diagrams
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.oxidation-numbers
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read Latimer diagrams
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp2
+        can_do: Find potentials for nonadjacent couples
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp3
+        can_do: Read Frost diagrams
+        key_prerequisites: [chem.gen2.nernst-equation, chem.hs2.oxidation-numbers]
+      - id: kp4
+        can_do: Predict disproportionation from diagrams
+        key_prerequisites: [chem.hs2.oxidation-numbers]
+  - id: chem.inorganic.coordination-geometries
+    name: Predicting coordination numbers and geometries
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.point-groups
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict geometries for coordination numbers four to six
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp2
+        can_do: Assign point groups to complexes
+        key_prerequisites: [chem.inorganic.point-groups]
+      - id: kp3
+        can_do: Describe less common geometries
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp4
+        can_do: Explain geometry preferences of d8 metals
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+  - id: chem.inorganic.complete-isomer-enumeration
+    name: Identifying all isomers of a complex
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.isomers-of-complexes
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.symmetry-chirality-and-polarity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List all isomers of an octahedral complex
+        key_prerequisites: [chem.gen2.isomers-of-complexes]
+      - id: kp2
+        can_do: List isomers with chelating ligands
+        key_prerequisites: [chem.gen2.isomers-of-complexes]
+      - id: kp3
+        can_do: Find chiral isomers
+        key_prerequisites: [chem.inorganic.symmetry-chirality-and-polarity]
+      - id: kp4
+        can_do: Count isomers systematically
+        key_prerequisites: [chem.gen2.isomers-of-complexes, chem.inorganic.symmetry-chirality-and-polarity]
+  - id: chem.inorganic.octahedral-crystal-field-energy
+    name: Finding crystal field stabilization energy in octahedral complexes
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.high-and-low-spin
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate crystal field stabilization energy
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp2
+        can_do: Include pairing energy
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp3
+        can_do: Explain trends in hydration enthalpies
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp4
+        can_do: Predict spinel structures from stabilization
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+  - id: chem.inorganic.tetrahedral-and-square-planar-fields
+    name: Splitting d orbitals in tetrahedral and square planar fields
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split d orbitals in tetrahedral fields
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp2
+        can_do: Split d orbitals in square planar fields
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp3
+        can_do: Compare splitting sizes
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp4
+        can_do: Explain why tetrahedral complexes are high spin
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+  - id: chem.inorganic.spectrochemical-series
+    name: Using the spectrochemical series
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rank ligands in the spectrochemical series
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp2
+        can_do: Rank metals by splitting
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp3
+        can_do: Predict colour changes with ligands
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp4
+        can_do: Explain series with sigma and pi bonding
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+  - id: chem.inorganic.jahn-teller-distortion
+    name: Predicting Jahn-Teller distortions
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.tetrahedral-and-square-planar-fields
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict Jahn-Teller distortions
+        key_prerequisites: [chem.inorganic.tetrahedral-and-square-planar-fields]
+      - id: kp2
+        can_do: Explain elongated copper complexes
+        key_prerequisites: [chem.inorganic.tetrahedral-and-square-planar-fields]
+      - id: kp3
+        can_do: Identify configurations with strong distortions
+        key_prerequisites: [chem.inorganic.tetrahedral-and-square-planar-fields]
+      - id: kp4
+        can_do: Relate distortions to spectra
+        key_prerequisites: [chem.inorganic.tetrahedral-and-square-planar-fields]
+  - id: chem.inorganic.ligand-field-orbitals
+    name: Building molecular orbital diagrams of complexes
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.polyatomic-molecular-orbitals
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build sigma-only orbital diagrams of octahedral complexes
+        key_prerequisites: [chem.inorganic.polyatomic-molecular-orbitals, chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp2
+        can_do: Identify the splitting in orbital diagrams
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp3
+        can_do: Count electrons in complex orbitals
+        key_prerequisites: [chem.inorganic.polyatomic-molecular-orbitals]
+      - id: kp4
+        can_do: Compare ligand field and crystal field models
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+  - id: chem.inorganic.pi-donor-and-acceptor-ligands
+    name: Explaining pi donor and pi acceptor ligands
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.ligand-field-orbitals
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.spectrochemical-series
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain pi donor ligands
+        key_prerequisites: [chem.inorganic.ligand-field-orbitals]
+      - id: kp2
+        can_do: Explain pi acceptor ligands
+        key_prerequisites: [chem.inorganic.ligand-field-orbitals]
+      - id: kp3
+        can_do: Explain back bonding
+        key_prerequisites: [chem.inorganic.ligand-field-orbitals]
+      - id: kp4
+        can_do: Relate pi effects to the spectrochemical series
+        key_prerequisites: [chem.inorganic.spectrochemical-series]
+  - id: chem.inorganic.magnetic-moments-of-complexes
+    name: Calculating spin-only magnetic moments
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.high-and-low-spin
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate spin-only magnetic moments
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp2
+        can_do: Find unpaired electrons from measured moments
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp3
+        can_do: Explain orbital contributions
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+      - id: kp4
+        can_do: Tell high spin from low spin by magnetism
+        key_prerequisites: [chem.gen2.high-and-low-spin]
+  - id: chem.inorganic.d-electron-term-symbols
+    name: Finding term symbols of d-electron ions
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.quantum-numbers
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find microstates of d-electron configurations
+        key_prerequisites: [chem.hs1.quantum-numbers]
+      - id: kp2
+        can_do: Find free-ion terms
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy, chem.hs1.quantum-numbers]
+      - id: kp3
+        can_do: Find ground terms with Hund's rules
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp4
+        can_do: Find how terms split in octahedral fields
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+  - id: chem.inorganic.tanabe-sugano-spectra
+    name: Interpreting electronic spectra with Tanabe-Sugano diagrams
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.d-electron-term-symbols
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.spectrochemical-series
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read Tanabe-Sugano diagrams
+        key_prerequisites: [chem.inorganic.d-electron-term-symbols]
+      - id: kp2
+        can_do: Assign d-d bands
+        key_prerequisites: [chem.inorganic.d-electron-term-symbols]
+      - id: kp3
+        can_do: Find splitting from spectra
+        key_prerequisites: [chem.inorganic.spectrochemical-series]
+      - id: kp4
+        can_do: Explain selection rules for d-d transitions
+        key_prerequisites: [chem.inorganic.d-electron-term-symbols]
+  - id: chem.inorganic.charge-transfer-bands
+    name: Identifying charge transfer transitions
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.tanabe-sugano-spectra
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify ligand-to-metal charge transfer
+        key_prerequisites: [chem.inorganic.tanabe-sugano-spectra]
+      - id: kp2
+        can_do: Identify metal-to-ligand charge transfer
+        key_prerequisites: [chem.inorganic.tanabe-sugano-spectra]
+      - id: kp3
+        can_do: Explain intense colours of permanganate and chromate
+        key_prerequisites: [chem.inorganic.tanabe-sugano-spectra]
+      - id: kp4
+        can_do: Compare charge transfer and d-d intensities
+        key_prerequisites: [chem.inorganic.tanabe-sugano-spectra]
+  - id: chem.inorganic.complex-stability-trends
+    name: Explaining stability trends of complexes
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.chelate-effect
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the Irving-Williams series
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp2
+        can_do: Explain the macrocyclic effect
+        key_prerequisites: [chem.gen2.chelate-effect]
+      - id: kp3
+        can_do: Relate stability to hardness and chelation
+        key_prerequisites: [chem.gen2.chelate-effect]
+      - id: kp4
+        can_do: Compare stepwise formation constants
+        key_prerequisites: [chem.gen2.chelate-effect]
+  - id: chem.inorganic.ligand-substitution-mechanisms
+    name: Classifying ligand substitution mechanisms
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen2.mechanisms-with-fast-equilibrium
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify dissociative and associative mechanisms
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp2
+        can_do: Write rate laws for substitution mechanisms
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+      - id: kp3
+        can_do: Explain interchange mechanisms
+        key_prerequisites: [chem.gen2.coordination-compound-structure]
+      - id: kp4
+        can_do: Find mechanism from activation parameters
+        key_prerequisites: [chem.gen2.mechanisms-with-fast-equilibrium]
+  - id: chem.inorganic.inert-and-labile-complexes
+    name: Predicting inert and labile complexes
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.ligand-substitution-mechanisms
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.inorganic.octahedral-crystal-field-energy
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify complexes as inert or labile
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp2
+        can_do: Predict lability from configuration
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp3
+        can_do: Explain inertness of low-spin d6 complexes
+        key_prerequisites: [chem.inorganic.octahedral-crystal-field-energy]
+      - id: kp4
+        can_do: Compare substitution rates of metals
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+  - id: chem.inorganic.trans-effect
+    name: Using the trans effect in synthesis
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.ligand-substitution-mechanisms
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.tetrahedral-and-square-planar-fields
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rank ligands by trans effect
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp2
+        can_do: Synthesize cis and trans platinum complexes
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms, chem.inorganic.tetrahedral-and-square-planar-fields]
+      - id: kp3
+        can_do: Explain the trans effect with bonding
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp4
+        can_do: Plan a substitution sequence
+        key_prerequisites: [chem.inorganic.tetrahedral-and-square-planar-fields]
+  - id: chem.inorganic.electron-transfer-mechanisms
+    name: Comparing inner-sphere and outer-sphere electron transfer
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.ligand-substitution-mechanisms
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.latimer-and-frost-diagrams
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe outer-sphere electron transfer
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp2
+        can_do: Describe inner-sphere electron transfer
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp3
+        can_do: Find bridging ligands
+        key_prerequisites: [chem.inorganic.ligand-substitution-mechanisms]
+      - id: kp4
+        can_do: Relate rates to reorganization
+        key_prerequisites: [chem.inorganic.latimer-and-frost-diagrams]
+  - id: chem.inorganic.eighteen-electron-rule
+    name: Counting electrons with the 18-electron rule
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.coordination-geometries
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.oxidation-numbers
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count electrons by the ionic method
+        key_prerequisites: [chem.inorganic.coordination-geometries]
+      - id: kp2
+        can_do: Count electrons by the neutral method
+        key_prerequisites: [chem.inorganic.coordination-geometries]
+      - id: kp3
+        can_do: Predict stable metal carbonyls
+        key_prerequisites: [chem.inorganic.coordination-geometries]
+      - id: kp4
+        can_do: Explain exceptions to the rule
+        key_prerequisites: [chem.hs2.oxidation-numbers]
+  - id: chem.inorganic.metal-carbonyls
+    name: Describing metal carbonyl bonding and spectra
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.eighteen-electron-rule
+        encompassing: 0.25
+        confidence: high
+      - topic: chem.inorganic.pi-donor-and-acceptor-ligands
+        encompassing: 0.3
+        confidence: high
+      - topic: chem.inorganic.vibrational-modes-by-symmetry
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe carbonyl bonding
+        key_prerequisites: [chem.inorganic.pi-donor-and-acceptor-ligands]
+      - id: kp2
+        can_do: Relate carbonyl stretching to back bonding
+        key_prerequisites: [chem.inorganic.pi-donor-and-acceptor-ligands, chem.inorganic.vibrational-modes-by-symmetry]
+      - id: kp3
+        can_do: Predict carbonyl counts from infrared bands
+        key_prerequisites: [chem.inorganic.vibrational-modes-by-symmetry]
+      - id: kp4
+        can_do: Describe carbonyl synthesis
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+  - id: chem.inorganic.metallocenes-and-pi-ligands
+    name: Describing metallocenes and pi ligands
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.eighteen-electron-rule
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen1.delocalized-pi-bonding
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ferrocene bonding
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+      - id: kp2
+        can_do: Count electrons in pi complexes
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+      - id: kp3
+        can_do: Describe alkene and allyl complexes
+        key_prerequisites: [chem.gen1.delocalized-pi-bonding]
+      - id: kp4
+        can_do: Describe arene complexes
+        key_prerequisites: [chem.gen1.delocalized-pi-bonding]
+  - id: chem.inorganic.oxidative-addition-and-reductive-elimination
+    name: Recognizing oxidative addition and reductive elimination
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.eighteen-electron-rule
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize oxidative addition
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+      - id: kp2
+        can_do: Recognize reductive elimination
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+      - id: kp3
+        can_do: Track oxidation state and electron count
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+      - id: kp4
+        can_do: Predict which metals undergo each step
+        key_prerequisites: [chem.inorganic.eighteen-electron-rule]
+  - id: chem.inorganic.migratory-insertion
+    name: Recognizing migratory insertion and beta elimination
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.oxidative-addition-and-reductive-elimination
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize migratory insertion of carbonyl
+        key_prerequisites: [chem.inorganic.oxidative-addition-and-reductive-elimination]
+      - id: kp2
+        can_do: Recognize alkene insertion
+        key_prerequisites: [chem.inorganic.oxidative-addition-and-reductive-elimination]
+      - id: kp3
+        can_do: Recognize beta-hydride elimination
+        key_prerequisites: [chem.inorganic.oxidative-addition-and-reductive-elimination]
+      - id: kp4
+        can_do: Predict products of insertion steps
+        key_prerequisites: [chem.inorganic.oxidative-addition-and-reductive-elimination]
+  - id: chem.inorganic.catalytic-cycles
+    name: Tracing organometallic catalytic cycles
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.migratory-insertion
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.homogeneous-and-heterogeneous-catalysis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace a hydrogenation cycle
+        key_prerequisites: [chem.inorganic.migratory-insertion]
+      - id: kp2
+        can_do: Trace a hydroformylation cycle
+        key_prerequisites: [chem.inorganic.migratory-insertion]
+      - id: kp3
+        can_do: Trace a cross-coupling cycle
+        key_prerequisites: [chem.inorganic.migratory-insertion]
+      - id: kp4
+        can_do: Identify the catalyst resting state
+        key_prerequisites: [chem.gen2.homogeneous-and-heterogeneous-catalysis]
+  - id: chem.inorganic.f-block-chemistry
+    name: Describing lanthanide and actinide chemistry
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.transition-metal-properties
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.electron-configurations
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the lanthanide contraction
+        key_prerequisites: [chem.hs1.electron-configurations]
+      - id: kp2
+        can_do: Describe lanthanide oxidation states
+        key_prerequisites: [chem.gen2.transition-metal-properties]
+      - id: kp3
+        can_do: Describe actinide chemistry
+        key_prerequisites: [chem.gen2.transition-metal-properties]
+      - id: kp4
+        can_do: Explain sharp f-f spectra
+        key_prerequisites: [chem.hs1.electron-configurations]
+  - id: chem.inorganic.bioinorganic-chemistry
+    name: Describing metal ions in biological systems
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.complex-stability-trends
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.inorganic.electron-transfer-mechanisms
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe oxygen binding by haemoglobin
+        key_prerequisites: [chem.inorganic.complex-stability-trends]
+      - id: kp2
+        can_do: Describe metalloenzymes
+        key_prerequisites: [chem.inorganic.complex-stability-trends]
+      - id: kp3
+        can_do: Describe electron transfer proteins
+        key_prerequisites: [chem.inorganic.electron-transfer-mechanisms]
+      - id: kp4
+        can_do: Describe metal-based drugs
+        key_prerequisites: [chem.inorganic.complex-stability-trends]
+  - id: chem.inorganic.inorganic-materials
+    name: Describing inorganic materials and nanomaterials
+    subject: chem
+    course: chem.inorganic
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.inorganic.crystal-defects
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe semiconductors and doping
+        key_prerequisites: [chem.inorganic.crystal-defects]
+      - id: kp2
+        can_do: Describe zeolites
+        key_prerequisites: [chem.inorganic.crystal-defects]
+      - id: kp3
+        can_do: Describe nanomaterials
+        key_prerequisites: [chem.inorganic.crystal-defects]
+      - id: kp4
+        can_do: Describe superconducting oxides
+        key_prerequisites: [chem.inorganic.crystal-defects]
