@@ -1960,3 +1960,761 @@ topics:
       - id: kp4
         can_do: Find a force to keep a speed
         key_prerequisites: [physics.mechanics.rocket-thrust]
+  - id: physics.mechanics.angular-kinematics-with-calculus
+    name: Using calculus for rotational kinematics
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.rotational-motion-equations
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.time-varying-acceleration
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate an angle function
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp2
+        can_do: Integrate an angular acceleration
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp3
+        can_do: Solve a time-varying angular acceleration
+        key_prerequisites: [physics.mechanics.time-varying-acceleration]
+      - id: kp4
+        can_do: Compare with constant-acceleration equations
+        key_prerequisites: [physics.hs1.rotational-motion-equations]
+  - id: physics.mechanics.angular-velocity-vectors
+    name: Using angular velocity as a vector
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-kinematics-with-calculus
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an angular velocity's direction
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+      - id: kp2
+        can_do: Write velocity as a cross product
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Find velocity of a point on a rigid body
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus, physics.mechanics.cross-product-in-physics]
+      - id: kp4
+        can_do: Find a change for a rotating axis
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+  - id: physics.mechanics.acceleration-on-a-rigid-body
+    name: Finding acceleration of a point on a rigid body
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-velocity-vectors
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.nonuniform-circular-motion
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate the velocity cross product
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+      - id: kp2
+        can_do: Split acceleration into parts
+        key_prerequisites: [physics.mechanics.nonuniform-circular-motion]
+      - id: kp3
+        can_do: Find acceleration of a point on a wheel
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors, physics.mechanics.nonuniform-circular-motion]
+      - id: kp4
+        can_do: Find acceleration in a rod's rotation
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+  - id: physics.mechanics.torque-as-a-cross-product
+    name: Calculating torque as a cross product
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.torque-at-an-angle
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write torque as a cross product
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp2
+        can_do: Find a torque vector
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Find a torque about a chosen point
+        key_prerequisites: [physics.hs1.torque-at-an-angle]
+      - id: kp4
+        can_do: Find torque from components
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+  - id: physics.mechanics.inertia-of-point-masses
+    name: Calculating moment of inertia of point masses
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.rotational-inertia
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.angular-kinematics-with-calculus
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sum a moment of inertia
+        key_prerequisites: [physics.hs1.rotational-inertia]
+      - id: kp2
+        can_do: Find inertia about different axes
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+      - id: kp3
+        can_do: Compare distributions of the same mass
+        key_prerequisites: [physics.hs1.rotational-inertia]
+      - id: kp4
+        can_do: Find a radius of gyration
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+  - id: physics.mechanics.inertia-of-a-rod
+    name: Calculating moment of inertia of a rod by integration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-point-masses
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.center-of-mass-by-integration
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a mass element for a rod
+        key_prerequisites: [physics.mechanics.center-of-mass-by-integration]
+      - id: kp2
+        can_do: Integrate about the center
+        key_prerequisites: [physics.mechanics.inertia-of-point-masses]
+      - id: kp3
+        can_do: Integrate about an end
+        key_prerequisites: [physics.mechanics.inertia-of-point-masses]
+      - id: kp4
+        can_do: Integrate with varying density
+        key_prerequisites: [physics.mechanics.center-of-mass-by-integration]
+  - id: physics.mechanics.inertia-of-disks-and-cylinders
+    name: Calculating moment of inertia of disks and cylinders
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-a-rod
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use rings as elements
+        key_prerequisites: [physics.mechanics.inertia-of-a-rod]
+      - id: kp2
+        can_do: Find inertia of a disk
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp3
+        can_do: Find inertia of an annulus
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Find inertia of a cylinder
+        key_prerequisites: [physics.mechanics.inertia-of-a-rod]
+  - id: physics.mechanics.inertia-of-spheres
+    name: Calculating moment of inertia of a sphere
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-disks-and-cylinders
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.volume-by-disks
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use disks as elements
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+      - id: kp2
+        can_do: Find inertia of a solid sphere
+        key_prerequisites: [math.calc1.volume-by-disks]
+      - id: kp3
+        can_do: Find inertia of a hollow sphere
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+      - id: kp4
+        can_do: Compare common shapes
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+  - id: physics.mechanics.parallel-axis-theorem
+    name: Using the parallel-axis theorem
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-a-rod
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.center-of-mass-in-space
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem
+        key_prerequisites: [physics.mechanics.inertia-of-a-rod]
+      - id: kp2
+        can_do: Prove the theorem
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space]
+      - id: kp3
+        can_do: Find inertia about a shifted axis
+        key_prerequisites: [physics.mechanics.inertia-of-a-rod]
+      - id: kp4
+        can_do: Find inertia of a rod about any point
+        key_prerequisites: [physics.mechanics.inertia-of-a-rod]
+  - id: physics.mechanics.perpendicular-axis-theorem
+    name: Using the perpendicular-axis theorem
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-disks-and-cylinders
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem for flat objects
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+      - id: kp2
+        can_do: Find inertia of a disk about a diameter
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+      - id: kp3
+        can_do: Find inertia of a rectangular plate
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+      - id: kp4
+        can_do: Tell when the theorem does not apply
+        key_prerequisites: [physics.mechanics.inertia-of-disks-and-cylinders]
+  - id: physics.mechanics.inertia-of-composite-bodies
+    name: Finding moment of inertia of composite bodies
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.parallel-axis-theorem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add parts about the same axis
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+      - id: kp2
+        can_do: Subtract a hole
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+      - id: kp3
+        can_do: Find inertia of a rod and sphere
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+      - id: kp4
+        can_do: Find inertia of a wheel with spokes
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+  - id: physics.mechanics.fixed-axis-dynamics
+    name: Deriving Newton's second law for fixed-axis rotation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.torque-as-a-cross-product
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.inertia-of-point-masses
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.second-law-for-rotation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the rotation law from a mass sum
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product, physics.mechanics.inertia-of-point-masses]
+      - id: kp2
+        can_do: Solve a torque for angular acceleration
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp3
+        can_do: Include friction at an axle
+        key_prerequisites: [physics.hs1.second-law-for-rotation]
+      - id: kp4
+        can_do: Use the law for a time-varying torque
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+  - id: physics.mechanics.massive-pulleys
+    name: Solving pulleys with mass
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.systems-with-constraints
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations with a massive pulley
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics, physics.mechanics.systems-with-constraints]
+      - id: kp2
+        can_do: Solve one hanging mass on a pulley
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp3
+        can_do: Solve two masses over a pulley
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics, physics.mechanics.systems-with-constraints]
+      - id: kp4
+        can_do: Compare with a light pulley
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+  - id: physics.mechanics.pivoting-rods
+    name: Solving a falling or pivoting rod
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.parallel-axis-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find an initial angular acceleration of a falling rod
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics, physics.mechanics.parallel-axis-theorem]
+      - id: kp2
+        can_do: Find force at the pivot
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp3
+        can_do: Find a tip's acceleration
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp4
+        can_do: Find a center of percussion
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+  - id: physics.mechanics.rotational-energy-general
+    name: Solving rotation with energy methods
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.energy-with-variable-forces
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.rotational-kinetic-energy
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a falling rod with energy
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp2
+        can_do: Solve a pulley system with energy
+        key_prerequisites: [physics.mechanics.energy-with-variable-forces]
+      - id: kp3
+        can_do: Compare energy with force methods
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp4
+        can_do: Find a speed at a lowest point
+        key_prerequisites: [physics.hs1.rotational-kinetic-energy]
+  - id: physics.mechanics.rotational-work-as-integral
+    name: Calculating rotational work and power with calculus
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.work-as-an-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate a varying torque
+        key_prerequisites: [physics.mechanics.work-as-an-integral]
+      - id: kp2
+        can_do: Find rotational power
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp3
+        can_do: Find a final spin after a torque
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics, physics.mechanics.work-as-an-integral]
+      - id: kp4
+        can_do: Find a motor's power
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+  - id: physics.mechanics.rolling-kinematics
+    name: Analyzing rolling as translation plus rotation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.acceleration-on-a-rigid-body
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.kinetic-energy-of-a-system
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.rolling
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show that a contact point is at rest
+        key_prerequisites: [physics.mechanics.acceleration-on-a-rigid-body]
+      - id: kp2
+        can_do: Find velocity of a point on a rolling wheel
+        key_prerequisites: [physics.mechanics.acceleration-on-a-rigid-body]
+      - id: kp3
+        can_do: Find a rolling object's total kinetic energy
+        key_prerequisites: [physics.mechanics.kinetic-energy-of-a-system]
+      - id: kp4
+        can_do: Find a rolling acceleration constraint
+        key_prerequisites: [physics.hs1.rolling]
+  - id: physics.mechanics.rolling-dynamics
+    name: Solving rolling with forces and torques
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.rolling-kinematics
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write force and torque equations
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp2
+        can_do: Find friction on a rolling object
+        key_prerequisites: [physics.mechanics.rolling-kinematics, physics.mechanics.fixed-axis-dynamics]
+      - id: kp3
+        can_do: Find an acceleration on an incline
+        key_prerequisites: [physics.mechanics.rolling-kinematics]
+      - id: kp4
+        can_do: Find a least friction for rolling
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+  - id: physics.mechanics.rolling-to-sliding
+    name: Solving the transition from sliding to rolling
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.rolling-dynamics
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.kinetic-friction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a sliding ball
+        key_prerequisites: [physics.hs1.kinetic-friction]
+      - id: kp2
+        can_do: Find when sliding stops
+        key_prerequisites: [physics.mechanics.rolling-dynamics]
+      - id: kp3
+        can_do: Find a final rolling speed
+        key_prerequisites: [physics.mechanics.rolling-dynamics]
+      - id: kp4
+        can_do: Find energy lost to friction
+        key_prerequisites: [physics.hs1.kinetic-friction]
+  - id: physics.mechanics.angular-momentum-of-a-particle
+    name: Calculating angular momentum of a particle
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.angular-momentum
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write angular momentum as a cross product
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp2
+        can_do: Find it about a chosen point
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Find it for straight-line motion
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp4
+        can_do: Find it for circular motion
+        key_prerequisites: [physics.hs1.angular-momentum]
+  - id: physics.mechanics.angular-momentum-of-systems
+    name: Calculating angular momentum of a system
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-momentum-of-a-particle
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.center-of-mass-motion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sum over particles
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp2
+        can_do: Split into orbital and spin parts
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+      - id: kp3
+        can_do: Find it for a rigid body about a fixed axis
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp4
+        can_do: Find it for a rolling object
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+  - id: physics.mechanics.torque-and-angular-momentum
+    name: Relating torque to the rate of angular momentum
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-momentum-of-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.torque-as-a-cross-product
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive torque as a rate of change
+        key_prerequisites: [physics.mechanics.angular-momentum-of-systems, physics.mechanics.torque-as-a-cross-product]
+      - id: kp2
+        can_do: Show that internal torques cancel
+        key_prerequisites: [physics.mechanics.angular-momentum-of-systems]
+      - id: kp3
+        can_do: Use the relation with a time-varying torque
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp4
+        can_do: Find when angular momentum is conserved
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+  - id: physics.mechanics.angular-collisions
+    name: Solving collisions with a pivoted rod
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.torque-and-angular-momentum
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.parallel-axis-theorem
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.conserving-angular-momentum
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Conserve angular momentum in a rod collision
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum, physics.hs1.conserving-angular-momentum]
+      - id: kp2
+        can_do: Find a final spin
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum]
+      - id: kp3
+        can_do: Find energy lost
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+      - id: kp4
+        can_do: Find a bullet striking a door
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum, physics.hs1.conserving-angular-momentum]
+  - id: physics.mechanics.precession
+    name: Explaining gyroscopic precession
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.torque-and-angular-momentum
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.angular-velocity-vectors
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a spinning top
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum]
+      - id: kp2
+        can_do: Find a precession rate
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum, physics.mechanics.angular-velocity-vectors]
+      - id: kp3
+        can_do: Find a torque's effect on direction
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+      - id: kp4
+        can_do: Explain why a bicycle stays upright qualitatively
+        key_prerequisites: [physics.mechanics.torque-and-angular-momentum]
+  - id: physics.mechanics.statics-of-rigid-bodies
+    name: Solving rigid body statics in three dimensions
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.torque-as-a-cross-product
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.beams-and-ladders
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write vector equilibrium equations
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp2
+        can_do: Solve a beam with cables in space
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp3
+        can_do: Choose a torque point
+        key_prerequisites: [physics.hs1.beams-and-ladders]
+      - id: kp4
+        can_do: Solve a truss-like joint
+        key_prerequisites: [physics.hs1.beams-and-ladders]
+  - id: physics.mechanics.tipping-and-sliding
+    name: Deciding whether an object tips or slides
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.statics-of-rigid-bodies
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.static-friction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a force to tip a block
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+      - id: kp2
+        can_do: Find a force to slide a block
+        key_prerequisites: [physics.hs1.static-friction]
+      - id: kp3
+        can_do: Decide which happens first
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies, physics.hs1.static-friction]
+      - id: kp4
+        can_do: Find a tipping angle on a slope
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+  - id: physics.mechanics.center-of-gravity
+    name: Finding the center of gravity
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.statics-of-rigid-bodies
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.center-of-mass-in-space
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define center of gravity
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+      - id: kp2
+        can_do: Compare it with center of mass
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space]
+      - id: kp3
+        can_do: Find it by hanging an object
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+      - id: kp4
+        can_do: Find it for a varying field
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space]
+  - id: physics.mechanics.stress-and-strain
+    name: Using stress, strain and Young's modulus
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.statics-of-rigid-bodies
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.hookes-law
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define stress and strain
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+      - id: kp2
+        can_do: Use Young's modulus
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp3
+        can_do: Find an elongation in metres
+        key_prerequisites: [physics.hs1.hookes-law]
+      - id: kp4
+        can_do: Read a stress-strain curve
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+  - id: physics.mechanics.shear-and-bulk-moduli
+    name: Using shear and bulk moduli
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.stress-and-strain
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the shear modulus
+        key_prerequisites: [physics.mechanics.stress-and-strain]
+      - id: kp2
+        can_do: Use the bulk modulus
+        key_prerequisites: [physics.mechanics.stress-and-strain]
+      - id: kp3
+        can_do: Find a volume change under pressure
+        key_prerequisites: [physics.mechanics.stress-and-strain]
+      - id: kp4
+        can_do: Name a material's limit
+        key_prerequisites: [physics.mechanics.stress-and-strain]
