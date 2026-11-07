@@ -825,3 +825,739 @@ topics:
       - id: kp4
         can_do: Explain why ultrasound needs a gel
         key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+  - id: physics.waves-thermo-optics.pressure-variation-by-integration
+    name: Finding pressure with depth by integration
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.pressure-in-fluids
+        encompassing: 0.4
+        confidence: medium
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the pressure gradient balance for a fluid slab
+        key_prerequisites: [physics.hs1.pressure-in-fluids]
+      - id: kp2
+        can_do: Integrate for pressure in a uniform liquid
+        key_prerequisites: [physics.hs1.pressure-in-fluids, math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find pressure in a liquid with varying density
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Find pressure in layered liquids
+        key_prerequisites: [physics.hs1.pressure-in-fluids]
+  - id: physics.waves-thermo-optics.pressure-in-a-compressible-atmosphere
+    name: Finding pressure in an isothermal atmosphere
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.pressure-variation-by-integration
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.exponential-growth-de
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine hydrostatics with the ideal gas law
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp2
+        can_do: Solve for exponential pressure with height
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp3
+        can_do: Find the scale height
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration, math.calc2.exponential-growth-de]
+      - id: kp4
+        can_do: Find pressure at an altitude
+        key_prerequisites: [math.calc2.exponential-growth-de]
+  - id: physics.waves-thermo-optics.forces-on-dams
+    name: Finding forces on submerged surfaces
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.pressure-variation-by-integration
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.hydrostatic-force
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up force on a vertical wall by integration
+        key_prerequisites: [math.calc2.hydrostatic-force]
+      - id: kp2
+        can_do: Find force on a rectangular dam
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration, math.calc2.hydrostatic-force]
+      - id: kp3
+        can_do: Find force on a slanted surface
+        key_prerequisites: [math.calc2.hydrostatic-force]
+      - id: kp4
+        can_do: Find the point where the total force acts
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+  - id: physics.waves-thermo-optics.buoyancy-and-stability
+    name: Analyzing buoyancy and floating stability
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.forces-on-dams
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.buoyant-force
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive buoyancy from pressure on a submerged body
+        key_prerequisites: [physics.waves-thermo-optics.forces-on-dams]
+      - id: kp2
+        can_do: Find buoyant force on a partly submerged shape
+        key_prerequisites: [physics.hs1.buoyant-force]
+      - id: kp3
+        can_do: Find equilibrium depth of a floating shape
+        key_prerequisites: [physics.hs1.buoyant-force]
+      - id: kp4
+        can_do: Describe when a floating body is stable
+        key_prerequisites: [physics.waves-thermo-optics.forces-on-dams]
+  - id: physics.waves-thermo-optics.rotating-fluids
+    name: Finding the surface of a rotating fluid
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.pressure-variation-by-integration
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.rotating-frames
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pressure in a rotating fluid
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration, physics.mechanics.rotating-frames]
+      - id: kp2
+        can_do: Show the surface is a parabola
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp3
+        can_do: Find the height difference at the rim
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp4
+        can_do: Find spin rate for a given dip
+        key_prerequisites: [physics.mechanics.rotating-frames]
+  - id: physics.waves-thermo-optics.bernoulli-derivation
+    name: Deriving Bernoulli's equation from work and energy
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.bernoullis-equation
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.work-energy-derivation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply work and energy to a tube of flow
+        key_prerequisites: [physics.mechanics.work-energy-derivation]
+      - id: kp2
+        can_do: Derive Bernoulli's equation
+        key_prerequisites: [physics.hs1.bernoullis-equation, physics.mechanics.work-energy-derivation]
+      - id: kp3
+        can_do: State its assumptions
+        key_prerequisites: [physics.hs1.bernoullis-equation]
+      - id: kp4
+        can_do: Find pressure in a narrowing pipe
+        key_prerequisites: [physics.hs1.bernoullis-equation]
+  - id: physics.waves-thermo-optics.draining-tanks
+    name: Finding the time to drain a tank
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.bernoulli-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find outflow speed from a tank
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp2
+        can_do: Write a differential equation for the water height
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Solve for draining time
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation, math.calc2.separable-equations]
+      - id: kp4
+        can_do: Find draining time for a cone-shaped tank
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: physics.waves-thermo-optics.viscosity
+    name: Describing viscosity and laminar flow
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.bernoulli-derivation
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define viscosity with shear stress
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp2
+        can_do: Find force on a plate over a fluid layer
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp3
+        can_do: Describe laminar flow between plates
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp4
+        can_do: Compare viscosities of common fluids
+        key_prerequisites: [physics.waves-thermo-optics.bernoulli-derivation]
+  - id: physics.waves-thermo-optics.poiseuille-flow
+    name: Finding viscous flow through a pipe
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.viscosity
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the velocity profile in a pipe
+        key_prerequisites: [physics.waves-thermo-optics.viscosity, math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Integrate to find volume flow rate
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find how flow depends on radius
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+      - id: kp4
+        can_do: Find pressure drop for a given flow
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+  - id: physics.waves-thermo-optics.stokes-drag-and-reynolds-number
+    name: Using Stokes drag and Reynolds number
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.viscosity
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.linear-drag
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Stokes drag on a small sphere
+        key_prerequisites: [physics.waves-thermo-optics.viscosity, physics.mechanics.linear-drag]
+      - id: kp2
+        can_do: Find terminal speed of a small sphere
+        key_prerequisites: [physics.mechanics.linear-drag]
+      - id: kp3
+        can_do: Find a Reynolds number
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+      - id: kp4
+        can_do: Tell laminar from turbulent flow by Reynolds number
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+  - id: physics.waves-thermo-optics.surface-tension
+    name: Finding forces from surface tension
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.pressure-variation-by-integration
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define surface tension as force per length
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp2
+        can_do: Find force on a wire frame
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp3
+        can_do: Find extra pressure in a drop
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp4
+        can_do: Find extra pressure in a bubble
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+  - id: physics.waves-thermo-optics.capillary-rise
+    name: Finding capillary rise
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.surface-tension
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate contact angle to rise or fall
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+      - id: kp2
+        can_do: Find rise height in a narrow tube
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+      - id: kp3
+        can_do: Find tube radius from a rise
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+      - id: kp4
+        can_do: Explain falling mercury in glass
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+  - id: physics.waves-thermo-optics.thermal-expansion-with-calculus
+    name: Finding thermal expansion with varying coefficients
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.thermal-expansion
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc1.differentials
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write length change as a differential
+        key_prerequisites: [math.calc1.differentials]
+      - id: kp2
+        can_do: Integrate expansion with a coefficient that varies
+        key_prerequisites: [math.calc1.differentials]
+      - id: kp3
+        can_do: Find volume expansion for small changes
+        key_prerequisites: [physics.hs2.thermal-expansion]
+      - id: kp4
+        can_do: Relate volume and linear coefficients
+        key_prerequisites: [physics.hs2.thermal-expansion]
+  - id: physics.waves-thermo-optics.thermal-stress
+    name: Finding thermal stress in constrained rods
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.thermal-expansion-with-calculus
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.stress-and-strain
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stress in a rod held at both ends
+        key_prerequisites: [physics.waves-thermo-optics.thermal-expansion-with-calculus, physics.mechanics.stress-and-strain]
+      - id: kp2
+        can_do: Find force needed to prevent expansion
+        key_prerequisites: [physics.waves-thermo-optics.thermal-expansion-with-calculus]
+      - id: kp3
+        can_do: Find a gap needed for rails
+        key_prerequisites: [physics.waves-thermo-optics.thermal-expansion-with-calculus]
+      - id: kp4
+        can_do: Find stress in a bimaterial joint
+        key_prerequisites: [physics.mechanics.stress-and-strain]
+  - id: physics.waves-thermo-optics.heat-capacity-with-calculus
+    name: Integrating heat capacity that varies with temperature
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.specific-heat
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write heat as an integral of heat capacity
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Find heat with a linear heat capacity
+        key_prerequisites: [physics.hs2.specific-heat, math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find heat with a heat capacity that rises with temperature cubed
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp4
+        can_do: Find a final temperature with varying heat capacity
+        key_prerequisites: [physics.hs2.specific-heat]
+  - id: physics.waves-thermo-optics.conduction-through-layers
+    name: Finding conduction through layered walls
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.conduction-rate
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the conduction equation with a temperature gradient
+        key_prerequisites: [physics.hs2.conduction-rate]
+      - id: kp2
+        can_do: Find thermal resistance of a slab
+        key_prerequisites: [physics.hs2.conduction-rate]
+      - id: kp3
+        can_do: Add resistances for layers in series
+        key_prerequisites: [physics.hs2.conduction-rate]
+      - id: kp4
+        can_do: Find interface temperature between layers
+        key_prerequisites: [physics.hs2.conduction-rate]
+  - id: physics.waves-thermo-optics.radial-conduction
+    name: Finding conduction through pipes and shells
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.conduction-through-layers
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up conduction through a cylindrical shell
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers]
+      - id: kp2
+        can_do: Integrate to find heat flow through a pipe wall
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers, math.calc2.separable-equations]
+      - id: kp3
+        can_do: Find heat flow through a spherical shell
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp4
+        can_do: Find temperature at a radius
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers]
+  - id: physics.waves-thermo-optics.cooling-with-differential-equations
+    name: Modeling cooling with differential equations
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.conduction-through-layers
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.newton-cooling-de
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a cooling equation from conduction
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers]
+      - id: kp2
+        can_do: Solve for temperature against time
+        key_prerequisites: [math.calc2.newton-cooling-de]
+      - id: kp3
+        can_do: Find a time constant
+        key_prerequisites: [math.calc2.newton-cooling-de]
+      - id: kp4
+        can_do: Find time to reach a temperature
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers, math.calc2.newton-cooling-de]
+  - id: physics.waves-thermo-optics.radiation-exchange
+    name: Finding net radiation between surfaces
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.radiation-rate
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find net radiation between an object and surroundings
+        key_prerequisites: [physics.hs2.radiation-rate]
+      - id: kp2
+        can_do: Use emissivity in net radiation
+        key_prerequisites: [physics.hs2.radiation-rate]
+      - id: kp3
+        can_do: Find equilibrium temperature with radiation
+        key_prerequisites: [physics.hs2.radiation-rate]
+      - id: kp4
+        can_do: Find radiation loss with small temperature differences
+        key_prerequisites: [physics.hs2.radiation-rate]
+  - id: physics.waves-thermo-optics.ideal-gas-microscopic-model
+    name: Deriving pressure from molecular collisions
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.kinetic-theory-of-gases
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.impulse-as-an-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impulse from one molecule hitting a wall
+        key_prerequisites: [physics.mechanics.impulse-as-an-integral]
+      - id: kp2
+        can_do: Find pressure from many molecules
+        key_prerequisites: [physics.hs2.kinetic-theory-of-gases, physics.mechanics.impulse-as-an-integral]
+      - id: kp3
+        can_do: Relate pressure to mean square speed
+        key_prerequisites: [physics.hs2.kinetic-theory-of-gases]
+      - id: kp4
+        can_do: State assumptions of the model
+        key_prerequisites: [physics.hs2.kinetic-theory-of-gases]
+  - id: physics.waves-thermo-optics.equipartition
+    name: Using equipartition of energy
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.ideal-gas-microscopic-model
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.temperature-and-particle-energy
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate temperature to average kinetic energy
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model, physics.hs2.temperature-and-particle-energy]
+      - id: kp2
+        can_do: Count degrees of freedom of molecules
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp3
+        can_do: Find average energy per degree of freedom
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp4
+        can_do: Find total internal energy of a gas
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+  - id: physics.waves-thermo-optics.heat-capacities-of-gases
+    name: Finding molar heat capacities from degrees of freedom
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.equipartition
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.heat-capacity-with-calculus
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find molar heat capacity of a monatomic gas
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp2
+        can_do: Find heat capacity of a diatomic gas
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp3
+        can_do: Explain frozen degrees of freedom
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp4
+        can_do: Compare predicted and measured values
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacity-with-calculus]
+  - id: physics.waves-thermo-optics.heat-capacity-of-solids
+    name: Explaining heat capacity of solids classically
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.equipartition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count degrees of freedom of atoms in a solid
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp2
+        can_do: Derive the Dulong-Petit value
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp3
+        can_do: Compare with measured heat capacities
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp4
+        can_do: Describe failure at low temperature
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+  - id: physics.waves-thermo-optics.maxwell-speed-distribution
+    name: Using the Maxwell speed distribution
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.equipartition
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.probability-density-integral
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read the speed distribution graph
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp2
+        can_do: Find probability of a speed range by integration
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp3
+        can_do: Find how the distribution shifts with temperature
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+      - id: kp4
+        can_do: Compare distributions of different gases
+        key_prerequisites: [physics.waves-thermo-optics.equipartition]
+  - id: physics.waves-thermo-optics.average-and-rms-speeds
+    name: Finding mean, rms and most probable speeds
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.maxwell-speed-distribution
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.gaussian-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find most probable speed
+        key_prerequisites: [physics.waves-thermo-optics.maxwell-speed-distribution]
+      - id: kp2
+        can_do: Find mean speed with integrals
+        key_prerequisites: [physics.waves-thermo-optics.maxwell-speed-distribution, math.calc3.gaussian-integral]
+      - id: kp3
+        can_do: Find root mean square speed
+        key_prerequisites: [math.calc3.gaussian-integral]
+      - id: kp4
+        can_do: Compare all three speeds
+        key_prerequisites: [physics.waves-thermo-optics.maxwell-speed-distribution]
+  - id: physics.waves-thermo-optics.mean-free-path
+    name: Finding mean free path and collision rate
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.ideal-gas-microscopic-model
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find collision cross section
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp2
+        can_do: Find mean free path
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp3
+        can_do: Find collision rate
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp4
+        can_do: Find how mean free path depends on pressure
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+  - id: physics.waves-thermo-optics.effusion-and-diffusion
+    name: Describing effusion and diffusion rates
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.mean-free-path
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.average-and-rms-speeds
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effusion rate through a small hole
+        key_prerequisites: [physics.waves-thermo-optics.average-and-rms-speeds]
+      - id: kp2
+        can_do: Compare effusion rates of two gases
+        key_prerequisites: [physics.waves-thermo-optics.average-and-rms-speeds]
+      - id: kp3
+        can_do: Estimate diffusion time from mean free path
+        key_prerequisites: [physics.waves-thermo-optics.mean-free-path]
+      - id: kp4
+        can_do: Explain isotope separation by effusion
+        key_prerequisites: [physics.waves-thermo-optics.average-and-rms-speeds]
+  - id: physics.waves-thermo-optics.real-gases
+    name: Using the van der Waals equation
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.ideal-gas-microscopic-model
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.ideal-gas-law
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the van der Waals equation
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp2
+        can_do: Interpret its two correction terms
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model]
+      - id: kp3
+        can_do: Find pressure from the van der Waals equation
+        key_prerequisites: [physics.waves-thermo-optics.ideal-gas-microscopic-model, physics.hs2.ideal-gas-law]
+      - id: kp4
+        can_do: Compare with ideal gas predictions
+        key_prerequisites: [physics.hs2.ideal-gas-law]
+  - id: physics.waves-thermo-optics.phase-diagrams
+    name: Reading phase diagrams and critical points
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.real-gases
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.latent-heat
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read regions of a phase diagram
+        key_prerequisites: [physics.hs2.latent-heat]
+      - id: kp2
+        can_do: Find triple and critical points
+        key_prerequisites: [physics.waves-thermo-optics.real-gases]
+      - id: kp3
+        can_do: Read isotherms near a critical point
+        key_prerequisites: [physics.waves-thermo-optics.real-gases]
+      - id: kp4
+        can_do: Explain water's unusual melting line
+        key_prerequisites: [physics.hs2.latent-heat]
