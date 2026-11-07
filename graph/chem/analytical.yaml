@@ -1,0 +1,1277 @@
+course: chem.analytical
+topics:
+  - id: chem.analytical.analytical-errors
+    name: Classifying systematic and random errors
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.percent-error-in-lab
+        encompassing: 0.3
+        confidence: high
+      - topic: math.stats.standard-deviation-calc
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify errors as systematic or random
+        key_prerequisites: [chem.hs1.percent-error-in-lab]
+      - id: kp2
+        can_do: Identify sources of systematic error
+        key_prerequisites: [chem.hs1.percent-error-in-lab]
+      - id: kp3
+        can_do: Calculate mean and standard deviation of replicates
+        key_prerequisites: [math.stats.standard-deviation-calc]
+      - id: kp4
+        can_do: Find relative standard deviation
+        key_prerequisites: [math.stats.standard-deviation-calc]
+  - id: chem.analytical.error-propagation
+    name: Propagating uncertainty through calculations
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.analytical-errors
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.measurement-uncertainty
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Propagate uncertainty through addition and subtraction
+        key_prerequisites: [chem.analytical.analytical-errors, physics.hs1.measurement-uncertainty]
+      - id: kp2
+        can_do: Propagate uncertainty through multiplication and division
+        key_prerequisites: [chem.analytical.analytical-errors, physics.hs1.measurement-uncertainty]
+      - id: kp3
+        can_do: Propagate uncertainty through logarithms
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp4
+        can_do: Find the largest contributor to uncertainty
+        key_prerequisites: [chem.analytical.analytical-errors]
+  - id: chem.analytical.confidence-intervals-for-measurements
+    name: Reporting confidence intervals for replicate measurements
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.analytical-errors
+        encompassing: 0.35
+        confidence: high
+      - topic: math.stats.ci-mean-t
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate a confidence interval for a mean
+        key_prerequisites: [chem.analytical.analytical-errors, math.stats.ci-mean-t]
+      - id: kp2
+        can_do: Choose the t value for the sample size
+        key_prerequisites: [math.stats.ci-mean-t]
+      - id: kp3
+        can_do: Report a result with its interval
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp4
+        can_do: Explain how more replicates narrow the interval
+        key_prerequisites: [math.stats.ci-mean-t]
+  - id: chem.analytical.comparing-means-t-tests
+    name: Comparing analytical results with t tests
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.confidence-intervals-for-measurements
+        encompassing: 0.4
+        confidence: high
+      - topic: math.stats.two-mean-t-test
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare a mean with a known value
+        key_prerequisites: [chem.analytical.confidence-intervals-for-measurements]
+      - id: kp2
+        can_do: Compare means of two methods
+        key_prerequisites: [chem.analytical.confidence-intervals-for-measurements, math.stats.two-mean-t-test]
+      - id: kp3
+        can_do: Use a paired t test for matched samples
+        key_prerequisites: [math.stats.two-mean-t-test]
+      - id: kp4
+        can_do: State conclusions of a t test
+        key_prerequisites: [chem.analytical.confidence-intervals-for-measurements]
+  - id: chem.analytical.f-test-for-precision
+    name: Comparing precision with the F test
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.comparing-means-t-tests
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare two variances with the F test
+        key_prerequisites: [chem.analytical.comparing-means-t-tests]
+      - id: kp2
+        can_do: Decide whether to pool standard deviations
+        key_prerequisites: [chem.analytical.comparing-means-t-tests]
+      - id: kp3
+        can_do: Use F tables
+        key_prerequisites: [chem.analytical.comparing-means-t-tests]
+      - id: kp4
+        can_do: Interpret F test results
+        key_prerequisites: [chem.analytical.comparing-means-t-tests]
+  - id: chem.analytical.outlier-tests
+    name: Rejecting outliers with Grubbs or Q tests
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.analytical-errors
+        encompassing: 0.4
+        confidence: high
+      - topic: math.stats.outlier-rule
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the Grubbs test
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp2
+        can_do: Apply the Q test
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp3
+        can_do: Decide whether to reject a point
+        key_prerequisites: [chem.analytical.analytical-errors, math.stats.outlier-rule]
+      - id: kp4
+        can_do: Explain risks of rejecting data
+        key_prerequisites: [math.stats.outlier-rule]
+  - id: chem.analytical.calibration-curves
+    name: Building calibration curves by least squares
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.stats.least-squares-regression
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs2.beer-lambert-law
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit a calibration line by least squares
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp2
+        can_do: Find unknown concentration from a calibration line
+        key_prerequisites: [math.stats.least-squares-regression, chem.hs2.beer-lambert-law]
+      - id: kp3
+        can_do: Judge linearity with residuals
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp4
+        can_do: Report slope and intercept with uncertainty
+        key_prerequisites: [math.stats.least-squares-regression]
+  - id: chem.analytical.calibration-uncertainty
+    name: Finding uncertainty of a result from a calibration curve
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.calibration-curves
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.analytical.error-propagation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find uncertainty of a concentration from a calibration line
+        key_prerequisites: [chem.analytical.calibration-curves, chem.analytical.error-propagation]
+      - id: kp2
+        can_do: Explain how replicates reduce uncertainty
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp3
+        can_do: Choose standards to reduce uncertainty
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp4
+        can_do: Compare uncertainty near the centre and ends of the range
+        key_prerequisites: [chem.analytical.calibration-curves]
+  - id: chem.analytical.detection-limits
+    name: Finding detection and quantitation limits
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.calibration-curves
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the limit of detection
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp2
+        can_do: Find the limit of quantitation
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp3
+        can_do: Find sensitivity from slope
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp4
+        can_do: Compare methods by detection limit
+        key_prerequisites: [chem.analytical.calibration-curves]
+  - id: chem.analytical.standard-addition
+    name: Analyzing samples by standard addition
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.calibration-curves
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain matrix effects
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp2
+        can_do: Analyze by single-point standard addition
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp3
+        can_do: Analyze by multiple standard additions
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp4
+        can_do: Find concentration from the x-intercept
+        key_prerequisites: [chem.analytical.calibration-curves]
+  - id: chem.analytical.internal-standards
+    name: Using internal standards
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.calibration-curves
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose an internal standard
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp2
+        can_do: Find response factors
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp3
+        can_do: Find analyte concentration with an internal standard
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp4
+        can_do: Explain how internal standards correct for losses
+        key_prerequisites: [chem.analytical.calibration-curves]
+  - id: chem.analytical.method-validation
+    name: Validating analytical methods
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.detection-limits
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.comparing-means-t-tests
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define accuracy, precision and selectivity
+        key_prerequisites: [chem.analytical.detection-limits]
+      - id: kp2
+        can_do: Find recovery from spiked samples
+        key_prerequisites: [chem.analytical.comparing-means-t-tests]
+      - id: kp3
+        can_do: Define range and robustness
+        key_prerequisites: [chem.analytical.detection-limits]
+      - id: kp4
+        can_do: Plan a validation study
+        key_prerequisites: [chem.analytical.detection-limits, chem.analytical.comparing-means-t-tests]
+  - id: chem.analytical.sampling-and-sample-preparation
+    name: Planning sampling and sample preparation
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.analytical-errors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plan representative sampling
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp2
+        can_do: Describe dissolving and digesting samples
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp3
+        can_do: Describe preconcentration
+        key_prerequisites: [chem.analytical.analytical-errors]
+      - id: kp4
+        can_do: Explain contamination control
+        key_prerequisites: [chem.analytical.analytical-errors]
+  - id: chem.analytical.ionic-strength
+    name: Calculating ionic strength
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.ion-concentrations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate ionic strength
+        key_prerequisites: [chem.hs1.ion-concentrations]
+      - id: kp2
+        can_do: Compare ionic strengths of salts
+        key_prerequisites: [chem.hs1.ion-concentrations]
+      - id: kp3
+        can_do: Explain why ion charge matters most
+        key_prerequisites: [chem.hs1.ion-concentrations]
+      - id: kp4
+        can_do: Find ionic strength of mixtures
+        key_prerequisites: [chem.hs1.ion-concentrations]
+  - id: chem.analytical.activity-coefficients
+    name: Finding activity coefficients with the extended Debye-Huckel equation
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.ionic-strength
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the extended Debye-Huckel equation
+        key_prerequisites: [chem.analytical.ionic-strength]
+      - id: kp2
+        can_do: Find activity from concentration
+        key_prerequisites: [chem.analytical.ionic-strength]
+      - id: kp3
+        can_do: Find solubility with activities
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp4
+        can_do: Find pH with activities
+        key_prerequisites: [chem.analytical.ionic-strength, chem.hs2.equilibrium-expressions]
+  - id: chem.analytical.systematic-equilibrium-treatment
+    name: Solving equilibria with charge and mass balances
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.activity-coefficients
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen2.simultaneous-equilibria
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write charge balance equations
+        key_prerequisites: [chem.analytical.activity-coefficients]
+      - id: kp2
+        can_do: Write mass balance equations
+        key_prerequisites: [chem.gen2.simultaneous-equilibria]
+      - id: kp3
+        can_do: Solve a system of equilibrium equations
+        key_prerequisites: [chem.analytical.activity-coefficients, chem.gen2.simultaneous-equilibria]
+      - id: kp4
+        can_do: Solve solubility of a salt with a basic anion
+        key_prerequisites: [chem.gen2.simultaneous-equilibria]
+  - id: chem.analytical.gravimetric-analysis
+    name: Calculating results of gravimetric analysis
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.mass-to-mass-stoichiometry
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.selective-precipitation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate analyte mass from precipitate mass
+        key_prerequisites: [chem.hs1.mass-to-mass-stoichiometry]
+      - id: kp2
+        can_do: Use gravimetric factors
+        key_prerequisites: [chem.hs1.mass-to-mass-stoichiometry]
+      - id: kp3
+        can_do: Describe precipitate formation and filtering
+        key_prerequisites: [chem.gen2.selective-precipitation]
+      - id: kp4
+        can_do: Find percent of analyte in a sample
+        key_prerequisites: [chem.hs1.mass-to-mass-stoichiometry]
+  - id: chem.analytical.precipitation-titrations
+    name: Analyzing precipitation titrations
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.ksp-and-solubility
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.titration-curve-calculations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate a precipitation titration curve
+        key_prerequisites: [chem.hs2.ksp-and-solubility, chem.gen2.titration-curve-calculations]
+      - id: kp2
+        can_do: Use the Mohr method
+        key_prerequisites: [chem.hs2.ksp-and-solubility]
+      - id: kp3
+        can_do: Use the Volhard method
+        key_prerequisites: [chem.hs2.ksp-and-solubility]
+      - id: kp4
+        can_do: Use adsorption indicators
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+  - id: chem.analytical.titration-of-mixtures
+    name: Analyzing titrations of acid mixtures
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.polyprotic-titrations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.systematic-equilibrium-treatment
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Titrate mixtures of acids
+        key_prerequisites: [chem.gen2.polyprotic-titrations]
+      - id: kp2
+        can_do: Titrate carbonate and hydroxide mixtures
+        key_prerequisites: [chem.gen2.polyprotic-titrations, chem.analytical.systematic-equilibrium-treatment]
+      - id: kp3
+        can_do: Find two equivalence points
+        key_prerequisites: [chem.gen2.polyprotic-titrations]
+      - id: kp4
+        can_do: Find composition of a mixture
+        key_prerequisites: [chem.analytical.systematic-equilibrium-treatment]
+  - id: chem.analytical.end-point-detection
+    name: Locating end points with derivative and Gran plots
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.titration-curve-calculations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find end points with first derivatives
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp2
+        can_do: Find end points with second derivatives
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp3
+        can_do: Use Gran plots
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+      - id: kp4
+        can_do: Compare indicator and instrumental end points
+        key_prerequisites: [chem.gen2.titration-curve-calculations]
+  - id: chem.analytical.kjeldahl-analysis
+    name: Finding nitrogen by Kjeldahl analysis
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.back-titration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Kjeldahl digestion
+        key_prerequisites: [chem.gen1.back-titration]
+      - id: kp2
+        can_do: Find nitrogen from a back titration
+        key_prerequisites: [chem.gen1.back-titration]
+      - id: kp3
+        can_do: Find protein content from nitrogen
+        key_prerequisites: [chem.gen1.back-titration]
+      - id: kp4
+        can_do: Explain sources of error in Kjeldahl analysis
+        key_prerequisites: [chem.gen1.back-titration]
+  - id: chem.analytical.edta-titrations
+    name: Analyzing EDTA titrations
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.complex-ion-formation
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen2.fractional-composition
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write EDTA formation reactions
+        key_prerequisites: [chem.gen2.complex-ion-formation]
+      - id: kp2
+        can_do: Find fraction of fully deprotonated EDTA
+        key_prerequisites: [chem.gen2.fractional-composition]
+      - id: kp3
+        can_do: Calculate EDTA titration curves
+        key_prerequisites: [chem.gen2.complex-ion-formation, chem.gen2.fractional-composition]
+      - id: kp4
+        can_do: Explain pH control in EDTA titrations
+        key_prerequisites: [chem.gen2.fractional-composition]
+  - id: chem.analytical.conditional-formation-constants
+    name: Using conditional formation constants
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.edta-titrations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate conditional formation constants
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp2
+        can_do: Find metal concentration at the equivalence point
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp3
+        can_do: Choose pH for a titration
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp4
+        can_do: Explain why some metals need high pH
+        key_prerequisites: [chem.analytical.edta-titrations]
+  - id: chem.analytical.metal-ion-indicators
+    name: Choosing metal ion indicators
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.edta-titrations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how metal indicators work
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp2
+        can_do: Choose an indicator for a metal
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp3
+        can_do: Explain indicator blocking
+        key_prerequisites: [chem.analytical.edta-titrations]
+      - id: kp4
+        can_do: Use back and displacement titrations
+        key_prerequisites: [chem.analytical.edta-titrations]
+  - id: chem.analytical.auxiliary-complexing-agents
+    name: Using auxiliary complexing agents
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.conditional-formation-constants
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain auxiliary agents
+        key_prerequisites: [chem.analytical.conditional-formation-constants]
+      - id: kp2
+        can_do: Find free metal with an auxiliary agent
+        key_prerequisites: [chem.analytical.conditional-formation-constants]
+      - id: kp3
+        can_do: Explain masking agents
+        key_prerequisites: [chem.analytical.conditional-formation-constants]
+      - id: kp4
+        can_do: Choose agents for selective titration
+        key_prerequisites: [chem.analytical.conditional-formation-constants]
+  - id: chem.analytical.redox-titration-curves
+    name: Calculating redox titration curves
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.redox-titrations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate potential before the equivalence point
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp2
+        can_do: Calculate potential at the equivalence point
+        key_prerequisites: [chem.gen2.nernst-equation, chem.hs2.redox-titrations]
+      - id: kp3
+        can_do: Calculate potential after the equivalence point
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp4
+        can_do: Choose a redox indicator
+        key_prerequisites: [chem.hs2.redox-titrations]
+  - id: chem.analytical.iodometry-and-permanganate
+    name: Analyzing iodometric and permanganate titrations
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.redox-titration-curves
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze by permanganate titration
+        key_prerequisites: [chem.analytical.redox-titration-curves]
+      - id: kp2
+        can_do: Analyze by iodometric titration
+        key_prerequisites: [chem.analytical.redox-titration-curves]
+      - id: kp3
+        can_do: Standardize thiosulfate
+        key_prerequisites: [chem.analytical.redox-titration-curves]
+      - id: kp4
+        can_do: Find analyte from iodine generated
+        key_prerequisites: [chem.analytical.redox-titration-curves]
+  - id: chem.analytical.reference-electrodes
+    name: Describing reference electrodes
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the silver chloride electrode
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp2
+        can_do: Describe the calomel electrode
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp3
+        can_do: Convert potentials between reference electrodes
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp4
+        can_do: Explain junction potentials
+        key_prerequisites: [chem.gen2.nernst-equation]
+  - id: chem.analytical.indicator-electrodes
+    name: Measuring concentrations with indicator electrodes
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.reference-electrodes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe metal indicator electrodes
+        key_prerequisites: [chem.analytical.reference-electrodes]
+      - id: kp2
+        can_do: Find concentration from electrode potential
+        key_prerequisites: [chem.analytical.reference-electrodes]
+      - id: kp3
+        can_do: Use potentiometric titrations
+        key_prerequisites: [chem.analytical.reference-electrodes]
+      - id: kp4
+        can_do: Explain inert electrodes
+        key_prerequisites: [chem.analytical.reference-electrodes]
+  - id: chem.analytical.ion-selective-electrodes
+    name: Using ion-selective electrodes
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.indicator-electrodes
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.activity-coefficients
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain ion-selective membranes
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+      - id: kp2
+        can_do: Find concentration from a calibration of potential
+        key_prerequisites: [chem.analytical.indicator-electrodes, chem.analytical.activity-coefficients]
+      - id: kp3
+        can_do: Explain selectivity coefficients
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+      - id: kp4
+        can_do: Explain why electrodes respond to activity
+        key_prerequisites: [chem.analytical.activity-coefficients]
+  - id: chem.analytical.glass-ph-electrode
+    name: Explaining the glass pH electrode
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.ion-selective-electrodes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the glass membrane
+        key_prerequisites: [chem.analytical.ion-selective-electrodes]
+      - id: kp2
+        can_do: Calibrate a pH electrode
+        key_prerequisites: [chem.analytical.ion-selective-electrodes]
+      - id: kp3
+        can_do: Explain alkaline and acid errors
+        key_prerequisites: [chem.analytical.ion-selective-electrodes]
+      - id: kp4
+        can_do: Explain pH measurement accuracy limits
+        key_prerequisites: [chem.analytical.ion-selective-electrodes]
+  - id: chem.analytical.electrogravimetry-and-coulometry
+    name: Analyzing samples by electrogravimetry and coulometry
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.electrolysis-calculations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.reference-electrodes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find analyte mass by electrogravimetry
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+      - id: kp2
+        can_do: Find analyte by coulometry
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+      - id: kp3
+        can_do: Explain controlled-potential electrolysis
+        key_prerequisites: [chem.analytical.reference-electrodes]
+      - id: kp4
+        can_do: Use coulometric titrations
+        key_prerequisites: [chem.hs2.electrolysis-calculations]
+  - id: chem.analytical.voltammetry
+    name: Interpreting voltammograms
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.indicator-electrodes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read a cyclic voltammogram
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+      - id: kp2
+        can_do: Find formal potential from a voltammogram
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+      - id: kp3
+        can_do: Relate peak current to concentration
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+      - id: kp4
+        can_do: Describe stripping analysis
+        key_prerequisites: [chem.analytical.indicator-electrodes]
+  - id: chem.analytical.spectrophotometer-components
+    name: Describing spectrophotometer components
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.beer-lambert-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe light sources and monochromators
+        key_prerequisites: [chem.hs2.beer-lambert-law]
+      - id: kp2
+        can_do: Describe detectors
+        key_prerequisites: [chem.hs2.beer-lambert-law]
+      - id: kp3
+        can_do: Compare single- and double-beam instruments
+        key_prerequisites: [chem.hs2.beer-lambert-law]
+      - id: kp4
+        can_do: Explain stray light
+        key_prerequisites: [chem.hs2.beer-lambert-law]
+  - id: chem.analytical.beer-law-deviations
+    name: Explaining deviations from Beer's law
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.spectrophotometer-components
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.calibration-curves
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain chemical deviations
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp2
+        can_do: Explain instrumental deviations
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp3
+        can_do: Choose a working concentration range
+        key_prerequisites: [chem.analytical.calibration-curves]
+      - id: kp4
+        can_do: Find error from stray light
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+  - id: chem.analytical.spectrophotometric-mixture-analysis
+    name: Analyzing mixtures by spectrophotometry
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.beer-law-deviations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze two components at two wavelengths
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+      - id: kp2
+        can_do: Solve simultaneous absorbance equations
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+      - id: kp3
+        can_do: Use isosbestic points
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+      - id: kp4
+        can_do: Find composition of a mixture
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+  - id: chem.analytical.spectrophotometric-titrations
+    name: Following titrations by absorbance
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.beer-law-deviations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.edta-titrations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Follow a titration by absorbance
+        key_prerequisites: [chem.analytical.beer-law-deviations, chem.analytical.edta-titrations]
+      - id: kp2
+        can_do: Find end points from absorbance plots
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+      - id: kp3
+        can_do: Choose a wavelength for a titration
+        key_prerequisites: [chem.analytical.beer-law-deviations]
+      - id: kp4
+        can_do: Analyze metals with complexing agents by absorbance
+        key_prerequisites: [chem.analytical.edta-titrations]
+  - id: chem.analytical.fluorescence-analysis
+    name: Analyzing samples by fluorescence
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.spectrophotometer-components
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.emission-and-absorption
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain fluorescence
+        key_prerequisites: [chem.hs1.emission-and-absorption]
+      - id: kp2
+        can_do: Find concentration from fluorescence intensity
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp3
+        can_do: Explain why fluorescence is sensitive
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp4
+        can_do: Explain quenching
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+  - id: chem.analytical.atomic-absorption
+    name: Analyzing metals by atomic absorption
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.spectrophotometer-components
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.flame-tests
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe atomization in flames and furnaces
+        key_prerequisites: [chem.hs1.flame-tests]
+      - id: kp2
+        can_do: Explain hollow-cathode lamps
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp3
+        can_do: Find concentration by atomic absorption
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+      - id: kp4
+        can_do: Compare flame and furnace methods
+        key_prerequisites: [chem.analytical.spectrophotometer-components]
+  - id: chem.analytical.atomic-emission-and-plasma
+    name: Analyzing metals by atomic emission and plasma methods
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.atomic-absorption
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe plasma emission
+        key_prerequisites: [chem.analytical.atomic-absorption]
+      - id: kp2
+        can_do: Explain multielement analysis
+        key_prerequisites: [chem.analytical.atomic-absorption]
+      - id: kp3
+        can_do: Compare emission and absorption methods
+        key_prerequisites: [chem.analytical.atomic-absorption]
+      - id: kp4
+        can_do: Describe plasma mass spectrometry
+        key_prerequisites: [chem.analytical.atomic-absorption]
+  - id: chem.analytical.atomic-spectroscopy-interferences
+    name: Correcting interferences in atomic spectroscopy
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.atomic-emission-and-plasma
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.standard-addition
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify spectral interferences
+        key_prerequisites: [chem.analytical.atomic-emission-and-plasma]
+      - id: kp2
+        can_do: Identify chemical interferences
+        key_prerequisites: [chem.analytical.atomic-emission-and-plasma]
+      - id: kp3
+        can_do: Correct interferences with releasing agents
+        key_prerequisites: [chem.analytical.atomic-emission-and-plasma]
+      - id: kp4
+        can_do: Correct interferences by standard addition
+        key_prerequisites: [chem.analytical.standard-addition]
+  - id: chem.analytical.solvent-extraction
+    name: Calculating extraction efficiency
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.separation-by-intermolecular-forces
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define distribution coefficient
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+      - id: kp2
+        can_do: Find fraction extracted
+        key_prerequisites: [chem.hs2.separation-by-intermolecular-forces]
+      - id: kp3
+        can_do: Compare one extraction with several
+        key_prerequisites: [chem.hs2.separation-by-intermolecular-forces]
+      - id: kp4
+        can_do: Find number of extractions needed
+        key_prerequisites: [chem.hs2.separation-by-intermolecular-forces]
+  - id: chem.analytical.ph-controlled-extraction
+    name: Controlling extraction with pH
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.solvent-extraction
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.fractional-composition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find distribution ratio against pH
+        key_prerequisites: [chem.analytical.solvent-extraction, chem.gen2.fractional-composition]
+      - id: kp2
+        can_do: Separate acids and bases by extraction
+        key_prerequisites: [chem.analytical.solvent-extraction]
+      - id: kp3
+        can_do: Extract metal chelates
+        key_prerequisites: [chem.analytical.solvent-extraction]
+      - id: kp4
+        can_do: Choose pH for a separation
+        key_prerequisites: [chem.gen2.fractional-composition]
+  - id: chem.analytical.chromatography-principles
+    name: Describing retention and partition in chromatography
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.solvent-extraction
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe stationary and mobile phases
+        key_prerequisites: [chem.analytical.solvent-extraction]
+      - id: kp2
+        can_do: Define retention time and retention factor
+        key_prerequisites: [chem.analytical.solvent-extraction]
+      - id: kp3
+        can_do: Relate retention to partition
+        key_prerequisites: [chem.analytical.solvent-extraction]
+      - id: kp4
+        can_do: Find separation factor
+        key_prerequisites: [chem.analytical.solvent-extraction]
+  - id: chem.analytical.plate-theory-and-resolution
+    name: Finding plate number and resolution
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.chromatography-principles
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find plate number
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp2
+        can_do: Find plate height
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp3
+        can_do: Calculate resolution
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp4
+        can_do: Find column length for a resolution
+        key_prerequisites: [chem.analytical.chromatography-principles]
+  - id: chem.analytical.van-deemter-equation
+    name: Optimizing flow with the van Deemter equation
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.plate-theory-and-resolution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name the terms of the van Deemter equation
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp2
+        can_do: Find optimum flow rate
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp3
+        can_do: Explain band broadening
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp4
+        can_do: Compare packed and capillary columns
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+  - id: chem.analytical.gas-chromatography
+    name: Describing gas chromatography
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.plate-theory-and-resolution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe gas chromatograph components
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp2
+        can_do: Choose a stationary phase
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp3
+        can_do: Use temperature programming
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp4
+        can_do: Choose a detector
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+  - id: chem.analytical.hplc
+    name: Describing high-performance liquid chromatography
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.plate-theory-and-resolution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe liquid chromatograph components
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp2
+        can_do: Compare normal and reversed phase
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp3
+        can_do: Use gradient elution
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+      - id: kp4
+        can_do: Choose a detector
+        key_prerequisites: [chem.analytical.plate-theory-and-resolution]
+  - id: chem.analytical.ion-exchange-and-size-exclusion
+    name: Describing ion-exchange and size-exclusion chromatography
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.hplc
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ion-exchange resins
+        key_prerequisites: [chem.analytical.hplc]
+      - id: kp2
+        can_do: Predict ion-exchange elution order
+        key_prerequisites: [chem.analytical.hplc]
+      - id: kp3
+        can_do: Describe size-exclusion separation
+        key_prerequisites: [chem.analytical.hplc]
+      - id: kp4
+        can_do: Find molar mass by size exclusion
+        key_prerequisites: [chem.analytical.hplc]
+  - id: chem.analytical.capillary-electrophoresis
+    name: Describing capillary electrophoresis
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.chromatography-principles
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain electrophoretic mobility
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp2
+        can_do: Explain electroosmotic flow
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp3
+        can_do: Predict migration order
+        key_prerequisites: [chem.analytical.chromatography-principles]
+      - id: kp4
+        can_do: Compare electrophoresis with chromatography
+        key_prerequisites: [chem.analytical.chromatography-principles]
+  - id: chem.analytical.mass-spectrometer-instrumentation
+    name: Describing ionization methods and mass analyzers
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.mass-spectra-of-elements
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe electron and electrospray ionization
+        key_prerequisites: [chem.hs1.mass-spectra-of-elements]
+      - id: kp2
+        can_do: Describe quadrupole and time-of-flight analyzers
+        key_prerequisites: [chem.hs1.mass-spectra-of-elements]
+      - id: kp3
+        can_do: Explain resolving power
+        key_prerequisites: [chem.hs1.mass-spectra-of-elements]
+      - id: kp4
+        can_do: Choose ionization for a sample
+        key_prerequisites: [chem.hs1.mass-spectra-of-elements]
+  - id: chem.analytical.hyphenated-methods
+    name: Interpreting GC-MS and LC-MS data
+    subject: chem
+    course: chem.analytical
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.analytical.mass-spectrometer-instrumentation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.analytical.gas-chromatography
+        encompassing: 0.25
+        confidence: high
+      - topic: chem.analytical.hplc
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret a GC-MS run
+        key_prerequisites: [chem.analytical.mass-spectrometer-instrumentation, chem.analytical.gas-chromatography]
+      - id: kp2
+        can_do: Interpret an LC-MS run
+        key_prerequisites: [chem.analytical.mass-spectrometer-instrumentation, chem.analytical.hplc]
+      - id: kp3
+        can_do: Identify compounds by library matching
+        key_prerequisites: [chem.analytical.mass-spectrometer-instrumentation]
+      - id: kp4
+        can_do: Quantify with selected ion monitoring
+        key_prerequisites: [chem.analytical.mass-spectrometer-instrumentation]
