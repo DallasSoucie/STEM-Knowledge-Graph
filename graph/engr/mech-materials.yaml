@@ -1,0 +1,1304 @@
+course: engr.mech-materials
+topics:
+  - id: engr.mech-materials.normal-stress
+    name: Finding average normal stress
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.internal-forces-at-a-point
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average normal stress in axial members
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+      - id: kp2
+        can_do: Find stress in members of trusses
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+      - id: kp3
+        can_do: Find stress on inclined planes
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+      - id: kp4
+        can_do: Find required cross-sectional area
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+  - id: engr.mech-materials.shear-and-bearing-stress
+    name: Finding average shear and bearing stress
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.normal-stress
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average shear stress in pins and bolts
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp2
+        can_do: Tell single shear from double shear
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp3
+        can_do: Find bearing stress
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp4
+        can_do: Find punching shear stress
+        key_prerequisites: [engr.mech-materials.normal-stress]
+  - id: engr.mech-materials.allowable-stress-design
+    name: Designing with allowable stress and factors of safety
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.shear-and-bearing-stress
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find factor of safety
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress]
+      - id: kp2
+        can_do: Size members from allowable stress
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress]
+      - id: kp3
+        can_do: Size connections from allowable stress
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress]
+      - id: kp4
+        can_do: Choose the governing failure mode
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress]
+  - id: engr.mech-materials.normal-and-shear-strain
+    name: Finding normal and shear strain
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.normal-stress
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find normal strain from deformation
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp2
+        can_do: Find shear strain from angle change
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp3
+        can_do: Find strain from displacement fields
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp4
+        can_do: Find average strain in members
+        key_prerequisites: [engr.mech-materials.normal-stress]
+  - id: engr.mech-materials.stress-strain-diagrams
+    name: Reading stress-strain diagrams
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.normal-and-shear-strain
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.stress-and-strain
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read yield strength and ultimate strength
+        key_prerequisites: [engr.mech-materials.normal-and-shear-strain, physics.mechanics.stress-and-strain]
+      - id: kp2
+        can_do: Find the offset yield strength
+        key_prerequisites: [engr.mech-materials.normal-and-shear-strain]
+      - id: kp3
+        can_do: Find modulus of elasticity
+        key_prerequisites: [physics.mechanics.stress-and-strain]
+      - id: kp4
+        can_do: Compare ductile and brittle diagrams
+        key_prerequisites: [engr.mech-materials.normal-and-shear-strain]
+  - id: engr.mech-materials.hookes-law-and-poisson
+    name: Using Hooke's law and Poisson's ratio
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.stress-strain-diagrams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Hooke's law for axial stress
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp2
+        can_do: Use Hooke's law for shear stress
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp3
+        can_do: Find lateral strain with Poisson's ratio
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp4
+        can_do: Find dimension changes under load
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+  - id: engr.mech-materials.generalized-hookes-law
+    name: Using the generalized Hooke's law
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.hookes-law-and-poisson
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strains under multiaxial stress
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp2
+        can_do: Find stresses from measured strains
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp3
+        can_do: Find volume change
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp4
+        can_do: Find bulk modulus
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+  - id: engr.mech-materials.strain-energy
+    name: Finding strain energy in axial members
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.stress-strain-diagrams
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strain energy density
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp2
+        can_do: Find modulus of resilience and toughness
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp3
+        can_do: Find strain energy of axial members
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp4
+        can_do: Use energy to find deformation
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+  - id: engr.mech-materials.axial-deformation
+    name: Finding deformation of axially loaded members
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.hookes-law-and-poisson
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find deformation of a uniform member
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp2
+        can_do: Find deformation of stepped members
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp3
+        can_do: Find relative displacement of points
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+      - id: kp4
+        can_do: Find deformation of connected members
+        key_prerequisites: [engr.mech-materials.hookes-law-and-poisson]
+  - id: engr.mech-materials.varying-axial-members
+    name: Finding deformation of members with varying load or area
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find deformation with varying area
+        key_prerequisites: [engr.mech-materials.axial-deformation, math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Find deformation with varying load
+        key_prerequisites: [engr.mech-materials.axial-deformation, math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Find deformation under self-weight
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Find deformation of tapered members
+        key_prerequisites: [engr.mech-materials.axial-deformation, math.calc1.definite-integral-definition]
+  - id: engr.mech-materials.indeterminate-axial-members
+    name: Solving statically indeterminate axial members
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.statics.determinacy-and-constraints
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write compatibility equations
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp2
+        can_do: Solve members fixed at both ends
+        key_prerequisites: [engr.mech-materials.axial-deformation, engr.statics.determinacy-and-constraints]
+      - id: kp3
+        can_do: Solve parallel members
+        key_prerequisites: [engr.mech-materials.axial-deformation, engr.statics.determinacy-and-constraints]
+      - id: kp4
+        can_do: Solve rigid bars on several rods
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+  - id: engr.mech-materials.thermal-stress-axial
+    name: Finding thermal stress in axial members
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.indeterminate-axial-members
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.thermal-stress
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find thermal deformation
+        key_prerequisites: [physics.waves-thermo-optics.thermal-stress]
+      - id: kp2
+        can_do: Find thermal stress in restrained members
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members, physics.waves-thermo-optics.thermal-stress]
+      - id: kp3
+        can_do: Combine thermal and mechanical loads
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members]
+      - id: kp4
+        can_do: Solve thermal problems with gaps
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members, physics.waves-thermo-optics.thermal-stress]
+  - id: engr.mech-materials.stress-concentrations-axial
+    name: Using stress concentration factors
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum stress with concentration factors
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp2
+        can_do: Read concentration factor charts
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp3
+        can_do: Find stress at holes and fillets
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp4
+        can_do: Choose geometry to reduce concentration
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+  - id: engr.mech-materials.inelastic-axial-loading
+    name: Analyzing elastic-plastic axial loading
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.indeterminate-axial-members
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model elastic-perfectly plastic behaviour
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members]
+      - id: kp2
+        can_do: Find plastic load of indeterminate members
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members]
+      - id: kp3
+        can_do: Find residual stresses
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members]
+      - id: kp4
+        can_do: Find permanent deformation after unloading
+        key_prerequisites: [engr.mech-materials.indeterminate-axial-members]
+  - id: engr.mech-materials.torsion-of-circular-shafts
+    name: Finding shear stress in circular shafts
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.shear-and-bearing-stress
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.polar-moment-of-area
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear stress distribution in shafts
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress]
+      - id: kp2
+        can_do: Find maximum shear stress in solid shafts
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress, engr.statics.polar-moment-of-area]
+      - id: kp3
+        can_do: Find shear stress in hollow shafts
+        key_prerequisites: [engr.statics.polar-moment-of-area]
+      - id: kp4
+        can_do: Size shafts for torque
+        key_prerequisites: [engr.mech-materials.shear-and-bearing-stress, engr.statics.polar-moment-of-area]
+  - id: engr.mech-materials.angle-of-twist
+    name: Finding angle of twist
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.torsion-of-circular-shafts
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angle of twist of uniform shafts
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp2
+        can_do: Find twist of stepped shafts
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp3
+        can_do: Find twist of shafts with distributed torque
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp4
+        can_do: Find twist in geared shafts
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+  - id: engr.mech-materials.power-transmission-shafts
+    name: Designing shafts for power transmission
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.torsion-of-circular-shafts
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate power, torque and speed
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp2
+        can_do: Size shafts for transmitted power
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp3
+        can_do: Find stress in shafts at given speed
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp4
+        can_do: Choose shafts for several loads
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+  - id: engr.mech-materials.indeterminate-torsion
+    name: Solving statically indeterminate torsion
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.angle-of-twist
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve shafts fixed at both ends
+        key_prerequisites: [engr.mech-materials.angle-of-twist]
+      - id: kp2
+        can_do: Solve composite shafts
+        key_prerequisites: [engr.mech-materials.angle-of-twist]
+      - id: kp3
+        can_do: Solve coupled shafts
+        key_prerequisites: [engr.mech-materials.angle-of-twist]
+      - id: kp4
+        can_do: Find torques with compatibility
+        key_prerequisites: [engr.mech-materials.angle-of-twist]
+  - id: engr.mech-materials.thin-walled-torsion
+    name: Analyzing torsion of thin-walled tubes
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.torsion-of-circular-shafts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear flow in thin-walled tubes
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp2
+        can_do: Find shear stress in closed sections
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp3
+        can_do: Find twist of thin-walled tubes
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp4
+        can_do: Compare open and closed sections
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+  - id: engr.mech-materials.noncircular-torsion
+    name: Estimating torsion of noncircular shafts
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.torsion-of-circular-shafts
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stress in rectangular shafts
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp2
+        can_do: Find twist in rectangular shafts
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp3
+        can_do: Explain warping of noncircular sections
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+      - id: kp4
+        can_do: Compare noncircular shaft stiffness
+        key_prerequisites: [engr.mech-materials.torsion-of-circular-shafts]
+  - id: engr.mech-materials.flexure-formula
+    name: Finding bending stress with the flexure formula
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.normal-stress
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.statics.shear-moment-diagrams
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.statics.composite-area-moments
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bending stress at a point
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp2
+        can_do: Find maximum bending stress
+        key_prerequisites: [engr.mech-materials.normal-stress, engr.statics.shear-moment-diagrams]
+      - id: kp3
+        can_do: Find section modulus
+        key_prerequisites: [engr.statics.composite-area-moments]
+      - id: kp4
+        can_do: Find stress in beams with given loads
+        key_prerequisites: [engr.mech-materials.normal-stress, engr.statics.shear-moment-diagrams, engr.statics.composite-area-moments]
+  - id: engr.mech-materials.beam-section-design
+    name: Selecting beam sections for bending
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select beam sections from tables
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Size rectangular beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp3
+        can_do: Find allowable loads of beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Compare section efficiency
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+  - id: engr.mech-materials.unsymmetric-bending
+    name: Analyzing unsymmetric bending
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.principal-axes-of-areas
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Resolve moments about principal axes
+        key_prerequisites: [engr.mech-materials.flexure-formula, engr.statics.principal-axes-of-areas]
+      - id: kp2
+        can_do: Find bending stress for unsymmetric sections
+        key_prerequisites: [engr.mech-materials.flexure-formula, engr.statics.principal-axes-of-areas]
+      - id: kp3
+        can_do: Locate the neutral axis
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find stress in angle sections
+        key_prerequisites: [engr.statics.principal-axes-of-areas]
+  - id: engr.mech-materials.composite-beams
+    name: Analyzing composite beams by transformed sections
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform sections of two materials
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Find stress in each material
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp3
+        can_do: Analyze reinforced concrete sections elastically
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Analyze bimetallic beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+  - id: engr.mech-materials.curved-beams
+    name: Analyzing curved beams
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find neutral axis of curved beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Find stress in curved beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp3
+        can_do: Compare curved and straight beam stress
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find stress in hooks and rings
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+  - id: engr.mech-materials.plastic-bending
+    name: Finding plastic moment of beams
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.inelastic-axial-loading
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find yield moment
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Find plastic moment
+        key_prerequisites: [engr.mech-materials.flexure-formula, engr.mech-materials.inelastic-axial-loading]
+      - id: kp3
+        can_do: Find shape factors
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find residual stress after plastic bending
+        key_prerequisites: [engr.mech-materials.inelastic-axial-loading]
+  - id: engr.mech-materials.shear-formula
+    name: Finding shear stress in beams with the shear formula
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find first moment of area
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Find shear stress with the shear formula
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp3
+        can_do: Find maximum shear stress in sections
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find shear stress distribution
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+  - id: engr.mech-materials.shear-flow-built-up
+    name: Finding shear flow in built-up members
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.shear-formula
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear flow in built-up beams
+        key_prerequisites: [engr.mech-materials.shear-formula]
+      - id: kp2
+        can_do: Find nail and bolt spacing
+        key_prerequisites: [engr.mech-materials.shear-formula]
+      - id: kp3
+        can_do: Find shear in glued joints
+        key_prerequisites: [engr.mech-materials.shear-formula]
+      - id: kp4
+        can_do: Design connections in built-up sections
+        key_prerequisites: [engr.mech-materials.shear-formula]
+  - id: engr.mech-materials.shear-flow-thin-walled
+    name: Finding shear flow in thin-walled sections
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.shear-flow-built-up
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear flow in channels
+        key_prerequisites: [engr.mech-materials.shear-flow-built-up]
+      - id: kp2
+        can_do: Find shear flow in I sections
+        key_prerequisites: [engr.mech-materials.shear-flow-built-up]
+      - id: kp3
+        can_do: Find shear flow in box sections
+        key_prerequisites: [engr.mech-materials.shear-flow-built-up]
+      - id: kp4
+        can_do: Draw shear flow distributions
+        key_prerequisites: [engr.mech-materials.shear-flow-built-up]
+  - id: engr.mech-materials.shear-center
+    name: Locating the shear center
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.shear-flow-thin-walled
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Locate shear centre of channels
+        key_prerequisites: [engr.mech-materials.shear-flow-thin-walled]
+      - id: kp2
+        can_do: Locate shear centre of open sections
+        key_prerequisites: [engr.mech-materials.shear-flow-thin-walled]
+      - id: kp3
+        can_do: Explain twisting from eccentric loads
+        key_prerequisites: [engr.mech-materials.shear-flow-thin-walled]
+      - id: kp4
+        can_do: Choose loads to avoid twisting
+        key_prerequisites: [engr.mech-materials.shear-flow-thin-walled]
+  - id: engr.mech-materials.combined-loadings
+    name: Finding stress under combined loadings
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.power-transmission-shafts
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mech-materials.shear-formula
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.mech-materials.axial-deformation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stress from axial load and bending
+        key_prerequisites: [engr.mech-materials.axial-deformation]
+      - id: kp2
+        can_do: Find stress from torsion and bending
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts]
+      - id: kp3
+        can_do: Find stress at points of a loaded post
+        key_prerequisites: [engr.mech-materials.power-transmission-shafts, engr.mech-materials.shear-formula, engr.mech-materials.axial-deformation]
+      - id: kp4
+        can_do: Find stress in eccentrically loaded members
+        key_prerequisites: [engr.mech-materials.shear-formula, engr.mech-materials.axial-deformation]
+  - id: engr.mech-materials.thin-walled-pressure-vessels
+    name: Finding stress in thin-walled pressure vessels
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.normal-stress
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find hoop stress in cylinders
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp2
+        can_do: Find longitudinal stress in cylinders
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp3
+        can_do: Find stress in spherical vessels
+        key_prerequisites: [engr.mech-materials.normal-stress]
+      - id: kp4
+        can_do: Find stress in welded seams
+        key_prerequisites: [engr.mech-materials.normal-stress]
+  - id: engr.mech-materials.plane-stress-transformation
+    name: Transforming plane stress
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.combined-loadings
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform stress with equations
+        key_prerequisites: [engr.mech-materials.combined-loadings]
+      - id: kp2
+        can_do: Find stress on inclined planes
+        key_prerequisites: [engr.mech-materials.combined-loadings]
+      - id: kp3
+        can_do: Find stress at a rotated element
+        key_prerequisites: [engr.mech-materials.combined-loadings]
+      - id: kp4
+        can_do: Check invariants of stress
+        key_prerequisites: [engr.mech-materials.combined-loadings]
+  - id: engr.mech-materials.principal-stresses
+    name: Finding principal stresses and maximum shear
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.plane-stress-transformation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find principal stresses
+        key_prerequisites: [engr.mech-materials.plane-stress-transformation]
+      - id: kp2
+        can_do: Find principal planes
+        key_prerequisites: [engr.mech-materials.plane-stress-transformation]
+      - id: kp3
+        can_do: Find maximum in-plane shear stress
+        key_prerequisites: [engr.mech-materials.plane-stress-transformation]
+      - id: kp4
+        can_do: Find stresses in combined loading problems
+        key_prerequisites: [engr.mech-materials.plane-stress-transformation]
+  - id: engr.mech-materials.mohrs-circle-stress
+    name: Using Mohr's circle for stress
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.principal-stresses
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw Mohr's circle
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp2
+        can_do: Find principal stresses from the circle
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp3
+        can_do: Find stress on rotated planes from the circle
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp4
+        can_do: Solve combined loading with the circle
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+  - id: engr.mech-materials.three-d-mohrs-circle
+    name: Finding absolute maximum shear stress
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.mohrs-circle-stress
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw three circles for 3D stress
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+      - id: kp2
+        can_do: Find absolute maximum shear stress
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+      - id: kp3
+        can_do: Find maximum shear in plane stress states
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+      - id: kp4
+        can_do: Compare in-plane and absolute shear
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+  - id: engr.mech-materials.plane-strain-transformation
+    name: Transforming plane strain
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.mohrs-circle-stress
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.mech-materials.normal-and-shear-strain
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Transform strain with equations
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress, engr.mech-materials.normal-and-shear-strain]
+      - id: kp2
+        can_do: Find principal strains
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+      - id: kp3
+        can_do: Draw Mohr's circle for strain
+        key_prerequisites: [engr.mech-materials.mohrs-circle-stress]
+      - id: kp4
+        can_do: Find maximum shear strain
+        key_prerequisites: [engr.mech-materials.normal-and-shear-strain]
+  - id: engr.mech-materials.strain-rosettes
+    name: Reducing strain rosette data
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.plane-strain-transformation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strains from rectangular rosettes
+        key_prerequisites: [engr.mech-materials.plane-strain-transformation]
+      - id: kp2
+        can_do: Find strains from delta rosettes
+        key_prerequisites: [engr.mech-materials.plane-strain-transformation]
+      - id: kp3
+        can_do: Find principal strains from rosettes
+        key_prerequisites: [engr.mech-materials.plane-strain-transformation]
+      - id: kp4
+        can_do: Find stresses from rosette data
+        key_prerequisites: [engr.mech-materials.plane-strain-transformation]
+  - id: engr.mech-materials.material-property-relations
+    name: Relating elastic constants
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.generalized-hookes-law
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.plane-strain-transformation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate shear modulus to Young's modulus
+        key_prerequisites: [engr.mech-materials.generalized-hookes-law]
+      - id: kp2
+        can_do: Find stresses from principal strains
+        key_prerequisites: [engr.mech-materials.plane-strain-transformation]
+      - id: kp3
+        can_do: Find elastic constants from tests
+        key_prerequisites: [engr.mech-materials.generalized-hookes-law, engr.mech-materials.plane-strain-transformation]
+      - id: kp4
+        can_do: Check property values for consistency
+        key_prerequisites: [engr.mech-materials.generalized-hookes-law]
+  - id: engr.mech-materials.failure-theories-intro
+    name: Applying static failure theories
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.principal-stresses
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply maximum shear stress theory
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp2
+        can_do: Apply maximum distortion energy theory
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp3
+        can_do: Apply maximum normal stress theory
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+      - id: kp4
+        can_do: Find factor of safety by a failure theory
+        key_prerequisites: [engr.mech-materials.principal-stresses]
+  - id: engr.mech-materials.elastic-curve
+    name: Writing the elastic curve equation
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the moment-curvature relation
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Write the elastic curve differential equation
+        key_prerequisites: [engr.mech-materials.flexure-formula, math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Write boundary conditions for beams
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Write continuity conditions
+        key_prerequisites: [math.calc1.ftc-part-2]
+  - id: engr.mech-materials.deflection-by-integration
+    name: Finding beam deflection by integration
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.elastic-curve
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find deflection of cantilevers by integration
+        key_prerequisites: [engr.mech-materials.elastic-curve]
+      - id: kp2
+        can_do: Find deflection of simply supported beams
+        key_prerequisites: [engr.mech-materials.elastic-curve]
+      - id: kp3
+        can_do: Find maximum deflection
+        key_prerequisites: [engr.mech-materials.elastic-curve]
+      - id: kp4
+        can_do: Find slope at supports
+        key_prerequisites: [engr.mech-materials.elastic-curve]
+  - id: engr.mech-materials.discontinuity-functions
+    name: Finding deflection with discontinuity functions
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.deflection-by-integration
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.step-functions-laplace
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write loads with discontinuity functions
+        key_prerequisites: [engr.mech-materials.deflection-by-integration, math.diffeq.step-functions-laplace]
+      - id: kp2
+        can_do: Integrate discontinuity functions
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp3
+        can_do: Find deflection of beams with several loads
+        key_prerequisites: [engr.mech-materials.deflection-by-integration, math.diffeq.step-functions-laplace]
+      - id: kp4
+        can_do: Handle distributed loads ending mid-span
+        key_prerequisites: [math.diffeq.step-functions-laplace]
+  - id: engr.mech-materials.moment-area-method
+    name: Finding deflection by the moment-area method
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.deflection-by-integration
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slope changes by moment-area
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp2
+        can_do: Find deflections by moment-area
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp3
+        can_do: Find maximum deflection by moment-area
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp4
+        can_do: Solve cantilevers by moment-area
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+  - id: engr.mech-materials.deflection-by-superposition
+    name: Finding deflection by superposition
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.deflection-by-integration
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find deflection with tables
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp2
+        can_do: Superpose load cases
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp3
+        can_do: Find deflection of overhangs
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp4
+        can_do: Find deflection at any point
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+  - id: engr.mech-materials.indeterminate-beams
+    name: Solving statically indeterminate beams
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.deflection-by-superposition
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve propped cantilevers
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+      - id: kp2
+        can_do: Solve fixed-fixed beams
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+      - id: kp3
+        can_do: Solve continuous beams by superposition
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+      - id: kp4
+        can_do: Find support reactions of indeterminate beams
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+  - id: engr.mech-materials.euler-buckling
+    name: Finding critical loads of pin-ended columns
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.deflection-by-integration
+        encompassing: 0.45
+        confidence: high
+      - topic: math.diffeq.constant-coefficients-complex
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the critical load of a pin-ended column
+        key_prerequisites: [engr.mech-materials.deflection-by-integration, math.diffeq.constant-coefficients-complex]
+      - id: kp2
+        can_do: Find critical stress
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp3
+        can_do: Find slenderness ratio
+        key_prerequisites: [engr.mech-materials.deflection-by-integration]
+      - id: kp4
+        can_do: Find buckled mode shapes
+        key_prerequisites: [math.diffeq.constant-coefficients-complex]
+  - id: engr.mech-materials.effective-length
+    name: Using effective length for other end conditions
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.euler-buckling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective lengths for end conditions
+        key_prerequisites: [engr.mech-materials.euler-buckling]
+      - id: kp2
+        can_do: Find critical loads for several end conditions
+        key_prerequisites: [engr.mech-materials.euler-buckling]
+      - id: kp3
+        can_do: Find buckling about weak axes
+        key_prerequisites: [engr.mech-materials.euler-buckling]
+      - id: kp4
+        can_do: Compare bracing options
+        key_prerequisites: [engr.mech-materials.euler-buckling]
+  - id: engr.mech-materials.secant-formula
+    name: Using the secant formula for eccentric loads
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.effective-length
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the secant formula
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp2
+        can_do: Find maximum stress in eccentric columns
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp3
+        can_do: Find allowable eccentric loads
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp4
+        can_do: Compare secant and Euler predictions
+        key_prerequisites: [engr.mech-materials.effective-length]
+  - id: engr.mech-materials.column-design
+    name: Designing columns with empirical formulas
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.effective-length
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design columns with empirical formulas
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp2
+        can_do: Choose sections for columns
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp3
+        can_do: Check columns in intermediate range
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp4
+        can_do: Design steel and aluminum columns
+        key_prerequisites: [engr.mech-materials.effective-length]
+  - id: engr.mech-materials.strain-energy-general
+    name: Finding strain energy for bending and torsion
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.strain-energy
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.mech-materials.angle-of-twist
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strain energy of axial members
+        key_prerequisites: [engr.mech-materials.strain-energy]
+      - id: kp2
+        can_do: Find strain energy in torsion
+        key_prerequisites: [engr.mech-materials.angle-of-twist]
+      - id: kp3
+        can_do: Find strain energy in bending
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find total strain energy of a structure
+        key_prerequisites: [engr.mech-materials.strain-energy, engr.mech-materials.angle-of-twist, engr.mech-materials.flexure-formula]
+  - id: engr.mech-materials.impact-loading
+    name: Finding stress under impact loading
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.strain-energy-general
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stress from a falling mass
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp2
+        can_do: Find impact factor
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp3
+        can_do: Find deflection under impact
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp4
+        can_do: Design members for impact
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+  - id: engr.mech-materials.castiglianos-theorem
+    name: Finding deflections with Castigliano's theorem
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.strain-energy-general
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find deflections with Castigliano's theorem
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp2
+        can_do: Find slopes with Castigliano's theorem
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp3
+        can_do: Find deflections of trusses
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp4
+        can_do: Find deflections of curved members
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+  - id: engr.mech-materials.virtual-work-deflection
+    name: Finding deflections with the virtual work method
+    subject: engr
+    course: engr.mech-materials
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.strain-energy-general
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.virtual-work-equilibrium
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find truss deflections by virtual work
+        key_prerequisites: [engr.mech-materials.strain-energy-general, engr.statics.virtual-work-equilibrium]
+      - id: kp2
+        can_do: Find beam deflections by virtual work
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp3
+        can_do: Find slopes by virtual couples
+        key_prerequisites: [engr.mech-materials.strain-energy-general]
+      - id: kp4
+        can_do: Combine virtual work for several loads
+        key_prerequisites: [engr.statics.virtual-work-equilibrium]

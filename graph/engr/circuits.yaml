@@ -1,0 +1,1536 @@
+course: engr.circuits
+topics:
+  - id: engr.circuits.circuit-variables-and-sign-convention
+    name: Using passive sign convention for power
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.kirchhoff-general
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the passive sign convention
+        key_prerequisites: [physics.em.kirchhoff-general]
+      - id: kp2
+        can_do: Find power absorbed or delivered by elements
+        key_prerequisites: [physics.em.kirchhoff-general]
+      - id: kp3
+        can_do: Check power balance in a circuit
+        key_prerequisites: [physics.em.kirchhoff-general]
+      - id: kp4
+        can_do: Use ideal voltage and current sources
+        key_prerequisites: [physics.em.kirchhoff-general]
+  - id: engr.circuits.dependent-sources
+    name: Analyzing circuits with dependent sources
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.circuit-variables-and-sign-convention
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify the four dependent source types
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp2
+        can_do: Write equations with dependent sources
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp3
+        can_do: Find power of dependent sources
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp4
+        can_do: Solve simple circuits with dependent sources
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+  - id: engr.circuits.series-parallel-reduction
+    name: Reducing series-parallel resistor networks
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.circuit-variables-and-sign-convention
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent resistance of series-parallel networks
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp2
+        can_do: Reduce ladder networks
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp3
+        can_do: Find currents by reduction and expansion
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp4
+        can_do: Identify elements in series or parallel
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+  - id: engr.circuits.voltage-and-current-dividers
+    name: Using current dividers and loaded voltage dividers
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.series-parallel-reduction
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.hs2.voltage-dividers
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use current dividers
+        key_prerequisites: [engr.circuits.series-parallel-reduction]
+      - id: kp2
+        can_do: Find loaded voltage divider output
+        key_prerequisites: [engr.circuits.series-parallel-reduction, physics.hs2.voltage-dividers]
+      - id: kp3
+        can_do: Combine dividers in one problem
+        key_prerequisites: [engr.circuits.series-parallel-reduction, physics.hs2.voltage-dividers]
+      - id: kp4
+        can_do: Design dividers for a required output
+        key_prerequisites: [physics.hs2.voltage-dividers]
+  - id: engr.circuits.wye-delta-transformation
+    name: Using wye-delta transformations
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.series-parallel-reduction
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert delta to wye
+        key_prerequisites: [engr.circuits.series-parallel-reduction]
+      - id: kp2
+        can_do: Convert wye to delta
+        key_prerequisites: [engr.circuits.series-parallel-reduction]
+      - id: kp3
+        can_do: Reduce bridge networks
+        key_prerequisites: [engr.circuits.series-parallel-reduction]
+      - id: kp4
+        can_do: Find resistance of balanced networks
+        key_prerequisites: [engr.circuits.series-parallel-reduction]
+  - id: engr.circuits.nodal-analysis
+    name: Analyzing circuits by nodal analysis
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.voltage-and-current-dividers
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose reference and label nodes
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp2
+        can_do: Write node equations
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp3
+        can_do: Solve node equations in matrix form
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Find branch currents from node voltages
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers, math.linalg.gaussian-elimination]
+  - id: engr.circuits.supernodes
+    name: Handling voltage sources with supernodes
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form supernodes around voltage sources
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp2
+        can_do: Write constraint equations
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp3
+        can_do: Solve circuits with grounded voltage sources
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp4
+        can_do: Solve circuits with dependent voltage sources
+        key_prerequisites: [engr.circuits.nodal-analysis]
+  - id: engr.circuits.mesh-analysis
+    name: Analyzing circuits by mesh analysis
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.voltage-and-current-dividers
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mesh currents
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp2
+        can_do: Write mesh equations
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp3
+        can_do: Solve mesh equations in matrix form
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Find element voltages from mesh currents
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers, math.linalg.gaussian-elimination]
+  - id: engr.circuits.supermeshes
+    name: Handling current sources with supermeshes
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.mesh-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form supermeshes around current sources
+        key_prerequisites: [engr.circuits.mesh-analysis]
+      - id: kp2
+        can_do: Handle current sources on outer branches
+        key_prerequisites: [engr.circuits.mesh-analysis]
+      - id: kp3
+        can_do: Write constraint equations for meshes
+        key_prerequisites: [engr.circuits.mesh-analysis]
+      - id: kp4
+        can_do: Solve circuits with dependent current sources
+        key_prerequisites: [engr.circuits.mesh-analysis]
+  - id: engr.circuits.choosing-nodal-or-mesh
+    name: Choosing between nodal and mesh analysis
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.supernodes
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.supermeshes
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count equations for each method
+        key_prerequisites: [engr.circuits.supernodes, engr.circuits.supermeshes]
+      - id: kp2
+        can_do: Choose a method for a circuit
+        key_prerequisites: [engr.circuits.supernodes, engr.circuits.supermeshes]
+      - id: kp3
+        can_do: Solve a circuit both ways
+        key_prerequisites: [engr.circuits.supernodes]
+      - id: kp4
+        can_do: Check results with power balance
+        key_prerequisites: [engr.circuits.supermeshes]
+  - id: engr.circuits.superposition-theorem
+    name: Analyzing circuits by superposition
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.dependent-sources
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find responses to each source
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp2
+        can_do: Turn off independent sources correctly
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp3
+        can_do: Keep dependent sources active
+        key_prerequisites: [engr.circuits.dependent-sources]
+      - id: kp4
+        can_do: Combine responses by superposition
+        key_prerequisites: [engr.circuits.nodal-analysis, engr.circuits.dependent-sources]
+  - id: engr.circuits.source-transformation
+    name: Using source transformations
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.voltage-and-current-dividers
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform voltage sources to current sources
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp2
+        can_do: Simplify circuits with repeated transformations
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp3
+        can_do: Find currents after transformations
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+      - id: kp4
+        can_do: Recognize when transformation helps
+        key_prerequisites: [engr.circuits.voltage-and-current-dividers]
+  - id: engr.circuits.thevenin-equivalent
+    name: Finding Thevenin equivalents
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.source-transformation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find open-circuit voltage
+        key_prerequisites: [engr.circuits.source-transformation]
+      - id: kp2
+        can_do: Find Thevenin resistance by turning off sources
+        key_prerequisites: [engr.circuits.source-transformation, engr.circuits.nodal-analysis]
+      - id: kp3
+        can_do: Find Thevenin equivalents with a test source
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp4
+        can_do: Find load current from a Thevenin equivalent
+        key_prerequisites: [engr.circuits.source-transformation]
+  - id: engr.circuits.norton-equivalent
+    name: Finding Norton equivalents
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find short-circuit current
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp2
+        can_do: Find Norton equivalents
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp3
+        can_do: Convert between Thevenin and Norton
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp4
+        can_do: Choose the easier equivalent
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+  - id: engr.circuits.thevenin-with-dependent-sources
+    name: Finding equivalents with dependent sources
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.dependent-sources
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Thevenin resistance with a test source
+        key_prerequisites: [engr.circuits.thevenin-equivalent, engr.circuits.dependent-sources]
+      - id: kp2
+        can_do: Find equivalents with only dependent sources
+        key_prerequisites: [engr.circuits.dependent-sources]
+      - id: kp3
+        can_do: Find negative equivalent resistance
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp4
+        can_do: Find equivalents of transistor models
+        key_prerequisites: [engr.circuits.thevenin-equivalent, engr.circuits.dependent-sources]
+  - id: engr.circuits.maximum-power-transfer-circuits
+    name: Designing for maximum power transfer
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.power-in-a-resistor-maximum
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the load for maximum power
+        key_prerequisites: [engr.circuits.thevenin-equivalent, physics.em.power-in-a-resistor-maximum]
+      - id: kp2
+        can_do: Find maximum power delivered
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp3
+        can_do: Find efficiency at maximum power
+        key_prerequisites: [physics.em.power-in-a-resistor-maximum]
+      - id: kp4
+        can_do: Choose loads in practical circuits
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+  - id: engr.circuits.ideal-op-amp-model
+    name: Using the ideal op-amp model
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State ideal op-amp rules
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp2
+        can_do: Apply virtual short conditions
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp3
+        can_do: Find output voltage of simple op-amp circuits
+        key_prerequisites: [engr.circuits.nodal-analysis]
+      - id: kp4
+        can_do: Find currents in op-amp circuits
+        key_prerequisites: [engr.circuits.nodal-analysis]
+  - id: engr.circuits.inverting-and-noninverting
+    name: Analyzing inverting and noninverting amplifiers
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ideal-op-amp-model
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of inverting amplifiers
+        key_prerequisites: [engr.circuits.ideal-op-amp-model]
+      - id: kp2
+        can_do: Find gain of noninverting amplifiers
+        key_prerequisites: [engr.circuits.ideal-op-amp-model]
+      - id: kp3
+        can_do: Design amplifiers for a required gain
+        key_prerequisites: [engr.circuits.ideal-op-amp-model]
+      - id: kp4
+        can_do: Analyze voltage followers
+        key_prerequisites: [engr.circuits.ideal-op-amp-model]
+  - id: engr.circuits.summing-and-difference-amps
+    name: Analyzing summing and difference amplifiers
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.inverting-and-noninverting
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze summing amplifiers
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp2
+        can_do: Analyze difference amplifiers
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp3
+        can_do: Design weighted summers
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp4
+        can_do: Find common-mode output
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+  - id: engr.circuits.cascaded-op-amps
+    name: Analyzing cascaded op-amp circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.summing-and-difference-amps
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of cascaded stages
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp2
+        can_do: Analyze multi-op-amp circuits by nodal analysis
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp3
+        can_do: Design cascaded amplifiers
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+      - id: kp4
+        can_do: Find input and output resistance
+        key_prerequisites: [engr.circuits.summing-and-difference-amps]
+  - id: engr.circuits.op-amp-saturation
+    name: Checking op-amp saturation limits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.inverting-and-noninverting
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find output saturation limits
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp2
+        can_do: Find input ranges without saturation
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp3
+        can_do: Predict clipped outputs
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp4
+        can_do: Choose supply voltages
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+  - id: engr.circuits.capacitor-iv-relation
+    name: Using the capacitor current-voltage relation
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.circuit-variables-and-sign-convention
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.capacitor-energy-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find capacitor current from voltage
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention, physics.em.capacitor-energy-integral]
+      - id: kp2
+        can_do: Find capacitor voltage from current
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp3
+        can_do: Find stored energy
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+      - id: kp4
+        can_do: Explain why capacitor voltage is continuous
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+  - id: engr.circuits.inductor-iv-relation
+    name: Using the inductor current-voltage relation
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.circuit-variables-and-sign-convention
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.self-inductance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find inductor voltage from current
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention, physics.em.self-inductance]
+      - id: kp2
+        can_do: Find inductor current from voltage
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+      - id: kp3
+        can_do: Find stored energy
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp4
+        can_do: Explain why inductor current is continuous
+        key_prerequisites: [engr.circuits.circuit-variables-and-sign-convention]
+  - id: engr.circuits.series-parallel-storage
+    name: Combining capacitors and inductors
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.capacitor-iv-relation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.inductor-iv-relation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine capacitors
+        key_prerequisites: [engr.circuits.capacitor-iv-relation]
+      - id: kp2
+        can_do: Combine inductors
+        key_prerequisites: [engr.circuits.inductor-iv-relation]
+      - id: kp3
+        can_do: Find initial charge and current distribution
+        key_prerequisites: [engr.circuits.capacitor-iv-relation, engr.circuits.inductor-iv-relation]
+      - id: kp4
+        can_do: Find equivalent elements in networks
+        key_prerequisites: [engr.circuits.capacitor-iv-relation, engr.circuits.inductor-iv-relation]
+  - id: engr.circuits.op-amp-integrators
+    name: Analyzing op-amp integrators and differentiators
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.capacitor-iv-relation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.inverting-and-noninverting
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze op-amp integrators
+        key_prerequisites: [engr.circuits.capacitor-iv-relation, engr.circuits.inverting-and-noninverting]
+      - id: kp2
+        can_do: Analyze op-amp differentiators
+        key_prerequisites: [engr.circuits.capacitor-iv-relation]
+      - id: kp3
+        can_do: Find outputs for step and ramp inputs
+        key_prerequisites: [engr.circuits.capacitor-iv-relation]
+      - id: kp4
+        can_do: Explain practical integrator problems
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+  - id: engr.circuits.first-order-natural-response
+    name: Finding natural response of RC and RL circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.series-parallel-storage
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.rc-solving-discharging
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural response of RC circuits
+        key_prerequisites: [engr.circuits.series-parallel-storage, physics.em.rc-solving-discharging]
+      - id: kp2
+        can_do: Find natural response of RL circuits
+        key_prerequisites: [engr.circuits.series-parallel-storage]
+      - id: kp3
+        can_do: Find time constants of networks
+        key_prerequisites: [engr.circuits.series-parallel-storage]
+      - id: kp4
+        can_do: Find energy dissipated
+        key_prerequisites: [physics.em.rc-solving-discharging]
+  - id: engr.circuits.first-order-step-response
+    name: Finding step response of first-order circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.first-order-natural-response
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find initial and final values
+        key_prerequisites: [engr.circuits.first-order-natural-response]
+      - id: kp2
+        can_do: Find step response with the general formula
+        key_prerequisites: [engr.circuits.first-order-natural-response, engr.circuits.thevenin-equivalent]
+      - id: kp3
+        can_do: Find responses with Thevenin equivalents
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp4
+        can_do: Find responses of RL circuits to steps
+        key_prerequisites: [engr.circuits.first-order-natural-response]
+  - id: engr.circuits.switched-first-order
+    name: Analyzing sequentially switched first-order circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.first-order-step-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze circuits switched several times
+        key_prerequisites: [engr.circuits.first-order-step-response]
+      - id: kp2
+        can_do: Find responses to pulses
+        key_prerequisites: [engr.circuits.first-order-step-response]
+      - id: kp3
+        can_do: Find responses with op-amps
+        key_prerequisites: [engr.circuits.first-order-step-response]
+      - id: kp4
+        can_do: Sketch switched responses
+        key_prerequisites: [engr.circuits.first-order-step-response]
+  - id: engr.circuits.second-order-circuit-equations
+    name: Writing differential equations for RLC circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.series-parallel-storage
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.rlc-circuits
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write differential equations for series RLC
+        key_prerequisites: [engr.circuits.series-parallel-storage, math.diffeq.rlc-circuits]
+      - id: kp2
+        can_do: Write equations for parallel RLC
+        key_prerequisites: [engr.circuits.series-parallel-storage, math.diffeq.rlc-circuits]
+      - id: kp3
+        can_do: Find initial conditions for second-order circuits
+        key_prerequisites: [engr.circuits.series-parallel-storage]
+      - id: kp4
+        can_do: Find characteristic roots
+        key_prerequisites: [math.diffeq.rlc-circuits]
+  - id: engr.circuits.second-order-natural-response
+    name: Finding natural response of RLC circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.second-order-circuit-equations
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.overdamped-critical
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find overdamped natural response
+        key_prerequisites: [engr.circuits.second-order-circuit-equations, math.diffeq.overdamped-critical]
+      - id: kp2
+        can_do: Find critically damped response
+        key_prerequisites: [engr.circuits.second-order-circuit-equations, math.diffeq.overdamped-critical]
+      - id: kp3
+        can_do: Find underdamped response
+        key_prerequisites: [engr.circuits.second-order-circuit-equations]
+      - id: kp4
+        can_do: Choose damping with component values
+        key_prerequisites: [math.diffeq.overdamped-critical]
+  - id: engr.circuits.second-order-step-response
+    name: Finding step response of RLC circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.second-order-natural-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find step response of series RLC
+        key_prerequisites: [engr.circuits.second-order-natural-response]
+      - id: kp2
+        can_do: Find step response of parallel RLC
+        key_prerequisites: [engr.circuits.second-order-natural-response]
+      - id: kp3
+        can_do: Find overshoot of underdamped circuits
+        key_prerequisites: [engr.circuits.second-order-natural-response]
+      - id: kp4
+        can_do: Find step responses with op-amps
+        key_prerequisites: [engr.circuits.second-order-natural-response]
+  - id: engr.circuits.sinusoid-parameters
+    name: Describing sinusoids by amplitude, frequency and phase
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.first-order-step-response
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.ac-sources-and-phase
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find amplitude, frequency and phase
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+      - id: kp2
+        can_do: Find phase differences
+        key_prerequisites: [engr.circuits.first-order-step-response, physics.em.ac-sources-and-phase]
+      - id: kp3
+        can_do: Add sinusoids of the same frequency
+        key_prerequisites: [engr.circuits.first-order-step-response]
+      - id: kp4
+        can_do: Convert between sine and cosine forms
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+  - id: engr.circuits.phasors-and-impedance
+    name: Transforming circuits with phasors and impedance
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.sinusoid-parameters
+        encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.complex-divide
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert sinusoids to phasors
+        key_prerequisites: [engr.circuits.sinusoid-parameters]
+      - id: kp2
+        can_do: Find impedance of R, L and C
+        key_prerequisites: [engr.circuits.sinusoid-parameters, math.alg2.complex-divide]
+      - id: kp3
+        can_do: Combine impedances
+        key_prerequisites: [math.alg2.complex-divide]
+      - id: kp4
+        can_do: Find admittance
+        key_prerequisites: [math.alg2.complex-divide]
+  - id: engr.circuits.ac-nodal-mesh
+    name: Applying nodal and mesh analysis to phasor circuits
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.phasors-and-impedance
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.circuits.choosing-nodal-or-mesh
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write node equations with phasors
+        key_prerequisites: [engr.circuits.phasors-and-impedance, engr.circuits.choosing-nodal-or-mesh]
+      - id: kp2
+        can_do: Write mesh equations with phasors
+        key_prerequisites: [engr.circuits.phasors-and-impedance, engr.circuits.choosing-nodal-or-mesh]
+      - id: kp3
+        can_do: Solve circuits with dependent sources in AC
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp4
+        can_do: Convert phasor results to time signals
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+  - id: engr.circuits.ac-thevenin
+    name: Finding Thevenin equivalents in the phasor domain
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ac-nodal-mesh
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find Thevenin equivalents in the phasor domain
+        key_prerequisites: [engr.circuits.ac-nodal-mesh, engr.circuits.thevenin-equivalent]
+      - id: kp2
+        can_do: Find Norton equivalents in AC
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp3
+        can_do: Use superposition with different frequencies
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp4
+        can_do: Find load response from equivalents
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+  - id: engr.circuits.ac-op-amp-circuits
+    name: Analyzing op-amp circuits in sinusoidal steady state
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ac-nodal-mesh
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.cascaded-op-amps
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of AC op-amp circuits
+        key_prerequisites: [engr.circuits.ac-nodal-mesh, engr.circuits.cascaded-op-amps]
+      - id: kp2
+        can_do: Find phase shift of op-amp circuits
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp3
+        can_do: Analyze RC op-amp circuits
+        key_prerequisites: [engr.circuits.ac-nodal-mesh, engr.circuits.cascaded-op-amps]
+      - id: kp4
+        can_do: Design phase shifters
+        key_prerequisites: [engr.circuits.cascaded-op-amps]
+  - id: engr.circuits.instantaneous-and-average-power
+    name: Finding instantaneous and average power
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.phasors-and-impedance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find instantaneous power
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp2
+        can_do: Find average power
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp3
+        can_do: Find average power of resistors and reactive elements
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp4
+        can_do: Find power absorbed by impedances
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+  - id: engr.circuits.rms-values
+    name: Finding effective values of waveforms
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.instantaneous-and-average-power
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find RMS of sinusoids
+        key_prerequisites: [engr.circuits.instantaneous-and-average-power]
+      - id: kp2
+        can_do: Find RMS of periodic waveforms
+        key_prerequisites: [engr.circuits.instantaneous-and-average-power]
+      - id: kp3
+        can_do: Find average power with RMS values
+        key_prerequisites: [engr.circuits.instantaneous-and-average-power]
+      - id: kp4
+        can_do: Find RMS of combined waveforms
+        key_prerequisites: [engr.circuits.instantaneous-and-average-power]
+  - id: engr.circuits.complex-power
+    name: Using complex, real and reactive power
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.rms-values
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.ac-power-factor
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find complex power
+        key_prerequisites: [engr.circuits.rms-values, physics.em.ac-power-factor]
+      - id: kp2
+        can_do: Find real and reactive power
+        key_prerequisites: [engr.circuits.rms-values, physics.em.ac-power-factor]
+      - id: kp3
+        can_do: Find power factor
+        key_prerequisites: [physics.em.ac-power-factor]
+      - id: kp4
+        can_do: Draw power triangles
+        key_prerequisites: [engr.circuits.rms-values]
+  - id: engr.circuits.power-factor-correction
+    name: Correcting power factor
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.complex-power
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find capacitance to correct power factor
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp2
+        can_do: Find current reduction from correction
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp3
+        can_do: Find reactive power needed
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp4
+        can_do: Choose correction for loads in parallel
+        key_prerequisites: [engr.circuits.complex-power]
+  - id: engr.circuits.ac-maximum-power-transfer
+    name: Matching loads for maximum average power
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.complex-power
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.ac-thevenin
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the load for maximum average power
+        key_prerequisites: [engr.circuits.complex-power, engr.circuits.ac-thevenin]
+      - id: kp2
+        can_do: Find maximum average power
+        key_prerequisites: [engr.circuits.complex-power, engr.circuits.ac-thevenin]
+      - id: kp3
+        can_do: Find maximum power with resistive loads only
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp4
+        can_do: Match loads with transformers
+        key_prerequisites: [engr.circuits.ac-thevenin]
+  - id: engr.circuits.three-phase-sources
+    name: Describing balanced three-phase sources
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.phasors-and-impedance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe balanced three-phase sources
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp2
+        can_do: Find line and phase voltages
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp3
+        can_do: Find phase sequence
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+      - id: kp4
+        can_do: Draw three-phase phasor diagrams
+        key_prerequisites: [engr.circuits.phasors-and-impedance]
+  - id: engr.circuits.wye-wye-and-delta-loads
+    name: Analyzing balanced wye and delta loads
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.three-phase-sources
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze balanced wye-wye systems
+        key_prerequisites: [engr.circuits.three-phase-sources]
+      - id: kp2
+        can_do: Analyze wye-delta and delta-delta systems
+        key_prerequisites: [engr.circuits.three-phase-sources]
+      - id: kp3
+        can_do: Convert delta loads to wye
+        key_prerequisites: [engr.circuits.three-phase-sources]
+      - id: kp4
+        can_do: Find line and phase currents
+        key_prerequisites: [engr.circuits.three-phase-sources]
+  - id: engr.circuits.three-phase-power
+    name: Finding power in balanced three-phase systems
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.wye-wye-and-delta-loads
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.complex-power
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find total power in balanced systems
+        key_prerequisites: [engr.circuits.wye-wye-and-delta-loads, engr.circuits.complex-power]
+      - id: kp2
+        can_do: Find power factor of three-phase loads
+        key_prerequisites: [engr.circuits.complex-power]
+      - id: kp3
+        can_do: Find line currents from power
+        key_prerequisites: [engr.circuits.wye-wye-and-delta-loads]
+      - id: kp4
+        can_do: Correct three-phase power factor
+        key_prerequisites: [engr.circuits.wye-wye-and-delta-loads, engr.circuits.complex-power]
+  - id: engr.circuits.mutual-inductance-dot-convention
+    name: Using mutual inductance and the dot convention
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.inductor-iv-relation
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: physics.em.mutual-inductance
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the dot convention
+        key_prerequisites: [engr.circuits.inductor-iv-relation]
+      - id: kp2
+        can_do: Find induced voltages with mutual inductance
+        key_prerequisites: [engr.circuits.inductor-iv-relation, physics.em.mutual-inductance]
+      - id: kp3
+        can_do: Write mesh equations with coupled coils
+        key_prerequisites: [engr.circuits.inductor-iv-relation]
+      - id: kp4
+        can_do: Find energy in coupled coils
+        key_prerequisites: [engr.circuits.inductor-iv-relation, physics.em.mutual-inductance]
+  - id: engr.circuits.linear-transformers
+    name: Analyzing linear transformers
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.mutual-inductance-dot-convention
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.ac-nodal-mesh
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze linear transformers
+        key_prerequisites: [engr.circuits.mutual-inductance-dot-convention, engr.circuits.ac-nodal-mesh]
+      - id: kp2
+        can_do: Find reflected impedance
+        key_prerequisites: [engr.circuits.mutual-inductance-dot-convention]
+      - id: kp3
+        can_do: Find coupling coefficient
+        key_prerequisites: [engr.circuits.mutual-inductance-dot-convention]
+      - id: kp4
+        can_do: Find equivalent T circuits
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+  - id: engr.circuits.ideal-transformers
+    name: Analyzing ideal transformers and reflected impedance
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.linear-transformers
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.transformers-derivation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find voltage and current ratios
+        key_prerequisites: [engr.circuits.linear-transformers, physics.em.transformers-derivation]
+      - id: kp2
+        can_do: Find reflected impedance
+        key_prerequisites: [engr.circuits.linear-transformers]
+      - id: kp3
+        can_do: Match loads with ideal transformers
+        key_prerequisites: [engr.circuits.linear-transformers]
+      - id: kp4
+        can_do: Analyze circuits with ideal transformers
+        key_prerequisites: [physics.em.transformers-derivation]
+  - id: engr.circuits.network-transfer-functions
+    name: Finding transfer functions of networks
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ac-op-amp-circuits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find voltage transfer functions
+        key_prerequisites: [engr.circuits.ac-op-amp-circuits]
+      - id: kp2
+        can_do: Find transfer functions of op-amp networks
+        key_prerequisites: [engr.circuits.ac-op-amp-circuits]
+      - id: kp3
+        can_do: Find magnitude and phase of transfer functions
+        key_prerequisites: [engr.circuits.ac-op-amp-circuits]
+      - id: kp4
+        can_do: Find poles and zeros of networks
+        key_prerequisites: [engr.circuits.ac-op-amp-circuits]
+  - id: engr.circuits.decibels-and-log-scales
+    name: Expressing gain in decibels
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.network-transfer-functions
+        encompassing: 0.5
+        confidence: high
+      - topic: math.alg2.log-scales
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert gain to decibels
+        key_prerequisites: [engr.circuits.network-transfer-functions, math.alg2.log-scales]
+      - id: kp2
+        can_do: Add gains in decibels
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp3
+        can_do: Use logarithmic frequency scales
+        key_prerequisites: [math.alg2.log-scales]
+      - id: kp4
+        can_do: Find decibel power ratios
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+  - id: engr.circuits.bode-magnitude
+    name: Sketching Bode magnitude plots
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.decibels-and-log-scales
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch magnitude of constant, pole and zero terms
+        key_prerequisites: [engr.circuits.decibels-and-log-scales]
+      - id: kp2
+        can_do: Sketch magnitude of quadratic terms
+        key_prerequisites: [engr.circuits.decibels-and-log-scales]
+      - id: kp3
+        can_do: Combine terms into a Bode magnitude plot
+        key_prerequisites: [engr.circuits.decibels-and-log-scales]
+      - id: kp4
+        can_do: Find a transfer function from a magnitude plot
+        key_prerequisites: [engr.circuits.decibels-and-log-scales]
+  - id: engr.circuits.bode-phase
+    name: Sketching Bode phase plots
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.bode-magnitude
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch phase of first-order terms
+        key_prerequisites: [engr.circuits.bode-magnitude]
+      - id: kp2
+        can_do: Sketch phase of quadratic terms
+        key_prerequisites: [engr.circuits.bode-magnitude]
+      - id: kp3
+        can_do: Combine terms into a Bode phase plot
+        key_prerequisites: [engr.circuits.bode-magnitude]
+      - id: kp4
+        can_do: Find phase at a frequency
+        key_prerequisites: [engr.circuits.bode-magnitude]
+  - id: engr.circuits.series-and-parallel-resonance
+    name: Analyzing series and parallel resonance
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.network-transfer-functions
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.em.ac-resonance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resonant frequency
+        key_prerequisites: [engr.circuits.network-transfer-functions, physics.em.ac-resonance]
+      - id: kp2
+        can_do: Find current at resonance
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp3
+        can_do: Find voltages at resonance
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp4
+        can_do: Analyze parallel resonance
+        key_prerequisites: [physics.em.ac-resonance]
+  - id: engr.circuits.quality-factor-and-bandwidth
+    name: Finding quality factor and bandwidth
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.series-and-parallel-resonance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find quality factor
+        key_prerequisites: [engr.circuits.series-and-parallel-resonance]
+      - id: kp2
+        can_do: Find bandwidth and half-power frequencies
+        key_prerequisites: [engr.circuits.series-and-parallel-resonance]
+      - id: kp3
+        can_do: Relate quality factor to selectivity
+        key_prerequisites: [engr.circuits.series-and-parallel-resonance]
+      - id: kp4
+        can_do: Design resonant circuits for bandwidth
+        key_prerequisites: [engr.circuits.series-and-parallel-resonance]
+  - id: engr.circuits.passive-filters
+    name: Designing first-order and second-order passive filters
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.bode-phase
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.circuits.quality-factor-and-bandwidth
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design first-order lowpass and highpass filters
+        key_prerequisites: [engr.circuits.bode-phase]
+      - id: kp2
+        can_do: Design bandpass and bandstop filters
+        key_prerequisites: [engr.circuits.bode-phase, engr.circuits.quality-factor-and-bandwidth]
+      - id: kp3
+        can_do: Find cutoff frequencies
+        key_prerequisites: [engr.circuits.bode-phase]
+      - id: kp4
+        can_do: Sketch filter responses
+        key_prerequisites: [engr.circuits.bode-phase, engr.circuits.quality-factor-and-bandwidth]
+  - id: engr.circuits.active-filters
+    name: Designing active filters
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.passive-filters
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.circuits.ac-op-amp-circuits
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Design first-order active filters
+        key_prerequisites: [engr.circuits.passive-filters]
+      - id: kp2
+        can_do: Design second-order active filters
+        key_prerequisites: [engr.circuits.passive-filters, engr.circuits.ac-op-amp-circuits]
+      - id: kp3
+        can_do: Scale filters in frequency and magnitude
+        key_prerequisites: [engr.circuits.passive-filters]
+      - id: kp4
+        can_do: Cascade filters
+        key_prerequisites: [engr.circuits.ac-op-amp-circuits]
+  - id: engr.circuits.s-domain-elements
+    name: Modelling circuit elements in the s-domain
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.second-order-step-response
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.laplace-of-derivatives
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform resistors, inductors and capacitors
+        key_prerequisites: [math.diffeq.laplace-of-derivatives]
+      - id: kp2
+        can_do: Include initial conditions in s-domain models
+        key_prerequisites: [engr.circuits.second-order-step-response, math.diffeq.laplace-of-derivatives]
+      - id: kp3
+        can_do: Draw s-domain circuits
+        key_prerequisites: [engr.circuits.second-order-step-response]
+      - id: kp4
+        can_do: Find impedance in the s-domain
+        key_prerequisites: [engr.circuits.second-order-step-response]
+  - id: engr.circuits.s-domain-analysis
+    name: Analyzing circuits in the s-domain
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.s-domain-elements
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.ac-nodal-mesh
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write node equations in the s-domain
+        key_prerequisites: [engr.circuits.s-domain-elements, engr.circuits.ac-nodal-mesh]
+      - id: kp2
+        can_do: Find transient responses by inverse transforms
+        key_prerequisites: [engr.circuits.s-domain-elements]
+      - id: kp3
+        can_do: Find responses with initial conditions
+        key_prerequisites: [engr.circuits.s-domain-elements]
+      - id: kp4
+        can_do: Analyze op-amp circuits in the s-domain
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+  - id: engr.circuits.poles-zeros-circuits
+    name: Relating poles and zeros to circuit response
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.s-domain-analysis
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.network-transfer-functions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find poles and zeros of circuits
+        key_prerequisites: [engr.circuits.s-domain-analysis, engr.circuits.network-transfer-functions]
+      - id: kp2
+        can_do: Relate pole locations to response type
+        key_prerequisites: [engr.circuits.s-domain-analysis]
+      - id: kp3
+        can_do: Check stability from poles
+        key_prerequisites: [engr.circuits.s-domain-analysis]
+      - id: kp4
+        can_do: Relate poles to natural frequencies
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+  - id: engr.circuits.impulse-and-step-response-s
+    name: Finding impulse and step responses with transfer functions
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.poles-zeros-circuits
+        encompassing: 0.6
+        confidence: high
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impulse responses from transfer functions
+        key_prerequisites: [engr.circuits.poles-zeros-circuits, math.diffeq.impulse-delta]
+      - id: kp2
+        can_do: Find step responses from transfer functions
+        key_prerequisites: [engr.circuits.poles-zeros-circuits]
+      - id: kp3
+        can_do: Find responses to general inputs by convolution
+        key_prerequisites: [engr.circuits.poles-zeros-circuits, math.diffeq.impulse-delta]
+      - id: kp4
+        can_do: Find final values
+        key_prerequisites: [engr.circuits.poles-zeros-circuits]
+  - id: engr.circuits.two-port-parameters
+    name: Finding impedance and admittance parameters
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.ac-nodal-mesh
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impedance parameters
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp2
+        can_do: Find admittance parameters
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp3
+        can_do: Convert between parameter sets
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+      - id: kp4
+        can_do: Find parameters of networks with dependent sources
+        key_prerequisites: [engr.circuits.ac-nodal-mesh]
+  - id: engr.circuits.hybrid-and-transmission-parameters
+    name: Finding hybrid and transmission parameters
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.two-port-parameters
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find hybrid parameters
+        key_prerequisites: [engr.circuits.two-port-parameters]
+      - id: kp2
+        can_do: Find transmission parameters
+        key_prerequisites: [engr.circuits.two-port-parameters]
+      - id: kp3
+        can_do: Use parameters to find gains
+        key_prerequisites: [engr.circuits.two-port-parameters]
+      - id: kp4
+        can_do: Model transistors with hybrid parameters
+        key_prerequisites: [engr.circuits.two-port-parameters]
+  - id: engr.circuits.interconnected-two-ports
+    name: Interconnecting two-port networks
+    subject: engr
+    course: engr.circuits
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.hybrid-and-transmission-parameters
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Cascade two-ports
+        key_prerequisites: [engr.circuits.hybrid-and-transmission-parameters]
+      - id: kp2
+        can_do: Connect two-ports in series and parallel
+        key_prerequisites: [engr.circuits.hybrid-and-transmission-parameters]
+      - id: kp3
+        can_do: Find overall parameters
+        key_prerequisites: [engr.circuits.hybrid-and-transmission-parameters]
+      - id: kp4
+        can_do: Analyze terminated two-ports
+        key_prerequisites: [engr.circuits.hybrid-and-transmission-parameters]

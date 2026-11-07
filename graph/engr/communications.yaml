@@ -1,0 +1,977 @@
+course: engr.communications
+topics:
+  - id: engr.communications.bandpass-signals
+    name: Representing bandpass signals with complex envelopes
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.modulation-property
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.signals.parseval-and-bandwidth
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent bandpass signals with in-phase and quadrature parts
+        key_prerequisites: [engr.signals.modulation-property]
+      - id: kp2
+        can_do: Find complex envelopes
+        key_prerequisites: [engr.signals.modulation-property, engr.signals.parseval-and-bandwidth]
+      - id: kp3
+        can_do: Find bandwidth of bandpass signals
+        key_prerequisites: [engr.signals.parseval-and-bandwidth]
+      - id: kp4
+        can_do: Find spectra of bandpass signals
+        key_prerequisites: [engr.signals.modulation-property, engr.signals.parseval-and-bandwidth]
+  - id: engr.communications.random-processes
+    name: Describing random processes
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.probstat.joint-pdf
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.signals.ct-fourier-transform
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe random processes
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp2
+        can_do: Find mean and autocorrelation
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp3
+        can_do: Test wide-sense stationarity
+        key_prerequisites: [math.probstat.joint-pdf]
+      - id: kp4
+        can_do: Find ergodic averages
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+  - id: engr.communications.power-spectral-density
+    name: Finding power spectral density
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.random-processes
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.signals.parseval-and-bandwidth
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find power spectral density from autocorrelation
+        key_prerequisites: [engr.communications.random-processes]
+      - id: kp2
+        can_do: Find PSD of random signals
+        key_prerequisites: [engr.communications.random-processes, engr.signals.parseval-and-bandwidth]
+      - id: kp3
+        can_do: Find power from PSD
+        key_prerequisites: [engr.signals.parseval-and-bandwidth]
+      - id: kp4
+        can_do: Find PSD of digital signals
+        key_prerequisites: [engr.communications.random-processes]
+  - id: engr.communications.noise-through-lti-systems
+    name: Finding noise output of LTI systems
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.power-spectral-density
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find output PSD of filters
+        key_prerequisites: [engr.communications.power-spectral-density]
+      - id: kp2
+        can_do: Find output noise power
+        key_prerequisites: [engr.communications.power-spectral-density]
+      - id: kp3
+        can_do: Find noise equivalent bandwidth
+        key_prerequisites: [engr.communications.power-spectral-density]
+      - id: kp4
+        can_do: Find signal-to-noise ratio at outputs
+        key_prerequisites: [engr.communications.power-spectral-density]
+  - id: engr.communications.thermal-noise-and-noise-figure
+    name: Using thermal noise and noise figure
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.noise-through-lti-systems
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find thermal noise power
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp2
+        can_do: Find noise figure of amplifiers
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp3
+        can_do: Find noise figure of cascades
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp4
+        can_do: Find system noise temperature
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+  - id: engr.communications.dsb-sc-modulation
+    name: Analyzing double-sideband suppressed-carrier modulation
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.bandpass-signals
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find DSB-SC spectra
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp2
+        can_do: Demodulate DSB-SC coherently
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp3
+        can_do: Find effects of phase error
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp4
+        can_do: Describe DSB-SC modulators
+        key_prerequisites: [engr.communications.bandpass-signals]
+  - id: engr.communications.conventional-am
+    name: Analyzing conventional AM and envelope detection
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.dsb-sc-modulation
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find AM modulation index
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp2
+        can_do: Find AM spectra and power
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp3
+        can_do: Demodulate AM with envelope detectors
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp4
+        can_do: Find efficiency of AM
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+  - id: engr.communications.ssb-and-vsb
+    name: Analyzing single-sideband and vestigial-sideband modulation
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.dsb-sc-modulation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find SSB spectra
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp2
+        can_do: Generate SSB with filters
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp3
+        can_do: Generate SSB with the phasing method
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp4
+        can_do: Describe VSB
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+  - id: engr.communications.superheterodyne-receivers
+    name: Analyzing superheterodyne receivers
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.conventional-am
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe superheterodyne receivers
+        key_prerequisites: [engr.communications.conventional-am]
+      - id: kp2
+        can_do: Find intermediate frequency
+        key_prerequisites: [engr.communications.conventional-am]
+      - id: kp3
+        can_do: Find image frequencies
+        key_prerequisites: [engr.communications.conventional-am]
+      - id: kp4
+        can_do: Choose local oscillator frequencies
+        key_prerequisites: [engr.communications.conventional-am]
+  - id: engr.communications.frequency-division-multiplexing
+    name: Using frequency-division multiplexing
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.dsb-sc-modulation
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design FDM systems
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp2
+        can_do: Find guard bands
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp3
+        can_do: Find total bandwidth
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+      - id: kp4
+        can_do: Describe FDM hierarchies
+        key_prerequisites: [engr.communications.dsb-sc-modulation]
+  - id: engr.communications.fm-and-pm
+    name: Describing frequency and phase modulation
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.bandpass-signals
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write FM and PM signals
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp2
+        can_do: Find frequency deviation
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp3
+        can_do: Find modulation index
+        key_prerequisites: [engr.communications.bandpass-signals]
+      - id: kp4
+        can_do: Compare FM and PM
+        key_prerequisites: [engr.communications.bandpass-signals]
+  - id: engr.communications.fm-bandwidth
+    name: Finding FM bandwidth with Carson's rule
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.fm-and-pm
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Carson's rule
+        key_prerequisites: [engr.communications.fm-and-pm]
+      - id: kp2
+        can_do: Find narrowband FM spectra
+        key_prerequisites: [engr.communications.fm-and-pm]
+      - id: kp3
+        can_do: Find wideband FM bandwidth
+        key_prerequisites: [engr.communications.fm-and-pm]
+      - id: kp4
+        can_do: Find spectra of tone-modulated FM
+        key_prerequisites: [engr.communications.fm-and-pm]
+  - id: engr.communications.fm-generation-and-detection
+    name: Describing FM generation and detection
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.fm-bandwidth
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe direct and indirect FM generation
+        key_prerequisites: [engr.communications.fm-bandwidth]
+      - id: kp2
+        can_do: Describe frequency discriminators
+        key_prerequisites: [engr.communications.fm-bandwidth]
+      - id: kp3
+        can_do: Describe FM receivers
+        key_prerequisites: [engr.communications.fm-bandwidth]
+      - id: kp4
+        can_do: Describe preemphasis and deemphasis
+        key_prerequisites: [engr.communications.fm-bandwidth]
+  - id: engr.communications.phase-locked-loops
+    name: Analyzing phase-locked loops
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.fm-generation-and-detection
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.signals.system-functions-laplace
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe phase-locked loops
+        key_prerequisites: [engr.communications.fm-generation-and-detection]
+      - id: kp2
+        can_do: Find PLL loop transfer functions
+        key_prerequisites: [engr.communications.fm-generation-and-detection, engr.signals.system-functions-laplace]
+      - id: kp3
+        can_do: Find lock range
+        key_prerequisites: [engr.communications.fm-generation-and-detection]
+      - id: kp4
+        can_do: Use PLLs for demodulation
+        key_prerequisites: [engr.signals.system-functions-laplace]
+  - id: engr.communications.snr-in-am
+    name: Finding signal-to-noise ratio in AM systems
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.conventional-am
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.communications.noise-through-lti-systems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find SNR of DSB-SC systems
+        key_prerequisites: [engr.communications.conventional-am, engr.communications.noise-through-lti-systems]
+      - id: kp2
+        can_do: Find SNR of AM systems
+        key_prerequisites: [engr.communications.conventional-am]
+      - id: kp3
+        can_do: Find threshold effects in AM
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp4
+        can_do: Compare AM systems by noise
+        key_prerequisites: [engr.communications.conventional-am, engr.communications.noise-through-lti-systems]
+  - id: engr.communications.snr-in-fm
+    name: Finding signal-to-noise ratio in FM systems
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.fm-bandwidth
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.communications.noise-through-lti-systems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find SNR of FM systems
+        key_prerequisites: [engr.communications.fm-bandwidth, engr.communications.noise-through-lti-systems]
+      - id: kp2
+        can_do: Find FM improvement factor
+        key_prerequisites: [engr.communications.fm-bandwidth]
+      - id: kp3
+        can_do: Find FM threshold
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp4
+        can_do: Compare FM and AM noise
+        key_prerequisites: [engr.communications.fm-bandwidth, engr.communications.noise-through-lti-systems]
+  - id: engr.communications.pulse-code-modulation
+    name: Analyzing pulse-code modulation
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.quantization
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.signals.sampling-theorem
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe PCM systems
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp2
+        can_do: Find PCM bit rate
+        key_prerequisites: [engr.signals.quantization, engr.signals.sampling-theorem]
+      - id: kp3
+        can_do: Find PCM bandwidth
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp4
+        can_do: Find quantization SNR
+        key_prerequisites: [engr.signals.sampling-theorem]
+  - id: engr.communications.companding
+    name: Using nonuniform quantization and companding
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.pulse-code-modulation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use mu-law and A-law companding
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp2
+        can_do: Find SNR with companding
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp3
+        can_do: Explain benefits of companding
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp4
+        can_do: Compare uniform and nonuniform quantization
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+  - id: engr.communications.delta-modulation
+    name: Analyzing delta modulation
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.pulse-code-modulation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe delta modulation
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp2
+        can_do: Find slope overload
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp3
+        can_do: Find granular noise
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp4
+        can_do: Describe adaptive delta modulation
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+  - id: engr.communications.time-division-multiplexing
+    name: Using time-division multiplexing
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.pulse-code-modulation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design TDM systems
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp2
+        can_do: Find TDM bit rates
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp3
+        can_do: Describe frame synchronization
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp4
+        can_do: Describe digital hierarchies
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+  - id: engr.communications.line-codes
+    name: Comparing line codes and their spectra
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.pulse-code-modulation
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.communications.power-spectral-density
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare unipolar, polar and bipolar codes
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp2
+        can_do: Find spectra of line codes
+        key_prerequisites: [engr.communications.power-spectral-density]
+      - id: kp3
+        can_do: Describe Manchester coding
+        key_prerequisites: [engr.communications.pulse-code-modulation]
+      - id: kp4
+        can_do: Choose line codes
+        key_prerequisites: [engr.communications.pulse-code-modulation, engr.communications.power-spectral-density]
+  - id: engr.communications.intersymbol-interference
+    name: Explaining intersymbol interference and the Nyquist criterion
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.line-codes
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain intersymbol interference
+        key_prerequisites: [engr.communications.line-codes]
+      - id: kp2
+        can_do: State the Nyquist criterion
+        key_prerequisites: [engr.communications.line-codes]
+      - id: kp3
+        can_do: Find minimum bandwidth for a symbol rate
+        key_prerequisites: [engr.communications.line-codes]
+      - id: kp4
+        can_do: Find ISI from channel response
+        key_prerequisites: [engr.communications.line-codes]
+  - id: engr.communications.pulse-shaping
+    name: Designing raised-cosine pulse shaping
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.intersymbol-interference
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design raised-cosine pulses
+        key_prerequisites: [engr.communications.intersymbol-interference]
+      - id: kp2
+        can_do: Find bandwidth with roll-off
+        key_prerequisites: [engr.communications.intersymbol-interference]
+      - id: kp3
+        can_do: Design root-raised-cosine filters
+        key_prerequisites: [engr.communications.intersymbol-interference]
+      - id: kp4
+        can_do: Trade bandwidth and ISI
+        key_prerequisites: [engr.communications.intersymbol-interference]
+  - id: engr.communications.eye-diagrams
+    name: Reading eye diagrams
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.pulse-shaping
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read eye diagrams
+        key_prerequisites: [engr.communications.pulse-shaping]
+      - id: kp2
+        can_do: Find timing margin
+        key_prerequisites: [engr.communications.pulse-shaping]
+      - id: kp3
+        can_do: Find noise margin
+        key_prerequisites: [engr.communications.pulse-shaping]
+      - id: kp4
+        can_do: Diagnose ISI from eye diagrams
+        key_prerequisites: [engr.communications.pulse-shaping]
+  - id: engr.communications.matched-filters
+    name: Designing matched filters
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.noise-through-lti-systems
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.communications.line-codes
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive matched filters
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp2
+        can_do: Find matched filter output SNR
+        key_prerequisites: [engr.communications.noise-through-lti-systems]
+      - id: kp3
+        can_do: Implement correlation receivers
+        key_prerequisites: [engr.communications.noise-through-lti-systems, engr.communications.line-codes]
+      - id: kp4
+        can_do: Find matched filter for pulses
+        key_prerequisites: [engr.communications.line-codes]
+  - id: engr.communications.binary-error-probability
+    name: Finding bit error probability for binary signalling
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.matched-filters
+        encompassing: 0.7
+        confidence: high
+      - topic: math.probstat.normal-tables
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bit error probability for polar signalling
+        key_prerequisites: [engr.communications.matched-filters, math.probstat.normal-tables]
+      - id: kp2
+        can_do: Find error probability for unipolar signalling
+        key_prerequisites: [engr.communications.matched-filters]
+      - id: kp3
+        can_do: Use the Q function
+        key_prerequisites: [math.probstat.normal-tables]
+      - id: kp4
+        can_do: Relate error probability to Eb/N0
+        key_prerequisites: [engr.communications.matched-filters]
+  - id: engr.communications.signal-space
+    name: Representing signals in signal space
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.matched-filters
+        encompassing: 0.65
+        confidence: high
+      - topic: math.linalg.gram-schmidt
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent signals as vectors
+        key_prerequisites: [engr.communications.matched-filters, math.linalg.gram-schmidt]
+      - id: kp2
+        can_do: Find basis functions
+        key_prerequisites: [math.linalg.gram-schmidt]
+      - id: kp3
+        can_do: Draw signal constellations
+        key_prerequisites: [engr.communications.matched-filters]
+      - id: kp4
+        can_do: Find distances between signals
+        key_prerequisites: [engr.communications.matched-filters]
+  - id: engr.communications.ask-fsk-psk
+    name: Analyzing ASK, FSK and PSK
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.signal-space
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.communications.binary-error-probability
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ASK, FSK and PSK
+        key_prerequisites: [engr.communications.signal-space]
+      - id: kp2
+        can_do: Find error probability of BPSK
+        key_prerequisites: [engr.communications.signal-space, engr.communications.binary-error-probability]
+      - id: kp3
+        can_do: Find error probability of FSK
+        key_prerequisites: [engr.communications.signal-space, engr.communications.binary-error-probability]
+      - id: kp4
+        can_do: Find bandwidth of binary schemes
+        key_prerequisites: [engr.communications.signal-space]
+  - id: engr.communications.qam-and-mpsk
+    name: Analyzing M-ary PSK and QAM
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.ask-fsk-psk
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe M-ary PSK
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp2
+        can_do: Describe QAM constellations
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp3
+        can_do: Find symbol error probability
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp4
+        can_do: Relate bit and symbol error rates
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+  - id: engr.communications.bandwidth-efficiency
+    name: Comparing power and bandwidth efficiency
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.qam-and-mpsk
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spectral efficiency
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+      - id: kp2
+        can_do: Compare schemes by power and bandwidth
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+      - id: kp3
+        can_do: Use the bandwidth-efficiency plane
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+      - id: kp4
+        can_do: Choose modulation schemes
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+  - id: engr.communications.noncoherent-detection
+    name: Analyzing noncoherent detection
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.ask-fsk-psk
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe noncoherent FSK detection
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp2
+        can_do: Describe differential PSK
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp3
+        can_do: Find noncoherent error probability
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+      - id: kp4
+        can_do: Compare coherent and noncoherent detection
+        key_prerequisites: [engr.communications.ask-fsk-psk]
+  - id: engr.communications.ofdm-basics
+    name: Explaining OFDM
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.qam-and-mpsk
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.dtft-properties
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe OFDM subcarriers
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+      - id: kp2
+        can_do: Explain cyclic prefix
+        key_prerequisites: [engr.signals.dtft-properties]
+      - id: kp3
+        can_do: Find OFDM bandwidth
+        key_prerequisites: [engr.communications.qam-and-mpsk, engr.signals.dtft-properties]
+      - id: kp4
+        can_do: Explain OFDM resistance to multipath
+        key_prerequisites: [engr.communications.qam-and-mpsk]
+  - id: engr.communications.entropy-and-information
+    name: Finding entropy of information sources
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.probstat.expectation-discrete
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find information content of symbols
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp2
+        can_do: Find source entropy
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp3
+        can_do: Find entropy of extended sources
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp4
+        can_do: Find information rate
+        key_prerequisites: [math.probstat.expectation-discrete]
+  - id: engr.communications.source-coding
+    name: Designing Huffman and other source codes
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.entropy-and-information
+        encompassing: 0.7
+        confidence: high
+      - topic: math.discrete.huffman-codes
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design Huffman codes for sources
+        key_prerequisites: [engr.communications.entropy-and-information, math.discrete.huffman-codes]
+      - id: kp2
+        can_do: Find average code length
+        key_prerequisites: [engr.communications.entropy-and-information]
+      - id: kp3
+        can_do: Find coding efficiency
+        key_prerequisites: [engr.communications.entropy-and-information]
+      - id: kp4
+        can_do: Describe Lempel-Ziv coding
+        key_prerequisites: [math.discrete.huffman-codes]
+  - id: engr.communications.channel-capacity
+    name: Using channel capacity and the Shannon limit
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.entropy-and-information
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.communications.binary-error-probability
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find capacity of binary symmetric channels
+        key_prerequisites: [engr.communications.entropy-and-information]
+      - id: kp2
+        can_do: Use the Shannon-Hartley theorem
+        key_prerequisites: [engr.communications.entropy-and-information, engr.communications.binary-error-probability]
+      - id: kp3
+        can_do: Find limits on bandwidth and power
+        key_prerequisites: [engr.communications.binary-error-probability]
+      - id: kp4
+        can_do: Explain the Shannon limit
+        key_prerequisites: [engr.communications.entropy-and-information, engr.communications.binary-error-probability]
+  - id: engr.communications.block-codes
+    name: Encoding and decoding linear block codes
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.channel-capacity
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.matrix-times-vector
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Encode with generator matrices
+        key_prerequisites: [engr.communications.channel-capacity, math.linalg.matrix-times-vector]
+      - id: kp2
+        can_do: Find syndromes
+        key_prerequisites: [math.linalg.matrix-times-vector]
+      - id: kp3
+        can_do: Correct errors with syndrome decoding
+        key_prerequisites: [engr.communications.channel-capacity, math.linalg.matrix-times-vector]
+      - id: kp4
+        can_do: Find minimum distance
+        key_prerequisites: [engr.communications.channel-capacity]
+  - id: engr.communications.cyclic-codes-and-crc
+    name: Using cyclic codes and CRC
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.block-codes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode cyclic codes with polynomials
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp2
+        can_do: Find CRC remainders
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp3
+        can_do: Detect errors with CRC
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp4
+        can_do: Describe BCH and Reed-Solomon codes
+        key_prerequisites: [engr.communications.block-codes]
+  - id: engr.communications.convolutional-codes
+    name: Decoding convolutional codes with Viterbi
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.block-codes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode convolutional codes
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp2
+        can_do: Draw trellis diagrams
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp3
+        can_do: Decode with the Viterbi algorithm
+        key_prerequisites: [engr.communications.block-codes]
+      - id: kp4
+        can_do: Find coding gain
+        key_prerequisites: [engr.communications.block-codes]
+  - id: engr.communications.multiple-access
+    name: Comparing FDMA, TDMA and CDMA
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.time-division-multiplexing
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.communications.frequency-division-multiplexing
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare FDMA and TDMA
+        key_prerequisites: [engr.communications.time-division-multiplexing, engr.communications.frequency-division-multiplexing]
+      - id: kp2
+        can_do: Describe CDMA
+        key_prerequisites: [engr.communications.time-division-multiplexing]
+      - id: kp3
+        can_do: Describe random access
+        key_prerequisites: [engr.communications.frequency-division-multiplexing]
+      - id: kp4
+        can_do: Choose access methods
+        key_prerequisites: [engr.communications.time-division-multiplexing, engr.communications.frequency-division-multiplexing]
+  - id: engr.communications.link-budgets
+    name: Computing communication link budgets
+    subject: engr
+    course: engr.communications
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.communications.thermal-noise-and-noise-figure
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.em-fields.friis-link-budget
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find received SNR from link budgets
+        key_prerequisites: [engr.communications.thermal-noise-and-noise-figure, engr.em-fields.friis-link-budget]
+      - id: kp2
+        can_do: Find required transmit power
+        key_prerequisites: [engr.communications.thermal-noise-and-noise-figure]
+      - id: kp3
+        can_do: Find link margin
+        key_prerequisites: [engr.em-fields.friis-link-budget]
+      - id: kp4
+        can_do: Find range of a link
+        key_prerequisites: [engr.communications.thermal-noise-and-noise-figure, engr.em-fields.friis-link-budget]

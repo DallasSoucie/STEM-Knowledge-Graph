@@ -1,0 +1,665 @@
+course: engr.process-control
+topics:
+  - id: engr.process-control.process-dynamic-models
+    name: Deriving dynamic models of tanks and heaters
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.transient-energy-balances
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.controls.thermal-and-fluid-models
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write dynamic models of liquid tanks
+        key_prerequisites: [engr.mass-energy-balances.transient-energy-balances, engr.controls.thermal-and-fluid-models]
+      - id: kp2
+        can_do: Write dynamic models of stirred heaters
+        key_prerequisites: [engr.mass-energy-balances.transient-energy-balances, engr.controls.thermal-and-fluid-models]
+      - id: kp3
+        can_do: Write dynamic models of mixing tanks
+        key_prerequisites: [engr.mass-energy-balances.transient-energy-balances]
+      - id: kp4
+        can_do: Find steady states of process models
+        key_prerequisites: [engr.controls.thermal-and-fluid-models]
+  - id: engr.process-control.process-transfer-functions
+    name: Finding transfer functions of process models
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.process-dynamic-models
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.controls.linearization-for-control
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write models in deviation variables
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+      - id: kp2
+        can_do: Find transfer functions of process models
+        key_prerequisites: [engr.process-control.process-dynamic-models, engr.controls.linearization-for-control]
+      - id: kp3
+        can_do: Find process gain and time constant
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+      - id: kp4
+        can_do: Linearize nonlinear process models
+        key_prerequisites: [engr.controls.linearization-for-control]
+  - id: engr.process-control.first-order-processes
+    name: Analyzing first-order processes
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.process-transfer-functions
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.controls.first-order-system-response
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find step response of first-order processes
+        key_prerequisites: [engr.process-control.process-transfer-functions, engr.controls.first-order-system-response]
+      - id: kp2
+        can_do: Find gain and time constant from steps
+        key_prerequisites: [engr.process-control.process-transfer-functions]
+      - id: kp3
+        can_do: Find response to ramps and pulses
+        key_prerequisites: [engr.controls.first-order-system-response]
+      - id: kp4
+        can_do: Find response of first-order processes in series
+        key_prerequisites: [engr.process-control.process-transfer-functions]
+  - id: engr.process-control.integrating-processes
+    name: Analyzing integrating processes
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.first-order-processes
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model integrating processes
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp2
+        can_do: Find response of liquid level to flow changes
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp3
+        can_do: Explain why level needs control
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp4
+        can_do: Find ramp responses
+        key_prerequisites: [engr.process-control.first-order-processes]
+  - id: engr.process-control.interacting-tanks
+    name: Analyzing interacting and noninteracting tanks
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.first-order-processes
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model noninteracting tanks
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp2
+        can_do: Model interacting tanks
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp3
+        can_do: Compare responses of tank systems
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp4
+        can_do: Find overall time constants
+        key_prerequisites: [engr.process-control.first-order-processes]
+  - id: engr.process-control.dead-time-and-pade
+    name: Approximating dead time
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.first-order-processes
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.controls.time-delay-systems
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model transport delay
+        key_prerequisites: [engr.process-control.first-order-processes]
+      - id: kp2
+        can_do: Use Pade approximations
+        key_prerequisites: [engr.controls.time-delay-systems]
+      - id: kp3
+        can_do: Find effect of dead time on response
+        key_prerequisites: [engr.process-control.first-order-processes, engr.controls.time-delay-systems]
+      - id: kp4
+        can_do: Find dead time in pipes
+        key_prerequisites: [engr.process-control.first-order-processes]
+  - id: engr.process-control.inverse-response
+    name: Analyzing inverse response
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.interacting-tanks
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model inverse response
+        key_prerequisites: [engr.process-control.interacting-tanks]
+      - id: kp2
+        can_do: Find right-half-plane zeros
+        key_prerequisites: [engr.process-control.interacting-tanks]
+      - id: kp3
+        can_do: Explain control difficulties of inverse response
+        key_prerequisites: [engr.process-control.interacting-tanks]
+      - id: kp4
+        can_do: Find inverse response in boilers
+        key_prerequisites: [engr.process-control.interacting-tanks]
+  - id: engr.process-control.fopdt-identification
+    name: Fitting first-order-plus-dead-time models to step tests
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.dead-time-and-pade
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit FOPDT models to step tests
+        key_prerequisites: [engr.process-control.dead-time-and-pade]
+      - id: kp2
+        can_do: Use tangent and two-point methods
+        key_prerequisites: [engr.process-control.dead-time-and-pade]
+      - id: kp3
+        can_do: Find model parameters from data
+        key_prerequisites: [engr.process-control.dead-time-and-pade]
+      - id: kp4
+        can_do: Judge model quality
+        key_prerequisites: [engr.process-control.dead-time-and-pade]
+  - id: engr.process-control.sensors-and-transmitters
+    name: Describing process sensors and transmitters
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.process-dynamic-models
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe process sensors
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+      - id: kp2
+        can_do: Find transmitter gain
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+      - id: kp3
+        can_do: Find sensor dynamics
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+      - id: kp4
+        can_do: Choose sensors for variables
+        key_prerequisites: [engr.process-control.process-dynamic-models]
+  - id: engr.process-control.control-valves
+    name: Sizing control valves and choosing characteristics
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.sensors-and-transmitters
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.fluids.minor-losses
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Size control valves
+        key_prerequisites: [engr.process-control.sensors-and-transmitters, engr.fluids.minor-losses]
+      - id: kp2
+        can_do: Choose valve characteristics
+        key_prerequisites: [engr.process-control.sensors-and-transmitters]
+      - id: kp3
+        can_do: Find installed valve characteristics
+        key_prerequisites: [engr.process-control.sensors-and-transmitters, engr.fluids.minor-losses]
+      - id: kp4
+        can_do: Choose fail-open or fail-closed valves
+        key_prerequisites: [engr.process-control.sensors-and-transmitters]
+  - id: engr.process-control.piping-and-instrumentation-diagrams
+    name: Reading piping and instrumentation diagrams
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.sensors-and-transmitters
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.mass-energy-balances.process-flowsheets
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Read P&ID symbols
+        key_prerequisites: [engr.process-control.sensors-and-transmitters]
+      - id: kp2
+        can_do: Identify control loops on diagrams
+        key_prerequisites: [engr.process-control.sensors-and-transmitters, engr.mass-energy-balances.process-flowsheets]
+      - id: kp3
+        can_do: Draw simple control schemes
+        key_prerequisites: [engr.process-control.sensors-and-transmitters]
+      - id: kp4
+        can_do: Read instrument tags
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+  - id: engr.process-control.closed-loop-process-response
+    name: Finding closed-loop responses of process loops
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.fopdt-identification
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.controls.pid-controller-actions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find closed-loop transfer functions of process loops
+        key_prerequisites: [engr.process-control.fopdt-identification, engr.controls.pid-controller-actions]
+      - id: kp2
+        can_do: Find closed-loop response to setpoint changes
+        key_prerequisites: [engr.process-control.fopdt-identification]
+      - id: kp3
+        can_do: Find offset with proportional control
+        key_prerequisites: [engr.controls.pid-controller-actions]
+      - id: kp4
+        can_do: Find effect of integral action
+        key_prerequisites: [engr.process-control.fopdt-identification, engr.controls.pid-controller-actions]
+  - id: engr.process-control.direct-and-reverse-action
+    name: Choosing controller action
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.closed-loop-process-response
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.process-control.control-valves
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose controller direct or reverse action
+        key_prerequisites: [engr.process-control.closed-loop-process-response, engr.process-control.control-valves]
+      - id: kp2
+        can_do: Relate valve failure to controller action
+        key_prerequisites: [engr.process-control.control-valves]
+      - id: kp3
+        can_do: Check loop signs
+        key_prerequisites: [engr.process-control.closed-loop-process-response]
+      - id: kp4
+        can_do: Fix sign errors in loops
+        key_prerequisites: [engr.process-control.closed-loop-process-response, engr.process-control.control-valves]
+  - id: engr.process-control.pid-tuning-correlations
+    name: Tuning PID controllers with IMC and other correlations
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.closed-loop-process-response
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.controls.pid-tuning-rules
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tune controllers with IMC correlations
+        key_prerequisites: [engr.process-control.closed-loop-process-response]
+      - id: kp2
+        can_do: Tune controllers with Cohen-Coon
+        key_prerequisites: [engr.process-control.closed-loop-process-response]
+      - id: kp3
+        can_do: Tune controllers with ITAE
+        key_prerequisites: [engr.process-control.closed-loop-process-response, engr.controls.pid-tuning-rules]
+      - id: kp4
+        can_do: Adjust tuning for robustness
+        key_prerequisites: [engr.controls.pid-tuning-rules]
+  - id: engr.process-control.direct-synthesis
+    name: Designing controllers by direct synthesis
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design controllers by direct synthesis
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp2
+        can_do: Choose desired closed-loop response
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp3
+        can_do: Find PID equivalents of synthesized controllers
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp4
+        can_do: Handle dead time in direct synthesis
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+  - id: engr.process-control.frequency-response-process-tuning
+    name: Tuning process controllers with frequency response
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.controls.gain-and-phase-margins
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain and phase margins of process loops
+        key_prerequisites: [engr.process-control.pid-tuning-correlations, engr.controls.gain-and-phase-margins]
+      - id: kp2
+        can_do: Tune controllers for margin specifications
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp3
+        can_do: Find ultimate gain and period
+        key_prerequisites: [engr.process-control.pid-tuning-correlations, engr.controls.gain-and-phase-margins]
+      - id: kp4
+        can_do: Use frequency response for robustness
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+  - id: engr.process-control.cascade-control
+    name: Designing cascade control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design cascade control
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp2
+        can_do: Tune inner and outer loops
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp3
+        can_do: Find benefits of cascade control
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp4
+        can_do: Choose secondary variables
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+  - id: engr.process-control.feedforward-process-control
+    name: Designing feedforward control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.controls.feedforward-control
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design feedforward controllers from models
+        key_prerequisites: [engr.process-control.pid-tuning-correlations, engr.controls.feedforward-control]
+      - id: kp2
+        can_do: Combine feedforward with feedback
+        key_prerequisites: [engr.controls.feedforward-control]
+      - id: kp3
+        can_do: Find static feedforward gain
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp4
+        can_do: Add dynamic compensation
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+  - id: engr.process-control.ratio-control
+    name: Designing ratio control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.feedforward-process-control
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design ratio control
+        key_prerequisites: [engr.process-control.feedforward-process-control]
+      - id: kp2
+        can_do: Choose ratio control configurations
+        key_prerequisites: [engr.process-control.feedforward-process-control]
+      - id: kp3
+        can_do: Find ratio station settings
+        key_prerequisites: [engr.process-control.feedforward-process-control]
+      - id: kp4
+        can_do: Use ratio control for blending
+        key_prerequisites: [engr.process-control.feedforward-process-control]
+  - id: engr.process-control.override-and-split-range
+    name: Designing override and split-range control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.cascade-control
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design override control
+        key_prerequisites: [engr.process-control.cascade-control]
+      - id: kp2
+        can_do: Design selective control
+        key_prerequisites: [engr.process-control.cascade-control]
+      - id: kp3
+        can_do: Design split-range control
+        key_prerequisites: [engr.process-control.cascade-control]
+      - id: kp4
+        can_do: Prevent windup in override schemes
+        key_prerequisites: [engr.process-control.cascade-control]
+  - id: engr.process-control.smith-predictor
+    name: Compensating dead time with a Smith predictor
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: engr.process-control.dead-time-and-pade
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Design a Smith predictor
+        key_prerequisites: [engr.process-control.pid-tuning-correlations, engr.process-control.dead-time-and-pade]
+      - id: kp2
+        can_do: Find closed-loop response with predictor
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp3
+        can_do: Find effect of model error
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp4
+        can_do: Compare with PID for dead time
+        key_prerequisites: [engr.process-control.dead-time-and-pade]
+  - id: engr.process-control.multiloop-interaction
+    name: Analyzing loop interaction with the relative gain array
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.pid-tuning-correlations
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the relative gain array
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp2
+        can_do: Pair variables with the relative gain array
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp3
+        can_do: Find loop interaction effects
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+      - id: kp4
+        can_do: Choose control structures
+        key_prerequisites: [engr.process-control.pid-tuning-correlations]
+  - id: engr.process-control.decoupling-control
+    name: Designing decoupling control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.multiloop-interaction
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design static decouplers
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp2
+        can_do: Design dynamic decouplers
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp3
+        can_do: Find decoupled responses
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp4
+        can_do: Explain limits of decoupling
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+  - id: engr.process-control.model-predictive-control-intro
+    name: Explaining model predictive control
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.multiloop-interaction
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe model predictive control
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp2
+        can_do: Describe prediction and control horizons
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp3
+        can_do: Describe constraints in MPC
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp4
+        can_do: Compare MPC with PID
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+  - id: engr.process-control.plantwide-control
+    name: Choosing controlled and manipulated variables plantwide
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.multiloop-interaction
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.process-control.piping-and-instrumentation-diagrams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose controlled and manipulated variables
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp2
+        can_do: Design control for recycle processes
+        key_prerequisites: [engr.process-control.multiloop-interaction]
+      - id: kp3
+        can_do: Design inventory control
+        key_prerequisites: [engr.process-control.multiloop-interaction, engr.process-control.piping-and-instrumentation-diagrams]
+      - id: kp4
+        can_do: Design product quality control
+        key_prerequisites: [engr.process-control.piping-and-instrumentation-diagrams]
+  - id: engr.process-control.safety-instrumented-systems
+    name: Describing alarms, interlocks and safety systems
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.piping-and-instrumentation-diagrams
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe alarms
+        key_prerequisites: [engr.process-control.piping-and-instrumentation-diagrams]
+      - id: kp2
+        can_do: Describe interlocks
+        key_prerequisites: [engr.process-control.piping-and-instrumentation-diagrams]
+      - id: kp3
+        can_do: Describe safety instrumented functions
+        key_prerequisites: [engr.process-control.piping-and-instrumentation-diagrams]
+      - id: kp4
+        can_do: Describe layers of protection
+        key_prerequisites: [engr.process-control.piping-and-instrumentation-diagrams]
+  - id: engr.process-control.batch-and-discrete-control
+    name: Writing logic for batch sequences
+    subject: engr
+    course: engr.process-control
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-control.safety-instrumented-systems
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write sequential logic for batches
+        key_prerequisites: [engr.process-control.safety-instrumented-systems]
+      - id: kp2
+        can_do: Write ladder logic
+        key_prerequisites: [engr.process-control.safety-instrumented-systems]
+      - id: kp3
+        can_do: Describe programmable logic controllers
+        key_prerequisites: [engr.process-control.safety-instrumented-systems]
+      - id: kp4
+        can_do: Describe batch control standards
+        key_prerequisites: [engr.process-control.safety-instrumented-systems]

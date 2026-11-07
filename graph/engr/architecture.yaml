@@ -1,0 +1,940 @@
+course: engr.architecture
+topics:
+  - id: engr.architecture.performance-metrics
+    name: Comparing performance with CPI and execution time
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming.timing-programs
+        encompassing: 0.45
+        confidence: medium
+      - topic: engr.digital-logic.alu-design
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find execution time from CPI and clock rate
+        key_prerequisites: [engr.programming.timing-programs, engr.digital-logic.alu-design]
+      - id: kp2
+        can_do: Find average CPI
+        key_prerequisites: [engr.digital-logic.alu-design]
+      - id: kp3
+        can_do: Compare performance of machines
+        key_prerequisites: [engr.programming.timing-programs]
+      - id: kp4
+        can_do: Use benchmarks
+        key_prerequisites: [engr.programming.timing-programs]
+  - id: engr.architecture.amdahls-law
+    name: Using Amdahl's law
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.performance-metrics
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Amdahl's law
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp2
+        can_do: Find speedup from improvements
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp3
+        can_do: Find limits of parallel speedup
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp4
+        can_do: Choose what to optimize
+        key_prerequisites: [engr.architecture.performance-metrics]
+  - id: engr.architecture.instruction-set-concepts
+    name: Describing instruction set architectures
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.performance-metrics
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe instruction set architectures
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp2
+        can_do: Compare RISC and CISC
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp3
+        can_do: Describe registers and memory
+        key_prerequisites: [engr.architecture.performance-metrics]
+      - id: kp4
+        can_do: Describe instruction formats
+        key_prerequisites: [engr.architecture.performance-metrics]
+  - id: engr.architecture.assembly-arithmetic
+    name: Writing arithmetic in assembly language
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.instruction-set-concepts
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.twos-complement
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write arithmetic in assembly
+        key_prerequisites: [engr.architecture.instruction-set-concepts, engr.digital-logic.twos-complement]
+      - id: kp2
+        can_do: Use immediate operands
+        key_prerequisites: [engr.architecture.instruction-set-concepts]
+      - id: kp3
+        can_do: Write logical and shift instructions
+        key_prerequisites: [engr.digital-logic.twos-complement]
+      - id: kp4
+        can_do: Translate expressions to assembly
+        key_prerequisites: [engr.architecture.instruction-set-concepts]
+  - id: engr.architecture.assembly-memory-access
+    name: Loading and storing memory in assembly
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.assembly-arithmetic
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.programming.lists-basics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Load and store words
+        key_prerequisites: [engr.architecture.assembly-arithmetic]
+      - id: kp2
+        can_do: Access arrays in assembly
+        key_prerequisites: [engr.architecture.assembly-arithmetic, engr.programming.lists-basics]
+      - id: kp3
+        can_do: Compute addresses
+        key_prerequisites: [engr.architecture.assembly-arithmetic]
+      - id: kp4
+        can_do: Use byte and halfword access
+        key_prerequisites: [engr.programming.lists-basics]
+  - id: engr.architecture.assembly-control-flow
+    name: Writing branches and loops in assembly
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.assembly-memory-access
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.programming.while-loops
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write branches in assembly
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+      - id: kp2
+        can_do: Write loops in assembly
+        key_prerequisites: [engr.architecture.assembly-memory-access, engr.programming.while-loops]
+      - id: kp3
+        can_do: Translate if-else to assembly
+        key_prerequisites: [engr.programming.while-loops]
+      - id: kp4
+        can_do: Translate switch statements
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+  - id: engr.architecture.procedure-calls-and-stack
+    name: Writing procedure calls with the stack
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.assembly-control-flow
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.programming.call-stack
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Call procedures with jump and link
+        key_prerequisites: [engr.architecture.assembly-control-flow]
+      - id: kp2
+        can_do: Save registers on the stack
+        key_prerequisites: [engr.architecture.assembly-control-flow, engr.programming.call-stack]
+      - id: kp3
+        can_do: Pass arguments and return values
+        key_prerequisites: [engr.architecture.assembly-control-flow]
+      - id: kp4
+        can_do: Write recursive procedures in assembly
+        key_prerequisites: [engr.programming.call-stack]
+  - id: engr.architecture.instruction-encoding
+    name: Encoding instructions in machine code
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.assembly-arithmetic
+        encompassing: 0.75
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.binary-and-hex-codes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Encode instructions in binary
+        key_prerequisites: [engr.architecture.assembly-arithmetic]
+      - id: kp2
+        can_do: Decode machine instructions
+        key_prerequisites: [engr.architecture.assembly-arithmetic, engr.digital-logic.binary-and-hex-codes]
+      - id: kp3
+        can_do: Encode immediates and offsets
+        key_prerequisites: [engr.architecture.assembly-arithmetic]
+      - id: kp4
+        can_do: Encode branch targets
+        key_prerequisites: [engr.digital-logic.binary-and-hex-codes]
+  - id: engr.architecture.addressing-modes
+    name: Using addressing modes
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.assembly-memory-access
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use register and immediate addressing
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+      - id: kp2
+        can_do: Use base and offset addressing
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+      - id: kp3
+        can_do: Use PC-relative addressing
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+      - id: kp4
+        can_do: Compare addressing modes
+        key_prerequisites: [engr.architecture.assembly-memory-access]
+  - id: engr.architecture.compilation-and-linking
+    name: Tracing compilation, assembly, linking and loading
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.procedure-calls-and-stack
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace compilation stages
+        key_prerequisites: [engr.architecture.procedure-calls-and-stack]
+      - id: kp2
+        can_do: Describe assemblers and linkers
+        key_prerequisites: [engr.architecture.procedure-calls-and-stack]
+      - id: kp3
+        can_do: Resolve symbols in linking
+        key_prerequisites: [engr.architecture.procedure-calls-and-stack]
+      - id: kp4
+        can_do: Describe loading programs
+        key_prerequisites: [engr.architecture.procedure-calls-and-stack]
+  - id: engr.architecture.floating-point-hardware
+    name: Representing IEEE floating-point numbers
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.fixed-point-numbers
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.architecture.assembly-arithmetic
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode IEEE floating-point numbers
+        key_prerequisites: [engr.digital-logic.fixed-point-numbers]
+      - id: kp2
+        can_do: Find floating-point range and precision
+        key_prerequisites: [engr.digital-logic.fixed-point-numbers]
+      - id: kp3
+        can_do: Add floating-point numbers by hand
+        key_prerequisites: [engr.digital-logic.fixed-point-numbers, engr.architecture.assembly-arithmetic]
+      - id: kp4
+        can_do: Handle rounding and special values
+        key_prerequisites: [engr.architecture.assembly-arithmetic]
+  - id: engr.architecture.datapath-elements
+    name: Describing datapath elements
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.datapath-and-controller
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.architecture.instruction-encoding
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe register files
+        key_prerequisites: [engr.digital-logic.datapath-and-controller]
+      - id: kp2
+        can_do: Describe ALUs and memories in datapaths
+        key_prerequisites: [engr.digital-logic.datapath-and-controller, engr.architecture.instruction-encoding]
+      - id: kp3
+        can_do: Use multiplexers in datapaths
+        key_prerequisites: [engr.digital-logic.datapath-and-controller]
+      - id: kp4
+        can_do: Describe sign extension
+        key_prerequisites: [engr.architecture.instruction-encoding]
+  - id: engr.architecture.single-cycle-datapath
+    name: Building a single-cycle datapath
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.datapath-elements
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build datapaths for R-type instructions
+        key_prerequisites: [engr.architecture.datapath-elements]
+      - id: kp2
+        can_do: Add loads and stores
+        key_prerequisites: [engr.architecture.datapath-elements]
+      - id: kp3
+        can_do: Add branches and jumps
+        key_prerequisites: [engr.architecture.datapath-elements]
+      - id: kp4
+        can_do: Find the critical path
+        key_prerequisites: [engr.architecture.datapath-elements]
+  - id: engr.architecture.control-unit-design
+    name: Designing the control unit
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.single-cycle-datapath
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design main control signals
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp2
+        can_do: Design ALU control
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp3
+        can_do: Build control truth tables
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp4
+        can_do: Trace control for instructions
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+  - id: engr.architecture.multicycle-processor
+    name: Designing a multicycle processor
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.control-unit-design
+        encompassing: 0.85
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.fsm-design
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Split instructions into steps
+        key_prerequisites: [engr.architecture.control-unit-design]
+      - id: kp2
+        can_do: Design multicycle control as a state machine
+        key_prerequisites: [engr.architecture.control-unit-design, engr.digital-logic.fsm-design]
+      - id: kp3
+        can_do: Find CPI of multicycle processors
+        key_prerequisites: [engr.architecture.control-unit-design]
+      - id: kp4
+        can_do: Compare single-cycle and multicycle
+        key_prerequisites: [engr.architecture.control-unit-design]
+  - id: engr.architecture.pipelined-datapath
+    name: Building a pipelined datapath
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.single-cycle-datapath
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Divide the datapath into stages
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp2
+        can_do: Add pipeline registers
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp3
+        can_do: Trace instructions through stages
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+      - id: kp4
+        can_do: Find ideal pipeline speedup
+        key_prerequisites: [engr.architecture.single-cycle-datapath]
+  - id: engr.architecture.data-hazards-and-forwarding
+    name: Resolving data hazards with forwarding
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.pipelined-datapath
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify data hazards
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp2
+        can_do: Design forwarding paths
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp3
+        can_do: Find forwarding conditions
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp4
+        can_do: Trace forwarding
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+  - id: engr.architecture.load-use-stalls
+    name: Inserting stalls for load-use hazards
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.data-hazards-and-forwarding
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect load-use hazards
+        key_prerequisites: [engr.architecture.data-hazards-and-forwarding]
+      - id: kp2
+        can_do: Insert stalls
+        key_prerequisites: [engr.architecture.data-hazards-and-forwarding]
+      - id: kp3
+        can_do: Reorder code to avoid stalls
+        key_prerequisites: [engr.architecture.data-hazards-and-forwarding]
+      - id: kp4
+        can_do: Find stall cycles
+        key_prerequisites: [engr.architecture.data-hazards-and-forwarding]
+  - id: engr.architecture.control-hazards
+    name: Handling control hazards
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.pipelined-datapath
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify control hazards
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp2
+        can_do: Flush pipelines on branches
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp3
+        can_do: Move branch resolution earlier
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+      - id: kp4
+        can_do: Use delayed branches
+        key_prerequisites: [engr.architecture.pipelined-datapath]
+  - id: engr.architecture.branch-prediction
+    name: Predicting branches
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.control-hazards
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use static prediction
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp2
+        can_do: Use one-bit and two-bit predictors
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp3
+        can_do: Find misprediction penalty
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp4
+        can_do: Describe branch target buffers
+        key_prerequisites: [engr.architecture.control-hazards]
+  - id: engr.architecture.exceptions-and-interrupts-hw
+    name: Handling exceptions and interrupts in hardware
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.control-hazards
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe exceptions and interrupts
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp2
+        can_do: Handle exceptions in pipelines
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp3
+        can_do: Save state on exceptions
+        key_prerequisites: [engr.architecture.control-hazards]
+      - id: kp4
+        can_do: Describe precise exceptions
+        key_prerequisites: [engr.architecture.control-hazards]
+  - id: engr.architecture.pipeline-performance
+    name: Finding CPI of pipelined processors
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.load-use-stalls
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.architecture.branch-prediction
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find CPI with hazards
+        key_prerequisites: [engr.architecture.load-use-stalls, engr.architecture.branch-prediction]
+      - id: kp2
+        can_do: Find speedup of pipelines
+        key_prerequisites: [engr.architecture.load-use-stalls]
+      - id: kp3
+        can_do: Find effect of branch prediction
+        key_prerequisites: [engr.architecture.branch-prediction]
+      - id: kp4
+        can_do: Compare pipeline depths
+        key_prerequisites: [engr.architecture.load-use-stalls]
+  - id: engr.architecture.memory-technologies
+    name: Comparing SRAM, DRAM and flash
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.memory-arrays
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare SRAM and DRAM
+        key_prerequisites: [engr.digital-logic.memory-arrays]
+      - id: kp2
+        can_do: Describe flash memory
+        key_prerequisites: [engr.digital-logic.memory-arrays]
+      - id: kp3
+        can_do: Find memory access times
+        key_prerequisites: [engr.digital-logic.memory-arrays]
+      - id: kp4
+        can_do: Describe memory hierarchy levels
+        key_prerequisites: [engr.digital-logic.memory-arrays]
+  - id: engr.architecture.locality
+    name: Explaining temporal and spatial locality
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.memory-technologies
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify temporal locality
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp2
+        can_do: Identify spatial locality
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp3
+        can_do: Find locality in loops
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp4
+        can_do: Explain hierarchy benefits
+        key_prerequisites: [engr.architecture.memory-technologies]
+  - id: engr.architecture.direct-mapped-caches
+    name: Analyzing direct-mapped caches
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.locality
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split addresses into tag, index and offset
+        key_prerequisites: [engr.architecture.locality]
+      - id: kp2
+        can_do: Trace accesses in direct-mapped caches
+        key_prerequisites: [engr.architecture.locality]
+      - id: kp3
+        can_do: Find hit rates
+        key_prerequisites: [engr.architecture.locality]
+      - id: kp4
+        can_do: Find cache size overhead
+        key_prerequisites: [engr.architecture.locality]
+  - id: engr.architecture.set-associative-caches
+    name: Analyzing set-associative caches
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.direct-mapped-caches
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace accesses in set-associative caches
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp2
+        can_do: Use LRU replacement
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp3
+        can_do: Compare associativity
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp4
+        can_do: Find conflict misses
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+  - id: engr.architecture.cache-write-policies
+    name: Comparing cache write policies
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.direct-mapped-caches
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare write-through and write-back
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp2
+        can_do: Compare write-allocate policies
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp3
+        can_do: Use write buffers
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+      - id: kp4
+        can_do: Find write traffic
+        key_prerequisites: [engr.architecture.direct-mapped-caches]
+  - id: engr.architecture.cache-performance
+    name: Finding average memory access time
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.set-associative-caches
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.architecture.pipeline-performance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average memory access time
+        key_prerequisites: [engr.architecture.set-associative-caches]
+      - id: kp2
+        can_do: Find CPI with cache misses
+        key_prerequisites: [engr.architecture.set-associative-caches, engr.architecture.pipeline-performance]
+      - id: kp3
+        can_do: Classify misses
+        key_prerequisites: [engr.architecture.set-associative-caches]
+      - id: kp4
+        can_do: Find effect of block size
+        key_prerequisites: [engr.architecture.pipeline-performance]
+  - id: engr.architecture.multilevel-caches
+    name: Analyzing multilevel caches
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.cache-performance
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find AMAT with two levels
+        key_prerequisites: [engr.architecture.cache-performance]
+      - id: kp2
+        can_do: Find local and global miss rates
+        key_prerequisites: [engr.architecture.cache-performance]
+      - id: kp3
+        can_do: Design multilevel hierarchies
+        key_prerequisites: [engr.architecture.cache-performance]
+      - id: kp4
+        can_do: Find effect of inclusion
+        key_prerequisites: [engr.architecture.cache-performance]
+  - id: engr.architecture.cache-aware-programming
+    name: Writing cache-friendly code
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.cache-performance
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.programming.nested-lists
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Reorder loops for locality
+        key_prerequisites: [engr.architecture.cache-performance, engr.programming.nested-lists]
+      - id: kp2
+        can_do: Block computations for caches
+        key_prerequisites: [engr.architecture.cache-performance]
+      - id: kp3
+        can_do: Find miss counts of loops
+        key_prerequisites: [engr.architecture.cache-performance]
+      - id: kp4
+        can_do: Choose data layouts
+        key_prerequisites: [engr.programming.nested-lists]
+  - id: engr.architecture.virtual-memory-hw
+    name: Translating addresses with page tables
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.set-associative-caches
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Translate addresses with page tables
+        key_prerequisites: [engr.architecture.set-associative-caches]
+      - id: kp2
+        can_do: Find page table size
+        key_prerequisites: [engr.architecture.set-associative-caches]
+      - id: kp3
+        can_do: Handle page faults
+        key_prerequisites: [engr.architecture.set-associative-caches]
+      - id: kp4
+        can_do: Describe memory protection
+        key_prerequisites: [engr.architecture.set-associative-caches]
+  - id: engr.architecture.tlbs
+    name: Speeding translation with TLBs
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.virtual-memory-hw
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use TLBs for translation
+        key_prerequisites: [engr.architecture.virtual-memory-hw]
+      - id: kp2
+        can_do: Find effective access time with TLBs
+        key_prerequisites: [engr.architecture.virtual-memory-hw]
+      - id: kp3
+        can_do: Combine TLBs and caches
+        key_prerequisites: [engr.architecture.virtual-memory-hw]
+      - id: kp4
+        can_do: Handle TLB misses
+        key_prerequisites: [engr.architecture.virtual-memory-hw]
+  - id: engr.architecture.io-and-buses
+    name: Describing buses and memory-mapped I/O
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.exceptions-and-interrupts-hw
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe buses
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp2
+        can_do: Use memory-mapped I/O
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp3
+        can_do: Compare polling and interrupts
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+      - id: kp4
+        can_do: Find bus bandwidth
+        key_prerequisites: [engr.architecture.exceptions-and-interrupts-hw]
+  - id: engr.architecture.dma
+    name: Using direct memory access
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.io-and-buses
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe direct memory access
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp2
+        can_do: Compare DMA and programmed I/O
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp3
+        can_do: Find CPU savings from DMA
+        key_prerequisites: [engr.architecture.io-and-buses]
+      - id: kp4
+        can_do: Describe cache coherence with DMA
+        key_prerequisites: [engr.architecture.io-and-buses]
+  - id: engr.architecture.storage-devices
+    name: Comparing disks and solid-state storage
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.memory-technologies
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find disk access time
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp2
+        can_do: Compare disks and solid-state drives
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp3
+        can_do: Describe RAID basics
+        key_prerequisites: [engr.architecture.memory-technologies]
+      - id: kp4
+        can_do: Find storage throughput
+        key_prerequisites: [engr.architecture.memory-technologies]
+  - id: engr.architecture.instruction-level-parallelism
+    name: Describing superscalar and out-of-order execution
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.pipeline-performance
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe superscalar execution
+        key_prerequisites: [engr.architecture.pipeline-performance]
+      - id: kp2
+        can_do: Describe out-of-order execution
+        key_prerequisites: [engr.architecture.pipeline-performance]
+      - id: kp3
+        can_do: Describe register renaming
+        key_prerequisites: [engr.architecture.pipeline-performance]
+      - id: kp4
+        can_do: Find limits of ILP
+        key_prerequisites: [engr.architecture.pipeline-performance]
+  - id: engr.architecture.simd-and-vector
+    name: Describing SIMD and vector processing
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.instruction-level-parallelism
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe SIMD instructions
+        key_prerequisites: [engr.architecture.instruction-level-parallelism]
+      - id: kp2
+        can_do: Describe vector processors
+        key_prerequisites: [engr.architecture.instruction-level-parallelism]
+      - id: kp3
+        can_do: Vectorize loops
+        key_prerequisites: [engr.architecture.instruction-level-parallelism]
+      - id: kp4
+        can_do: Find SIMD speedup
+        key_prerequisites: [engr.architecture.instruction-level-parallelism]
+  - id: engr.architecture.multicore-and-coherence
+    name: Explaining multicore cache coherence
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.multilevel-caches
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe multicore processors
+        key_prerequisites: [engr.architecture.multilevel-caches]
+      - id: kp2
+        can_do: Describe cache coherence problems
+        key_prerequisites: [engr.architecture.multilevel-caches]
+      - id: kp3
+        can_do: Trace MSI protocols
+        key_prerequisites: [engr.architecture.multilevel-caches]
+      - id: kp4
+        can_do: Describe false sharing
+        key_prerequisites: [engr.architecture.multilevel-caches]
+  - id: engr.architecture.gpu-architecture
+    name: Describing GPU architecture
+    subject: engr
+    course: engr.architecture
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.simd-and-vector
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe GPU cores and threads
+        key_prerequisites: [engr.architecture.simd-and-vector]
+      - id: kp2
+        can_do: Describe SIMT execution
+        key_prerequisites: [engr.architecture.simd-and-vector]
+      - id: kp3
+        can_do: Describe GPU memory hierarchy
+        key_prerequisites: [engr.architecture.simd-and-vector]
+      - id: kp4
+        can_do: Compare GPUs and CPUs
+        key_prerequisites: [engr.architecture.simd-and-vector]

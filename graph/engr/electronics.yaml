@@ -1,0 +1,1431 @@
+course: engr.electronics
+topics:
+  - id: engr.electronics.carrier-drift-and-diffusion
+    name: Finding drift and diffusion currents in semiconductors
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.doped-semiconductors
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.modern.band-theory
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find drift current from mobility
+        key_prerequisites: [physics.modern.doped-semiconductors, physics.modern.band-theory]
+      - id: kp2
+        can_do: Find diffusion current from gradients
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp3
+        can_do: Use the Einstein relation
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp4
+        can_do: Find carrier concentrations with doping
+        key_prerequisites: [physics.modern.band-theory]
+  - id: engr.electronics.pn-junction-electrostatics
+    name: Finding depletion width and built-in potential
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.carrier-drift-and-diffusion
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.pn-junctions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find built-in potential
+        key_prerequisites: [engr.electronics.carrier-drift-and-diffusion, physics.modern.pn-junctions]
+      - id: kp2
+        can_do: Find depletion width
+        key_prerequisites: [physics.modern.pn-junctions]
+      - id: kp3
+        can_do: Find depletion width under bias
+        key_prerequisites: [engr.electronics.carrier-drift-and-diffusion, physics.modern.pn-junctions]
+      - id: kp4
+        can_do: Find peak electric field
+        key_prerequisites: [engr.electronics.carrier-drift-and-diffusion]
+  - id: engr.electronics.diode-equation
+    name: Using the diode current equation
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.pn-junction-electrostatics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the ideal diode equation
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp2
+        can_do: Find saturation current effects
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp3
+        can_do: Find diode voltage at a current
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp4
+        can_do: Find temperature effects on diodes
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+  - id: engr.electronics.junction-capacitance-and-breakdown
+    name: Describing junction capacitance and breakdown
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-equation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find junction capacitance
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp2
+        can_do: Find diffusion capacitance
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp3
+        can_do: Describe avalanche and Zener breakdown
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp4
+        can_do: Describe diode switching time
+        key_prerequisites: [engr.electronics.diode-equation]
+  - id: engr.electronics.diode-models
+    name: Analyzing circuits with diode models
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.thevenin-equivalent
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the ideal diode model
+        key_prerequisites: [engr.electronics.diode-equation, engr.circuits.thevenin-equivalent]
+      - id: kp2
+        can_do: Use the constant-drop model
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp3
+        can_do: Use the piecewise-linear model
+        key_prerequisites: [engr.circuits.thevenin-equivalent]
+      - id: kp4
+        can_do: Find diode states by assumption
+        key_prerequisites: [engr.electronics.diode-equation, engr.circuits.thevenin-equivalent]
+  - id: engr.electronics.iterative-diode-analysis
+    name: Solving diode circuits iteratively
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-models
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.newtons-method
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve diode circuits by iteration
+        key_prerequisites: [engr.electronics.diode-models, math.calc1.newtons-method]
+      - id: kp2
+        can_do: Solve with load lines
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp3
+        can_do: Solve with Newton's method
+        key_prerequisites: [math.calc1.newtons-method]
+      - id: kp4
+        can_do: Compare model accuracy
+        key_prerequisites: [engr.electronics.diode-models]
+  - id: engr.electronics.rectifier-circuits
+    name: Analyzing half-wave and full-wave rectifiers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-models
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze half-wave rectifiers
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp2
+        can_do: Analyze full-wave and bridge rectifiers
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp3
+        can_do: Find peak inverse voltage
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp4
+        can_do: Find average output voltage
+        key_prerequisites: [engr.electronics.diode-models]
+  - id: engr.electronics.filtered-rectifiers
+    name: Finding ripple in filtered rectifiers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.rectifier-circuits
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.first-order-natural-response
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ripple voltage
+        key_prerequisites: [engr.electronics.rectifier-circuits, engr.circuits.first-order-natural-response]
+      - id: kp2
+        can_do: Size filter capacitors
+        key_prerequisites: [engr.electronics.rectifier-circuits]
+      - id: kp3
+        can_do: Find diode peak current
+        key_prerequisites: [engr.electronics.rectifier-circuits]
+      - id: kp4
+        can_do: Find conduction angle
+        key_prerequisites: [engr.circuits.first-order-natural-response]
+  - id: engr.electronics.zener-regulators
+    name: Designing Zener regulators
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-models
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.electronics.junction-capacitance-and-breakdown
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design Zener shunt regulators
+        key_prerequisites: [engr.electronics.diode-models, engr.electronics.junction-capacitance-and-breakdown]
+      - id: kp2
+        can_do: Find line and load regulation
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp3
+        can_do: Find Zener power dissipation
+        key_prerequisites: [engr.electronics.junction-capacitance-and-breakdown]
+      - id: kp4
+        can_do: Find limits of regulation
+        key_prerequisites: [engr.electronics.diode-models]
+  - id: engr.electronics.clippers-and-clampers
+    name: Analyzing clipping and clamping circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-models
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze clipping circuits
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp2
+        can_do: Analyze clamping circuits
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp3
+        can_do: Analyze voltage doublers
+        key_prerequisites: [engr.electronics.diode-models]
+      - id: kp4
+        can_do: Sketch output waveforms
+        key_prerequisites: [engr.electronics.diode-models]
+  - id: engr.electronics.diode-small-signal
+    name: Using the diode small-signal model
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-equation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find diode small-signal resistance
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp2
+        can_do: Combine DC and small-signal analysis
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp3
+        can_do: Find small-signal output voltage
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp4
+        can_do: Use diodes as variable resistors
+        key_prerequisites: [engr.electronics.diode-equation]
+  - id: engr.electronics.mosfet-structure
+    name: Describing MOSFET structure and operation
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.pn-junction-electrostatics
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe MOSFET structure
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp2
+        can_do: Describe channel formation
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp3
+        can_do: Find threshold voltage effects
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp4
+        can_do: Compare NMOS and PMOS
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+  - id: engr.electronics.mosfet-iv-characteristics
+    name: Using MOSFET current-voltage equations
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-structure
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use triode and saturation equations
+        key_prerequisites: [engr.electronics.mosfet-structure]
+      - id: kp2
+        can_do: Find drain current
+        key_prerequisites: [engr.electronics.mosfet-structure]
+      - id: kp3
+        can_do: Include channel-length modulation
+        key_prerequisites: [engr.electronics.mosfet-structure]
+      - id: kp4
+        can_do: Read MOSFET characteristic curves
+        key_prerequisites: [engr.electronics.mosfet-structure]
+  - id: engr.electronics.mosfet-dc-analysis
+    name: Finding MOSFET operating points
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-iv-characteristics
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find MOSFET operating points
+        key_prerequisites: [engr.electronics.mosfet-iv-characteristics, engr.circuits.nodal-analysis]
+      - id: kp2
+        can_do: Check MOSFET region of operation
+        key_prerequisites: [engr.electronics.mosfet-iv-characteristics]
+      - id: kp3
+        can_do: Find operating points with PMOS
+        key_prerequisites: [engr.electronics.mosfet-iv-characteristics]
+      - id: kp4
+        can_do: Solve multi-transistor DC circuits
+        key_prerequisites: [engr.circuits.nodal-analysis]
+  - id: engr.electronics.mosfet-biasing
+    name: Designing MOSFET bias circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-dc-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design voltage-divider bias
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+      - id: kp2
+        can_do: Design bias with source resistors
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+      - id: kp3
+        can_do: Design current-source bias
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+      - id: kp4
+        can_do: Find bias stability
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+  - id: engr.electronics.mosfet-switch-and-inverter
+    name: Analyzing MOSFET switches and CMOS inverters
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-dc-analysis
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.digital-logic.cmos-gates
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze MOSFET switches
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+      - id: kp2
+        can_do: Analyze CMOS inverter transfer curves
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis, engr.digital-logic.cmos-gates]
+      - id: kp3
+        can_do: Find noise margins
+        key_prerequisites: [engr.electronics.mosfet-dc-analysis]
+      - id: kp4
+        can_do: Find switching thresholds
+        key_prerequisites: [engr.digital-logic.cmos-gates]
+  - id: engr.electronics.bjt-structure
+    name: Describing BJT structure and operation
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.diode-equation
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.electronics.pn-junction-electrostatics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe BJT structure
+        key_prerequisites: [engr.electronics.diode-equation, engr.electronics.pn-junction-electrostatics]
+      - id: kp2
+        can_do: Describe forward-active operation
+        key_prerequisites: [engr.electronics.diode-equation]
+      - id: kp3
+        can_do: Find current gain
+        key_prerequisites: [engr.electronics.pn-junction-electrostatics]
+      - id: kp4
+        can_do: Compare NPN and PNP
+        key_prerequisites: [engr.electronics.diode-equation]
+  - id: engr.electronics.bjt-iv-characteristics
+    name: Using BJT current relations
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-structure
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use BJT current relations
+        key_prerequisites: [engr.electronics.bjt-structure]
+      - id: kp2
+        can_do: Read BJT characteristic curves
+        key_prerequisites: [engr.electronics.bjt-structure]
+      - id: kp3
+        can_do: Include the Early effect
+        key_prerequisites: [engr.electronics.bjt-structure]
+      - id: kp4
+        can_do: Find regions of operation
+        key_prerequisites: [engr.electronics.bjt-structure]
+  - id: engr.electronics.bjt-dc-analysis
+    name: Finding BJT operating points
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-iv-characteristics
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.nodal-analysis
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find BJT operating points
+        key_prerequisites: [engr.electronics.bjt-iv-characteristics, engr.circuits.nodal-analysis]
+      - id: kp2
+        can_do: Check BJT region of operation
+        key_prerequisites: [engr.electronics.bjt-iv-characteristics]
+      - id: kp3
+        can_do: Find operating points with PNP
+        key_prerequisites: [engr.electronics.bjt-iv-characteristics]
+      - id: kp4
+        can_do: Solve multi-transistor DC circuits
+        key_prerequisites: [engr.circuits.nodal-analysis]
+  - id: engr.electronics.bjt-biasing
+    name: Designing BJT bias circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-dc-analysis
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design four-resistor bias
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp2
+        can_do: Find bias stability with beta changes
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp3
+        can_do: Design current-source bias
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp4
+        can_do: Find operating point for maximum swing
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+  - id: engr.electronics.bjt-switches
+    name: Analyzing BJT switches
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-dc-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze BJT switches
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp2
+        can_do: Find saturation conditions
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp3
+        can_do: Design base drive
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+      - id: kp4
+        can_do: Drive loads with BJTs
+        key_prerequisites: [engr.electronics.bjt-dc-analysis]
+  - id: engr.electronics.amplifier-models
+    name: Using voltage, current, transconductance and transresistance amplifier models
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.dependent-sources
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use voltage amplifier models
+        key_prerequisites: [engr.circuits.dependent-sources]
+      - id: kp2
+        can_do: Use transconductance amplifier models
+        key_prerequisites: [engr.circuits.dependent-sources]
+      - id: kp3
+        can_do: Find gain with source and load resistance
+        key_prerequisites: [engr.circuits.dependent-sources]
+      - id: kp4
+        can_do: Convert between amplifier models
+        key_prerequisites: [engr.circuits.dependent-sources]
+  - id: engr.electronics.small-signal-mosfet
+    name: Using the MOSFET small-signal model
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-biasing
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.amplifier-models
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transconductance
+        key_prerequisites: [engr.electronics.mosfet-biasing]
+      - id: kp2
+        can_do: Find output resistance
+        key_prerequisites: [engr.electronics.mosfet-biasing]
+      - id: kp3
+        can_do: Draw the MOSFET small-signal model
+        key_prerequisites: [engr.electronics.mosfet-biasing, engr.electronics.amplifier-models]
+      - id: kp4
+        can_do: Find small-signal parameters at bias
+        key_prerequisites: [engr.electronics.amplifier-models]
+  - id: engr.electronics.small-signal-bjt
+    name: Using the BJT small-signal model
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-biasing
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.electronics.amplifier-models
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transconductance and input resistance
+        key_prerequisites: [engr.electronics.bjt-biasing]
+      - id: kp2
+        can_do: Find output resistance
+        key_prerequisites: [engr.electronics.bjt-biasing]
+      - id: kp3
+        can_do: Draw the BJT small-signal model
+        key_prerequisites: [engr.electronics.bjt-biasing, engr.electronics.amplifier-models]
+      - id: kp4
+        can_do: Find small-signal parameters at bias
+        key_prerequisites: [engr.electronics.amplifier-models]
+  - id: engr.electronics.common-source-and-emitter
+    name: Analyzing common-source and common-emitter amplifiers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.small-signal-mosfet
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.small-signal-bjt
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of common-source amplifiers
+        key_prerequisites: [engr.electronics.small-signal-mosfet]
+      - id: kp2
+        can_do: Find gain of common-emitter amplifiers
+        key_prerequisites: [engr.electronics.small-signal-bjt]
+      - id: kp3
+        can_do: Find input and output resistance
+        key_prerequisites: [engr.electronics.small-signal-mosfet, engr.electronics.small-signal-bjt]
+      - id: kp4
+        can_do: Find output swing
+        key_prerequisites: [engr.electronics.small-signal-mosfet, engr.electronics.small-signal-bjt]
+  - id: engr.electronics.degenerated-amplifiers
+    name: Analyzing amplifiers with source or emitter degeneration
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain with degeneration
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp2
+        can_do: Find input resistance with degeneration
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp3
+        can_do: Find gain stability with degeneration
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Design degenerated amplifiers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+  - id: engr.electronics.common-gate-and-base
+    name: Analyzing common-gate and common-base amplifiers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of common-gate amplifiers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp2
+        can_do: Find gain of common-base amplifiers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp3
+        can_do: Find input resistance
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Explain uses of common-gate stages
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+  - id: engr.electronics.followers
+    name: Analyzing source and emitter followers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of followers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp2
+        can_do: Find output resistance of followers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp3
+        can_do: Find input resistance of followers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Use followers as buffers
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+  - id: engr.electronics.choosing-amplifier-configurations
+    name: Choosing amplifier configurations
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.degenerated-amplifiers
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.electronics.common-gate-and-base
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.electronics.followers
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare configurations by gain
+        key_prerequisites: [engr.electronics.degenerated-amplifiers, engr.electronics.common-gate-and-base, engr.electronics.followers]
+      - id: kp2
+        can_do: Compare configurations by impedances
+        key_prerequisites: [engr.electronics.degenerated-amplifiers, engr.electronics.common-gate-and-base, engr.electronics.followers]
+      - id: kp3
+        can_do: Choose a configuration for a task
+        key_prerequisites: [engr.electronics.degenerated-amplifiers, engr.electronics.common-gate-and-base]
+      - id: kp4
+        can_do: Combine configurations
+        key_prerequisites: [engr.electronics.followers]
+  - id: engr.electronics.multistage-amplifiers
+    name: Analyzing cascaded amplifier stages
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.choosing-amplifier-configurations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of cascaded stages
+        key_prerequisites: [engr.electronics.choosing-amplifier-configurations]
+      - id: kp2
+        can_do: Include loading between stages
+        key_prerequisites: [engr.electronics.choosing-amplifier-configurations]
+      - id: kp3
+        can_do: Design multistage amplifiers
+        key_prerequisites: [engr.electronics.choosing-amplifier-configurations]
+      - id: kp4
+        can_do: Find overall input and output resistance
+        key_prerequisites: [engr.electronics.choosing-amplifier-configurations]
+  - id: engr.electronics.current-mirrors
+    name: Analyzing current mirrors
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-biasing
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.electronics.bjt-biasing
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze MOSFET current mirrors
+        key_prerequisites: [engr.electronics.mosfet-biasing]
+      - id: kp2
+        can_do: Analyze BJT current mirrors
+        key_prerequisites: [engr.electronics.bjt-biasing]
+      - id: kp3
+        can_do: Find mirror output resistance
+        key_prerequisites: [engr.electronics.mosfet-biasing, engr.electronics.bjt-biasing]
+      - id: kp4
+        can_do: Design current ratios
+        key_prerequisites: [engr.electronics.mosfet-biasing, engr.electronics.bjt-biasing]
+  - id: engr.electronics.active-loads
+    name: Analyzing amplifiers with active loads
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.current-mirrors
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain with active loads
+        key_prerequisites: [engr.electronics.current-mirrors, engr.electronics.common-source-and-emitter]
+      - id: kp2
+        can_do: Find output resistance with active loads
+        key_prerequisites: [engr.electronics.current-mirrors]
+      - id: kp3
+        can_do: Find intrinsic gain
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Design actively loaded stages
+        key_prerequisites: [engr.electronics.current-mirrors, engr.electronics.common-source-and-emitter]
+  - id: engr.electronics.cascode-amplifiers
+    name: Analyzing cascode amplifiers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.active-loads
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.electronics.common-gate-and-base
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cascode gain
+        key_prerequisites: [engr.electronics.active-loads, engr.electronics.common-gate-and-base]
+      - id: kp2
+        can_do: Find cascode output resistance
+        key_prerequisites: [engr.electronics.active-loads]
+      - id: kp3
+        can_do: Design cascode current mirrors
+        key_prerequisites: [engr.electronics.active-loads]
+      - id: kp4
+        can_do: Find voltage headroom
+        key_prerequisites: [engr.electronics.common-gate-and-base]
+  - id: engr.electronics.differential-pairs
+    name: Analyzing differential pairs
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.current-mirrors
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze differential pair large-signal behaviour
+        key_prerequisites: [engr.electronics.current-mirrors]
+      - id: kp2
+        can_do: Find differential gain
+        key_prerequisites: [engr.electronics.current-mirrors, engr.electronics.common-source-and-emitter]
+      - id: kp3
+        can_do: Find common-mode gain
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Analyze differential pairs with active loads
+        key_prerequisites: [engr.electronics.current-mirrors, engr.electronics.common-source-and-emitter]
+  - id: engr.electronics.common-mode-rejection
+    name: Finding common-mode rejection
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.differential-pairs
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find common-mode rejection ratio
+        key_prerequisites: [engr.electronics.differential-pairs]
+      - id: kp2
+        can_do: Find effect of mismatch
+        key_prerequisites: [engr.electronics.differential-pairs]
+      - id: kp3
+        can_do: Find input common-mode range
+        key_prerequisites: [engr.electronics.differential-pairs]
+      - id: kp4
+        can_do: Improve CMRR by design
+        key_prerequisites: [engr.electronics.differential-pairs]
+  - id: engr.electronics.two-stage-op-amp
+    name: Analyzing a two-stage op-amp
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.differential-pairs
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.electronics.active-loads
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gain of a two-stage op-amp
+        key_prerequisites: [engr.electronics.differential-pairs, engr.electronics.active-loads]
+      - id: kp2
+        can_do: Find output swing
+        key_prerequisites: [engr.electronics.active-loads]
+      - id: kp3
+        can_do: Find input common-mode range
+        key_prerequisites: [engr.electronics.differential-pairs]
+      - id: kp4
+        can_do: Identify stages in op-amp schematics
+        key_prerequisites: [engr.electronics.differential-pairs, engr.electronics.active-loads]
+  - id: engr.electronics.amplifier-low-frequency-response
+    name: Finding low-frequency response from coupling capacitors
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.common-source-and-emitter
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.circuits.bode-magnitude
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find poles from coupling capacitors
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp2
+        can_do: Find lower cutoff frequency
+        key_prerequisites: [engr.electronics.common-source-and-emitter, engr.circuits.bode-magnitude]
+      - id: kp3
+        can_do: Size coupling and bypass capacitors
+        key_prerequisites: [engr.electronics.common-source-and-emitter]
+      - id: kp4
+        can_do: Sketch low-frequency Bode plots
+        key_prerequisites: [engr.circuits.bode-magnitude]
+  - id: engr.electronics.device-capacitances
+    name: Modelling device capacitances
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.small-signal-mosfet
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.small-signal-bjt
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe MOSFET capacitances
+        key_prerequisites: [engr.electronics.small-signal-mosfet]
+      - id: kp2
+        can_do: Describe BJT capacitances
+        key_prerequisites: [engr.electronics.small-signal-bjt]
+      - id: kp3
+        can_do: Find transition frequency
+        key_prerequisites: [engr.electronics.small-signal-mosfet, engr.electronics.small-signal-bjt]
+      - id: kp4
+        can_do: Draw high-frequency models
+        key_prerequisites: [engr.electronics.small-signal-mosfet, engr.electronics.small-signal-bjt]
+  - id: engr.electronics.miller-effect
+    name: Using the Miller effect
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.device-capacitances
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the Miller theorem
+        key_prerequisites: [engr.electronics.device-capacitances]
+      - id: kp2
+        can_do: Find Miller capacitance
+        key_prerequisites: [engr.electronics.device-capacitances]
+      - id: kp3
+        can_do: Find effect of Miller capacitance on bandwidth
+        key_prerequisites: [engr.electronics.device-capacitances]
+      - id: kp4
+        can_do: Reduce Miller effect
+        key_prerequisites: [engr.electronics.device-capacitances]
+  - id: engr.electronics.amplifier-high-frequency-response
+    name: Finding high-frequency response and bandwidth
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.miller-effect
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find upper cutoff frequency
+        key_prerequisites: [engr.electronics.miller-effect]
+      - id: kp2
+        can_do: Find poles of amplifiers
+        key_prerequisites: [engr.electronics.miller-effect]
+      - id: kp3
+        can_do: Find gain-bandwidth tradeoffs
+        key_prerequisites: [engr.electronics.miller-effect]
+      - id: kp4
+        can_do: Compare configurations at high frequency
+        key_prerequisites: [engr.electronics.miller-effect]
+  - id: engr.electronics.open-circuit-time-constants
+    name: Estimating bandwidth with open-circuit time constants
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.amplifier-high-frequency-response
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find open-circuit time constants
+        key_prerequisites: [engr.electronics.amplifier-high-frequency-response]
+      - id: kp2
+        can_do: Estimate bandwidth from time constants
+        key_prerequisites: [engr.electronics.amplifier-high-frequency-response]
+      - id: kp3
+        can_do: Find dominant capacitors
+        key_prerequisites: [engr.electronics.amplifier-high-frequency-response]
+      - id: kp4
+        can_do: Compare with exact results
+        key_prerequisites: [engr.electronics.amplifier-high-frequency-response]
+  - id: engr.electronics.feedback-topologies
+    name: Identifying feedback topologies
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.multistage-amplifiers
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.controls.block-diagram-reduction
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify series-shunt feedback
+        key_prerequisites: [engr.electronics.multistage-amplifiers]
+      - id: kp2
+        can_do: Identify the four feedback topologies
+        key_prerequisites: [engr.electronics.multistage-amplifiers]
+      - id: kp3
+        can_do: Find feedback factor
+        key_prerequisites: [engr.electronics.multistage-amplifiers, engr.controls.block-diagram-reduction]
+      - id: kp4
+        can_do: Find loop gain
+        key_prerequisites: [engr.controls.block-diagram-reduction]
+  - id: engr.electronics.feedback-effects
+    name: Finding effects of feedback on gain, bandwidth and impedance
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.feedback-topologies
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find closed-loop gain with feedback
+        key_prerequisites: [engr.electronics.feedback-topologies]
+      - id: kp2
+        can_do: Find effect of feedback on bandwidth
+        key_prerequisites: [engr.electronics.feedback-topologies]
+      - id: kp3
+        can_do: Find effect of feedback on impedances
+        key_prerequisites: [engr.electronics.feedback-topologies]
+      - id: kp4
+        can_do: Find desensitivity
+        key_prerequisites: [engr.electronics.feedback-topologies]
+  - id: engr.electronics.feedback-stability
+    name: Checking amplifier stability and frequency compensation
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.feedback-effects
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.controls.gain-and-phase-margins
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stability of feedback amplifiers
+        key_prerequisites: [engr.electronics.feedback-effects, engr.controls.gain-and-phase-margins]
+      - id: kp2
+        can_do: Find phase margin of amplifiers
+        key_prerequisites: [engr.controls.gain-and-phase-margins]
+      - id: kp3
+        can_do: Compensate with dominant poles
+        key_prerequisites: [engr.electronics.feedback-effects]
+      - id: kp4
+        can_do: Compensate with Miller capacitors
+        key_prerequisites: [engr.electronics.feedback-effects, engr.controls.gain-and-phase-margins]
+  - id: engr.electronics.op-amp-dc-imperfections
+    name: Analyzing offset voltage and bias currents
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.inverting-and-noninverting
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find output offset from input offset voltage
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp2
+        can_do: Find effects of bias currents
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp3
+        can_do: Compensate for bias currents
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+      - id: kp4
+        can_do: Find drift effects
+        key_prerequisites: [engr.circuits.inverting-and-noninverting]
+  - id: engr.electronics.op-amp-gain-bandwidth
+    name: Using finite gain and gain-bandwidth product
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.op-amp-dc-imperfections
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.electronics.amplifier-high-frequency-response
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find closed-loop bandwidth
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections, engr.electronics.amplifier-high-frequency-response]
+      - id: kp2
+        can_do: Find gain error from finite gain
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+      - id: kp3
+        can_do: Find bandwidth of cascaded stages
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+      - id: kp4
+        can_do: Choose op-amps for bandwidth
+        key_prerequisites: [engr.electronics.amplifier-high-frequency-response]
+  - id: engr.electronics.slew-rate
+    name: Checking slew-rate limits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.op-amp-gain-bandwidth
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slew-rate limits
+        key_prerequisites: [engr.electronics.op-amp-gain-bandwidth]
+      - id: kp2
+        can_do: Find full-power bandwidth
+        key_prerequisites: [engr.electronics.op-amp-gain-bandwidth]
+      - id: kp3
+        can_do: Find distortion from slewing
+        key_prerequisites: [engr.electronics.op-amp-gain-bandwidth]
+      - id: kp4
+        can_do: Choose op-amps for slew rate
+        key_prerequisites: [engr.electronics.op-amp-gain-bandwidth]
+  - id: engr.electronics.class-a-b-ab-stages
+    name: Analyzing class A, B and AB output stages
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.followers
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze class A output stages
+        key_prerequisites: [engr.electronics.followers]
+      - id: kp2
+        can_do: Analyze class B push-pull stages
+        key_prerequisites: [engr.electronics.followers]
+      - id: kp3
+        can_do: Analyze class AB stages
+        key_prerequisites: [engr.electronics.followers]
+      - id: kp4
+        can_do: Find efficiency of output stages
+        key_prerequisites: [engr.electronics.followers]
+  - id: engr.electronics.power-dissipation-and-heat-sinks
+    name: Sizing heat sinks for power devices
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.class-a-b-ab-stages
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.conduction-through-layers
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find device power dissipation
+        key_prerequisites: [engr.electronics.class-a-b-ab-stages]
+      - id: kp2
+        can_do: Find junction temperature
+        key_prerequisites: [engr.electronics.class-a-b-ab-stages, physics.waves-thermo-optics.conduction-through-layers]
+      - id: kp3
+        can_do: Size heat sinks
+        key_prerequisites: [physics.waves-thermo-optics.conduction-through-layers]
+      - id: kp4
+        can_do: Find safe operating area
+        key_prerequisites: [engr.electronics.class-a-b-ab-stages]
+  - id: engr.electronics.linear-regulators
+    name: Analyzing linear voltage regulators
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.zener-regulators
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.electronics.feedback-effects
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze series pass regulators
+        key_prerequisites: [engr.electronics.zener-regulators, engr.electronics.feedback-effects]
+      - id: kp2
+        can_do: Find dropout voltage
+        key_prerequisites: [engr.electronics.zener-regulators]
+      - id: kp3
+        can_do: Find regulator efficiency
+        key_prerequisites: [engr.electronics.zener-regulators]
+      - id: kp4
+        can_do: Add current limiting
+        key_prerequisites: [engr.electronics.feedback-effects]
+  - id: engr.electronics.buck-converters
+    name: Analyzing buck converters
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.bjt-switches
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.electronics.mosfet-switch-and-inverter
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.inductor-iv-relation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find buck converter output
+        key_prerequisites: [engr.electronics.bjt-switches, engr.electronics.mosfet-switch-and-inverter, engr.circuits.inductor-iv-relation]
+      - id: kp2
+        can_do: Find inductor ripple current
+        key_prerequisites: [engr.circuits.inductor-iv-relation]
+      - id: kp3
+        can_do: Find output voltage ripple
+        key_prerequisites: [engr.circuits.inductor-iv-relation]
+      - id: kp4
+        can_do: Size switches and inductors
+        key_prerequisites: [engr.electronics.bjt-switches, engr.electronics.mosfet-switch-and-inverter]
+  - id: engr.electronics.boost-and-buck-boost
+    name: Analyzing boost and buck-boost converters
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.buck-converters
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find boost converter output
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp2
+        can_do: Find buck-boost converter output
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp3
+        can_do: Find inductor current in boost converters
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp4
+        can_do: Compare converter topologies
+        key_prerequisites: [engr.electronics.buck-converters]
+  - id: engr.electronics.inverters-and-thyristors
+    name: Describing inverters and thyristor circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.buck-converters
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe single-phase inverters
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp2
+        can_do: Describe pulse-width modulated inverters
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp3
+        can_do: Describe thyristor rectifiers
+        key_prerequisites: [engr.electronics.buck-converters]
+      - id: kp4
+        can_do: Find output of controlled rectifiers
+        key_prerequisites: [engr.electronics.buck-converters]
+  - id: engr.electronics.comparators-and-schmitt-triggers
+    name: Analyzing comparators and Schmitt triggers
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.op-amp-dc-imperfections
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze comparators
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+      - id: kp2
+        can_do: Design Schmitt triggers
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+      - id: kp3
+        can_do: Find hysteresis thresholds
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+      - id: kp4
+        can_do: Use comparators with noise
+        key_prerequisites: [engr.electronics.op-amp-dc-imperfections]
+  - id: engr.electronics.oscillators
+    name: Analyzing oscillators with the Barkhausen criterion
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.feedback-effects
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the Barkhausen criterion
+        key_prerequisites: [engr.electronics.feedback-effects]
+      - id: kp2
+        can_do: Analyze Wien-bridge oscillators
+        key_prerequisites: [engr.electronics.feedback-effects]
+      - id: kp3
+        can_do: Analyze phase-shift and LC oscillators
+        key_prerequisites: [engr.electronics.feedback-effects]
+      - id: kp4
+        can_do: Find oscillation frequency
+        key_prerequisites: [engr.electronics.feedback-effects]
+  - id: engr.electronics.timer-circuits
+    name: Designing timer circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.comparators-and-schmitt-triggers
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.circuits.switched-first-order
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design relaxation oscillators
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers, engr.circuits.switched-first-order]
+      - id: kp2
+        can_do: Design 555 astable circuits
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers]
+      - id: kp3
+        can_do: Design monostable circuits
+        key_prerequisites: [engr.circuits.switched-first-order]
+      - id: kp4
+        can_do: Find duty cycle
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers]
+  - id: engr.electronics.cmos-logic-timing
+    name: Finding CMOS gate delay and power
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.mosfet-switch-and-inverter
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gate propagation delay
+        key_prerequisites: [engr.electronics.mosfet-switch-and-inverter]
+      - id: kp2
+        can_do: Find dynamic power of CMOS gates
+        key_prerequisites: [engr.electronics.mosfet-switch-and-inverter]
+      - id: kp3
+        can_do: Find fan-out effects
+        key_prerequisites: [engr.electronics.mosfet-switch-and-inverter]
+      - id: kp4
+        can_do: Size transistors for speed
+        key_prerequisites: [engr.electronics.mosfet-switch-and-inverter]
+  - id: engr.electronics.data-converters
+    name: Analyzing DAC and ADC circuits
+    subject: engr
+    course: engr.electronics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.electronics.comparators-and-schmitt-triggers
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.signals.quantization
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze R-2R DACs
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers]
+      - id: kp2
+        can_do: Analyze flash ADCs
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers]
+      - id: kp3
+        can_do: Analyze successive-approximation ADCs
+        key_prerequisites: [engr.electronics.comparators-and-schmitt-triggers, engr.signals.quantization]
+      - id: kp4
+        can_do: Find converter resolution
+        key_prerequisites: [engr.signals.quantization]

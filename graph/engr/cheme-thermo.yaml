@@ -1,0 +1,816 @@
+course: engr.cheme-thermo
+topics:
+  - id: engr.cheme-thermo.cubic-equations-of-state
+    name: Using cubic equations of state
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.compressibility-charts
+        encompassing: 0.6
+        confidence: high
+      - topic: chem.pchem1.virial-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the van der Waals equation
+        key_prerequisites: [engr.thermo.compressibility-charts, chem.pchem1.virial-equation]
+      - id: kp2
+        can_do: Use Redlich-Kwong and Peng-Robinson equations
+        key_prerequisites: [chem.pchem1.virial-equation]
+      - id: kp3
+        can_do: Solve cubic equations for molar volume
+        key_prerequisites: [engr.thermo.compressibility-charts]
+      - id: kp4
+        can_do: Find vapor and liquid roots
+        key_prerequisites: [engr.thermo.compressibility-charts, chem.pchem1.virial-equation]
+  - id: engr.cheme-thermo.residual-properties
+    name: Finding residual enthalpy and entropy from equations of state
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.cubic-equations-of-state
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.thermo.departure-functions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define residual properties
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+      - id: kp2
+        can_do: Find residual enthalpy from an equation of state
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state, engr.thermo.departure-functions]
+      - id: kp3
+        can_do: Find residual entropy from an equation of state
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+      - id: kp4
+        can_do: Find real-gas property changes
+        key_prerequisites: [engr.thermo.departure-functions]
+  - id: engr.cheme-thermo.fugacity-coefficients-eos
+    name: Finding fugacity coefficients from equations of state
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.residual-properties
+        encompassing: 0.6
+        confidence: high
+      - topic: chem.pchem1.fugacity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fugacity coefficients from the virial equation
+        key_prerequisites: [chem.pchem1.fugacity]
+      - id: kp2
+        can_do: Find fugacity coefficients from cubic equations
+        key_prerequisites: [engr.cheme-thermo.residual-properties, chem.pchem1.fugacity]
+      - id: kp3
+        can_do: Find fugacity from generalized correlations
+        key_prerequisites: [engr.cheme-thermo.residual-properties]
+      - id: kp4
+        can_do: Find saturation pressure from fugacity equality
+        key_prerequisites: [engr.cheme-thermo.residual-properties, chem.pchem1.fugacity]
+  - id: engr.cheme-thermo.liquid-fugacity
+    name: Finding fugacity of pure liquids with Poynting correction
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.fugacity-coefficients-eos
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fugacity of compressed liquids
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp2
+        can_do: Apply the Poynting correction
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp3
+        can_do: Find when the correction matters
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp4
+        can_do: Find fugacity of solids
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+  - id: engr.cheme-thermo.property-estimation
+    name: Estimating properties with group contribution
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.cubic-equations-of-state
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate critical properties by group contribution
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+      - id: kp2
+        can_do: Estimate acentric factor
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+      - id: kp3
+        can_do: Estimate normal boiling point
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+      - id: kp4
+        can_do: Judge accuracy of estimates
+        key_prerequisites: [engr.cheme-thermo.cubic-equations-of-state]
+  - id: engr.cheme-thermo.partial-molar-properties-engineering
+    name: Finding partial molar properties from data
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.partial-molar-quantities
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.mass-energy-balances.mixing-and-solution-enthalpy
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find partial molar properties from data
+        key_prerequisites: [chem.pchem1.partial-molar-quantities]
+      - id: kp2
+        can_do: Use tangent intercepts
+        key_prerequisites: [chem.pchem1.partial-molar-quantities]
+      - id: kp3
+        can_do: Find partial molar enthalpy of mixing
+        key_prerequisites: [engr.mass-energy-balances.mixing-and-solution-enthalpy]
+      - id: kp4
+        can_do: Relate partial molar and mixture properties
+        key_prerequisites: [chem.pchem1.partial-molar-quantities, engr.mass-energy-balances.mixing-and-solution-enthalpy]
+  - id: engr.cheme-thermo.mixture-fugacity
+    name: Finding fugacity in mixtures
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.fugacity-coefficients-eos
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.cheme-thermo.partial-molar-properties-engineering
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define fugacity in mixtures
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp2
+        can_do: Find fugacity coefficients in gas mixtures
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp3
+        can_do: Use the Lewis-Randall rule
+        key_prerequisites: [engr.cheme-thermo.partial-molar-properties-engineering]
+      - id: kp4
+        can_do: Find fugacity of mixture components
+        key_prerequisites: [engr.cheme-thermo.fugacity-coefficients-eos, engr.cheme-thermo.partial-molar-properties-engineering]
+  - id: engr.cheme-thermo.mixing-rules
+    name: Using mixing rules for equations of state
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.mixture-fugacity
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use van der Waals mixing rules
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp2
+        can_do: Use binary interaction parameters
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp3
+        can_do: Find mixture parameters for cubic equations
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp4
+        can_do: Judge mixing rule accuracy
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+  - id: engr.cheme-thermo.ideal-solution-model
+    name: Using the ideal solution model
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.mixture-fugacity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define ideal solutions
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp2
+        can_do: Find properties of ideal solutions
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp3
+        can_do: Find fugacity in ideal solutions
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp4
+        can_do: Compare ideal solutions and ideal gases
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+  - id: engr.cheme-thermo.activity-coefficients
+    name: Defining activity coefficients and excess Gibbs energy
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.ideal-solution-model
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.pchem1.excess-functions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define activity and activity coefficients
+        key_prerequisites: [engr.cheme-thermo.ideal-solution-model]
+      - id: kp2
+        can_do: Relate excess Gibbs energy to activity
+        key_prerequisites: [engr.cheme-thermo.ideal-solution-model, chem.pchem1.excess-functions]
+      - id: kp3
+        can_do: Find activity coefficients from data
+        key_prerequisites: [engr.cheme-thermo.ideal-solution-model]
+      - id: kp4
+        can_do: Find excess properties
+        key_prerequisites: [chem.pchem1.excess-functions]
+  - id: engr.cheme-thermo.margules-and-van-laar
+    name: Using Margules and van Laar models
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the two-suffix Margules model
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Use the three-suffix Margules model
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp3
+        can_do: Use the van Laar model
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Find infinite dilution activity coefficients
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+  - id: engr.cheme-thermo.local-composition-models
+    name: Using Wilson and NRTL models
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.margules-and-van-laar
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Wilson model
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+      - id: kp2
+        can_do: Use the NRTL model
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+      - id: kp3
+        can_do: Explain local composition
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+      - id: kp4
+        can_do: Choose an activity model
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+  - id: engr.cheme-thermo.unifac-estimation
+    name: Estimating activity coefficients by group contribution
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.local-composition-models
+        encompassing: 0.55
+        confidence: high
+      - topic: engr.cheme-thermo.property-estimation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe group contribution for activity
+        key_prerequisites: [engr.cheme-thermo.property-estimation]
+      - id: kp2
+        can_do: Find activity coefficients with UNIFAC
+        key_prerequisites: [engr.cheme-thermo.local-composition-models, engr.cheme-thermo.property-estimation]
+      - id: kp3
+        can_do: Compare UNIFAC with fitted models
+        key_prerequisites: [engr.cheme-thermo.local-composition-models]
+      - id: kp4
+        can_do: Explain limits of estimation
+        key_prerequisites: [engr.cheme-thermo.property-estimation]
+  - id: engr.cheme-thermo.gibbs-duhem-consistency
+    name: Testing data with the Gibbs-Duhem equation
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Gibbs-Duhem equation
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Test VLE data for consistency
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp3
+        can_do: Find one activity coefficient from another
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Use area tests
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+  - id: engr.cheme-thermo.vle-criteria
+    name: Writing equilibrium criteria for vapor-liquid systems
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.mixture-fugacity
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State equilibrium criteria
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp2
+        can_do: Equate fugacities in VLE
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp3
+        can_do: Write VLE equations
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+      - id: kp4
+        can_do: Choose standard states
+        key_prerequisites: [engr.cheme-thermo.mixture-fugacity]
+  - id: engr.cheme-thermo.modified-raoults-law
+    name: Using modified Raoult's law
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.vle-criteria
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use modified Raoult's law
+        key_prerequisites: [engr.cheme-thermo.vle-criteria, engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Find bubble pressure
+        key_prerequisites: [engr.cheme-thermo.vle-criteria]
+      - id: kp3
+        can_do: Find K values with activity coefficients
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Compare with Raoult's law
+        key_prerequisites: [engr.cheme-thermo.vle-criteria]
+  - id: engr.cheme-thermo.bubble-and-dew-calculations
+    name: Doing bubble and dew point calculations
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.modified-raoults-law
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bubble pressure and temperature
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp2
+        can_do: Find dew pressure and temperature
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp3
+        can_do: Iterate bubble temperature calculations
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp4
+        can_do: Build P-x-y and T-x-y diagrams
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+  - id: engr.cheme-thermo.flash-calculations
+    name: Doing isothermal flash calculations
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.bubble-and-dew-calculations
+        encompassing: 0.65
+        confidence: high
+      - topic: math.calc1.newtons-method
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve isothermal flash problems
+        key_prerequisites: [engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp2
+        can_do: Use the Rachford-Rice equation
+        key_prerequisites: [engr.cheme-thermo.bubble-and-dew-calculations, math.calc1.newtons-method]
+      - id: kp3
+        can_do: Find vapor fraction
+        key_prerequisites: [engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp4
+        can_do: Solve flash problems numerically
+        key_prerequisites: [math.calc1.newtons-method]
+  - id: engr.cheme-thermo.k-value-correlations
+    name: Using K-value charts and correlations
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.flash-calculations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use DePriester charts
+        key_prerequisites: [engr.cheme-thermo.flash-calculations]
+      - id: kp2
+        can_do: Use K-value correlations
+        key_prerequisites: [engr.cheme-thermo.flash-calculations]
+      - id: kp3
+        can_do: Find K values for hydrocarbons
+        key_prerequisites: [engr.cheme-thermo.flash-calculations]
+      - id: kp4
+        can_do: Use K values in flash problems
+        key_prerequisites: [engr.cheme-thermo.flash-calculations]
+  - id: engr.cheme-thermo.gamma-phi-and-phi-phi
+    name: Choosing gamma-phi or phi-phi formulations
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.modified-raoults-law
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.cheme-thermo.mixing-rules
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the gamma-phi formulation
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp2
+        can_do: Write the phi-phi formulation
+        key_prerequisites: [engr.cheme-thermo.mixing-rules]
+      - id: kp3
+        can_do: Choose a formulation for conditions
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law, engr.cheme-thermo.mixing-rules]
+      - id: kp4
+        can_do: Solve VLE with nonideal vapor
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law, engr.cheme-thermo.mixing-rules]
+  - id: engr.cheme-thermo.fitting-activity-parameters
+    name: Fitting activity model parameters to VLE data
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.margules-and-van-laar
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.cheme-thermo.bubble-and-dew-calculations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit Margules parameters to data
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+      - id: kp2
+        can_do: Fit parameters from azeotrope data
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar, engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp3
+        can_do: Predict VLE from fitted parameters
+        key_prerequisites: [engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp4
+        can_do: Judge fit quality
+        key_prerequisites: [engr.cheme-thermo.margules-and-van-laar]
+  - id: engr.cheme-thermo.azeotrope-prediction
+    name: Predicting azeotropes from activity models
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.fitting-activity-parameters
+        encompassing: 0.3
+        confidence: high
+      - topic: chem.pchem1.azeotropes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict azeotropes from activity models
+        key_prerequisites: [engr.cheme-thermo.fitting-activity-parameters, chem.pchem1.azeotropes]
+      - id: kp2
+        can_do: Find azeotrope composition
+        key_prerequisites: [engr.cheme-thermo.fitting-activity-parameters]
+      - id: kp3
+        can_do: Find azeotrope pressure
+        key_prerequisites: [chem.pchem1.azeotropes]
+      - id: kp4
+        can_do: Explain maximum and minimum boiling azeotropes
+        key_prerequisites: [chem.pchem1.azeotropes]
+  - id: engr.cheme-thermo.high-pressure-vle
+    name: Analyzing high-pressure VLE with equations of state
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.gamma-phi-and-phi-phi
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve VLE with equations of state
+        key_prerequisites: [engr.cheme-thermo.gamma-phi-and-phi-phi]
+      - id: kp2
+        can_do: Describe critical behaviour of mixtures
+        key_prerequisites: [engr.cheme-thermo.gamma-phi-and-phi-phi]
+      - id: kp3
+        can_do: Describe retrograde condensation
+        key_prerequisites: [engr.cheme-thermo.gamma-phi-and-phi-phi]
+      - id: kp4
+        can_do: Find high-pressure phase envelopes
+        key_prerequisites: [engr.cheme-thermo.gamma-phi-and-phi-phi]
+  - id: engr.cheme-thermo.liquid-liquid-equilibrium
+    name: Predicting liquid-liquid equilibrium
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem1.partially-miscible-liquids
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write LLE criteria
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Find phase splitting from activity models
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients, chem.pchem1.partially-miscible-liquids]
+      - id: kp3
+        can_do: Find LLE compositions
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Describe partial miscibility
+        key_prerequisites: [chem.pchem1.partially-miscible-liquids]
+  - id: engr.cheme-thermo.vlle
+    name: Analyzing vapor-liquid-liquid equilibrium
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.liquid-liquid-equilibrium
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.cheme-thermo.bubble-and-dew-calculations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe three-phase equilibrium
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium]
+      - id: kp2
+        can_do: Find heteroazeotropes
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium, engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp3
+        can_do: Find bubble point of immiscible liquids
+        key_prerequisites: [engr.cheme-thermo.bubble-and-dew-calculations]
+      - id: kp4
+        can_do: Use VLLE in decanters
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium, engr.cheme-thermo.bubble-and-dew-calculations]
+  - id: engr.cheme-thermo.solid-liquid-equilibrium
+    name: Predicting solid solubility
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem1.solid-liquid-diagrams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ideal solubility of solids
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Find nonideal solubility
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp3
+        can_do: Find eutectic points
+        key_prerequisites: [chem.pchem1.solid-liquid-diagrams]
+      - id: kp4
+        can_do: Use solubility in crystallization
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients, chem.pchem1.solid-liquid-diagrams]
+  - id: engr.cheme-thermo.gas-solubility-engineering
+    name: Predicting gas solubility in liquids
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.modified-raoults-law
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gas solubility with Henry's constants
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp2
+        can_do: Find Henry's constant from data
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp3
+        can_do: Correct Henry's constant for temperature
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+      - id: kp4
+        can_do: Find solubility in mixed solvents
+        key_prerequisites: [engr.cheme-thermo.modified-raoults-law]
+  - id: engr.cheme-thermo.osmotic-and-colligative
+    name: Applying thermodynamics to osmotic processes
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find osmotic pressure in solutions
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Find activity from colligative data
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp3
+        can_do: Find pressure for reverse osmosis
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Apply thermodynamics to membranes
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+  - id: engr.cheme-thermo.equilibrium-constants-engineering
+    name: Finding equilibrium constants at process temperatures
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.gibbs-helmholtz-and-vant-hoff
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.pchem1.k-from-thermodynamic-tables
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium constants at process temperatures
+        key_prerequisites: [chem.pchem1.gibbs-helmholtz-and-vant-hoff, chem.pchem1.k-from-thermodynamic-tables]
+      - id: kp2
+        can_do: Use the van't Hoff equation with variable heat capacity
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables]
+      - id: kp3
+        can_do: Find equilibrium constants from tables
+        key_prerequisites: [chem.pchem1.gibbs-helmholtz-and-vant-hoff]
+      - id: kp4
+        can_do: Find effect of temperature on equilibrium
+        key_prerequisites: [chem.pchem1.gibbs-helmholtz-and-vant-hoff, chem.pchem1.k-from-thermodynamic-tables]
+  - id: engr.cheme-thermo.nonideal-gas-equilibrium
+    name: Finding equilibrium compositions for nonideal gases
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.equilibrium-constants-engineering
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.cheme-thermo.fugacity-coefficients-eos
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include fugacity coefficients in equilibrium
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering, engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp2
+        can_do: Find equilibrium composition at high pressure
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering, engr.cheme-thermo.fugacity-coefficients-eos]
+      - id: kp3
+        can_do: Find effect of pressure on conversion
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering]
+      - id: kp4
+        can_do: Find effect of inerts
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering]
+  - id: engr.cheme-thermo.liquid-phase-equilibrium-reactions
+    name: Finding equilibrium in liquid-phase reactions
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.equilibrium-constants-engineering
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use activities in liquid equilibrium
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering, engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Find equilibrium in esterification
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering]
+      - id: kp3
+        can_do: Find equilibrium in electrolytes
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Find heterogeneous equilibrium
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering]
+  - id: engr.cheme-thermo.multireaction-equilibrium
+    name: Finding equilibrium with multiple reactions
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.nonideal-gas-equilibrium
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose independent reactions
+        key_prerequisites: [engr.cheme-thermo.nonideal-gas-equilibrium]
+      - id: kp2
+        can_do: Find equilibrium with two reactions
+        key_prerequisites: [engr.cheme-thermo.nonideal-gas-equilibrium]
+      - id: kp3
+        can_do: Solve multireaction equilibrium numerically
+        key_prerequisites: [engr.cheme-thermo.nonideal-gas-equilibrium]
+      - id: kp4
+        can_do: Find selectivity at equilibrium
+        key_prerequisites: [engr.cheme-thermo.nonideal-gas-equilibrium]
+  - id: engr.cheme-thermo.gibbs-minimization
+    name: Finding equilibrium by Gibbs energy minimization
+    subject: engr
+    course: engr.cheme-thermo
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.multireaction-equilibrium
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium by minimizing Gibbs energy
+        key_prerequisites: [engr.cheme-thermo.multireaction-equilibrium]
+      - id: kp2
+        can_do: Use Lagrange multipliers for element balances
+        key_prerequisites: [engr.cheme-thermo.multireaction-equilibrium]
+      - id: kp3
+        can_do: Solve minimization with software
+        key_prerequisites: [engr.cheme-thermo.multireaction-equilibrium]
+      - id: kp4
+        can_do: Compare with equilibrium constant methods
+        key_prerequisites: [engr.cheme-thermo.multireaction-equilibrium]

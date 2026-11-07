@@ -1,0 +1,757 @@
+course: engr.steel-design
+topics:
+  - id: engr.steel-design.lrfd-and-asd
+    name: Comparing LRFD and ASD design philosophies
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.load-combinations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare LRFD and ASD philosophies
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp2
+        can_do: Apply resistance factors
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp3
+        can_do: Apply safety factors in ASD
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp4
+        can_do: Relate design strength to required strength
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+  - id: engr.steel-design.structural-steel-properties
+    name: Describing structural steel grades and shapes
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.ferrous-alloys
+        encompassing: 0.45
+        confidence: medium
+      - topic: engr.mech-materials.stress-strain-diagrams
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe steel grades
+        key_prerequisites: [engr.materials.ferrous-alloys]
+      - id: kp2
+        can_do: Read properties of rolled shapes
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+      - id: kp3
+        can_do: Find yield and tensile strength for grades
+        key_prerequisites: [engr.materials.ferrous-alloys, engr.mech-materials.stress-strain-diagrams]
+      - id: kp4
+        can_do: Describe residual stresses
+        key_prerequisites: [engr.mech-materials.stress-strain-diagrams]
+  - id: engr.steel-design.tension-yielding-and-rupture
+    name: Checking tension members for yielding and rupture
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.lrfd-and-asd
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.steel-design.structural-steel-properties
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check yielding on gross area
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.steel-design.structural-steel-properties]
+      - id: kp2
+        can_do: Check rupture on effective net area
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.steel-design.structural-steel-properties]
+      - id: kp3
+        can_do: Find design tensile strength
+        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+      - id: kp4
+        can_do: Compare LRFD and ASD tension strength
+        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+  - id: engr.steel-design.net-and-effective-area
+    name: Finding net and effective net area
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.tension-yielding-and-rupture
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find net area with bolt holes
+        key_prerequisites: [engr.steel-design.tension-yielding-and-rupture]
+      - id: kp2
+        can_do: Find shear lag factors
+        key_prerequisites: [engr.steel-design.tension-yielding-and-rupture]
+      - id: kp3
+        can_do: Find effective net area
+        key_prerequisites: [engr.steel-design.tension-yielding-and-rupture]
+      - id: kp4
+        can_do: Find effective area of welded members
+        key_prerequisites: [engr.steel-design.tension-yielding-and-rupture]
+  - id: engr.steel-design.staggered-holes
+    name: Finding net area with staggered holes
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.net-and-effective-area
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find net width with staggered holes
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp2
+        can_do: Choose critical failure paths
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp3
+        can_do: Find net area of angles with staggers
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp4
+        can_do: Compare paths for rupture
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+  - id: engr.steel-design.block-shear
+    name: Checking block shear rupture
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.net-and-effective-area
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find block shear areas
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp2
+        can_do: Find block shear strength
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp3
+        can_do: Check block shear in connections
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+      - id: kp4
+        can_do: Compare block shear with tension rupture
+        key_prerequisites: [engr.steel-design.net-and-effective-area]
+  - id: engr.steel-design.tension-member-design
+    name: Designing tension members
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.block-shear
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.steel-design.staggered-holes
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select tension members
+        key_prerequisites: [engr.steel-design.block-shear, engr.steel-design.staggered-holes]
+      - id: kp2
+        can_do: Check slenderness limits
+        key_prerequisites: [engr.steel-design.block-shear]
+      - id: kp3
+        can_do: Design threaded rods
+        key_prerequisites: [engr.steel-design.block-shear]
+      - id: kp4
+        can_do: Design tension members with staggered holes
+        key_prerequisites: [engr.steel-design.staggered-holes]
+  - id: engr.steel-design.column-strength-curves
+    name: Finding compressive strength from column curves
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.lrfd-and-asd
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.effective-length
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slenderness of columns
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.mech-materials.effective-length]
+      - id: kp2
+        can_do: Find elastic buckling stress
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp3
+        can_do: Find critical stress from column curves
+        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+      - id: kp4
+        can_do: Find design compressive strength
+        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+  - id: engr.steel-design.local-buckling-classification
+    name: Classifying sections for local buckling
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.column-strength-curves
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify compact, noncompact and slender elements
+        key_prerequisites: [engr.steel-design.column-strength-curves]
+      - id: kp2
+        can_do: Find width-thickness ratios
+        key_prerequisites: [engr.steel-design.column-strength-curves]
+      - id: kp3
+        can_do: Find limits for flanges and webs
+        key_prerequisites: [engr.steel-design.column-strength-curves]
+      - id: kp4
+        can_do: Explain local buckling effects
+        key_prerequisites: [engr.steel-design.column-strength-curves]
+  - id: engr.steel-design.column-design-steel
+    name: Designing steel columns
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.local-buckling-classification
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select W-shapes for columns
+        key_prerequisites: [engr.steel-design.local-buckling-classification]
+      - id: kp2
+        can_do: Use column tables
+        key_prerequisites: [engr.steel-design.local-buckling-classification]
+      - id: kp3
+        can_do: Check columns about both axes
+        key_prerequisites: [engr.steel-design.local-buckling-classification]
+      - id: kp4
+        can_do: Design columns with intermediate bracing
+        key_prerequisites: [engr.steel-design.local-buckling-classification]
+  - id: engr.steel-design.alignment-charts
+    name: Finding effective length factors with alignment charts
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.column-design-steel
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.structural-analysis.frame-buckling-concepts
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective length factors from charts
+        key_prerequisites: [engr.steel-design.column-design-steel, engr.structural-analysis.frame-buckling-concepts]
+      - id: kp2
+        can_do: Find stiffness ratios at joints
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp3
+        can_do: Apply stiffness reduction factors
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp4
+        can_do: Design columns in unbraced frames
+        key_prerequisites: [engr.structural-analysis.frame-buckling-concepts]
+  - id: engr.steel-design.built-up-columns
+    name: Designing built-up compression members
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.column-design-steel
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design built-up columns
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp2
+        can_do: Find properties of built-up sections
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp3
+        can_do: Design lacing and tie plates
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp4
+        can_do: Check element slenderness
+        key_prerequisites: [engr.steel-design.column-design-steel]
+  - id: engr.steel-design.plastic-moment-capacity
+    name: Finding plastic moment capacity of beams
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.lrfd-and-asd
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.mech-materials.plastic-bending
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find plastic modulus
+        key_prerequisites: [engr.mech-materials.plastic-bending]
+      - id: kp2
+        can_do: Find plastic moment
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.mech-materials.plastic-bending]
+      - id: kp3
+        can_do: Check compact beam strength
+        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+      - id: kp4
+        can_do: Compare elastic and plastic moments
+        key_prerequisites: [engr.mech-materials.plastic-bending]
+  - id: engr.steel-design.lateral-torsional-buckling
+    name: Checking lateral-torsional buckling
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.plastic-moment-capacity
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find unbraced length limits
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp2
+        can_do: Find inelastic buckling strength
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp3
+        can_do: Find elastic buckling strength
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp4
+        can_do: Find nominal moment strength
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+  - id: engr.steel-design.moment-gradient-factor
+    name: Using the moment gradient factor
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.lateral-torsional-buckling
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find moment gradient factor
+        key_prerequisites: [engr.steel-design.lateral-torsional-buckling]
+      - id: kp2
+        can_do: Use moment gradient in beam strength
+        key_prerequisites: [engr.steel-design.lateral-torsional-buckling]
+      - id: kp3
+        can_do: Find bracing needs
+        key_prerequisites: [engr.steel-design.lateral-torsional-buckling]
+      - id: kp4
+        can_do: Compare uniform and varying moments
+        key_prerequisites: [engr.steel-design.lateral-torsional-buckling]
+  - id: engr.steel-design.beam-shear-steel
+    name: Checking shear strength of steel beams
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.plastic-moment-capacity
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find web shear strength
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp2
+        can_do: Check shear in rolled beams
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp3
+        can_do: Check web yielding and crippling
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp4
+        can_do: Design bearing stiffeners
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+  - id: engr.steel-design.beam-deflection-limits
+    name: Checking serviceability deflection
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.plastic-moment-capacity
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mech-materials.deflection-by-superposition
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check live load deflection limits
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity, engr.mech-materials.deflection-by-superposition]
+      - id: kp2
+        can_do: Check total load deflection
+        key_prerequisites: [engr.mech-materials.deflection-by-superposition]
+      - id: kp3
+        can_do: Find required moment of inertia
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity]
+      - id: kp4
+        can_do: Design camber
+        key_prerequisites: [engr.steel-design.plastic-moment-capacity, engr.mech-materials.deflection-by-superposition]
+  - id: engr.steel-design.beam-design-steel
+    name: Designing steel beams
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.moment-gradient-factor
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.steel-design.beam-shear-steel
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.steel-design.beam-deflection-limits
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select beams for moment
+        key_prerequisites: [engr.steel-design.moment-gradient-factor]
+      - id: kp2
+        can_do: Check beams for shear
+        key_prerequisites: [engr.steel-design.beam-shear-steel]
+      - id: kp3
+        can_do: Check beams for deflection
+        key_prerequisites: [engr.steel-design.beam-deflection-limits]
+      - id: kp4
+        can_do: Design beams with beam charts
+        key_prerequisites: [engr.steel-design.moment-gradient-factor, engr.steel-design.beam-shear-steel, engr.steel-design.beam-deflection-limits]
+  - id: engr.steel-design.second-order-amplification
+    name: Amplifying moments for second-order effects
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.beam-design-steel
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.steel-design.column-design-steel
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find B1 amplification factors
+        key_prerequisites: [engr.steel-design.beam-design-steel, engr.steel-design.column-design-steel]
+      - id: kp2
+        can_do: Find B2 amplification factors
+        key_prerequisites: [engr.steel-design.beam-design-steel, engr.steel-design.column-design-steel]
+      - id: kp3
+        can_do: Find amplified moments
+        key_prerequisites: [engr.steel-design.beam-design-steel]
+      - id: kp4
+        can_do: Explain P-delta and P-small delta
+        key_prerequisites: [engr.steel-design.column-design-steel]
+  - id: engr.steel-design.interaction-equations
+    name: Checking beam-columns with interaction equations
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.second-order-amplification
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply beam-column interaction equations
+        key_prerequisites: [engr.steel-design.second-order-amplification]
+      - id: kp2
+        can_do: Find axial and flexural ratios
+        key_prerequisites: [engr.steel-design.second-order-amplification]
+      - id: kp3
+        can_do: Check biaxial bending
+        key_prerequisites: [engr.steel-design.second-order-amplification]
+      - id: kp4
+        can_do: Check members in braced frames
+        key_prerequisites: [engr.steel-design.second-order-amplification]
+  - id: engr.steel-design.beam-column-design
+    name: Designing beam-columns
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.interaction-equations
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Select beam-column sections
+        key_prerequisites: [engr.steel-design.interaction-equations]
+      - id: kp2
+        can_do: Design beam-columns in unbraced frames
+        key_prerequisites: [engr.steel-design.interaction-equations]
+      - id: kp3
+        can_do: Use tables for preliminary sizes
+        key_prerequisites: [engr.steel-design.interaction-equations]
+      - id: kp4
+        can_do: Check final designs
+        key_prerequisites: [engr.steel-design.interaction-equations]
+  - id: engr.steel-design.bolt-shear-and-bearing
+    name: Checking bolt shear and bearing strength
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.tension-member-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bolt shear strength
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp2
+        can_do: Find bearing strength at holes
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp3
+        can_do: Check spacing and edge distances
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp4
+        can_do: Design bearing-type connections
+        key_prerequisites: [engr.steel-design.tension-member-design]
+  - id: engr.steel-design.slip-critical-connections
+    name: Designing slip-critical connections
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.bolt-shear-and-bearing
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find slip resistance
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp2
+        can_do: Design slip-critical connections
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp3
+        can_do: Compare slip-critical and bearing connections
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp4
+        can_do: Choose bolt pretension
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+  - id: engr.steel-design.eccentric-bolt-groups
+    name: Analyzing eccentrically loaded bolt groups
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.bolt-shear-and-bearing
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.statics.polar-moment-of-area
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze bolt groups by elastic method
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing, engr.statics.polar-moment-of-area]
+      - id: kp2
+        can_do: Use the instantaneous centre method
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp3
+        can_do: Use tables for eccentric bolt groups
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp4
+        can_do: Find bolt forces from torsion
+        key_prerequisites: [engr.statics.polar-moment-of-area]
+  - id: engr.steel-design.fillet-welds
+    name: Designing fillet welds
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.tension-member-design
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fillet weld strength
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp2
+        can_do: Design fillet welds for members
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp3
+        can_do: Check base metal strength
+        key_prerequisites: [engr.steel-design.tension-member-design]
+      - id: kp4
+        can_do: Check minimum and maximum weld sizes
+        key_prerequisites: [engr.steel-design.tension-member-design]
+  - id: engr.steel-design.eccentric-welds
+    name: Analyzing eccentrically loaded welds
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.fillet-welds
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.steel-design.eccentric-bolt-groups
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze welds by the elastic method
+        key_prerequisites: [engr.steel-design.fillet-welds, engr.steel-design.eccentric-bolt-groups]
+      - id: kp2
+        can_do: Use tables for eccentric welds
+        key_prerequisites: [engr.steel-design.fillet-welds]
+      - id: kp3
+        can_do: Find weld stress from torsion
+        key_prerequisites: [engr.steel-design.eccentric-bolt-groups]
+      - id: kp4
+        can_do: Design weld groups
+        key_prerequisites: [engr.steel-design.fillet-welds]
+  - id: engr.steel-design.simple-shear-connections
+    name: Designing simple shear connections
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.bolt-shear-and-bearing
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.steel-design.fillet-welds
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design double-angle connections
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing, engr.steel-design.fillet-welds]
+      - id: kp2
+        can_do: Design single-plate connections
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing, engr.steel-design.fillet-welds]
+      - id: kp3
+        can_do: Check bolt and weld limits
+        key_prerequisites: [engr.steel-design.bolt-shear-and-bearing]
+      - id: kp4
+        can_do: Check coped beams
+        key_prerequisites: [engr.steel-design.fillet-welds]
+  - id: engr.steel-design.moment-connections
+    name: Describing moment connections
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.simple-shear-connections
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe fully restrained connections
+        key_prerequisites: [engr.steel-design.simple-shear-connections]
+      - id: kp2
+        can_do: Find flange forces in moment connections
+        key_prerequisites: [engr.steel-design.simple-shear-connections]
+      - id: kp3
+        can_do: Check column web stiffeners
+        key_prerequisites: [engr.steel-design.simple-shear-connections]
+      - id: kp4
+        can_do: Compare moment and shear connections
+        key_prerequisites: [engr.steel-design.simple-shear-connections]
+  - id: engr.steel-design.base-plates
+    name: Designing column base plates
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.column-design-steel
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size base plates
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp2
+        can_do: Find base plate thickness
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp3
+        can_do: Design anchor rods
+        key_prerequisites: [engr.steel-design.column-design-steel]
+      - id: kp4
+        can_do: Check concrete bearing
+        key_prerequisites: [engr.steel-design.column-design-steel]
+  - id: engr.steel-design.composite-beams-steel
+    name: Designing composite steel-concrete beams
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.beam-design-steel
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mech-materials.composite-beams
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective slab width
+        key_prerequisites: [engr.steel-design.beam-design-steel]
+      - id: kp2
+        can_do: Find plastic neutral axis of composite beams
+        key_prerequisites: [engr.steel-design.beam-design-steel, engr.mech-materials.composite-beams]
+      - id: kp3
+        can_do: Find composite flexural strength
+        key_prerequisites: [engr.steel-design.beam-design-steel]
+      - id: kp4
+        can_do: Find composite deflection
+        key_prerequisites: [engr.mech-materials.composite-beams]
+  - id: engr.steel-design.shear-studs
+    name: Designing shear connectors
+    subject: engr
+    course: engr.steel-design
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.steel-design.composite-beams-steel
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stud strength
+        key_prerequisites: [engr.steel-design.composite-beams-steel]
+      - id: kp2
+        can_do: Find required number of studs
+        key_prerequisites: [engr.steel-design.composite-beams-steel]
+      - id: kp3
+        can_do: Choose partial composite action
+        key_prerequisites: [engr.steel-design.composite-beams-steel]
+      - id: kp4
+        can_do: Space shear studs
+        key_prerequisites: [engr.steel-design.composite-beams-steel]

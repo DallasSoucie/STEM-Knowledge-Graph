@@ -1,0 +1,781 @@
+course: engr.environmental
+topics:
+  - id: engr.environmental.concentration-units-environmental
+    name: Converting environmental concentration units
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.fractional-composition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert mg/L and ppm in water
+        key_prerequisites: [chem.gen2.fractional-composition]
+      - id: kp2
+        can_do: Convert ppm by volume and μg/m3 in air
+        key_prerequisites: [chem.gen2.fractional-composition]
+      - id: kp3
+        can_do: Find concentrations as calcium carbonate
+        key_prerequisites: [chem.gen2.fractional-composition]
+      - id: kp4
+        can_do: Find loading rates from concentration and flow
+        key_prerequisites: [chem.gen2.fractional-composition]
+  - id: engr.environmental.carbonate-system
+    name: Analyzing the carbonate system and alkalinity
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: chem.gen2.polyprotic-species-concentrations
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find carbonate species from pH
+        key_prerequisites: [engr.environmental.concentration-units-environmental, chem.gen2.polyprotic-species-concentrations]
+      - id: kp2
+        can_do: Find alkalinity
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp3
+        can_do: Find pH of natural waters
+        key_prerequisites: [engr.environmental.concentration-units-environmental, chem.gen2.polyprotic-species-concentrations]
+      - id: kp4
+        can_do: Find effects of carbon dioxide on pH
+        key_prerequisites: [chem.gen2.polyprotic-species-concentrations]
+  - id: engr.environmental.hardness
+    name: Finding water hardness
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.carbonate-system
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find total hardness
+        key_prerequisites: [engr.environmental.carbonate-system]
+      - id: kp2
+        can_do: Find carbonate and noncarbonate hardness
+        key_prerequisites: [engr.environmental.carbonate-system]
+      - id: kp3
+        can_do: Classify water by hardness
+        key_prerequisites: [engr.environmental.carbonate-system]
+      - id: kp4
+        can_do: Draw bar graphs of ions
+        key_prerequisites: [engr.environmental.carbonate-system]
+  - id: engr.environmental.gas-transfer-and-henry
+    name: Finding gas solubility with Henry's law
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.7
+        confidence: high
+      - topic: chem.gen1.henrys-law
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find saturation dissolved oxygen
+        key_prerequisites: [engr.environmental.concentration-units-environmental, chem.gen1.henrys-law]
+      - id: kp2
+        can_do: Find gas solubility with Henry's law
+        key_prerequisites: [chem.gen1.henrys-law]
+      - id: kp3
+        can_do: Find oxygen deficit
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp4
+        can_do: Find gas transfer rates
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+  - id: engr.environmental.environmental-mass-balance
+    name: Writing mass balances for environmental systems
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.fluids.control-volume-mass
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write mass balances for lakes
+        key_prerequisites: [engr.environmental.concentration-units-environmental, engr.fluids.control-volume-mass]
+      - id: kp2
+        can_do: Write mass balances for rivers at mixing points
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp3
+        can_do: Solve steady-state mass balances
+        key_prerequisites: [engr.environmental.concentration-units-environmental, engr.fluids.control-volume-mass]
+      - id: kp4
+        can_do: Find concentrations after mixing
+        key_prerequisites: [engr.fluids.control-volume-mass]
+  - id: engr.environmental.first-order-decay
+    name: Modelling first-order decay
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.environmental-mass-balance
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc2.exponential-growth-de
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model first-order decay
+        key_prerequisites: [engr.environmental.environmental-mass-balance, math.calc2.exponential-growth-de]
+      - id: kp2
+        can_do: Find half-life of pollutants
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp3
+        can_do: Find decay rate from data
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp4
+        can_do: Find concentration in decaying systems
+        key_prerequisites: [engr.environmental.environmental-mass-balance, math.calc2.exponential-growth-de]
+  - id: engr.environmental.cmfr-and-pfr-models
+    name: Modelling mixed-flow and plug-flow reactors
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.first-order-decay
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady-state concentration in mixed reactors
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp2
+        can_do: Find concentration in plug-flow reactors
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp3
+        can_do: Compare mixed and plug-flow removal
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp4
+        can_do: Find detention time
+        key_prerequisites: [engr.environmental.first-order-decay]
+  - id: engr.environmental.reactors-in-series
+    name: Analyzing reactors in series
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.cmfr-and-pfr-models
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find removal in mixed reactors in series
+        key_prerequisites: [engr.environmental.cmfr-and-pfr-models]
+      - id: kp2
+        can_do: Compare series and single reactors
+        key_prerequisites: [engr.environmental.cmfr-and-pfr-models]
+      - id: kp3
+        can_do: Find number of reactors for a target
+        key_prerequisites: [engr.environmental.cmfr-and-pfr-models]
+      - id: kp4
+        can_do: Approximate plug flow with series reactors
+        key_prerequisites: [engr.environmental.cmfr-and-pfr-models]
+  - id: engr.environmental.bod-kinetics
+    name: Modelling biochemical oxygen demand
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.first-order-decay
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.micro.bacterial-growth-curves
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find ultimate BOD
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp2
+        can_do: Find BOD at a given time
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp3
+        can_do: Find BOD rate constant from data
+        key_prerequisites: [engr.environmental.first-order-decay, bio.micro.bacterial-growth-curves]
+      - id: kp4
+        can_do: Adjust rate constant for temperature
+        key_prerequisites: [bio.micro.bacterial-growth-curves]
+  - id: engr.environmental.dissolved-oxygen-sag
+    name: Modelling oxygen sag in rivers
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.bod-kinetics
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.environmental.gas-transfer-and-henry
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find initial deficit at a discharge
+        key_prerequisites: [engr.environmental.gas-transfer-and-henry]
+      - id: kp2
+        can_do: Find oxygen deficit downstream
+        key_prerequisites: [engr.environmental.bod-kinetics, engr.environmental.gas-transfer-and-henry]
+      - id: kp3
+        can_do: Find critical point and minimum oxygen
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp4
+        can_do: Find allowable waste load
+        key_prerequisites: [engr.environmental.bod-kinetics, engr.environmental.gas-transfer-and-henry]
+  - id: engr.environmental.lake-nutrients
+    name: Modelling phosphorus in lakes
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.environmental-mass-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find phosphorus concentration in lakes
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp2
+        can_do: Classify lake trophic status
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp3
+        can_do: Find allowable phosphorus loading
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp4
+        can_do: Explain eutrophication
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+  - id: engr.environmental.water-quality-standards
+    name: Interpreting water quality standards
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret drinking water standards
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp2
+        can_do: Interpret discharge permits
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp3
+        can_do: Compare primary and secondary standards
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp4
+        can_do: Find compliance from data
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+  - id: engr.environmental.treatment-train
+    name: Laying out a drinking water treatment train
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.water-quality-standards
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose treatment processes for a source
+        key_prerequisites: [engr.environmental.water-quality-standards]
+      - id: kp2
+        can_do: Sequence treatment processes
+        key_prerequisites: [engr.environmental.water-quality-standards]
+      - id: kp3
+        can_do: Describe groundwater and surface water treatment
+        key_prerequisites: [engr.environmental.water-quality-standards]
+      - id: kp4
+        can_do: Size flows for treatment plants
+        key_prerequisites: [engr.environmental.water-quality-standards]
+  - id: engr.environmental.coagulation-flocculation
+    name: Designing coagulation and flocculation
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.treatment-train
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain coagulation of particles
+        key_prerequisites: [engr.environmental.treatment-train]
+      - id: kp2
+        can_do: Find coagulant doses
+        key_prerequisites: [engr.environmental.treatment-train]
+      - id: kp3
+        can_do: Find velocity gradient for mixing
+        key_prerequisites: [engr.environmental.treatment-train]
+      - id: kp4
+        can_do: Size flocculation basins
+        key_prerequisites: [engr.environmental.treatment-train]
+  - id: engr.environmental.sedimentation
+    name: Designing sedimentation basins
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.coagulation-flocculation
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.fluids.drag-coefficients
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find settling velocity of particles
+        key_prerequisites: [engr.fluids.drag-coefficients]
+      - id: kp2
+        can_do: Find overflow rate
+        key_prerequisites: [engr.environmental.coagulation-flocculation]
+      - id: kp3
+        can_do: Size sedimentation basins
+        key_prerequisites: [engr.environmental.coagulation-flocculation, engr.fluids.drag-coefficients]
+      - id: kp4
+        can_do: Find removal of particles
+        key_prerequisites: [engr.environmental.coagulation-flocculation]
+  - id: engr.environmental.filtration
+    name: Designing granular media filters
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.sedimentation
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.soil-mechanics.darcys-law
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find filtration rate
+        key_prerequisites: [engr.environmental.sedimentation]
+      - id: kp2
+        can_do: Find head loss through filters
+        key_prerequisites: [engr.soil-mechanics.darcys-law]
+      - id: kp3
+        can_do: Size filters
+        key_prerequisites: [engr.environmental.sedimentation]
+      - id: kp4
+        can_do: Design backwashing
+        key_prerequisites: [engr.environmental.sedimentation, engr.soil-mechanics.darcys-law]
+  - id: engr.environmental.disinfection
+    name: Designing disinfection with CT values
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.filtration
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.environmental.first-order-decay
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find CT values
+        key_prerequisites: [engr.environmental.filtration, engr.environmental.first-order-decay]
+      - id: kp2
+        can_do: Find chlorine dose
+        key_prerequisites: [engr.environmental.filtration]
+      - id: kp3
+        can_do: Find inactivation of pathogens
+        key_prerequisites: [engr.environmental.first-order-decay]
+      - id: kp4
+        can_do: Compare disinfectants
+        key_prerequisites: [engr.environmental.filtration]
+  - id: engr.environmental.softening
+    name: Designing lime-soda softening
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.hardness
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find lime and soda ash doses
+        key_prerequisites: [engr.environmental.hardness]
+      - id: kp2
+        can_do: Find sludge produced in softening
+        key_prerequisites: [engr.environmental.hardness]
+      - id: kp3
+        can_do: Choose split treatment
+        key_prerequisites: [engr.environmental.hardness]
+      - id: kp4
+        can_do: Find hardness after softening
+        key_prerequisites: [engr.environmental.hardness]
+  - id: engr.environmental.adsorption-and-membranes-water
+    name: Choosing adsorption and membrane processes
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.filtration
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe activated carbon adsorption
+        key_prerequisites: [engr.environmental.filtration]
+      - id: kp2
+        can_do: Describe membrane processes for water
+        key_prerequisites: [engr.environmental.filtration]
+      - id: kp3
+        can_do: Compare reverse osmosis and nanofiltration
+        key_prerequisites: [engr.environmental.filtration]
+      - id: kp4
+        can_do: Choose processes for contaminants
+        key_prerequisites: [engr.environmental.filtration]
+  - id: engr.environmental.wastewater-characteristics
+    name: Characterizing municipal wastewater
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.bod-kinetics
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wastewater flows and loads
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp2
+        can_do: Find BOD and solids loads
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp3
+        can_do: Describe wastewater constituents
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp4
+        can_do: Find population equivalents
+        key_prerequisites: [engr.environmental.bod-kinetics]
+  - id: engr.environmental.preliminary-and-primary
+    name: Designing preliminary and primary treatment
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.wastewater-characteristics
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.environmental.sedimentation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size screens and grit chambers
+        key_prerequisites: [engr.environmental.wastewater-characteristics]
+      - id: kp2
+        can_do: Size primary clarifiers
+        key_prerequisites: [engr.environmental.sedimentation]
+      - id: kp3
+        can_do: Find primary removal of solids and BOD
+        key_prerequisites: [engr.environmental.wastewater-characteristics, engr.environmental.sedimentation]
+      - id: kp4
+        can_do: Find sludge from primary treatment
+        key_prerequisites: [engr.environmental.wastewater-characteristics, engr.environmental.sedimentation]
+  - id: engr.environmental.monod-kinetics
+    name: Modelling microbial growth with Monod kinetics
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.bod-kinetics
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Monod equation
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp2
+        can_do: Find growth rate at a substrate level
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp3
+        can_do: Find biomass yield
+        key_prerequisites: [engr.environmental.bod-kinetics]
+      - id: kp4
+        can_do: Find decay coefficient effects
+        key_prerequisites: [engr.environmental.bod-kinetics]
+  - id: engr.environmental.activated-sludge
+    name: Designing activated sludge systems
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.monod-kinetics
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.environmental.cmfr-and-pfr-models
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find solids retention time
+        key_prerequisites: [engr.environmental.monod-kinetics, engr.environmental.cmfr-and-pfr-models]
+      - id: kp2
+        can_do: Find aeration tank volume
+        key_prerequisites: [engr.environmental.monod-kinetics, engr.environmental.cmfr-and-pfr-models]
+      - id: kp3
+        can_do: Find oxygen requirements
+        key_prerequisites: [engr.environmental.monod-kinetics]
+      - id: kp4
+        can_do: Find sludge production
+        key_prerequisites: [engr.environmental.monod-kinetics]
+  - id: engr.environmental.secondary-clarifiers
+    name: Designing secondary clarifiers
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.activated-sludge
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.environmental.sedimentation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size secondary clarifiers
+        key_prerequisites: [engr.environmental.activated-sludge, engr.environmental.sedimentation]
+      - id: kp2
+        can_do: Find solids loading rate
+        key_prerequisites: [engr.environmental.sedimentation]
+      - id: kp3
+        can_do: Find sludge volume index
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp4
+        can_do: Find recycle ratio
+        key_prerequisites: [engr.environmental.activated-sludge]
+  - id: engr.environmental.nutrient-removal
+    name: Describing biological nitrogen and phosphorus removal
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.activated-sludge
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe nitrification and denitrification
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp2
+        can_do: Describe biological phosphorus removal
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp3
+        can_do: Find oxygen for nitrification
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp4
+        can_do: Choose nutrient removal processes
+        key_prerequisites: [engr.environmental.activated-sludge]
+  - id: engr.environmental.sludge-treatment
+    name: Designing sludge thickening and digestion
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.activated-sludge
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size thickeners
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp2
+        can_do: Size anaerobic digesters
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp3
+        can_do: Find biogas production
+        key_prerequisites: [engr.environmental.activated-sludge]
+      - id: kp4
+        can_do: Find volume reduction of sludge
+        key_prerequisites: [engr.environmental.activated-sludge]
+  - id: engr.environmental.air-pollutant-sources
+    name: Describing air pollutants and sources
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe criteria pollutants
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp2
+        can_do: Find emission rates
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp3
+        can_do: Describe sources of air pollutants
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp4
+        can_do: Interpret air quality indices
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+  - id: engr.environmental.gaussian-plume
+    name: Estimating concentrations with the Gaussian plume model
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.air-pollutant-sources
+        encompassing: 0.5
+        confidence: high
+      - topic: math.probstat.normal-distribution-pdf
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ground-level concentration
+        key_prerequisites: [engr.environmental.air-pollutant-sources, math.probstat.normal-distribution-pdf]
+      - id: kp2
+        can_do: Find dispersion coefficients
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+      - id: kp3
+        can_do: Find effective stack height
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+      - id: kp4
+        can_do: Find maximum ground concentration
+        key_prerequisites: [math.probstat.normal-distribution-pdf]
+  - id: engr.environmental.air-pollution-control
+    name: Choosing air pollution control devices
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.air-pollutant-sources
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose particulate control devices
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+      - id: kp2
+        can_do: Find cyclone and baghouse efficiency
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+      - id: kp3
+        can_do: Describe gas control devices
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+      - id: kp4
+        can_do: Find overall removal efficiency
+        key_prerequisites: [engr.environmental.air-pollutant-sources]
+  - id: engr.environmental.solid-waste-management
+    name: Planning solid waste collection and landfills
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.environmental-mass-balance
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find waste generation rates
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp2
+        can_do: Plan collection routes
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp3
+        can_do: Find landfill volume
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+      - id: kp4
+        can_do: Describe landfill design
+        key_prerequisites: [engr.environmental.environmental-mass-balance]
+  - id: engr.environmental.groundwater-contamination
+    name: Modelling contaminant transport in groundwater
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.hydraulics.aquifer-properties
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.environmental.first-order-decay
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find seepage velocity of contaminants
+        key_prerequisites: [engr.hydraulics.aquifer-properties]
+      - id: kp2
+        can_do: Find retardation factors
+        key_prerequisites: [engr.hydraulics.aquifer-properties, engr.environmental.first-order-decay]
+      - id: kp3
+        can_do: Find travel time of plumes
+        key_prerequisites: [engr.hydraulics.aquifer-properties, engr.environmental.first-order-decay]
+      - id: kp4
+        can_do: Describe remediation methods
+        key_prerequisites: [engr.environmental.first-order-decay]
+  - id: engr.environmental.risk-assessment-environmental
+    name: Estimating risk from exposure
+    subject: engr
+    course: engr.environmental
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.environmental.concentration-units-environmental
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find chronic daily intake
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp2
+        can_do: Find cancer risk from slope factors
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp3
+        can_do: Find hazard quotients
+        key_prerequisites: [engr.environmental.concentration-units-environmental]
+      - id: kp4
+        can_do: Find acceptable concentrations
+        key_prerequisites: [engr.environmental.concentration-units-environmental]

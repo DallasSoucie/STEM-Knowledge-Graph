@@ -1,0 +1,1044 @@
+course: engr.signals
+topics:
+  - id: engr.signals.signal-classification
+    name: Classifying continuous and discrete signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.circuits.sinusoid-parameters
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify signals as continuous or discrete
+        key_prerequisites: [engr.circuits.sinusoid-parameters]
+      - id: kp2
+        can_do: Classify signals as analog or digital
+        key_prerequisites: [engr.circuits.sinusoid-parameters]
+      - id: kp3
+        can_do: Classify signals as deterministic or random
+        key_prerequisites: [engr.circuits.sinusoid-parameters]
+      - id: kp4
+        can_do: Classify signals as periodic or aperiodic
+        key_prerequisites: [engr.circuits.sinusoid-parameters]
+  - id: engr.signals.signal-transformations
+    name: Shifting, scaling and reversing signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-classification
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Shift signals in time
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp2
+        can_do: Scale signals in time
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp3
+        can_do: Reverse signals in time
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp4
+        can_do: Combine shifting, scaling and reversal
+        key_prerequisites: [engr.signals.signal-classification]
+  - id: engr.signals.even-odd-periodic-signals
+    name: Decomposing signals into even and odd parts
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-transformations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find even and odd parts of signals
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp2
+        can_do: Find fundamental period of signals
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp3
+        can_do: Find period of sums of sinusoids
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp4
+        can_do: Find period of discrete sinusoids
+        key_prerequisites: [engr.signals.signal-transformations]
+  - id: engr.signals.energy-and-power-signals
+    name: Finding energy and power of signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-classification
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy of signals
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp2
+        can_do: Find average power of periodic signals
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp3
+        can_do: Classify energy and power signals
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp4
+        can_do: Find energy and power of discrete signals
+        key_prerequisites: [engr.signals.signal-classification]
+  - id: engr.signals.singularity-functions
+    name: Using unit step and impulse signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-transformations
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use unit step signals
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp2
+        can_do: Use impulse sifting property
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp3
+        can_do: Write signals with steps and ramps
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp4
+        can_do: Find derivatives of signals with impulses
+        key_prerequisites: [engr.signals.signal-transformations, math.diffeq.impulse-delta]
+  - id: engr.signals.complex-exponential-signals
+    name: Using complex exponential signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-classification
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.euler-formula
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write complex exponential signals
+        key_prerequisites: [engr.signals.signal-classification, math.diffeq.euler-formula]
+      - id: kp2
+        can_do: Relate exponentials to sinusoids
+        key_prerequisites: [math.diffeq.euler-formula]
+      - id: kp3
+        can_do: Describe growing and decaying exponentials
+        key_prerequisites: [engr.signals.signal-classification]
+      - id: kp4
+        can_do: Find periodicity of discrete exponentials
+        key_prerequisites: [engr.signals.signal-classification]
+  - id: engr.signals.discrete-time-sequences
+    name: Working with discrete-time sequences
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.singularity-functions
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.signals.signal-transformations
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write sequences with unit impulses and steps
+        key_prerequisites: [engr.signals.singularity-functions, engr.signals.signal-transformations]
+      - id: kp2
+        can_do: Shift and reverse sequences
+        key_prerequisites: [engr.signals.singularity-functions]
+      - id: kp3
+        can_do: Downsample and upsample sequences
+        key_prerequisites: [engr.signals.singularity-functions]
+      - id: kp4
+        can_do: Find sums of sequences
+        key_prerequisites: [engr.signals.signal-transformations]
+  - id: engr.signals.system-properties
+    name: Testing linearity, time invariance, causality and stability
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.signal-transformations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test linearity
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp2
+        can_do: Test time invariance
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp3
+        can_do: Test causality and memory
+        key_prerequisites: [engr.signals.signal-transformations]
+      - id: kp4
+        can_do: Test stability
+        key_prerequisites: [engr.signals.signal-transformations]
+  - id: engr.signals.discrete-convolution
+    name: Computing discrete-time convolution
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.discrete-time-sequences
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.system-properties
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute discrete convolution by formula
+        key_prerequisites: [engr.signals.discrete-time-sequences, engr.signals.system-properties]
+      - id: kp2
+        can_do: Compute convolution by sliding
+        key_prerequisites: [engr.signals.discrete-time-sequences]
+      - id: kp3
+        can_do: Find convolution of finite sequences
+        key_prerequisites: [engr.signals.discrete-time-sequences]
+      - id: kp4
+        can_do: Use convolution properties
+        key_prerequisites: [engr.signals.system-properties]
+  - id: engr.signals.continuous-convolution
+    name: Computing continuous-time convolution
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.singularity-functions
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.signals.system-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.convolution
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute convolution integrals
+        key_prerequisites: [engr.signals.singularity-functions, engr.signals.system-properties, math.diffeq.convolution]
+      - id: kp2
+        can_do: Compute convolution graphically
+        key_prerequisites: [engr.signals.singularity-functions, engr.signals.system-properties]
+      - id: kp3
+        can_do: Find convolution of exponentials and steps
+        key_prerequisites: [engr.signals.singularity-functions, math.diffeq.convolution]
+      - id: kp4
+        can_do: Use convolution properties
+        key_prerequisites: [engr.signals.system-properties]
+  - id: engr.signals.impulse-response-properties
+    name: Relating impulse response to system properties
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.discrete-convolution
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.continuous-convolution
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find causality from impulse response
+        key_prerequisites: [engr.signals.discrete-convolution, engr.signals.continuous-convolution]
+      - id: kp2
+        can_do: Find stability from impulse response
+        key_prerequisites: [engr.signals.discrete-convolution, engr.signals.continuous-convolution]
+      - id: kp3
+        can_do: Find memory from impulse response
+        key_prerequisites: [engr.signals.discrete-convolution]
+      - id: kp4
+        can_do: Find step response from impulse response
+        key_prerequisites: [engr.signals.continuous-convolution]
+  - id: engr.signals.difference-equations
+    name: Solving linear difference equations
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.discrete-convolution
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve difference equations recursively
+        key_prerequisites: [engr.signals.discrete-convolution]
+      - id: kp2
+        can_do: Find homogeneous and particular solutions
+        key_prerequisites: [engr.signals.discrete-convolution]
+      - id: kp3
+        can_do: Find impulse responses of difference equations
+        key_prerequisites: [engr.signals.discrete-convolution]
+      - id: kp4
+        can_do: Classify FIR and IIR systems
+        key_prerequisites: [engr.signals.discrete-convolution]
+  - id: engr.signals.lti-differential-equations
+    name: Representing LTI systems by differential equations
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-convolution
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write differential equations of LTI systems
+        key_prerequisites: [engr.signals.continuous-convolution]
+      - id: kp2
+        can_do: Find impulse response from differential equations
+        key_prerequisites: [engr.signals.continuous-convolution]
+      - id: kp3
+        can_do: Find zero-state and zero-input response
+        key_prerequisites: [engr.signals.continuous-convolution]
+      - id: kp4
+        can_do: Find step response of first-order systems
+        key_prerequisites: [engr.signals.continuous-convolution]
+  - id: engr.signals.block-diagram-systems
+    name: Drawing system block diagrams
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.difference-equations
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.lti-differential-equations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw block diagrams of difference equations
+        key_prerequisites: [engr.signals.difference-equations]
+      - id: kp2
+        can_do: Draw block diagrams of differential equations
+        key_prerequisites: [engr.signals.lti-differential-equations]
+      - id: kp3
+        can_do: Find system equations from block diagrams
+        key_prerequisites: [engr.signals.difference-equations, engr.signals.lti-differential-equations]
+      - id: kp4
+        can_do: Combine series, parallel and feedback blocks
+        key_prerequisites: [engr.signals.difference-equations, engr.signals.lti-differential-equations]
+  - id: engr.signals.eigenfunctions-of-lti
+    name: Using complex exponentials as eigenfunctions of LTI systems
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.complex-exponential-signals
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.signals.impulse-response-properties
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show exponentials are eigenfunctions
+        key_prerequisites: [engr.signals.complex-exponential-signals, engr.signals.impulse-response-properties]
+      - id: kp2
+        can_do: Find system response to exponentials
+        key_prerequisites: [engr.signals.impulse-response-properties]
+      - id: kp3
+        can_do: Find frequency response from impulse response
+        key_prerequisites: [engr.signals.impulse-response-properties]
+      - id: kp4
+        can_do: Find response to sinusoids
+        key_prerequisites: [engr.signals.complex-exponential-signals, engr.signals.impulse-response-properties]
+  - id: engr.signals.continuous-fourier-series
+    name: Finding exponential Fourier series of signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.eigenfunctions-of-lti
+        encompassing: 0.45
+        confidence: high
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exponential Fourier coefficients
+        key_prerequisites: [engr.signals.eigenfunctions-of-lti, math.diffeq.fourier-series-intro]
+      - id: kp2
+        can_do: Find coefficients of square and sawtooth waves
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp3
+        can_do: Convert between trigonometric and exponential forms
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp4
+        can_do: Synthesize signals from coefficients
+        key_prerequisites: [engr.signals.eigenfunctions-of-lti]
+  - id: engr.signals.line-spectra
+    name: Drawing line spectra
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-fourier-series
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw magnitude line spectra
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp2
+        can_do: Draw phase line spectra
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp3
+        can_do: Find bandwidth from line spectra
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp4
+        can_do: Relate spectra to signal shape
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+  - id: engr.signals.fourier-series-properties
+    name: Using Fourier series properties
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-fourier-series
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity and time shift
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp2
+        can_do: Use time scaling and differentiation
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp3
+        can_do: Use Parseval's relation
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp4
+        can_do: Find coefficients of related signals
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+  - id: engr.signals.lti-response-periodic
+    name: Finding LTI responses to periodic inputs
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.fourier-series-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.network-transfer-functions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find output Fourier coefficients
+        key_prerequisites: [engr.signals.fourier-series-properties, engr.circuits.network-transfer-functions]
+      - id: kp2
+        can_do: Find steady-state output of circuits to periodic inputs
+        key_prerequisites: [engr.circuits.network-transfer-functions]
+      - id: kp3
+        can_do: Find filter output spectra
+        key_prerequisites: [engr.signals.fourier-series-properties, engr.circuits.network-transfer-functions]
+      - id: kp4
+        can_do: Find output power
+        key_prerequisites: [engr.signals.fourier-series-properties]
+  - id: engr.signals.discrete-fourier-series
+    name: Finding discrete-time Fourier series
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-fourier-series
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.signals.discrete-time-sequences
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find discrete Fourier series coefficients
+        key_prerequisites: [engr.signals.continuous-fourier-series, engr.signals.discrete-time-sequences]
+      - id: kp2
+        can_do: Use periodicity of discrete coefficients
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp3
+        can_do: Find spectra of discrete periodic signals
+        key_prerequisites: [engr.signals.continuous-fourier-series, engr.signals.discrete-time-sequences]
+      - id: kp4
+        can_do: Synthesize discrete periodic signals
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+  - id: engr.signals.ct-fourier-transform
+    name: Finding continuous-time Fourier transforms of signals
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.continuous-fourier-series
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Fourier transforms by integration
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp2
+        can_do: Find transforms of rectangular pulses
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp3
+        can_do: Find transforms of exponentials
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+      - id: kp4
+        can_do: Find inverse transforms
+        key_prerequisites: [engr.signals.continuous-fourier-series]
+  - id: engr.signals.fourier-transform-pairs-signals
+    name: Using common transform pairs
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-transform
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use tables of transform pairs
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+      - id: kp2
+        can_do: Find transforms of sinc and triangle signals
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+      - id: kp3
+        can_do: Find transforms of periodic signals
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+      - id: kp4
+        can_do: Find transforms with impulses
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+  - id: engr.signals.ct-fourier-properties
+    name: Using Fourier transform properties
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.fourier-transform-pairs-signals
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use time shift and frequency shift
+        key_prerequisites: [engr.signals.fourier-transform-pairs-signals]
+      - id: kp2
+        can_do: Use time scaling and duality
+        key_prerequisites: [engr.signals.fourier-transform-pairs-signals]
+      - id: kp3
+        can_do: Use differentiation and integration properties
+        key_prerequisites: [engr.signals.fourier-transform-pairs-signals]
+      - id: kp4
+        can_do: Use the convolution property
+        key_prerequisites: [engr.signals.fourier-transform-pairs-signals]
+  - id: engr.signals.frequency-response-and-filtering
+    name: Filtering signals with frequency response
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.bode-phase
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find output spectra of LTI systems
+        key_prerequisites: [engr.signals.ct-fourier-properties, engr.circuits.bode-phase]
+      - id: kp2
+        can_do: Filter signals in the frequency domain
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp3
+        can_do: Find frequency response from transfer functions
+        key_prerequisites: [engr.circuits.bode-phase]
+      - id: kp4
+        can_do: Find output signals from filtering
+        key_prerequisites: [engr.signals.ct-fourier-properties, engr.circuits.bode-phase]
+  - id: engr.signals.modulation-property
+    name: Using the modulation property
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-properties
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the modulation property
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp2
+        can_do: Find spectra of modulated signals
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp3
+        can_do: Demodulate signals in the frequency domain
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp4
+        can_do: Find spectra of windowed signals
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+  - id: engr.signals.parseval-and-bandwidth
+    name: Finding energy spectral density and bandwidth
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-properties
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy with Parseval's theorem
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp2
+        can_do: Find energy spectral density
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp3
+        can_do: Find bandwidth of signals
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp4
+        can_do: Relate time duration to bandwidth
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+  - id: engr.signals.ideal-and-practical-filters
+    name: Comparing ideal and practical filters
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.frequency-response-and-filtering
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ideal lowpass, highpass and bandpass filters
+        key_prerequisites: [engr.signals.frequency-response-and-filtering]
+      - id: kp2
+        can_do: Explain why ideal filters are noncausal
+        key_prerequisites: [engr.signals.frequency-response-and-filtering]
+      - id: kp3
+        can_do: Compare practical filter responses
+        key_prerequisites: [engr.signals.frequency-response-and-filtering]
+      - id: kp4
+        can_do: Choose filter specifications
+        key_prerequisites: [engr.signals.frequency-response-and-filtering]
+  - id: engr.signals.dtft
+    name: Finding discrete-time Fourier transforms
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.discrete-fourier-series
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.ct-fourier-transform
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find DTFT of sequences
+        key_prerequisites: [engr.signals.discrete-fourier-series]
+      - id: kp2
+        can_do: Find DTFT of exponential sequences
+        key_prerequisites: [engr.signals.discrete-fourier-series]
+      - id: kp3
+        can_do: Find inverse DTFT
+        key_prerequisites: [engr.signals.discrete-fourier-series, engr.signals.ct-fourier-transform]
+      - id: kp4
+        can_do: Relate DTFT to continuous transforms
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+  - id: engr.signals.dtft-properties
+    name: Using DTFT properties
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.dtft
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use DTFT periodicity
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp2
+        can_do: Use time shift and frequency shift
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp3
+        can_do: Use the convolution property
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp4
+        can_do: Use Parseval's relation for sequences
+        key_prerequisites: [engr.signals.dtft]
+  - id: engr.signals.discrete-frequency-response
+    name: Finding frequency response of discrete systems
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.dtft-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.difference-equations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find frequency response of difference equations
+        key_prerequisites: [engr.signals.dtft-properties, engr.signals.difference-equations]
+      - id: kp2
+        can_do: Find magnitude and phase responses
+        key_prerequisites: [engr.signals.dtft-properties]
+      - id: kp3
+        can_do: Find response to discrete sinusoids
+        key_prerequisites: [engr.signals.difference-equations]
+      - id: kp4
+        can_do: Classify discrete filters by response
+        key_prerequisites: [engr.signals.dtft-properties, engr.signals.difference-equations]
+  - id: engr.signals.sampling-theorem
+    name: Applying the sampling theorem
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-properties
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.signals.dtft
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the sampling theorem
+        key_prerequisites: [engr.signals.ct-fourier-properties, engr.signals.dtft]
+      - id: kp2
+        can_do: Find Nyquist rate
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp3
+        can_do: Find spectra of sampled signals
+        key_prerequisites: [engr.signals.ct-fourier-properties, engr.signals.dtft]
+      - id: kp4
+        can_do: Choose sampling rates
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+  - id: engr.signals.aliasing
+    name: Predicting aliasing
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.sampling-theorem
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict aliased frequencies
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp2
+        can_do: Find aliasing in sampled sinusoids
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp3
+        can_do: Explain anti-aliasing filters
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp4
+        can_do: Find effects of undersampling
+        key_prerequisites: [engr.signals.sampling-theorem]
+  - id: engr.signals.reconstruction
+    name: Reconstructing signals from samples
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.sampling-theorem
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reconstruct with ideal interpolation
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp2
+        can_do: Reconstruct with zero-order hold
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp3
+        can_do: Find reconstruction errors
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp4
+        can_do: Compare reconstruction methods
+        key_prerequisites: [engr.signals.sampling-theorem]
+  - id: engr.signals.discrete-processing-of-ct-signals
+    name: Processing continuous signals with discrete systems
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.reconstruction
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.discrete-frequency-response
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent analog response
+        key_prerequisites: [engr.signals.reconstruction, engr.signals.discrete-frequency-response]
+      - id: kp2
+        can_do: Design discrete filters for analog signals
+        key_prerequisites: [engr.signals.discrete-frequency-response]
+      - id: kp3
+        can_do: Find effects of sampling rate on processing
+        key_prerequisites: [engr.signals.reconstruction]
+      - id: kp4
+        can_do: Analyze a complete sampling system
+        key_prerequisites: [engr.signals.reconstruction, engr.signals.discrete-frequency-response]
+  - id: engr.signals.quantization
+    name: Analyzing quantization error
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.sampling-theorem
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find quantization step size
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp2
+        can_do: Find quantization error
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp3
+        can_do: Find signal-to-quantization-noise ratio
+        key_prerequisites: [engr.signals.sampling-theorem]
+      - id: kp4
+        can_do: Choose number of bits
+        key_prerequisites: [engr.signals.sampling-theorem]
+  - id: engr.signals.bilateral-laplace-and-roc
+    name: Using regions of convergence for Laplace transforms
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.ct-fourier-transform
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.diffeq.laplace-table
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find regions of convergence
+        key_prerequisites: [engr.signals.ct-fourier-transform, math.diffeq.laplace-table]
+      - id: kp2
+        can_do: Find Laplace transforms of two-sided signals
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+      - id: kp3
+        can_do: Relate ROC to signal type
+        key_prerequisites: [engr.signals.ct-fourier-transform]
+      - id: kp4
+        can_do: Find inverse transforms with ROC
+        key_prerequisites: [math.diffeq.laplace-table]
+  - id: engr.signals.system-functions-laplace
+    name: Analyzing causality and stability from system functions
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.bilateral-laplace-and-roc
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.circuits.poles-zeros-circuits
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find causality from ROC
+        key_prerequisites: [engr.signals.bilateral-laplace-and-roc]
+      - id: kp2
+        can_do: Find stability from ROC
+        key_prerequisites: [engr.signals.bilateral-laplace-and-roc, engr.circuits.poles-zeros-circuits]
+      - id: kp3
+        can_do: Find system functions of LTI systems
+        key_prerequisites: [engr.circuits.poles-zeros-circuits]
+      - id: kp4
+        can_do: Find inverse systems
+        key_prerequisites: [engr.signals.bilateral-laplace-and-roc]
+  - id: engr.signals.z-transform
+    name: Finding z-transforms and regions of convergence
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.dtft
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.bilateral-laplace-and-roc
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find z-transforms of sequences
+        key_prerequisites: [engr.signals.dtft, engr.signals.bilateral-laplace-and-roc]
+      - id: kp2
+        can_do: Find regions of convergence
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp3
+        can_do: Relate z-transform to DTFT
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp4
+        can_do: Find z-transforms of two-sided sequences
+        key_prerequisites: [engr.signals.bilateral-laplace-and-roc]
+  - id: engr.signals.inverse-z-transform
+    name: Finding inverse z-transforms by partial fractions
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.z-transform
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc2.partial-fractions-setup
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Invert z-transforms by partial fractions
+        key_prerequisites: [engr.signals.z-transform, math.calc2.partial-fractions-setup]
+      - id: kp2
+        can_do: Invert by power series
+        key_prerequisites: [engr.signals.z-transform]
+      - id: kp3
+        can_do: Choose inverses from ROC
+        key_prerequisites: [engr.signals.z-transform]
+      - id: kp4
+        can_do: Find inverse transforms with repeated poles
+        key_prerequisites: [math.calc2.partial-fractions-setup]
+  - id: engr.signals.z-transform-properties
+    name: Using z-transform properties
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.z-transform
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity and time shift
+        key_prerequisites: [engr.signals.z-transform]
+      - id: kp2
+        can_do: Use convolution property
+        key_prerequisites: [engr.signals.z-transform]
+      - id: kp3
+        can_do: Use initial value theorem
+        key_prerequisites: [engr.signals.z-transform]
+      - id: kp4
+        can_do: Use time reversal and scaling
+        key_prerequisites: [engr.signals.z-transform]
+  - id: engr.signals.system-functions-z
+    name: Analyzing discrete systems with system functions
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.z-transform-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.inverse-z-transform
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.signals.difference-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find system functions of difference equations
+        key_prerequisites: [engr.signals.z-transform-properties, engr.signals.difference-equations]
+      - id: kp2
+        can_do: Find impulse response from system function
+        key_prerequisites: [engr.signals.z-transform-properties, engr.signals.inverse-z-transform]
+      - id: kp3
+        can_do: Find stability from poles
+        key_prerequisites: [engr.signals.z-transform-properties]
+      - id: kp4
+        can_do: Find causality from ROC
+        key_prerequisites: [engr.signals.z-transform-properties]
+  - id: engr.signals.pole-zero-frequency-response
+    name: Sketching frequency response from poles and zeros
+    subject: engr
+    course: engr.signals
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.signals.system-functions-z
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.signals.system-functions-laplace
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch frequency response from poles and zeros
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp2
+        can_do: Find resonance from pole positions
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp3
+        can_do: Find notches from zero positions
+        key_prerequisites: [engr.signals.system-functions-z, engr.signals.system-functions-laplace]
+      - id: kp4
+        can_do: Compare continuous and discrete pole-zero plots
+        key_prerequisites: [engr.signals.system-functions-laplace]

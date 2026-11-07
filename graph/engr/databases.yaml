@@ -1,0 +1,820 @@
+course: engr.databases
+topics:
+  - id: engr.databases.relational-model
+    name: Describing relations, keys and schemas
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.abstract-data-types
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.discrete.relations-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe relations, tuples and attributes
+        key_prerequisites: [engr.data-structures.abstract-data-types, math.discrete.relations-definition]
+      - id: kp2
+        can_do: Identify candidate and primary keys
+        key_prerequisites: [math.discrete.relations-definition]
+      - id: kp3
+        can_do: Identify foreign keys
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+      - id: kp4
+        can_do: Write relational schemas
+        key_prerequisites: [engr.data-structures.abstract-data-types, math.discrete.relations-definition]
+  - id: engr.databases.relational-algebra
+    name: Writing relational algebra queries
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.relational-model
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write selection and projection
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp2
+        can_do: Write joins in relational algebra
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp3
+        can_do: Write set operations and division
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp4
+        can_do: Translate questions into algebra
+        key_prerequisites: [engr.databases.relational-model]
+  - id: engr.databases.sql-basic-queries
+    name: Writing basic SQL queries
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.relational-algebra
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write SELECT, FROM and WHERE
+        key_prerequisites: [engr.databases.relational-algebra]
+      - id: kp2
+        can_do: Sort and filter results
+        key_prerequisites: [engr.databases.relational-algebra]
+      - id: kp3
+        can_do: Handle null values
+        key_prerequisites: [engr.databases.relational-algebra]
+      - id: kp4
+        can_do: Use string patterns in queries
+        key_prerequisites: [engr.databases.relational-algebra]
+  - id: engr.databases.sql-joins
+    name: Writing SQL joins
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-basic-queries
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write inner joins
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp2
+        can_do: Write outer joins
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp3
+        can_do: Write self-joins
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp4
+        can_do: Choose join conditions
+        key_prerequisites: [engr.databases.sql-basic-queries]
+  - id: engr.databases.sql-aggregation
+    name: Writing SQL aggregation and grouping
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-basic-queries
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use aggregate functions
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp2
+        can_do: Group rows with GROUP BY
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp3
+        can_do: Filter groups with HAVING
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp4
+        can_do: Combine aggregation and joins
+        key_prerequisites: [engr.databases.sql-basic-queries]
+  - id: engr.databases.sql-subqueries
+    name: Writing nested SQL queries
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-joins
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.databases.sql-aggregation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write nested subqueries
+        key_prerequisites: [engr.databases.sql-joins]
+      - id: kp2
+        can_do: Write correlated subqueries
+        key_prerequisites: [engr.databases.sql-joins, engr.databases.sql-aggregation]
+      - id: kp3
+        can_do: Use EXISTS and IN
+        key_prerequisites: [engr.databases.sql-joins]
+      - id: kp4
+        can_do: Rewrite subqueries as joins
+        key_prerequisites: [engr.databases.sql-aggregation]
+  - id: engr.databases.sql-modification-and-constraints
+    name: Modifying data and declaring constraints in SQL
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-basic-queries
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert, update and delete rows
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp2
+        can_do: Declare keys and foreign keys
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp3
+        can_do: Declare check constraints
+        key_prerequisites: [engr.databases.sql-basic-queries]
+      - id: kp4
+        can_do: Choose referential actions
+        key_prerequisites: [engr.databases.sql-basic-queries]
+  - id: engr.databases.views-and-access
+    name: Using views and access privileges
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-subqueries
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Create views
+        key_prerequisites: [engr.databases.sql-subqueries]
+      - id: kp2
+        can_do: Update through views
+        key_prerequisites: [engr.databases.sql-subqueries]
+      - id: kp3
+        can_do: Grant and revoke privileges
+        key_prerequisites: [engr.databases.sql-subqueries]
+      - id: kp4
+        can_do: Use views for security
+        key_prerequisites: [engr.databases.sql-subqueries]
+  - id: engr.databases.database-applications
+    name: Connecting programs to databases
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-modification-and-constraints
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.programming.modules-and-imports
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Connect programs to databases
+        key_prerequisites: [engr.databases.sql-modification-and-constraints, engr.programming.modules-and-imports]
+      - id: kp2
+        can_do: Use parameterized queries
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+      - id: kp3
+        can_do: Prevent SQL injection
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+      - id: kp4
+        can_do: Use transactions in applications
+        key_prerequisites: [engr.programming.modules-and-imports]
+  - id: engr.databases.er-modelling
+    name: Modelling data with entity-relationship diagrams
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.relational-model
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw entities and relationships
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp2
+        can_do: Choose cardinality constraints
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp3
+        can_do: Model weak entities
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp4
+        can_do: Model generalization
+        key_prerequisites: [engr.databases.relational-model]
+  - id: engr.databases.er-to-relations
+    name: Translating ER diagrams to relations
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.er-modelling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Translate entities to relations
+        key_prerequisites: [engr.databases.er-modelling]
+      - id: kp2
+        can_do: Translate relationships to relations
+        key_prerequisites: [engr.databases.er-modelling]
+      - id: kp3
+        can_do: Translate weak entities and hierarchies
+        key_prerequisites: [engr.databases.er-modelling]
+      - id: kp4
+        can_do: Choose keys for translated relations
+        key_prerequisites: [engr.databases.er-modelling]
+  - id: engr.databases.functional-dependencies
+    name: Finding functional dependencies and closures
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.relational-model
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify functional dependencies
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp2
+        can_do: Find attribute closures
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp3
+        can_do: Use Armstrong's axioms
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp4
+        can_do: Find minimal covers
+        key_prerequisites: [engr.databases.relational-model]
+  - id: engr.databases.keys-from-dependencies
+    name: Finding keys from functional dependencies
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.functional-dependencies
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find candidate keys from dependencies
+        key_prerequisites: [engr.databases.functional-dependencies]
+      - id: kp2
+        can_do: Test superkeys with closures
+        key_prerequisites: [engr.databases.functional-dependencies]
+      - id: kp3
+        can_do: Find prime attributes
+        key_prerequisites: [engr.databases.functional-dependencies]
+      - id: kp4
+        can_do: Find all keys of a relation
+        key_prerequisites: [engr.databases.functional-dependencies]
+  - id: engr.databases.normal-forms-db
+    name: Testing for 3NF and BCNF
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.keys-from-dependencies
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test for 2NF and 3NF
+        key_prerequisites: [engr.databases.keys-from-dependencies]
+      - id: kp2
+        can_do: Test for BCNF
+        key_prerequisites: [engr.databases.keys-from-dependencies]
+      - id: kp3
+        can_do: Identify anomalies
+        key_prerequisites: [engr.databases.keys-from-dependencies]
+      - id: kp4
+        can_do: Compare normal forms
+        key_prerequisites: [engr.databases.keys-from-dependencies]
+  - id: engr.databases.decomposition
+    name: Decomposing relations losslessly
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.normal-forms-db
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Decompose into BCNF
+        key_prerequisites: [engr.databases.normal-forms-db]
+      - id: kp2
+        can_do: Synthesize 3NF relations
+        key_prerequisites: [engr.databases.normal-forms-db]
+      - id: kp3
+        can_do: Test lossless joins
+        key_prerequisites: [engr.databases.normal-forms-db]
+      - id: kp4
+        can_do: Test dependency preservation
+        key_prerequisites: [engr.databases.normal-forms-db]
+  - id: engr.databases.disk-pages-and-records
+    name: Storing records in pages
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.architecture.storage-devices
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe page layouts
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp2
+        can_do: Store fixed and variable-length records
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp3
+        can_do: Find records per page
+        key_prerequisites: [engr.architecture.storage-devices]
+      - id: kp4
+        can_do: Describe slotted pages
+        key_prerequisites: [engr.architecture.storage-devices]
+  - id: engr.databases.buffer-management
+    name: Managing the buffer pool
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.disk-pages-and-records
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe buffer pools
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp2
+        can_do: Compare replacement policies
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp3
+        can_do: Pin and unpin pages
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp4
+        can_do: Find effects of buffer size
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+  - id: engr.databases.heap-and-sorted-files
+    name: Comparing heap and sorted files
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.disk-pages-and-records
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare heap and sorted files
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp2
+        can_do: Find I/O cost of scans and searches
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp3
+        can_do: Find insertion costs
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+      - id: kp4
+        can_do: Choose file organizations
+        key_prerequisites: [engr.databases.disk-pages-and-records]
+  - id: engr.databases.b-plus-tree-indexes
+    name: Using B+ tree indexes
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.heap-and-sorted-files
+        encompassing: 0.55
+        confidence: high
+      - topic: engr.data-structures.b-trees
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Search B+ trees
+        key_prerequisites: [engr.databases.heap-and-sorted-files, engr.data-structures.b-trees]
+      - id: kp2
+        can_do: Insert into B+ trees
+        key_prerequisites: [engr.data-structures.b-trees]
+      - id: kp3
+        can_do: Delete from B+ trees
+        key_prerequisites: [engr.data-structures.b-trees]
+      - id: kp4
+        can_do: Find I/O cost of index lookups
+        key_prerequisites: [engr.databases.heap-and-sorted-files]
+  - id: engr.databases.hash-indexes
+    name: Using hash indexes
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.heap-and-sorted-files
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.hash-maps-and-sets
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use static hashing
+        key_prerequisites: [engr.databases.heap-and-sorted-files, engr.data-structures.hash-maps-and-sets]
+      - id: kp2
+        can_do: Use extendible hashing
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+      - id: kp3
+        can_do: Use linear hashing
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+      - id: kp4
+        can_do: Compare hash and tree indexes
+        key_prerequisites: [engr.databases.heap-and-sorted-files]
+  - id: engr.databases.clustered-indexes
+    name: Comparing clustered and unclustered indexes
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.b-plus-tree-indexes
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare clustered and unclustered indexes
+        key_prerequisites: [engr.databases.b-plus-tree-indexes]
+      - id: kp2
+        can_do: Find cost of range queries
+        key_prerequisites: [engr.databases.b-plus-tree-indexes]
+      - id: kp3
+        can_do: Use composite keys
+        key_prerequisites: [engr.databases.b-plus-tree-indexes]
+      - id: kp4
+        can_do: Choose indexes for workloads
+        key_prerequisites: [engr.databases.b-plus-tree-indexes]
+  - id: engr.databases.external-sorting
+    name: Sorting data larger than memory
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.buffer-management
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.sort-comparisons
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sort with external merge sort
+        key_prerequisites: [engr.databases.buffer-management, engr.data-structures.sort-comparisons]
+      - id: kp2
+        can_do: Find passes needed
+        key_prerequisites: [engr.databases.buffer-management]
+      - id: kp3
+        can_do: Find I/O cost of sorting
+        key_prerequisites: [engr.databases.buffer-management]
+      - id: kp4
+        can_do: Use replacement selection
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+  - id: engr.databases.selection-and-projection-algorithms
+    name: Evaluating selections and projections
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.clustered-indexes
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.databases.hash-indexes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate selections with indexes
+        key_prerequisites: [engr.databases.clustered-indexes, engr.databases.hash-indexes]
+      - id: kp2
+        can_do: Evaluate selections by scanning
+        key_prerequisites: [engr.databases.clustered-indexes]
+      - id: kp3
+        can_do: Evaluate projections with sorting or hashing
+        key_prerequisites: [engr.databases.hash-indexes]
+      - id: kp4
+        can_do: Find selection costs
+        key_prerequisites: [engr.databases.clustered-indexes]
+  - id: engr.databases.join-algorithms
+    name: Comparing nested-loop, sort-merge and hash joins
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.external-sorting
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.databases.hash-indexes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use nested-loop joins
+        key_prerequisites: [engr.databases.external-sorting]
+      - id: kp2
+        can_do: Use sort-merge joins
+        key_prerequisites: [engr.databases.external-sorting, engr.databases.hash-indexes]
+      - id: kp3
+        can_do: Use hash joins
+        key_prerequisites: [engr.databases.hash-indexes]
+      - id: kp4
+        can_do: Find join I/O costs
+        key_prerequisites: [engr.databases.external-sorting, engr.databases.hash-indexes]
+  - id: engr.databases.query-cost-estimation
+    name: Estimating query cost and selectivity
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.join-algorithms
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.databases.selection-and-projection-algorithms
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate selectivity
+        key_prerequisites: [engr.databases.selection-and-projection-algorithms]
+      - id: kp2
+        can_do: Estimate result sizes
+        key_prerequisites: [engr.databases.join-algorithms, engr.databases.selection-and-projection-algorithms]
+      - id: kp3
+        can_do: Use histograms
+        key_prerequisites: [engr.databases.join-algorithms]
+      - id: kp4
+        can_do: Find plan costs
+        key_prerequisites: [engr.databases.join-algorithms, engr.databases.selection-and-projection-algorithms]
+  - id: engr.databases.query-optimization
+    name: Choosing query plans
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.query-cost-estimation
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.databases.relational-algebra
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use equivalence rules
+        key_prerequisites: [engr.databases.relational-algebra]
+      - id: kp2
+        can_do: Choose join orders
+        key_prerequisites: [engr.databases.query-cost-estimation, engr.databases.relational-algebra]
+      - id: kp3
+        can_do: Use dynamic programming for plans
+        key_prerequisites: [engr.databases.query-cost-estimation]
+      - id: kp4
+        can_do: Read query plans
+        key_prerequisites: [engr.databases.query-cost-estimation, engr.databases.relational-algebra]
+  - id: engr.databases.acid-properties
+    name: Describing ACID properties
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.sql-modification-and-constraints
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe atomicity and consistency
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+      - id: kp2
+        can_do: Describe isolation and durability
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+      - id: kp3
+        can_do: Describe transaction states
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+      - id: kp4
+        can_do: Find anomalies without isolation
+        key_prerequisites: [engr.databases.sql-modification-and-constraints]
+  - id: engr.databases.serializability
+    name: Testing conflict serializability
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.acid-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.data-structures.cycle-detection
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Test conflict serializability
+        key_prerequisites: [engr.databases.acid-properties, engr.data-structures.cycle-detection]
+      - id: kp2
+        can_do: Draw precedence graphs
+        key_prerequisites: [engr.databases.acid-properties, engr.data-structures.cycle-detection]
+      - id: kp3
+        can_do: Test view serializability
+        key_prerequisites: [engr.databases.acid-properties]
+      - id: kp4
+        can_do: Find serial equivalents
+        key_prerequisites: [engr.databases.acid-properties]
+  - id: engr.databases.two-phase-locking
+    name: Using two-phase locking
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.serializability
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use shared and exclusive locks
+        key_prerequisites: [engr.databases.serializability]
+      - id: kp2
+        can_do: Apply two-phase locking
+        key_prerequisites: [engr.databases.serializability]
+      - id: kp3
+        can_do: Use strict two-phase locking
+        key_prerequisites: [engr.databases.serializability]
+      - id: kp4
+        can_do: Handle deadlocks in databases
+        key_prerequisites: [engr.databases.serializability]
+  - id: engr.databases.isolation-levels
+    name: Comparing isolation levels
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.two-phase-locking
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare isolation levels
+        key_prerequisites: [engr.databases.two-phase-locking]
+      - id: kp2
+        can_do: Find anomalies at each level
+        key_prerequisites: [engr.databases.two-phase-locking]
+      - id: kp3
+        can_do: Choose isolation levels
+        key_prerequisites: [engr.databases.two-phase-locking]
+      - id: kp4
+        can_do: Describe phantom problems
+        key_prerequisites: [engr.databases.two-phase-locking]
+  - id: engr.databases.multiversion-concurrency
+    name: Explaining multiversion concurrency control
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.isolation-levels
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe multiversion concurrency control
+        key_prerequisites: [engr.databases.isolation-levels]
+      - id: kp2
+        can_do: Describe snapshot isolation
+        key_prerequisites: [engr.databases.isolation-levels]
+      - id: kp3
+        can_do: Find write skew
+        key_prerequisites: [engr.databases.isolation-levels]
+      - id: kp4
+        can_do: Compare locking and multiversion methods
+        key_prerequisites: [engr.databases.isolation-levels]
+  - id: engr.databases.logging-and-recovery
+    name: Recovering with write-ahead logging
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.acid-properties
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.databases.buffer-management
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use write-ahead logging
+        key_prerequisites: [engr.databases.acid-properties, engr.databases.buffer-management]
+      - id: kp2
+        can_do: Undo and redo transactions
+        key_prerequisites: [engr.databases.acid-properties]
+      - id: kp3
+        can_do: Use checkpoints
+        key_prerequisites: [engr.databases.buffer-management]
+      - id: kp4
+        can_do: Describe ARIES phases
+        key_prerequisites: [engr.databases.acid-properties, engr.databases.buffer-management]
+  - id: engr.databases.distributed-databases
+    name: Describing partitioning and replication
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.logging-and-recovery
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe partitioning
+        key_prerequisites: [engr.databases.logging-and-recovery]
+      - id: kp2
+        can_do: Describe replication
+        key_prerequisites: [engr.databases.logging-and-recovery]
+      - id: kp3
+        can_do: Describe two-phase commit
+        key_prerequisites: [engr.databases.logging-and-recovery]
+      - id: kp4
+        can_do: Describe consistency tradeoffs
+        key_prerequisites: [engr.databases.logging-and-recovery]
+  - id: engr.databases.nosql-models
+    name: Comparing document, key-value and graph databases
+    subject: engr
+    course: engr.databases
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.databases.relational-model
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe key-value stores
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp2
+        can_do: Describe document databases
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp3
+        can_do: Describe graph databases
+        key_prerequisites: [engr.databases.relational-model]
+      - id: kp4
+        can_do: Choose a data model
+        key_prerequisites: [engr.databases.relational-model]

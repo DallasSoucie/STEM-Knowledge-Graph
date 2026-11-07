@@ -1,0 +1,920 @@
+course: engr.reactors
+topics:
+  - id: engr.reactors.rate-laws-engineering
+    name: Writing rate laws for reactor design
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.extent-of-reaction
+        encompassing: 0.55
+        confidence: high
+      - topic: chem.pchem1.rate-laws-as-differential-equations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate laws for elementary reactions
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+      - id: kp2
+        can_do: Relate rates of species
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp3
+        can_do: Write rate laws for reversible reactions
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction, chem.pchem1.rate-laws-as-differential-equations]
+      - id: kp4
+        can_do: Find rate constants at temperature
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+  - id: engr.reactors.stoichiometric-tables
+    name: Building stoichiometric tables for batch and flow systems
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.rate-laws-engineering
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build stoichiometric tables for batch systems
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp2
+        can_do: Build stoichiometric tables for flow systems
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp3
+        can_do: Express concentrations in conversion
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp4
+        can_do: Handle inerts in tables
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+  - id: engr.reactors.gas-phase-volume-change
+    name: Including volume change in gas-phase reactions
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.stoichiometric-tables
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expansion factor
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+      - id: kp2
+        can_do: Express gas concentrations with volume change
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+      - id: kp3
+        can_do: Include temperature and pressure changes
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+      - id: kp4
+        can_do: Find effect of volume change on rate
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+  - id: engr.reactors.general-mole-balance
+    name: Writing the general mole balance
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.rate-laws-engineering
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.mass-energy-balances.general-balance-equation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the general mole balance
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp2
+        can_do: Write mole balances for batch, CSTR and PFR
+        key_prerequisites: [engr.reactors.rate-laws-engineering, engr.mass-energy-balances.general-balance-equation]
+      - id: kp3
+        can_do: Write balances in conversion
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp4
+        can_do: Compare reactor types
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+  - id: engr.reactors.batch-reactor-design
+    name: Designing batch reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.general-mole-balance
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.reactors.stoichiometric-tables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find batch time for conversion
+        key_prerequisites: [engr.reactors.general-mole-balance, engr.reactors.stoichiometric-tables]
+      - id: kp2
+        can_do: Find conversion over time
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+      - id: kp3
+        can_do: Find cycle time
+        key_prerequisites: [engr.reactors.general-mole-balance]
+      - id: kp4
+        can_do: Size batch reactors
+        key_prerequisites: [engr.reactors.general-mole-balance, engr.reactors.stoichiometric-tables]
+  - id: engr.reactors.cstr-design
+    name: Designing continuous stirred-tank reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.general-mole-balance
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.reactors.stoichiometric-tables
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size CSTRs for conversion
+        key_prerequisites: [engr.reactors.general-mole-balance, engr.reactors.stoichiometric-tables]
+      - id: kp2
+        can_do: Find conversion in a CSTR
+        key_prerequisites: [engr.reactors.general-mole-balance]
+      - id: kp3
+        can_do: Find space time
+        key_prerequisites: [engr.reactors.general-mole-balance]
+      - id: kp4
+        can_do: Solve CSTRs with reversible reactions
+        key_prerequisites: [engr.reactors.stoichiometric-tables]
+  - id: engr.reactors.pfr-design
+    name: Designing plug flow reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.general-mole-balance
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.reactors.gas-phase-volume-change
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size PFRs for conversion
+        key_prerequisites: [engr.reactors.general-mole-balance, engr.reactors.gas-phase-volume-change]
+      - id: kp2
+        can_do: Find conversion profiles in PFRs
+        key_prerequisites: [engr.reactors.general-mole-balance]
+      - id: kp3
+        can_do: Include volume change in PFRs
+        key_prerequisites: [engr.reactors.gas-phase-volume-change]
+      - id: kp4
+        can_do: Size packed-bed reactors by catalyst weight
+        key_prerequisites: [engr.reactors.general-mole-balance]
+  - id: engr.reactors.levenspiel-plots
+    name: Sizing reactors with Levenspiel plots
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.cstr-design
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw Levenspiel plots
+        key_prerequisites: [engr.reactors.cstr-design, engr.reactors.pfr-design]
+      - id: kp2
+        can_do: Size CSTRs from plots
+        key_prerequisites: [engr.reactors.cstr-design]
+      - id: kp3
+        can_do: Size PFRs from plots
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp4
+        can_do: Compare CSTR and PFR volumes
+        key_prerequisites: [engr.reactors.cstr-design, engr.reactors.pfr-design]
+  - id: engr.reactors.reactors-in-series-chem
+    name: Sizing reactors in series
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.levenspiel-plots
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size CSTRs in series
+        key_prerequisites: [engr.reactors.levenspiel-plots]
+      - id: kp2
+        can_do: Size PFRs in series
+        key_prerequisites: [engr.reactors.levenspiel-plots]
+      - id: kp3
+        can_do: Combine CSTRs and PFRs
+        key_prerequisites: [engr.reactors.levenspiel-plots]
+      - id: kp4
+        can_do: Choose reactor sequences
+        key_prerequisites: [engr.reactors.levenspiel-plots]
+  - id: engr.reactors.pressure-drop-in-pbr
+    name: Including pressure drop in packed-bed reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.fluids.pipe-flow-problem-types
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Ergun equation
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp2
+        can_do: Find pressure along packed beds
+        key_prerequisites: [engr.reactors.pfr-design, engr.fluids.pipe-flow-problem-types]
+      - id: kp3
+        can_do: Find conversion with pressure drop
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp4
+        can_do: Choose particle size
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+  - id: engr.reactors.semibatch-reactors
+    name: Designing semibatch reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.batch-reactor-design
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write semibatch mole balances
+        key_prerequisites: [engr.reactors.batch-reactor-design]
+      - id: kp2
+        can_do: Find concentrations over time
+        key_prerequisites: [engr.reactors.batch-reactor-design]
+      - id: kp3
+        can_do: Find selectivity in semibatch reactors
+        key_prerequisites: [engr.reactors.batch-reactor-design]
+      - id: kp4
+        can_do: Explain uses of semibatch operation
+        key_prerequisites: [engr.reactors.batch-reactor-design]
+  - id: engr.reactors.recycle-reactors
+    name: Analyzing recycle reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.mass-energy-balances.recycle-and-bypass
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find conversion in recycle reactors
+        key_prerequisites: [engr.reactors.pfr-design, engr.mass-energy-balances.recycle-and-bypass]
+      - id: kp2
+        can_do: Find effect of recycle ratio
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp3
+        can_do: Compare recycle and plug flow
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp4
+        can_do: Size recycle reactors
+        key_prerequisites: [engr.mass-energy-balances.recycle-and-bypass]
+  - id: engr.reactors.membrane-reactors
+    name: Analyzing membrane reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write balances for membrane reactors
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp2
+        can_do: Find conversion beyond equilibrium
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp3
+        can_do: Find product removal effects
+        key_prerequisites: [engr.reactors.pfr-design]
+      - id: kp4
+        can_do: Describe membrane reactor uses
+        key_prerequisites: [engr.reactors.pfr-design]
+  - id: engr.reactors.batch-data-integral
+    name: Finding rate laws by the integral method
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.batch-reactor-design
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.pchem1.integrated-rate-law-derivations
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find order by the integral method
+        key_prerequisites: [engr.reactors.batch-reactor-design, chem.pchem1.integrated-rate-law-derivations]
+      - id: kp2
+        can_do: Linearize integrated rate laws
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp3
+        can_do: Find rate constants from plots
+        key_prerequisites: [engr.reactors.batch-reactor-design, chem.pchem1.integrated-rate-law-derivations]
+      - id: kp4
+        can_do: Find half-life methods
+        key_prerequisites: [engr.reactors.batch-reactor-design]
+  - id: engr.reactors.batch-data-differential
+    name: Finding rate laws by the differential method
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.batch-data-integral
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find rates by differentiation
+        key_prerequisites: [engr.reactors.batch-data-integral]
+      - id: kp2
+        can_do: Find order by the differential method
+        key_prerequisites: [engr.reactors.batch-data-integral]
+      - id: kp3
+        can_do: Use initial rates
+        key_prerequisites: [engr.reactors.batch-data-integral]
+      - id: kp4
+        can_do: Use the method of excess
+        key_prerequisites: [engr.reactors.batch-data-integral]
+  - id: engr.reactors.regression-of-rate-data
+    name: Fitting rate parameters by nonlinear regression
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.batch-data-differential
+        encompassing: 0.6
+        confidence: high
+      - topic: math.probstat.simple-linear-model
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Fit rate parameters by linear regression
+        key_prerequisites: [engr.reactors.batch-data-differential, math.probstat.simple-linear-model]
+      - id: kp2
+        can_do: Fit parameters by nonlinear regression
+        key_prerequisites: [engr.reactors.batch-data-differential]
+      - id: kp3
+        can_do: Find Arrhenius parameters
+        key_prerequisites: [engr.reactors.batch-data-differential]
+      - id: kp4
+        can_do: Judge fit quality
+        key_prerequisites: [math.probstat.simple-linear-model]
+  - id: engr.reactors.parallel-reaction-selectivity
+    name: Maximizing selectivity for parallel reactions
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.cstr-design
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.pchem1.parallel-reactions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find instantaneous selectivity
+        key_prerequisites: [chem.pchem1.parallel-reactions]
+      - id: kp2
+        can_do: Choose concentrations for selectivity
+        key_prerequisites: [engr.reactors.cstr-design, engr.reactors.pfr-design]
+      - id: kp3
+        can_do: Choose temperature for selectivity
+        key_prerequisites: [chem.pchem1.parallel-reactions]
+      - id: kp4
+        can_do: Choose reactor type for selectivity
+        key_prerequisites: [engr.reactors.cstr-design, engr.reactors.pfr-design]
+  - id: engr.reactors.series-reaction-yield
+    name: Maximizing yield for series reactions
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.parallel-reaction-selectivity
+        encompassing: 0.65
+        confidence: high
+      - topic: chem.pchem1.consecutive-reactions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum intermediate yield
+        key_prerequisites: [engr.reactors.parallel-reaction-selectivity, chem.pchem1.consecutive-reactions]
+      - id: kp2
+        can_do: Find optimal space time
+        key_prerequisites: [engr.reactors.parallel-reaction-selectivity]
+      - id: kp3
+        can_do: Compare yields in CSTRs and PFRs
+        key_prerequisites: [engr.reactors.parallel-reaction-selectivity]
+      - id: kp4
+        can_do: Find concentration profiles
+        key_prerequisites: [chem.pchem1.consecutive-reactions]
+  - id: engr.reactors.complex-reaction-networks
+    name: Designing reactors for complex reaction networks
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.series-reaction-yield
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.numerical-systems
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write net rates in reaction networks
+        key_prerequisites: [engr.reactors.series-reaction-yield]
+      - id: kp2
+        can_do: Solve networks numerically
+        key_prerequisites: [engr.reactors.series-reaction-yield, math.diffeq.numerical-systems]
+      - id: kp3
+        can_do: Find product distribution
+        key_prerequisites: [engr.reactors.series-reaction-yield]
+      - id: kp4
+        can_do: Optimize networks for a product
+        key_prerequisites: [math.diffeq.numerical-systems]
+  - id: engr.reactors.pssh-in-reactors
+    name: Deriving rate laws with the pseudo-steady-state hypothesis
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.rate-laws-engineering
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply pseudo-steady-state to intermediates
+        key_prerequisites: [engr.reactors.rate-laws-engineering, chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Derive rate laws for chain reactions
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp3
+        can_do: Derive rate laws for enzyme reactions
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+      - id: kp4
+        can_do: Compare derived laws with data
+        key_prerequisites: [engr.reactors.rate-laws-engineering]
+  - id: engr.reactors.catalytic-mechanisms
+    name: Deriving Langmuir-Hinshelwood rate laws
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.pssh-in-reactors
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.pchem1.surface-catalysis-kinetics
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write adsorption, reaction and desorption steps
+        key_prerequisites: [engr.reactors.pssh-in-reactors]
+      - id: kp2
+        can_do: Derive Langmuir-Hinshelwood rate laws
+        key_prerequisites: [engr.reactors.pssh-in-reactors, chem.pchem1.surface-catalysis-kinetics]
+      - id: kp3
+        can_do: Derive Eley-Rideal rate laws
+        key_prerequisites: [engr.reactors.pssh-in-reactors]
+      - id: kp4
+        can_do: Find site balances
+        key_prerequisites: [chem.pchem1.surface-catalysis-kinetics]
+  - id: engr.reactors.rate-limiting-step
+    name: Finding the rate-limiting step from data
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.catalytic-mechanisms
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find rate-limiting step from data
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp2
+        can_do: Test mechanisms against data
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp3
+        can_do: Linearize catalytic rate laws
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp4
+        can_do: Choose a mechanism
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+  - id: engr.reactors.catalyst-deactivation
+    name: Modelling catalyst deactivation
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.catalytic-mechanisms
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe sintering, fouling and poisoning
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp2
+        can_do: Write deactivation rate laws
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp3
+        can_do: Find conversion with deactivation
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp4
+        can_do: Choose reactors for deactivating catalysts
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+  - id: engr.reactors.internal-diffusion-effectiveness
+    name: Using Thiele modulus and effectiveness factor
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.catalytic-mechanisms
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mass-transfer.diffusion-with-reaction
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Thiele modulus
+        key_prerequisites: [engr.reactors.catalytic-mechanisms, engr.mass-transfer.diffusion-with-reaction]
+      - id: kp2
+        can_do: Find internal effectiveness factor
+        key_prerequisites: [engr.reactors.catalytic-mechanisms]
+      - id: kp3
+        can_do: Find overall effectiveness factor
+        key_prerequisites: [engr.mass-transfer.diffusion-with-reaction]
+      - id: kp4
+        can_do: Find observed rate with diffusion limits
+        key_prerequisites: [engr.reactors.catalytic-mechanisms, engr.mass-transfer.diffusion-with-reaction]
+  - id: engr.reactors.external-mass-transfer-limits
+    name: Including external mass transfer in catalytic reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.internal-diffusion-effectiveness
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.mass-transfer.mass-transfer-correlations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find external mass transfer coefficients
+        key_prerequisites: [engr.mass-transfer.mass-transfer-correlations]
+      - id: kp2
+        can_do: Find mass-transfer-limited rate
+        key_prerequisites: [engr.reactors.internal-diffusion-effectiveness, engr.mass-transfer.mass-transfer-correlations]
+      - id: kp3
+        can_do: Diagnose diffusion limits from data
+        key_prerequisites: [engr.reactors.internal-diffusion-effectiveness]
+      - id: kp4
+        can_do: Find effect of flow rate on rate
+        key_prerequisites: [engr.mass-transfer.mass-transfer-correlations]
+  - id: engr.reactors.reactor-energy-balance
+    name: Writing energy balances for reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.cstr-design
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mass-energy-balances.heat-of-formation-method
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write energy balances for CSTRs
+        key_prerequisites: [engr.reactors.cstr-design, engr.mass-energy-balances.heat-of-formation-method]
+      - id: kp2
+        can_do: Write energy balances for PFRs
+        key_prerequisites: [engr.reactors.cstr-design, engr.mass-energy-balances.heat-of-formation-method]
+      - id: kp3
+        can_do: Find heat of reaction at temperature
+        key_prerequisites: [engr.mass-energy-balances.heat-of-formation-method]
+      - id: kp4
+        can_do: Relate conversion and temperature
+        key_prerequisites: [engr.reactors.cstr-design]
+  - id: engr.reactors.adiabatic-pfr-and-cstr
+    name: Designing adiabatic reactors
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.reactor-energy-balance
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find adiabatic temperature-conversion relation
+        key_prerequisites: [engr.reactors.reactor-energy-balance]
+      - id: kp2
+        can_do: Find conversion in adiabatic PFRs
+        key_prerequisites: [engr.reactors.reactor-energy-balance]
+      - id: kp3
+        can_do: Find conversion in adiabatic CSTRs
+        key_prerequisites: [engr.reactors.reactor-energy-balance]
+      - id: kp4
+        can_do: Find exit temperature of adiabatic reactors
+        key_prerequisites: [engr.reactors.reactor-energy-balance]
+  - id: engr.reactors.equilibrium-conversion-temperature
+    name: Finding adiabatic equilibrium conversion
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.adiabatic-pfr-and-cstr
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.cheme-thermo.equilibrium-constants-engineering
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium conversion at temperature
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr, engr.cheme-thermo.equilibrium-constants-engineering]
+      - id: kp2
+        can_do: Find adiabatic equilibrium conversion
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp3
+        can_do: Find optimum inlet temperature
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr, engr.cheme-thermo.equilibrium-constants-engineering]
+      - id: kp4
+        can_do: Plot conversion against temperature
+        key_prerequisites: [engr.cheme-thermo.equilibrium-constants-engineering]
+  - id: engr.reactors.interstage-cooling
+    name: Designing interstage cooling
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.equilibrium-conversion-temperature
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design interstage cooling
+        key_prerequisites: [engr.reactors.equilibrium-conversion-temperature]
+      - id: kp2
+        can_do: Find conversion with staged reactors
+        key_prerequisites: [engr.reactors.equilibrium-conversion-temperature]
+      - id: kp3
+        can_do: Find heat removed between stages
+        key_prerequisites: [engr.reactors.equilibrium-conversion-temperature]
+      - id: kp4
+        can_do: Compare cooling and cold-shot designs
+        key_prerequisites: [engr.reactors.equilibrium-conversion-temperature]
+  - id: engr.reactors.pfr-with-heat-exchange
+    name: Designing PFRs with heat exchange
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.adiabatic-pfr-and-cstr
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.heat-transfer.overall-heat-transfer-coefficient
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write coupled balances with heat exchange
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr, engr.heat-transfer.overall-heat-transfer-coefficient]
+      - id: kp2
+        can_do: Solve cocurrent coolant PFRs
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp3
+        can_do: Solve countercurrent coolant PFRs
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp4
+        can_do: Find hot spots
+        key_prerequisites: [engr.heat-transfer.overall-heat-transfer-coefficient]
+  - id: engr.reactors.cstr-multiple-steady-states
+    name: Finding multiple steady states in CSTRs
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.adiabatic-pfr-and-cstr
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plot heat generated and removed
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp2
+        can_do: Find multiple steady states
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp3
+        can_do: Judge stability of steady states
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+      - id: kp4
+        can_do: Find ignition and extinction temperatures
+        key_prerequisites: [engr.reactors.adiabatic-pfr-and-cstr]
+  - id: engr.reactors.runaway-reactions
+    name: Analyzing thermal runaway
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.cstr-multiple-steady-states
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe thermal runaway
+        key_prerequisites: [engr.reactors.cstr-multiple-steady-states]
+      - id: kp2
+        can_do: Find runaway conditions in batch reactors
+        key_prerequisites: [engr.reactors.cstr-multiple-steady-states]
+      - id: kp3
+        can_do: Describe safety measures for exothermic reactors
+        key_prerequisites: [engr.reactors.cstr-multiple-steady-states]
+      - id: kp4
+        can_do: Find parametric sensitivity
+        key_prerequisites: [engr.reactors.cstr-multiple-steady-states]
+  - id: engr.reactors.residence-time-distribution
+    name: Measuring residence time distributions
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.cstr-design
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.reactors.pfr-design
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure RTD by pulse tracer
+        key_prerequisites: [engr.reactors.cstr-design]
+      - id: kp2
+        can_do: Measure RTD by step tracer
+        key_prerequisites: [engr.reactors.cstr-design]
+      - id: kp3
+        can_do: Find E and F curves
+        key_prerequisites: [engr.reactors.cstr-design, engr.reactors.pfr-design]
+      - id: kp4
+        can_do: Find RTD of ideal reactors
+        key_prerequisites: [engr.reactors.pfr-design]
+  - id: engr.reactors.rtd-moments
+    name: Finding mean residence time and variance
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.residence-time-distribution
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mean residence time
+        key_prerequisites: [engr.reactors.residence-time-distribution]
+      - id: kp2
+        can_do: Find variance of RTD
+        key_prerequisites: [engr.reactors.residence-time-distribution]
+      - id: kp3
+        can_do: Diagnose bypassing and dead zones
+        key_prerequisites: [engr.reactors.residence-time-distribution]
+      - id: kp4
+        can_do: Compare RTDs of reactors
+        key_prerequisites: [engr.reactors.residence-time-distribution]
+  - id: engr.reactors.segregation-model
+    name: Predicting conversion with the segregation model
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.rtd-moments
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict conversion by the segregation model
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp2
+        can_do: Compare segregated and maximum mixedness
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp3
+        can_do: Find conversion from RTD data
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp4
+        can_do: Explain micromixing
+        key_prerequisites: [engr.reactors.rtd-moments]
+  - id: engr.reactors.tanks-in-series-model
+    name: Modelling nonideal flow with tanks in series
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.rtd-moments
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find number of tanks from RTD
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp2
+        can_do: Predict conversion with tanks in series
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp3
+        can_do: Compare with ideal reactors
+        key_prerequisites: [engr.reactors.rtd-moments]
+      - id: kp4
+        can_do: Fit models to data
+        key_prerequisites: [engr.reactors.rtd-moments]
+  - id: engr.reactors.dispersion-model
+    name: Modelling nonideal flow with dispersion
+    subject: engr
+    course: engr.reactors
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.tanks-in-series-model
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find dispersion number
+        key_prerequisites: [engr.reactors.tanks-in-series-model]
+      - id: kp2
+        can_do: Predict conversion with dispersion
+        key_prerequisites: [engr.reactors.tanks-in-series-model]
+      - id: kp3
+        can_do: Compare dispersion and tanks-in-series
+        key_prerequisites: [engr.reactors.tanks-in-series-model]
+      - id: kp4
+        can_do: Estimate dispersion from correlations
+        key_prerequisites: [engr.reactors.tanks-in-series-model]

@@ -1,0 +1,1343 @@
+course: engr.data-structures
+topics:
+  - id: engr.data-structures.abstract-data-types
+    name: Separating an interface from its implementation
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.programming.abstract-interfaces
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate an interface from an implementation
+        key_prerequisites: [engr.programming.abstract-interfaces]
+      - id: kp2
+        can_do: Specify operations of an abstract data type
+        key_prerequisites: [engr.programming.abstract-interfaces]
+      - id: kp3
+        can_do: Implement one interface two ways
+        key_prerequisites: [engr.programming.abstract-interfaces]
+      - id: kp4
+        can_do: Choose an implementation by operation costs
+        key_prerequisites: [engr.programming.abstract-interfaces]
+  - id: engr.data-structures.asymptotic-analysis-of-code
+    name: Analyzing running time of code
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.programming.counting-operations
+        encompassing: 0.45
+        confidence: high
+      - topic: math.discrete.big-theta-omega
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find big-O running time of loops
+        key_prerequisites: [engr.programming.counting-operations, math.discrete.big-theta-omega]
+      - id: kp2
+        can_do: Analyze nested loops with dependent bounds
+        key_prerequisites: [engr.programming.counting-operations, math.discrete.big-theta-omega]
+      - id: kp3
+        can_do: Analyze code with function calls
+        key_prerequisites: [engr.programming.counting-operations]
+      - id: kp4
+        can_do: Give tight big-theta bounds
+        key_prerequisites: [math.discrete.big-theta-omega]
+  - id: engr.data-structures.space-complexity
+    name: Analyzing memory use
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.asymptotic-analysis-of-code
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find memory use of data structures
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp2
+        can_do: Count extra space of algorithms
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp3
+        can_do: Compare in-place and copying algorithms
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp4
+        can_do: Find stack space of recursion
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+  - id: engr.data-structures.amortized-analysis
+    name: Using amortized analysis
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.asymptotic-analysis-of-code
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain amortized cost
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp2
+        can_do: Use aggregate analysis
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp3
+        can_do: Use the accounting method
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp4
+        can_do: Analyze a binary counter
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+  - id: engr.data-structures.recurrence-runtime
+    name: Finding running times of recursive code
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.asymptotic-analysis-of-code
+        encompassing: 0.4
+        confidence: high
+      - topic: math.discrete.master-theorem-intro
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write recurrences for recursive code
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp2
+        can_do: Solve recurrences with the master theorem
+        key_prerequisites: [math.discrete.master-theorem-intro]
+      - id: kp3
+        can_do: Find running time of recursive search
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code, math.discrete.master-theorem-intro]
+      - id: kp4
+        can_do: Compare recursive algorithms by recurrence
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code, math.discrete.master-theorem-intro]
+  - id: engr.data-structures.best-worst-average-case
+    name: Telling best, worst and average cases
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.asymptotic-analysis-of-code
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find best and worst cases of an algorithm
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp2
+        can_do: Find average-case cost under a simple model
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp3
+        can_do: Choose inputs that trigger the worst case
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp4
+        can_do: Explain why worst case matters
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+  - id: engr.data-structures.dynamic-arrays
+    name: Implementing a resizable array
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.abstract-data-types
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.data-structures.amortized-analysis
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement append with resizing
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+      - id: kp2
+        can_do: Explain doubling growth
+        key_prerequisites: [engr.data-structures.amortized-analysis]
+      - id: kp3
+        can_do: Find amortized cost of append
+        key_prerequisites: [engr.data-structures.amortized-analysis]
+      - id: kp4
+        can_do: Implement insert and delete in an array
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+  - id: engr.data-structures.singly-linked-lists
+    name: Implementing a singly linked list
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.abstract-data-types
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.programming.class-composition
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Build nodes with next references
+        key_prerequisites: [engr.data-structures.abstract-data-types, engr.programming.class-composition]
+      - id: kp2
+        can_do: Traverse a linked list
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+      - id: kp3
+        can_do: Insert at the head
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+      - id: kp4
+        can_do: Find the length of a linked list
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+  - id: engr.data-structures.linked-list-operations
+    name: Inserting and deleting in linked lists
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.singly-linked-lists
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert after a given node
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp2
+        can_do: Delete a node by value
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp3
+        can_do: Use a dummy head node
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp4
+        can_do: Reverse a linked list
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+  - id: engr.data-structures.doubly-linked-lists
+    name: Implementing a doubly linked list
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.linked-list-operations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build nodes with previous and next references
+        key_prerequisites: [engr.data-structures.linked-list-operations]
+      - id: kp2
+        can_do: Insert and delete in constant time
+        key_prerequisites: [engr.data-structures.linked-list-operations]
+      - id: kp3
+        can_do: Use sentinel nodes
+        key_prerequisites: [engr.data-structures.linked-list-operations]
+      - id: kp4
+        can_do: Traverse in both directions
+        key_prerequisites: [engr.data-structures.linked-list-operations]
+  - id: engr.data-structures.array-vs-linked-list
+    name: Comparing arrays and linked lists
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dynamic-arrays
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.data-structures.linked-list-operations
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare access costs
+        key_prerequisites: [engr.data-structures.dynamic-arrays]
+      - id: kp2
+        can_do: Compare insertion costs
+        key_prerequisites: [engr.data-structures.dynamic-arrays, engr.data-structures.linked-list-operations]
+      - id: kp3
+        can_do: Compare memory overhead
+        key_prerequisites: [engr.data-structures.dynamic-arrays, engr.data-structures.linked-list-operations]
+      - id: kp4
+        can_do: Choose a list for a workload
+        key_prerequisites: [engr.data-structures.dynamic-arrays, engr.data-structures.linked-list-operations]
+  - id: engr.data-structures.iterators
+    name: Implementing iterators
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.singly-linked-lists
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement an iterator class
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp2
+        can_do: Use generators to iterate
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp3
+        can_do: Iterate over a custom container
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp4
+        can_do: Explain iterator invalidation
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+  - id: engr.data-structures.stacks
+    name: Implementing a stack
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.array-vs-linked-list
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement a stack with an array
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp2
+        can_do: Implement a stack with a linked list
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp3
+        can_do: Find costs of stack operations
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp4
+        can_do: Trace push and pop sequences
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+  - id: engr.data-structures.stack-applications
+    name: Using stacks for matching and evaluation
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.stacks
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match brackets with a stack
+        key_prerequisites: [engr.data-structures.stacks]
+      - id: kp2
+        can_do: Evaluate postfix expressions
+        key_prerequisites: [engr.data-structures.stacks]
+      - id: kp3
+        can_do: Convert infix to postfix
+        key_prerequisites: [engr.data-structures.stacks]
+      - id: kp4
+        can_do: Undo actions with a stack
+        key_prerequisites: [engr.data-structures.stacks]
+  - id: engr.data-structures.queues
+    name: Implementing a queue
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.array-vs-linked-list
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement a queue with a linked list
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp2
+        can_do: Find costs of queue operations
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp3
+        can_do: Trace enqueue and dequeue sequences
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+      - id: kp4
+        can_do: Compare queues and stacks
+        key_prerequisites: [engr.data-structures.array-vs-linked-list]
+  - id: engr.data-structures.circular-buffers
+    name: Implementing a circular buffer
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.queues
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.data-structures.dynamic-arrays
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Implement a queue with a circular array
+        key_prerequisites: [engr.data-structures.queues, engr.data-structures.dynamic-arrays]
+      - id: kp2
+        can_do: Detect full and empty buffers
+        key_prerequisites: [engr.data-structures.queues]
+      - id: kp3
+        can_do: Wrap indices with remainder
+        key_prerequisites: [engr.data-structures.dynamic-arrays]
+      - id: kp4
+        can_do: Resize a circular buffer
+        key_prerequisites: [engr.data-structures.dynamic-arrays]
+  - id: engr.data-structures.deques
+    name: Using double-ended queues
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.queues
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a double-ended queue
+        key_prerequisites: [engr.data-structures.queues]
+      - id: kp2
+        can_do: Implement a deque
+        key_prerequisites: [engr.data-structures.queues]
+      - id: kp3
+        can_do: Use a deque as stack and queue
+        key_prerequisites: [engr.data-structures.queues]
+      - id: kp4
+        can_do: Solve sliding-window problems with a deque
+        key_prerequisites: [engr.data-structures.queues]
+  - id: engr.data-structures.recursive-structures
+    name: Writing recursion over linked structures
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.singly-linked-lists
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.programming.recursion-on-lists
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write recursive linked-list functions
+        key_prerequisites: [engr.data-structures.singly-linked-lists, engr.programming.recursion-on-lists]
+      - id: kp2
+        can_do: Define structures recursively
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+      - id: kp3
+        can_do: Reverse a list recursively
+        key_prerequisites: [engr.data-structures.singly-linked-lists, engr.programming.recursion-on-lists]
+      - id: kp4
+        can_do: Compare recursive and iterative list code
+        key_prerequisites: [engr.data-structures.singly-linked-lists]
+  - id: engr.data-structures.quicksort
+    name: Implementing quicksort
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.programming.merge-sort-code
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.data-structures.recurrence-runtime
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Partition an array around a pivot
+        key_prerequisites: [engr.programming.merge-sort-code]
+      - id: kp2
+        can_do: Implement quicksort
+        key_prerequisites: [engr.programming.merge-sort-code, engr.data-structures.recurrence-runtime]
+      - id: kp3
+        can_do: Find best and worst cases of quicksort
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+      - id: kp4
+        can_do: Choose pivots to avoid the worst case
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+  - id: engr.data-structures.sort-comparisons
+    name: Comparing sorting algorithms
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.quicksort
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.best-worst-average-case
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare sorting algorithms by running time
+        key_prerequisites: [engr.data-structures.quicksort, engr.data-structures.best-worst-average-case]
+      - id: kp2
+        can_do: Compare sorts by memory use
+        key_prerequisites: [engr.data-structures.quicksort]
+      - id: kp3
+        can_do: Choose a sort for nearly sorted data
+        key_prerequisites: [engr.data-structures.best-worst-average-case]
+      - id: kp4
+        can_do: Choose a sort for large data
+        key_prerequisites: [engr.data-structures.quicksort, engr.data-structures.best-worst-average-case]
+  - id: engr.data-structures.comparison-sort-lower-bound
+    name: Explaining the lower bound for comparison sorting
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.sort-comparisons
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a decision tree for sorting
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp2
+        can_do: Explain the n log n lower bound
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp3
+        can_do: Relate decision-tree height to comparisons
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp4
+        can_do: Explain why faster sorts need other operations
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+  - id: engr.data-structures.counting-and-radix-sort
+    name: Sorting in linear time with counting and radix sort
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.comparison-sort-lower-bound
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement counting sort
+        key_prerequisites: [engr.data-structures.comparison-sort-lower-bound]
+      - id: kp2
+        can_do: Implement radix sort
+        key_prerequisites: [engr.data-structures.comparison-sort-lower-bound]
+      - id: kp3
+        can_do: Find running times of linear sorts
+        key_prerequisites: [engr.data-structures.comparison-sort-lower-bound]
+      - id: kp4
+        can_do: Choose when linear sorts apply
+        key_prerequisites: [engr.data-structures.comparison-sort-lower-bound]
+  - id: engr.data-structures.stable-sorting
+    name: Using stable sorting
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.sort-comparisons
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define stable sorting
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp2
+        can_do: Test whether a sort is stable
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp3
+        can_do: Sort by several keys with stable sorts
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+      - id: kp4
+        can_do: Choose stable sorts for records
+        key_prerequisites: [engr.data-structures.sort-comparisons]
+  - id: engr.data-structures.binary-tree-nodes
+    name: Implementing binary tree nodes
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.recursive-structures
+        encompassing: 0.45
+        confidence: high
+      - topic: math.discrete.rooted-binary-trees
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build binary tree nodes
+        key_prerequisites: [engr.data-structures.recursive-structures]
+      - id: kp2
+        can_do: Find tree height recursively
+        key_prerequisites: [engr.data-structures.recursive-structures, math.discrete.rooted-binary-trees]
+      - id: kp3
+        can_do: Count nodes and leaves
+        key_prerequisites: [engr.data-structures.recursive-structures, math.discrete.rooted-binary-trees]
+      - id: kp4
+        can_do: Check whether two trees are equal
+        key_prerequisites: [engr.data-structures.recursive-structures]
+  - id: engr.data-structures.tree-traversal-code
+    name: Coding tree traversals
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.binary-tree-nodes
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.tree-traversals
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code preorder, inorder and postorder traversal
+        key_prerequisites: [engr.data-structures.binary-tree-nodes, math.discrete.tree-traversals]
+      - id: kp2
+        can_do: Code level-order traversal
+        key_prerequisites: [engr.data-structures.binary-tree-nodes]
+      - id: kp3
+        can_do: Rebuild a tree from traversals
+        key_prerequisites: [math.discrete.tree-traversals]
+      - id: kp4
+        can_do: Use traversals to solve problems
+        key_prerequisites: [engr.data-structures.binary-tree-nodes, math.discrete.tree-traversals]
+  - id: engr.data-structures.bst-implementation
+    name: Implementing a binary search tree
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.tree-traversal-code
+        encompassing: 0.45
+        confidence: high
+      - topic: math.discrete.binary-search-trees
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert into a binary search tree
+        key_prerequisites: [engr.data-structures.tree-traversal-code, math.discrete.binary-search-trees]
+      - id: kp2
+        can_do: Search a binary search tree
+        key_prerequisites: [math.discrete.binary-search-trees]
+      - id: kp3
+        can_do: Find minimum, maximum and successor
+        key_prerequisites: [engr.data-structures.tree-traversal-code]
+      - id: kp4
+        can_do: List keys in order
+        key_prerequisites: [engr.data-structures.tree-traversal-code]
+  - id: engr.data-structures.bst-deletion
+    name: Deleting from a binary search tree
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bst-implementation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Delete a leaf
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp2
+        can_do: Delete a node with one child
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp3
+        can_do: Delete a node with two children
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp4
+        can_do: Trace a sequence of deletions
+        key_prerequisites: [engr.data-structures.bst-implementation]
+  - id: engr.data-structures.bst-height-analysis
+    name: Relating tree height to running time
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bst-implementation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate operation cost to tree height
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp2
+        can_do: Find heights of balanced and degenerate trees
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp3
+        can_do: Predict tree shape from insertion order
+        key_prerequisites: [engr.data-structures.bst-implementation]
+      - id: kp4
+        can_do: Explain the need for balancing
+        key_prerequisites: [engr.data-structures.bst-implementation]
+  - id: engr.data-structures.avl-trees
+    name: Balancing with AVL rotations
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bst-height-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the AVL balance condition
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp2
+        can_do: Perform single rotations
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp3
+        can_do: Perform double rotations
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp4
+        can_do: Insert into an AVL tree
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+  - id: engr.data-structures.red-black-trees
+    name: Explaining red-black trees
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.avl-trees
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State red-black tree properties
+        key_prerequisites: [engr.data-structures.avl-trees]
+      - id: kp2
+        can_do: Recolor and rotate after insertion
+        key_prerequisites: [engr.data-structures.avl-trees]
+      - id: kp3
+        can_do: Relate red-black trees to height bounds
+        key_prerequisites: [engr.data-structures.avl-trees]
+      - id: kp4
+        can_do: Compare red-black and AVL trees
+        key_prerequisites: [engr.data-structures.avl-trees]
+  - id: engr.data-structures.b-trees
+    name: Using B-trees
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bst-height-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe B-tree node structure
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp2
+        can_do: Search a B-tree
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp3
+        can_do: Insert with node splitting
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+      - id: kp4
+        can_do: Explain why B-trees suit disk storage
+        key_prerequisites: [engr.data-structures.bst-height-analysis]
+  - id: engr.data-structures.tries
+    name: Implementing tries
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.binary-tree-nodes
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.programming.dictionaries
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Insert words into a trie
+        key_prerequisites: [engr.data-structures.binary-tree-nodes]
+      - id: kp2
+        can_do: Search for words and prefixes
+        key_prerequisites: [engr.data-structures.binary-tree-nodes]
+      - id: kp3
+        can_do: Implement autocomplete with a trie
+        key_prerequisites: [engr.data-structures.binary-tree-nodes, engr.programming.dictionaries]
+      - id: kp4
+        can_do: Compare tries with hash tables
+        key_prerequisites: [engr.programming.dictionaries]
+  - id: engr.data-structures.binary-heaps
+    name: Implementing a binary heap
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.binary-tree-nodes
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.dynamic-arrays
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the heap property
+        key_prerequisites: [engr.data-structures.binary-tree-nodes]
+      - id: kp2
+        can_do: Store a heap in an array
+        key_prerequisites: [engr.data-structures.dynamic-arrays]
+      - id: kp3
+        can_do: Find parent and child indices
+        key_prerequisites: [engr.data-structures.dynamic-arrays]
+      - id: kp4
+        can_do: Check whether an array is a heap
+        key_prerequisites: [engr.data-structures.binary-tree-nodes]
+  - id: engr.data-structures.heap-operations
+    name: Inserting and removing from a heap
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.binary-heaps
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert with sift-up
+        key_prerequisites: [engr.data-structures.binary-heaps]
+      - id: kp2
+        can_do: Remove the minimum with sift-down
+        key_prerequisites: [engr.data-structures.binary-heaps]
+      - id: kp3
+        can_do: Find costs of heap operations
+        key_prerequisites: [engr.data-structures.binary-heaps]
+      - id: kp4
+        can_do: Trace heap operations
+        key_prerequisites: [engr.data-structures.binary-heaps]
+  - id: engr.data-structures.heapify
+    name: Building a heap in linear time
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.heap-operations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a heap bottom-up
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp2
+        can_do: Explain linear time of heapify
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp3
+        can_do: Compare heapify with repeated insertion
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp4
+        can_do: Trace heapify
+        key_prerequisites: [engr.data-structures.heap-operations]
+  - id: engr.data-structures.heapsort
+    name: Sorting with a heap
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.heapify
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement heapsort
+        key_prerequisites: [engr.data-structures.heapify]
+      - id: kp2
+        can_do: Trace heapsort
+        key_prerequisites: [engr.data-structures.heapify]
+      - id: kp3
+        can_do: Find running time of heapsort
+        key_prerequisites: [engr.data-structures.heapify]
+      - id: kp4
+        can_do: Compare heapsort with other sorts
+        key_prerequisites: [engr.data-structures.heapify]
+  - id: engr.data-structures.priority-queue-applications
+    name: Using priority queues
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.heap-operations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule tasks with a priority queue
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp2
+        can_do: Merge sorted lists with a heap
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp3
+        can_do: Find the k largest values
+        key_prerequisites: [engr.data-structures.heap-operations]
+      - id: kp4
+        can_do: Simulate events in time order
+        key_prerequisites: [engr.data-structures.heap-operations]
+  - id: engr.data-structures.hash-functions
+    name: Designing hash functions
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.abstract-data-types
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.modular-arithmetic
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design hash functions for integers
+        key_prerequisites: [engr.data-structures.abstract-data-types, math.discrete.modular-arithmetic]
+      - id: kp2
+        can_do: Design hash functions for strings
+        key_prerequisites: [engr.data-structures.abstract-data-types, math.discrete.modular-arithmetic]
+      - id: kp3
+        can_do: Explain collisions
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+      - id: kp4
+        can_do: Judge hash function quality
+        key_prerequisites: [engr.data-structures.abstract-data-types]
+  - id: engr.data-structures.separate-chaining
+    name: Resolving collisions by chaining
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.hash-functions
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.data-structures.singly-linked-lists
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert and search with chaining
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp2
+        can_do: Delete with chaining
+        key_prerequisites: [engr.data-structures.hash-functions, engr.data-structures.singly-linked-lists]
+      - id: kp3
+        can_do: Find expected chain length
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp4
+        can_do: Trace a chained hash table
+        key_prerequisites: [engr.data-structures.hash-functions, engr.data-structures.singly-linked-lists]
+  - id: engr.data-structures.open-addressing
+    name: Resolving collisions by open addressing
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.hash-functions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Insert with linear probing
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp2
+        can_do: Use quadratic probing and double hashing
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp3
+        can_do: Delete with tombstones
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp4
+        can_do: Explain clustering
+        key_prerequisites: [engr.data-structures.hash-functions]
+  - id: engr.data-structures.load-factor-and-resizing
+    name: Resizing hash tables by load factor
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.separate-chaining
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.data-structures.open-addressing
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.data-structures.amortized-analysis
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute load factor
+        key_prerequisites: [engr.data-structures.separate-chaining, engr.data-structures.open-addressing]
+      - id: kp2
+        can_do: Resize and rehash a table
+        key_prerequisites: [engr.data-structures.separate-chaining, engr.data-structures.open-addressing]
+      - id: kp3
+        can_do: Find amortized cost of resizing
+        key_prerequisites: [engr.data-structures.amortized-analysis]
+      - id: kp4
+        can_do: Choose a resize threshold
+        key_prerequisites: [engr.data-structures.separate-chaining, engr.data-structures.open-addressing]
+  - id: engr.data-structures.hash-maps-and-sets
+    name: Implementing maps and sets with hashing
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.load-factor-and-resizing
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement a hash map
+        key_prerequisites: [engr.data-structures.load-factor-and-resizing]
+      - id: kp2
+        can_do: Implement a hash set
+        key_prerequisites: [engr.data-structures.load-factor-and-resizing]
+      - id: kp3
+        can_do: Iterate over a hash map
+        key_prerequisites: [engr.data-structures.load-factor-and-resizing]
+      - id: kp4
+        can_do: Use hashable keys
+        key_prerequisites: [engr.data-structures.load-factor-and-resizing]
+  - id: engr.data-structures.choosing-maps
+    name: Choosing between hash maps and search trees
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.hash-maps-and-sets
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.avl-trees
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare hash maps and search trees
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets, engr.data-structures.avl-trees]
+      - id: kp2
+        can_do: Choose a structure for ordered queries
+        key_prerequisites: [engr.data-structures.avl-trees]
+      - id: kp3
+        can_do: Choose a structure for fast lookup
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+      - id: kp4
+        can_do: Explain worst-case risks of hashing
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+  - id: engr.data-structures.graph-representations-code
+    name: Implementing adjacency lists and matrices
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.programming.dictionaries
+        encompassing: 0.35
+        confidence: high
+      - topic: math.discrete.graph-representations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build an adjacency list
+        key_prerequisites: [engr.programming.dictionaries, math.discrete.graph-representations]
+      - id: kp2
+        can_do: Build an adjacency matrix
+        key_prerequisites: [math.discrete.graph-representations]
+      - id: kp3
+        can_do: Compare representations by cost
+        key_prerequisites: [math.discrete.graph-representations]
+      - id: kp4
+        can_do: Read a graph from a file
+        key_prerequisites: [engr.programming.dictionaries]
+  - id: engr.data-structures.bfs-code
+    name: Coding breadth-first search
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.graph-representations-code
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.queues
+        encompassing: 0.25
+        confidence: high
+      - topic: math.discrete.breadth-depth-search
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code breadth-first search with a queue
+        key_prerequisites: [engr.data-structures.graph-representations-code, engr.data-structures.queues, math.discrete.breadth-depth-search]
+      - id: kp2
+        can_do: Find shortest path lengths in unweighted graphs
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp3
+        can_do: Rebuild paths from parent links
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp4
+        can_do: Find running time of BFS
+        key_prerequisites: [math.discrete.breadth-depth-search]
+  - id: engr.data-structures.dfs-code
+    name: Coding depth-first search
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.graph-representations-code
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.data-structures.stacks
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code recursive depth-first search
+        key_prerequisites: [engr.data-structures.graph-representations-code, engr.data-structures.stacks]
+      - id: kp2
+        can_do: Code iterative depth-first search
+        key_prerequisites: [engr.data-structures.graph-representations-code, engr.data-structures.stacks]
+      - id: kp3
+        can_do: Record discovery and finish times
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp4
+        can_do: Find running time of DFS
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+  - id: engr.data-structures.connected-components-code
+    name: Finding connected components in code
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bfs-code
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.data-structures.dfs-code
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Label components with BFS
+        key_prerequisites: [engr.data-structures.bfs-code]
+      - id: kp2
+        can_do: Label components with DFS
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp3
+        can_do: Count components
+        key_prerequisites: [engr.data-structures.bfs-code, engr.data-structures.dfs-code]
+      - id: kp4
+        can_do: Test connectivity
+        key_prerequisites: [engr.data-structures.bfs-code, engr.data-structures.dfs-code]
+  - id: engr.data-structures.cycle-detection
+    name: Detecting cycles in graphs
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dfs-code
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect cycles in undirected graphs
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp2
+        can_do: Detect cycles in directed graphs
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp3
+        can_do: Use colors to track DFS state
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp4
+        can_do: Report the edges of a cycle
+        key_prerequisites: [engr.data-structures.dfs-code]
+  - id: engr.data-structures.topological-sort-code
+    name: Coding a topological sort
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dfs-code
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.topological-sort
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code topological sort with DFS
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp2
+        can_do: Code topological sort with in-degrees
+        key_prerequisites: [math.discrete.topological-sort]
+      - id: kp3
+        can_do: Detect when no ordering exists
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp4
+        can_do: Order tasks with dependencies
+        key_prerequisites: [engr.data-structures.dfs-code, math.discrete.topological-sort]
+  - id: engr.data-structures.dijkstra-code
+    name: Coding Dijkstra's algorithm with a heap
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.bfs-code
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.priority-queue-applications
+        encompassing: 0.4
+        confidence: high
+      - topic: math.discrete.shortest-paths
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code Dijkstra's algorithm with a heap
+        key_prerequisites: [engr.data-structures.bfs-code, engr.data-structures.priority-queue-applications]
+      - id: kp2
+        can_do: Rebuild shortest paths
+        key_prerequisites: [engr.data-structures.bfs-code]
+      - id: kp3
+        can_do: Find running time with a heap
+        key_prerequisites: [engr.data-structures.priority-queue-applications]
+      - id: kp4
+        can_do: Explain why negative edges fail
+        key_prerequisites: [math.discrete.shortest-paths]
+  - id: engr.data-structures.union-find
+    name: Implementing union-find
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.graph-representations-code
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement union and find
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp2
+        can_do: Use union by rank
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp3
+        can_do: Use path compression
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp4
+        can_do: Find connected components with union-find
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+  - id: engr.data-structures.mst-code
+    name: Coding minimum spanning tree algorithms
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.union-find
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.priority-queue-applications
+        encompassing: 0.35
+        confidence: high
+      - topic: math.discrete.minimum-spanning-trees
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Code Kruskal's algorithm with union-find
+        key_prerequisites: [engr.data-structures.union-find]
+      - id: kp2
+        can_do: Code Prim's algorithm with a heap
+        key_prerequisites: [engr.data-structures.priority-queue-applications]
+      - id: kp3
+        can_do: Compare running times of Kruskal and Prim
+        key_prerequisites: [engr.data-structures.union-find, engr.data-structures.priority-queue-applications]
+      - id: kp4
+        can_do: Find a minimum spanning tree of a network
+        key_prerequisites: [math.discrete.minimum-spanning-trees]
+  - id: engr.data-structures.choosing-data-structures
+    name: Choosing a data structure for a problem
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.choosing-maps
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.priority-queue-applications
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.graph-representations-code
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a structure from required operations
+        key_prerequisites: [engr.data-structures.choosing-maps]
+      - id: kp2
+        can_do: Choose structures for scheduling problems
+        key_prerequisites: [engr.data-structures.priority-queue-applications]
+      - id: kp3
+        can_do: Choose structures for graph problems
+        key_prerequisites: [engr.data-structures.graph-representations-code]
+      - id: kp4
+        can_do: Justify a design by operation costs
+        key_prerequisites: [engr.data-structures.choosing-maps, engr.data-structures.priority-queue-applications, engr.data-structures.graph-representations-code]
+  - id: engr.data-structures.caching-structures
+    name: Building an LRU cache
+    subject: engr
+    course: engr.data-structures
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.doubly-linked-lists
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.data-structures.hash-maps-and-sets
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine a hash map and a linked list
+        key_prerequisites: [engr.data-structures.doubly-linked-lists, engr.data-structures.hash-maps-and-sets]
+      - id: kp2
+        can_do: Implement an LRU cache
+        key_prerequisites: [engr.data-structures.doubly-linked-lists, engr.data-structures.hash-maps-and-sets]
+      - id: kp3
+        can_do: Find costs of cache operations
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+      - id: kp4
+        can_do: Evict the least recently used item
+        key_prerequisites: [engr.data-structures.doubly-linked-lists]

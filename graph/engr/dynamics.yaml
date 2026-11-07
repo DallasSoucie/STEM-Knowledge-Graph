@@ -1,0 +1,1153 @@
+course: engr.dynamics
+topics:
+  - id: engr.dynamics.rectilinear-kinematics-review
+    name: Solving rectilinear motion with variable acceleration
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-dependent-acceleration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find motion from acceleration given as a function of time
+        key_prerequisites: [physics.mechanics.position-dependent-acceleration]
+      - id: kp2
+        can_do: Find motion from acceleration given as a function of velocity
+        key_prerequisites: [physics.mechanics.position-dependent-acceleration]
+      - id: kp3
+        can_do: Find motion from acceleration given as a function of position
+        key_prerequisites: [physics.mechanics.position-dependent-acceleration]
+      - id: kp4
+        can_do: Choose the right integration form
+        key_prerequisites: [physics.mechanics.position-dependent-acceleration]
+  - id: engr.dynamics.erratic-motion-graphs
+    name: Constructing motion from piecewise graphs
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rectilinear-kinematics-review
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build velocity graphs from acceleration graphs
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp2
+        can_do: Build position graphs from velocity graphs
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp3
+        can_do: Find distance travelled from piecewise graphs
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp4
+        can_do: Find times from motion graphs
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+  - id: engr.dynamics.curvilinear-rectangular
+    name: Describing curvilinear motion in rectangular components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.integrating-vector-motion
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity and acceleration from x-y-z coordinates
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+      - id: kp2
+        can_do: Find a path from component motions
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+      - id: kp3
+        can_do: Solve projectile problems with vectors
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+      - id: kp4
+        can_do: Find speed and direction at an instant
+        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+  - id: engr.dynamics.normal-tangential-kinematics
+    name: Using normal and tangential components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.curvilinear-rectangular
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.curvature
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tangential and normal acceleration
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+      - id: kp2
+        can_do: Find radius of curvature of a path
+        key_prerequisites: [math.calc3.curvature]
+      - id: kp3
+        can_do: Analyze motion on curved roads
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, math.calc3.curvature]
+      - id: kp4
+        can_do: Find acceleration magnitude on a curve
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+  - id: engr.dynamics.polar-cylindrical-kinematics
+    name: Using radial and transverse components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.curvilinear-rectangular
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc2.polar-derivatives
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find radial and transverse velocity
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, math.calc2.polar-derivatives]
+      - id: kp2
+        can_do: Find radial and transverse acceleration
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, math.calc2.polar-derivatives]
+      - id: kp3
+        can_do: Analyze motion along rotating arms
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+      - id: kp4
+        can_do: Use cylindrical components for helical paths
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+  - id: engr.dynamics.dependent-motion
+    name: Analyzing dependent motion of connected particles
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rectilinear-kinematics-review
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write position constraints for pulley systems
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp2
+        can_do: Find dependent velocities
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp3
+        can_do: Find dependent accelerations
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+      - id: kp4
+        can_do: Solve systems with several cords
+        key_prerequisites: [engr.dynamics.rectilinear-kinematics-review]
+  - id: engr.dynamics.relative-motion-translating-axes
+    name: Using relative motion with translating axes
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.curvilinear-rectangular
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.relative-position-vectors
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find relative velocity of two particles
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, physics.mechanics.relative-position-vectors]
+      - id: kp2
+        can_do: Find relative acceleration
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, physics.mechanics.relative-position-vectors]
+      - id: kp3
+        can_do: Solve river and wind problems
+        key_prerequisites: [physics.mechanics.relative-position-vectors]
+      - id: kp4
+        can_do: Find apparent motion from a moving vehicle
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+  - id: engr.dynamics.equations-of-motion-rectangular
+    name: Writing equations of motion in rectangular components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.curvilinear-rectangular
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.particle-equilibrium-3d
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations of motion for particles
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular, engr.statics.particle-equilibrium-3d]
+      - id: kp2
+        can_do: Solve connected particle systems
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+      - id: kp3
+        can_do: Find accelerations with free-body and kinetic diagrams
+        key_prerequisites: [engr.statics.particle-equilibrium-3d]
+      - id: kp4
+        can_do: Solve particles with variable forces
+        key_prerequisites: [engr.dynamics.curvilinear-rectangular]
+  - id: engr.dynamics.equations-of-motion-nt
+    name: Writing equations of motion in normal and tangential components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.normal-tangential-kinematics
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.dynamics.equations-of-motion-rectangular
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write normal and tangential equations of motion
+        key_prerequisites: [engr.dynamics.normal-tangential-kinematics, engr.dynamics.equations-of-motion-rectangular]
+      - id: kp2
+        can_do: Find speed limits on curves
+        key_prerequisites: [engr.dynamics.normal-tangential-kinematics]
+      - id: kp3
+        can_do: Find forces on particles in vertical circles
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+      - id: kp4
+        can_do: Find tension in swinging cords
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+  - id: engr.dynamics.equations-of-motion-polar
+    name: Writing equations of motion in polar components
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.polar-cylindrical-kinematics
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.dynamics.equations-of-motion-rectangular
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write polar equations of motion
+        key_prerequisites: [engr.dynamics.polar-cylindrical-kinematics, engr.dynamics.equations-of-motion-rectangular]
+      - id: kp2
+        can_do: Find forces on particles in slotted arms
+        key_prerequisites: [engr.dynamics.polar-cylindrical-kinematics]
+      - id: kp3
+        can_do: Find forces for spiral paths
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+      - id: kp4
+        can_do: Find normal forces in rotating tubes
+        key_prerequisites: [engr.dynamics.polar-cylindrical-kinematics, engr.dynamics.equations-of-motion-rectangular]
+  - id: engr.dynamics.kinetics-with-friction
+    name: Solving kinetics problems with friction
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.equations-of-motion-rectangular
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.dry-friction
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve sliding particles with friction
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular, engr.statics.dry-friction]
+      - id: kp2
+        can_do: Check whether a particle slips
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp3
+        can_do: Solve connected bodies with friction
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+      - id: kp4
+        can_do: Find time to stop with friction
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular, engr.statics.dry-friction]
+  - id: engr.dynamics.central-force-motion
+    name: Analyzing central-force motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.equations-of-motion-polar
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.effective-potential-orbits
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for central-force motion
+        key_prerequisites: [engr.dynamics.equations-of-motion-polar]
+      - id: kp2
+        can_do: Find orbital speed and period
+        key_prerequisites: [physics.mechanics.effective-potential-orbits]
+      - id: kp3
+        can_do: Find escape and transfer speeds
+        key_prerequisites: [engr.dynamics.equations-of-motion-polar, physics.mechanics.effective-potential-orbits]
+      - id: kp4
+        can_do: Relate angular momentum to orbits
+        key_prerequisites: [engr.dynamics.equations-of-motion-polar]
+  - id: engr.dynamics.particle-work-energy
+    name: Applying work and energy to particles
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.equations-of-motion-nt
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.work-along-a-path
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work of springs, gravity and friction
+        key_prerequisites: [physics.mechanics.work-along-a-path]
+      - id: kp2
+        can_do: Apply work-energy to a particle
+        key_prerequisites: [engr.dynamics.equations-of-motion-nt, physics.mechanics.work-along-a-path]
+      - id: kp3
+        can_do: Find speed after a path
+        key_prerequisites: [engr.dynamics.equations-of-motion-nt]
+      - id: kp4
+        can_do: Find stopping distances
+        key_prerequisites: [engr.dynamics.equations-of-motion-nt, physics.mechanics.work-along-a-path]
+  - id: engr.dynamics.particle-energy-conservation
+    name: Using energy conservation with springs and gravity
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-work-energy
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply conservation of energy with springs
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp2
+        can_do: Apply conservation on curved paths
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp3
+        can_do: Find positions where normal force vanishes
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp4
+        can_do: Solve systems of connected particles by energy
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+  - id: engr.dynamics.power-and-efficiency
+    name: Finding power and mechanical efficiency
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-work-energy
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find power from force and velocity
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp2
+        can_do: Find power needed to move a vehicle
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp3
+        can_do: Find mechanical efficiency
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+      - id: kp4
+        can_do: Find energy use of machines
+        key_prerequisites: [engr.dynamics.particle-work-energy]
+  - id: engr.dynamics.particle-impulse-momentum
+    name: Applying impulse and momentum to particles
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.equations-of-motion-rectangular
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.impulse-as-an-integral
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply impulse and momentum to particles
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular, physics.mechanics.impulse-as-an-integral]
+      - id: kp2
+        can_do: Find impulse of time-varying forces
+        key_prerequisites: [physics.mechanics.impulse-as-an-integral]
+      - id: kp3
+        can_do: Solve systems of particles by momentum
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular]
+      - id: kp4
+        can_do: Find average impact forces
+        key_prerequisites: [engr.dynamics.equations-of-motion-rectangular, physics.mechanics.impulse-as-an-integral]
+  - id: engr.dynamics.impact-problems
+    name: Solving direct and oblique impact
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-impulse-momentum
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.coefficient-of-restitution
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve direct central impact
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum, physics.mechanics.coefficient-of-restitution]
+      - id: kp2
+        can_do: Solve oblique impact
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum, physics.mechanics.coefficient-of-restitution]
+      - id: kp3
+        can_do: Find energy loss in impact
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+      - id: kp4
+        can_do: Solve bouncing problems
+        key_prerequisites: [physics.mechanics.coefficient-of-restitution]
+  - id: engr.dynamics.particle-angular-momentum
+    name: Applying angular impulse and momentum to particles
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-impulse-momentum
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.angular-momentum-of-a-particle
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular momentum of a particle
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp2
+        can_do: Apply angular impulse and momentum
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum, physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp3
+        can_do: Solve particles on strings with changing radius
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum, physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp4
+        can_do: Use conservation of angular momentum
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+  - id: engr.dynamics.steady-mass-flow
+    name: Finding forces from steady mass flow streams
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-impulse-momentum
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find forces from fluid jets on vanes
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+      - id: kp2
+        can_do: Find forces on pipe bends
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+      - id: kp3
+        can_do: Find thrust of jet engines
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+      - id: kp4
+        can_do: Find forces on conveyor belts
+        key_prerequisites: [engr.dynamics.particle-impulse-momentum]
+  - id: engr.dynamics.variable-mass-propulsion
+    name: Analyzing systems that gain or lose mass
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.steady-mass-flow
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.variable-mass-systems
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for gaining mass
+        key_prerequisites: [engr.dynamics.steady-mass-flow, physics.mechanics.variable-mass-systems]
+      - id: kp2
+        can_do: Write equations for losing mass
+        key_prerequisites: [engr.dynamics.steady-mass-flow, physics.mechanics.variable-mass-systems]
+      - id: kp3
+        can_do: Find rocket velocity
+        key_prerequisites: [physics.mechanics.variable-mass-systems]
+      - id: kp4
+        can_do: Solve chain and rope problems
+        key_prerequisites: [engr.dynamics.steady-mass-flow]
+  - id: engr.dynamics.choosing-a-method-particles
+    name: Choosing between force, energy and momentum methods
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.particle-energy-conservation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.impact-problems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose force, energy or momentum methods
+        key_prerequisites: [engr.dynamics.particle-energy-conservation, engr.dynamics.impact-problems]
+      - id: kp2
+        can_do: Combine methods in multistep problems
+        key_prerequisites: [engr.dynamics.particle-energy-conservation, engr.dynamics.impact-problems]
+      - id: kp3
+        can_do: Solve impact followed by sliding
+        key_prerequisites: [engr.dynamics.impact-problems]
+      - id: kp4
+        can_do: Solve pendulum impact problems
+        key_prerequisites: [engr.dynamics.particle-energy-conservation, engr.dynamics.impact-problems]
+  - id: engr.dynamics.rigid-translation-rotation
+    name: Describing translation and fixed-axis rotation
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-kinematics-with-calculus
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe rigid-body translation
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+      - id: kp2
+        can_do: Describe fixed-axis rotation
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+      - id: kp3
+        can_do: Find velocity and acceleration of points on a rotating body
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+      - id: kp4
+        can_do: Analyze gear and belt drives
+        key_prerequisites: [physics.mechanics.angular-kinematics-with-calculus]
+  - id: engr.dynamics.absolute-motion-analysis
+    name: Analyzing linkages by absolute motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rigid-translation-rotation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write position equations of a linkage
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+      - id: kp2
+        can_do: Differentiate to find angular velocity
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+      - id: kp3
+        can_do: Differentiate to find angular acceleration
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+      - id: kp4
+        can_do: Analyze slider-crank motion by differentiation
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+  - id: engr.dynamics.relative-velocity-rigid
+    name: Finding velocities with relative motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rigid-translation-rotation
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.angular-velocity-vectors
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write relative velocity equations
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation, physics.mechanics.angular-velocity-vectors]
+      - id: kp2
+        can_do: Solve with vector cross products
+        key_prerequisites: [physics.mechanics.angular-velocity-vectors]
+      - id: kp3
+        can_do: Find velocities in rolling bodies
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+      - id: kp4
+        can_do: Find velocities in two-bar linkages
+        key_prerequisites: [engr.dynamics.rigid-translation-rotation]
+  - id: engr.dynamics.instant-center
+    name: Finding velocities with the instantaneous center
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.relative-velocity-rigid
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Locate the instantaneous centre of zero velocity
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid]
+      - id: kp2
+        can_do: Find velocities from the instant centre
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid]
+      - id: kp3
+        can_do: Find instant centres of rolling wheels
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid]
+      - id: kp4
+        can_do: Find instant centres in linkages
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid]
+  - id: engr.dynamics.relative-acceleration-rigid
+    name: Finding accelerations with relative motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.relative-velocity-rigid
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.acceleration-on-a-rigid-body
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write relative acceleration equations
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid, physics.mechanics.acceleration-on-a-rigid-body]
+      - id: kp2
+        can_do: Find tangential and normal parts of relative acceleration
+        key_prerequisites: [physics.mechanics.acceleration-on-a-rigid-body]
+      - id: kp3
+        can_do: Find accelerations of rolling bodies
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid]
+      - id: kp4
+        can_do: Solve two-unknown acceleration problems
+        key_prerequisites: [engr.dynamics.relative-velocity-rigid, physics.mechanics.acceleration-on-a-rigid-body]
+  - id: engr.dynamics.linkage-velocity-analysis
+    name: Finding velocities in four-bar and slider-crank linkages
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.instant-center
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocities in four-bar linkages
+        key_prerequisites: [engr.dynamics.instant-center]
+      - id: kp2
+        can_do: Find velocities in slider-crank mechanisms
+        key_prerequisites: [engr.dynamics.instant-center]
+      - id: kp3
+        can_do: Find velocity ratios of linkages
+        key_prerequisites: [engr.dynamics.instant-center]
+      - id: kp4
+        can_do: Find velocities in multiloop linkages
+        key_prerequisites: [engr.dynamics.instant-center]
+  - id: engr.dynamics.linkage-acceleration-analysis
+    name: Finding accelerations in linkages
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.relative-acceleration-rigid
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.linkage-velocity-analysis
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find accelerations in four-bar linkages
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid, engr.dynamics.linkage-velocity-analysis]
+      - id: kp2
+        can_do: Find accelerations in slider-crank mechanisms
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid, engr.dynamics.linkage-velocity-analysis]
+      - id: kp3
+        can_do: Find angular accelerations of links
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid]
+      - id: kp4
+        can_do: Check linkage results with simulation
+        key_prerequisites: [engr.dynamics.linkage-velocity-analysis]
+  - id: engr.dynamics.rotating-axes-kinematics
+    name: Using rotating reference frames
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.relative-acceleration-rigid
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.rotating-frames
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write velocity with rotating axes
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid, physics.mechanics.rotating-frames]
+      - id: kp2
+        can_do: Write acceleration with Coriolis terms
+        key_prerequisites: [physics.mechanics.rotating-frames]
+      - id: kp3
+        can_do: Analyze sliding collars on rotating rods
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid]
+      - id: kp4
+        can_do: Analyze slotted link mechanisms
+        key_prerequisites: [engr.dynamics.relative-acceleration-rigid, physics.mechanics.rotating-frames]
+  - id: engr.dynamics.planar-equations-of-motion
+    name: Writing planar equations of motion for rigid bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-composite-bodies
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.statics.free-body-diagrams-rigid
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write planar equations of motion
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies, engr.statics.free-body-diagrams-rigid]
+      - id: kp2
+        can_do: Draw kinetic diagrams for rigid bodies
+        key_prerequisites: [engr.statics.free-body-diagrams-rigid]
+      - id: kp3
+        can_do: Choose moment points for rigid bodies
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies]
+      - id: kp4
+        can_do: Relate force and moment equations to accelerations
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies, engr.statics.free-body-diagrams-rigid]
+  - id: engr.dynamics.rigid-translation-kinetics
+    name: Solving rigid bodies in translation
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.planar-equations-of-motion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve translating rigid bodies
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+      - id: kp2
+        can_do: Find wheel reactions of accelerating vehicles
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+      - id: kp3
+        can_do: Check tipping of translating bodies
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+      - id: kp4
+        can_do: Solve curvilinear translation
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+  - id: engr.dynamics.fixed-axis-kinetics
+    name: Solving rigid bodies rotating about a fixed axis
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.planar-equations-of-motion
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve fixed-axis rotation problems
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion, physics.mechanics.fixed-axis-dynamics]
+      - id: kp2
+        can_do: Find pin reactions of rotating bodies
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+      - id: kp3
+        can_do: Solve pulley and drum systems
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp4
+        can_do: Find the centre of percussion
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+  - id: engr.dynamics.general-plane-motion-kinetics
+    name: Solving rigid bodies in general plane motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.fixed-axis-kinetics
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.dynamics.relative-acceleration-rigid
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve rolling without slipping
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics, engr.dynamics.relative-acceleration-rigid]
+      - id: kp2
+        can_do: Solve rolling with slipping
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics]
+      - id: kp3
+        can_do: Solve bodies in general plane motion
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics, engr.dynamics.relative-acceleration-rigid]
+      - id: kp4
+        can_do: Find friction needed for rolling
+        key_prerequisites: [engr.dynamics.fixed-axis-kinetics]
+  - id: engr.dynamics.connected-rigid-bodies
+    name: Solving systems of connected rigid bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.general-plane-motion-kinetics
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve systems of connected bodies
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp2
+        can_do: Solve linkages with dynamic loads
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp3
+        can_do: Find forces in mechanisms in motion
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp4
+        can_do: Solve multibody vehicle problems
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+  - id: engr.dynamics.rigid-work-energy
+    name: Applying work and energy to rigid bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.general-plane-motion-kinetics
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.particle-energy-conservation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find kinetic energy of rigid bodies
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp2
+        can_do: Apply work-energy to rigid bodies
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics, engr.dynamics.particle-energy-conservation]
+      - id: kp3
+        can_do: Solve systems with springs and rigid bodies
+        key_prerequisites: [engr.dynamics.particle-energy-conservation]
+      - id: kp4
+        can_do: Find speeds of linkages by energy
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics, engr.dynamics.particle-energy-conservation]
+  - id: engr.dynamics.rigid-impulse-momentum
+    name: Applying impulse and momentum to rigid bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.general-plane-motion-kinetics
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.particle-angular-momentum
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular momentum of rigid bodies
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+      - id: kp2
+        can_do: Apply impulse and momentum to rigid bodies
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics, engr.dynamics.particle-angular-momentum]
+      - id: kp3
+        can_do: Use conservation of angular momentum
+        key_prerequisites: [engr.dynamics.particle-angular-momentum]
+      - id: kp4
+        can_do: Solve rigid bodies struck by impulses
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics, engr.dynamics.particle-angular-momentum]
+  - id: engr.dynamics.eccentric-impact
+    name: Solving eccentric impact
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rigid-impulse-momentum
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.impact-problems
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve eccentric impact
+        key_prerequisites: [engr.dynamics.rigid-impulse-momentum, engr.dynamics.impact-problems]
+      - id: kp2
+        can_do: Find velocities after a rod is struck
+        key_prerequisites: [engr.dynamics.rigid-impulse-momentum]
+      - id: kp3
+        can_do: Find impact of rolling bodies on steps
+        key_prerequisites: [engr.dynamics.rigid-impulse-momentum, engr.dynamics.impact-problems]
+      - id: kp4
+        can_do: Find energy lost in eccentric impact
+        key_prerequisites: [engr.dynamics.impact-problems]
+  - id: engr.dynamics.three-d-rigid-kinematics
+    name: Describing three-dimensional rigid-body kinematics
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.rotating-axes-kinematics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe rotation about a fixed point
+        key_prerequisites: [engr.dynamics.rotating-axes-kinematics]
+      - id: kp2
+        can_do: Find angular acceleration in 3D
+        key_prerequisites: [engr.dynamics.rotating-axes-kinematics]
+      - id: kp3
+        can_do: Find velocities in 3D with rotating frames
+        key_prerequisites: [engr.dynamics.rotating-axes-kinematics]
+      - id: kp4
+        can_do: Analyze gimbals and rotating disks
+        key_prerequisites: [engr.dynamics.rotating-axes-kinematics]
+  - id: engr.dynamics.products-of-inertia-of-bodies
+    name: Finding products of inertia of composite bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.inertia-of-composite-bodies
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.eigen-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mass products of inertia
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies]
+      - id: kp2
+        can_do: Use parallel planes for products of inertia
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies]
+      - id: kp3
+        can_do: Find principal axes of inertia
+        key_prerequisites: [math.linalg.eigen-definition]
+      - id: kp4
+        can_do: Find moments of inertia about any axis
+        key_prerequisites: [physics.mechanics.inertia-of-composite-bodies, math.linalg.eigen-definition]
+  - id: engr.dynamics.three-d-angular-momentum
+    name: Finding angular momentum in three dimensions
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.products-of-inertia-of-bodies
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.three-d-rigid-kinematics
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular momentum in 3D
+        key_prerequisites: [engr.dynamics.products-of-inertia-of-bodies, engr.dynamics.three-d-rigid-kinematics]
+      - id: kp2
+        can_do: Find kinetic energy in 3D
+        key_prerequisites: [engr.dynamics.products-of-inertia-of-bodies]
+      - id: kp3
+        can_do: Find angular momentum about the centre of mass
+        key_prerequisites: [engr.dynamics.three-d-rigid-kinematics]
+      - id: kp4
+        can_do: Apply impulse-momentum in 3D
+        key_prerequisites: [engr.dynamics.products-of-inertia-of-bodies, engr.dynamics.three-d-rigid-kinematics]
+  - id: engr.dynamics.euler-equations-of-motion
+    name: Using Euler's equations of motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.three-d-angular-momentum
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Euler's equations
+        key_prerequisites: [engr.dynamics.three-d-angular-momentum]
+      - id: kp2
+        can_do: Find moments needed to spin a body
+        key_prerequisites: [engr.dynamics.three-d-angular-momentum]
+      - id: kp3
+        can_do: Find bearing reactions of rotating shafts
+        key_prerequisites: [engr.dynamics.three-d-angular-momentum]
+      - id: kp4
+        can_do: Analyze unbalanced rotors
+        key_prerequisites: [engr.dynamics.three-d-angular-momentum]
+  - id: engr.dynamics.gyroscopic-motion
+    name: Analyzing gyroscopic motion
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.euler-equations-of-motion
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.precession
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady precession rate
+        key_prerequisites: [engr.dynamics.euler-equations-of-motion, physics.mechanics.precession]
+      - id: kp2
+        can_do: Find gyroscopic moments
+        key_prerequisites: [engr.dynamics.euler-equations-of-motion]
+      - id: kp3
+        can_do: Analyze torque-free motion
+        key_prerequisites: [physics.mechanics.precession]
+      - id: kp4
+        can_do: Analyze spinning tops
+        key_prerequisites: [engr.dynamics.euler-equations-of-motion, physics.mechanics.precession]
+  - id: engr.dynamics.undamped-free-vibration
+    name: Finding natural frequencies of particles and rigid bodies
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.planar-equations-of-motion
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.shm-differential-equation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations of free vibration
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion, physics.mechanics.shm-differential-equation]
+      - id: kp2
+        can_do: Find natural frequencies of mass-spring systems
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+      - id: kp3
+        can_do: Find natural frequencies of pendulums and rigid bodies
+        key_prerequisites: [engr.dynamics.planar-equations-of-motion]
+      - id: kp4
+        can_do: Find vibration amplitude from initial conditions
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+  - id: engr.dynamics.energy-method-vibration
+    name: Finding natural frequencies by the energy method
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.undamped-free-vibration
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.dynamics.rigid-work-energy
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural frequency by energy conservation
+        key_prerequisites: [engr.dynamics.undamped-free-vibration, engr.dynamics.rigid-work-energy]
+      - id: kp2
+        can_do: Find frequencies of rolling bodies
+        key_prerequisites: [engr.dynamics.rigid-work-energy]
+      - id: kp3
+        can_do: Find frequencies of systems with pulleys
+        key_prerequisites: [engr.dynamics.undamped-free-vibration, engr.dynamics.rigid-work-energy]
+      - id: kp4
+        can_do: Compare energy and force methods
+        key_prerequisites: [engr.dynamics.undamped-free-vibration]
+  - id: engr.dynamics.viscous-damped-vibration
+    name: Analyzing viscous damped free vibration
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.undamped-free-vibration
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.damping-regimes
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations with viscous damping
+        key_prerequisites: [engr.dynamics.undamped-free-vibration, physics.mechanics.damping-regimes]
+      - id: kp2
+        can_do: Classify damping by damping ratio
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp3
+        can_do: Find damped natural frequency
+        key_prerequisites: [engr.dynamics.undamped-free-vibration]
+      - id: kp4
+        can_do: Find decay of damped vibration
+        key_prerequisites: [engr.dynamics.undamped-free-vibration, physics.mechanics.damping-regimes]
+  - id: engr.dynamics.forced-vibration-basics
+    name: Analyzing forced vibration of a single body
+    subject: engr
+    course: engr.dynamics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.viscous-damped-vibration
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.driven-oscillator
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady-state response to harmonic force
+        key_prerequisites: [engr.dynamics.viscous-damped-vibration, physics.mechanics.driven-oscillator]
+      - id: kp2
+        can_do: Find magnification factor
+        key_prerequisites: [physics.mechanics.driven-oscillator]
+      - id: kp3
+        can_do: Find response to a harmonic support motion
+        key_prerequisites: [engr.dynamics.viscous-damped-vibration]
+      - id: kp4
+        can_do: Explain resonance in machines
+        key_prerequisites: [engr.dynamics.viscous-damped-vibration, physics.mechanics.driven-oscillator]

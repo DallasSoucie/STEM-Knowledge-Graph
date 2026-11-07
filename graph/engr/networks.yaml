@@ -1,0 +1,772 @@
+course: engr.networks
+topics:
+  - id: engr.networks.network-layers
+    name: Describing protocol layers
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.operating-systems.interprocess-communication
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the Internet protocol stack
+        key_prerequisites: [engr.operating-systems.interprocess-communication]
+      - id: kp2
+        can_do: Describe encapsulation
+        key_prerequisites: [engr.operating-systems.interprocess-communication]
+      - id: kp3
+        can_do: Compare OSI and TCP/IP models
+        key_prerequisites: [engr.operating-systems.interprocess-communication]
+      - id: kp4
+        can_do: Describe network edge and core
+        key_prerequisites: [engr.operating-systems.interprocess-communication]
+  - id: engr.networks.delay-and-throughput
+    name: Finding delay and throughput
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.network-layers
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transmission and propagation delay
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp2
+        can_do: Find queueing delay
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp3
+        can_do: Find end-to-end delay
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp4
+        can_do: Find throughput of paths
+        key_prerequisites: [engr.networks.network-layers]
+  - id: engr.networks.circuit-and-packet-switching
+    name: Comparing circuit and packet switching
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.delay-and-throughput
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare circuit and packet switching
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp2
+        can_do: Find users supported by each
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp3
+        can_do: Describe store-and-forward
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp4
+        can_do: Describe multiplexing in circuits
+        key_prerequisites: [engr.networks.delay-and-throughput]
+  - id: engr.networks.http-and-web
+    name: Explaining HTTP and the web
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.network-layers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe HTTP requests and responses
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp2
+        can_do: Compare persistent and nonpersistent HTTP
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp3
+        can_do: Find page load times
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp4
+        can_do: Describe cookies and caching
+        key_prerequisites: [engr.networks.network-layers]
+  - id: engr.networks.dns
+    name: Explaining DNS resolution
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.http-and-web
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace DNS resolution
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp2
+        can_do: Describe DNS records
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp3
+        can_do: Describe DNS caching
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp4
+        can_do: Describe DNS hierarchy
+        key_prerequisites: [engr.networks.http-and-web]
+  - id: engr.networks.socket-programming
+    name: Writing socket programs
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.network-layers
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.operating-systems.threads
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write UDP client and server programs
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp2
+        can_do: Write TCP client and server programs
+        key_prerequisites: [engr.networks.network-layers, engr.operating-systems.threads]
+      - id: kp3
+        can_do: Handle several clients with threads
+        key_prerequisites: [engr.operating-systems.threads]
+      - id: kp4
+        can_do: Choose socket options
+        key_prerequisites: [engr.networks.network-layers]
+  - id: engr.networks.content-delivery
+    name: Explaining caching and content delivery
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.http-and-web
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe web caches
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp2
+        can_do: Describe content delivery networks
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp3
+        can_do: Describe video streaming
+        key_prerequisites: [engr.networks.http-and-web]
+      - id: kp4
+        can_do: Describe peer-to-peer distribution
+        key_prerequisites: [engr.networks.http-and-web]
+  - id: engr.networks.udp
+    name: Using UDP
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.socket-programming
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe UDP segments
+        key_prerequisites: [engr.networks.socket-programming]
+      - id: kp2
+        can_do: Find UDP checksums
+        key_prerequisites: [engr.networks.socket-programming]
+      - id: kp3
+        can_do: Choose UDP for applications
+        key_prerequisites: [engr.networks.socket-programming]
+      - id: kp4
+        can_do: Describe multiplexing with ports
+        key_prerequisites: [engr.networks.socket-programming]
+  - id: engr.networks.reliable-data-transfer
+    name: Designing reliable data transfer protocols
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.udp
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design stop-and-wait protocols
+        key_prerequisites: [engr.networks.udp]
+      - id: kp2
+        can_do: Handle loss with timers
+        key_prerequisites: [engr.networks.udp]
+      - id: kp3
+        can_do: Use sequence numbers and acknowledgements
+        key_prerequisites: [engr.networks.udp]
+      - id: kp4
+        can_do: Find stop-and-wait utilization
+        key_prerequisites: [engr.networks.udp]
+  - id: engr.networks.sliding-window-protocols
+    name: Analyzing go-back-N and selective repeat
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.reliable-data-transfer
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.networks.delay-and-throughput
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use go-back-N
+        key_prerequisites: [engr.networks.reliable-data-transfer]
+      - id: kp2
+        can_do: Use selective repeat
+        key_prerequisites: [engr.networks.reliable-data-transfer]
+      - id: kp3
+        can_do: Find window size limits
+        key_prerequisites: [engr.networks.reliable-data-transfer, engr.networks.delay-and-throughput]
+      - id: kp4
+        can_do: Find pipelined utilization
+        key_prerequisites: [engr.networks.delay-and-throughput]
+  - id: engr.networks.tcp-connection-management
+    name: Explaining TCP connection setup and teardown
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.sliding-window-protocols
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace three-way handshake
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp2
+        can_do: Trace connection teardown
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp3
+        can_do: Describe TCP segment fields
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp4
+        can_do: Trace TCP sequence numbers
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+  - id: engr.networks.tcp-flow-control
+    name: Explaining TCP flow control
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.tcp-connection-management
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe receive windows
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp2
+        can_do: Trace flow control
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp3
+        can_do: Find window effects on throughput
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp4
+        can_do: Describe silly window syndrome
+        key_prerequisites: [engr.networks.tcp-connection-management]
+  - id: engr.networks.tcp-timeout-estimation
+    name: Estimating TCP retransmission timeouts
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.tcp-connection-management
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate round-trip time
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp2
+        can_do: Find retransmission timeout
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp3
+        can_do: Describe fast retransmit
+        key_prerequisites: [engr.networks.tcp-connection-management]
+      - id: kp4
+        can_do: Describe timeout doubling
+        key_prerequisites: [engr.networks.tcp-connection-management]
+  - id: engr.networks.congestion-control-principles
+    name: Explaining congestion control principles
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.sliding-window-protocols
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe causes of congestion
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp2
+        can_do: Compare end-to-end and network-assisted control
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp3
+        can_do: Describe fairness
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+      - id: kp4
+        can_do: Find costs of congestion
+        key_prerequisites: [engr.networks.sliding-window-protocols]
+  - id: engr.networks.tcp-congestion-control
+    name: Analyzing TCP congestion control
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.congestion-control-principles
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.networks.tcp-flow-control
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace slow start
+        key_prerequisites: [engr.networks.congestion-control-principles]
+      - id: kp2
+        can_do: Trace congestion avoidance
+        key_prerequisites: [engr.networks.congestion-control-principles]
+      - id: kp3
+        can_do: Trace fast recovery
+        key_prerequisites: [engr.networks.congestion-control-principles, engr.networks.tcp-flow-control]
+      - id: kp4
+        can_do: Find TCP throughput
+        key_prerequisites: [engr.networks.tcp-flow-control]
+  - id: engr.networks.ip-addressing-and-subnets
+    name: Assigning IP addresses and subnets
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.network-layers
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: engr.digital-logic.binary-and-hex-codes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use CIDR notation
+        key_prerequisites: [engr.networks.network-layers]
+      - id: kp2
+        can_do: Find subnet ranges
+        key_prerequisites: [engr.networks.network-layers, engr.digital-logic.binary-and-hex-codes]
+      - id: kp3
+        can_do: Divide address blocks
+        key_prerequisites: [engr.networks.network-layers, engr.digital-logic.binary-and-hex-codes]
+      - id: kp4
+        can_do: Find broadcast and network addresses
+        key_prerequisites: [engr.networks.network-layers]
+  - id: engr.networks.forwarding-tables
+    name: Forwarding with longest prefix match
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.ip-addressing-and-subnets
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use longest prefix matching
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp2
+        can_do: Describe router architecture
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp3
+        can_do: Describe IP fragmentation
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp4
+        can_do: Describe generalized forwarding
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+  - id: engr.networks.nat-and-dhcp
+    name: Explaining NAT and DHCP
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.ip-addressing-and-subnets
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace NAT translation
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp2
+        can_do: Describe DHCP
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp3
+        can_do: Describe NAT problems
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp4
+        can_do: Describe private addresses
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+  - id: engr.networks.ipv6
+    name: Describing IPv6
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.ip-addressing-and-subnets
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe IPv6 addresses
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp2
+        can_do: Compare IPv4 and IPv6 headers
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp3
+        can_do: Describe tunnelling
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+      - id: kp4
+        can_do: Describe IPv6 transition
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+  - id: engr.networks.link-state-routing
+    name: Computing routes with link-state routing
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.forwarding-tables
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.data-structures.dijkstra-code
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute routes with link-state routing
+        key_prerequisites: [engr.networks.forwarding-tables, engr.data-structures.dijkstra-code]
+      - id: kp2
+        can_do: Describe flooding of link states
+        key_prerequisites: [engr.networks.forwarding-tables]
+      - id: kp3
+        can_do: Describe OSPF
+        key_prerequisites: [engr.networks.forwarding-tables]
+      - id: kp4
+        can_do: Find routing oscillations
+        key_prerequisites: [engr.data-structures.dijkstra-code]
+  - id: engr.networks.distance-vector-routing
+    name: Computing routes with distance-vector routing
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.forwarding-tables
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.algorithms.shortest-paths-negative-edges
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute routes with distance vectors
+        key_prerequisites: [engr.networks.forwarding-tables, engr.algorithms.shortest-paths-negative-edges]
+      - id: kp2
+        can_do: Find count-to-infinity
+        key_prerequisites: [engr.networks.forwarding-tables]
+      - id: kp3
+        can_do: Use poisoned reverse
+        key_prerequisites: [engr.networks.forwarding-tables]
+      - id: kp4
+        can_do: Compare routing algorithms
+        key_prerequisites: [engr.algorithms.shortest-paths-negative-edges]
+  - id: engr.networks.interdomain-routing
+    name: Explaining BGP
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.distance-vector-routing
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe autonomous systems
+        key_prerequisites: [engr.networks.distance-vector-routing]
+      - id: kp2
+        can_do: Describe BGP route advertisements
+        key_prerequisites: [engr.networks.distance-vector-routing]
+      - id: kp3
+        can_do: Describe BGP route selection
+        key_prerequisites: [engr.networks.distance-vector-routing]
+      - id: kp4
+        can_do: Describe routing policy
+        key_prerequisites: [engr.networks.distance-vector-routing]
+  - id: engr.networks.error-detection-link
+    name: Detecting errors with checksums and CRC
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.digital-logic.error-detecting-codes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use parity checks
+        key_prerequisites: [engr.digital-logic.error-detecting-codes]
+      - id: kp2
+        can_do: Use Internet checksums
+        key_prerequisites: [engr.digital-logic.error-detecting-codes]
+      - id: kp3
+        can_do: Compute CRC
+        key_prerequisites: [engr.digital-logic.error-detecting-codes]
+      - id: kp4
+        can_do: Compare error detection methods
+        key_prerequisites: [engr.digital-logic.error-detecting-codes]
+  - id: engr.networks.multiple-access-protocols
+    name: Analyzing multiple access protocols
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.delay-and-throughput
+        encompassing: 0.7
+        confidence: high
+      - topic: math.probstat.binomial-mean-variance
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe channel partitioning
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp2
+        can_do: Find efficiency of slotted ALOHA
+        key_prerequisites: [engr.networks.delay-and-throughput, math.probstat.binomial-mean-variance]
+      - id: kp3
+        can_do: Describe CSMA/CD
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp4
+        can_do: Describe taking-turns protocols
+        key_prerequisites: [math.probstat.binomial-mean-variance]
+  - id: engr.networks.ethernet-and-switches
+    name: Explaining Ethernet and learning switches
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.multiple-access-protocols
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Ethernet frames
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp2
+        can_do: Describe switch learning
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp3
+        can_do: Compare switches and routers
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp4
+        can_do: Describe VLANs
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+  - id: engr.networks.arp
+    name: Explaining ARP
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.ethernet-and-switches
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.networks.ip-addressing-and-subnets
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace ARP resolution
+        key_prerequisites: [engr.networks.ethernet-and-switches, engr.networks.ip-addressing-and-subnets]
+      - id: kp2
+        can_do: Describe ARP tables
+        key_prerequisites: [engr.networks.ethernet-and-switches]
+      - id: kp3
+        can_do: Trace a packet across subnets
+        key_prerequisites: [engr.networks.ethernet-and-switches, engr.networks.ip-addressing-and-subnets]
+      - id: kp4
+        can_do: Describe ARP spoofing
+        key_prerequisites: [engr.networks.ip-addressing-and-subnets]
+  - id: engr.networks.wireless-links
+    name: Describing wireless and mobile networks
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.multiple-access-protocols
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe wireless link characteristics
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp2
+        can_do: Describe 802.11 access
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp3
+        can_do: Describe cellular networks
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+      - id: kp4
+        can_do: Describe mobility management
+        key_prerequisites: [engr.networks.multiple-access-protocols]
+  - id: engr.networks.cryptography-basics
+    name: Using symmetric and public-key cryptography
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.rsa-cryptography
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use symmetric encryption
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp2
+        can_do: Use public-key encryption
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp3
+        can_do: Use hash functions
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp4
+        can_do: Describe key distribution
+        key_prerequisites: [math.discrete.rsa-cryptography]
+  - id: engr.networks.authentication-and-integrity
+    name: Using message authentication and digital signatures
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.cryptography-basics
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use message authentication codes
+        key_prerequisites: [engr.networks.cryptography-basics]
+      - id: kp2
+        can_do: Use digital signatures
+        key_prerequisites: [engr.networks.cryptography-basics]
+      - id: kp3
+        can_do: Use certificates
+        key_prerequisites: [engr.networks.cryptography-basics]
+      - id: kp4
+        can_do: Describe authentication protocols
+        key_prerequisites: [engr.networks.cryptography-basics]
+  - id: engr.networks.secure-transport
+    name: Explaining TLS
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.authentication-and-integrity
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.networks.tcp-connection-management
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace TLS handshakes
+        key_prerequisites: [engr.networks.authentication-and-integrity, engr.networks.tcp-connection-management]
+      - id: kp2
+        can_do: Describe TLS record protection
+        key_prerequisites: [engr.networks.authentication-and-integrity]
+      - id: kp3
+        can_do: Describe VPNs and IPsec
+        key_prerequisites: [engr.networks.authentication-and-integrity]
+      - id: kp4
+        can_do: Describe secure email
+        key_prerequisites: [engr.networks.tcp-connection-management]
+  - id: engr.networks.firewalls-and-intrusion-detection
+    name: Describing firewalls and intrusion detection
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.forwarding-tables
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.networks.secure-transport
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe packet filters
+        key_prerequisites: [engr.networks.forwarding-tables]
+      - id: kp2
+        can_do: Describe stateful firewalls
+        key_prerequisites: [engr.networks.forwarding-tables, engr.networks.secure-transport]
+      - id: kp3
+        can_do: Describe intrusion detection
+        key_prerequisites: [engr.networks.secure-transport]
+      - id: kp4
+        can_do: Describe common attacks
+        key_prerequisites: [engr.networks.secure-transport]
+  - id: engr.networks.queueing-in-routers
+    name: Modelling router queues
+    subject: engr
+    course: engr.networks
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.networks.delay-and-throughput
+        encompassing: 0.7
+        confidence: high
+      - topic: math.probstat.poisson-process-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model router queues
+        key_prerequisites: [engr.networks.delay-and-throughput, math.probstat.poisson-process-intro]
+      - id: kp2
+        can_do: Find packet loss from buffer overflow
+        key_prerequisites: [engr.networks.delay-and-throughput]
+      - id: kp3
+        can_do: Find delay with M/M/1 queues
+        key_prerequisites: [math.probstat.poisson-process-intro]
+      - id: kp4
+        can_do: Describe active queue management
+        key_prerequisites: [engr.networks.delay-and-throughput]
