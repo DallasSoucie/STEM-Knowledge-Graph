@@ -1,0 +1,786 @@
+course: bio.evolution
+topics:
+  - id: bio.evolution.selection-models
+    name: Modelling selection on allele frequencies
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.allele-frequency-calculations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assign relative fitnesses and selection coefficients to genotypes
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp2
+        can_do: Calculate allele frequency change after one generation of selection
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp3
+        can_do: Compare selection against recessive and dominant alleles
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp4
+        can_do: Calculate mean fitness of a population
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+  - id: bio.evolution.mutation-selection-balance
+    name: Finding mutation-selection balance
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.selection-models
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: bio.genetics.allele-frequency-calculations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate equilibrium frequencies for deleterious recessive alleles
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp2
+        can_do: Predict equilibrium changes when mutation rate or selection changes
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp3
+        can_do: Compare equilibria for recessive and partially dominant alleles
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Judge when mutation-selection approximations hold
+        key_prerequisites: [bio.evolution.selection-models]
+  - id: bio.evolution.heterozygote-advantage
+    name: Explaining heterozygote advantage
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.selection-models
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the equilibrium frequency under heterozygote advantage
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp2
+        can_do: Explain why balancing selection keeps alleles
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp3
+        can_do: Relate sickle cell frequency to malaria
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Calculate the genetic load at equilibrium
+        key_prerequisites: [bio.evolution.selection-models]
+  - id: bio.evolution.frequency-dependent-selection
+    name: Explaining frequency-dependent selection
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.selection-models
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish negative and positive frequency dependence
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp2
+        can_do: Explain rare-allele advantage
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp3
+        can_do: Predict equilibria under frequency dependence
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Give examples of frequency-dependent selection
+        key_prerequisites: [bio.evolution.selection-models]
+  - id: bio.evolution.fixation-probability
+    name: Finding fixation probability under drift
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.drift-and-effective-size
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the fixation probability of a neutral allele
+        key_prerequisites: [bio.genetics.drift-and-effective-size]
+      - id: kp2
+        can_do: Estimate fixation probability for a beneficial allele
+        key_prerequisites: [bio.genetics.drift-and-effective-size]
+      - id: kp3
+        can_do: Compare time to fixation for neutral and selected alleles
+        key_prerequisites: [bio.genetics.drift-and-effective-size]
+      - id: kp4
+        can_do: Explain when drift overwhelms selection
+        key_prerequisites: [bio.genetics.drift-and-effective-size]
+  - id: bio.evolution.coalescent-theory
+    name: Describing coalescent theory
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.fixation-probability
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Trace gene copies back to common ancestors
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp2
+        can_do: Find the expected time to coalescence for two copies
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp3
+        can_do: Relate coalescent times to effective size
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp4
+        can_do: Interpret gene genealogies under population growth
+        key_prerequisites: [bio.evolution.fixation-probability]
+  - id: bio.evolution.neutral-theory
+    name: Explaining the neutral theory
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.fixation-probability
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the neutral theory of molecular evolution
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp2
+        can_do: Relate the substitution rate to the mutation rate
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp3
+        can_do: Explain nearly neutral mutations
+        key_prerequisites: [bio.evolution.fixation-probability]
+      - id: kp4
+        can_do: Compare neutral and selectionist predictions
+        key_prerequisites: [bio.evolution.fixation-probability]
+  - id: bio.evolution.molecular-clocks
+    name: Dating divergences with molecular clocks
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.neutral-theory
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.intro2.molecular-phylogenetics
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calibrate a molecular clock with fossils
+        key_prerequisites: [bio.evolution.neutral-theory, bio.intro2.molecular-phylogenetics]
+      - id: kp2
+        can_do: Estimate divergence times from sequence differences
+        key_prerequisites: [bio.evolution.neutral-theory, bio.intro2.molecular-phylogenetics]
+      - id: kp3
+        can_do: Explain rate variation among lineages
+        key_prerequisites: [bio.evolution.neutral-theory]
+      - id: kp4
+        can_do: Explain relaxed clock methods
+        key_prerequisites: [bio.intro2.molecular-phylogenetics]
+  - id: bio.evolution.detecting-selection
+    name: Detecting selection in sequence data
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.neutral-theory
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.genetics.comparative-genomics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare nonsynonymous and synonymous substitution rates
+        key_prerequisites: [bio.evolution.neutral-theory]
+      - id: kp2
+        can_do: Interpret the McDonald-Kreitman test
+        key_prerequisites: [bio.evolution.neutral-theory]
+      - id: kp3
+        can_do: Detect selective sweeps from reduced variation
+        key_prerequisites: [bio.evolution.neutral-theory, bio.genetics.comparative-genomics]
+      - id: kp4
+        can_do: Scan genomes for signatures of selection
+        key_prerequisites: [bio.genetics.comparative-genomics]
+  - id: bio.evolution.population-structure
+    name: Measuring population structure
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.allele-frequency-calculations
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.intro2.population-genetics-forces
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate fixation index from heterozygosities
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp2
+        can_do: Interpret population differentiation values
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp3
+        can_do: Explain the Wahlund effect
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp4
+        can_do: Relate gene flow to differentiation
+        key_prerequisites: [bio.intro2.population-genetics-forces]
+  - id: bio.evolution.linkage-disequilibrium
+    name: Explaining linkage disequilibrium
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.three-point-mapping
+        encompassing: 0.5
+        confidence: high
+      - topic: bio.evolution.selection-models
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate the linkage disequilibrium coefficient
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp2
+        can_do: Predict decay of disequilibrium through recombination
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp3
+        can_do: Explain how selection and drift create disequilibrium
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Explain hitchhiking of linked alleles
+        key_prerequisites: [bio.genetics.three-point-mapping, bio.evolution.selection-models]
+  - id: bio.evolution.breeders-equation
+    name: Predicting response to selection with the breeder's equation
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.heritability
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate response to selection from heritability
+        key_prerequisites: [bio.genetics.heritability]
+      - id: kp2
+        can_do: Calculate the selection differential
+        key_prerequisites: [bio.genetics.heritability]
+      - id: kp3
+        can_do: Predict trait change over several generations
+        key_prerequisites: [bio.genetics.heritability]
+      - id: kp4
+        can_do: Explain limits to long-term response
+        key_prerequisites: [bio.genetics.heritability]
+  - id: bio.evolution.testing-adaptations
+    name: Testing adaptive hypotheses
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.sexual-selection
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Form testable adaptive hypotheses
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp2
+        can_do: Use experiments to test adaptations
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp3
+        can_do: Explain spandrels and constraints
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp4
+        can_do: Evaluate a claim of adaptation
+        key_prerequisites: [bio.intro2.sexual-selection]
+  - id: bio.evolution.sexual-selection-mechanisms
+    name: Analyzing mechanisms of sexual selection
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.sexual-selection
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare runaway and good-genes models
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp2
+        can_do: Explain sensory bias in mate choice
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp3
+        can_do: Explain sperm competition
+        key_prerequisites: [bio.intro2.sexual-selection]
+      - id: kp4
+        can_do: Explain sexual conflict
+        key_prerequisites: [bio.intro2.sexual-selection]
+  - id: bio.evolution.evolution-of-sex
+    name: Explaining the evolution of sex and recombination
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.selection-models
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the twofold cost of sex
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp2
+        can_do: Explain Muller's ratchet
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp3
+        can_do: Explain the Red Queen hypothesis
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Explain how recombination aids selection
+        key_prerequisites: [bio.evolution.selection-models]
+  - id: bio.evolution.life-history-evolution
+    name: Explaining life history trade-offs
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.life-history-strategies
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain trade-offs between reproduction and survival
+        key_prerequisites: [bio.intro2.life-history-strategies]
+      - id: kp2
+        can_do: Explain the evolution of senescence
+        key_prerequisites: [bio.intro2.life-history-strategies]
+      - id: kp3
+        can_do: Predict optimal clutch size
+        key_prerequisites: [bio.intro2.life-history-strategies]
+      - id: kp4
+        can_do: Relate mortality to the timing of reproduction
+        key_prerequisites: [bio.intro2.life-history-strategies]
+  - id: bio.evolution.hamiltons-rule
+    name: Using Hamilton's rule
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.kin-selection-and-altruism
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate coefficients of relatedness
+        key_prerequisites: [bio.intro2.kin-selection-and-altruism]
+      - id: kp2
+        can_do: Apply Hamilton's rule to an altruistic act
+        key_prerequisites: [bio.intro2.kin-selection-and-altruism]
+      - id: kp3
+        can_do: Explain haplodiploidy and eusociality
+        key_prerequisites: [bio.intro2.kin-selection-and-altruism]
+      - id: kp4
+        can_do: Evaluate kin selection explanations
+        key_prerequisites: [bio.intro2.kin-selection-and-altruism]
+  - id: bio.evolution.evolutionary-game-theory
+    name: Using evolutionarily stable strategies
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.frequency-dependent-selection
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a payoff matrix for two strategies
+        key_prerequisites: [bio.evolution.frequency-dependent-selection]
+      - id: kp2
+        can_do: Find an evolutionarily stable strategy
+        key_prerequisites: [bio.evolution.frequency-dependent-selection]
+      - id: kp3
+        can_do: Analyze the hawk-dove game
+        key_prerequisites: [bio.evolution.frequency-dependent-selection]
+      - id: kp4
+        can_do: Explain mixed strategies in populations
+        key_prerequisites: [bio.evolution.frequency-dependent-selection]
+  - id: bio.evolution.coevolution
+    name: Explaining coevolutionary arms races
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.interaction-outcomes
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain coevolutionary arms races
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp2
+        can_do: Explain the geographic mosaic of coevolution
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp3
+        can_do: Explain host-parasite coevolution
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp4
+        can_do: Evaluate evidence for coevolution
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+  - id: bio.evolution.genetics-of-isolation
+    name: Explaining genetic causes of reproductive isolation
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.hybrid-zones
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Dobzhansky-Muller incompatibilities
+        key_prerequisites: [bio.intro2.hybrid-zones]
+      - id: kp2
+        can_do: Explain Haldane's rule
+        key_prerequisites: [bio.intro2.hybrid-zones]
+      - id: kp3
+        can_do: Explain reinforcement
+        key_prerequisites: [bio.intro2.hybrid-zones]
+      - id: kp4
+        can_do: Interpret genetic data from hybrid zones
+        key_prerequisites: [bio.intro2.hybrid-zones]
+  - id: bio.evolution.ecological-speciation
+    name: Explaining ecological speciation
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.genetics-of-isolation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain divergent selection between environments
+        key_prerequisites: [bio.evolution.genetics-of-isolation]
+      - id: kp2
+        can_do: Explain magic traits in speciation
+        key_prerequisites: [bio.evolution.genetics-of-isolation]
+      - id: kp3
+        can_do: Explain speciation with gene flow
+        key_prerequisites: [bio.evolution.genetics-of-isolation]
+      - id: kp4
+        can_do: Evaluate evidence for ecological speciation
+        key_prerequisites: [bio.evolution.genetics-of-isolation]
+  - id: bio.evolution.tree-building-methods
+    name: Comparing parsimony, distance and likelihood trees
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.molecular-phylogenetics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a tree by distance methods
+        key_prerequisites: [bio.intro2.molecular-phylogenetics]
+      - id: kp2
+        can_do: Build a tree by maximum parsimony
+        key_prerequisites: [bio.intro2.molecular-phylogenetics]
+      - id: kp3
+        can_do: Explain likelihood and Bayesian methods
+        key_prerequisites: [bio.intro2.molecular-phylogenetics]
+      - id: kp4
+        can_do: Interpret bootstrap support
+        key_prerequisites: [bio.intro2.molecular-phylogenetics]
+  - id: bio.evolution.homology-and-homoplasy
+    name: Identifying homology and homoplasy on trees
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.tree-building-methods
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish homology from homoplasy
+        key_prerequisites: [bio.evolution.tree-building-methods]
+      - id: kp2
+        can_do: Explain convergence and reversal
+        key_prerequisites: [bio.evolution.tree-building-methods]
+      - id: kp3
+        can_do: Identify homoplasy on a tree
+        key_prerequisites: [bio.evolution.tree-building-methods]
+      - id: kp4
+        can_do: Explain long-branch attraction
+        key_prerequisites: [bio.evolution.tree-building-methods]
+  - id: bio.evolution.comparative-methods
+    name: Using phylogenetic comparative methods
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.homology-and-homoplasy
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why species are not independent data
+        key_prerequisites: [bio.evolution.homology-and-homoplasy]
+      - id: kp2
+        can_do: Use phylogenetically independent contrasts
+        key_prerequisites: [bio.evolution.homology-and-homoplasy]
+      - id: kp3
+        can_do: Map trait evolution on a tree
+        key_prerequisites: [bio.evolution.homology-and-homoplasy]
+      - id: kp4
+        can_do: Test correlated evolution of traits
+        key_prerequisites: [bio.evolution.homology-and-homoplasy]
+  - id: bio.evolution.biogeography
+    name: Explaining patterns of biogeography
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.island-biogeography
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.evolution.homology-and-homoplasy
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare vicariance and dispersal
+        key_prerequisites: [bio.intro2.island-biogeography, bio.evolution.homology-and-homoplasy]
+      - id: kp2
+        can_do: Explain endemism and disjunct distributions
+        key_prerequisites: [bio.intro2.island-biogeography]
+      - id: kp3
+        can_do: Use phylogenies to reconstruct ranges
+        key_prerequisites: [bio.evolution.homology-and-homoplasy]
+      - id: kp4
+        can_do: Explain biogeographic realms
+        key_prerequisites: [bio.intro2.island-biogeography]
+  - id: bio.evolution.fossil-dating
+    name: Dating fossils and reading the fossil record
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.geologic-time
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use radiometric dating for fossils
+        key_prerequisites: [bio.intro2.geologic-time]
+      - id: kp2
+        can_do: Calculate an age from isotope half-life
+        key_prerequisites: [bio.intro2.geologic-time]
+      - id: kp3
+        can_do: Use stratigraphy for relative dating
+        key_prerequisites: [bio.intro2.geologic-time]
+      - id: kp4
+        can_do: Explain gaps in the fossil record
+        key_prerequisites: [bio.intro2.geologic-time]
+  - id: bio.evolution.mass-extinctions
+    name: Analyzing mass extinctions
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.fossil-dating
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the major mass extinctions
+        key_prerequisites: [bio.evolution.fossil-dating]
+      - id: kp2
+        can_do: Explain causes of mass extinctions
+        key_prerequisites: [bio.evolution.fossil-dating]
+      - id: kp3
+        can_do: Compare background and mass extinction rates
+        key_prerequisites: [bio.evolution.fossil-dating]
+      - id: kp4
+        can_do: Explain recovery after extinction
+        key_prerequisites: [bio.evolution.fossil-dating]
+  - id: bio.evolution.key-innovations
+    name: Explaining adaptive radiations and key innovations
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.mass-extinctions
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define key innovations
+        key_prerequisites: [bio.evolution.mass-extinctions]
+      - id: kp2
+        can_do: Explain adaptive radiation after innovation
+        key_prerequisites: [bio.evolution.mass-extinctions]
+      - id: kp3
+        can_do: Test diversification rate shifts on trees
+        key_prerequisites: [bio.evolution.mass-extinctions]
+      - id: kp4
+        can_do: Give examples of key innovations
+        key_prerequisites: [bio.evolution.mass-extinctions]
+  - id: bio.evolution.regulatory-evolution
+    name: Explaining gene regulatory changes in evolution
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.evo-devo
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain cis-regulatory change in morphological evolution
+        key_prerequisites: [bio.intro2.evo-devo]
+      - id: kp2
+        can_do: Explain gene co-option
+        key_prerequisites: [bio.intro2.evo-devo]
+      - id: kp3
+        can_do: Explain duplication and new functions
+        key_prerequisites: [bio.intro2.evo-devo]
+      - id: kp4
+        can_do: Interpret evidence from regulatory evolution studies
+        key_prerequisites: [bio.intro2.evo-devo]
+  - id: bio.evolution.major-transitions
+    name: Describing major evolutionary transitions
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.archaea
+        encompassing: 0.4
+        confidence: medium
+      - topic: bio.intro2.horizontal-gene-transfer
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the origin of eukaryotic cells
+        key_prerequisites: [bio.intro2.archaea]
+      - id: kp2
+        can_do: Explain the evolution of multicellularity
+        key_prerequisites: [bio.intro2.archaea]
+      - id: kp3
+        can_do: Explain gene transfer in early evolution
+        key_prerequisites: [bio.intro2.horizontal-gene-transfer]
+      - id: kp4
+        can_do: Explain cooperation in major transitions
+        key_prerequisites: [bio.intro2.archaea, bio.intro2.horizontal-gene-transfer]
+  - id: bio.evolution.human-evolutionary-genomics
+    name: Using genomics to study human evolution
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.human-evolution
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.evolution.population-structure
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain ancient DNA evidence for admixture
+        key_prerequisites: [bio.intro2.human-evolution]
+      - id: kp2
+        can_do: Explain the out-of-Africa model
+        key_prerequisites: [bio.intro2.human-evolution, bio.evolution.population-structure]
+      - id: kp3
+        can_do: Identify selection in human populations
+        key_prerequisites: [bio.evolution.population-structure]
+      - id: kp4
+        can_do: Interpret human population structure data
+        key_prerequisites: [bio.evolution.population-structure]
+  - id: bio.evolution.evolutionary-medicine
+    name: Applying evolution to medicine
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.coevolution
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain antibiotic resistance evolution
+        key_prerequisites: [bio.evolution.coevolution]
+      - id: kp2
+        can_do: Explain mismatch between modern life and evolved traits
+        key_prerequisites: [bio.evolution.coevolution]
+      - id: kp3
+        can_do: Explain virulence evolution
+        key_prerequisites: [bio.evolution.coevolution]
+      - id: kp4
+        can_do: Explain cancer as somatic evolution
+        key_prerequisites: [bio.evolution.coevolution]
+  - id: bio.evolution.experimental-evolution
+    name: Interpreting experimental evolution studies
+    subject: bio
+    course: bio.evolution
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.evolution.selection-models
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe long-term evolution experiments
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp2
+        can_do: Interpret fitness changes over generations
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp3
+        can_do: Explain parallel evolution in replicate populations
+        key_prerequisites: [bio.evolution.selection-models]
+      - id: kp4
+        can_do: Evaluate experimental evolution evidence
+        key_prerequisites: [bio.evolution.selection-models]
