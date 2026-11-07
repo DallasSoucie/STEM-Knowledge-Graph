@@ -1,0 +1,838 @@
+course: engr.transportation
+topics:
+  - id: engr.transportation.vehicle-performance
+    name: Finding vehicle forces and acceleration
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.kinetics-with-friction
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resistance forces on vehicles
+        key_prerequisites: [engr.dynamics.kinetics-with-friction]
+      - id: kp2
+        can_do: Find maximum acceleration from tractive force
+        key_prerequisites: [engr.dynamics.kinetics-with-friction]
+      - id: kp3
+        can_do: Find grade effects on vehicles
+        key_prerequisites: [engr.dynamics.kinetics-with-friction]
+      - id: kp4
+        can_do: Find power needed to climb grades
+        key_prerequisites: [engr.dynamics.kinetics-with-friction]
+  - id: engr.transportation.braking-distance
+    name: Finding braking distance
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.vehicle-performance
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find braking distance on level roads
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp2
+        can_do: Find braking distance on grades
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp3
+        can_do: Find speed from skid marks
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp4
+        can_do: Use friction coefficients for pavements
+        key_prerequisites: [engr.transportation.vehicle-performance]
+  - id: engr.transportation.stopping-sight-distance
+    name: Finding stopping sight distance
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.braking-distance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find perception-reaction distance
+        key_prerequisites: [engr.transportation.braking-distance]
+      - id: kp2
+        can_do: Find stopping sight distance
+        key_prerequisites: [engr.transportation.braking-distance]
+      - id: kp3
+        can_do: Find decision sight distance
+        key_prerequisites: [engr.transportation.braking-distance]
+      - id: kp4
+        can_do: Find passing sight distance
+        key_prerequisites: [engr.transportation.braking-distance]
+  - id: engr.transportation.horizontal-curves
+    name: Laying out horizontal curves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.stopping-sight-distance
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.geom.trig-find-side
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find curve elements from radius and deflection angle
+        key_prerequisites: [engr.transportation.stopping-sight-distance, math.geom.trig-find-side]
+      - id: kp2
+        can_do: Find stations of curve points
+        key_prerequisites: [engr.transportation.stopping-sight-distance]
+      - id: kp3
+        can_do: Lay out curves by deflection angles
+        key_prerequisites: [math.geom.trig-find-side]
+      - id: kp4
+        can_do: Find chord lengths
+        key_prerequisites: [math.geom.trig-find-side]
+  - id: engr.transportation.superelevation
+    name: Designing superelevation and side friction
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.horizontal-curves
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.dynamics.equations-of-motion-nt
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minimum radius for a speed
+        key_prerequisites: [engr.transportation.horizontal-curves, engr.dynamics.equations-of-motion-nt]
+      - id: kp2
+        can_do: Find required superelevation
+        key_prerequisites: [engr.transportation.horizontal-curves]
+      - id: kp3
+        can_do: Design superelevation runoff
+        key_prerequisites: [engr.transportation.horizontal-curves]
+      - id: kp4
+        can_do: Find side friction demand
+        key_prerequisites: [engr.dynamics.equations-of-motion-nt]
+  - id: engr.transportation.sight-distance-on-horizontal-curves
+    name: Finding sight distance on horizontal curves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.horizontal-curves
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find middle ordinate for sight distance
+        key_prerequisites: [engr.transportation.horizontal-curves]
+      - id: kp2
+        can_do: Find clearance to obstructions
+        key_prerequisites: [engr.transportation.horizontal-curves]
+      - id: kp3
+        can_do: Find allowable speed from sight lines
+        key_prerequisites: [engr.transportation.horizontal-curves]
+      - id: kp4
+        can_do: Check curves for sight distance
+        key_prerequisites: [engr.transportation.horizontal-curves]
+  - id: engr.transportation.spiral-curves
+    name: Using spiral transition curves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.superelevation
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spiral length
+        key_prerequisites: [engr.transportation.superelevation]
+      - id: kp2
+        can_do: Find spiral curve elements
+        key_prerequisites: [engr.transportation.superelevation]
+      - id: kp3
+        can_do: Lay out spiral transitions
+        key_prerequisites: [engr.transportation.superelevation]
+      - id: kp4
+        can_do: Explain driver benefits of spirals
+        key_prerequisites: [engr.transportation.superelevation]
+  - id: engr.transportation.vertical-curves
+    name: Designing crest and sag vertical curves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.stopping-sight-distance
+        encompassing: 0.7
+        confidence: high
+      - topic: math.calc1.second-derivative-test
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find vertical curve elevations
+        key_prerequisites: [engr.transportation.stopping-sight-distance]
+      - id: kp2
+        can_do: Find crest curve length from sight distance
+        key_prerequisites: [engr.transportation.stopping-sight-distance, math.calc1.second-derivative-test]
+      - id: kp3
+        can_do: Find sag curve length from headlight sight distance
+        key_prerequisites: [engr.transportation.stopping-sight-distance, math.calc1.second-derivative-test]
+      - id: kp4
+        can_do: Find K values
+        key_prerequisites: [engr.transportation.stopping-sight-distance]
+  - id: engr.transportation.vertical-curve-high-low-points
+    name: Finding high and low points of vertical curves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.vertical-curves
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find high points of crest curves
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp2
+        can_do: Find low points of sag curves
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp3
+        can_do: Find curves through fixed points
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp4
+        can_do: Find curves with unequal tangents
+        key_prerequisites: [engr.transportation.vertical-curves]
+  - id: engr.transportation.cross-sections-and-earthwork
+    name: Computing earthwork volumes
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.vertical-curves
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cross-section areas
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp2
+        can_do: Find earthwork volumes by average end area
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp3
+        can_do: Find volumes by the prismoidal formula
+        key_prerequisites: [engr.transportation.vertical-curves]
+      - id: kp4
+        can_do: Include shrinkage and swell
+        key_prerequisites: [engr.transportation.vertical-curves]
+  - id: engr.transportation.mass-haul-diagrams
+    name: Using mass haul diagrams
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.cross-sections-and-earthwork
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build mass haul diagrams
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp2
+        can_do: Find balance points
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp3
+        can_do: Find free haul and overhaul
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp4
+        can_do: Minimize haul costs
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+  - id: engr.transportation.survey-leveling
+    name: Finding elevations by differential leveling
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.cross-sections-and-earthwork
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find elevations by differential leveling
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp2
+        can_do: Close level loops
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp3
+        can_do: Adjust leveling errors
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+      - id: kp4
+        can_do: Find grades from elevations
+        key_prerequisites: [engr.transportation.cross-sections-and-earthwork]
+  - id: engr.transportation.traffic-stream-parameters
+    name: Relating flow, density and speed
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.vehicle-performance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate flow, speed and density
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp2
+        can_do: Find time-mean and space-mean speed
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp3
+        can_do: Find headway and spacing
+        key_prerequisites: [engr.transportation.vehicle-performance]
+      - id: kp4
+        can_do: Find peak hour factor
+        key_prerequisites: [engr.transportation.vehicle-performance]
+  - id: engr.transportation.greenshields-model
+    name: Using the Greenshields model
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Greenshields speed-density model
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp2
+        can_do: Find capacity and optimum density
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp3
+        can_do: Find speed at a given flow
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp4
+        can_do: Fit models to traffic data
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+  - id: engr.transportation.shock-waves-traffic
+    name: Analyzing traffic shock waves
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.greenshields-model
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shock wave speeds
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp2
+        can_do: Analyze queues behind incidents
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp3
+        can_do: Find queue clearance time
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp4
+        can_do: Draw time-space diagrams
+        key_prerequisites: [engr.transportation.greenshields-model]
+  - id: engr.transportation.queueing-models
+    name: Analyzing queues at bottlenecks
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.5
+        confidence: high
+      - topic: math.probstat.poisson-process-intro
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use deterministic queue diagrams
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp2
+        can_do: Find delay at bottlenecks
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp3
+        can_do: Use M/M/1 queue formulas
+        key_prerequisites: [math.probstat.poisson-process-intro]
+      - id: kp4
+        can_do: Find queue length and waiting time
+        key_prerequisites: [engr.transportation.traffic-stream-parameters, math.probstat.poisson-process-intro]
+  - id: engr.transportation.headway-distributions
+    name: Modelling headways with the exponential distribution
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.exponential-distribution
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model arrivals with the Poisson distribution
+        key_prerequisites: [engr.transportation.traffic-stream-parameters, math.probstat.exponential-distribution]
+      - id: kp2
+        can_do: Model headways with the exponential distribution
+        key_prerequisites: [math.probstat.exponential-distribution]
+      - id: kp3
+        can_do: Find probability of gaps
+        key_prerequisites: [engr.transportation.traffic-stream-parameters, math.probstat.exponential-distribution]
+      - id: kp4
+        can_do: Find gap acceptance
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+  - id: engr.transportation.freeway-level-of-service
+    name: Finding freeway level of service
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.greenshields-model
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free-flow speed
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp2
+        can_do: Find passenger car equivalents
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp3
+        can_do: Find density on freeway segments
+        key_prerequisites: [engr.transportation.greenshields-model]
+      - id: kp4
+        can_do: Find level of service
+        key_prerequisites: [engr.transportation.greenshields-model]
+  - id: engr.transportation.multilane-and-two-lane-highways
+    name: Finding level of service on multilane and two-lane highways
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.freeway-level-of-service
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find level of service on multilane highways
+        key_prerequisites: [engr.transportation.freeway-level-of-service]
+      - id: kp2
+        can_do: Find level of service on two-lane highways
+        key_prerequisites: [engr.transportation.freeway-level-of-service]
+      - id: kp3
+        can_do: Adjust for heavy vehicles
+        key_prerequisites: [engr.transportation.freeway-level-of-service]
+      - id: kp4
+        can_do: Compare highway types
+        key_prerequisites: [engr.transportation.freeway-level-of-service]
+  - id: engr.transportation.intersection-control-types
+    name: Choosing intersection control
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare stop, yield and signal control
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp2
+        can_do: Check signal warrants
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp3
+        can_do: Describe intersection conflicts
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp4
+        can_do: Choose intersection control
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+  - id: engr.transportation.signal-timing-basics
+    name: Finding cycle length and green splits
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.intersection-control-types
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find critical lane flows
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp2
+        can_do: Find cycle length with Webster's method
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp3
+        can_do: Allocate green time
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp4
+        can_do: Find yellow and all-red intervals
+        key_prerequisites: [engr.transportation.intersection-control-types]
+  - id: engr.transportation.signalized-intersection-delay
+    name: Finding delay and level of service at signals
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.signal-timing-basics
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.transportation.queueing-models
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find control delay
+        key_prerequisites: [engr.transportation.signal-timing-basics, engr.transportation.queueing-models]
+      - id: kp2
+        can_do: Find capacity of lane groups
+        key_prerequisites: [engr.transportation.signal-timing-basics]
+      - id: kp3
+        can_do: Find level of service at signals
+        key_prerequisites: [engr.transportation.signal-timing-basics]
+      - id: kp4
+        can_do: Find queue length at signals
+        key_prerequisites: [engr.transportation.queueing-models]
+  - id: engr.transportation.roundabouts
+    name: Analyzing roundabout capacity
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.intersection-control-types
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find roundabout entry capacity
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp2
+        can_do: Find delay at roundabouts
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp3
+        can_do: Compare roundabouts and signals
+        key_prerequisites: [engr.transportation.intersection-control-types]
+      - id: kp4
+        can_do: Describe roundabout geometry
+        key_prerequisites: [engr.transportation.intersection-control-types]
+  - id: engr.transportation.pavement-types
+    name: Comparing flexible and rigid pavements
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.materials.construction-materials
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare flexible and rigid pavements
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp2
+        can_do: Describe pavement layers
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp3
+        can_do: Describe pavement distresses
+        key_prerequisites: [engr.materials.construction-materials]
+      - id: kp4
+        can_do: Choose pavement types
+        key_prerequisites: [engr.materials.construction-materials]
+  - id: engr.transportation.equivalent-single-axle-loads
+    name: Finding equivalent single-axle loads
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.pavement-types
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find load equivalency factors
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp2
+        can_do: Find ESALs for traffic
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp3
+        can_do: Find growth factors
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp4
+        can_do: Find design ESALs
+        key_prerequisites: [engr.transportation.pavement-types]
+  - id: engr.transportation.subgrade-characterization
+    name: Characterizing subgrade for pavement design
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.soil-mechanics.aashto-classification
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.transportation.pavement-types
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resilient modulus
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp2
+        can_do: Use CBR values
+        key_prerequisites: [engr.soil-mechanics.aashto-classification]
+      - id: kp3
+        can_do: Find effective subgrade modulus
+        key_prerequisites: [engr.soil-mechanics.aashto-classification, engr.transportation.pavement-types]
+      - id: kp4
+        can_do: Adjust for seasonal variation
+        key_prerequisites: [engr.soil-mechanics.aashto-classification]
+  - id: engr.transportation.flexible-pavement-design
+    name: Designing flexible pavements
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.equivalent-single-axle-loads
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.transportation.subgrade-characterization
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find required structural number
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads, engr.transportation.subgrade-characterization]
+      - id: kp2
+        can_do: Find layer coefficients
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads]
+      - id: kp3
+        can_do: Find layer thicknesses
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads]
+      - id: kp4
+        can_do: Check design for reliability
+        key_prerequisites: [engr.transportation.subgrade-characterization]
+  - id: engr.transportation.rigid-pavement-design
+    name: Designing rigid pavements
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.equivalent-single-axle-loads
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.transportation.subgrade-characterization
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find required slab thickness
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads, engr.transportation.subgrade-characterization]
+      - id: kp2
+        can_do: Find modulus of subgrade reaction
+        key_prerequisites: [engr.transportation.subgrade-characterization]
+      - id: kp3
+        can_do: Design joints
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads]
+      - id: kp4
+        can_do: Check design for reliability
+        key_prerequisites: [engr.transportation.equivalent-single-axle-loads]
+  - id: engr.transportation.asphalt-mix-design
+    name: Proportioning asphalt mixes
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.pavement-types
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find volumetric properties of asphalt mixes
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp2
+        can_do: Choose binder content
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp3
+        can_do: Interpret Marshall test results
+        key_prerequisites: [engr.transportation.pavement-types]
+      - id: kp4
+        can_do: Choose aggregate gradation
+        key_prerequisites: [engr.transportation.pavement-types]
+  - id: engr.transportation.pavement-drainage-and-rehab
+    name: Planning pavement drainage and rehabilitation
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.flexible-pavement-design
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design pavement drainage
+        key_prerequisites: [engr.transportation.flexible-pavement-design]
+      - id: kp2
+        can_do: Choose rehabilitation methods
+        key_prerequisites: [engr.transportation.flexible-pavement-design]
+      - id: kp3
+        can_do: Find overlay thickness
+        key_prerequisites: [engr.transportation.flexible-pavement-design]
+      - id: kp4
+        can_do: Rate pavement condition
+        key_prerequisites: [engr.transportation.flexible-pavement-design]
+  - id: engr.transportation.trip-generation
+    name: Estimating trip generation
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.simple-linear-model
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find trip rates
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp2
+        can_do: Use regression for trip generation
+        key_prerequisites: [engr.transportation.traffic-stream-parameters, math.probstat.simple-linear-model]
+      - id: kp3
+        can_do: Use cross-classification
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp4
+        can_do: Balance productions and attractions
+        key_prerequisites: [math.probstat.simple-linear-model]
+  - id: engr.transportation.trip-distribution
+    name: Distributing trips with the gravity model
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.trip-generation
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the gravity model
+        key_prerequisites: [engr.transportation.trip-generation]
+      - id: kp2
+        can_do: Find friction factors
+        key_prerequisites: [engr.transportation.trip-generation]
+      - id: kp3
+        can_do: Balance trip tables
+        key_prerequisites: [engr.transportation.trip-generation]
+      - id: kp4
+        can_do: Calibrate distribution models
+        key_prerequisites: [engr.transportation.trip-generation]
+  - id: engr.transportation.mode-choice
+    name: Modelling mode choice with logit models
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.trip-distribution
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find utilities of modes
+        key_prerequisites: [engr.transportation.trip-distribution]
+      - id: kp2
+        can_do: Find mode shares with logit models
+        key_prerequisites: [engr.transportation.trip-distribution]
+      - id: kp3
+        can_do: Find effect of cost changes
+        key_prerequisites: [engr.transportation.trip-distribution]
+      - id: kp4
+        can_do: Interpret model coefficients
+        key_prerequisites: [engr.transportation.trip-distribution]
+  - id: engr.transportation.traffic-assignment
+    name: Assigning traffic to routes
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.mode-choice
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assign traffic by all-or-nothing
+        key_prerequisites: [engr.transportation.mode-choice]
+      - id: kp2
+        can_do: Assign traffic by user equilibrium
+        key_prerequisites: [engr.transportation.mode-choice]
+      - id: kp3
+        can_do: Use link performance functions
+        key_prerequisites: [engr.transportation.mode-choice]
+      - id: kp4
+        can_do: Compare assignment methods
+        key_prerequisites: [engr.transportation.mode-choice]
+  - id: engr.transportation.crash-analysis
+    name: Analyzing crash rates and countermeasures
+    subject: engr
+    course: engr.transportation
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.transportation.traffic-stream-parameters
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find crash rates
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp2
+        can_do: Find crash reduction from countermeasures
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp3
+        can_do: Identify high-crash locations
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
+      - id: kp4
+        can_do: Use collision diagrams
+        key_prerequisites: [engr.transportation.traffic-stream-parameters]
