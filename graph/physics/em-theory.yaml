@@ -864,3 +864,669 @@ topics:
       - id: kp4
         can_do: Find polarizability from dielectric constant
         key_prerequisites: [physics.em-theory.linear-dielectrics]
+  - id: physics.em-theory.volume-and-surface-currents
+    name: Using volume and surface current densities
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.current-density
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define surface current density
+        key_prerequisites: [physics.em.current-density]
+      - id: kp2
+        can_do: Define volume current density
+        key_prerequisites: [physics.em.current-density]
+      - id: kp3
+        can_do: Find current through a surface by integration
+        key_prerequisites: [physics.em.current-density]
+      - id: kp4
+        can_do: Find surface current of a spinning charged shell
+        key_prerequisites: [physics.em.current-density]
+  - id: physics.em-theory.continuity-equation-charge
+    name: Deriving charge conservation in differential form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.volume-and-surface-currents
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc3.divergence-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply charge conservation to a volume
+        key_prerequisites: [physics.em-theory.volume-and-surface-currents]
+      - id: kp2
+        can_do: Derive the continuity equation
+        key_prerequisites: [physics.em-theory.volume-and-surface-currents, math.calc3.divergence-theorem]
+      - id: kp3
+        can_do: Show steady currents have zero divergence
+        key_prerequisites: [math.calc3.divergence-theorem]
+      - id: kp4
+        can_do: Find how charge density changes from a current
+        key_prerequisites: [physics.em-theory.volume-and-surface-currents]
+  - id: physics.em-theory.divergence-and-curl-of-b
+    name: Finding divergence and curl of magnetic fields
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-statement
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.stokes-theorem
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.em.biot-savart-law
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find divergence of the Biot-Savart field
+        key_prerequisites: [physics.em.amperes-law-statement, physics.em.biot-savart-law]
+      - id: kp2
+        can_do: Find curl of the Biot-Savart field
+        key_prerequisites: [physics.em.amperes-law-statement, physics.em.biot-savart-law]
+      - id: kp3
+        can_do: Apply Stokes' theorem to Ampere's law
+        key_prerequisites: [physics.em.amperes-law-statement, math.calc3.stokes-theorem]
+      - id: kp4
+        can_do: Compare with electrostatic divergence and curl
+        key_prerequisites: [physics.em.amperes-law-statement]
+  - id: physics.em-theory.differential-ampere-law
+    name: Using Ampere's law in differential form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.divergence-and-curl-of-b
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Ampere's law in differential form
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp2
+        can_do: Find current density from a field
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp3
+        can_do: Find a field inside a thick wire from the differential law
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp4
+        can_do: Check a field against the differential law
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+  - id: physics.em-theory.vector-potential
+    name: Finding the magnetic vector potential
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.differential-ampere-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.helmholtz-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the vector potential
+        key_prerequisites: [physics.em-theory.differential-ampere-law]
+      - id: kp2
+        can_do: Choose the Coulomb gauge
+        key_prerequisites: [physics.em-theory.helmholtz-theorem]
+      - id: kp3
+        can_do: Write Poisson's equation for the vector potential
+        key_prerequisites: [physics.em-theory.differential-ampere-law, physics.em-theory.helmholtz-theorem]
+      - id: kp4
+        can_do: Find a field from a vector potential
+        key_prerequisites: [physics.em-theory.differential-ampere-law]
+  - id: physics.em-theory.vector-potential-examples
+    name: Finding vector potentials of wires, solenoids and spheres
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.vector-potential
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the vector potential of a long wire
+        key_prerequisites: [physics.em-theory.vector-potential]
+      - id: kp2
+        can_do: Find the vector potential inside a solenoid
+        key_prerequisites: [physics.em-theory.vector-potential]
+      - id: kp3
+        can_do: Find the vector potential of a uniform field
+        key_prerequisites: [physics.em-theory.vector-potential]
+      - id: kp4
+        can_do: Find the vector potential outside a solenoid
+        key_prerequisites: [physics.em-theory.vector-potential]
+  - id: physics.em-theory.magnetic-boundary-conditions
+    name: Deriving magnetic boundary conditions
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.divergence-and-curl-of-b
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.boundary-conditions-on-fields
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the jump in tangential field at a surface current
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp2
+        can_do: Show the normal field is continuous
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp3
+        can_do: Find surface current from a field jump
+        key_prerequisites: [physics.em-theory.divergence-and-curl-of-b]
+      - id: kp4
+        can_do: Find conditions on the vector potential
+        key_prerequisites: [physics.em-theory.boundary-conditions-on-fields]
+  - id: physics.em-theory.magnetic-dipole-term
+    name: Finding the magnetic dipole term of the vector potential
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.vector-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.multipole-expansion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand the vector potential of a loop
+        key_prerequisites: [physics.em-theory.vector-potential, physics.em-theory.multipole-expansion]
+      - id: kp2
+        can_do: Show there is no monopole term
+        key_prerequisites: [physics.em-theory.vector-potential]
+      - id: kp3
+        can_do: Find the dipole term
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+      - id: kp4
+        can_do: Find a dipole field far from a loop
+        key_prerequisites: [physics.em-theory.vector-potential]
+  - id: physics.em-theory.forces-and-torques-on-magnetic-dipoles
+    name: Finding forces and torques on magnetic dipoles
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.magnetic-dipole-term
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.torque-and-energy-of-a-loop
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find torque on a dipole in a field
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term, physics.em.torque-and-energy-of-a-loop]
+      - id: kp2
+        can_do: Find force on a dipole in a nonuniform field
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term]
+      - id: kp3
+        can_do: Find energy of a dipole in a field
+        key_prerequisites: [physics.em.torque-and-energy-of-a-loop]
+      - id: kp4
+        can_do: Find force between two dipoles
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term]
+  - id: physics.em-theory.spinning-charged-sphere
+    name: Finding fields of a spinning charged sphere
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.vector-potential-examples
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.separation-spherical-legendre
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find surface current of a spinning shell
+        key_prerequisites: [physics.em-theory.vector-potential-examples]
+      - id: kp2
+        can_do: Find the vector potential of a spinning shell
+        key_prerequisites: [physics.em-theory.vector-potential-examples, physics.em-theory.separation-spherical-legendre]
+      - id: kp3
+        can_do: Find the field inside
+        key_prerequisites: [physics.em-theory.vector-potential-examples]
+      - id: kp4
+        can_do: Find the field outside
+        key_prerequisites: [physics.em-theory.separation-spherical-legendre]
+  - id: physics.em-theory.magnetization-and-bound-currents
+    name: Finding bound currents from magnetization
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.magnetic-dipole-term
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.magnetic-materials
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define magnetization
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term]
+      - id: kp2
+        can_do: Find bound surface current
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term]
+      - id: kp3
+        can_do: Find bound volume current
+        key_prerequisites: [physics.em.magnetic-materials]
+      - id: kp4
+        can_do: Find the field of a uniformly magnetized sphere
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term, physics.em.magnetic-materials]
+  - id: physics.em-theory.h-field
+    name: Using the H field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.magnetization-and-bound-currents
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.em-theory.differential-ampere-law
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define the H field
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+      - id: kp2
+        can_do: Write Ampere's law for free current
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents, physics.em-theory.differential-ampere-law]
+      - id: kp3
+        can_do: Find H from free current
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+      - id: kp4
+        can_do: Explain when H is not fixed by free current alone
+        key_prerequisites: [physics.em-theory.differential-ampere-law]
+  - id: physics.em-theory.linear-magnetic-media
+    name: Solving problems with linear magnetic media
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.h-field
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define susceptibility and permeability
+        key_prerequisites: [physics.em-theory.h-field]
+      - id: kp2
+        can_do: Find fields in a linear medium
+        key_prerequisites: [physics.em-theory.h-field]
+      - id: kp3
+        can_do: Find bound currents in a linear medium
+        key_prerequisites: [physics.em-theory.h-field]
+      - id: kp4
+        can_do: Compare paramagnetic and diamagnetic responses
+        key_prerequisites: [physics.em-theory.h-field]
+  - id: physics.em-theory.magnetic-media-boundary-conditions
+    name: Applying boundary conditions in magnetic media
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.h-field
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.magnetic-boundary-conditions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the jump in tangential H
+        key_prerequisites: [physics.em-theory.h-field]
+      - id: kp2
+        can_do: Show normal B is continuous
+        key_prerequisites: [physics.em-theory.magnetic-boundary-conditions]
+      - id: kp3
+        can_do: Find how field lines bend at an interface
+        key_prerequisites: [physics.em-theory.h-field]
+      - id: kp4
+        can_do: Explain shielding with high permeability
+        key_prerequisites: [physics.em-theory.h-field]
+  - id: physics.em-theory.ferromagnetism-and-hysteresis
+    name: Describing ferromagnetism and hysteresis quantitatively
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.linear-magnetic-media
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe domains and saturation
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp2
+        can_do: Read a hysteresis loop
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp3
+        can_do: Find remanence and coercivity
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp4
+        can_do: Find energy lost per cycle
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+  - id: physics.em-theory.magnetic-circuits
+    name: Analyzing magnetic circuits with cores
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.linear-magnetic-media
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define reluctance
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp2
+        can_do: Find flux in an iron core
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp3
+        can_do: Find flux with an air gap
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+      - id: kp4
+        can_do: Compare circuits with gaps and without
+        key_prerequisites: [physics.em-theory.linear-magnetic-media]
+  - id: physics.em-theory.local-ohms-law-and-emf
+    name: Using Ohm's law in local form with emf
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.microscopic-ohms-law
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Ohm's law with field and current density
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+      - id: kp2
+        can_do: Define emf as a line integral
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+      - id: kp3
+        can_do: Find a field inside a resistor
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+      - id: kp4
+        can_do: Find charge buildup at a resistor junction
+        key_prerequisites: [physics.em.microscopic-ohms-law]
+  - id: physics.em-theory.differential-faraday-law
+    name: Deriving Faraday's law in differential form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em.faraday-with-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.stokes-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Stokes' theorem to Faraday's law
+        key_prerequisites: [math.calc3.stokes-theorem]
+      - id: kp2
+        can_do: Write Faraday's law in differential form
+        key_prerequisites: [physics.em.faraday-with-derivatives, math.calc3.stokes-theorem]
+      - id: kp3
+        can_do: Find an induced field from a changing field
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp4
+        can_do: Find curl of an induced field
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+  - id: physics.em-theory.maxwell-equations-differential
+    name: Writing Maxwell's equations in differential form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.differential-faraday-law
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em-theory.differential-ampere-law
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em-theory.continuity-equation-charge
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.displacement-current
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Ampere's law fails for changing fields
+        key_prerequisites: [physics.em-theory.continuity-equation-charge, physics.em.displacement-current]
+      - id: kp2
+        can_do: Add displacement current to the differential law
+        key_prerequisites: [physics.em.displacement-current]
+      - id: kp3
+        can_do: Write all four equations in differential form
+        key_prerequisites: [physics.em-theory.differential-faraday-law, physics.em-theory.differential-ampere-law]
+      - id: kp4
+        can_do: Show charge conservation follows from the equations
+        key_prerequisites: [physics.em-theory.continuity-equation-charge]
+  - id: physics.em-theory.maxwell-equations-in-matter
+    name: Writing Maxwell's equations in matter
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-equations-differential
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.displacement-field
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em-theory.h-field
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate free and bound charges and currents
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp2
+        can_do: Write the equations in matter
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential, physics.em-theory.displacement-field, physics.em-theory.h-field]
+      - id: kp3
+        can_do: Find polarization current
+        key_prerequisites: [physics.em-theory.displacement-field]
+      - id: kp4
+        can_do: Find displacement current in a dielectric
+        key_prerequisites: [physics.em-theory.displacement-field]
+  - id: physics.em-theory.boundary-conditions-general
+    name: Using general electrodynamic boundary conditions
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-equations-in-matter
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.dielectric-boundary-conditions
+        encompassing: 0.2
+        confidence: high
+      - topic: physics.em-theory.magnetic-media-boundary-conditions
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write all four boundary conditions
+        key_prerequisites: [physics.em-theory.maxwell-equations-in-matter]
+      - id: kp2
+        can_do: Apply them at a dielectric interface
+        key_prerequisites: [physics.em-theory.dielectric-boundary-conditions]
+      - id: kp3
+        can_do: Apply them at a magnetic interface
+        key_prerequisites: [physics.em-theory.magnetic-media-boundary-conditions]
+      - id: kp4
+        can_do: Apply them at a perfect conductor
+        key_prerequisites: [physics.em-theory.maxwell-equations-in-matter]
+  - id: physics.em-theory.quasistatic-induction-problems
+    name: Solving quasistatic induction problems
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.differential-faraday-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.vector-potential-examples
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find induced fields with changing currents
+        key_prerequisites: [physics.em-theory.differential-faraday-law]
+      - id: kp2
+        can_do: Find an induced field from the vector potential
+        key_prerequisites: [physics.em-theory.vector-potential-examples]
+      - id: kp3
+        can_do: Find eddy current heating roughly
+        key_prerequisites: [physics.em-theory.differential-faraday-law]
+      - id: kp4
+        can_do: Find a field from a slowly changing solenoid current
+        key_prerequisites: [physics.em-theory.differential-faraday-law, physics.em-theory.vector-potential-examples]
+  - id: physics.em-theory.poynting-theorem
+    name: Deriving Poynting's theorem
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-equations-differential
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.poynting-vector
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em-theory.vector-identities-for-fields
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive energy conservation from Maxwell's equations
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential, physics.em-theory.vector-identities-for-fields]
+      - id: kp2
+        can_do: Identify energy density and flux
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp3
+        can_do: Find energy flow into a resistor
+        key_prerequisites: [physics.em.poynting-vector]
+      - id: kp4
+        can_do: Find energy flow into a charging capacitor
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+  - id: physics.em-theory.maxwell-stress-tensor
+    name: Finding forces with the Maxwell stress tensor
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.poynting-theorem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the stress tensor
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+      - id: kp2
+        can_do: Find force on a charge distribution with the tensor
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+      - id: kp3
+        can_do: Find force between two charged hemispheres
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+      - id: kp4
+        can_do: Find radiation pressure from the tensor
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+  - id: physics.em-theory.field-momentum
+    name: Finding momentum stored in fields
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-stress-tensor
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find momentum density of fields
+        key_prerequisites: [physics.em-theory.maxwell-stress-tensor]
+      - id: kp2
+        can_do: Find momentum in crossed static fields
+        key_prerequisites: [physics.em-theory.maxwell-stress-tensor]
+      - id: kp3
+        can_do: Show total momentum is conserved
+        key_prerequisites: [physics.em-theory.maxwell-stress-tensor]
+      - id: kp4
+        can_do: Explain hidden momentum qualitatively
+        key_prerequisites: [physics.em-theory.maxwell-stress-tensor]
+  - id: physics.em-theory.field-angular-momentum
+    name: Finding angular momentum stored in fields
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.field-momentum
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular momentum density of fields
+        key_prerequisites: [physics.em-theory.field-momentum]
+      - id: kp2
+        can_do: Find angular momentum in a charged rotating system
+        key_prerequisites: [physics.em-theory.field-momentum]
+      - id: kp3
+        can_do: Resolve the Feynman disk puzzle
+        key_prerequisites: [physics.em-theory.field-momentum]
+      - id: kp4
+        can_do: Find field angular momentum of a charge near a magnetic dipole
+        key_prerequisites: [physics.em-theory.field-momentum]
