@@ -1530,3 +1530,960 @@ topics:
       - id: kp4
         can_do: Find field angular momentum of a charge near a magnetic dipole
         key_prerequisites: [physics.em-theory.field-momentum]
+  - id: physics.em-theory.wave-equation-from-maxwell
+    name: Deriving wave equations from Maxwell's equations
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-equations-differential
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.deriving-wave-equation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take the curl of Faraday's law in empty space
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp2
+        can_do: Derive the wave equation for the electric field
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential, math.pde.deriving-wave-equation]
+      - id: kp3
+        can_do: Derive the wave equation for the magnetic field
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp4
+        can_do: Find wave speed from constants
+        key_prerequisites: [math.pde.deriving-wave-equation]
+  - id: physics.em-theory.complex-plane-waves
+    name: Writing monochromatic plane waves with complex notation
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.wave-equation-from-maxwell
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.complex-wave-notation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a plane wave with complex amplitude
+        key_prerequisites: [physics.em-theory.wave-equation-from-maxwell, physics.waves-thermo-optics.complex-wave-notation]
+      - id: kp2
+        can_do: Find the magnetic field from the electric field
+        key_prerequisites: [physics.em-theory.wave-equation-from-maxwell]
+      - id: kp3
+        can_do: Show fields are transverse
+        key_prerequisites: [physics.em-theory.wave-equation-from-maxwell]
+      - id: kp4
+        can_do: Take real parts for physical fields
+        key_prerequisites: [physics.waves-thermo-optics.complex-wave-notation]
+  - id: physics.em-theory.polarization-of-em-waves
+    name: Describing polarization of electromagnetic waves
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.complex-plane-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.polarization-states
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a polarization vector
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+      - id: kp2
+        can_do: Write circular polarization in complex form
+        key_prerequisites: [physics.em-theory.complex-plane-waves, physics.waves-thermo-optics.polarization-states]
+      - id: kp3
+        can_do: Find polarization from field components
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp4
+        can_do: Superpose two linear polarizations
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+  - id: physics.em-theory.energy-momentum-of-em-waves
+    name: Finding energy and momentum of plane waves
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.complex-plane-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.poynting-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy density of a plane wave
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+      - id: kp2
+        can_do: Find the Poynting vector of a plane wave
+        key_prerequisites: [physics.em-theory.complex-plane-waves, physics.em-theory.poynting-theorem]
+      - id: kp3
+        can_do: Average over a cycle
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+      - id: kp4
+        can_do: Find momentum density and pressure
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+  - id: physics.em-theory.waves-in-linear-media
+    name: Finding waves in linear media
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.complex-plane-waves
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em-theory.maxwell-equations-in-matter
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wave speed in a linear medium
+        key_prerequisites: [physics.em-theory.complex-plane-waves, physics.em-theory.maxwell-equations-in-matter]
+      - id: kp2
+        can_do: Define index of refraction from material constants
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+      - id: kp3
+        can_do: Find field ratios in a medium
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+      - id: kp4
+        can_do: Find intensity in a medium
+        key_prerequisites: [physics.em-theory.complex-plane-waves]
+  - id: physics.em-theory.normal-incidence-reflection
+    name: Finding reflection and transmission at normal incidence
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-linear-media
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.boundary-conditions-general
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply boundary conditions at normal incidence
+        key_prerequisites: [physics.em-theory.boundary-conditions-general]
+      - id: kp2
+        can_do: Find reflected and transmitted amplitudes
+        key_prerequisites: [physics.em-theory.waves-in-linear-media, physics.em-theory.boundary-conditions-general]
+      - id: kp3
+        can_do: Find reflection and transmission coefficients
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp4
+        can_do: Check energy balance
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+  - id: physics.em-theory.fresnel-equations
+    name: Deriving Fresnel equations at oblique incidence
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.normal-incidence-reflection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply boundary conditions at oblique incidence
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+      - id: kp2
+        can_do: Find amplitudes for each polarization
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+      - id: kp3
+        can_do: Plot reflection against angle
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+      - id: kp4
+        can_do: Find reflection at grazing incidence
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+  - id: physics.em-theory.brewster-and-evanescent-waves
+    name: Explaining Brewster's angle and evanescent waves from Fresnel equations
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.fresnel-equations
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.brewster-angle
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Brewster's angle from Fresnel equations
+        key_prerequisites: [physics.em-theory.fresnel-equations, physics.waves-thermo-optics.brewster-angle]
+      - id: kp2
+        can_do: Show total reflection beyond the critical angle
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+      - id: kp3
+        can_do: Find decay length of an evanescent wave
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+      - id: kp4
+        can_do: Explain frustrated total internal reflection
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+  - id: physics.em-theory.waves-in-conductors
+    name: Finding skin depth in conductors
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-linear-media
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em-theory.local-ohms-law-and-emf
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add current to the wave equation in a conductor
+        key_prerequisites: [physics.em-theory.waves-in-linear-media, physics.em-theory.local-ohms-law-and-emf]
+      - id: kp2
+        can_do: Find complex wave number
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp3
+        can_do: Find skin depth
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp4
+        can_do: Find phase lag between fields in a conductor
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+  - id: physics.em-theory.reflection-from-conductors
+    name: Finding reflection from conducting surfaces
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.normal-incidence-reflection
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reflection from a good conductor
+        key_prerequisites: [physics.em-theory.waves-in-conductors, physics.em-theory.normal-incidence-reflection]
+      - id: kp2
+        can_do: Explain why metals are shiny
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp3
+        can_do: Find phase on reflection from a conductor
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+      - id: kp4
+        can_do: Find absorbed power in a conductor
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+  - id: physics.em-theory.dispersion-in-dielectrics
+    name: Modeling frequency-dependent permittivity
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-linear-media
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.driven-oscillator
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Model bound electrons as driven oscillators
+        key_prerequisites: [physics.mechanics.driven-oscillator]
+      - id: kp2
+        can_do: Find complex permittivity against frequency
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp3
+        can_do: Explain normal and anomalous dispersion
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp4
+        can_do: Find absorption near resonance
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+  - id: physics.em-theory.plasma-frequency
+    name: Finding the plasma frequency and cutoff
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.dispersion-in-dielectrics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model free electrons in a plasma
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+      - id: kp2
+        can_do: Find the plasma frequency
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+      - id: kp3
+        can_do: Find cutoff for wave propagation
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+      - id: kp4
+        can_do: Explain radio reflection from the ionosphere
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+  - id: physics.em-theory.rectangular-waveguides
+    name: Finding modes of rectangular waveguides
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.separation-cartesian
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set boundary conditions in a hollow guide
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp2
+        can_do: Find transverse electric modes
+        key_prerequisites: [physics.em-theory.waves-in-conductors, physics.em-theory.separation-cartesian]
+      - id: kp3
+        can_do: Find mode cutoff frequencies
+        key_prerequisites: [physics.em-theory.separation-cartesian]
+      - id: kp4
+        can_do: Find the lowest mode of a guide
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+  - id: physics.em-theory.waveguide-cutoff-and-group-velocity
+    name: Finding cutoff frequencies and group velocity in guides
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.rectangular-waveguides
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.group-and-phase-velocity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dispersion relation in a guide
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+      - id: kp2
+        can_do: Find phase and group velocity
+        key_prerequisites: [physics.em-theory.rectangular-waveguides, physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp3
+        can_do: Show group velocity stays below light speed
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp4
+        can_do: Choose guide size for a frequency
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+  - id: physics.em-theory.coaxial-transmission-lines
+    name: Finding TEM waves in coaxial lines
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.rectangular-waveguides
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.inductance-of-coax-and-toroid
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find TEM fields in a coaxial line
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+      - id: kp2
+        can_do: Find inductance and capacitance per length
+        key_prerequisites: [physics.em.inductance-of-coax-and-toroid]
+      - id: kp3
+        can_do: Find characteristic impedance
+        key_prerequisites: [physics.em-theory.rectangular-waveguides, physics.em.inductance-of-coax-and-toroid]
+      - id: kp4
+        can_do: Find wave speed on a line
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+  - id: physics.em-theory.resonant-cavities
+    name: Finding modes of resonant cavities
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.rectangular-waveguides
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find modes of a rectangular cavity
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+      - id: kp2
+        can_do: Find resonant frequencies
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+      - id: kp3
+        can_do: Find the lowest mode
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+      - id: kp4
+        can_do: Find quality factor from wall losses
+        key_prerequisites: [physics.em-theory.rectangular-waveguides]
+  - id: physics.em-theory.dynamic-potentials
+    name: Writing fields from dynamic potentials
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.maxwell-equations-differential
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.vector-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write fields from scalar and vector potentials
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential, physics.em-theory.vector-potential]
+      - id: kp2
+        can_do: Find Maxwell's equations in potential form
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp3
+        can_do: Find fields from given potentials
+        key_prerequisites: [physics.em-theory.maxwell-equations-differential]
+      - id: kp4
+        can_do: Explain why the scalar potential alone fails
+        key_prerequisites: [physics.em-theory.vector-potential]
+  - id: physics.em-theory.gauge-transformations
+    name: Using Coulomb and Lorenz gauges
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.dynamic-potentials
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a gauge transformation
+        key_prerequisites: [physics.em-theory.dynamic-potentials]
+      - id: kp2
+        can_do: Choose the Coulomb gauge
+        key_prerequisites: [physics.em-theory.dynamic-potentials]
+      - id: kp3
+        can_do: Choose the Lorenz gauge
+        key_prerequisites: [physics.em-theory.dynamic-potentials]
+      - id: kp4
+        can_do: Write wave equations in the Lorenz gauge
+        key_prerequisites: [physics.em-theory.dynamic-potentials]
+  - id: physics.em-theory.retarded-potentials
+    name: Using retarded potentials
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.gauge-transformations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define retarded time
+        key_prerequisites: [physics.em-theory.gauge-transformations]
+      - id: kp2
+        can_do: Write retarded potentials
+        key_prerequisites: [physics.em-theory.gauge-transformations]
+      - id: kp3
+        can_do: Find potentials of a switched-on current
+        key_prerequisites: [physics.em-theory.gauge-transformations]
+      - id: kp4
+        can_do: Check retarded potentials satisfy the gauge condition
+        key_prerequisites: [physics.em-theory.gauge-transformations]
+  - id: physics.em-theory.jefimenko-equations
+    name: Stating Jefimenko's equations
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.retarded-potentials
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write fields from retarded sources
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp2
+        can_do: Show the static limit
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp3
+        can_do: Find fields of a switched-on wire
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp4
+        can_do: Explain why fields are not simply retarded Coulomb fields
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+  - id: physics.em-theory.lienard-wiechert-potentials
+    name: Deriving Lienard-Wiechert potentials
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.retarded-potentials
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the retarded time for a moving charge
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp2
+        can_do: Derive the scalar potential of a moving charge
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp3
+        can_do: Derive the vector potential
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp4
+        can_do: Find potentials for a charge at constant velocity
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+  - id: physics.em-theory.fields-of-an-accelerating-charge
+    name: Finding fields of an accelerating point charge
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.lienard-wiechert-potentials
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fields of a moving point charge
+        key_prerequisites: [physics.em-theory.lienard-wiechert-potentials]
+      - id: kp2
+        can_do: Separate velocity and acceleration fields
+        key_prerequisites: [physics.em-theory.lienard-wiechert-potentials]
+      - id: kp3
+        can_do: Find how each field falls with distance
+        key_prerequisites: [physics.em-theory.lienard-wiechert-potentials]
+      - id: kp4
+        can_do: Find fields of a charge in uniform circular motion
+        key_prerequisites: [physics.em-theory.lienard-wiechert-potentials]
+  - id: physics.em-theory.uniformly-moving-charge-field
+    name: Finding the relativistic field of a charge at constant velocity
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.fields-of-an-accelerating-charge
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the field of a charge at constant velocity
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+      - id: kp2
+        can_do: Show the field points from the present position
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+      - id: kp3
+        can_do: Find field flattening at high speed
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+      - id: kp4
+        can_do: Find the magnetic field of a moving charge
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+  - id: physics.em-theory.electric-dipole-radiation
+    name: Finding fields of electric dipole radiation
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.retarded-potentials
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.multipole-expansion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model an oscillating dipole
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp2
+        can_do: Find potentials far away
+        key_prerequisites: [physics.em-theory.retarded-potentials, physics.em-theory.multipole-expansion]
+      - id: kp3
+        can_do: Find radiation fields
+        key_prerequisites: [physics.em-theory.retarded-potentials]
+      - id: kp4
+        can_do: Find wave zone conditions
+        key_prerequisites: [physics.em-theory.multipole-expansion]
+  - id: physics.em-theory.radiated-power-and-pattern
+    name: Finding radiated power and angular pattern
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.electric-dipole-radiation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.poynting-theorem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the Poynting vector of dipole radiation
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation, physics.em-theory.poynting-theorem]
+      - id: kp2
+        can_do: Find total radiated power
+        key_prerequisites: [physics.em-theory.poynting-theorem]
+      - id: kp3
+        can_do: Sketch the angular pattern
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+      - id: kp4
+        can_do: Find how power depends on frequency
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+  - id: physics.em-theory.magnetic-dipole-radiation
+    name: Finding magnetic dipole radiation
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.electric-dipole-radiation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.magnetic-dipole-term
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model an oscillating current loop
+        key_prerequisites: [physics.em-theory.magnetic-dipole-term]
+      - id: kp2
+        can_do: Find radiation fields
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+      - id: kp3
+        can_do: Find total radiated power
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+      - id: kp4
+        can_do: Compare with electric dipole radiation
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation, physics.em-theory.magnetic-dipole-term]
+  - id: physics.em-theory.larmor-formula
+    name: Deriving the Larmor formula
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.fields-of-an-accelerating-charge
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.radiated-power-and-pattern
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find acceleration fields of a slow charge
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+      - id: kp2
+        can_do: Derive the Larmor formula
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge, physics.em-theory.radiated-power-and-pattern]
+      - id: kp3
+        can_do: Find radiated power of an accelerating electron
+        key_prerequisites: [physics.em-theory.fields-of-an-accelerating-charge]
+      - id: kp4
+        can_do: Find the angular pattern
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+  - id: physics.em-theory.radiation-reaction
+    name: Describing radiation reaction
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.larmor-formula
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy loss rate from radiation
+        key_prerequisites: [physics.em-theory.larmor-formula]
+      - id: kp2
+        can_do: Write the radiation reaction force
+        key_prerequisites: [physics.em-theory.larmor-formula]
+      - id: kp3
+        can_do: Estimate collapse time of a classical atom
+        key_prerequisites: [physics.em-theory.larmor-formula]
+      - id: kp4
+        can_do: Describe problems with the reaction force
+        key_prerequisites: [physics.em-theory.larmor-formula]
+  - id: physics.em-theory.radiation-resistance
+    name: Finding radiation resistance of antennas
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.radiated-power-and-pattern
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.antennas-intro
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define radiation resistance
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp2
+        can_do: Find resistance of a short dipole
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp3
+        can_do: Find power from a current in an antenna
+        key_prerequisites: [physics.em-theory.radiated-power-and-pattern]
+      - id: kp4
+        can_do: Compare short and half-wave antennas
+        key_prerequisites: [physics.em.antennas-intro]
+  - id: physics.em-theory.rayleigh-scattering
+    name: Explaining Rayleigh scattering and the blue sky
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.electric-dipole-radiation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em-theory.dispersion-in-dielectrics
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model molecules as driven dipoles
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation, physics.em-theory.dispersion-in-dielectrics]
+      - id: kp2
+        can_do: Find scattered power against frequency
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+      - id: kp3
+        can_do: Explain the blue sky
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+      - id: kp4
+        can_do: Explain polarization of scattered light
+        key_prerequisites: [physics.em-theory.electric-dipole-radiation]
+  - id: physics.em-theory.synchrotron-and-bremsstrahlung
+    name: Describing synchrotron and bremsstrahlung radiation
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.larmor-formula
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.relativistic-momentum
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe radiation from a charge in a circle
+        key_prerequisites: [physics.em-theory.larmor-formula]
+      - id: kp2
+        can_do: Describe beaming at high speed
+        key_prerequisites: [physics.modern.relativistic-momentum]
+      - id: kp3
+        can_do: Find power loss in a circular accelerator
+        key_prerequisites: [physics.em-theory.larmor-formula, physics.modern.relativistic-momentum]
+      - id: kp4
+        can_do: Describe braking radiation
+        key_prerequisites: [physics.em-theory.larmor-formula]
+  - id: physics.em-theory.field-transformations
+    name: Transforming electric and magnetic fields between frames
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.electromagnetism-and-relativity
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.uniformly-moving-charge-field
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.modern.lorentz-transformation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Transform fields for a boost along a direction
+        key_prerequisites: [physics.modern.electromagnetism-and-relativity, physics.em-theory.uniformly-moving-charge-field]
+      - id: kp2
+        can_do: Find fields of a moving capacitor
+        key_prerequisites: [physics.modern.electromagnetism-and-relativity]
+      - id: kp3
+        can_do: Find fields near a moving wire
+        key_prerequisites: [physics.em-theory.uniformly-moving-charge-field]
+      - id: kp4
+        can_do: Show parallel components are unchanged
+        key_prerequisites: [physics.modern.lorentz-transformation]
+  - id: physics.em-theory.magnetism-as-relativistic-effect
+    name: Deriving magnetic force from relativity
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.field-transformations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force on a moving charge near a wire in its frame
+        key_prerequisites: [physics.em-theory.field-transformations]
+      - id: kp2
+        can_do: Find charge densities after contraction
+        key_prerequisites: [physics.em-theory.field-transformations]
+      - id: kp3
+        can_do: Show forces agree between frames
+        key_prerequisites: [physics.em-theory.field-transformations]
+      - id: kp4
+        can_do: Explain magnetism as a relativistic consequence
+        key_prerequisites: [physics.em-theory.field-transformations]
+  - id: physics.em-theory.four-current-and-four-potential
+    name: Using the four-current and four-potential
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.four-vectors
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.gauge-transformations
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.em-theory.continuity-equation-charge
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the four-current
+        key_prerequisites: [physics.modern.four-vectors, physics.em-theory.continuity-equation-charge]
+      - id: kp2
+        can_do: Write the continuity equation in four-vector form
+        key_prerequisites: [physics.em-theory.continuity-equation-charge]
+      - id: kp3
+        can_do: Write the four-potential
+        key_prerequisites: [physics.em-theory.gauge-transformations]
+      - id: kp4
+        can_do: Write the Lorenz gauge in four-vector form
+        key_prerequisites: [physics.modern.four-vectors, physics.em-theory.gauge-transformations]
+  - id: physics.em-theory.field-tensor
+    name: Writing the electromagnetic field tensor
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.four-current-and-four-potential
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em-theory.field-transformations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build the field tensor from potentials
+        key_prerequisites: [physics.em-theory.four-current-and-four-potential]
+      - id: kp2
+        can_do: Read fields from the tensor
+        key_prerequisites: [physics.em-theory.field-transformations]
+      - id: kp3
+        can_do: Transform fields with the tensor
+        key_prerequisites: [physics.em-theory.field-transformations]
+      - id: kp4
+        can_do: Find the dual tensor
+        key_prerequisites: [physics.em-theory.four-current-and-four-potential]
+  - id: physics.em-theory.covariant-maxwell-equations
+    name: Writing Maxwell's equations in tensor form
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.field-tensor
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the inhomogeneous equations in tensor form
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp2
+        can_do: Write the homogeneous equations in tensor form
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp3
+        can_do: Recover Gauss's law from the tensor form
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp4
+        can_do: Recover Ampere's law from the tensor form
+        key_prerequisites: [physics.em-theory.field-tensor]
+  - id: physics.em-theory.relativistic-particle-in-fields
+    name: Solving relativistic motion of charges in fields
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-force
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.lorentz-force
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the relativistic force law
+        key_prerequisites: [physics.modern.relativistic-force, physics.em.lorentz-force]
+      - id: kp2
+        can_do: Find motion in a uniform electric field
+        key_prerequisites: [physics.modern.relativistic-force]
+      - id: kp3
+        can_do: Find motion in a uniform magnetic field
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp4
+        can_do: Find motion in crossed fields
+        key_prerequisites: [physics.modern.relativistic-force]
+  - id: physics.em-theory.field-invariants
+    name: Using invariants of the electromagnetic field
+    subject: physics
+    course: physics.em-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.field-tensor
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the two field invariants
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp2
+        can_do: Show they are the same in every frame
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp3
+        can_do: Find whether a frame without magnetic field exists
+        key_prerequisites: [physics.em-theory.field-tensor]
+      - id: kp4
+        can_do: Classify a field by its invariants
+        key_prerequisites: [physics.em-theory.field-tensor]
