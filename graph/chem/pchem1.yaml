@@ -1,0 +1,1198 @@
+course: chem.pchem1
+topics:
+  - id: chem.pchem1.compressibility-factor
+    name: Using the compressibility factor
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.real-gases
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the compressibility factor
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp2
+        can_do: Read compressibility charts
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp3
+        can_do: Find molar volume of a real gas
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp4
+        can_do: Explain values above and below one
+        key_prerequisites: [chem.gen1.real-gases]
+  - id: chem.pchem1.virial-equation
+    name: Using the virial equation of state
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.compressibility-factor
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.power-series-intro
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the virial expansion
+        key_prerequisites: [chem.pchem1.compressibility-factor, math.calc2.power-series-intro]
+      - id: kp2
+        can_do: Find the second virial coefficient from data
+        key_prerequisites: [chem.pchem1.compressibility-factor]
+      - id: kp3
+        can_do: Find the Boyle temperature
+        key_prerequisites: [chem.pchem1.compressibility-factor]
+      - id: kp4
+        can_do: Relate virial and van der Waals constants
+        key_prerequisites: [chem.pchem1.compressibility-factor]
+  - id: chem.pchem1.corresponding-states
+    name: Using reduced variables and corresponding states
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.compressibility-factor
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.phase-diagrams
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate reduced variables
+        key_prerequisites: [chem.pchem1.compressibility-factor]
+      - id: kp2
+        can_do: Apply the law of corresponding states
+        key_prerequisites: [chem.pchem1.compressibility-factor]
+      - id: kp3
+        can_do: Find critical constants from van der Waals constants
+        key_prerequisites: [chem.gen1.phase-diagrams]
+      - id: kp4
+        can_do: Estimate real gas behaviour from reduced variables
+        key_prerequisites: [chem.pchem1.compressibility-factor, chem.gen1.phase-diagrams]
+  - id: chem.pchem1.kirchhoff-law
+    name: Finding reaction enthalpy at other temperatures
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.thermochemical-cycles
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.heat-capacity-with-calculus
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate heat capacity differences over temperature
+        key_prerequisites: [chem.gen1.thermochemical-cycles, physics.waves-thermo-optics.heat-capacity-with-calculus]
+      - id: kp2
+        can_do: Find reaction enthalpy at a new temperature
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+      - id: kp3
+        can_do: Handle phase changes in the temperature range
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+      - id: kp4
+        can_do: Use temperature-dependent heat capacities
+        key_prerequisites: [physics.waves-thermo-optics.heat-capacity-with-calculus]
+  - id: chem.pchem1.reaction-entropy-at-other-temperatures
+    name: Finding reaction entropy and Gibbs energy at other temperatures
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.kirchhoff-law
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.entropy-in-heating-and-melting
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reaction entropy at a new temperature
+        key_prerequisites: [chem.pchem1.kirchhoff-law, physics.waves-thermo-optics.entropy-in-heating-and-melting]
+      - id: kp2
+        can_do: Find Gibbs energy at a new temperature from enthalpy and entropy
+        key_prerequisites: [chem.pchem1.kirchhoff-law]
+      - id: kp3
+        can_do: Compare exact and constant-enthalpy estimates
+        key_prerequisites: [chem.pchem1.kirchhoff-law]
+      - id: kp4
+        can_do: Include phase changes in entropy integrals
+        key_prerequisites: [physics.waves-thermo-optics.entropy-in-heating-and-melting]
+  - id: chem.pchem1.chemical-potential-of-gases
+    name: Writing chemical potentials of ideal gases with standard states
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.pressure-and-chemical-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-nonstandard
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write chemical potential of an ideal gas
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp2
+        can_do: Define standard states
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp3
+        can_do: Relate chemical potential to partial pressure in mixtures
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential, chem.gen2.gibbs-energy-nonstandard]
+      - id: kp4
+        can_do: Explain why chemical potential sets direction of change
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+  - id: chem.pchem1.fugacity
+    name: Using fugacity for real gases
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.chemical-potential-of-gases
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem1.virial-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define fugacity
+        key_prerequisites: [chem.pchem1.chemical-potential-of-gases]
+      - id: kp2
+        can_do: Find fugacity coefficients from virial coefficients
+        key_prerequisites: [chem.pchem1.virial-equation]
+      - id: kp3
+        can_do: Find fugacity from compressibility data
+        key_prerequisites: [chem.pchem1.virial-equation]
+      - id: kp4
+        can_do: Explain fugacity at low pressure
+        key_prerequisites: [chem.pchem1.chemical-potential-of-gases]
+  - id: chem.pchem1.gibbs-energy-and-extent-of-reaction
+    name: Finding Gibbs energy against extent of reaction
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.chemical-potential-of-gases
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-and-k
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define extent of reaction
+        key_prerequisites: [chem.pchem1.chemical-potential-of-gases]
+      - id: kp2
+        can_do: Write reaction Gibbs energy as a derivative
+        key_prerequisites: [chem.pchem1.chemical-potential-of-gases, chem.gen2.gibbs-energy-and-k]
+      - id: kp3
+        can_do: Sketch Gibbs energy against extent
+        key_prerequisites: [chem.pchem1.chemical-potential-of-gases]
+      - id: kp4
+        can_do: Derive the equilibrium condition
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+  - id: chem.pchem1.k-from-thermodynamic-tables
+    name: Calculating K from thermodynamic tables
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.gibbs-energy-and-extent-of-reaction
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.pchem1.reaction-entropy-at-other-temperatures
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find K from tabulated Gibbs energies
+        key_prerequisites: [chem.pchem1.gibbs-energy-and-extent-of-reaction]
+      - id: kp2
+        can_do: Find K at another temperature from tables
+        key_prerequisites: [chem.pchem1.gibbs-energy-and-extent-of-reaction, chem.pchem1.reaction-entropy-at-other-temperatures]
+      - id: kp3
+        can_do: Convert between K in pressure and concentration standard states
+        key_prerequisites: [chem.pchem1.gibbs-energy-and-extent-of-reaction]
+      - id: kp4
+        can_do: Find equilibrium composition from K
+        key_prerequisites: [chem.pchem1.gibbs-energy-and-extent-of-reaction]
+  - id: chem.pchem1.gibbs-helmholtz-and-vant-hoff
+    name: Deriving the Gibbs-Helmholtz and van't Hoff equations
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.k-from-thermodynamic-tables
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.maxwell-relations
+        encompassing: 0.25
+        confidence: high
+      - topic: chem.gen2.vant-hoff-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Gibbs-Helmholtz equation
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables, physics.stat-thermal.maxwell-relations]
+      - id: kp2
+        can_do: Derive the van't Hoff equation
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables, chem.gen2.vant-hoff-equation]
+      - id: kp3
+        can_do: Integrate with temperature-dependent enthalpy
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables]
+      - id: kp4
+        can_do: Find reaction enthalpy from K against temperature
+        key_prerequisites: [chem.gen2.vant-hoff-equation]
+  - id: chem.pchem1.pressure-and-inert-gas-effects
+    name: Finding how pressure and inert gases affect equilibrium
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.k-from-thermodynamic-tables
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.equilibrium-with-changing-volume
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show K does not depend on pressure
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables]
+      - id: kp2
+        can_do: Find equilibrium shift with total pressure
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables, chem.gen2.equilibrium-with-changing-volume]
+      - id: kp3
+        can_do: Find effect of adding inert gas at constant volume and pressure
+        key_prerequisites: [chem.gen2.equilibrium-with-changing-volume]
+      - id: kp4
+        can_do: Find degree of dissociation against pressure
+        key_prerequisites: [chem.pchem1.k-from-thermodynamic-tables]
+  - id: chem.pchem1.gibbs-phase-rule
+    name: Using the Gibbs phase rule
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.phase-equilibrium
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: chem.gen1.phase-diagrams
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count components and phases
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp2
+        can_do: Find degrees of freedom
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp3
+        can_do: Apply the rule to one-component diagrams
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium, chem.gen1.phase-diagrams]
+      - id: kp4
+        can_do: Apply the rule to two-component systems
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+  - id: chem.pchem1.pressure-and-melting-point
+    name: Finding how pressure shifts melting points
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.clausius-clapeyron
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.gibbs-phase-rule
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find melting point change with pressure
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron, chem.pchem1.gibbs-phase-rule]
+      - id: kp2
+        can_do: Explain water's negative slope
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron]
+      - id: kp3
+        can_do: Integrate Clausius-Clapeyron for solid-liquid lines
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron]
+      - id: kp4
+        can_do: Find pressure needed to melt ice
+        key_prerequisites: [chem.pchem1.gibbs-phase-rule]
+  - id: chem.pchem1.binary-liquid-vapor-diagrams
+    name: Reading binary liquid-vapour phase diagrams
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.ideal-solutions-and-distillation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.gibbs-phase-rule
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw pressure-composition diagrams
+        key_prerequisites: [chem.gen1.ideal-solutions-and-distillation, chem.pchem1.gibbs-phase-rule]
+      - id: kp2
+        can_do: Draw temperature-composition diagrams
+        key_prerequisites: [chem.gen1.ideal-solutions-and-distillation]
+      - id: kp3
+        can_do: Find liquid and vapour compositions on a tie line
+        key_prerequisites: [chem.gen1.ideal-solutions-and-distillation]
+      - id: kp4
+        can_do: Trace a distillation on a diagram
+        key_prerequisites: [chem.pchem1.gibbs-phase-rule]
+  - id: chem.pchem1.lever-rule
+    name: Finding phase amounts with the lever rule
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.binary-liquid-vapor-diagrams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the lever rule
+        key_prerequisites: [chem.pchem1.binary-liquid-vapor-diagrams]
+      - id: kp2
+        can_do: Find phase amounts on tie lines
+        key_prerequisites: [chem.pchem1.binary-liquid-vapor-diagrams]
+      - id: kp3
+        can_do: Track phase amounts as temperature changes
+        key_prerequisites: [chem.pchem1.binary-liquid-vapor-diagrams]
+      - id: kp4
+        can_do: Use the lever rule in solid-liquid diagrams
+        key_prerequisites: [chem.pchem1.binary-liquid-vapor-diagrams]
+  - id: chem.pchem1.solid-liquid-diagrams
+    name: Reading solid-liquid phase diagrams with eutectics
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.lever-rule
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read eutectic diagrams
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp2
+        can_do: Find eutectic composition and temperature
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp3
+        can_do: Read diagrams with compound formation
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp4
+        can_do: Trace cooling of a melt
+        key_prerequisites: [chem.pchem1.lever-rule]
+  - id: chem.pchem1.partially-miscible-liquids
+    name: Reading diagrams of partially miscible liquids
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.lever-rule
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read liquid-liquid coexistence curves
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp2
+        can_do: Find critical solution temperatures
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp3
+        can_do: Find compositions of two liquid layers
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp4
+        can_do: Combine miscibility gaps with boiling diagrams
+        key_prerequisites: [chem.pchem1.lever-rule]
+  - id: chem.pchem1.partial-molar-quantities
+    name: Using partial molar quantities
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.gibbs-duhem
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.molality-and-mole-fraction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define partial molar volume
+        key_prerequisites: [physics.stat-thermal.gibbs-duhem]
+      - id: kp2
+        can_do: Find partial molar volumes from data
+        key_prerequisites: [physics.stat-thermal.gibbs-duhem, chem.gen1.molality-and-mole-fraction]
+      - id: kp3
+        can_do: Use the Gibbs-Duhem equation for partial molar quantities
+        key_prerequisites: [physics.stat-thermal.gibbs-duhem]
+      - id: kp4
+        can_do: Explain negative partial molar volumes
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+  - id: chem.pchem1.chemical-potential-in-solutions
+    name: Writing chemical potentials of solution components
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.partial-molar-quantities
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.ideal-mixtures
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write chemical potential of solvent with Raoult's law
+        key_prerequisites: [chem.pchem1.partial-molar-quantities, physics.stat-thermal.ideal-mixtures]
+      - id: kp2
+        can_do: Write chemical potential of solute with Henry's law
+        key_prerequisites: [chem.pchem1.partial-molar-quantities]
+      - id: kp3
+        can_do: Find Gibbs energy of mixing
+        key_prerequisites: [physics.stat-thermal.ideal-mixtures]
+      - id: kp4
+        can_do: Find entropy of mixing for ideal solutions
+        key_prerequisites: [physics.stat-thermal.ideal-mixtures]
+  - id: chem.pchem1.real-solutions-and-activity
+    name: Using activities and standard states for real solutions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.chemical-potential-in-solutions
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen1.henrys-law
+        encompassing: 0.25
+        confidence: high
+      - topic: chem.analytical.activity-coefficients
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define activity for real solutions
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp2
+        can_do: Choose Raoult and Henry standard states
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions, chem.gen1.henrys-law]
+      - id: kp3
+        can_do: Find activity coefficients from vapour pressure data
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp4
+        can_do: Link analytical activity coefficients to thermodynamics
+        key_prerequisites: [chem.analytical.activity-coefficients]
+  - id: chem.pchem1.excess-functions
+    name: Using excess thermodynamic functions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.real-solutions-and-activity
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define excess Gibbs energy
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+      - id: kp2
+        can_do: Relate excess functions to activity coefficients
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+      - id: kp3
+        can_do: Use regular solution models
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+      - id: kp4
+        can_do: Predict phase separation from excess functions
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+  - id: chem.pchem1.azeotropes
+    name: Explaining azeotropes and fractional distillation
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.real-solutions-and-activity
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.lever-rule
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain positive and negative deviations
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+      - id: kp2
+        can_do: Read azeotrope diagrams
+        key_prerequisites: [chem.pchem1.lever-rule]
+      - id: kp3
+        can_do: Explain why azeotropes cannot be separated by simple distillation
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity, chem.pchem1.lever-rule]
+      - id: kp4
+        can_do: Describe breaking azeotropes
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+  - id: chem.pchem1.colligative-properties-derived
+    name: Deriving colligative properties from chemical potential
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.chemical-potential-in-solutions
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.gen1.boiling-and-freezing-point-changes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive freezing point depression
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp2
+        can_do: Derive boiling point elevation
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp3
+        can_do: Derive the van't Hoff osmotic equation
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp4
+        can_do: Find the cryoscopic constant from thermodynamic data
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions, chem.gen1.boiling-and-freezing-point-changes]
+  - id: chem.pchem1.debye-huckel-derivation
+    name: Deriving the Debye-Huckel limiting law
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.real-solutions-and-activity
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.potential-of-point-charges-derivation
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the ionic atmosphere
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+      - id: kp2
+        can_do: Find the Debye length
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+      - id: kp3
+        can_do: Derive the limiting law
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity, physics.em.potential-of-point-charges-derivation]
+      - id: kp4
+        can_do: Explain when the limiting law fails
+        key_prerequisites: [chem.pchem1.real-solutions-and-activity]
+  - id: chem.pchem1.electrochemical-potential
+    name: Using electrochemical potentials
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.chemical-potential-in-solutions
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define electrochemical potential
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp2
+        can_do: Derive the Nernst equation from equilibrium
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions, chem.gen2.nernst-equation]
+      - id: kp3
+        can_do: Explain liquid junction potentials
+        key_prerequisites: [chem.pchem1.chemical-potential-in-solutions]
+      - id: kp4
+        can_do: Find membrane potentials
+        key_prerequisites: [chem.gen2.nernst-equation]
+  - id: chem.pchem1.cell-thermodynamics-from-temperature
+    name: Finding entropy and enthalpy from cell potential against temperature
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-and-cell-potential
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.pchem1.gibbs-helmholtz-and-vant-hoff
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of a cell reaction from potential against temperature
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential, chem.pchem1.gibbs-helmholtz-and-vant-hoff]
+      - id: kp2
+        can_do: Find enthalpy of a cell reaction
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp3
+        can_do: Find heat released by a working cell
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp4
+        can_do: Explain temperature coefficients of batteries
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+  - id: chem.pchem1.standard-potentials-by-extrapolation
+    name: Finding standard potentials by extrapolation
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.debye-huckel-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.electrochemical-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write cell potential with activity coefficients
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation]
+      - id: kp2
+        can_do: Extrapolate to zero ionic strength
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation, chem.pchem1.electrochemical-potential]
+      - id: kp3
+        can_do: Find mean activity coefficients from cell data
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation]
+      - id: kp4
+        can_do: Compare extrapolated and tabulated potentials
+        key_prerequisites: [chem.pchem1.electrochemical-potential]
+  - id: chem.pchem1.ion-mobility-and-conductivity
+    name: Describing conductivity and ion mobility
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.debye-huckel-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.transport-coefficients
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define molar conductivity
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation]
+      - id: kp2
+        can_do: Use Kohlrausch's law
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation]
+      - id: kp3
+        can_do: Find ion mobilities
+        key_prerequisites: [physics.stat-thermal.transport-coefficients]
+      - id: kp4
+        can_do: Find dissociation constants from conductivity
+        key_prerequisites: [chem.pchem1.debye-huckel-derivation]
+  - id: chem.pchem1.surface-gibbs-energy
+    name: Relating surface tension to surface Gibbs energy
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.surface-tension
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate surface tension to surface Gibbs energy
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension, physics.stat-thermal.free-energies]
+      - id: kp2
+        can_do: Find work to expand a surface
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+      - id: kp3
+        can_do: Explain surfactants
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Use the Gibbs adsorption equation
+        key_prerequisites: [physics.waves-thermo-optics.surface-tension]
+  - id: chem.pchem1.curved-surface-vapor-pressure
+    name: Finding vapour pressure over curved surfaces
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.surface-gibbs-energy
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.vapor-pressure-and-temperature
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Laplace pressure equation
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy]
+      - id: kp2
+        can_do: Use the Kelvin equation
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy, chem.gen1.vapor-pressure-and-temperature]
+      - id: kp3
+        can_do: Explain growth of large droplets at small ones' expense
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy]
+      - id: kp4
+        can_do: Explain capillary condensation
+        key_prerequisites: [chem.gen1.vapor-pressure-and-temperature]
+  - id: chem.pchem1.langmuir-isotherm
+    name: Deriving the Langmuir adsorption isotherm
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.surface-gibbs-energy
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs2.dynamic-equilibrium
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Langmuir isotherm
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy, chem.hs2.dynamic-equilibrium]
+      - id: kp2
+        can_do: Linearize the isotherm
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy]
+      - id: kp3
+        can_do: Find adsorption equilibrium constants
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy]
+      - id: kp4
+        can_do: Compare physisorption and chemisorption
+        key_prerequisites: [chem.pchem1.surface-gibbs-energy]
+  - id: chem.pchem1.bet-isotherm
+    name: Using the BET isotherm for surface area
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.langmuir-isotherm
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain multilayer adsorption
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp2
+        can_do: Use the BET equation
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp3
+        can_do: Find surface area from BET data
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp4
+        can_do: Compare BET and Langmuir isotherms
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+  - id: chem.pchem1.rate-laws-as-differential-equations
+    name: Writing rate laws as differential equations
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.pseudo-first-order
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate laws as differential equations
+        key_prerequisites: [chem.gen2.pseudo-first-order]
+      - id: kp2
+        can_do: Classify rate equations by order
+        key_prerequisites: [chem.gen2.pseudo-first-order]
+      - id: kp3
+        can_do: Find units from differential rate laws
+        key_prerequisites: [chem.gen2.pseudo-first-order]
+      - id: kp4
+        can_do: Separate variables in rate equations
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: chem.pchem1.integrated-rate-law-derivations
+    name: Deriving integrated rate laws
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.rate-laws-as-differential-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive first-order integrated laws
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+      - id: kp2
+        can_do: Derive second-order laws with one reactant
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+      - id: kp3
+        can_do: Derive second-order laws with two reactants
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+      - id: kp4
+        can_do: Derive general nth-order laws
+        key_prerequisites: [chem.pchem1.rate-laws-as-differential-equations]
+  - id: chem.pchem1.reversible-reaction-kinetics
+    name: Solving kinetics of reversible reactions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.integrated-rate-law-derivations
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.dynamic-equilibrium
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate equations for reversible reactions
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp2
+        can_do: Solve for approach to equilibrium
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp3
+        can_do: Relate rate constants to K
+        key_prerequisites: [chem.hs2.dynamic-equilibrium]
+      - id: kp4
+        can_do: Find rate constants from relaxation curves
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+  - id: chem.pchem1.parallel-reactions
+    name: Solving kinetics of parallel reactions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.integrated-rate-law-derivations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate equations for parallel reactions
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp2
+        can_do: Solve for concentrations over time
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp3
+        can_do: Find product ratios
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp4
+        can_do: Control selectivity with temperature
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+  - id: chem.pchem1.consecutive-reactions
+    name: Solving kinetics of consecutive reactions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.integrated-rate-law-derivations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate equations for consecutive reactions
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+      - id: kp2
+        can_do: Solve for intermediate concentration
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations, math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Find time of greatest intermediate
+        key_prerequisites: [math.diffeq.linear-first-order]
+      - id: kp4
+        can_do: Compare results with the steady-state approximation
+        key_prerequisites: [chem.pchem1.integrated-rate-law-derivations]
+  - id: chem.pchem1.steady-state-kinetics
+    name: Applying the steady-state approximation rigorously
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.consecutive-reactions
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.steady-state-intermediates
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Justify the steady-state approximation
+        key_prerequisites: [chem.pchem1.consecutive-reactions]
+      - id: kp2
+        can_do: Derive rate laws with steady state
+        key_prerequisites: [chem.pchem1.consecutive-reactions, chem.gen2.steady-state-intermediates]
+      - id: kp3
+        can_do: Compare steady state with exact solutions
+        key_prerequisites: [chem.pchem1.consecutive-reactions]
+      - id: kp4
+        can_do: Find conditions for the approximation
+        key_prerequisites: [chem.gen2.steady-state-intermediates]
+  - id: chem.pchem1.lindemann-mechanism
+    name: Explaining unimolecular reactions with the Lindemann mechanism
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Lindemann mechanism
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Derive the rate law
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp3
+        can_do: Explain pressure dependence of unimolecular rates
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp4
+        can_do: Find fall-off curves
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+  - id: chem.pchem1.chain-reaction-kinetics
+    name: Deriving rate laws of chain reactions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify initiation, propagation and termination
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Derive rate laws for chain reactions
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp3
+        can_do: Explain branching chains and explosions
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp4
+        can_do: Explain inhibition of chains
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+  - id: chem.pchem1.michaelis-menten
+    name: Deriving the Michaelis-Menten equation
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.enzyme-kinetics-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Michaelis-Menten equation
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Find Vmax and Km from data
+        key_prerequisites: [chem.pchem1.steady-state-kinetics, chem.gen2.enzyme-kinetics-intro]
+      - id: kp3
+        can_do: Use Lineweaver-Burk plots
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+      - id: kp4
+        can_do: Interpret the specificity constant
+        key_prerequisites: [chem.gen2.enzyme-kinetics-intro]
+  - id: chem.pchem1.enzyme-inhibition
+    name: Analyzing enzyme inhibition
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.michaelis-menten
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze competitive inhibition
+        key_prerequisites: [chem.pchem1.michaelis-menten]
+      - id: kp2
+        can_do: Analyze noncompetitive inhibition
+        key_prerequisites: [chem.pchem1.michaelis-menten]
+      - id: kp3
+        can_do: Analyze uncompetitive inhibition
+        key_prerequisites: [chem.pchem1.michaelis-menten]
+      - id: kp4
+        can_do: Find inhibition constants from plots
+        key_prerequisites: [chem.pchem1.michaelis-menten]
+  - id: chem.pchem1.collision-theory-rate-constants
+    name: Calculating rate constants with collision theory
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.orientation-factor
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.mean-free-path
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.average-and-rms-speeds
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find collision frequency
+        key_prerequisites: [physics.waves-thermo-optics.mean-free-path, physics.waves-thermo-optics.average-and-rms-speeds]
+      - id: kp2
+        can_do: Find rate constant from collision theory
+        key_prerequisites: [chem.gen2.orientation-factor, physics.waves-thermo-optics.mean-free-path, physics.waves-thermo-optics.average-and-rms-speeds]
+      - id: kp3
+        can_do: Find the steric factor
+        key_prerequisites: [chem.gen2.orientation-factor]
+      - id: kp4
+        can_do: Compare theory with measured rate constants
+        key_prerequisites: [chem.gen2.orientation-factor]
+  - id: chem.pchem1.diffusion-controlled-reactions
+    name: Finding rates of diffusion-controlled reactions
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.collision-theory-rate-constants
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.diffusion-equation-from-random-walks
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find diffusion-limited rate constants
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants, physics.stat-thermal.diffusion-equation-from-random-walks]
+      - id: kp2
+        can_do: Explain cage effects in solution
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants]
+      - id: kp3
+        can_do: Find when reactions are diffusion controlled
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants]
+      - id: kp4
+        can_do: Explain viscosity effects on rates
+        key_prerequisites: [physics.stat-thermal.diffusion-equation-from-random-walks]
+  - id: chem.pchem1.relaxation-kinetics
+    name: Finding rate constants by relaxation methods
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.reversible-reaction-kinetics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain temperature-jump experiments
+        key_prerequisites: [chem.pchem1.reversible-reaction-kinetics]
+      - id: kp2
+        can_do: Linearize near equilibrium
+        key_prerequisites: [chem.pchem1.reversible-reaction-kinetics]
+      - id: kp3
+        can_do: Find relaxation time
+        key_prerequisites: [chem.pchem1.reversible-reaction-kinetics]
+      - id: kp4
+        can_do: Find rate constants from relaxation time
+        key_prerequisites: [chem.pchem1.reversible-reaction-kinetics]
+  - id: chem.pchem1.surface-catalysis-kinetics
+    name: Analyzing surface-catalyzed reaction rates
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.langmuir-isotherm
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.pchem1.steady-state-kinetics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Langmuir-Hinshelwood rates
+        key_prerequisites: [chem.pchem1.langmuir-isotherm, chem.pchem1.steady-state-kinetics]
+      - id: kp2
+        can_do: Derive Eley-Rideal rates
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp3
+        can_do: Find rate dependence on pressure
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp4
+        can_do: Explain catalyst poisoning
+        key_prerequisites: [chem.pchem1.steady-state-kinetics]
+  - id: chem.pchem1.curved-arrhenius-plots
+    name: Interpreting curved Arrhenius plots
+    subject: chem
+    course: chem.pchem1
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.activation-energy-from-data
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem1.collision-theory-rate-constants
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain temperature-dependent prefactors
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants]
+      - id: kp2
+        can_do: Find activation energy as a slope at each temperature
+        key_prerequisites: [chem.gen2.activation-energy-from-data]
+      - id: kp3
+        can_do: Explain competing pathways in Arrhenius plots
+        key_prerequisites: [chem.gen2.activation-energy-from-data]
+      - id: kp4
+        can_do: Explain tunneling at low temperature
+        key_prerequisites: [chem.pchem1.collision-theory-rate-constants]
