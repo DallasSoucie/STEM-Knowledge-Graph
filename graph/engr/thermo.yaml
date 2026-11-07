@@ -1,0 +1,1722 @@
+course: engr.thermo
+topics:
+  - id: engr.thermo.systems-and-properties
+    name: Defining systems, states and properties for engineering analysis
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.state-functions-and-path-dependence
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose closed systems and control volumes
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp2
+        can_do: Tell intensive from extensive properties
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp3
+        can_do: Use the state postulate
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+      - id: kp4
+        can_do: Convert pressure and temperature units
+        key_prerequisites: [physics.waves-thermo-optics.state-functions-and-path-dependence]
+  - id: engr.thermo.phase-change-processes
+    name: Describing phase-change processes of pure substances
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.systems-and-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.gen1.phase-diagrams
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe compressed, saturated and superheated states
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp2
+        can_do: Relate saturation temperature to pressure
+        key_prerequisites: [engr.thermo.systems-and-properties, chem.gen1.phase-diagrams]
+      - id: kp3
+        can_do: Describe the critical point
+        key_prerequisites: [chem.gen1.phase-diagrams]
+      - id: kp4
+        can_do: Sketch phase-change processes
+        key_prerequisites: [engr.thermo.systems-and-properties]
+  - id: engr.thermo.property-diagrams
+    name: Reading T-v and P-v diagrams
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.phase-change-processes
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read T-v diagrams
+        key_prerequisites: [engr.thermo.phase-change-processes]
+      - id: kp2
+        can_do: Read P-v diagrams
+        key_prerequisites: [engr.thermo.phase-change-processes]
+      - id: kp3
+        can_do: Locate states on diagrams
+        key_prerequisites: [engr.thermo.phase-change-processes]
+      - id: kp4
+        can_do: Sketch processes on diagrams
+        key_prerequisites: [engr.thermo.phase-change-processes]
+  - id: engr.thermo.saturated-property-tables
+    name: Using saturated property tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.property-diagrams
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use saturated temperature tables
+        key_prerequisites: [engr.thermo.property-diagrams]
+      - id: kp2
+        can_do: Use saturated pressure tables
+        key_prerequisites: [engr.thermo.property-diagrams]
+      - id: kp3
+        can_do: Find saturation properties
+        key_prerequisites: [engr.thermo.property-diagrams]
+      - id: kp4
+        can_do: Identify the phase from table values
+        key_prerequisites: [engr.thermo.property-diagrams]
+  - id: engr.thermo.quality-of-mixtures
+    name: Finding properties of saturated mixtures from quality
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.saturated-property-tables
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find quality from properties
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp2
+        can_do: Find properties from quality
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp3
+        can_do: Find quality after a process
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp4
+        can_do: Find mass of vapor and liquid
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+  - id: engr.thermo.superheated-and-compressed-tables
+    name: Using superheated and compressed liquid tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.saturated-property-tables
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use superheated vapor tables
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp2
+        can_do: Use compressed liquid tables
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp3
+        can_do: Approximate compressed liquid as saturated liquid
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp4
+        can_do: Find the phase of a state
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+  - id: engr.thermo.table-interpolation
+    name: Interpolating in property tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.superheated-and-compressed-tables
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpolate linearly in one variable
+        key_prerequisites: [engr.thermo.superheated-and-compressed-tables]
+      - id: kp2
+        can_do: Interpolate in two variables
+        key_prerequisites: [engr.thermo.superheated-and-compressed-tables]
+      - id: kp3
+        can_do: Check interpolated values
+        key_prerequisites: [engr.thermo.superheated-and-compressed-tables]
+      - id: kp4
+        can_do: Use software property calculators
+        key_prerequisites: [engr.thermo.superheated-and-compressed-tables]
+  - id: engr.thermo.ideal-gas-specific-heats
+    name: Using ideal-gas specific heats and property tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.systems-and-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.internal-energy-of-ideal-gases
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use constant specific heats
+        key_prerequisites: [engr.thermo.systems-and-properties, physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp2
+        can_do: Use ideal-gas tables for variable specific heats
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp3
+        can_do: Find enthalpy and internal energy changes
+        key_prerequisites: [engr.thermo.systems-and-properties, physics.waves-thermo-optics.internal-energy-of-ideal-gases]
+      - id: kp4
+        can_do: Choose between constant and variable specific heats
+        key_prerequisites: [engr.thermo.systems-and-properties]
+  - id: engr.thermo.compressibility-charts
+    name: Using the compressibility factor and generalized charts
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-gas-specific-heats
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.gen1.real-gases
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reduced properties
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats]
+      - id: kp2
+        can_do: Read the compressibility chart
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats, chem.gen1.real-gases]
+      - id: kp3
+        can_do: Judge when ideal-gas behaviour holds
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp4
+        can_do: Find specific volume of a real gas
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats, chem.gen1.real-gases]
+  - id: engr.thermo.incompressible-substances
+    name: Finding properties of liquids and solids
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.saturated-property-tables
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find internal energy changes of liquids
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp2
+        can_do: Find enthalpy changes of liquids
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp3
+        can_do: Find energy changes of solids
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+      - id: kp4
+        can_do: Use the incompressible approximation
+        key_prerequisites: [engr.thermo.saturated-property-tables]
+  - id: engr.thermo.boundary-work
+    name: Finding boundary work for polytropic processes
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.property-diagrams
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.work-as-pressure-integral
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find boundary work from P-v area
+        key_prerequisites: [engr.thermo.property-diagrams]
+      - id: kp2
+        can_do: Find work for polytropic processes
+        key_prerequisites: [engr.thermo.property-diagrams, physics.waves-thermo-optics.work-as-pressure-integral]
+      - id: kp3
+        can_do: Find work for constant-pressure processes
+        key_prerequisites: [engr.thermo.property-diagrams]
+      - id: kp4
+        can_do: Find work with springs on pistons
+        key_prerequisites: [physics.waves-thermo-optics.work-as-pressure-integral]
+  - id: engr.thermo.closed-system-energy-balance
+    name: Applying the energy balance to closed systems
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.boundary-work
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.thermo.quality-of-mixtures
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the closed-system energy balance
+        key_prerequisites: [engr.thermo.boundary-work]
+      - id: kp2
+        can_do: Find heat transfer in closed processes
+        key_prerequisites: [engr.thermo.boundary-work, engr.thermo.quality-of-mixtures]
+      - id: kp3
+        can_do: Include kinetic and potential energy
+        key_prerequisites: [engr.thermo.boundary-work]
+      - id: kp4
+        can_do: Solve piston-cylinder problems
+        key_prerequisites: [engr.thermo.boundary-work, engr.thermo.quality-of-mixtures]
+  - id: engr.thermo.closed-systems-with-ideal-gases
+    name: Solving closed-system problems with ideal gases
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.closed-system-energy-balance
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.thermo.ideal-gas-specific-heats
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve closed problems with constant specific heats
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, engr.thermo.ideal-gas-specific-heats]
+      - id: kp2
+        can_do: Solve closed problems with variable specific heats
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats]
+      - id: kp3
+        can_do: Find final states of ideal gases
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+      - id: kp4
+        can_do: Solve compression and expansion problems
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, engr.thermo.ideal-gas-specific-heats]
+  - id: engr.thermo.closed-systems-with-tables
+    name: Solving closed-system problems with property tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.closed-system-energy-balance
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.thermo.table-interpolation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve heating of water in tanks
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, engr.thermo.table-interpolation]
+      - id: kp2
+        can_do: Solve piston problems with phase change
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+      - id: kp3
+        can_do: Find heat for evaporation in closed systems
+        key_prerequisites: [engr.thermo.table-interpolation]
+      - id: kp4
+        can_do: Solve rigid tank problems
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, engr.thermo.table-interpolation]
+  - id: engr.thermo.mass-flow-rate
+    name: Finding mass and volume flow rates
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.systems-and-properties
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mass flow rate from velocity and area
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp2
+        can_do: Find volume flow rate
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp3
+        can_do: Apply conservation of mass to steady flow
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp4
+        can_do: Apply mass balance to unsteady flow
+        key_prerequisites: [engr.thermo.systems-and-properties]
+  - id: engr.thermo.flow-work-and-enthalpy
+    name: Explaining flow work and enthalpy
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.mass-flow-rate
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flow work
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+      - id: kp2
+        can_do: Relate enthalpy to flow energy
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+      - id: kp3
+        can_do: Find total energy of a flowing fluid
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+      - id: kp4
+        can_do: Explain why enthalpy suits flow systems
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+  - id: engr.thermo.steady-flow-energy-balance
+    name: Writing the steady-flow energy balance
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.flow-work-and-enthalpy
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.closed-system-energy-balance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the steady-flow energy balance
+        key_prerequisites: [engr.thermo.flow-work-and-enthalpy]
+      - id: kp2
+        can_do: Include kinetic and potential energy in flow
+        key_prerequisites: [engr.thermo.flow-work-and-enthalpy, engr.thermo.closed-system-energy-balance]
+      - id: kp3
+        can_do: Solve single-stream devices
+        key_prerequisites: [engr.thermo.flow-work-and-enthalpy]
+      - id: kp4
+        can_do: Choose device assumptions
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+  - id: engr.thermo.nozzles-and-diffusers
+    name: Analyzing nozzles and diffusers
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exit velocity of nozzles
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find exit state of diffusers
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Find required areas
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Find heat loss in nozzles
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.turbines-and-compressors
+    name: Analyzing turbines, compressors and pumps
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find turbine power output
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find compressor power input
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Find pump power
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Find exit states of work devices
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.throttling-valves
+    name: Analyzing throttling valves
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the throttling assumption
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find quality after throttling
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Find temperature drop in throttling
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Explain constant enthalpy
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.mixing-chambers
+    name: Analyzing mixing chambers
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exit temperature of mixing chambers
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find flow rates for a required mix
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Mix steam and water
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Include heat loss in mixing
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.heat-exchanger-energy-balance
+    name: Writing energy balances for heat exchangers
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flow rates in heat exchangers
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find heat transfer between streams
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Find exit temperatures
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Solve condensers and evaporators
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.multi-device-systems
+    name: Analyzing systems of several devices
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.turbines-and-compressors
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.thermo.heat-exchanger-energy-balance
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.thermo.throttling-valves
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine turbines and heat exchangers
+        key_prerequisites: [engr.thermo.turbines-and-compressors, engr.thermo.heat-exchanger-energy-balance]
+      - id: kp2
+        can_do: Solve systems with throttling and heat exchange
+        key_prerequisites: [engr.thermo.heat-exchanger-energy-balance, engr.thermo.throttling-valves]
+      - id: kp3
+        can_do: Find overall power and heat
+        key_prerequisites: [engr.thermo.turbines-and-compressors, engr.thermo.heat-exchanger-energy-balance]
+      - id: kp4
+        can_do: Draw control volumes around groups of devices
+        key_prerequisites: [engr.thermo.turbines-and-compressors, engr.thermo.heat-exchanger-energy-balance, engr.thermo.throttling-valves]
+  - id: engr.thermo.transient-filling-and-emptying
+    name: Analyzing tank filling and emptying
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write unsteady mass and energy balances
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find final temperature of a filled tank
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance, math.calc2.separable-equations]
+      - id: kp3
+        can_do: Find mass leaving a discharging tank
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance, math.calc2.separable-equations]
+      - id: kp4
+        can_do: Find heat transfer in transient processes
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.second-law-for-devices
+    name: Applying the second law to engines and refrigerators
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.closed-system-energy-balance
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.second-law-statements
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Kelvin-Planck and Clausius statements
+        key_prerequisites: [physics.waves-thermo-optics.second-law-statements]
+      - id: kp2
+        can_do: Find thermal efficiency limits
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, physics.waves-thermo-optics.second-law-statements]
+      - id: kp3
+        can_do: Find coefficient of performance limits
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, physics.waves-thermo-optics.second-law-statements]
+      - id: kp4
+        can_do: Judge whether a device is possible
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+  - id: engr.thermo.reversible-and-irreversible
+    name: Identifying irreversibilities
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.second-law-for-devices
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify irreversibilities
+        key_prerequisites: [engr.thermo.second-law-for-devices]
+      - id: kp2
+        can_do: Tell internal from external irreversibility
+        key_prerequisites: [engr.thermo.second-law-for-devices]
+      - id: kp3
+        can_do: Describe reversible processes
+        key_prerequisites: [engr.thermo.second-law-for-devices]
+      - id: kp4
+        can_do: Explain why reversible processes give limits
+        key_prerequisites: [engr.thermo.second-law-for-devices]
+  - id: engr.thermo.entropy-from-tables
+    name: Finding entropy changes from property tables
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.reversible-and-irreversible
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of pure substances from tables
+        key_prerequisites: [engr.thermo.reversible-and-irreversible]
+      - id: kp2
+        can_do: Find entropy changes in processes
+        key_prerequisites: [engr.thermo.reversible-and-irreversible, physics.waves-thermo-optics.entropy-definition]
+      - id: kp3
+        can_do: Find entropy of saturated mixtures
+        key_prerequisites: [engr.thermo.reversible-and-irreversible]
+      - id: kp4
+        can_do: Find entropy of liquids
+        key_prerequisites: [physics.waves-thermo-optics.entropy-definition]
+  - id: engr.thermo.ts-and-hs-diagrams
+    name: Using T-s and h-s diagrams
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.entropy-from-tables
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read T-s diagrams
+        key_prerequisites: [engr.thermo.entropy-from-tables]
+      - id: kp2
+        can_do: Read h-s diagrams
+        key_prerequisites: [engr.thermo.entropy-from-tables]
+      - id: kp3
+        can_do: Find heat from areas on T-s diagrams
+        key_prerequisites: [engr.thermo.entropy-from-tables]
+      - id: kp4
+        can_do: Sketch processes on T-s diagrams
+        key_prerequisites: [engr.thermo.entropy-from-tables]
+  - id: engr.thermo.entropy-of-ideal-gases-variable-cp
+    name: Finding entropy changes of ideal gases with variable specific heats
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.entropy-from-tables
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.ideal-gas-specific-heats
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy changes with constant specific heats
+        key_prerequisites: [engr.thermo.entropy-from-tables, engr.thermo.ideal-gas-specific-heats]
+      - id: kp2
+        can_do: Find entropy changes with standard-state entropy
+        key_prerequisites: [engr.thermo.entropy-from-tables]
+      - id: kp3
+        can_do: Include pressure in entropy changes
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats]
+      - id: kp4
+        can_do: Compare constant and variable models
+        key_prerequisites: [engr.thermo.entropy-from-tables, engr.thermo.ideal-gas-specific-heats]
+  - id: engr.thermo.isentropic-processes
+    name: Analyzing isentropic processes
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.entropy-of-ideal-gases-variable-cp
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.ts-and-hs-diagrams
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find isentropic end states of steam
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp]
+      - id: kp2
+        can_do: Find isentropic end states of ideal gases
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp, engr.thermo.ts-and-hs-diagrams]
+      - id: kp3
+        can_do: Use relative pressure and volume
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp]
+      - id: kp4
+        can_do: Use isentropic relations with constant specific heats
+        key_prerequisites: [engr.thermo.ts-and-hs-diagrams]
+  - id: engr.thermo.isentropic-efficiency
+    name: Using isentropic efficiencies of devices
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.isentropic-processes
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.turbines-and-compressors
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find isentropic efficiency of turbines
+        key_prerequisites: [engr.thermo.isentropic-processes, engr.thermo.turbines-and-compressors]
+      - id: kp2
+        can_do: Find isentropic efficiency of compressors and pumps
+        key_prerequisites: [engr.thermo.isentropic-processes, engr.thermo.turbines-and-compressors]
+      - id: kp3
+        can_do: Find isentropic efficiency of nozzles
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp4
+        can_do: Find actual exit states
+        key_prerequisites: [engr.thermo.turbines-and-compressors]
+  - id: engr.thermo.reversible-steady-flow-work
+    name: Finding reversible steady-flow work
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.isentropic-processes
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reversible work of steady-flow devices
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp2
+        can_do: Find pump work with v dP
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp3
+        can_do: Compare compression with and without cooling
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp4
+        can_do: Find work of multistage compression
+        key_prerequisites: [engr.thermo.isentropic-processes]
+  - id: engr.thermo.entropy-generation
+    name: Finding entropy generation in control volumes
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.isentropic-efficiency
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write entropy balances for control volumes
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+      - id: kp2
+        can_do: Find entropy generation in devices
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+      - id: kp3
+        can_do: Find entropy generation from heat transfer
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+      - id: kp4
+        can_do: Check the increase of entropy principle
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+  - id: engr.thermo.exergy-of-a-state
+    name: Finding exergy of a system and a flow stream
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.entropy-generation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exergy of a closed system
+        key_prerequisites: [engr.thermo.entropy-generation]
+      - id: kp2
+        can_do: Find exergy of a flow stream
+        key_prerequisites: [engr.thermo.entropy-generation]
+      - id: kp3
+        can_do: Choose the dead state
+        key_prerequisites: [engr.thermo.entropy-generation]
+      - id: kp4
+        can_do: Find exergy change
+        key_prerequisites: [engr.thermo.entropy-generation]
+  - id: engr.thermo.exergy-destruction
+    name: Finding exergy destruction
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.exergy-of-a-state
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exergy destroyed from entropy generation
+        key_prerequisites: [engr.thermo.exergy-of-a-state]
+      - id: kp2
+        can_do: Find exergy destroyed in heat transfer
+        key_prerequisites: [engr.thermo.exergy-of-a-state]
+      - id: kp3
+        can_do: Find exergy destroyed in throttling
+        key_prerequisites: [engr.thermo.exergy-of-a-state]
+      - id: kp4
+        can_do: Compare exergy destruction across devices
+        key_prerequisites: [engr.thermo.exergy-of-a-state]
+  - id: engr.thermo.second-law-efficiency
+    name: Finding second-law efficiency
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.exergy-destruction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find second-law efficiency of engines
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp2
+        can_do: Find second-law efficiency of devices
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp3
+        can_do: Compare first-law and second-law efficiencies
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp4
+        can_do: Find reversible work
+        key_prerequisites: [engr.thermo.exergy-destruction]
+  - id: engr.thermo.exergy-balances
+    name: Writing exergy balances for devices
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.exergy-destruction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write exergy balances for closed systems
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp2
+        can_do: Write exergy balances for control volumes
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp3
+        can_do: Find exergy of heat transfer
+        key_prerequisites: [engr.thermo.exergy-destruction]
+      - id: kp4
+        can_do: Find exergy losses in a plant
+        key_prerequisites: [engr.thermo.exergy-destruction]
+  - id: engr.thermo.ideal-rankine-cycle
+    name: Analyzing the ideal Rankine cycle
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.isentropic-processes
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.multi-device-systems
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the Rankine cycle on T-s diagrams
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp2
+        can_do: Find states of the ideal Rankine cycle
+        key_prerequisites: [engr.thermo.isentropic-processes, engr.thermo.multi-device-systems]
+      - id: kp3
+        can_do: Find thermal efficiency
+        key_prerequisites: [engr.thermo.multi-device-systems]
+      - id: kp4
+        can_do: Find back work ratio
+        key_prerequisites: [engr.thermo.isentropic-processes]
+  - id: engr.thermo.actual-rankine-deviations
+    name: Analyzing actual Rankine cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-rankine-cycle
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.isentropic-efficiency
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include turbine and pump efficiencies
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+      - id: kp2
+        can_do: Find actual cycle efficiency
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle, engr.thermo.isentropic-efficiency]
+      - id: kp3
+        can_do: Explain pressure losses
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle]
+      - id: kp4
+        can_do: Find effects of boiler and condenser pressure
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle]
+  - id: engr.thermo.reheat-rankine
+    name: Analyzing reheat Rankine cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.actual-rankine-deviations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze reheat cycles
+        key_prerequisites: [engr.thermo.actual-rankine-deviations]
+      - id: kp2
+        can_do: Find optimum reheat pressure
+        key_prerequisites: [engr.thermo.actual-rankine-deviations]
+      - id: kp3
+        can_do: Find quality improvement from reheat
+        key_prerequisites: [engr.thermo.actual-rankine-deviations]
+      - id: kp4
+        can_do: Find efficiency of reheat cycles
+        key_prerequisites: [engr.thermo.actual-rankine-deviations]
+  - id: engr.thermo.regenerative-rankine
+    name: Analyzing regenerative feedwater heating
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.reheat-rankine
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.thermo.mixing-chambers
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze open feedwater heaters
+        key_prerequisites: [engr.thermo.reheat-rankine, engr.thermo.mixing-chambers]
+      - id: kp2
+        can_do: Analyze closed feedwater heaters
+        key_prerequisites: [engr.thermo.reheat-rankine]
+      - id: kp3
+        can_do: Find extraction fractions
+        key_prerequisites: [engr.thermo.reheat-rankine, engr.thermo.mixing-chambers]
+      - id: kp4
+        can_do: Find efficiency gain from regeneration
+        key_prerequisites: [engr.thermo.reheat-rankine]
+  - id: engr.thermo.cogeneration
+    name: Analyzing cogeneration plants
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.regenerative-rankine
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze cogeneration plants
+        key_prerequisites: [engr.thermo.regenerative-rankine]
+      - id: kp2
+        can_do: Find utilization factor
+        key_prerequisites: [engr.thermo.regenerative-rankine]
+      - id: kp3
+        can_do: Compare separate and combined production
+        key_prerequisites: [engr.thermo.regenerative-rankine]
+      - id: kp4
+        can_do: Find process heat delivered
+        key_prerequisites: [engr.thermo.regenerative-rankine]
+  - id: engr.thermo.air-standard-assumptions
+    name: Using air-standard assumptions
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.isentropic-processes
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.otto-and-diesel-cycles
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State air-standard assumptions
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp2
+        can_do: Find mean effective pressure
+        key_prerequisites: [engr.thermo.isentropic-processes, physics.waves-thermo-optics.otto-and-diesel-cycles]
+      - id: kp3
+        can_do: Draw cycles on P-v and T-s diagrams
+        key_prerequisites: [engr.thermo.isentropic-processes]
+      - id: kp4
+        can_do: Compare ideal and actual engine cycles
+        key_prerequisites: [physics.waves-thermo-optics.otto-and-diesel-cycles]
+  - id: engr.thermo.otto-diesel-with-tables
+    name: Analyzing Otto and Diesel cycles with variable specific heats
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.air-standard-assumptions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze Otto cycles with variable specific heats
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+      - id: kp2
+        can_do: Analyze Diesel cycles with variable specific heats
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+      - id: kp3
+        can_do: Find effect of compression ratio
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+      - id: kp4
+        can_do: Compare Otto and Diesel efficiency
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+  - id: engr.thermo.dual-and-stirling-cycles
+    name: Analyzing dual, Stirling and Ericsson cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.otto-diesel-with-tables
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze dual cycles
+        key_prerequisites: [engr.thermo.otto-diesel-with-tables]
+      - id: kp2
+        can_do: Analyze Stirling cycles
+        key_prerequisites: [engr.thermo.otto-diesel-with-tables]
+      - id: kp3
+        can_do: Analyze Ericsson cycles
+        key_prerequisites: [engr.thermo.otto-diesel-with-tables]
+      - id: kp4
+        can_do: Compare with the Carnot cycle
+        key_prerequisites: [engr.thermo.otto-diesel-with-tables]
+  - id: engr.thermo.brayton-cycle
+    name: Analyzing the Brayton cycle
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.air-standard-assumptions
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.isentropic-efficiency
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find states of the ideal Brayton cycle
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+      - id: kp2
+        can_do: Find Brayton efficiency from pressure ratio
+        key_prerequisites: [engr.thermo.air-standard-assumptions]
+      - id: kp3
+        can_do: Find net work and back work ratio
+        key_prerequisites: [engr.thermo.air-standard-assumptions, engr.thermo.isentropic-efficiency]
+      - id: kp4
+        can_do: Include compressor and turbine efficiencies
+        key_prerequisites: [engr.thermo.isentropic-efficiency]
+  - id: engr.thermo.brayton-regeneration
+    name: Analyzing Brayton cycles with regeneration, reheat and intercooling
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.brayton-cycle
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze regeneration in gas turbines
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp2
+        can_do: Find regenerator effectiveness
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp3
+        can_do: Analyze intercooling and reheat
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp4
+        can_do: Find efficiency gains
+        key_prerequisites: [engr.thermo.brayton-cycle]
+  - id: engr.thermo.jet-propulsion-cycle
+    name: Analyzing ideal jet propulsion cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.brayton-cycle
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.nozzles-and-diffusers
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find states in a turbojet
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp2
+        can_do: Find thrust and propulsive power
+        key_prerequisites: [engr.thermo.brayton-cycle, engr.thermo.nozzles-and-diffusers]
+      - id: kp3
+        can_do: Find propulsive efficiency
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp4
+        can_do: Analyze inlet and nozzle sections
+        key_prerequisites: [engr.thermo.nozzles-and-diffusers]
+  - id: engr.thermo.combined-cycles
+    name: Analyzing combined gas-vapor cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.brayton-regeneration
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.actual-rankine-deviations
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze combined gas-steam cycles
+        key_prerequisites: [engr.thermo.brayton-regeneration, engr.thermo.actual-rankine-deviations]
+      - id: kp2
+        can_do: Find steam flow from gas exhaust
+        key_prerequisites: [engr.thermo.brayton-regeneration, engr.thermo.actual-rankine-deviations]
+      - id: kp3
+        can_do: Find combined cycle efficiency
+        key_prerequisites: [engr.thermo.brayton-regeneration]
+      - id: kp4
+        can_do: Compare combined and single cycles
+        key_prerequisites: [engr.thermo.actual-rankine-deviations]
+  - id: engr.thermo.vapor-compression-cycle
+    name: Analyzing the vapor-compression refrigeration cycle
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-rankine-cycle
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.thermo.throttling-valves
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze the ideal vapor-compression cycle
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle, engr.thermo.throttling-valves]
+      - id: kp2
+        can_do: Find refrigeration capacity
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle]
+      - id: kp3
+        can_do: Find coefficient of performance
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle]
+      - id: kp4
+        can_do: Draw the cycle on P-h diagrams
+        key_prerequisites: [engr.thermo.ideal-rankine-cycle, engr.thermo.throttling-valves]
+  - id: engr.thermo.actual-refrigeration-cycles
+    name: Analyzing actual refrigeration cycles and refrigerant choice
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.vapor-compression-cycle
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include compressor efficiency
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp2
+        can_do: Include subcooling and superheating
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp3
+        can_do: Choose refrigerants
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp4
+        can_do: Choose operating pressures
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+  - id: engr.thermo.heat-pump-systems
+    name: Analyzing heat pump systems
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.vapor-compression-cycle
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze heat pump systems
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp2
+        can_do: Find heating coefficient of performance
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp3
+        can_do: Compare heat pumps and resistance heating
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+      - id: kp4
+        can_do: Analyze reversing heat pumps
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+  - id: engr.thermo.cascade-and-multistage-refrigeration
+    name: Analyzing cascade and multistage refrigeration
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.actual-refrigeration-cycles
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze cascade refrigeration
+        key_prerequisites: [engr.thermo.actual-refrigeration-cycles]
+      - id: kp2
+        can_do: Analyze multistage compression with flash chambers
+        key_prerequisites: [engr.thermo.actual-refrigeration-cycles]
+      - id: kp3
+        can_do: Find mass flow ratios
+        key_prerequisites: [engr.thermo.actual-refrigeration-cycles]
+      - id: kp4
+        can_do: Find system coefficient of performance
+        key_prerequisites: [engr.thermo.actual-refrigeration-cycles]
+  - id: engr.thermo.gas-refrigeration
+    name: Analyzing gas refrigeration cycles
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.brayton-cycle
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.vapor-compression-cycle
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze gas refrigeration cycles
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp2
+        can_do: Find coefficient of performance
+        key_prerequisites: [engr.thermo.brayton-cycle, engr.thermo.vapor-compression-cycle]
+      - id: kp3
+        can_do: Include regeneration
+        key_prerequisites: [engr.thermo.brayton-cycle]
+      - id: kp4
+        can_do: Compare with vapor-compression systems
+        key_prerequisites: [engr.thermo.vapor-compression-cycle]
+  - id: engr.thermo.maxwell-relations-engineering
+    name: Using Maxwell relations to find property changes
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.entropy-of-ideal-gases-variable-cp
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Maxwell relations
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Find entropy changes from P-v-T data
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp, math.calc3.partial-derivatives-compute]
+      - id: kp3
+        can_do: Find specific heat relations
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp, math.calc3.partial-derivatives-compute]
+      - id: kp4
+        can_do: Find property changes of real substances
+        key_prerequisites: [engr.thermo.entropy-of-ideal-gases-variable-cp]
+  - id: engr.thermo.clapeyron-equation
+    name: Using the Clapeyron equation
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.maxwell-relations-engineering
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Clapeyron equation
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp2
+        can_do: Use the Clausius-Clapeyron equation
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp3
+        can_do: Find enthalpy of vaporization from data
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp4
+        can_do: Estimate saturation pressure
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+  - id: engr.thermo.joule-thomson-coefficient
+    name: Finding the Joule-Thomson coefficient
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.maxwell-relations-engineering
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.throttling-valves
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the Joule-Thomson coefficient
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp2
+        can_do: Find inversion temperature
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp3
+        can_do: Predict heating or cooling in throttling
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering, engr.thermo.throttling-valves]
+      - id: kp4
+        can_do: Find the coefficient from data
+        key_prerequisites: [engr.thermo.throttling-valves]
+  - id: engr.thermo.departure-functions
+    name: Finding real-gas enthalpy and entropy from departure charts
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.maxwell-relations-engineering
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.compressibility-charts
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find enthalpy departure from charts
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering, engr.thermo.compressibility-charts]
+      - id: kp2
+        can_do: Find entropy departure from charts
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering, engr.thermo.compressibility-charts]
+      - id: kp3
+        can_do: Find real-gas property changes
+        key_prerequisites: [engr.thermo.maxwell-relations-engineering]
+      - id: kp4
+        can_do: Compare ideal and real results
+        key_prerequisites: [engr.thermo.compressibility-charts]
+  - id: engr.thermo.ideal-gas-mixtures
+    name: Finding properties of ideal-gas mixtures
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-gas-specific-heats
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.gen1.mole-fractions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mixture molar mass and gas constant
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats, chem.gen1.mole-fractions]
+      - id: kp2
+        can_do: Use Dalton's and Amagat's laws
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats]
+      - id: kp3
+        can_do: Find mixture properties
+        key_prerequisites: [engr.thermo.ideal-gas-specific-heats, chem.gen1.mole-fractions]
+      - id: kp4
+        can_do: Convert mass and mole fractions
+        key_prerequisites: [chem.gen1.mole-fractions]
+  - id: engr.thermo.mixture-processes
+    name: Analyzing processes with gas mixtures
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-gas-mixtures
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mixing temperature of gas streams
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures, engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find entropy of mixing
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+      - id: kp3
+        can_do: Find exergy destroyed in mixing
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+      - id: kp4
+        can_do: Analyze compression of mixtures
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.humidity-measures
+    name: Finding specific and relative humidity
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.ideal-gas-mixtures
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find specific humidity
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+      - id: kp2
+        can_do: Find relative humidity
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+      - id: kp3
+        can_do: Find dew-point temperature
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+      - id: kp4
+        can_do: Find wet-bulb temperature
+        key_prerequisites: [engr.thermo.ideal-gas-mixtures]
+  - id: engr.thermo.psychrometric-chart
+    name: Reading the psychrometric chart
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.humidity-measures
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read properties from the chart
+        key_prerequisites: [engr.thermo.humidity-measures]
+      - id: kp2
+        can_do: Find states from two properties
+        key_prerequisites: [engr.thermo.humidity-measures]
+      - id: kp3
+        can_do: Find enthalpy of moist air
+        key_prerequisites: [engr.thermo.humidity-measures]
+      - id: kp4
+        can_do: Trace simple processes on the chart
+        key_prerequisites: [engr.thermo.humidity-measures]
+  - id: engr.thermo.air-conditioning-processes
+    name: Analyzing heating, cooling and humidifying air
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.psychrometric-chart
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.mixture-processes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze heating with humidification
+        key_prerequisites: [engr.thermo.psychrometric-chart, engr.thermo.mixture-processes]
+      - id: kp2
+        can_do: Analyze cooling with dehumidification
+        key_prerequisites: [engr.thermo.psychrometric-chart, engr.thermo.mixture-processes]
+      - id: kp3
+        can_do: Analyze evaporative cooling
+        key_prerequisites: [engr.thermo.psychrometric-chart]
+      - id: kp4
+        can_do: Analyze adiabatic mixing of airstreams
+        key_prerequisites: [engr.thermo.mixture-processes]
+  - id: engr.thermo.cooling-towers
+    name: Analyzing wet cooling towers
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.air-conditioning-processes
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find makeup water in cooling towers
+        key_prerequisites: [engr.thermo.air-conditioning-processes]
+      - id: kp2
+        can_do: Find air flow in cooling towers
+        key_prerequisites: [engr.thermo.air-conditioning-processes]
+      - id: kp3
+        can_do: Find water outlet temperature
+        key_prerequisites: [engr.thermo.air-conditioning-processes]
+      - id: kp4
+        can_do: Find range and approach
+        key_prerequisites: [engr.thermo.air-conditioning-processes]
+  - id: engr.thermo.combustion-stoichiometry
+    name: Balancing combustion reactions with excess air
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.mass-flow-rate
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.gen1.combustion-analysis
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Balance theoretical combustion reactions
+        key_prerequisites: [engr.thermo.mass-flow-rate, chem.gen1.combustion-analysis]
+      - id: kp2
+        can_do: Balance combustion with excess air
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+      - id: kp3
+        can_do: Find excess air from product analysis
+        key_prerequisites: [engr.thermo.mass-flow-rate, chem.gen1.combustion-analysis]
+      - id: kp4
+        can_do: Balance combustion of fuel mixtures
+        key_prerequisites: [chem.gen1.combustion-analysis]
+  - id: engr.thermo.air-fuel-ratio-and-dew-point
+    name: Finding air-fuel ratio and dew point of products
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.combustion-stoichiometry
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.humidity-measures
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find air-fuel ratio
+        key_prerequisites: [engr.thermo.combustion-stoichiometry]
+      - id: kp2
+        can_do: Find dew point of products
+        key_prerequisites: [engr.thermo.combustion-stoichiometry, engr.thermo.humidity-measures]
+      - id: kp3
+        can_do: Find mole fractions of products
+        key_prerequisites: [engr.thermo.combustion-stoichiometry]
+      - id: kp4
+        can_do: Find water condensed from products
+        key_prerequisites: [engr.thermo.humidity-measures]
+  - id: engr.thermo.enthalpy-of-formation
+    name: Using enthalpy of formation and combustion
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.combustion-stoichiometry
+        encompassing: 0.6
+        confidence: high
+      - topic: chem.gen1.enthalpy
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use enthalpies of formation
+        key_prerequisites: [engr.thermo.combustion-stoichiometry, chem.gen1.enthalpy]
+      - id: kp2
+        can_do: Find enthalpy of combustion
+        key_prerequisites: [engr.thermo.combustion-stoichiometry]
+      - id: kp3
+        can_do: Find heating values
+        key_prerequisites: [engr.thermo.combustion-stoichiometry, chem.gen1.enthalpy]
+      - id: kp4
+        can_do: Compare higher and lower heating values
+        key_prerequisites: [engr.thermo.combustion-stoichiometry]
+  - id: engr.thermo.first-law-reacting-systems
+    name: Applying the first law to reacting systems
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.enthalpy-of-formation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the first law to steady-flow combustion
+        key_prerequisites: [engr.thermo.enthalpy-of-formation, engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Find heat released in a combustor
+        key_prerequisites: [engr.thermo.enthalpy-of-formation]
+      - id: kp3
+        can_do: Apply the first law to closed combustion
+        key_prerequisites: [engr.thermo.enthalpy-of-formation]
+      - id: kp4
+        can_do: Include sensible enthalpy of products
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.thermo.adiabatic-flame-temperature
+    name: Finding adiabatic flame temperature
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.first-law-reacting-systems
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find adiabatic flame temperature by iteration
+        key_prerequisites: [engr.thermo.first-law-reacting-systems]
+      - id: kp2
+        can_do: Find effect of excess air on flame temperature
+        key_prerequisites: [engr.thermo.first-law-reacting-systems]
+      - id: kp3
+        can_do: Find effect of preheating
+        key_prerequisites: [engr.thermo.first-law-reacting-systems]
+      - id: kp4
+        can_do: Compare complete and incomplete combustion
+        key_prerequisites: [engr.thermo.first-law-reacting-systems]
+  - id: engr.thermo.entropy-of-reacting-systems
+    name: Finding entropy generation in combustion
+    subject: engr
+    course: engr.thermo
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.first-law-reacting-systems
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.entropy-generation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find absolute entropy of reactants and products
+        key_prerequisites: [engr.thermo.first-law-reacting-systems]
+      - id: kp2
+        can_do: Find entropy generation in combustion
+        key_prerequisites: [engr.thermo.first-law-reacting-systems, engr.thermo.entropy-generation]
+      - id: kp3
+        can_do: Find exergy destroyed in combustion
+        key_prerequisites: [engr.thermo.entropy-generation]
+      - id: kp4
+        can_do: Find second-law efficiency of combustion
+        key_prerequisites: [engr.thermo.first-law-reacting-systems, engr.thermo.entropy-generation]
