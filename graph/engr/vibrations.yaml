@@ -1,0 +1,685 @@
+course: engr.vibrations
+topics:
+  - id: engr.vibrations.sdof-modelling
+    name: Modelling systems with equivalent mass, stiffness and damping
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dynamics.energy-method-vibration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalent stiffness of springs in series and parallel
+        key_prerequisites: [engr.dynamics.energy-method-vibration]
+      - id: kp2
+        can_do: Find equivalent mass of distributed systems
+        key_prerequisites: [engr.dynamics.energy-method-vibration]
+      - id: kp3
+        can_do: Find equivalent damping
+        key_prerequisites: [engr.dynamics.energy-method-vibration]
+      - id: kp4
+        can_do: Model a machine as a single-degree system
+        key_prerequisites: [engr.dynamics.energy-method-vibration]
+  - id: engr.vibrations.free-damped-response
+    name: Finding free response of damped systems
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.sdof-modelling
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.dynamics.viscous-damped-vibration
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free response for each damping case
+        key_prerequisites: [engr.vibrations.sdof-modelling, engr.dynamics.viscous-damped-vibration]
+      - id: kp2
+        can_do: Find response from initial conditions
+        key_prerequisites: [engr.vibrations.sdof-modelling]
+      - id: kp3
+        can_do: Find damped period
+        key_prerequisites: [engr.dynamics.viscous-damped-vibration]
+      - id: kp4
+        can_do: Plot free response
+        key_prerequisites: [engr.vibrations.sdof-modelling]
+  - id: engr.vibrations.logarithmic-decrement
+    name: Finding damping from logarithmic decrement
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.free-damped-response
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find logarithmic decrement from records
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp2
+        can_do: Find damping ratio from decrement
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp3
+        can_do: Find decay over several cycles
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp4
+        can_do: Estimate damping from test data
+        key_prerequisites: [engr.vibrations.free-damped-response]
+  - id: engr.vibrations.coulomb-damping
+    name: Analyzing Coulomb damping
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.free-damped-response
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations with Coulomb damping
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp2
+        can_do: Find amplitude decay per cycle
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp3
+        can_do: Find when motion stops
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp4
+        can_do: Compare Coulomb and viscous damping
+        key_prerequisites: [engr.vibrations.free-damped-response]
+  - id: engr.vibrations.harmonic-forced-response
+    name: Finding harmonic forced response
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.free-damped-response
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.dynamics.forced-vibration-basics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady-state amplitude and phase
+        key_prerequisites: [engr.vibrations.free-damped-response, engr.dynamics.forced-vibration-basics]
+      - id: kp2
+        can_do: Find magnification factor curves
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp3
+        can_do: Find total response with transients
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp4
+        can_do: Find response at resonance
+        key_prerequisites: [engr.dynamics.forced-vibration-basics]
+  - id: engr.vibrations.rotating-unbalance
+    name: Analyzing rotating unbalance
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find response to rotating unbalance
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp2
+        can_do: Find force transmitted by unbalance
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Find speed of maximum response
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp4
+        can_do: Reduce unbalance response
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+  - id: engr.vibrations.base-excitation
+    name: Analyzing base excitation
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find response to base motion
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp2
+        can_do: Find displacement transmissibility
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Find force transmitted to the base
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp4
+        can_do: Analyze vehicles on rough roads
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+  - id: engr.vibrations.vibration-isolation
+    name: Designing vibration isolators
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.base-excitation
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.vibrations.rotating-unbalance
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force transmissibility
+        key_prerequisites: [engr.vibrations.base-excitation, engr.vibrations.rotating-unbalance]
+      - id: kp2
+        can_do: Design isolators for a frequency ratio
+        key_prerequisites: [engr.vibrations.base-excitation]
+      - id: kp3
+        can_do: Choose isolator damping
+        key_prerequisites: [engr.vibrations.base-excitation]
+      - id: kp4
+        can_do: Design isolation for machines
+        key_prerequisites: [engr.vibrations.rotating-unbalance]
+  - id: engr.vibrations.vibration-measurement
+    name: Explaining vibration sensors
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.base-excitation
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe accelerometers and vibrometers
+        key_prerequisites: [engr.vibrations.base-excitation]
+      - id: kp2
+        can_do: Find instrument response ranges
+        key_prerequisites: [engr.vibrations.base-excitation]
+      - id: kp3
+        can_do: Choose sensors for frequencies
+        key_prerequisites: [engr.vibrations.base-excitation]
+      - id: kp4
+        can_do: Correct for instrument dynamics
+        key_prerequisites: [engr.vibrations.base-excitation]
+  - id: engr.vibrations.periodic-forcing
+    name: Finding response to periodic forcing with Fourier series
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.fourier-series-intro
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand periodic forces in Fourier series
+        key_prerequisites: [math.diffeq.fourier-series-intro]
+      - id: kp2
+        can_do: Find response to each harmonic
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Combine harmonic responses
+        key_prerequisites: [engr.vibrations.harmonic-forced-response, math.diffeq.fourier-series-intro]
+      - id: kp4
+        can_do: Find dominant harmonics
+        key_prerequisites: [engr.vibrations.harmonic-forced-response, math.diffeq.fourier-series-intro]
+  - id: engr.vibrations.impulse-response-vibration
+    name: Finding impulse response
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.free-damped-response
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.impulse-delta
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impulse response of damped systems
+        key_prerequisites: [engr.vibrations.free-damped-response, math.diffeq.impulse-delta]
+      - id: kp2
+        can_do: Find response to short impacts
+        key_prerequisites: [engr.vibrations.free-damped-response]
+      - id: kp3
+        can_do: Find response to several impulses
+        key_prerequisites: [math.diffeq.impulse-delta]
+      - id: kp4
+        can_do: Find impulse from response data
+        key_prerequisites: [engr.vibrations.free-damped-response]
+  - id: engr.vibrations.convolution-response
+    name: Finding response by the convolution integral
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.impulse-response-vibration
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.convolution
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find response by convolution
+        key_prerequisites: [engr.vibrations.impulse-response-vibration, math.diffeq.convolution]
+      - id: kp2
+        can_do: Find response to step forces
+        key_prerequisites: [engr.vibrations.impulse-response-vibration, math.diffeq.convolution]
+      - id: kp3
+        can_do: Find response to ramp forces
+        key_prerequisites: [engr.vibrations.impulse-response-vibration]
+      - id: kp4
+        can_do: Find response to pulses
+        key_prerequisites: [math.diffeq.convolution]
+  - id: engr.vibrations.shock-response
+    name: Finding shock response spectra
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.convolution-response
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shock response spectra
+        key_prerequisites: [engr.vibrations.convolution-response]
+      - id: kp2
+        can_do: Find maximum response to pulses
+        key_prerequisites: [engr.vibrations.convolution-response]
+      - id: kp3
+        can_do: Use shock spectra in design
+        key_prerequisites: [engr.vibrations.convolution-response]
+      - id: kp4
+        can_do: Compare pulse shapes
+        key_prerequisites: [engr.vibrations.convolution-response]
+  - id: engr.vibrations.laplace-vibration
+    name: Solving vibration problems with Laplace transforms
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.7
+        confidence: high
+      - topic: math.diffeq.solve-ivp-laplace
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve vibration equations with Laplace transforms
+        key_prerequisites: [engr.vibrations.harmonic-forced-response, math.diffeq.solve-ivp-laplace]
+      - id: kp2
+        can_do: Find transfer functions of vibrating systems
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Find responses to general inputs
+        key_prerequisites: [math.diffeq.solve-ivp-laplace]
+      - id: kp4
+        can_do: Find frequency response from transfer functions
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+  - id: engr.vibrations.two-dof-equations
+    name: Writing equations of motion for two degrees of freedom
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.sdof-modelling
+        encompassing: 0.5
+        confidence: high
+      - topic: math.diffeq.matrix-form-systems
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations of two-degree systems
+        key_prerequisites: [engr.vibrations.sdof-modelling, math.diffeq.matrix-form-systems]
+      - id: kp2
+        can_do: Write mass and stiffness matrices
+        key_prerequisites: [math.diffeq.matrix-form-systems]
+      - id: kp3
+        can_do: Model coupled translation and rotation
+        key_prerequisites: [engr.vibrations.sdof-modelling]
+      - id: kp4
+        can_do: Model vehicle bounce and pitch
+        key_prerequisites: [engr.vibrations.sdof-modelling, math.diffeq.matrix-form-systems]
+  - id: engr.vibrations.natural-frequencies-mode-shapes
+    name: Finding natural frequencies and mode shapes
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.two-dof-equations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.find-eigenvectors
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural frequencies from the characteristic equation
+        key_prerequisites: [engr.vibrations.two-dof-equations, math.linalg.find-eigenvectors]
+      - id: kp2
+        can_do: Find mode shapes
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp3
+        can_do: Normalize mode shapes
+        key_prerequisites: [math.linalg.find-eigenvectors]
+      - id: kp4
+        can_do: Interpret mode shapes physically
+        key_prerequisites: [engr.vibrations.two-dof-equations]
+  - id: engr.vibrations.free-response-mdof
+    name: Finding free response of multi-degree systems
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.natural-frequencies-mode-shapes
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free response by modal superposition
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp2
+        can_do: Find response from initial conditions
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp3
+        can_do: Identify beating in two-degree systems
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp4
+        can_do: Find response of semidefinite systems
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+  - id: engr.vibrations.forced-response-mdof
+    name: Finding forced response of two-degree systems
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.natural-frequencies-mode-shapes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find steady-state response of two-degree systems
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp2
+        can_do: Find antiresonance
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp3
+        can_do: Find response near natural frequencies
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp4
+        can_do: Find forces in coupled systems
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+  - id: engr.vibrations.vibration-absorbers
+    name: Designing tuned vibration absorbers
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.forced-response-mdof
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design undamped vibration absorbers
+        key_prerequisites: [engr.vibrations.forced-response-mdof]
+      - id: kp2
+        can_do: Find absorber mass and stiffness
+        key_prerequisites: [engr.vibrations.forced-response-mdof]
+      - id: kp3
+        can_do: Find new natural frequencies with absorbers
+        key_prerequisites: [engr.vibrations.forced-response-mdof]
+      - id: kp4
+        can_do: Describe damped absorbers
+        key_prerequisites: [engr.vibrations.forced-response-mdof]
+  - id: engr.vibrations.modal-analysis
+    name: Decoupling equations by modal analysis
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.free-response-mdof
+        encompassing: 0.6
+        confidence: high
+      - topic: math.linalg.orthogonal-diagonalization
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use orthogonality of modes
+        key_prerequisites: [engr.vibrations.free-response-mdof]
+      - id: kp2
+        can_do: Decouple equations in modal coordinates
+        key_prerequisites: [engr.vibrations.free-response-mdof, math.linalg.orthogonal-diagonalization]
+      - id: kp3
+        can_do: Find forced response by modal analysis
+        key_prerequisites: [engr.vibrations.free-response-mdof]
+      - id: kp4
+        can_do: Truncate modes for approximation
+        key_prerequisites: [math.linalg.orthogonal-diagonalization]
+  - id: engr.vibrations.proportional-damping
+    name: Using proportional damping
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.modal-analysis
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Rayleigh damping
+        key_prerequisites: [engr.vibrations.modal-analysis]
+      - id: kp2
+        can_do: Find modal damping ratios
+        key_prerequisites: [engr.vibrations.modal-analysis]
+      - id: kp3
+        can_do: Find damped response in modal coordinates
+        key_prerequisites: [engr.vibrations.modal-analysis]
+      - id: kp4
+        can_do: Explain limits of proportional damping
+        key_prerequisites: [engr.vibrations.modal-analysis]
+  - id: engr.vibrations.lagrange-equations-vibration
+    name: Deriving equations of motion with Lagrange's equations
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.two-dof-equations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write energies of vibrating systems
+        key_prerequisites: [engr.vibrations.two-dof-equations]
+      - id: kp2
+        can_do: Apply Lagrange's equations
+        key_prerequisites: [engr.vibrations.two-dof-equations]
+      - id: kp3
+        can_do: Find equations of pendulum systems
+        key_prerequisites: [engr.vibrations.two-dof-equations]
+      - id: kp4
+        can_do: Linearize Lagrange equations
+        key_prerequisites: [engr.vibrations.two-dof-equations]
+  - id: engr.vibrations.string-and-bar-vibration
+    name: Finding modes of strings and bars
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.natural-frequencies-mode-shapes
+        encompassing: 0.35
+        confidence: high
+      - topic: math.diffeq.boundary-value-eigenproblems
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural frequencies of strings
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes, math.diffeq.boundary-value-eigenproblems]
+      - id: kp2
+        can_do: Find modes of axially vibrating bars
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp3
+        can_do: Find torsional modes of shafts
+        key_prerequisites: [engr.vibrations.natural-frequencies-mode-shapes]
+      - id: kp4
+        can_do: Apply boundary conditions to continuous systems
+        key_prerequisites: [math.diffeq.boundary-value-eigenproblems]
+  - id: engr.vibrations.beam-vibration
+    name: Finding natural frequencies of beams
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.string-and-bar-vibration
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the beam vibration equation
+        key_prerequisites: [engr.vibrations.string-and-bar-vibration]
+      - id: kp2
+        can_do: Find natural frequencies of simply supported beams
+        key_prerequisites: [engr.vibrations.string-and-bar-vibration]
+      - id: kp3
+        can_do: Find natural frequencies of cantilevers
+        key_prerequisites: [engr.vibrations.string-and-bar-vibration]
+      - id: kp4
+        can_do: Find beam mode shapes
+        key_prerequisites: [engr.vibrations.string-and-bar-vibration]
+  - id: engr.vibrations.rayleigh-method
+    name: Estimating fundamental frequency by Rayleigh's method
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.beam-vibration
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate frequency with Rayleigh's method
+        key_prerequisites: [engr.vibrations.beam-vibration]
+      - id: kp2
+        can_do: Choose trial shapes
+        key_prerequisites: [engr.vibrations.beam-vibration]
+      - id: kp3
+        can_do: Include lumped masses
+        key_prerequisites: [engr.vibrations.beam-vibration]
+      - id: kp4
+        can_do: Compare with exact frequencies
+        key_prerequisites: [engr.vibrations.beam-vibration]
+  - id: engr.vibrations.numerical-vibration
+    name: Simulating vibration numerically
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.45
+        confidence: high
+      - topic: math.diffeq.improved-euler-rk4
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Simulate free vibration numerically
+        key_prerequisites: [engr.vibrations.harmonic-forced-response, math.diffeq.improved-euler-rk4]
+      - id: kp2
+        can_do: Simulate forced vibration numerically
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Simulate nonlinear vibration
+        key_prerequisites: [math.diffeq.improved-euler-rk4]
+      - id: kp4
+        can_do: Choose time steps for simulation
+        key_prerequisites: [math.diffeq.improved-euler-rk4]
+  - id: engr.vibrations.frequency-response-functions
+    name: Measuring frequency response functions
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.harmonic-forced-response
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure frequency response functions
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp2
+        can_do: Find natural frequencies from FRFs
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp3
+        can_do: Find damping by half-power bandwidth
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+      - id: kp4
+        can_do: Interpret magnitude and phase plots
+        key_prerequisites: [engr.vibrations.harmonic-forced-response]
+  - id: engr.vibrations.experimental-modal-analysis
+    name: Extracting modal parameters from tests
+    subject: engr
+    course: engr.vibrations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.vibrations.frequency-response-functions
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.vibrations.modal-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plan modal tests
+        key_prerequisites: [engr.vibrations.frequency-response-functions]
+      - id: kp2
+        can_do: Extract modal parameters
+        key_prerequisites: [engr.vibrations.frequency-response-functions, engr.vibrations.modal-analysis]
+      - id: kp3
+        can_do: Find mode shapes from tests
+        key_prerequisites: [engr.vibrations.frequency-response-functions, engr.vibrations.modal-analysis]
+      - id: kp4
+        can_do: Validate models with test data
+        key_prerequisites: [engr.vibrations.modal-analysis]
