@@ -1,0 +1,1472 @@
+course: engr.statics
+topics:
+  - id: engr.statics.force-vectors-in-components
+    name: Writing forces as Cartesian vectors
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-vectors
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a 2D force in components from angles
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp2
+        can_do: Write a 3D force from direction angles
+        key_prerequisites: [physics.mechanics.position-vectors, physics.mechanics.unit-vector-notation]
+      - id: kp3
+        can_do: Find magnitude and direction of a force vector
+        key_prerequisites: [physics.mechanics.position-vectors]
+      - id: kp4
+        can_do: Write forces from slopes given as ratios
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+  - id: engr.statics.force-along-a-line
+    name: Writing a force directed along a line
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.force-vectors-in-components
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a unit vector between two points
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp2
+        can_do: Write a force directed along a cable
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp3
+        can_do: Find the angle between a force and a line
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp4
+        can_do: Find the component of a force along a line
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+  - id: engr.statics.resultant-of-concurrent-forces
+    name: Finding the resultant of concurrent forces
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.force-along-a-line
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add 2D forces by components
+        key_prerequisites: [engr.statics.force-along-a-line]
+      - id: kp2
+        can_do: Add 3D forces by components
+        key_prerequisites: [engr.statics.force-along-a-line]
+      - id: kp3
+        can_do: Find a force that gives a required resultant
+        key_prerequisites: [engr.statics.force-along-a-line]
+      - id: kp4
+        can_do: Find resultants of cable forces at a point
+        key_prerequisites: [engr.statics.force-along-a-line]
+  - id: engr.statics.moment-about-a-point-2d
+    name: Finding moments about a point in two dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.force-vectors-in-components
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a moment with perpendicular distance
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp2
+        can_do: Find a moment from force components
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp3
+        can_do: Find the sign of a moment
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+      - id: kp4
+        can_do: Find the moment of several forces
+        key_prerequisites: [engr.statics.force-vectors-in-components]
+  - id: engr.statics.moment-about-a-point-3d
+    name: Finding moments about a point with the cross product
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.moment-about-a-point-2d
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.torque-as-a-cross-product
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a moment with the cross product
+        key_prerequisites: [engr.statics.moment-about-a-point-2d, physics.mechanics.torque-as-a-cross-product]
+      - id: kp2
+        can_do: Choose a position vector for a moment
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+      - id: kp3
+        can_do: Find moments of cable forces
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp4
+        can_do: Find the magnitude of a 3D moment
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+  - id: engr.statics.moment-about-an-axis
+    name: Finding the moment of a force about an axis
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.moment-about-a-point-3d
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.triple-scalar-product
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a moment about a coordinate axis
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+      - id: kp2
+        can_do: Find a moment about an arbitrary axis
+        key_prerequisites: [engr.statics.moment-about-a-point-3d, math.calc3.triple-scalar-product]
+      - id: kp3
+        can_do: Use the scalar triple product for axis moments
+        key_prerequisites: [math.calc3.triple-scalar-product]
+      - id: kp4
+        can_do: Find a force giving a required axis moment
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+  - id: engr.statics.varignon-principle
+    name: Using components to find moments
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.moment-about-a-point-2d
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a moment by summing component moments
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+      - id: kp2
+        can_do: Choose components to simplify a moment
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+      - id: kp3
+        can_do: Find a moment of a force on a slanted member
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+      - id: kp4
+        can_do: Locate a force from its moment
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+  - id: engr.statics.couple-moments
+    name: Finding couple moments
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.moment-about-a-point-3d
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the moment of a couple in 2D
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+      - id: kp2
+        can_do: Find couple moment vectors in 3D
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+      - id: kp3
+        can_do: Add couple moments
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+      - id: kp4
+        can_do: Find equivalent couples
+        key_prerequisites: [engr.statics.moment-about-a-point-3d]
+  - id: engr.statics.equivalent-force-couple-systems
+    name: Replacing a force with a force-couple system
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.couple-moments
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Move a force to a new point with a couple
+        key_prerequisites: [engr.statics.couple-moments]
+      - id: kp2
+        can_do: Replace a force-couple with a single force
+        key_prerequisites: [engr.statics.couple-moments]
+      - id: kp3
+        can_do: Find equivalent systems at a support
+        key_prerequisites: [engr.statics.couple-moments]
+      - id: kp4
+        can_do: Compare two systems for equivalence
+        key_prerequisites: [engr.statics.couple-moments]
+  - id: engr.statics.reducing-force-systems
+    name: Reducing a force system to a single resultant
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.equivalent-force-couple-systems
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.resultant-of-concurrent-forces
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce a 2D system to a single force
+        key_prerequisites: [engr.statics.equivalent-force-couple-systems]
+      - id: kp2
+        can_do: Locate the resultant line of action
+        key_prerequisites: [engr.statics.equivalent-force-couple-systems, engr.statics.resultant-of-concurrent-forces]
+      - id: kp3
+        can_do: Reduce parallel 3D forces to a single force
+        key_prerequisites: [engr.statics.equivalent-force-couple-systems]
+      - id: kp4
+        can_do: Find where a resultant crosses a member
+        key_prerequisites: [engr.statics.resultant-of-concurrent-forces]
+  - id: engr.statics.wrench-resultants
+    name: Reducing three-dimensional systems to a wrench
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.reducing-force-systems
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce a 3D system to a wrench
+        key_prerequisites: [engr.statics.reducing-force-systems]
+      - id: kp2
+        can_do: Find the wrench axis
+        key_prerequisites: [engr.statics.reducing-force-systems]
+      - id: kp3
+        can_do: Find the pitch of a wrench
+        key_prerequisites: [engr.statics.reducing-force-systems]
+      - id: kp4
+        can_do: Tell when a single resultant exists
+        key_prerequisites: [engr.statics.reducing-force-systems]
+  - id: engr.statics.distributed-load-resultants
+    name: Finding resultants of distributed loads
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.reducing-force-systems
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resultants of uniform loads
+        key_prerequisites: [engr.statics.reducing-force-systems]
+      - id: kp2
+        can_do: Find resultants of triangular loads
+        key_prerequisites: [engr.statics.reducing-force-systems]
+      - id: kp3
+        can_do: Locate resultants of distributed loads
+        key_prerequisites: [engr.statics.reducing-force-systems, math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Combine distributed loads
+        key_prerequisites: [engr.statics.reducing-force-systems, math.calc1.definite-integral-definition]
+  - id: engr.statics.nonuniform-distributed-loads
+    name: Finding resultants of nonuniform loads by integration
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.distributed-load-resultants
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resultants of load functions by integration
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp2
+        can_do: Locate resultants by integration
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp3
+        can_do: Find resultants of parabolic loads
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp4
+        can_do: Find pressure loads on inclined surfaces
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+  - id: engr.statics.particle-equilibrium-2d
+    name: Solving particle equilibrium in two dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.resultant-of-concurrent-forces
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.statics-of-rigid-bodies
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw free-body diagrams of particles
+        key_prerequisites: [physics.mechanics.statics-of-rigid-bodies]
+      - id: kp2
+        can_do: Solve concurrent force equilibrium
+        key_prerequisites: [engr.statics.resultant-of-concurrent-forces, physics.mechanics.statics-of-rigid-bodies]
+      - id: kp3
+        can_do: Solve pulley and cable equilibrium
+        key_prerequisites: [engr.statics.resultant-of-concurrent-forces]
+      - id: kp4
+        can_do: Find the angle for equilibrium
+        key_prerequisites: [engr.statics.resultant-of-concurrent-forces]
+  - id: engr.statics.particle-equilibrium-3d
+    name: Solving particle equilibrium in three dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.particle-equilibrium-2d
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.statics.force-along-a-line
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve 3D particle equilibrium
+        key_prerequisites: [engr.statics.particle-equilibrium-2d, engr.statics.force-along-a-line]
+      - id: kp2
+        can_do: Find cable tensions in 3D
+        key_prerequisites: [engr.statics.force-along-a-line]
+      - id: kp3
+        can_do: Write equilibrium equations in vector form
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp4
+        can_do: Find unknown forces on a supported mass
+        key_prerequisites: [engr.statics.particle-equilibrium-2d, engr.statics.force-along-a-line]
+  - id: engr.statics.springs-and-cables-in-equilibrium
+    name: Using springs and cables in equilibrium problems
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.particle-equilibrium-2d
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use spring forces in equilibrium
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp2
+        can_do: Find stretched lengths in equilibrium
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp3
+        can_do: Use the tension rule for frictionless pulleys
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp4
+        can_do: Solve systems of springs and cables
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+  - id: engr.statics.support-reactions-2d
+    name: Modelling supports and their reactions in two dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.particle-equilibrium-2d
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.moment-about-a-point-2d
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify reactions of pins, rollers and fixed supports
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp2
+        can_do: Draw reactions on a free-body diagram
+        key_prerequisites: [engr.statics.particle-equilibrium-2d, engr.statics.moment-about-a-point-2d]
+      - id: kp3
+        can_do: Count unknowns from supports
+        key_prerequisites: [engr.statics.particle-equilibrium-2d]
+      - id: kp4
+        can_do: Choose a support to match a reaction
+        key_prerequisites: [engr.statics.moment-about-a-point-2d]
+  - id: engr.statics.free-body-diagrams-rigid
+    name: Drawing free-body diagrams of rigid bodies
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.support-reactions-2d
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Isolate a rigid body
+        key_prerequisites: [engr.statics.support-reactions-2d]
+      - id: kp2
+        can_do: Draw applied loads and reactions
+        key_prerequisites: [engr.statics.support-reactions-2d]
+      - id: kp3
+        can_do: Include weights and distributed loads
+        key_prerequisites: [engr.statics.support-reactions-2d]
+      - id: kp4
+        can_do: Check free-body diagrams for errors
+        key_prerequisites: [engr.statics.support-reactions-2d]
+  - id: engr.statics.rigid-equilibrium-2d
+    name: Solving rigid-body equilibrium in two dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.free-body-diagrams-rigid
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.distributed-load-resultants
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reactions of beams
+        key_prerequisites: [engr.statics.free-body-diagrams-rigid, engr.statics.distributed-load-resultants]
+      - id: kp2
+        can_do: Choose moment centres to simplify
+        key_prerequisites: [engr.statics.free-body-diagrams-rigid]
+      - id: kp3
+        can_do: Find reactions with distributed loads
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp4
+        can_do: Find reactions of bent members
+        key_prerequisites: [engr.statics.free-body-diagrams-rigid]
+  - id: engr.statics.two-and-three-force-members
+    name: Using two-force and three-force members
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify two-force members
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp2
+        can_do: Use the three-force concurrency rule
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp3
+        can_do: Find reactions with three-force members
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp4
+        can_do: Solve problems faster with two-force members
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+  - id: engr.statics.support-reactions-3d
+    name: Modelling supports in three dimensions
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.support-reactions-2d
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.statics.moment-about-an-axis
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.statics-of-rigid-bodies
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Identify 3D support reactions
+        key_prerequisites: [engr.statics.support-reactions-2d]
+      - id: kp2
+        can_do: Count unknowns for 3D supports
+        key_prerequisites: [engr.statics.support-reactions-2d]
+      - id: kp3
+        can_do: Choose moment axes in 3D
+        key_prerequisites: [engr.statics.moment-about-an-axis]
+      - id: kp4
+        can_do: Find 3D reactions of a supported plate
+        key_prerequisites: [engr.statics.support-reactions-2d, engr.statics.moment-about-an-axis, physics.mechanics.statics-of-rigid-bodies]
+  - id: engr.statics.determinacy-and-constraints
+    name: Checking determinacy and proper constraints
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell determinate from indeterminate bodies
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp2
+        can_do: Find improper constraints
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp3
+        can_do: Find partial constraints
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp4
+        can_do: Count equations and unknowns
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+  - id: engr.statics.plane-trusses
+    name: Recognizing simple plane trusses
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.two-and-three-force-members
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe truss assumptions
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+      - id: kp2
+        can_do: Identify simple trusses
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+      - id: kp3
+        can_do: Check truss stability by counting
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+      - id: kp4
+        can_do: Tell tension from compression
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+  - id: engr.statics.method-of-joints
+    name: Analyzing trusses by the method of joints
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.plane-trusses
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a truss by the method of joints
+        key_prerequisites: [engr.statics.plane-trusses]
+      - id: kp2
+        can_do: Choose an order of joints
+        key_prerequisites: [engr.statics.plane-trusses]
+      - id: kp3
+        can_do: Find forces in all members
+        key_prerequisites: [engr.statics.plane-trusses]
+      - id: kp4
+        can_do: Check results at a final joint
+        key_prerequisites: [engr.statics.plane-trusses]
+  - id: engr.statics.zero-force-members
+    name: Identifying zero-force members
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.method-of-joints
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify zero-force members by inspection
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp2
+        can_do: Find zero-force members under several loads
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp3
+        can_do: Explain why zero-force members exist
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp4
+        can_do: Simplify trusses before solving
+        key_prerequisites: [engr.statics.method-of-joints]
+  - id: engr.statics.method-of-sections
+    name: Analyzing trusses by the method of sections
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.method-of-joints
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Cut a truss to find selected forces
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp2
+        can_do: Choose a section and moment point
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp3
+        can_do: Find member forces in one equation
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp4
+        can_do: Solve K-trusses with two sections
+        key_prerequisites: [engr.statics.method-of-joints]
+  - id: engr.statics.space-trusses
+    name: Analyzing space trusses
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.method-of-joints
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.particle-equilibrium-3d
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write joint equilibrium in 3D
+        key_prerequisites: [engr.statics.method-of-joints, engr.statics.particle-equilibrium-3d]
+      - id: kp2
+        can_do: Find member forces in a tetrahedron truss
+        key_prerequisites: [engr.statics.method-of-joints]
+      - id: kp3
+        can_do: Use unit vectors along members
+        key_prerequisites: [engr.statics.particle-equilibrium-3d]
+      - id: kp4
+        can_do: Find zero-force members in space trusses
+        key_prerequisites: [engr.statics.method-of-joints]
+  - id: engr.statics.frames
+    name: Analyzing frames
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.two-and-three-force-members
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Disassemble frames into members
+        key_prerequisites: [engr.statics.two-and-three-force-members, engr.statics.rigid-equilibrium-2d]
+      - id: kp2
+        can_do: Find pin forces in frames
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+      - id: kp3
+        can_do: Use symmetry of pin forces
+        key_prerequisites: [engr.statics.two-and-three-force-members]
+      - id: kp4
+        can_do: Solve frames with pulleys
+        key_prerequisites: [engr.statics.two-and-three-force-members, engr.statics.rigid-equilibrium-2d]
+  - id: engr.statics.machines
+    name: Analyzing machines and mechanisms
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.frames
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find output force of pliers and clamps
+        key_prerequisites: [engr.statics.frames]
+      - id: kp2
+        can_do: Find forces in linkages
+        key_prerequisites: [engr.statics.frames]
+      - id: kp3
+        can_do: Find mechanical advantage of a machine
+        key_prerequisites: [engr.statics.frames]
+      - id: kp4
+        can_do: Solve multibody machines
+        key_prerequisites: [engr.statics.frames]
+  - id: engr.statics.truss-matrix-solution
+    name: Solving truss equations with matrices
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.method-of-joints
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write truss equations in matrix form
+        key_prerequisites: [engr.statics.method-of-joints, math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve truss systems with software
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp3
+        can_do: Check determinacy from the matrix
+        key_prerequisites: [engr.statics.method-of-joints, math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Find forces for several load cases
+        key_prerequisites: [engr.statics.method-of-joints]
+  - id: engr.statics.internal-forces-at-a-point
+    name: Finding internal forces at a section
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.method-of-sections
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find normal force, shear and moment at a section
+        key_prerequisites: [engr.statics.method-of-sections, engr.statics.rigid-equilibrium-2d]
+      - id: kp2
+        can_do: Use sign conventions for internal forces
+        key_prerequisites: [engr.statics.method-of-sections]
+      - id: kp3
+        can_do: Find internal forces in frames
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp4
+        can_do: Find internal forces in curved members
+        key_prerequisites: [engr.statics.method-of-sections, engr.statics.rigid-equilibrium-2d]
+  - id: engr.statics.shear-and-moment-equations
+    name: Writing shear and moment equations for beams
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.internal-forces-at-a-point
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.statics.distributed-load-resultants
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write shear and moment equations for one region
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+      - id: kp2
+        can_do: Write equations for several regions
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+      - id: kp3
+        can_do: Write equations with distributed loads
+        key_prerequisites: [engr.statics.internal-forces-at-a-point, engr.statics.distributed-load-resultants]
+      - id: kp4
+        can_do: Find maximum moment from equations
+        key_prerequisites: [engr.statics.internal-forces-at-a-point]
+  - id: engr.statics.load-shear-moment-relations
+    name: Using load, shear and moment relations
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.shear-and-moment-equations
+        encompassing: 0.65
+        confidence: high
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate load to slope of shear
+        key_prerequisites: [engr.statics.shear-and-moment-equations, math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Relate shear to slope of moment
+        key_prerequisites: [engr.statics.shear-and-moment-equations, math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find moment changes from shear areas
+        key_prerequisites: [engr.statics.shear-and-moment-equations]
+      - id: kp4
+        can_do: Handle concentrated forces and couples
+        key_prerequisites: [engr.statics.shear-and-moment-equations]
+  - id: engr.statics.shear-moment-diagrams
+    name: Drawing shear and moment diagrams
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.load-shear-moment-relations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw shear diagrams by summation
+        key_prerequisites: [engr.statics.load-shear-moment-relations]
+      - id: kp2
+        can_do: Draw moment diagrams by area
+        key_prerequisites: [engr.statics.load-shear-moment-relations]
+      - id: kp3
+        can_do: Find locations of maximum moment
+        key_prerequisites: [engr.statics.load-shear-moment-relations]
+      - id: kp4
+        can_do: Draw diagrams for overhanging beams
+        key_prerequisites: [engr.statics.load-shear-moment-relations]
+  - id: engr.statics.cables-with-point-loads
+    name: Analyzing cables under point loads
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tensions in cables with point loads
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp2
+        can_do: Find sag at load points
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp3
+        can_do: Find cable geometry from a given sag
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp4
+        can_do: Find maximum tension
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+  - id: engr.statics.parabolic-cables
+    name: Analyzing cables under uniform horizontal loads
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.cables-with-point-loads
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.nonuniform-distributed-loads
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the shape of a cable with uniform horizontal load
+        key_prerequisites: [engr.statics.cables-with-point-loads, engr.statics.nonuniform-distributed-loads]
+      - id: kp2
+        can_do: Find maximum tension in a parabolic cable
+        key_prerequisites: [engr.statics.cables-with-point-loads]
+      - id: kp3
+        can_do: Find cable length
+        key_prerequisites: [engr.statics.cables-with-point-loads, engr.statics.nonuniform-distributed-loads]
+      - id: kp4
+        can_do: Solve suspension bridge cables
+        key_prerequisites: [engr.statics.nonuniform-distributed-loads]
+  - id: engr.statics.catenary-cables
+    name: Analyzing cables under their own weight
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.parabolic-cables
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc2.catenary
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the catenary equation
+        key_prerequisites: [engr.statics.parabolic-cables, math.calc2.catenary]
+      - id: kp2
+        can_do: Find tension in a catenary
+        key_prerequisites: [engr.statics.parabolic-cables]
+      - id: kp3
+        can_do: Find sag and length of a catenary
+        key_prerequisites: [math.calc2.catenary]
+      - id: kp4
+        can_do: Compare catenary and parabolic models
+        key_prerequisites: [engr.statics.parabolic-cables]
+  - id: engr.statics.dry-friction
+    name: Solving equilibrium with dry friction
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.rigid-equilibrium-2d
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.tipping-and-sliding
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use static and kinetic friction coefficients
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d, physics.mechanics.tipping-and-sliding]
+      - id: kp2
+        can_do: Check whether a body slips
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d]
+      - id: kp3
+        can_do: Find force needed to start motion
+        key_prerequisites: [engr.statics.rigid-equilibrium-2d, physics.mechanics.tipping-and-sliding]
+      - id: kp4
+        can_do: Find the angle of repose
+        key_prerequisites: [physics.mechanics.tipping-and-sliding]
+  - id: engr.statics.impending-motion-cases
+    name: Deciding between tipping and slipping
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.dry-friction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check tipping against slipping
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp2
+        can_do: Solve problems with several contact surfaces
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp3
+        can_do: Find which surface slips first
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp4
+        can_do: Solve ladder problems
+        key_prerequisites: [engr.statics.dry-friction]
+  - id: engr.statics.wedges
+    name: Analyzing wedges
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.dry-friction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force to insert a wedge
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp2
+        can_do: Check whether a wedge is self-locking
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp3
+        can_do: Solve wedges with several contacts
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp4
+        can_do: Find force to remove a wedge
+        key_prerequisites: [engr.statics.dry-friction]
+  - id: engr.statics.square-threaded-screws
+    name: Analyzing square-threaded screws
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.wedges
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find torque to raise a load
+        key_prerequisites: [engr.statics.wedges]
+      - id: kp2
+        can_do: Find torque to lower a load
+        key_prerequisites: [engr.statics.wedges]
+      - id: kp3
+        can_do: Check whether a screw is self-locking
+        key_prerequisites: [engr.statics.wedges]
+      - id: kp4
+        can_do: Find efficiency of a screw
+        key_prerequisites: [engr.statics.wedges]
+  - id: engr.statics.belt-friction
+    name: Analyzing flat belt friction
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.dry-friction
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the belt friction equation
+        key_prerequisites: [engr.statics.dry-friction, math.calc2.separable-equations]
+      - id: kp2
+        can_do: Find tension ratio on a drum
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp3
+        can_do: Find maximum torque of a belt drive
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp4
+        can_do: Solve rope wrapped around posts
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: engr.statics.bearing-and-disk-friction
+    name: Finding friction torque in bearings and disks
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.dry-friction
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.nonuniform-distributed-loads
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find friction torque in journal bearings
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp2
+        can_do: Find friction torque in collar bearings
+        key_prerequisites: [engr.statics.dry-friction, engr.statics.nonuniform-distributed-loads]
+      - id: kp3
+        can_do: Find friction torque in disk clutches
+        key_prerequisites: [engr.statics.nonuniform-distributed-loads]
+      - id: kp4
+        can_do: Compare new and worn bearing assumptions
+        key_prerequisites: [engr.statics.dry-friction, engr.statics.nonuniform-distributed-loads]
+  - id: engr.statics.rolling-resistance
+    name: Estimating rolling resistance
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.dry-friction
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find rolling resistance force
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp2
+        can_do: Find the coefficient of rolling resistance
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp3
+        can_do: Compare rolling and sliding resistance
+        key_prerequisites: [engr.statics.dry-friction]
+      - id: kp4
+        can_do: Find force to roll a wheel over a bump
+        key_prerequisites: [engr.statics.dry-friction]
+  - id: engr.statics.centroids-of-composite-areas
+    name: Finding centroids of composite areas
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.distributed-load-resultants
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.center-of-gravity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find centroids of composite areas
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp2
+        can_do: Include holes in composite centroids
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp3
+        can_do: Use tables of standard shapes
+        key_prerequisites: [engr.statics.distributed-load-resultants, physics.mechanics.center-of-gravity]
+      - id: kp4
+        can_do: Find centres of gravity of composite bodies
+        key_prerequisites: [physics.mechanics.center-of-gravity]
+  - id: engr.statics.centroids-by-integration
+    name: Finding centroids of areas by integration
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.centroids-of-composite-areas
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.centroid-between-curves
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose differential elements for centroids
+        key_prerequisites: [engr.statics.centroids-of-composite-areas, math.calc2.centroid-between-curves]
+      - id: kp2
+        can_do: Find centroids of areas by integration
+        key_prerequisites: [math.calc2.centroid-between-curves]
+      - id: kp3
+        can_do: Find centroids between curves
+        key_prerequisites: [math.calc2.centroid-between-curves]
+      - id: kp4
+        can_do: Find centroids in polar coordinates
+        key_prerequisites: [engr.statics.centroids-of-composite-areas]
+  - id: engr.statics.centroids-of-lines-and-volumes
+    name: Finding centroids of lines and volumes
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.centroids-by-integration
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find centroids of lines by integration
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp2
+        can_do: Find centroids of volumes by integration
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp3
+        can_do: Find centroids of composite lines and volumes
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp4
+        can_do: Find centres of mass with varying density
+        key_prerequisites: [engr.statics.centroids-by-integration]
+  - id: engr.statics.pappus-guldinus
+    name: Using the theorems of Pappus and Guldinus
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.centroids-of-lines-and-volumes
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.pappus-theorem
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find surface areas of revolution
+        key_prerequisites: [engr.statics.centroids-of-lines-and-volumes, math.calc2.pappus-theorem]
+      - id: kp2
+        can_do: Find volumes of revolution
+        key_prerequisites: [math.calc2.pappus-theorem]
+      - id: kp3
+        can_do: Find a centroid from a known volume
+        key_prerequisites: [engr.statics.centroids-of-lines-and-volumes]
+      - id: kp4
+        can_do: Solve tank and pulley problems
+        key_prerequisites: [engr.statics.centroids-of-lines-and-volumes, math.calc2.pappus-theorem]
+  - id: engr.statics.fluid-pressure-resultants
+    name: Finding resultant forces of fluid pressure on surfaces
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.nonuniform-distributed-loads
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.statics.centroids-of-composite-areas
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resultant pressure on a rectangular plate
+        key_prerequisites: [engr.statics.nonuniform-distributed-loads]
+      - id: kp2
+        can_do: Locate the centre of pressure
+        key_prerequisites: [engr.statics.nonuniform-distributed-loads, engr.statics.centroids-of-composite-areas]
+      - id: kp3
+        can_do: Find pressure on inclined plates
+        key_prerequisites: [engr.statics.nonuniform-distributed-loads]
+      - id: kp4
+        can_do: Find reactions of a dam or gate
+        key_prerequisites: [engr.statics.centroids-of-composite-areas]
+  - id: engr.statics.area-moments-by-integration
+    name: Finding area moments of inertia by integration
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.centroids-by-integration
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define area moments of inertia
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp2
+        can_do: Find area moments by integration
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp3
+        can_do: Find moments of areas between curves
+        key_prerequisites: [engr.statics.centroids-by-integration]
+      - id: kp4
+        can_do: Find moments of circular areas
+        key_prerequisites: [engr.statics.centroids-by-integration]
+  - id: engr.statics.parallel-axis-for-areas
+    name: Using the parallel-axis theorem for areas
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.area-moments-by-integration
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the parallel-axis theorem for areas
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp2
+        can_do: Find moments about centroidal axes
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp3
+        can_do: Move moments between parallel axes
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp4
+        can_do: Avoid common errors with the theorem
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+  - id: engr.statics.composite-area-moments
+    name: Finding moments of inertia of composite areas
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.parallel-axis-for-areas
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find moments of composite areas
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp2
+        can_do: Include holes in composite moments
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp3
+        can_do: Find moments of beam cross sections
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp4
+        can_do: Use tables of rolled shapes
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+  - id: engr.statics.polar-moment-of-area
+    name: Finding polar moments of area
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.area-moments-by-integration
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define polar moment of area
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp2
+        can_do: Find polar moments of circles and tubes
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp3
+        can_do: Use the perpendicular-axis relation
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+      - id: kp4
+        can_do: Find polar moments of composite areas
+        key_prerequisites: [engr.statics.area-moments-by-integration]
+  - id: engr.statics.product-of-inertia
+    name: Finding products of inertia of areas
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.parallel-axis-for-areas
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define product of inertia
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp2
+        can_do: Find products of inertia by integration
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp3
+        can_do: Use parallel axes for products
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+      - id: kp4
+        can_do: Use symmetry to simplify products
+        key_prerequisites: [engr.statics.parallel-axis-for-areas]
+  - id: engr.statics.principal-axes-of-areas
+    name: Finding principal axes and moments of areas
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.product-of-inertia
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find moments about rotated axes
+        key_prerequisites: [engr.statics.product-of-inertia]
+      - id: kp2
+        can_do: Find principal axes of an area
+        key_prerequisites: [engr.statics.product-of-inertia]
+      - id: kp3
+        can_do: Find principal moments of inertia
+        key_prerequisites: [engr.statics.product-of-inertia]
+      - id: kp4
+        can_do: Find principal axes of an angle section
+        key_prerequisites: [engr.statics.product-of-inertia]
+  - id: engr.statics.mohrs-circle-for-inertia
+    name: Using Mohr's circle for moments of inertia
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.principal-axes-of-areas
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw Mohr's circle for an area
+        key_prerequisites: [engr.statics.principal-axes-of-areas]
+      - id: kp2
+        can_do: Find principal moments from the circle
+        key_prerequisites: [engr.statics.principal-axes-of-areas]
+      - id: kp3
+        can_do: Find moments about rotated axes from the circle
+        key_prerequisites: [engr.statics.principal-axes-of-areas]
+      - id: kp4
+        can_do: Compare circle and formula results
+        key_prerequisites: [engr.statics.principal-axes-of-areas]
+  - id: engr.statics.radius-of-gyration
+    name: Finding radius of gyration
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.composite-area-moments
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find radius of gyration of an area
+        key_prerequisites: [engr.statics.composite-area-moments]
+      - id: kp2
+        can_do: Find moments from radius of gyration
+        key_prerequisites: [engr.statics.composite-area-moments]
+      - id: kp3
+        can_do: Compare radii of different sections
+        key_prerequisites: [engr.statics.composite-area-moments]
+      - id: kp4
+        can_do: Use radius of gyration for column shapes
+        key_prerequisites: [engr.statics.composite-area-moments]
+  - id: engr.statics.virtual-displacements
+    name: Describing virtual displacements
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.machines
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.differentials
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe virtual displacements
+        key_prerequisites: [engr.statics.machines, math.calc1.differentials]
+      - id: kp2
+        can_do: Relate displacements with geometry
+        key_prerequisites: [math.calc1.differentials]
+      - id: kp3
+        can_do: Find virtual work of forces and couples
+        key_prerequisites: [engr.statics.machines]
+      - id: kp4
+        can_do: Choose a coordinate for a mechanism
+        key_prerequisites: [engr.statics.machines]
+  - id: engr.statics.virtual-work-equilibrium
+    name: Solving equilibrium by virtual work
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.virtual-displacements
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium of linkages by virtual work
+        key_prerequisites: [engr.statics.virtual-displacements]
+      - id: kp2
+        can_do: Find force relations in mechanisms
+        key_prerequisites: [engr.statics.virtual-displacements]
+      - id: kp3
+        can_do: Include spring forces in virtual work
+        key_prerequisites: [engr.statics.virtual-displacements]
+      - id: kp4
+        can_do: Solve systems with several bodies
+        key_prerequisites: [engr.statics.virtual-displacements]
+  - id: engr.statics.potential-energy-stability
+    name: Judging stability of equilibrium with potential energy
+    subject: engr
+    course: engr.statics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.statics.virtual-work-equilibrium
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.equilibrium-from-potential
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write potential energy as a function of position
+        key_prerequisites: [engr.statics.virtual-work-equilibrium, physics.mechanics.equilibrium-from-potential]
+      - id: kp2
+        can_do: Find equilibrium positions from potential energy
+        key_prerequisites: [engr.statics.virtual-work-equilibrium]
+      - id: kp3
+        can_do: Judge stability from the second derivative
+        key_prerequisites: [physics.mechanics.equilibrium-from-potential]
+      - id: kp4
+        can_do: Find critical spring stiffness for stability
+        key_prerequisites: [engr.statics.virtual-work-equilibrium, physics.mechanics.equilibrium-from-potential]
