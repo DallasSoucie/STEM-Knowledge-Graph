@@ -1,0 +1,857 @@
+course: engr.dsp
+topics:
+  - id: engr.dsp.dft-definition
+    name: Computing the discrete Fourier transform
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.dtft
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute the DFT of short sequences
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp2
+        can_do: Compute the inverse DFT
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp3
+        can_do: Relate DFT to sampled DTFT
+        key_prerequisites: [engr.signals.dtft]
+      - id: kp4
+        can_do: Write the DFT as a matrix product
+        key_prerequisites: [engr.signals.dtft]
+  - id: engr.dsp.dft-properties
+    name: Using DFT properties
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.dft-definition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linearity and circular shift
+        key_prerequisites: [engr.dsp.dft-definition]
+      - id: kp2
+        can_do: Use symmetry properties of the DFT
+        key_prerequisites: [engr.dsp.dft-definition]
+      - id: kp3
+        can_do: Use Parseval's relation for the DFT
+        key_prerequisites: [engr.dsp.dft-definition]
+      - id: kp4
+        can_do: Find DFTs of related sequences
+        key_prerequisites: [engr.dsp.dft-definition]
+  - id: engr.dsp.circular-convolution
+    name: Computing circular convolution
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.dft-properties
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.signals.discrete-convolution
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compute circular convolution
+        key_prerequisites: [engr.dsp.dft-properties, engr.signals.discrete-convolution]
+      - id: kp2
+        can_do: Relate circular convolution to DFT products
+        key_prerequisites: [engr.dsp.dft-properties]
+      - id: kp3
+        can_do: Compare circular and linear convolution
+        key_prerequisites: [engr.signals.discrete-convolution]
+      - id: kp4
+        can_do: Find circular convolution with matrices
+        key_prerequisites: [engr.dsp.dft-properties]
+  - id: engr.dsp.linear-convolution-with-dft
+    name: Computing linear convolution with the DFT
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.circular-convolution
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose DFT length for linear convolution
+        key_prerequisites: [engr.dsp.circular-convolution]
+      - id: kp2
+        can_do: Zero-pad sequences
+        key_prerequisites: [engr.dsp.circular-convolution]
+      - id: kp3
+        can_do: Compute linear convolution with DFTs
+        key_prerequisites: [engr.dsp.circular-convolution]
+      - id: kp4
+        can_do: Find cost of DFT convolution
+        key_prerequisites: [engr.dsp.circular-convolution]
+  - id: engr.dsp.overlap-add-save
+    name: Filtering long signals by overlap-add and overlap-save
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.linear-convolution-with-dft
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Filter long signals by overlap-add
+        key_prerequisites: [engr.dsp.linear-convolution-with-dft]
+      - id: kp2
+        can_do: Filter long signals by overlap-save
+        key_prerequisites: [engr.dsp.linear-convolution-with-dft]
+      - id: kp3
+        can_do: Choose block sizes
+        key_prerequisites: [engr.dsp.linear-convolution-with-dft]
+      - id: kp4
+        can_do: Compare overlap methods
+        key_prerequisites: [engr.dsp.linear-convolution-with-dft]
+  - id: engr.dsp.radix-2-fft
+    name: Computing the radix-2 FFT
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.dft-properties
+        encompassing: 0.65
+        confidence: high
+      - topic: math.numerical.fft-intro
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive decimation-in-time FFT
+        key_prerequisites: [engr.dsp.dft-properties, math.numerical.fft-intro]
+      - id: kp2
+        can_do: Draw butterfly diagrams
+        key_prerequisites: [engr.dsp.dft-properties]
+      - id: kp3
+        can_do: Use bit-reversed order
+        key_prerequisites: [engr.dsp.dft-properties]
+      - id: kp4
+        can_do: Derive decimation-in-frequency FFT
+        key_prerequisites: [math.numerical.fft-intro]
+  - id: engr.dsp.fft-complexity
+    name: Comparing FFT and direct DFT cost
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.radix-2-fft
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count operations of the FFT
+        key_prerequisites: [engr.dsp.radix-2-fft]
+      - id: kp2
+        can_do: Compare FFT and direct DFT cost
+        key_prerequisites: [engr.dsp.radix-2-fft]
+      - id: kp3
+        can_do: Find FFT speedup for large lengths
+        key_prerequisites: [engr.dsp.radix-2-fft]
+      - id: kp4
+        can_do: Choose FFT lengths
+        key_prerequisites: [engr.dsp.radix-2-fft]
+  - id: engr.dsp.windowing-and-leakage
+    name: Explaining spectral leakage and windows
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.dft-properties
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.signals.ct-fourier-properties
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain spectral leakage
+        key_prerequisites: [engr.dsp.dft-properties, engr.signals.ct-fourier-properties]
+      - id: kp2
+        can_do: Compare rectangular, Hann and Hamming windows
+        key_prerequisites: [engr.dsp.dft-properties]
+      - id: kp3
+        can_do: Find window main-lobe width
+        key_prerequisites: [engr.signals.ct-fourier-properties]
+      - id: kp4
+        can_do: Choose windows for analysis
+        key_prerequisites: [engr.dsp.dft-properties]
+  - id: engr.dsp.frequency-resolution
+    name: Choosing record length for frequency resolution
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.windowing-and-leakage
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find frequency resolution of DFTs
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp2
+        can_do: Choose record length
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp3
+        can_do: Resolve two close tones
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp4
+        can_do: Relate resolution to windows
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+  - id: engr.dsp.zero-padding
+    name: Interpolating spectra with zero padding
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.frequency-resolution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpolate spectra with zero padding
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp2
+        can_do: Explain zero padding does not add resolution
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp3
+        can_do: Find peak frequencies with zero padding
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp4
+        can_do: Choose padding lengths
+        key_prerequisites: [engr.dsp.frequency-resolution]
+  - id: engr.dsp.spectrograms
+    name: Analyzing nonstationary signals with spectrograms
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.frequency-resolution
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute short-time Fourier transforms
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp2
+        can_do: Read spectrograms
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp3
+        can_do: Choose window length for spectrograms
+        key_prerequisites: [engr.dsp.frequency-resolution]
+      - id: kp4
+        can_do: Trade time and frequency resolution
+        key_prerequisites: [engr.dsp.frequency-resolution]
+  - id: engr.dsp.power-spectrum-estimation
+    name: Estimating power spectra by periodogram averaging
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.windowing-and-leakage
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute periodograms
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp2
+        can_do: Average periodograms with Welch's method
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp3
+        can_do: Find variance of spectral estimates
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp4
+        can_do: Choose estimation parameters
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+  - id: engr.dsp.linear-phase-filters
+    name: Analyzing linear-phase FIR filters
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.system-functions-z
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.signals.discrete-frequency-response
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify linear-phase FIR types
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp2
+        can_do: Find symmetry conditions
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp3
+        can_do: Find zero locations of linear-phase filters
+        key_prerequisites: [engr.signals.system-functions-z, engr.signals.discrete-frequency-response]
+      - id: kp4
+        can_do: Find frequency response of linear-phase filters
+        key_prerequisites: [engr.signals.discrete-frequency-response]
+  - id: engr.dsp.group-delay
+    name: Finding phase and group delay
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.linear-phase-filters
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find phase delay
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp2
+        can_do: Find group delay
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp3
+        can_do: Find delay of linear-phase filters
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp4
+        can_do: Explain phase distortion
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+  - id: engr.dsp.direct-form-structures
+    name: Implementing direct-form filter structures
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.system-functions-z
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement direct form I
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp2
+        can_do: Implement direct form II
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp3
+        can_do: Implement transposed structures
+        key_prerequisites: [engr.signals.system-functions-z]
+      - id: kp4
+        can_do: Draw filter flow graphs
+        key_prerequisites: [engr.signals.system-functions-z]
+  - id: engr.dsp.cascade-parallel-structures
+    name: Implementing cascade and parallel structures
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.direct-form-structures
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Implement cascade structures
+        key_prerequisites: [engr.dsp.direct-form-structures]
+      - id: kp2
+        can_do: Implement parallel structures
+        key_prerequisites: [engr.dsp.direct-form-structures]
+      - id: kp3
+        can_do: Factor system functions into sections
+        key_prerequisites: [engr.dsp.direct-form-structures]
+      - id: kp4
+        can_do: Compare structure sensitivity
+        key_prerequisites: [engr.dsp.direct-form-structures]
+  - id: engr.dsp.allpass-and-minimum-phase
+    name: Analyzing allpass and minimum-phase systems
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.group-delay
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.signals.pole-zero-frequency-response
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design allpass filters
+        key_prerequisites: [engr.dsp.group-delay]
+      - id: kp2
+        can_do: Identify minimum-phase systems
+        key_prerequisites: [engr.signals.pole-zero-frequency-response]
+      - id: kp3
+        can_do: Decompose systems into minimum phase and allpass
+        key_prerequisites: [engr.dsp.group-delay, engr.signals.pole-zero-frequency-response]
+      - id: kp4
+        can_do: Find inverse of minimum-phase systems
+        key_prerequisites: [engr.signals.pole-zero-frequency-response]
+  - id: engr.dsp.filter-specifications
+    name: Writing digital filter specifications
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.linear-phase-filters
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write passband and stopband specifications
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp2
+        can_do: Convert specifications to decibels
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp3
+        can_do: Find transition width
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+      - id: kp4
+        can_do: Convert analog specifications to digital
+        key_prerequisites: [engr.dsp.linear-phase-filters]
+  - id: engr.dsp.window-method-fir
+    name: Designing FIR filters by windowing
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.filter-specifications
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.dsp.windowing-and-leakage
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design lowpass FIR filters by windowing
+        key_prerequisites: [engr.dsp.filter-specifications, engr.dsp.windowing-and-leakage]
+      - id: kp2
+        can_do: Find filter length for specifications
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+      - id: kp3
+        can_do: Design highpass and bandpass FIR filters
+        key_prerequisites: [engr.dsp.filter-specifications]
+      - id: kp4
+        can_do: Find ripple from window choice
+        key_prerequisites: [engr.dsp.windowing-and-leakage]
+  - id: engr.dsp.kaiser-window-design
+    name: Designing FIR filters with Kaiser windows
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.window-method-fir
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Kaiser window parameters
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp2
+        can_do: Design FIR filters with Kaiser windows
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp3
+        can_do: Find filter length for Kaiser designs
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp4
+        can_do: Compare Kaiser with fixed windows
+        key_prerequisites: [engr.dsp.window-method-fir]
+  - id: engr.dsp.frequency-sampling-fir
+    name: Designing FIR filters by frequency sampling
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.window-method-fir
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.dsp.dft-definition
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Design FIR filters by frequency sampling
+        key_prerequisites: [engr.dsp.window-method-fir, engr.dsp.dft-definition]
+      - id: kp2
+        can_do: Choose transition samples
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp3
+        can_do: Find frequency response between samples
+        key_prerequisites: [engr.dsp.dft-definition]
+      - id: kp4
+        can_do: Compare with window designs
+        key_prerequisites: [engr.dsp.window-method-fir]
+  - id: engr.dsp.optimal-equiripple-fir
+    name: Describing optimal equiripple FIR design
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.window-method-fir
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the Parks-McClellan method
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp2
+        can_do: Find equiripple filter order
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp3
+        can_do: Design equiripple filters with software
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp4
+        can_do: Compare optimal and window designs
+        key_prerequisites: [engr.dsp.window-method-fir]
+  - id: engr.dsp.analog-prototypes
+    name: Designing Butterworth and Chebyshev analog prototypes
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.filter-specifications
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.circuits.passive-filters
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design Butterworth prototypes
+        key_prerequisites: [engr.dsp.filter-specifications]
+      - id: kp2
+        can_do: Design Chebyshev prototypes
+        key_prerequisites: [engr.dsp.filter-specifications]
+      - id: kp3
+        can_do: Find prototype order
+        key_prerequisites: [engr.dsp.filter-specifications, engr.circuits.passive-filters]
+      - id: kp4
+        can_do: Compare prototype responses
+        key_prerequisites: [engr.circuits.passive-filters]
+  - id: engr.dsp.impulse-invariance
+    name: Designing IIR filters by impulse invariance
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.analog-prototypes
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.signals.system-functions-laplace
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design IIR filters by impulse invariance
+        key_prerequisites: [engr.dsp.analog-prototypes, engr.signals.system-functions-laplace]
+      - id: kp2
+        can_do: Find aliasing in impulse invariance
+        key_prerequisites: [engr.dsp.analog-prototypes]
+      - id: kp3
+        can_do: Map poles by impulse invariance
+        key_prerequisites: [engr.signals.system-functions-laplace]
+      - id: kp4
+        can_do: Choose sampling for impulse invariance
+        key_prerequisites: [engr.dsp.analog-prototypes]
+  - id: engr.dsp.bilinear-transform
+    name: Designing IIR filters by the bilinear transform
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.analog-prototypes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the bilinear transform
+        key_prerequisites: [engr.dsp.analog-prototypes]
+      - id: kp2
+        can_do: Prewarp critical frequencies
+        key_prerequisites: [engr.dsp.analog-prototypes]
+      - id: kp3
+        can_do: Design IIR filters by bilinear transform
+        key_prerequisites: [engr.dsp.analog-prototypes]
+      - id: kp4
+        can_do: Map s-plane to z-plane
+        key_prerequisites: [engr.dsp.analog-prototypes]
+  - id: engr.dsp.frequency-transformations
+    name: Transforming lowpass designs to other bands
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.bilinear-transform
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform lowpass to highpass
+        key_prerequisites: [engr.dsp.bilinear-transform]
+      - id: kp2
+        can_do: Transform lowpass to bandpass and bandstop
+        key_prerequisites: [engr.dsp.bilinear-transform]
+      - id: kp3
+        can_do: Apply digital frequency transformations
+        key_prerequisites: [engr.dsp.bilinear-transform]
+      - id: kp4
+        can_do: Design filters with transformations
+        key_prerequisites: [engr.dsp.bilinear-transform]
+  - id: engr.dsp.fir-vs-iir
+    name: Choosing between FIR and IIR filters
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.bilinear-transform
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.dsp.kaiser-window-design
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare FIR and IIR order
+        key_prerequisites: [engr.dsp.bilinear-transform, engr.dsp.kaiser-window-design]
+      - id: kp2
+        can_do: Compare phase response
+        key_prerequisites: [engr.dsp.bilinear-transform]
+      - id: kp3
+        can_do: Compare stability and implementation
+        key_prerequisites: [engr.dsp.kaiser-window-design]
+      - id: kp4
+        can_do: Choose a filter type
+        key_prerequisites: [engr.dsp.bilinear-transform, engr.dsp.kaiser-window-design]
+  - id: engr.dsp.downsampling
+    name: Analyzing downsampling in frequency
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.signals.aliasing
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.signals.dtft-properties
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spectra after downsampling
+        key_prerequisites: [engr.signals.aliasing, engr.signals.dtft-properties]
+      - id: kp2
+        can_do: Explain aliasing in downsampling
+        key_prerequisites: [engr.signals.aliasing]
+      - id: kp3
+        can_do: Design decimation filters
+        key_prerequisites: [engr.signals.dtft-properties]
+      - id: kp4
+        can_do: Find decimation rates
+        key_prerequisites: [engr.signals.aliasing]
+  - id: engr.dsp.upsampling
+    name: Analyzing upsampling and interpolation
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.downsampling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spectra after upsampling
+        key_prerequisites: [engr.dsp.downsampling]
+      - id: kp2
+        can_do: Remove images with interpolation filters
+        key_prerequisites: [engr.dsp.downsampling]
+      - id: kp3
+        can_do: Design interpolators
+        key_prerequisites: [engr.dsp.downsampling]
+      - id: kp4
+        can_do: Find interpolation filter gain
+        key_prerequisites: [engr.dsp.downsampling]
+  - id: engr.dsp.rational-rate-conversion
+    name: Converting sample rates by rational factors
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.upsampling
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.dsp.window-method-fir
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert rates by rational factors
+        key_prerequisites: [engr.dsp.upsampling]
+      - id: kp2
+        can_do: Combine interpolation and decimation filters
+        key_prerequisites: [engr.dsp.upsampling, engr.dsp.window-method-fir]
+      - id: kp3
+        can_do: Design rate converters
+        key_prerequisites: [engr.dsp.window-method-fir]
+      - id: kp4
+        can_do: Find efficient orderings
+        key_prerequisites: [engr.dsp.upsampling]
+  - id: engr.dsp.polyphase-structures
+    name: Implementing polyphase filters
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.rational-rate-conversion
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive polyphase decompositions
+        key_prerequisites: [engr.dsp.rational-rate-conversion]
+      - id: kp2
+        can_do: Implement polyphase decimators
+        key_prerequisites: [engr.dsp.rational-rate-conversion]
+      - id: kp3
+        can_do: Implement polyphase interpolators
+        key_prerequisites: [engr.dsp.rational-rate-conversion]
+      - id: kp4
+        can_do: Find savings of polyphase structures
+        key_prerequisites: [engr.dsp.rational-rate-conversion]
+  - id: engr.dsp.finite-word-length-effects
+    name: Analyzing coefficient quantization and roundoff noise
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.cascade-parallel-structures
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.signals.quantization
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coefficient quantization effects
+        key_prerequisites: [engr.dsp.cascade-parallel-structures]
+      - id: kp2
+        can_do: Find roundoff noise
+        key_prerequisites: [engr.signals.quantization]
+      - id: kp3
+        can_do: Find overflow and scaling
+        key_prerequisites: [engr.dsp.cascade-parallel-structures, engr.signals.quantization]
+      - id: kp4
+        can_do: Find limit cycles
+        key_prerequisites: [engr.dsp.cascade-parallel-structures]
+  - id: engr.dsp.fixed-point-filters
+    name: Implementing filters in fixed point
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.finite-word-length-effects
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.digital-logic.fixed-point-numbers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Scale filters for fixed point
+        key_prerequisites: [engr.dsp.finite-word-length-effects, engr.digital-logic.fixed-point-numbers]
+      - id: kp2
+        can_do: Choose word lengths
+        key_prerequisites: [engr.digital-logic.fixed-point-numbers]
+      - id: kp3
+        can_do: Implement filters in fixed point
+        key_prerequisites: [engr.dsp.finite-word-length-effects, engr.digital-logic.fixed-point-numbers]
+      - id: kp4
+        can_do: Test fixed-point filters
+        key_prerequisites: [engr.dsp.finite-word-length-effects]
+  - id: engr.dsp.oversampling-converters
+    name: Explaining oversampling and noise shaping
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.downsampling
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dsp.finite-word-length-effects
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain oversampling benefits
+        key_prerequisites: [engr.dsp.downsampling]
+      - id: kp2
+        can_do: Explain noise shaping
+        key_prerequisites: [engr.dsp.finite-word-length-effects]
+      - id: kp3
+        can_do: Describe sigma-delta converters
+        key_prerequisites: [engr.dsp.downsampling, engr.dsp.finite-word-length-effects]
+      - id: kp4
+        can_do: Find SNR gain from oversampling
+        key_prerequisites: [engr.dsp.downsampling]
+  - id: engr.dsp.adaptive-filters
+    name: Designing LMS adaptive filters
+    subject: engr
+    course: engr.dsp
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.dsp.direct-form-structures
+        encompassing: 0.35
+        confidence: high
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe adaptive filtering
+        key_prerequisites: [engr.dsp.direct-form-structures]
+      - id: kp2
+        can_do: Use the LMS algorithm
+        key_prerequisites: [engr.dsp.direct-form-structures, math.linalg.least-squares-normal]
+      - id: kp3
+        can_do: Choose step size
+        key_prerequisites: [engr.dsp.direct-form-structures]
+      - id: kp4
+        can_do: Use adaptive noise cancellation
+        key_prerequisites: [math.linalg.least-squares-normal]
