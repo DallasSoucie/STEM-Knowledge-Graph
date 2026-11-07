@@ -1,0 +1,1407 @@
+course: engr.fluids
+topics:
+  - id: engr.fluids.fluid-properties
+    name: Using density, viscosity and other fluid properties
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.viscosity
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use density, specific weight and specific gravity
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+      - id: kp2
+        can_do: Use dynamic and kinematic viscosity
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+      - id: kp3
+        can_do: Find viscosity changes with temperature
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+      - id: kp4
+        can_do: Use bulk modulus and vapor pressure
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+  - id: engr.fluids.newtonian-shear-stress
+    name: Finding shear stress in Newtonian fluids
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.fluid-properties
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shear stress from velocity profiles
+        key_prerequisites: [engr.fluids.fluid-properties]
+      - id: kp2
+        can_do: Find torque on rotating viscometers
+        key_prerequisites: [engr.fluids.fluid-properties]
+      - id: kp3
+        can_do: Find force on plates sliding on oil films
+        key_prerequisites: [engr.fluids.fluid-properties]
+      - id: kp4
+        can_do: Find power lost to viscous friction
+        key_prerequisites: [engr.fluids.fluid-properties]
+  - id: engr.fluids.non-newtonian-fluids
+    name: Describing non-Newtonian fluids
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.newtonian-shear-stress
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe shear-thinning and shear-thickening fluids
+        key_prerequisites: [engr.fluids.newtonian-shear-stress]
+      - id: kp2
+        can_do: Use power-law models
+        key_prerequisites: [engr.fluids.newtonian-shear-stress]
+      - id: kp3
+        can_do: Describe Bingham plastics
+        key_prerequisites: [engr.fluids.newtonian-shear-stress]
+      - id: kp4
+        can_do: Compare apparent viscosities
+        key_prerequisites: [engr.fluids.newtonian-shear-stress]
+  - id: engr.fluids.manometers
+    name: Measuring pressure with manometers
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.pressure-variation-by-integration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pressure with simple manometers
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp2
+        can_do: Find pressure differences with differential manometers
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp3
+        can_do: Use inclined manometers
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+      - id: kp4
+        can_do: Convert gauge and absolute pressure
+        key_prerequisites: [physics.waves-thermo-optics.pressure-variation-by-integration]
+  - id: engr.fluids.forces-on-plane-surfaces
+    name: Finding forces and centre of pressure on submerged plane surfaces
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.manometers
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.fluid-pressure-resultants
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find hydrostatic force on plane surfaces
+        key_prerequisites: [engr.fluids.manometers, engr.statics.fluid-pressure-resultants]
+      - id: kp2
+        can_do: Find centre of pressure
+        key_prerequisites: [engr.fluids.manometers]
+      - id: kp3
+        can_do: Find forces on gates
+        key_prerequisites: [engr.fluids.manometers, engr.statics.fluid-pressure-resultants]
+      - id: kp4
+        can_do: Find moments needed to hold gates
+        key_prerequisites: [engr.statics.fluid-pressure-resultants]
+  - id: engr.fluids.forces-on-curved-surfaces
+    name: Finding forces on submerged curved surfaces
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.forces-on-plane-surfaces
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find horizontal force on curved surfaces
+        key_prerequisites: [engr.fluids.forces-on-plane-surfaces]
+      - id: kp2
+        can_do: Find vertical force on curved surfaces
+        key_prerequisites: [engr.fluids.forces-on-plane-surfaces]
+      - id: kp3
+        can_do: Find resultant on curved gates
+        key_prerequisites: [engr.fluids.forces-on-plane-surfaces]
+      - id: kp4
+        can_do: Find forces on tank walls
+        key_prerequisites: [engr.fluids.forces-on-plane-surfaces]
+  - id: engr.fluids.buoyancy-and-stability-engineering
+    name: Finding stability of floating bodies with metacentric height
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.forces-on-curved-surfaces
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.buoyancy-and-stability
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find buoyant force on submerged bodies
+        key_prerequisites: [physics.waves-thermo-optics.buoyancy-and-stability]
+      - id: kp2
+        can_do: Find metacentric height
+        key_prerequisites: [engr.fluids.forces-on-curved-surfaces, physics.waves-thermo-optics.buoyancy-and-stability]
+      - id: kp3
+        can_do: Judge stability of floating bodies
+        key_prerequisites: [engr.fluids.forces-on-curved-surfaces]
+      - id: kp4
+        can_do: Find draft of floating objects
+        key_prerequisites: [physics.waves-thermo-optics.buoyancy-and-stability]
+  - id: engr.fluids.rigid-body-fluid-motion
+    name: Analyzing fluids in rigid-body acceleration and rotation
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.manometers
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.rotating-fluids
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pressure in accelerating tanks
+        key_prerequisites: [engr.fluids.manometers]
+      - id: kp2
+        can_do: Find free-surface slope in accelerating tanks
+        key_prerequisites: [engr.fluids.manometers]
+      - id: kp3
+        can_do: Find pressure in rotating containers
+        key_prerequisites: [engr.fluids.manometers, physics.waves-thermo-optics.rotating-fluids]
+      - id: kp4
+        can_do: Find surface shape of rotating fluids
+        key_prerequisites: [physics.waves-thermo-optics.rotating-fluids]
+  - id: engr.fluids.lagrangian-eulerian
+    name: Comparing Lagrangian and Eulerian descriptions
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.fluid-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.vector-fields
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare Lagrangian and Eulerian descriptions
+        key_prerequisites: [engr.fluids.fluid-properties]
+      - id: kp2
+        can_do: Describe velocity fields
+        key_prerequisites: [math.calc3.vector-fields]
+      - id: kp3
+        can_do: Tell steady from unsteady flow
+        key_prerequisites: [engr.fluids.fluid-properties, math.calc3.vector-fields]
+      - id: kp4
+        can_do: Find velocity at a point and time
+        key_prerequisites: [math.calc3.vector-fields]
+  - id: engr.fluids.material-derivative
+    name: Using the material derivative
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.lagrangian-eulerian
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.chain-rule-multivariable
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find acceleration from a velocity field
+        key_prerequisites: [engr.fluids.lagrangian-eulerian, math.calc3.chain-rule-multivariable]
+      - id: kp2
+        can_do: Separate local and convective acceleration
+        key_prerequisites: [engr.fluids.lagrangian-eulerian]
+      - id: kp3
+        can_do: Find rate of change following a particle
+        key_prerequisites: [engr.fluids.lagrangian-eulerian, math.calc3.chain-rule-multivariable]
+      - id: kp4
+        can_do: Find pressure change following a particle
+        key_prerequisites: [math.calc3.chain-rule-multivariable]
+  - id: engr.fluids.streamlines-and-pathlines
+    name: Finding streamlines, pathlines and streaklines
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.lagrangian-eulerian
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find streamlines from velocity fields
+        key_prerequisites: [engr.fluids.lagrangian-eulerian]
+      - id: kp2
+        can_do: Find pathlines
+        key_prerequisites: [engr.fluids.lagrangian-eulerian]
+      - id: kp3
+        can_do: Find streaklines
+        key_prerequisites: [engr.fluids.lagrangian-eulerian]
+      - id: kp4
+        can_do: Compare lines in steady and unsteady flow
+        key_prerequisites: [engr.fluids.lagrangian-eulerian]
+  - id: engr.fluids.reynolds-transport-theorem
+    name: Using the Reynolds transport theorem
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.material-derivative
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Reynolds transport theorem
+        key_prerequisites: [engr.fluids.material-derivative]
+      - id: kp2
+        can_do: Relate system and control volume rates
+        key_prerequisites: [engr.fluids.material-derivative]
+      - id: kp3
+        can_do: Apply the theorem to mass
+        key_prerequisites: [engr.fluids.material-derivative]
+      - id: kp4
+        can_do: Apply the theorem to momentum and energy
+        key_prerequisites: [engr.fluids.material-derivative]
+  - id: engr.fluids.control-volume-mass
+    name: Applying conservation of mass to control volumes
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.reynolds-transport-theorem
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.mass-flow-rate
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply mass conservation to steady flows
+        key_prerequisites: [engr.fluids.reynolds-transport-theorem, engr.thermo.mass-flow-rate]
+      - id: kp2
+        can_do: Apply mass conservation to unsteady flows
+        key_prerequisites: [engr.fluids.reynolds-transport-theorem]
+      - id: kp3
+        can_do: Find average velocity from profiles
+        key_prerequisites: [engr.fluids.reynolds-transport-theorem]
+      - id: kp4
+        can_do: Find tank filling rates
+        key_prerequisites: [engr.thermo.mass-flow-rate]
+  - id: engr.fluids.bernoulli-applications
+    name: Applying Bernoulli's equation along a streamline
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.control-volume-mass
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.bernoulli-derivation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Bernoulli between two points
+        key_prerequisites: [engr.fluids.control-volume-mass, physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp2
+        can_do: Find velocity from pressure difference
+        key_prerequisites: [engr.fluids.control-volume-mass]
+      - id: kp3
+        can_do: Find flow from tanks
+        key_prerequisites: [engr.fluids.control-volume-mass, physics.waves-thermo-optics.bernoulli-derivation]
+      - id: kp4
+        can_do: Check Bernoulli assumptions
+        key_prerequisites: [engr.fluids.control-volume-mass]
+  - id: engr.fluids.flow-measurement
+    name: Measuring flow with pitot tubes, venturis and orifices
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.bernoulli-applications
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure velocity with pitot tubes
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp2
+        can_do: Measure flow with venturi meters
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp3
+        can_do: Measure flow with orifice meters
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp4
+        can_do: Use discharge coefficients
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+  - id: engr.fluids.energy-grade-lines
+    name: Drawing energy and hydraulic grade lines
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.bernoulli-applications
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw energy grade lines
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp2
+        can_do: Draw hydraulic grade lines
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp3
+        can_do: Find pressure from grade lines
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+      - id: kp4
+        can_do: Find where cavitation may occur
+        key_prerequisites: [engr.fluids.bernoulli-applications]
+  - id: engr.fluids.mechanical-energy-equation
+    name: Applying the mechanical energy equation with losses
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.energy-grade-lines
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the energy equation with head loss
+        key_prerequisites: [engr.fluids.energy-grade-lines, engr.thermo.steady-flow-energy-balance]
+      - id: kp2
+        can_do: Include pump and turbine heads
+        key_prerequisites: [engr.fluids.energy-grade-lines]
+      - id: kp3
+        can_do: Find pump power from heads
+        key_prerequisites: [engr.fluids.energy-grade-lines, engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Find kinetic energy correction factors
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.fluids.linear-momentum-cv
+    name: Applying linear momentum to control volumes
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.control-volume-mass
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.dynamics.steady-mass-flow
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply momentum to steady control volumes
+        key_prerequisites: [engr.fluids.control-volume-mass, engr.dynamics.steady-mass-flow]
+      - id: kp2
+        can_do: Find forces on pipe bends
+        key_prerequisites: [engr.fluids.control-volume-mass]
+      - id: kp3
+        can_do: Find forces from jets
+        key_prerequisites: [engr.dynamics.steady-mass-flow]
+      - id: kp4
+        can_do: Find forces on nozzles
+        key_prerequisites: [engr.fluids.control-volume-mass, engr.dynamics.steady-mass-flow]
+  - id: engr.fluids.momentum-moving-cv
+    name: Applying momentum to moving control volumes
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.linear-momentum-cv
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find forces on moving vanes
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp2
+        can_do: Use relative velocities
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp3
+        can_do: Find power from moving vanes
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp4
+        can_do: Analyze accelerating control volumes
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+  - id: engr.fluids.angular-momentum-cv
+    name: Applying angular momentum to control volumes
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.linear-momentum-cv
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply angular momentum to control volumes
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp2
+        can_do: Find torque on sprinklers
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp3
+        can_do: Find torque on pump impellers
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+      - id: kp4
+        can_do: Find power from angular momentum
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+  - id: engr.fluids.continuity-equation
+    name: Deriving the differential continuity equation
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.control-volume-mass
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.divergence
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the continuity equation
+        key_prerequisites: [engr.fluids.control-volume-mass, math.calc3.divergence]
+      - id: kp2
+        can_do: Test whether a flow is incompressible
+        key_prerequisites: [math.calc3.divergence]
+      - id: kp3
+        can_do: Find a missing velocity component
+        key_prerequisites: [engr.fluids.control-volume-mass, math.calc3.divergence]
+      - id: kp4
+        can_do: Write continuity in cylindrical coordinates
+        key_prerequisites: [engr.fluids.control-volume-mass]
+  - id: engr.fluids.stream-function
+    name: Using the stream function
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.continuity-equation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the stream function
+        key_prerequisites: [engr.fluids.continuity-equation]
+      - id: kp2
+        can_do: Find velocity from stream function
+        key_prerequisites: [engr.fluids.continuity-equation]
+      - id: kp3
+        can_do: Find flow rate between streamlines
+        key_prerequisites: [engr.fluids.continuity-equation]
+      - id: kp4
+        can_do: Find stream function from velocity
+        key_prerequisites: [engr.fluids.continuity-equation]
+  - id: engr.fluids.vorticity-and-rotation
+    name: Finding vorticity and rotationality
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.continuity-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc3.curl
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find vorticity of a flow
+        key_prerequisites: [engr.fluids.continuity-equation, math.calc3.curl]
+      - id: kp2
+        can_do: Tell rotational from irrotational flow
+        key_prerequisites: [math.calc3.curl]
+      - id: kp3
+        can_do: Find circulation
+        key_prerequisites: [engr.fluids.continuity-equation, math.calc3.curl]
+      - id: kp4
+        can_do: Find velocity potential of irrotational flow
+        key_prerequisites: [engr.fluids.continuity-equation]
+  - id: engr.fluids.navier-stokes
+    name: Writing the Navier-Stokes equations
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.continuity-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.newtonian-shear-stress
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Navier-Stokes equations
+        key_prerequisites: [engr.fluids.continuity-equation, engr.fluids.newtonian-shear-stress]
+      - id: kp2
+        can_do: Identify terms in the equations
+        key_prerequisites: [engr.fluids.continuity-equation]
+      - id: kp3
+        can_do: Simplify equations for fully developed flow
+        key_prerequisites: [engr.fluids.continuity-equation, engr.fluids.newtonian-shear-stress]
+      - id: kp4
+        can_do: Write boundary conditions for viscous flow
+        key_prerequisites: [engr.fluids.newtonian-shear-stress]
+  - id: engr.fluids.couette-flow
+    name: Solving Couette flow
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.navier-stokes
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve flow between moving plates
+        key_prerequisites: [engr.fluids.navier-stokes]
+      - id: kp2
+        can_do: Include pressure gradient in Couette flow
+        key_prerequisites: [engr.fluids.navier-stokes]
+      - id: kp3
+        can_do: Find shear stress at walls
+        key_prerequisites: [engr.fluids.navier-stokes]
+      - id: kp4
+        can_do: Find flow rate per unit width
+        key_prerequisites: [engr.fluids.navier-stokes]
+  - id: engr.fluids.poiseuille-solutions
+    name: Solving pressure-driven flow between plates and in pipes
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.navier-stokes
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.poiseuille-flow
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve flow between fixed plates
+        key_prerequisites: [engr.fluids.navier-stokes]
+      - id: kp2
+        can_do: Solve flow in circular pipes
+        key_prerequisites: [engr.fluids.navier-stokes, physics.waves-thermo-optics.poiseuille-flow]
+      - id: kp3
+        can_do: Find maximum and average velocity
+        key_prerequisites: [engr.fluids.navier-stokes, physics.waves-thermo-optics.poiseuille-flow]
+      - id: kp4
+        can_do: Find pressure drop in laminar flow
+        key_prerequisites: [physics.waves-thermo-optics.poiseuille-flow]
+  - id: engr.fluids.potential-flow
+    name: Superposing elementary potential flows
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.stream-function
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.vorticity-and-rotation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use uniform flow, source and vortex
+        key_prerequisites: [engr.fluids.stream-function, engr.fluids.vorticity-and-rotation]
+      - id: kp2
+        can_do: Superpose flows for a half-body
+        key_prerequisites: [engr.fluids.stream-function, engr.fluids.vorticity-and-rotation]
+      - id: kp3
+        can_do: Find flow past a cylinder
+        key_prerequisites: [engr.fluids.stream-function]
+      - id: kp4
+        can_do: Find pressure from potential flow
+        key_prerequisites: [engr.fluids.vorticity-and-rotation]
+  - id: engr.fluids.buckingham-pi
+    name: Finding dimensionless groups with the Buckingham pi theorem
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.fluid-properties
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.mechanics.dimensional-analysis
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find repeating variables
+        key_prerequisites: [engr.fluids.fluid-properties, physics.mechanics.dimensional-analysis]
+      - id: kp2
+        can_do: Form pi groups
+        key_prerequisites: [engr.fluids.fluid-properties]
+      - id: kp3
+        can_do: Find functional relations from pi groups
+        key_prerequisites: [engr.fluids.fluid-properties, physics.mechanics.dimensional-analysis]
+      - id: kp4
+        can_do: Check groups for dimensional consistency
+        key_prerequisites: [physics.mechanics.dimensional-analysis]
+  - id: engr.fluids.dimensionless-numbers
+    name: Interpreting Reynolds, Froude, Mach and other numbers
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.buckingham-pi
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret Reynolds number
+        key_prerequisites: [engr.fluids.buckingham-pi]
+      - id: kp2
+        can_do: Interpret Froude number
+        key_prerequisites: [engr.fluids.buckingham-pi]
+      - id: kp3
+        can_do: Interpret Mach and Weber numbers
+        key_prerequisites: [engr.fluids.buckingham-pi]
+      - id: kp4
+        can_do: Find which numbers govern a flow
+        key_prerequisites: [engr.fluids.buckingham-pi]
+  - id: engr.fluids.similitude-and-models
+    name: Scaling model tests by similitude
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design scale models
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp2
+        can_do: Find model velocities for similarity
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp3
+        can_do: Predict prototype forces from models
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp4
+        can_do: Handle incomplete similarity
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+  - id: engr.fluids.laminar-turbulent-pipe-flow
+    name: Telling laminar from turbulent pipe flow
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.poiseuille-solutions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Reynolds number in pipes
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp2
+        can_do: Tell laminar from turbulent flow
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp3
+        can_do: Find friction factor in laminar flow
+        key_prerequisites: [engr.fluids.dimensionless-numbers, engr.fluids.poiseuille-solutions]
+      - id: kp4
+        can_do: Describe turbulent velocity profiles
+        key_prerequisites: [engr.fluids.poiseuille-solutions]
+  - id: engr.fluids.entrance-length
+    name: Finding entrance length
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.laminar-turbulent-pipe-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entrance length for laminar flow
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp2
+        can_do: Find entrance length for turbulent flow
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp3
+        can_do: Describe developing flow
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp4
+        can_do: Include entrance effects in pressure drop
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+  - id: engr.fluids.moody-chart
+    name: Finding friction factors from the Moody chart
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.laminar-turbulent-pipe-flow
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.mechanical-energy-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read friction factor from the Moody chart
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp2
+        can_do: Use relative roughness
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp3
+        can_do: Find head loss with Darcy-Weisbach
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow, engr.fluids.mechanical-energy-equation]
+      - id: kp4
+        can_do: Find pressure drop in pipes
+        key_prerequisites: [engr.fluids.mechanical-energy-equation]
+  - id: engr.fluids.colebrook-equation
+    name: Solving the Colebrook equation
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.moody-chart
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.newtons-method
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve the Colebrook equation by iteration
+        key_prerequisites: [engr.fluids.moody-chart, math.calc1.newtons-method]
+      - id: kp2
+        can_do: Use explicit friction factor formulas
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp3
+        can_do: Solve friction factor with software
+        key_prerequisites: [math.calc1.newtons-method]
+      - id: kp4
+        can_do: Compare formulas with the chart
+        key_prerequisites: [engr.fluids.moody-chart]
+  - id: engr.fluids.minor-losses
+    name: Finding minor losses
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.moody-chart
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minor losses with loss coefficients
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp2
+        can_do: Use equivalent lengths
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp3
+        can_do: Find losses at entrances and exits
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp4
+        can_do: Find losses in valves and bends
+        key_prerequisites: [engr.fluids.moody-chart]
+  - id: engr.fluids.pipe-flow-problem-types
+    name: Solving the three types of pipe flow problems
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.minor-losses
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.colebrook-equation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find head loss for a known flow
+        key_prerequisites: [engr.fluids.minor-losses]
+      - id: kp2
+        can_do: Find flow for a known head loss
+        key_prerequisites: [engr.fluids.minor-losses, engr.fluids.colebrook-equation]
+      - id: kp3
+        can_do: Find diameter for a known flow and loss
+        key_prerequisites: [engr.fluids.minor-losses, engr.fluids.colebrook-equation]
+      - id: kp4
+        can_do: Choose a solution method
+        key_prerequisites: [engr.fluids.colebrook-equation]
+  - id: engr.fluids.pipes-in-series-parallel
+    name: Analyzing pipes in series and parallel
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pipe-flow-problem-types
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve pipes in series
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp2
+        can_do: Solve pipes in parallel
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp3
+        can_do: Solve branching pipe systems
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp4
+        can_do: Solve three-reservoir problems
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+  - id: engr.fluids.pipe-networks
+    name: Solving pipe networks iteratively
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pipes-in-series-parallel
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write loop and node equations
+        key_prerequisites: [engr.fluids.pipes-in-series-parallel]
+      - id: kp2
+        can_do: Solve networks with the Hardy Cross method
+        key_prerequisites: [engr.fluids.pipes-in-series-parallel]
+      - id: kp3
+        can_do: Solve networks with software
+        key_prerequisites: [engr.fluids.pipes-in-series-parallel]
+      - id: kp4
+        can_do: Check network solutions
+        key_prerequisites: [engr.fluids.pipes-in-series-parallel]
+  - id: engr.fluids.noncircular-ducts
+    name: Using hydraulic diameter for noncircular ducts
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.moody-chart
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find hydraulic diameter
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp2
+        can_do: Find friction in rectangular ducts
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp3
+        can_do: Find friction in annular passages
+        key_prerequisites: [engr.fluids.moody-chart]
+      - id: kp4
+        can_do: Compare noncircular and circular results
+        key_prerequisites: [engr.fluids.moody-chart]
+  - id: engr.fluids.boundary-layer-concepts
+    name: Describing laminar and turbulent boundary layers
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.laminar-turbulent-pipe-flow
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe laminar and turbulent boundary layers
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp2
+        can_do: Find displacement and momentum thickness
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp3
+        can_do: Describe transition
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+      - id: kp4
+        can_do: Explain no-slip conditions
+        key_prerequisites: [engr.fluids.laminar-turbulent-pipe-flow]
+  - id: engr.fluids.flat-plate-boundary-layer
+    name: Finding boundary-layer thickness and skin friction on a flat plate
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.boundary-layer-concepts
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find laminar boundary-layer thickness
+        key_prerequisites: [engr.fluids.boundary-layer-concepts]
+      - id: kp2
+        can_do: Find skin friction drag on plates
+        key_prerequisites: [engr.fluids.boundary-layer-concepts, math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Find turbulent boundary-layer thickness
+        key_prerequisites: [engr.fluids.boundary-layer-concepts]
+      - id: kp4
+        can_do: Find drag on plates with mixed flow
+        key_prerequisites: [engr.fluids.boundary-layer-concepts, math.calc1.definite-integral-definition]
+  - id: engr.fluids.momentum-integral
+    name: Using the momentum integral method
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.flat-plate-boundary-layer
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.linear-momentum-cv
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the momentum integral equation
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer, engr.fluids.linear-momentum-cv]
+      - id: kp2
+        can_do: Find thickness from assumed profiles
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+      - id: kp3
+        can_do: Find wall shear from the momentum integral
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+      - id: kp4
+        can_do: Compare approximate and exact solutions
+        key_prerequisites: [engr.fluids.linear-momentum-cv]
+  - id: engr.fluids.flow-separation
+    name: Explaining separation and pressure gradients
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.flat-plate-boundary-layer
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain adverse pressure gradients
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+      - id: kp2
+        can_do: Predict separation
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+      - id: kp3
+        can_do: Describe wakes
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+      - id: kp4
+        can_do: Explain effects of streamlining
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+  - id: engr.fluids.drag-coefficients
+    name: Finding drag from drag coefficients
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.flow-separation
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find drag from drag coefficients
+        key_prerequisites: [engr.fluids.flow-separation]
+      - id: kp2
+        can_do: Find terminal velocity
+        key_prerequisites: [engr.fluids.flow-separation, engr.fluids.dimensionless-numbers]
+      - id: kp3
+        can_do: Compare pressure and friction drag
+        key_prerequisites: [engr.fluids.flow-separation]
+      - id: kp4
+        can_do: Find drag on vehicles
+        key_prerequisites: [engr.fluids.flow-separation, engr.fluids.dimensionless-numbers]
+  - id: engr.fluids.lift-and-airfoils
+    name: Finding lift on airfoils
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.drag-coefficients
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.potential-flow
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find lift from lift coefficients
+        key_prerequisites: [engr.fluids.drag-coefficients]
+      - id: kp2
+        can_do: Explain lift on airfoils
+        key_prerequisites: [engr.fluids.potential-flow]
+      - id: kp3
+        can_do: Find stall angle from data
+        key_prerequisites: [engr.fluids.drag-coefficients]
+      - id: kp4
+        can_do: Find induced drag
+        key_prerequisites: [engr.fluids.drag-coefficients, engr.fluids.potential-flow]
+  - id: engr.fluids.pump-performance-curves
+    name: Reading pump performance curves
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.mechanical-energy-equation
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.turbines-and-compressors
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read pump head and efficiency curves
+        key_prerequisites: [engr.fluids.mechanical-energy-equation]
+      - id: kp2
+        can_do: Find pump power from curves
+        key_prerequisites: [engr.fluids.mechanical-energy-equation, engr.thermo.turbines-and-compressors]
+      - id: kp3
+        can_do: Find best efficiency point
+        key_prerequisites: [engr.fluids.mechanical-energy-equation]
+      - id: kp4
+        can_do: Compare pump types
+        key_prerequisites: [engr.thermo.turbines-and-compressors]
+  - id: engr.fluids.system-curves-and-operating-point
+    name: Matching pumps to systems
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pump-performance-curves
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.pipe-flow-problem-types
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write system curves
+        key_prerequisites: [engr.fluids.pipe-flow-problem-types]
+      - id: kp2
+        can_do: Find operating points
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.fluids.pipe-flow-problem-types]
+      - id: kp3
+        can_do: Find effects of valve throttling
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.fluids.pipe-flow-problem-types]
+      - id: kp4
+        can_do: Choose pumps for systems
+        key_prerequisites: [engr.fluids.pump-performance-curves]
+  - id: engr.fluids.pump-cavitation
+    name: Checking net positive suction head
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pump-performance-curves
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.thermo.saturated-property-tables
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find available net positive suction head
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.thermo.saturated-property-tables]
+      - id: kp2
+        can_do: Compare available and required NPSH
+        key_prerequisites: [engr.fluids.pump-performance-curves]
+      - id: kp3
+        can_do: Find maximum suction lift
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.thermo.saturated-property-tables]
+      - id: kp4
+        can_do: Explain cavitation damage
+        key_prerequisites: [engr.fluids.pump-performance-curves]
+  - id: engr.fluids.pump-scaling-laws
+    name: Using pump and fan scaling laws
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.pump-performance-curves
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.similitude-and-models
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use affinity laws for speed changes
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.fluids.similitude-and-models]
+      - id: kp2
+        can_do: Use affinity laws for impeller changes
+        key_prerequisites: [engr.fluids.pump-performance-curves]
+      - id: kp3
+        can_do: Find specific speed
+        key_prerequisites: [engr.fluids.similitude-and-models]
+      - id: kp4
+        can_do: Scale fans and compressors
+        key_prerequisites: [engr.fluids.pump-performance-curves, engr.fluids.similitude-and-models]
+  - id: engr.fluids.pumps-in-series-parallel
+    name: Combining pumps in series and parallel
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.system-curves-and-operating-point
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine pumps in series
+        key_prerequisites: [engr.fluids.system-curves-and-operating-point]
+      - id: kp2
+        can_do: Combine pumps in parallel
+        key_prerequisites: [engr.fluids.system-curves-and-operating-point]
+      - id: kp3
+        can_do: Find operating points of combinations
+        key_prerequisites: [engr.fluids.system-curves-and-operating-point]
+      - id: kp4
+        can_do: Choose arrangements for systems
+        key_prerequisites: [engr.fluids.system-curves-and-operating-point]
+  - id: engr.fluids.turbine-velocity-triangles
+    name: Analyzing turbomachines with velocity triangles
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.angular-momentum-cv
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.pump-performance-curves
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw velocity triangles
+        key_prerequisites: [engr.fluids.angular-momentum-cv]
+      - id: kp2
+        can_do: Find torque and power with the Euler equation
+        key_prerequisites: [engr.fluids.angular-momentum-cv, engr.fluids.pump-performance-curves]
+      - id: kp3
+        can_do: Find blade angles
+        key_prerequisites: [engr.fluids.angular-momentum-cv]
+      - id: kp4
+        can_do: Compare impulse and reaction turbines
+        key_prerequisites: [engr.fluids.pump-performance-curves]
+  - id: engr.fluids.speed-of-sound-and-mach
+    name: Finding Mach number and speed of sound in gases
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.isentropic-processes
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find speed of sound in gases
+        key_prerequisites: [engr.fluids.dimensionless-numbers, engr.thermo.isentropic-processes]
+      - id: kp2
+        can_do: Find Mach number
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp3
+        can_do: Classify flow regimes by Mach number
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+      - id: kp4
+        can_do: Explain compressibility effects
+        key_prerequisites: [engr.thermo.isentropic-processes]
+  - id: engr.fluids.stagnation-properties
+    name: Finding stagnation properties
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.speed-of-sound-and-mach
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.thermo.nozzles-and-diffusers
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stagnation temperature
+        key_prerequisites: [engr.fluids.speed-of-sound-and-mach, engr.thermo.nozzles-and-diffusers]
+      - id: kp2
+        can_do: Find stagnation pressure
+        key_prerequisites: [engr.fluids.speed-of-sound-and-mach, engr.thermo.nozzles-and-diffusers]
+      - id: kp3
+        can_do: Use stagnation tables
+        key_prerequisites: [engr.fluids.speed-of-sound-and-mach]
+      - id: kp4
+        can_do: Find static properties from stagnation
+        key_prerequisites: [engr.thermo.nozzles-and-diffusers]
+  - id: engr.fluids.isentropic-duct-flow
+    name: Analyzing isentropic flow in varying-area ducts
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.stagnation-properties
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate area change to Mach number
+        key_prerequisites: [engr.fluids.stagnation-properties]
+      - id: kp2
+        can_do: Use isentropic flow tables
+        key_prerequisites: [engr.fluids.stagnation-properties]
+      - id: kp3
+        can_do: Find properties at a given area ratio
+        key_prerequisites: [engr.fluids.stagnation-properties]
+      - id: kp4
+        can_do: Find throat area
+        key_prerequisites: [engr.fluids.stagnation-properties]
+  - id: engr.fluids.converging-diverging-nozzles
+    name: Analyzing converging-diverging nozzles and choking
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.isentropic-duct-flow
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find choked mass flow
+        key_prerequisites: [engr.fluids.isentropic-duct-flow]
+      - id: kp2
+        can_do: Find exit conditions in nozzles
+        key_prerequisites: [engr.fluids.isentropic-duct-flow]
+      - id: kp3
+        can_do: Find back pressures for regimes
+        key_prerequisites: [engr.fluids.isentropic-duct-flow]
+      - id: kp4
+        can_do: Design nozzles for a given Mach number
+        key_prerequisites: [engr.fluids.isentropic-duct-flow]
+  - id: engr.fluids.normal-shocks
+    name: Analyzing normal shocks
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.converging-diverging-nozzles
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use normal shock relations
+        key_prerequisites: [engr.fluids.converging-diverging-nozzles]
+      - id: kp2
+        can_do: Find properties after shocks
+        key_prerequisites: [engr.fluids.converging-diverging-nozzles]
+      - id: kp3
+        can_do: Find shock location in nozzles
+        key_prerequisites: [engr.fluids.converging-diverging-nozzles]
+      - id: kp4
+        can_do: Find stagnation pressure loss
+        key_prerequisites: [engr.fluids.converging-diverging-nozzles]
+  - id: engr.fluids.fanno-and-rayleigh-flow
+    name: Describing duct flow with friction or heating
+    subject: engr
+    course: engr.fluids
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.fluids.normal-shocks
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Fanno flow
+        key_prerequisites: [engr.fluids.normal-shocks]
+      - id: kp2
+        can_do: Describe Rayleigh flow
+        key_prerequisites: [engr.fluids.normal-shocks]
+      - id: kp3
+        can_do: Find choking length in Fanno flow
+        key_prerequisites: [engr.fluids.normal-shocks]
+      - id: kp4
+        can_do: Find heating that chokes Rayleigh flow
+        key_prerequisites: [engr.fluids.normal-shocks]
