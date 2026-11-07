@@ -1,0 +1,687 @@
+course: physics.em
+topics:
+  - id: physics.em.coulombs-law-vector-form
+    name: Writing Coulomb's law in vector form
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.coulomb-forces-in-a-plane
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write force with a unit vector
+        key_prerequisites: [physics.mechanics.unit-vector-notation, physics.hs2.coulomb-forces-in-a-plane]
+      - id: kp2
+        can_do: Find a unit vector between charges
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp3
+        can_do: Set a force's direction from signs
+        key_prerequisites: [physics.hs2.coulomb-forces-in-a-plane]
+      - id: kp4
+        can_do: Find a force in three dimensions
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+  - id: physics.em.superposition-of-charges
+    name: Adding forces and fields with unit vectors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.coulombs-law-vector-form
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.adding-electric-fields
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add forces with unit vectors
+        key_prerequisites: [physics.em.coulombs-law-vector-form]
+      - id: kp2
+        can_do: Add fields with unit vectors
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+      - id: kp3
+        can_do: Find a net field at a point in space
+        key_prerequisites: [physics.em.coulombs-law-vector-form, physics.hs2.adding-electric-fields]
+      - id: kp4
+        can_do: Find where a net field vanishes
+        key_prerequisites: [physics.hs2.adding-electric-fields]
+  - id: physics.em.charge-densities
+    name: Using linear, surface and volume charge densities
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.charge-conservation
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define linear charge density
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp2
+        can_do: Define surface and volume charge density
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp3
+        can_do: Find total charge with a uniform density
+        key_prerequisites: [physics.hs2.charge-conservation]
+      - id: kp4
+        can_do: Find total charge with a varying density
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: physics.em.setting-up-field-integrals
+    name: Setting up a field integral for continuous charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.superposition-of-charges
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.charge-densities
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a small piece's charge
+        key_prerequisites: [physics.em.charge-densities]
+      - id: kp2
+        can_do: Write a small field element
+        key_prerequisites: [physics.em.superposition-of-charges]
+      - id: kp3
+        can_do: Use symmetry to cancel components
+        key_prerequisites: [physics.em.superposition-of-charges]
+      - id: kp4
+        can_do: Set up limits
+        key_prerequisites: [physics.em.charge-densities]
+  - id: physics.em.field-of-a-finite-line
+    name: Finding the field of a finite line of charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.setting-up-field-integrals
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.trig-sub-tangent
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field on the axis of a rod
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp2
+        can_do: Find a field on a perpendicular line
+        key_prerequisites: [physics.em.setting-up-field-integrals, math.calc2.trig-sub-tangent]
+      - id: kp3
+        can_do: Use a trig substitution for the integral
+        key_prerequisites: [math.calc2.trig-sub-tangent]
+      - id: kp4
+        can_do: Find a field at an off-center point
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+  - id: physics.em.field-of-an-infinite-line
+    name: Finding the field of an infinite line of charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.field-of-a-finite-line
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Take a limit of a long line
+        key_prerequisites: [physics.em.field-of-a-finite-line]
+      - id: kp2
+        can_do: Evaluate an improper integral
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find a one-over-distance field
+        key_prerequisites: [physics.em.field-of-a-finite-line]
+      - id: kp4
+        can_do: Compare near and far behaviour
+        key_prerequisites: [physics.em.field-of-a-finite-line]
+  - id: physics.em.field-of-a-charged-arc
+    name: Finding the field of a charged arc
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.setting-up-field-integrals
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a charge element on an arc
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp2
+        can_do: Find the field of a quarter circle
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp3
+        can_do: Find the field of a semicircle
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp4
+        can_do: Use symmetry on an arc
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+  - id: physics.em.field-of-a-ring
+    name: Finding the field on the axis of a ring
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.setting-up-field-integrals
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a ring's axial field
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp2
+        can_do: Integrate around a ring
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+      - id: kp3
+        can_do: Find the greatest field along an axis
+        key_prerequisites: [math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Find the field at a far point
+        key_prerequisites: [physics.em.setting-up-field-integrals]
+  - id: physics.em.field-of-a-disk
+    name: Finding the field on the axis of a disk
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.field-of-a-ring
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat a disk as rings
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp2
+        can_do: Integrate from center to edge
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp3
+        can_do: Find a limit near a disk
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp4
+        can_do: Find a limit far from a disk
+        key_prerequisites: [physics.em.field-of-a-ring]
+  - id: physics.em.field-of-an-infinite-sheet
+    name: Finding the field of an infinite sheet
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.field-of-a-disk
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take a limit of a large disk
+        key_prerequisites: [physics.em.field-of-a-disk]
+      - id: kp2
+        can_do: Find a constant field
+        key_prerequisites: [physics.em.field-of-a-disk]
+      - id: kp3
+        can_do: Find a field between two sheets
+        key_prerequisites: [physics.em.field-of-a-disk]
+      - id: kp4
+        can_do: Find a field outside two sheets
+        key_prerequisites: [physics.em.field-of-a-disk]
+  - id: physics.em.far-field-approximations
+    name: Approximating fields at large distances
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.field-of-a-ring
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.binomial-series
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use a binomial approximation
+        key_prerequisites: [math.calc2.binomial-series]
+      - id: kp2
+        can_do: Show a ring looks like a point far away
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp3
+        can_do: Find when an approximation holds
+        key_prerequisites: [math.calc2.binomial-series]
+      - id: kp4
+        can_do: Estimate an approximation's error
+        key_prerequisites: [math.calc2.binomial-series]
+  - id: physics.em.electric-dipole-field
+    name: Finding the field of a dipole
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.far-field-approximations
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.electric-dipoles
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.em.superposition-of-charges
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field on a dipole's axis
+        key_prerequisites: [physics.em.superposition-of-charges]
+      - id: kp2
+        can_do: Find a field on its perpendicular line
+        key_prerequisites: [physics.em.superposition-of-charges]
+      - id: kp3
+        can_do: Find a one-over-cube fall-off
+        key_prerequisites: [physics.em.far-field-approximations]
+      - id: kp4
+        can_do: Define a dipole moment
+        key_prerequisites: [physics.hs2.electric-dipoles]
+  - id: physics.em.dipole-in-a-field
+    name: Finding torque and energy of a dipole in a field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.electric-dipole-field
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.torque-as-a-cross-product
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write torque as a cross product
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+      - id: kp2
+        can_do: Find potential energy of a dipole
+        key_prerequisites: [physics.em.electric-dipole-field]
+      - id: kp3
+        can_do: Find stable and unstable orientations
+        key_prerequisites: [physics.em.electric-dipole-field]
+      - id: kp4
+        can_do: Find a dipole's oscillation frequency
+        key_prerequisites: [physics.mechanics.torque-as-a-cross-product]
+  - id: physics.em.motion-in-a-nonuniform-field
+    name: Solving motion in a nonuniform field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.superposition-of-charges
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.position-dependent-forces
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.charge-in-a-field
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the equation of motion
+        key_prerequisites: [physics.mechanics.position-dependent-forces]
+      - id: kp2
+        can_do: Find a speed from a position-dependent force
+        key_prerequisites: [physics.em.superposition-of-charges, physics.mechanics.position-dependent-forces]
+      - id: kp3
+        can_do: Find a closest approach
+        key_prerequisites: [physics.mechanics.position-dependent-forces]
+      - id: kp4
+        can_do: Compare with a uniform-field solution
+        key_prerequisites: [physics.hs2.charge-in-a-field]
+  - id: physics.em.oscillating-charges-in-fields
+    name: Finding oscillation of a charge near a ring
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.field-of-a-ring
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.small-oscillations-about-equilibrium
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a restoring force near a ring
+        key_prerequisites: [physics.em.field-of-a-ring]
+      - id: kp2
+        can_do: Find an oscillation frequency
+        key_prerequisites: [physics.mechanics.small-oscillations-about-equilibrium]
+      - id: kp3
+        can_do: Test small-displacement approximations
+        key_prerequisites: [physics.mechanics.small-oscillations-about-equilibrium]
+      - id: kp4
+        can_do: Test stability along another direction
+        key_prerequisites: [physics.em.field-of-a-ring]
+  - id: physics.em.electric-flux
+    name: Calculating electric flux through a flat surface
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.dot-product-in-physics
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.uniform-electric-field
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define flux with a dot product
+        key_prerequisites: [physics.mechanics.dot-product-in-physics]
+      - id: kp2
+        can_do: Find flux through a flat surface
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+      - id: kp3
+        can_do: Use an angle between a field and normal
+        key_prerequisites: [physics.mechanics.dot-product-in-physics]
+      - id: kp4
+        can_do: Find flux through a closed box in a uniform field
+        key_prerequisites: [physics.hs2.uniform-electric-field]
+  - id: physics.em.flux-through-curved-surfaces
+    name: Calculating flux through curved surfaces
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.electric-flux
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.charge-densities
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a small piece's flux
+        key_prerequisites: [physics.em.electric-flux]
+      - id: kp2
+        can_do: Find flux through a sphere around a charge
+        key_prerequisites: [physics.em.electric-flux]
+      - id: kp3
+        can_do: Find flux through a cylinder
+        key_prerequisites: [physics.em.electric-flux]
+      - id: kp4
+        can_do: Find flux through part of a sphere with symmetry
+        key_prerequisites: [physics.em.charge-densities]
+  - id: physics.em.gauss-law-statement
+    name: Stating Gauss's law
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.flux-through-curved-surfaces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law
+        key_prerequisites: [physics.em.flux-through-curved-surfaces]
+      - id: kp2
+        can_do: Show that outside charges add no net flux
+        key_prerequisites: [physics.em.flux-through-curved-surfaces]
+      - id: kp3
+        can_do: Find a flux from an enclosed charge
+        key_prerequisites: [physics.em.flux-through-curved-surfaces]
+      - id: kp4
+        can_do: Explain why the law holds for any closed surface
+        key_prerequisites: [physics.em.flux-through-curved-surfaces]
+  - id: physics.em.choosing-gaussian-surfaces
+    name: Choosing a Gaussian surface
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-law-statement
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell when symmetry makes a law useful
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp2
+        can_do: Choose a sphere
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp3
+        can_do: Choose a cylinder
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp4
+        can_do: Choose a pillbox
+        key_prerequisites: [physics.em.gauss-law-statement]
+  - id: physics.em.gauss-for-spheres
+    name: Using Gauss's law with spherical symmetry
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.choosing-gaussian-surfaces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field outside a charged sphere
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp2
+        can_do: Find a field around a point charge
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp3
+        can_do: Find a field outside a shell
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp4
+        can_do: Find a field outside two spheres
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+  - id: physics.em.gauss-for-cylinders
+    name: Using Gauss's law with cylindrical symmetry
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.choosing-gaussian-surfaces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field near a long line
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp2
+        can_do: Find a field outside a long cylinder
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp3
+        can_do: Find a field inside a hollow cylinder
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp4
+        can_do: Compare to the integration result
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+  - id: physics.em.gauss-for-planes
+    name: Using Gauss's law with planar symmetry
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.choosing-gaussian-surfaces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field of a sheet
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp2
+        can_do: Find a field of a thick slab
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp3
+        can_do: Find a field of two parallel sheets
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+      - id: kp4
+        can_do: Compare with the disk limit
+        key_prerequisites: [physics.em.choosing-gaussian-surfaces]
+  - id: physics.em.nonuniform-charge-distributions
+    name: Using Gauss's law with nonuniform charge
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-for-spheres
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.gauss-for-cylinders
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.u-substitution-definite
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate enclosed charge in a sphere
+        key_prerequisites: [physics.em.gauss-for-spheres, math.calc1.u-substitution-definite]
+      - id: kp2
+        can_do: Integrate enclosed charge in a cylinder
+        key_prerequisites: [physics.em.gauss-for-cylinders, math.calc1.u-substitution-definite]
+      - id: kp3
+        can_do: Find a field with a density proportional to radius
+        key_prerequisites: [physics.em.gauss-for-spheres, math.calc1.u-substitution-definite]
+      - id: kp4
+        can_do: Find a total charge from a field
+        key_prerequisites: [physics.em.gauss-for-spheres]
+  - id: physics.em.inside-charged-objects
+    name: Finding the field inside charged objects
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-for-spheres
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field inside a uniform sphere
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp2
+        can_do: Sketch a field against radius
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp3
+        can_do: Find a field in a thick shell
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp4
+        can_do: Find the greatest field
+        key_prerequisites: [physics.em.gauss-for-spheres]
+  - id: physics.em.conductors-with-gauss
+    name: Using Gauss's law for conductors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.gauss-for-spheres
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.gauss-for-planes
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.conductors-in-equilibrium
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show charge rests on a surface
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp2
+        can_do: Find a field just outside a conductor
+        key_prerequisites: [physics.em.gauss-for-planes]
+      - id: kp3
+        can_do: Find a field near a curved surface
+        key_prerequisites: [physics.em.gauss-for-spheres]
+      - id: kp4
+        can_do: Find a surface charge density
+        key_prerequisites: [physics.hs2.conductors-in-equilibrium]
+  - id: physics.em.cavities-in-conductors
+    name: Finding charge on cavities in conductors
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.conductors-with-gauss
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show an empty cavity has no field
+        key_prerequisites: [physics.em.conductors-with-gauss]
+      - id: kp2
+        can_do: Find charge on an inner wall
+        key_prerequisites: [physics.em.conductors-with-gauss]
+      - id: kp3
+        can_do: Find charge on an outer wall
+        key_prerequisites: [physics.em.conductors-with-gauss]
+      - id: kp4
+        can_do: Explain electrostatic shielding
+        key_prerequisites: [physics.em.conductors-with-gauss]
+  - id: physics.em.coaxial-and-concentric-shells
+    name: Solving concentric shells and coaxial cylinders
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.conductors-with-gauss
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.gauss-for-cylinders
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a field in each region of two shells
+        key_prerequisites: [physics.em.conductors-with-gauss]
+      - id: kp2
+        can_do: Find induced charges on shells
+        key_prerequisites: [physics.em.conductors-with-gauss]
+      - id: kp3
+        can_do: Find a field in a coaxial cable
+        key_prerequisites: [physics.em.gauss-for-cylinders]
+      - id: kp4
+        can_do: Sketch a field with regions
+        key_prerequisites: [physics.em.conductors-with-gauss]
