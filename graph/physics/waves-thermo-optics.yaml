@@ -1,0 +1,827 @@
+course: physics.waves-thermo-optics
+topics:
+  - id: physics.waves-thermo-optics.wave-functions
+    name: Writing traveling wave functions
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.position-and-time-wave-graphs
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a sinusoidal wave moving right
+        key_prerequisites: [physics.hs1.position-and-time-wave-graphs, physics.mechanics.sinusoidal-solutions]
+      - id: kp2
+        can_do: Write a wave moving left
+        key_prerequisites: [physics.hs1.position-and-time-wave-graphs]
+      - id: kp3
+        can_do: Find amplitude, wavelength and period from a wave function
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Write a wave from a graph with a phase constant
+        key_prerequisites: [physics.hs1.position-and-time-wave-graphs, physics.mechanics.sinusoidal-solutions]
+  - id: physics.waves-thermo-optics.wave-number-and-angular-frequency
+    name: Using wave number and angular frequency
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-functions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wave number from wavelength
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp2
+        can_do: Find angular frequency from period
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp3
+        can_do: Find wave speed from both quantities
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp4
+        can_do: Convert between the two common forms of a wave
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+  - id: physics.waves-thermo-optics.particle-velocity-in-a-wave
+    name: Finding particle velocity in a wave with partial derivatives
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-number-and-angular-frequency
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Take a partial derivative with time held fixed
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Find transverse velocity of a string element
+        key_prerequisites: [physics.waves-thermo-optics.wave-number-and-angular-frequency, math.calc3.partial-derivatives-compute]
+      - id: kp3
+        can_do: Find transverse acceleration of an element
+        key_prerequisites: [physics.waves-thermo-optics.wave-number-and-angular-frequency, math.calc3.partial-derivatives-compute]
+      - id: kp4
+        can_do: Compare particle speed with wave speed
+        key_prerequisites: [physics.waves-thermo-optics.wave-number-and-angular-frequency]
+  - id: physics.waves-thermo-optics.wave-equation-one-dimension
+    name: Checking solutions of the one-dimensional wave equation
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.particle-velocity-in-a-wave
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc3.higher-partials
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the one-dimensional wave equation
+        key_prerequisites: [math.calc3.higher-partials]
+      - id: kp2
+        can_do: Check that a sinusoid solves it
+        key_prerequisites: [physics.waves-thermo-optics.particle-velocity-in-a-wave, math.calc3.higher-partials]
+      - id: kp3
+        can_do: Read wave speed from the equation
+        key_prerequisites: [physics.waves-thermo-optics.particle-velocity-in-a-wave]
+      - id: kp4
+        can_do: Check whether a given function is a solution
+        key_prerequisites: [math.calc3.higher-partials]
+  - id: physics.waves-thermo-optics.string-wave-equation-derivation
+    name: Deriving the wave equation for a string
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-equation-one-dimension
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.tension-in-a-massive-rope
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw forces on a small piece of string
+        key_prerequisites: [physics.mechanics.tension-in-a-massive-rope]
+      - id: kp2
+        can_do: Apply Newton's second law to the piece
+        key_prerequisites: [physics.mechanics.tension-in-a-massive-rope]
+      - id: kp3
+        can_do: Use small slopes to reach the wave equation
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension]
+      - id: kp4
+        can_do: Find wave speed from tension and density
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension]
+  - id: physics.waves-thermo-optics.general-traveling-solutions
+    name: Recognizing any shape moving at constant speed as a wave
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-equation-one-dimension
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.chain-rule-multivariable
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show any function of position minus speed times time solves the equation
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension, math.calc3.chain-rule-multivariable]
+      - id: kp2
+        can_do: Write a pulse moving at a given speed
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension]
+      - id: kp3
+        can_do: Write a solution as two opposite pulses
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension]
+      - id: kp4
+        can_do: Find a pulse's shape at a later time
+        key_prerequisites: [math.calc3.chain-rule-multivariable]
+  - id: physics.waves-thermo-optics.complex-wave-notation
+    name: Writing waves with complex exponentials
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-functions
+        encompassing: 0.3
+        confidence: high
+      - topic: math.precalc.polar-form-complex
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc2.series-for-exp
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a cosine as the real part of an exponential
+        key_prerequisites: [math.precalc.polar-form-complex, math.calc2.series-for-exp]
+      - id: kp2
+        can_do: Write a wave as a complex exponential
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp3
+        can_do: Differentiate a complex wave
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp4
+        can_do: Add two waves using complex exponentials
+        key_prerequisites: [math.precalc.polar-form-complex]
+  - id: physics.waves-thermo-optics.energy-on-a-string
+    name: Finding energy carried by a string wave
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.string-wave-equation-derivation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.mechanics.energy-of-shm-with-calculus
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find kinetic energy per length of a string
+        key_prerequisites: [physics.waves-thermo-optics.string-wave-equation-derivation]
+      - id: kp2
+        can_do: Find potential energy per length from stretching
+        key_prerequisites: [physics.waves-thermo-optics.string-wave-equation-derivation]
+      - id: kp3
+        can_do: Show both energies peak together in a traveling wave
+        key_prerequisites: [physics.waves-thermo-optics.string-wave-equation-derivation]
+      - id: kp4
+        can_do: Find energy per wavelength
+        key_prerequisites: [physics.waves-thermo-optics.string-wave-equation-derivation, physics.mechanics.energy-of-shm-with-calculus]
+  - id: physics.waves-thermo-optics.power-of-a-string-wave
+    name: Finding average power of a string wave
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.energy-on-a-string
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find instantaneous power through a point
+        key_prerequisites: [physics.waves-thermo-optics.energy-on-a-string]
+      - id: kp2
+        can_do: Find average power of a sinusoidal wave
+        key_prerequisites: [physics.waves-thermo-optics.energy-on-a-string]
+      - id: kp3
+        can_do: Find how power scales with amplitude and frequency
+        key_prerequisites: [physics.waves-thermo-optics.energy-on-a-string]
+      - id: kp4
+        can_do: Find amplitude for a given power
+        key_prerequisites: [physics.waves-thermo-optics.energy-on-a-string]
+  - id: physics.waves-thermo-optics.waves-in-two-and-three-dimensions
+    name: Writing plane and spherical waves
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-functions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.dot-product-in-physics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a plane wave with a wave vector
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions, physics.mechanics.dot-product-in-physics]
+      - id: kp2
+        can_do: Find wave fronts of a plane wave
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp3
+        can_do: Write a spherical wave
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp4
+        can_do: Find the direction of travel from a wave vector
+        key_prerequisites: [physics.mechanics.dot-product-in-physics]
+  - id: physics.waves-thermo-optics.spherical-wave-intensity
+    name: Finding intensity of spherical waves
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.waves-in-two-and-three-dimensions
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.power-of-a-string-wave
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intensity from power spread over a sphere
+        key_prerequisites: [physics.waves-thermo-optics.power-of-a-string-wave]
+      - id: kp2
+        can_do: Find how amplitude falls with distance
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp3
+        can_do: Compare intensities at two distances
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp4
+        can_do: Find source power from a measured intensity
+        key_prerequisites: [physics.waves-thermo-optics.power-of-a-string-wave]
+  - id: physics.waves-thermo-optics.reflection-at-a-boundary
+    name: Finding reflected and transmitted waves at a junction
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.general-traveling-solutions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.boundary-behaviour
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply continuity at a junction of strings
+        key_prerequisites: [physics.waves-thermo-optics.general-traveling-solutions]
+      - id: kp2
+        can_do: Apply equal slopes at a junction
+        key_prerequisites: [physics.waves-thermo-optics.general-traveling-solutions]
+      - id: kp3
+        can_do: Find reflected and transmitted amplitudes
+        key_prerequisites: [physics.waves-thermo-optics.general-traveling-solutions]
+      - id: kp4
+        can_do: Find when reflection inverts a pulse
+        key_prerequisites: [physics.hs1.boundary-behaviour]
+  - id: physics.waves-thermo-optics.impedance-of-a-string
+    name: Using wave impedance at a string junction
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.reflection-at-a-boundary
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define string impedance
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+      - id: kp2
+        can_do: Write reflection coefficients with impedances
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+      - id: kp3
+        can_do: Find transmitted power fraction
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+      - id: kp4
+        can_do: Check energy balance at a junction
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+  - id: physics.waves-thermo-optics.superposing-sinusoidal-waves
+    name: Adding sinusoidal waves with trig identities
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-functions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.superposition
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add two waves of equal frequency and different phase
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp2
+        can_do: Find the resulting amplitude
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp3
+        can_do: Find conditions for constructive and destructive interference
+        key_prerequisites: [physics.hs1.superposition]
+      - id: kp4
+        can_do: Add waves with unequal amplitudes using a phasor
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+  - id: physics.waves-thermo-optics.standing-waves-from-superposition
+    name: Building standing waves from opposite traveling waves
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.standing-waves-on-strings
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add two opposite waves with a sum-to-product identity
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp2
+        can_do: Locate nodes and antinodes
+        key_prerequisites: [physics.hs1.standing-waves-on-strings]
+      - id: kp3
+        can_do: Find the motion of a point on a standing wave
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp4
+        can_do: Tell standing waves from traveling waves
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+  - id: physics.waves-thermo-optics.normal-modes-of-a-string
+    name: Finding normal modes of a fixed string
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.standing-waves-from-superposition
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.string-wave-equation-derivation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find allowed wavelengths with fixed ends
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition]
+      - id: kp2
+        can_do: Find mode frequencies
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition, physics.waves-thermo-optics.string-wave-equation-derivation]
+      - id: kp3
+        can_do: Find modes with one free end
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition]
+      - id: kp4
+        can_do: Find tension for a given fundamental
+        key_prerequisites: [physics.waves-thermo-optics.string-wave-equation-derivation]
+  - id: physics.waves-thermo-optics.energy-in-standing-waves
+    name: Finding energy in standing waves
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.standing-waves-from-superposition
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.energy-on-a-string
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy in a single mode
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition, physics.waves-thermo-optics.energy-on-a-string]
+      - id: kp2
+        can_do: Track energy between kinetic and potential forms
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition]
+      - id: kp3
+        can_do: Show modes carry no net power
+        key_prerequisites: [physics.waves-thermo-optics.standing-waves-from-superposition]
+      - id: kp4
+        can_do: Compare energy in two modes
+        key_prerequisites: [physics.waves-thermo-optics.energy-on-a-string]
+  - id: physics.waves-thermo-optics.fourier-synthesis-of-waves
+    name: Building periodic waves from harmonics
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.normal-modes-of-a-string
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Build a square wave from odd harmonics
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+      - id: kp2
+        can_do: Build a sawtooth from harmonics
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+      - id: kp3
+        can_do: Describe a plucked string as a sum of modes
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+      - id: kp4
+        can_do: Relate timbre to harmonic content
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+  - id: physics.waves-thermo-optics.harmonic-amplitudes-by-integration
+    name: Finding harmonic amplitudes with integrals
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.fourier-synthesis-of-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.trig-products-different-angles
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use orthogonality of sines
+        key_prerequisites: [math.calc2.trig-products-different-angles]
+      - id: kp2
+        can_do: Find harmonic amplitudes for a square wave
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves, math.calc2.trig-products-different-angles]
+      - id: kp3
+        can_do: Find harmonic amplitudes for a triangle wave
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves, math.calc2.trig-products-different-angles]
+      - id: kp4
+        can_do: Find harmonics of a plucked string
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves]
+  - id: physics.waves-thermo-optics.membrane-modes
+    name: Describing modes of a rectangular membrane
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.normal-modes-of-a-string
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.waves-in-two-and-three-dimensions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a mode of a rectangular membrane
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string, physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp2
+        can_do: Find mode frequencies
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+      - id: kp3
+        can_do: Find degenerate modes of a square membrane
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+      - id: kp4
+        can_do: Sketch nodal lines
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+  - id: physics.waves-thermo-optics.beats-with-trig-identities
+    name: Deriving beats with sum-to-product identities
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.beats-in-sound
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add two close frequencies with sum-to-product
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp2
+        can_do: Find the beat frequency
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves, physics.hs1.beats-in-sound]
+      - id: kp3
+        can_do: Find the envelope and carrier
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp4
+        can_do: Find an unknown frequency from beats
+        key_prerequisites: [physics.hs1.beats-in-sound]
+  - id: physics.waves-thermo-optics.wave-packets
+    name: Describing wave packets and their spread
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.beats-with-trig-identities
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.fourier-synthesis-of-waves
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a packet from a narrow band of frequencies
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves]
+      - id: kp2
+        can_do: Relate packet length to frequency spread
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves]
+      - id: kp3
+        can_do: Sketch a packet and its envelope
+        key_prerequisites: [physics.waves-thermo-optics.beats-with-trig-identities]
+      - id: kp4
+        can_do: Estimate the bandwidth of a short pulse
+        key_prerequisites: [physics.waves-thermo-optics.fourier-synthesis-of-waves]
+  - id: physics.waves-thermo-optics.group-and-phase-velocity
+    name: Finding group and phase velocity
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-packets
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.wave-number-and-angular-frequency
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define phase velocity
+        key_prerequisites: [physics.waves-thermo-optics.wave-number-and-angular-frequency]
+      - id: kp2
+        can_do: Define group velocity as a derivative
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets]
+      - id: kp3
+        can_do: Find both velocities from a dispersion relation
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets, physics.waves-thermo-optics.wave-number-and-angular-frequency]
+      - id: kp4
+        can_do: Show they match without dispersion
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets]
+  - id: physics.waves-thermo-optics.dispersion-relations
+    name: Using dispersion relations
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.group-and-phase-velocity
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the dispersion relation for a string
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp2
+        can_do: Find group velocity for deep water waves
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp3
+        can_do: Find group velocity for a stiff string
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp4
+        can_do: Describe how dispersion spreads a pulse
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+  - id: physics.waves-thermo-optics.sound-as-pressure-wave
+    name: Describing sound as pressure and displacement waves
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-functions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.sound-speed-factors
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a displacement wave for sound
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp2
+        can_do: Write the matching pressure wave
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp3
+        can_do: Find the phase shift between pressure and displacement
+        key_prerequisites: [physics.waves-thermo-optics.wave-functions]
+      - id: kp4
+        can_do: Find pressure amplitude from displacement amplitude
+        key_prerequisites: [physics.hs1.sound-speed-factors]
+  - id: physics.waves-thermo-optics.speed-of-sound-derivation
+    name: Deriving the speed of sound from bulk modulus
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.sound-as-pressure-wave
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.shear-and-bulk-moduli
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Newton's law to a slab of fluid
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp2
+        can_do: Use bulk modulus to relate pressure and compression
+        key_prerequisites: [physics.mechanics.shear-and-bulk-moduli]
+      - id: kp3
+        can_do: Find sound speed in a fluid
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave, physics.mechanics.shear-and-bulk-moduli]
+      - id: kp4
+        can_do: Find sound speed in an ideal gas from the adiabatic modulus
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+  - id: physics.waves-thermo-optics.sound-intensity-and-pressure
+    name: Relating sound intensity to pressure amplitude
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.sound-as-pressure-wave
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.spherical-wave-intensity
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intensity from pressure amplitude
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp2
+        can_do: Find pressure amplitude from intensity
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp3
+        can_do: Find intensity at a distance from a source
+        key_prerequisites: [physics.waves-thermo-optics.spherical-wave-intensity]
+      - id: kp4
+        can_do: Find displacement amplitude of a loud sound
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+  - id: physics.waves-thermo-optics.decibel-calculations
+    name: Combining sound levels in decibels
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.sound-intensity-and-pressure
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.sound-intensity
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Convert intensity to decibels
+        key_prerequisites: [physics.hs1.sound-intensity]
+      - id: kp2
+        can_do: Find a level change from an intensity ratio
+        key_prerequisites: [physics.waves-thermo-optics.sound-intensity-and-pressure]
+      - id: kp3
+        can_do: Combine two sources in decibels
+        key_prerequisites: [physics.waves-thermo-optics.sound-intensity-and-pressure]
+      - id: kp4
+        can_do: Find level change with distance
+        key_prerequisites: [physics.waves-thermo-optics.sound-intensity-and-pressure]
+  - id: physics.waves-thermo-optics.pipe-modes-from-boundary-conditions
+    name: Finding pipe modes from boundary conditions
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.normal-modes-of-a-string
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.sound-as-pressure-wave
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.open-and-closed-pipes
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Set pressure nodes at open ends
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp2
+        can_do: Set displacement nodes at closed ends
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp3
+        can_do: Find modes of open and closed pipes
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string, physics.hs1.open-and-closed-pipes]
+      - id: kp4
+        can_do: Correct for end effects
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+  - id: physics.waves-thermo-optics.doppler-general
+    name: Deriving the Doppler effect for moving source and observer
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.sound-as-pressure-wave
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.doppler-sound
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the shift for a moving source
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp2
+        can_do: Derive the shift for a moving observer
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp3
+        can_do: Combine both motions
+        key_prerequisites: [physics.hs1.doppler-sound]
+      - id: kp4
+        can_do: Find a source speed from a measured shift
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+  - id: physics.waves-thermo-optics.shock-waves
+    name: Finding Mach cone angles
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.doppler-general
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the Mach number
+        key_prerequisites: [physics.waves-thermo-optics.doppler-general]
+      - id: kp2
+        can_do: Find the Mach cone angle
+        key_prerequisites: [physics.waves-thermo-optics.doppler-general]
+      - id: kp3
+        can_do: Find when a shock reaches an observer
+        key_prerequisites: [physics.waves-thermo-optics.doppler-general]
+      - id: kp4
+        can_do: Describe a sonic boom
+        key_prerequisites: [physics.waves-thermo-optics.doppler-general]
+  - id: physics.waves-thermo-optics.acoustic-impedance
+    name: Finding reflection with acoustic impedance
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.impedance-of-a-string
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.sound-as-pressure-wave
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define acoustic impedance
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp2
+        can_do: Find reflection at a boundary between media
+        key_prerequisites: [physics.waves-thermo-optics.impedance-of-a-string, physics.waves-thermo-optics.sound-as-pressure-wave]
+      - id: kp3
+        can_do: Find transmitted intensity fraction
+        key_prerequisites: [physics.waves-thermo-optics.impedance-of-a-string]
+      - id: kp4
+        can_do: Explain why ultrasound needs a gel
+        key_prerequisites: [physics.waves-thermo-optics.sound-as-pressure-wave]
