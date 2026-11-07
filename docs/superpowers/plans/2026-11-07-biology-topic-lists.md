@@ -35,10 +35,10 @@ Every course came in well under budget. The school courses absorb what the intro
 | intro1 | 33 | 190 | 35 |
 | intro2 | 54 | 190 | 55 |
 | cell-mol | 53 | 170 | 55 |
-| genetics | 41 | 170 | 45 |
+| genetics | 40 | 170 | 45 |
 | biochem | 52 (2 moved in) | 180 | 55 |
 | ecology | 33 | 140 | 35 |
-| evolution | 32 | 120 | 35 |
+| evolution | 33 | 120 | 35 |
 | micro | 37 | 160 | 40 |
 | anat-phys1 | 59 | 180 | 60 |
 | anat-phys2 | 57 | 180 | 60 |
@@ -683,7 +683,9 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 | Detecting proteins by western blot and immunostaining | `protein-detection-methods` | uni-upper | `cell-fractionation` |
 | Using knockouts and RNA interference to test function | `loss-of-function-methods` | uni-upper | `intro1.noncoding-rna`, `intro1.model-organisms` |
 
-## bio.genetics: 41 topics
+## bio.genetics: 40 topics
+
+Follows `bio.intro1`, `math.stats` and `math.alg2` (mapping functions need natural logs). Mutation-selection balance moved to evolution, after `selection-models`, because it needs selection coefficients. Knowledge points and weights were drafted by an external model from `2026-11-07-bio-genetics-external-prompt.md`, then verified and corrected.
 
 ### Transmission genetics
 
@@ -702,7 +704,7 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 |---|---|---|---|
 | Mapping genes with three-point crosses | `three-point-mapping` | uni-upper | `hs2.linked-genes-and-recombination` |
 | Calculating interference | `interference-and-coincidence` | uni-upper | `three-point-mapping` |
-| Correcting map distances for multiple crossovers | `mapping-functions` | uni-upper | `interference-and-coincidence` |
+| Correcting map distances for multiple crossovers | `mapping-functions` | uni-upper | `interference-and-coincidence`, `alg2.common-natural-logs` |
 | Mapping with tetrad analysis | `tetrad-analysis` | uni-upper | `three-point-mapping` |
 | Using LOD scores for human linkage | `lod-scores` | uni-upper | `three-point-mapping`, `pedigree-risk` |
 
@@ -714,7 +716,7 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 | Explaining aneuploidy and polyploidy | `aneuploidy-and-polyploidy` | uni-upper | `cytogenetics`, `hs1.nondisjunction` |
 | Predicting meiotic consequences of inversions and translocations | `rearrangements-in-meiosis` | uni-upper | `aneuploidy-and-polyploidy` |
 | Explaining mitochondrial and chloroplast inheritance | `organelle-inheritance` | uni-upper | `intro1.chromosome-theory-of-inheritance` |
-| Explaining genomic imprinting | `genomic-imprinting` | uni-upper | `intro1.x-inactivation` |
+| Explaining genomic imprinting | `genomic-imprinting` | uni-upper | `intro1.x-inactivation` (implied: `hs2.epigenetics-intro`) |
 
 ### Bacterial and viral genetics
 
@@ -740,10 +742,10 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 
 | Topic | Slug | Level | Needs |
 |---|---|---|---|
-| Comparing sequencing technologies | `sequencing-technologies` | uni-upper | `intro1.genome-organization` |
+| Comparing sequencing technologies | `sequencing-technologies` | uni-upper | `intro1.genome-organization` (implied: `hs2.dna-sequencing-intro`) |
 | Describing genome assembly and annotation | `genome-assembly-and-annotation` | uni-upper | `sequencing-technologies` |
 | Using comparative genomics | `comparative-genomics` | uni-upper | `genome-assembly-and-annotation` |
-| Using reverse genetics and gene editing | `reverse-genetics-and-editing` | uni-upper | `intro1.cloning-vectors`, `hs1.gene-editing-intro` |
+| Using reverse genetics and gene editing | `reverse-genetics-and-editing` | uni-upper | `intro1.cloning-vectors`, `hs1.gene-editing-intro`, `intro1.dna-repair` |
 | Making transgenic organisms | `transgenic-organisms` | uni-upper | `reverse-genetics-and-editing` |
 | Describing gene therapy | `gene-therapy` | uni-upper | `transgenic-organisms` |
 | Evaluating genetic testing and its ethics | `genetic-testing` | uni-upper | `disorder-mechanisms` |
@@ -758,7 +760,6 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 | Interpreting genome-wide association studies | `association-studies` | uni-upper | `lod-scores`, `quantitative-traits` |
 | Calculating allele and genotype frequencies | `allele-frequency-calculations` | uni-upper | `hs2.hardy-weinberg` |
 | Calculating inbreeding coefficients | `inbreeding` | uni-upper | `allele-frequency-calculations` |
-| Finding mutation-selection balance | `mutation-selection-balance` | uni-upper | `allele-frequency-calculations` |
 | Calculating effects of drift and effective population size | `drift-and-effective-size` | uni-upper | `allele-frequency-calculations` |
 
 ## bio.biochem: 52 topics
@@ -925,13 +926,14 @@ Left out: botany and zoology as separate courses, developmental biology, immunol
 | Designing nature reserves | `reserve-design` | uni-upper | `population-viability`, `landscape-ecology` |
 | Predicting ecological responses to climate change | `climate-change-ecology` | uni-upper | `carbon-budgets`, `species-distribution-models` |
 
-## bio.evolution: 32 topics
+## bio.evolution: 33 topics
 
 ### Population genetic models
 
 | Topic | Slug | Level | Needs |
 |---|---|---|---|
 | Modelling selection on allele frequencies | `selection-models` | uni-upper | `genetics.allele-frequency-calculations` |
+| Finding mutation-selection balance | `mutation-selection-balance` | uni-upper | `selection-models` |
 | Explaining heterozygote advantage | `heterozygote-advantage` | uni-upper | `selection-models` |
 | Explaining frequency-dependent selection | `frequency-dependent-selection` | uni-upper | `selection-models` |
 | Finding fixation probability under drift | `fixation-probability` | uni-upper | `genetics.drift-and-effective-size` |

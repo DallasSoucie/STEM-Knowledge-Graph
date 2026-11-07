@@ -1,0 +1,979 @@
+course: bio.genetics
+topics:
+  - id: bio.genetics.binomial-probability-in-families
+    name: Using binomial probability for families
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.probability-rules-in-genetics
+        encompassing: 0.55
+        confidence: high
+      - topic: math.stats.binomial-calculations
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate probabilities of genotype combinations among offspring
+        key_prerequisites: [bio.hs2.probability-rules-in-genetics, math.stats.binomial-calculations]
+      - id: kp2
+        can_do: Calculate probabilities of at least one affected offspring
+        key_prerequisites: [bio.hs2.probability-rules-in-genetics, math.stats.binomial-calculations]
+      - id: kp3
+        can_do: Combine sex and genotype probabilities across several children
+        key_prerequisites: [bio.hs2.probability-rules-in-genetics, math.stats.binomial-calculations]
+      - id: kp4
+        can_do: Find family probabilities given some children's phenotypes
+        key_prerequisites: [bio.hs2.probability-rules-in-genetics, math.stats.binomial-calculations]
+  - id: bio.genetics.chi-square-tests-of-crosses
+    name: Testing cross data with chi-square
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.stats.chi-square-gof
+        encompassing: 0.8
+        confidence: high
+      - topic: bio.hs1.dihybrid-crosses
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate expected counts under a dihybrid inheritance model
+        key_prerequisites: [math.stats.chi-square-gof, bio.hs1.dihybrid-crosses]
+      - id: kp2
+        can_do: Assign degrees of freedom for genetic cross hypotheses
+        key_prerequisites: [math.stats.chi-square-gof]
+      - id: kp3
+        can_do: Judge cross deviations with chi-square and significance levels
+        key_prerequisites: [math.stats.chi-square-gof, bio.hs1.dihybrid-crosses]
+      - id: kp4
+        can_do: Compare alternative inheritance models against observed offspring counts
+        key_prerequisites: [math.stats.chi-square-gof, bio.hs1.dihybrid-crosses]
+  - id: bio.genetics.lethal-alleles-and-penetrance
+    name: Analyzing lethal alleles, penetrance and expressivity
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.epistasis
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Infer lethal genotypes from missing offspring classes
+        key_prerequisites: [bio.intro1.epistasis]
+      - id: kp2
+        can_do: Predict surviving phenotype ratios when a genotype is lethal
+        key_prerequisites: [bio.intro1.epistasis]
+      - id: kp3
+        can_do: Estimate penetrance from genotype-specific phenotype counts
+        key_prerequisites: [bio.intro1.epistasis]
+      - id: kp4
+        can_do: Distinguish reduced penetrance from variable expressivity in cross data
+        key_prerequisites: [bio.intro1.epistasis]
+  - id: bio.genetics.complementation-tests
+    name: Using complementation tests
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.lethal-alleles-and-penetrance
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish complementation from noncomplementation in recessive mutants
+        key_prerequisites: [bio.genetics.lethal-alleles-and-penetrance]
+      - id: kp2
+        can_do: Assign mutants to complementation groups from pairwise results
+        key_prerequisites: [bio.genetics.lethal-alleles-and-penetrance]
+      - id: kp3
+        can_do: Identify viability and penetrance effects that obscure complementation
+        key_prerequisites: [bio.genetics.lethal-alleles-and-penetrance]
+      - id: kp4
+        can_do: Explain exceptions such as intragenic complementation
+        key_prerequisites: [bio.genetics.lethal-alleles-and-penetrance]
+  - id: bio.genetics.pedigree-risk
+    name: Calculating risks from pedigrees
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs1.pedigrees
+        encompassing: 0.75
+        confidence: high
+      - topic: bio.genetics.binomial-probability-in-families
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Infer carrier probabilities for unaffected relatives of affected individuals
+        key_prerequisites: [bio.hs1.pedigrees]
+      - id: kp2
+        can_do: Update carrier probabilities using informative relatives and offspring
+        key_prerequisites: [bio.hs1.pedigrees]
+      - id: kp3
+        can_do: Calculate recurrence risks across several future children
+        key_prerequisites: [bio.hs1.pedigrees, bio.genetics.binomial-probability-in-families]
+      - id: kp4
+        can_do: Combine uncertain parental genotypes with binomial family probabilities
+        key_prerequisites: [bio.hs1.pedigrees, bio.genetics.binomial-probability-in-families]
+  - id: bio.genetics.disorder-mechanisms
+    name: Relating genetic disorders to molecular mechanisms
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.pedigree-risk
+        encompassing: 0.35
+        confidence: medium
+      - topic: bio.hs1.genetic-disorders
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate recessive disorder patterns to molecular loss of function
+        key_prerequisites: [bio.genetics.pedigree-risk, bio.hs1.genetic-disorders]
+      - id: kp2
+        can_do: Distinguish haploinsufficiency, dominant-negative and gain-of-function effects
+        key_prerequisites: [bio.hs1.genetic-disorders]
+      - id: kp3
+        can_do: Compare molecular mechanisms consistent with dominant disorder pedigrees
+        key_prerequisites: [bio.genetics.pedigree-risk, bio.hs1.genetic-disorders]
+      - id: kp4
+        can_do: Predict pedigree patterns from a described molecular defect
+        key_prerequisites: [bio.genetics.pedigree-risk, bio.hs1.genetic-disorders]
+  - id: bio.genetics.three-point-mapping
+    name: Mapping genes with three-point crosses
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.linked-genes-and-recombination
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify parental and double crossover classes in three-point testcrosses
+        key_prerequisites: [bio.hs2.linked-genes-and-recombination]
+      - id: kp2
+        can_do: Infer gene order by comparing parental and double crossover classes
+        key_prerequisites: [bio.hs2.linked-genes-and-recombination]
+      - id: kp3
+        can_do: Calculate interval distances while counting double crossovers correctly
+        key_prerequisites: [bio.hs2.linked-genes-and-recombination]
+      - id: kp4
+        can_do: Construct a genetic map from three-point testcross data
+        key_prerequisites: [bio.hs2.linked-genes-and-recombination]
+  - id: bio.genetics.interference-and-coincidence
+    name: Calculating interference
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.three-point-mapping
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate expected double crossovers from interval recombination frequencies
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp2
+        can_do: Calculate the coefficient of coincidence from observed and expected crossovers
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp3
+        can_do: Calculate interference and interpret its sign and size
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp4
+        can_do: Predict progeny class frequencies given interference
+        key_prerequisites: [bio.genetics.three-point-mapping]
+  - id: bio.genetics.mapping-functions
+    name: Correcting map distances for multiple crossovers
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.interference-and-coincidence
+        encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.common-natural-logs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why multiple crossovers hide genetic map distance
+        key_prerequisites: [bio.genetics.interference-and-coincidence]
+      - id: kp2
+        can_do: Calculate corrected distances with the Haldane mapping function
+        key_prerequisites: [bio.genetics.interference-and-coincidence, math.alg2.common-natural-logs]
+      - id: kp3
+        can_do: Compare Haldane and Kosambi distances for one recombination frequency
+        key_prerequisites: [bio.genetics.interference-and-coincidence, math.alg2.common-natural-logs]
+      - id: kp4
+        can_do: Choose a mapping function from evidence about interference
+        key_prerequisites: [bio.genetics.interference-and-coincidence]
+  - id: bio.genetics.tetrad-analysis
+    name: Mapping with tetrad analysis
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.three-point-mapping
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify unordered tetrads as parental ditypes, nonparental ditypes or tetratypes
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp2
+        can_do: Calculate gene distances from unordered tetrad counts
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp3
+        can_do: Find gene-centromere distances from ordered tetrad patterns
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp4
+        can_do: Reconcile gene order with tetrad linkage and centromere distances
+        key_prerequisites: [bio.genetics.three-point-mapping]
+  - id: bio.genetics.lod-scores
+    name: Using LOD scores for human linkage
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.three-point-mapping
+        encompassing: 0.35
+        confidence: medium
+      - topic: bio.genetics.pedigree-risk
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify informative meioses for an assumed linkage phase
+        key_prerequisites: [bio.genetics.three-point-mapping, bio.genetics.pedigree-risk]
+      - id: kp2
+        can_do: Calculate LOD scores at given recombination fractions
+        key_prerequisites: [bio.genetics.three-point-mapping, bio.genetics.pedigree-risk]
+      - id: kp3
+        can_do: Combine LOD scores from independent families
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp4
+        can_do: Interpret peak LOD scores when linkage phase is unknown
+        key_prerequisites: [bio.genetics.three-point-mapping, bio.genetics.pedigree-risk]
+  - id: bio.genetics.cytogenetics
+    name: Describing centromeres, banding and chromosome structure
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.chromosomal-rearrangements
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify chromosomes by centromere position
+        key_prerequisites: [bio.intro1.chromosomal-rearrangements]
+      - id: kp2
+        can_do: Locate rearrangement breakpoints using band notation
+        key_prerequisites: [bio.intro1.chromosomal-rearrangements]
+      - id: kp3
+        can_do: Distinguish balanced rearrangements from gains or losses of material
+        key_prerequisites: [bio.intro1.chromosomal-rearrangements]
+      - id: kp4
+        can_do: Interpret karyotype notation for combined structural abnormalities
+        key_prerequisites: [bio.intro1.chromosomal-rearrangements]
+  - id: bio.genetics.aneuploidy-and-polyploidy
+    name: Explaining aneuploidy and polyploidy
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.cytogenetics
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: bio.hs1.nondisjunction
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish whole-set ploidy changes from single chromosome dosage changes
+        key_prerequisites: [bio.genetics.cytogenetics, bio.hs1.nondisjunction]
+      - id: kp2
+        can_do: Infer the meiotic stage of nondisjunction from centromere markers
+        key_prerequisites: [bio.genetics.cytogenetics, bio.hs1.nondisjunction]
+      - id: kp3
+        can_do: Predict fertility from homolog pairing in different ploidy states
+        key_prerequisites: [bio.genetics.cytogenetics]
+      - id: kp4
+        can_do: Interpret karyotypes combining altered ploidy and chromosome imbalance
+        key_prerequisites: [bio.genetics.cytogenetics, bio.hs1.nondisjunction]
+  - id: bio.genetics.rearrangements-in-meiosis
+    name: Predicting meiotic consequences of inversions and translocations
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.aneuploidy-and-polyploidy
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Predict pairing configurations in inversion and translocation heterozygotes
+        key_prerequisites: [bio.genetics.aneuploidy-and-polyploidy]
+      - id: kp2
+        can_do: Distinguish crossover products of paracentric and pericentric inversions
+        key_prerequisites: [bio.genetics.aneuploidy-and-polyploidy]
+      - id: kp3
+        can_do: Predict dosage imbalances from reciprocal translocation segregation
+        key_prerequisites: [bio.genetics.aneuploidy-and-polyploidy]
+      - id: kp4
+        can_do: Calculate viable offspring proportions from meiotic products
+        key_prerequisites: [bio.genetics.aneuploidy-and-polyploidy]
+  - id: bio.genetics.organelle-inheritance
+    name: Explaining mitochondrial and chloroplast inheritance
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.chromosome-theory-of-inheritance
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish organelle from nuclear inheritance using reciprocal crosses
+        key_prerequisites: [bio.intro1.chromosome-theory-of-inheritance]
+      - id: kp2
+        can_do: Predict offspring variation from heteroplasmy and replicative segregation
+        key_prerequisites: [bio.intro1.chromosome-theory-of-inheritance]
+      - id: kp3
+        can_do: Explain bottleneck effects on organelle genotype proportions
+        key_prerequisites: [bio.intro1.chromosome-theory-of-inheritance]
+      - id: kp4
+        can_do: Interpret pedigrees with organelle transmission and threshold effects
+        key_prerequisites: [bio.intro1.chromosome-theory-of-inheritance]
+  - id: bio.genetics.genomic-imprinting
+    name: Explaining genomic imprinting
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.x-inactivation
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: bio.hs2.epigenetics-intro
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish imprinting from X chromosome inactivation
+        key_prerequisites: [bio.intro1.x-inactivation, bio.hs2.epigenetics-intro]
+      - id: kp2
+        can_do: Predict expression after imprints are erased and reset
+        key_prerequisites: [bio.hs2.epigenetics-intro]
+      - id: kp3
+        can_do: Interpret reciprocal crosses showing parent-of-origin expression
+        key_prerequisites: [bio.hs2.epigenetics-intro]
+      - id: kp4
+        can_do: Predict phenotypes from imprinted deletions and uniparental disomy
+        key_prerequisites: [bio.intro1.x-inactivation, bio.hs2.epigenetics-intro]
+  - id: bio.genetics.conjugation-mapping
+    name: Mapping genes by conjugation
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.plasmids-and-transformation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict transferred gene order from Hfr integration orientation
+        key_prerequisites: [bio.hs2.plasmids-and-transformation]
+      - id: kp2
+        can_do: Infer gene order from interrupted mating entry times
+        key_prerequisites: [bio.hs2.plasmids-and-transformation]
+      - id: kp3
+        can_do: Calculate relative map distances from entry time differences
+        key_prerequisites: [bio.hs2.plasmids-and-transformation]
+      - id: kp4
+        can_do: Reconstruct circular gene maps from several Hfr strains
+        key_prerequisites: [bio.hs2.plasmids-and-transformation]
+  - id: bio.genetics.transduction-mapping
+    name: Mapping genes by transduction and transformation
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.conjugation-mapping
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Infer marker proximity from cotransduction and cotransformation frequencies
+        key_prerequisites: [bio.genetics.conjugation-mapping]
+      - id: kp2
+        can_do: Determine gene order from selected and unselected cotransduction classes
+        key_prerequisites: [bio.genetics.conjugation-mapping]
+      - id: kp3
+        can_do: Interpret cotransformation data from DNA fragments of different lengths
+        key_prerequisites: [bio.genetics.conjugation-mapping]
+      - id: kp4
+        can_do: Reconcile conjugation maps with cotransduction and cotransformation evidence
+        key_prerequisites: [bio.genetics.conjugation-mapping]
+  - id: bio.genetics.phage-genetics
+    name: Analyzing phage crosses
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.viral-life-cycles
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify parental and recombinant phage classes from plaque phenotypes
+        key_prerequisites: [bio.intro1.viral-life-cycles]
+      - id: kp2
+        can_do: Distinguish complementation from recombination in mixed infections
+        key_prerequisites: [bio.intro1.viral-life-cycles]
+      - id: kp3
+        can_do: Calculate phage map distances from recombinant progeny frequencies
+        key_prerequisites: [bio.intro1.viral-life-cycles]
+      - id: kp4
+        can_do: Order mutations by fine-structure deletion mapping
+        key_prerequisites: [bio.intro1.viral-life-cycles]
+  - id: bio.genetics.transposable-elements
+    name: Describing transposable elements
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.genome-organization
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish DNA transposons from retrotransposons by structural features
+        key_prerequisites: [bio.intro1.genome-organization]
+      - id: kp2
+        can_do: Predict copy number changes under different transposition mechanisms
+        key_prerequisites: [bio.intro1.genome-organization]
+      - id: kp3
+        can_do: Infer autonomous and nonautonomous elements from sequence features
+        key_prerequisites: [bio.intro1.genome-organization]
+      - id: kp4
+        can_do: Interpret insertion patterns as evidence of genome restructuring
+        key_prerequisites: [bio.intro1.genome-organization]
+  - id: bio.genetics.mutation-rates-and-mutagens
+    name: Calculating mutation rates and testing mutagens
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.mutation-effects-on-proteins
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish mutation frequency from mutation rate
+        key_prerequisites: [bio.hs2.mutation-effects-on-proteins]
+      - id: kp2
+        can_do: Infer mutation timing from variation among independent cultures
+        key_prerequisites: [bio.hs2.mutation-effects-on-proteins]
+      - id: kp3
+        can_do: Estimate mutation rates from fluctuation test data
+        key_prerequisites: [bio.hs2.mutation-effects-on-proteins]
+      - id: kp4
+        can_do: Interpret Ames test results using controls and metabolic activation
+        key_prerequisites: [bio.hs2.mutation-effects-on-proteins]
+  - id: bio.genetics.forward-genetic-screens
+    name: Designing forward genetic screens
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.mutation-rates-and-mutagens
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.genetics.complementation-tests
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match screen logic to dominant or recessive mutations
+        key_prerequisites: [bio.genetics.mutation-rates-and-mutagens]
+      - id: kp2
+        can_do: Distinguish screens from selections by predicted mutant recovery
+        key_prerequisites: [bio.genetics.mutation-rates-and-mutagens]
+      - id: kp3
+        can_do: Infer the number of genes from complementation groups
+        key_prerequisites: [bio.genetics.complementation-tests]
+      - id: kp4
+        can_do: Evaluate screen saturation using mutation rates and complementation groups
+        key_prerequisites: [bio.genetics.mutation-rates-and-mutagens, bio.genetics.complementation-tests]
+  - id: bio.genetics.recombination-mechanisms
+    name: Describing homologous recombination
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.dna-repair
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify homologous templates for repairing double-strand breaks
+        key_prerequisites: [bio.intro1.dna-repair]
+      - id: kp2
+        can_do: Trace strand invasion and DNA synthesis in recombination intermediates
+        key_prerequisites: [bio.intro1.dna-repair]
+      - id: kp3
+        can_do: Predict crossover and noncrossover outcomes from intermediate resolution
+        key_prerequisites: [bio.intro1.dna-repair]
+      - id: kp4
+        can_do: Interpret gene conversion using heteroduplex formation and mismatch repair
+        key_prerequisites: [bio.intro1.dna-repair]
+  - id: bio.genetics.operon-mutant-analysis
+    name: Analyzing operon mutants with partial diploids
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.operons
+        encompassing: 0.8
+        confidence: high
+      - topic: bio.genetics.complementation-tests
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish cis-acting sites from diffusible operon regulators
+        key_prerequisites: [bio.hs2.operons]
+      - id: kp2
+        can_do: Infer constitutive and noninducible mutant classes from expression patterns
+        key_prerequisites: [bio.hs2.operons]
+      - id: kp3
+        can_do: Predict partial diploid expression using cis-trans tests
+        key_prerequisites: [bio.hs2.operons, bio.genetics.complementation-tests]
+      - id: kp4
+        can_do: Predict combined regulatory genotypes under inducing and repressing conditions
+        key_prerequisites: [bio.hs2.operons, bio.genetics.complementation-tests]
+  - id: bio.genetics.eukaryotic-regulatory-mutants
+    name: Analyzing regulatory mutations in eukaryotes
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.operon-mutant-analysis
+        encompassing: 0.55
+        confidence: high
+      - topic: bio.intro1.chromatin-structure
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish cis-regulatory from transcription factor mutations
+        key_prerequisites: [bio.genetics.operon-mutant-analysis]
+      - id: kp2
+        can_do: Locate regulatory elements with reporter gene assays
+        key_prerequisites: [bio.genetics.operon-mutant-analysis]
+      - id: kp3
+        can_do: Interpret allele-specific expression to separate cis and trans effects
+        key_prerequisites: [bio.genetics.operon-mutant-analysis]
+      - id: kp4
+        can_do: Combine cis, trans and chromatin effects in regulatory mutants
+        key_prerequisites: [bio.genetics.operon-mutant-analysis, bio.intro1.chromatin-structure]
+  - id: bio.genetics.epigenetic-inheritance
+    name: Explaining epigenetic inheritance
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.genomic-imprinting
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish inherited chromatin states from DNA sequence changes
+        key_prerequisites: [bio.genetics.genomic-imprinting]
+      - id: kp2
+        can_do: Explain maintenance of methylation through cell division
+        key_prerequisites: [bio.genetics.genomic-imprinting]
+      - id: kp3
+        can_do: Compare mitotic epigenetic persistence with germline imprint resetting
+        key_prerequisites: [bio.genetics.genomic-imprinting]
+      - id: kp4
+        can_do: Evaluate multigenerational data for evidence of epigenetic inheritance
+        key_prerequisites: [bio.genetics.genomic-imprinting]
+  - id: bio.genetics.sequencing-technologies
+    name: Comparing sequencing technologies
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.genome-organization
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: bio.hs2.dna-sequencing-intro
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare read length and error rates across sequencing platforms
+        key_prerequisites: [bio.hs2.dna-sequencing-intro]
+      - id: kp2
+        can_do: Predict which repeats a given read length can resolve
+        key_prerequisites: [bio.intro1.genome-organization, bio.hs2.dna-sequencing-intro]
+      - id: kp3
+        can_do: Compare platforms for coverage, accuracy and structural variants
+        key_prerequisites: [bio.hs2.dna-sequencing-intro]
+      - id: kp4
+        can_do: Choose a sequencing strategy for a genome project
+        key_prerequisites: [bio.intro1.genome-organization, bio.hs2.dna-sequencing-intro]
+  - id: bio.genetics.genome-assembly-and-annotation
+    name: Describing genome assembly and annotation
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.sequencing-technologies
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Construct contigs from overlapping reads
+        key_prerequisites: [bio.genetics.sequencing-technologies]
+      - id: kp2
+        can_do: Identify assembly ambiguities caused by repeats and uneven coverage
+        key_prerequisites: [bio.genetics.sequencing-technologies]
+      - id: kp3
+        can_do: Identify candidate genes using coding potential and transcript evidence
+        key_prerequisites: [bio.genetics.sequencing-technologies]
+      - id: kp4
+        can_do: Evaluate gene annotations against assembly gaps and sequencing errors
+        key_prerequisites: [bio.genetics.sequencing-technologies]
+  - id: bio.genetics.comparative-genomics
+    name: Using comparative genomics
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.genome-assembly-and-annotation
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish orthologs and paralogs using gene duplication patterns
+        key_prerequisites: [bio.genetics.genome-assembly-and-annotation]
+      - id: kp2
+        can_do: Identify conserved synteny and lineage-specific rearrangements
+        key_prerequisites: [bio.genetics.genome-assembly-and-annotation]
+      - id: kp3
+        can_do: Infer candidate functional elements from cross-species conservation
+        key_prerequisites: [bio.genetics.genome-assembly-and-annotation]
+      - id: kp4
+        can_do: Evaluate gene function predictions using orthology and conserved context
+        key_prerequisites: [bio.genetics.genome-assembly-and-annotation]
+  - id: bio.genetics.reverse-genetics-and-editing
+    name: Using reverse genetics and gene editing
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cloning-vectors
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.hs1.gene-editing-intro
+        encompassing: 0.65
+        confidence: high
+      - topic: bio.intro1.dna-repair
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish gene disruption, gene replacement and knockdown
+        key_prerequisites: [bio.hs1.gene-editing-intro]
+      - id: kp2
+        can_do: Interpret vector maps for targeted gene perturbations
+        key_prerequisites: [bio.intro1.cloning-vectors, bio.hs1.gene-editing-intro]
+      - id: kp3
+        can_do: Predict editing outcomes from end joining or homology-directed repair
+        key_prerequisites: [bio.hs1.gene-editing-intro, bio.intro1.dna-repair]
+      - id: kp4
+        can_do: Evaluate causal gene assignments using rescue and independent perturbations
+        key_prerequisites: [bio.intro1.cloning-vectors, bio.hs1.gene-editing-intro]
+  - id: bio.genetics.transgenic-organisms
+    name: Making transgenic organisms
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.reverse-genetics-and-editing
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish stable transgene inheritance from transient expression
+        key_prerequisites: [bio.genetics.reverse-genetics-and-editing]
+      - id: kp2
+        can_do: Predict transgene expression from copy number and insertion site
+        key_prerequisites: [bio.genetics.reverse-genetics-and-editing]
+      - id: kp3
+        can_do: Infer transgene insertion loci from segregation patterns
+        key_prerequisites: [bio.genetics.reverse-genetics-and-editing]
+      - id: kp4
+        can_do: Evaluate transgene phenotypes using insertion and expression controls
+        key_prerequisites: [bio.genetics.reverse-genetics-and-editing]
+  - id: bio.genetics.gene-therapy
+    name: Describing gene therapy
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.transgenic-organisms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare gene addition, gene correction and gene silencing
+        key_prerequisites: [bio.genetics.transgenic-organisms]
+      - id: kp2
+        can_do: Distinguish somatic treatment effects from germline transmission
+        key_prerequisites: [bio.genetics.transgenic-organisms]
+      - id: kp3
+        can_do: Evaluate delivery choices against tissue access and expression duration
+        key_prerequisites: [bio.genetics.transgenic-organisms]
+      - id: kp4
+        can_do: Interpret efficacy and adverse outcomes from delivery and expression data
+        key_prerequisites: [bio.genetics.transgenic-organisms]
+  - id: bio.genetics.genetic-testing
+    name: Evaluating genetic testing and its ethics
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.disorder-mechanisms
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match genetic testing approaches to suspected disorder mechanisms
+        key_prerequisites: [bio.genetics.disorder-mechanisms]
+      - id: kp2
+        can_do: Interpret negative results given detection and penetrance limits
+        key_prerequisites: [bio.genetics.disorder-mechanisms]
+      - id: kp3
+        can_do: Calculate predictive values from test accuracy and prior risk
+        key_prerequisites: [bio.genetics.disorder-mechanisms]
+      - id: kp4
+        can_do: Evaluate consent and disclosure for uncertain family results
+        key_prerequisites: [bio.genetics.disorder-mechanisms]
+  - id: bio.genetics.quantitative-traits
+    name: Analyzing quantitative traits
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs1.polygenic-and-environmental-traits
+        encompassing: 0.7
+        confidence: high
+      - topic: math.stats.standard-deviation-calc
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Infer additive allele effects from multilocus trait values
+        key_prerequisites: [bio.hs1.polygenic-and-environmental-traits]
+      - id: kp2
+        can_do: Calculate within-genotype and between-genotype variation from trait data
+        key_prerequisites: [bio.hs1.polygenic-and-environmental-traits, math.stats.standard-deviation-calc]
+      - id: kp3
+        can_do: Partition phenotypic variance into genetic and environmental components
+        key_prerequisites: [bio.hs1.polygenic-and-environmental-traits, math.stats.standard-deviation-calc]
+      - id: kp4
+        can_do: Interpret genotype-by-environment interactions on trait values
+        key_prerequisites: [bio.hs1.polygenic-and-environmental-traits, math.stats.standard-deviation-calc]
+  - id: bio.genetics.heritability
+    name: Estimating heritability
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.quantitative-traits
+        encompassing: 0.85
+        confidence: high
+      - topic: math.stats.correlation-properties
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish broad-sense from narrow-sense heritability using variance components
+        key_prerequisites: [bio.genetics.quantitative-traits]
+      - id: kp2
+        can_do: Estimate narrow-sense heritability from midparent-offspring data
+        key_prerequisites: [bio.genetics.quantitative-traits, math.stats.correlation-properties]
+      - id: kp3
+        can_do: Evaluate shared environment effects using correlations among relatives
+        key_prerequisites: [bio.genetics.quantitative-traits, math.stats.correlation-properties]
+      - id: kp4
+        can_do: Interpret heritability estimates across populations and environments
+        key_prerequisites: [bio.genetics.quantitative-traits, math.stats.correlation-properties]
+  - id: bio.genetics.qtl-mapping
+    name: Describing QTL mapping
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.heritability
+        encompassing: 0.3
+        confidence: medium
+      - topic: bio.genetics.three-point-mapping
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare trait means among marker genotype classes
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp2
+        can_do: Localize candidate QTL intervals from marker order and cosegregation
+        key_prerequisites: [bio.genetics.three-point-mapping]
+      - id: kp3
+        can_do: Calculate variance explained by mapped loci relative to heritable variance
+        key_prerequisites: [bio.genetics.heritability, bio.genetics.three-point-mapping]
+      - id: kp4
+        can_do: Interpret unresolved QTL peaks and missing genetic variance
+        key_prerequisites: [bio.genetics.heritability, bio.genetics.three-point-mapping]
+  - id: bio.genetics.association-studies
+    name: Interpreting genome-wide association studies
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.lod-scores
+        encompassing: 0.17
+        confidence: low
+      - topic: bio.genetics.quantitative-traits
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish family linkage evidence from population associations
+        key_prerequisites: [bio.genetics.lod-scores, bio.genetics.quantitative-traits]
+      - id: kp2
+        can_do: Interpret association effect sizes for quantitative traits
+        key_prerequisites: [bio.genetics.quantitative-traits]
+      - id: kp3
+        can_do: Assess association signals for population structure and multiple testing
+        key_prerequisites: [bio.genetics.quantitative-traits]
+      - id: kp4
+        can_do: Evaluate causal claims using effect sizes and linkage evidence
+        key_prerequisites: [bio.genetics.lod-scores, bio.genetics.quantitative-traits]
+  - id: bio.genetics.allele-frequency-calculations
+    name: Calculating allele and genotype frequencies
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.hardy-weinberg
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate allele frequencies from multiallelic genotype counts
+        key_prerequisites: [bio.hs2.hardy-weinberg]
+      - id: kp2
+        can_do: Calculate allele frequencies from X-linked counts by sex
+        key_prerequisites: [bio.hs2.hardy-weinberg]
+      - id: kp3
+        can_do: Predict multiallelic genotype frequencies under random mating
+        key_prerequisites: [bio.hs2.hardy-weinberg]
+      - id: kp4
+        can_do: Identify genotype frequency departures from Hardy-Weinberg expectations
+        key_prerequisites: [bio.hs2.hardy-weinberg]
+  - id: bio.genetics.inbreeding
+    name: Calculating inbreeding coefficients
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.allele-frequency-calculations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish identity by descent from identity by state
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp2
+        can_do: Calculate inbreeding coefficients from shared ancestral paths
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp3
+        can_do: Predict genotype frequencies using allele frequencies and inbreeding coefficients
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp4
+        can_do: Estimate inbreeding coefficients from observed and expected heterozygosity
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+  - id: bio.genetics.drift-and-effective-size
+    name: Calculating effects of drift and effective population size
+    subject: bio
+    course: bio.genetics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.genetics.allele-frequency-calculations
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish census population size from effective population size
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp2
+        can_do: Calculate effective size from unequal breeding sex ratios
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp3
+        can_do: Calculate allele frequency variance from effective population size
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
+      - id: kp4
+        can_do: Predict heterozygosity loss over generations from effective size
+        key_prerequisites: [bio.genetics.allele-frequency-calculations]
