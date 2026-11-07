@@ -1,0 +1,835 @@
+course: engr.separations
+topics:
+  - id: engr.separations.separation-principles
+    name: Classifying separation processes by driving force
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-transfer.two-resistance-theory
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify separations by phase creation and addition
+        key_prerequisites: [engr.mass-transfer.two-resistance-theory]
+      - id: kp2
+        can_do: Identify driving forces for separations
+        key_prerequisites: [engr.mass-transfer.two-resistance-theory]
+      - id: kp3
+        can_do: Choose separating agents
+        key_prerequisites: [engr.mass-transfer.two-resistance-theory]
+      - id: kp4
+        can_do: Describe energy needs of separations
+        key_prerequisites: [engr.mass-transfer.two-resistance-theory]
+  - id: engr.separations.equilibrium-stage-concept
+    name: Using the equilibrium stage concept
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.separation-principles
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.cheme-thermo.flash-calculations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define an equilibrium stage
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp2
+        can_do: Relate actual and ideal stages
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp3
+        can_do: Use equilibrium data for stage calculations
+        key_prerequisites: [engr.cheme-thermo.flash-calculations]
+      - id: kp4
+        can_do: Represent a stage on a phase diagram
+        key_prerequisites: [engr.separations.separation-principles, engr.cheme-thermo.flash-calculations]
+  - id: engr.separations.binary-flash-graphical
+    name: Solving binary flash problems graphically
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.equilibrium-stage-concept
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve binary flash on y-x diagrams
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp2
+        can_do: Find vapor fraction graphically
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp3
+        can_do: Find flash temperature from T-x-y diagrams
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp4
+        can_do: Solve flash drum balances
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+  - id: engr.separations.multicomponent-flash
+    name: Solving multicomponent flash with Rachford-Rice
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.equilibrium-stage-concept
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.cheme-thermo.k-value-correlations
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve multicomponent flash with Rachford-Rice
+        key_prerequisites: [engr.separations.equilibrium-stage-concept, engr.cheme-thermo.k-value-correlations]
+      - id: kp2
+        can_do: Find bubble and dew points of mixtures
+        key_prerequisites: [engr.cheme-thermo.k-value-correlations]
+      - id: kp3
+        can_do: Find flash temperature for a vapor fraction
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp4
+        can_do: Solve adiabatic flash
+        key_prerequisites: [engr.separations.equilibrium-stage-concept, engr.cheme-thermo.k-value-correlations]
+  - id: engr.separations.column-material-balances
+    name: Writing column material balances
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.equilibrium-stage-concept
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write overall column balances
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp2
+        can_do: Find distillate and bottoms flows
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp3
+        can_do: Find product purity limits
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp4
+        can_do: Write section balances
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+  - id: engr.separations.mccabe-thiele-operating-lines
+    name: Drawing operating lines and the feed line
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.column-material-balances
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw rectifying operating lines
+        key_prerequisites: [engr.separations.column-material-balances]
+      - id: kp2
+        can_do: Draw stripping operating lines
+        key_prerequisites: [engr.separations.column-material-balances]
+      - id: kp3
+        can_do: Draw feed lines for feed condition
+        key_prerequisites: [engr.separations.column-material-balances]
+      - id: kp4
+        can_do: Find intersection of operating lines
+        key_prerequisites: [engr.separations.column-material-balances]
+  - id: engr.separations.mccabe-thiele-stepping
+    name: Stepping off stages by McCabe-Thiele
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.mccabe-thiele-operating-lines
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Step off stages
+        key_prerequisites: [engr.separations.mccabe-thiele-operating-lines]
+      - id: kp2
+        can_do: Find number of ideal stages
+        key_prerequisites: [engr.separations.mccabe-thiele-operating-lines]
+      - id: kp3
+        can_do: Find optimum feed stage
+        key_prerequisites: [engr.separations.mccabe-thiele-operating-lines]
+      - id: kp4
+        can_do: Read compositions on each stage
+        key_prerequisites: [engr.separations.mccabe-thiele-operating-lines]
+  - id: engr.separations.minimum-reflux-and-stages
+    name: Finding minimum reflux and minimum stages
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.mccabe-thiele-stepping
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minimum reflux ratio
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp2
+        can_do: Find minimum number of stages at total reflux
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp3
+        can_do: Find pinch points
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp4
+        can_do: Relate reflux to stages
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+  - id: engr.separations.optimum-feed-and-reflux
+    name: Choosing feed location and reflux ratio
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.minimum-reflux-and-stages
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose operating reflux ratio
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+      - id: kp2
+        can_do: Find effect of reflux on cost
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+      - id: kp3
+        can_do: Find effect of feed condition on stages
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+      - id: kp4
+        can_do: Choose feed location
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+  - id: engr.separations.side-streams-and-multiple-feeds
+    name: Analyzing side streams and multiple feeds
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.mccabe-thiele-stepping
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw operating lines with side streams
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp2
+        can_do: Draw operating lines with two feeds
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp3
+        can_do: Find stages with open steam
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp4
+        can_do: Find stages with partial condensers
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+  - id: engr.separations.stage-efficiency
+    name: Using Murphree and overall efficiencies
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.mccabe-thiele-stepping
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use overall column efficiency
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp2
+        can_do: Use Murphree efficiency
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp3
+        can_do: Find actual stages
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp4
+        can_do: Estimate efficiency with correlations
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+  - id: engr.separations.enthalpy-concentration-methods
+    name: Using enthalpy-composition diagrams
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.mccabe-thiele-stepping
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw enthalpy-concentration diagrams
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp2
+        can_do: Find condenser and reboiler duties
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping, engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Account for varying molar overflow
+        key_prerequisites: [engr.separations.mccabe-thiele-stepping]
+      - id: kp4
+        can_do: Solve columns with the Ponchon-Savarit method
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+  - id: engr.separations.batch-distillation
+    name: Analyzing batch distillation with the Rayleigh equation
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.column-material-balances
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.calc2.separable-equations
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Rayleigh equation
+        key_prerequisites: [engr.separations.column-material-balances, math.calc2.separable-equations]
+      - id: kp2
+        can_do: Find composition after simple batch distillation
+        key_prerequisites: [engr.separations.column-material-balances]
+      - id: kp3
+        can_do: Analyze batch rectification at constant reflux
+        key_prerequisites: [engr.separations.column-material-balances]
+      - id: kp4
+        can_do: Analyze batch rectification at constant composition
+        key_prerequisites: [math.calc2.separable-equations]
+  - id: engr.separations.key-components
+    name: Choosing light and heavy key components
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.minimum-reflux-and-stages
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.separations.multicomponent-flash
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose light and heavy keys
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+      - id: kp2
+        can_do: Classify distributing and nondistributing components
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages, engr.separations.multicomponent-flash]
+      - id: kp3
+        can_do: Estimate product compositions
+        key_prerequisites: [engr.separations.multicomponent-flash]
+      - id: kp4
+        can_do: Choose column sequences
+        key_prerequisites: [engr.separations.minimum-reflux-and-stages]
+  - id: engr.separations.fenske-underwood-gilliland
+    name: Estimating stages by Fenske, Underwood and Gilliland
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.key-components
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find minimum stages with Fenske's equation
+        key_prerequisites: [engr.separations.key-components]
+      - id: kp2
+        can_do: Find minimum reflux with Underwood's method
+        key_prerequisites: [engr.separations.key-components]
+      - id: kp3
+        can_do: Find stages with Gilliland's correlation
+        key_prerequisites: [engr.separations.key-components]
+      - id: kp4
+        can_do: Find feed location with Kirkbride's equation
+        key_prerequisites: [engr.separations.key-components]
+  - id: engr.separations.rigorous-stage-methods
+    name: Describing rigorous stage-by-stage methods
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.fenske-underwood-gilliland
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe MESH equations
+        key_prerequisites: [engr.separations.fenske-underwood-gilliland]
+      - id: kp2
+        can_do: Describe tridiagonal matrix methods
+        key_prerequisites: [engr.separations.fenske-underwood-gilliland]
+      - id: kp3
+        can_do: Describe simulator column models
+        key_prerequisites: [engr.separations.fenske-underwood-gilliland]
+      - id: kp4
+        can_do: Compare shortcut and rigorous results
+        key_prerequisites: [engr.separations.fenske-underwood-gilliland]
+  - id: engr.separations.azeotropic-and-extractive-distillation
+    name: Describing azeotropic and extractive distillation
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.key-components
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.cheme-thermo.azeotrope-prediction
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe extractive distillation
+        key_prerequisites: [engr.separations.key-components]
+      - id: kp2
+        can_do: Describe azeotropic distillation
+        key_prerequisites: [engr.separations.key-components, engr.cheme-thermo.azeotrope-prediction]
+      - id: kp3
+        can_do: Describe pressure-swing distillation
+        key_prerequisites: [engr.cheme-thermo.azeotrope-prediction]
+      - id: kp4
+        can_do: Use residue curve maps
+        key_prerequisites: [engr.separations.key-components, engr.cheme-thermo.azeotrope-prediction]
+  - id: engr.separations.column-sizing
+    name: Sizing column diameter from flooding
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.stage-efficiency
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.fluids.drag-coefficients
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flooding velocity
+        key_prerequisites: [engr.separations.stage-efficiency, engr.fluids.drag-coefficients]
+      - id: kp2
+        can_do: Find column diameter
+        key_prerequisites: [engr.separations.stage-efficiency]
+      - id: kp3
+        can_do: Choose tray spacing
+        key_prerequisites: [engr.separations.stage-efficiency]
+      - id: kp4
+        can_do: Compare trays and packing
+        key_prerequisites: [engr.fluids.drag-coefficients]
+  - id: engr.separations.absorption-stage-design
+    name: Designing staged absorbers graphically
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.equilibrium-stage-concept
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mass-transfer.minimum-liquid-rate
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stages for absorbers graphically
+        key_prerequisites: [engr.separations.equilibrium-stage-concept, engr.mass-transfer.minimum-liquid-rate]
+      - id: kp2
+        can_do: Find minimum solvent rate
+        key_prerequisites: [engr.mass-transfer.minimum-liquid-rate]
+      - id: kp3
+        can_do: Write operating lines in solute-free units
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+      - id: kp4
+        can_do: Find stages for concentrated systems
+        key_prerequisites: [engr.separations.equilibrium-stage-concept]
+  - id: engr.separations.kremser-equation
+    name: Using the Kremser equation
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.absorption-stage-design
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Kremser equation
+        key_prerequisites: [engr.separations.absorption-stage-design]
+      - id: kp2
+        can_do: Find absorption factor
+        key_prerequisites: [engr.separations.absorption-stage-design]
+      - id: kp3
+        can_do: Find fraction absorbed
+        key_prerequisites: [engr.separations.absorption-stage-design]
+      - id: kp4
+        can_do: Find stages for a required recovery
+        key_prerequisites: [engr.separations.absorption-stage-design]
+  - id: engr.separations.stripping-design
+    name: Designing strippers
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.kremser-equation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design strippers with the Kremser equation
+        key_prerequisites: [engr.separations.kremser-equation]
+      - id: kp2
+        can_do: Find stripping factor
+        key_prerequisites: [engr.separations.kremser-equation]
+      - id: kp3
+        can_do: Find gas rate for strippers
+        key_prerequisites: [engr.separations.kremser-equation]
+      - id: kp4
+        can_do: Combine absorbers and strippers
+        key_prerequisites: [engr.separations.kremser-equation]
+  - id: engr.separations.ternary-diagrams
+    name: Reading ternary phase diagrams
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.cheme-thermo.liquid-liquid-equilibrium
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read triangular phase diagrams
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium]
+      - id: kp2
+        can_do: Plot compositions on ternary diagrams
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium]
+      - id: kp3
+        can_do: Draw tie lines
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium]
+      - id: kp4
+        can_do: Find plait points
+        key_prerequisites: [engr.cheme-thermo.liquid-liquid-equilibrium]
+  - id: engr.separations.single-stage-extraction
+    name: Solving single-stage extraction
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.ternary-diagrams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve single-stage extraction
+        key_prerequisites: [engr.separations.ternary-diagrams]
+      - id: kp2
+        can_do: Find mixing point
+        key_prerequisites: [engr.separations.ternary-diagrams]
+      - id: kp3
+        can_do: Find raffinate and extract compositions
+        key_prerequisites: [engr.separations.ternary-diagrams]
+      - id: kp4
+        can_do: Find solvent amount for a recovery
+        key_prerequisites: [engr.separations.ternary-diagrams]
+  - id: engr.separations.countercurrent-extraction
+    name: Solving countercurrent extraction
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.single-stage-extraction
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stages in countercurrent extraction
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp2
+        can_do: Find difference points
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp3
+        can_do: Find minimum solvent ratio
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp4
+        can_do: Compare cross-current and countercurrent
+        key_prerequisites: [engr.separations.single-stage-extraction]
+  - id: engr.separations.immiscible-extraction
+    name: Solving extraction with immiscible solvents
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.countercurrent-extraction
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.separations.kremser-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve extraction with immiscible solvents
+        key_prerequisites: [engr.separations.countercurrent-extraction]
+      - id: kp2
+        can_do: Use distribution coefficients
+        key_prerequisites: [engr.separations.countercurrent-extraction]
+      - id: kp3
+        can_do: Find stages on y-x diagrams
+        key_prerequisites: [engr.separations.countercurrent-extraction, engr.separations.kremser-equation]
+      - id: kp4
+        can_do: Use the Kremser equation for extraction
+        key_prerequisites: [engr.separations.kremser-equation]
+  - id: engr.separations.leaching
+    name: Solving leaching problems
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.single-stage-extraction
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve single-stage leaching
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp2
+        can_do: Solve countercurrent leaching
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp3
+        can_do: Find underflow and overflow compositions
+        key_prerequisites: [engr.separations.single-stage-extraction]
+      - id: kp4
+        can_do: Find washing stages
+        key_prerequisites: [engr.separations.single-stage-extraction]
+  - id: engr.separations.adsorption-isotherms
+    name: Fitting adsorption isotherms
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.pchem1.langmuir-isotherm
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.separations.separation-principles
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit Langmuir isotherms
+        key_prerequisites: [chem.pchem1.langmuir-isotherm, engr.separations.separation-principles]
+      - id: kp2
+        can_do: Fit Freundlich isotherms
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp3
+        can_do: Find adsorbent capacity
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+      - id: kp4
+        can_do: Find temperature effects on adsorption
+        key_prerequisites: [chem.pchem1.langmuir-isotherm]
+  - id: engr.separations.fixed-bed-adsorption
+    name: Analyzing breakthrough in fixed-bed adsorption
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.adsorption-isotherms
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mass-transfer.overall-coefficients
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe breakthrough curves
+        key_prerequisites: [engr.separations.adsorption-isotherms, engr.mass-transfer.overall-coefficients]
+      - id: kp2
+        can_do: Find breakthrough time
+        key_prerequisites: [engr.separations.adsorption-isotherms]
+      - id: kp3
+        can_do: Find mass transfer zone length
+        key_prerequisites: [engr.mass-transfer.overall-coefficients]
+      - id: kp4
+        can_do: Describe regeneration methods
+        key_prerequisites: [engr.separations.adsorption-isotherms]
+  - id: engr.separations.membrane-separations
+    name: Analyzing membrane separations
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.separation-principles
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: engr.mass-transfer.ficks-law-binary
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find flux through membranes
+        key_prerequisites: [engr.separations.separation-principles, engr.mass-transfer.ficks-law-binary]
+      - id: kp2
+        can_do: Find permeate composition
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp3
+        can_do: Describe reverse osmosis and ultrafiltration
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp4
+        can_do: Find membrane area
+        key_prerequisites: [engr.mass-transfer.ficks-law-binary]
+  - id: engr.separations.crystallization
+    name: Analyzing crystallization yield
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.solid-liquid-balances
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find crystal yield
+        key_prerequisites: [engr.mass-energy-balances.solid-liquid-balances]
+      - id: kp2
+        can_do: Find yield with hydrates
+        key_prerequisites: [engr.mass-energy-balances.solid-liquid-balances]
+      - id: kp3
+        can_do: Describe supersaturation
+        key_prerequisites: [engr.mass-energy-balances.solid-liquid-balances]
+      - id: kp4
+        can_do: Describe crystal size distribution
+        key_prerequisites: [engr.mass-energy-balances.solid-liquid-balances]
+  - id: engr.separations.particle-size-distributions
+    name: Describing particle size distributions
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.separation-principles
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe particle size distributions
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp2
+        can_do: Find mean particle sizes
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp3
+        can_do: Read screen analyses
+        key_prerequisites: [engr.separations.separation-principles]
+      - id: kp4
+        can_do: Find specific surface area
+        key_prerequisites: [engr.separations.separation-principles]
+  - id: engr.separations.mechanical-separations
+    name: Analyzing settling, filtration and centrifugation
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.particle-size-distributions
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.fluids.drag-coefficients
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find settling velocity of particles
+        key_prerequisites: [engr.separations.particle-size-distributions, engr.fluids.drag-coefficients]
+      - id: kp2
+        can_do: Analyze filtration at constant pressure
+        key_prerequisites: [engr.separations.particle-size-distributions]
+      - id: kp3
+        can_do: Analyze centrifuges
+        key_prerequisites: [engr.separations.particle-size-distributions, engr.fluids.drag-coefficients]
+      - id: kp4
+        can_do: Analyze cyclones
+        key_prerequisites: [engr.fluids.drag-coefficients]
+  - id: engr.separations.size-reduction
+    name: Finding energy for size reduction
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.particle-size-distributions
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Rittinger's law
+        key_prerequisites: [engr.separations.particle-size-distributions]
+      - id: kp2
+        can_do: Use Bond's law
+        key_prerequisites: [engr.separations.particle-size-distributions]
+      - id: kp3
+        can_do: Find energy for crushing
+        key_prerequisites: [engr.separations.particle-size-distributions]
+      - id: kp4
+        can_do: Choose size-reduction equipment
+        key_prerequisites: [engr.separations.particle-size-distributions]
+  - id: engr.separations.choosing-a-separation
+    name: Choosing a separation process
+    subject: engr
+    course: engr.separations
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.separations.fixed-bed-adsorption
+        encompassing: 0.2
+        confidence: high
+      - topic: engr.separations.membrane-separations
+        encompassing: 0.25
+        confidence: high
+      - topic: engr.separations.countercurrent-extraction
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.separations.fenske-underwood-gilliland
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a separation from property differences
+        key_prerequisites: [engr.separations.fixed-bed-adsorption, engr.separations.membrane-separations, engr.separations.countercurrent-extraction, engr.separations.fenske-underwood-gilliland]
+      - id: kp2
+        can_do: Compare energy costs of separations
+        key_prerequisites: [engr.separations.countercurrent-extraction, engr.separations.fenske-underwood-gilliland]
+      - id: kp3
+        can_do: Choose distillation or alternatives
+        key_prerequisites: [engr.separations.fenske-underwood-gilliland]
+      - id: kp4
+        can_do: Sequence separations in a process
+        key_prerequisites: [engr.separations.fixed-bed-adsorption, engr.separations.membrane-separations]
