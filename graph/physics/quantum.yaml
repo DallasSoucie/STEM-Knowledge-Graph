@@ -1,0 +1,767 @@
+course: physics.quantum
+topics:
+  - id: physics.quantum.operators-in-wave-mechanics
+    name: Writing the Schrodinger equation with operators
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.momentum-operator
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.modern.schrodinger-equation-time-dependent
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write position and momentum as operators
+        key_prerequisites: [physics.modern.momentum-operator]
+      - id: kp2
+        can_do: Write the Hamiltonian operator
+        key_prerequisites: [physics.modern.momentum-operator, physics.modern.schrodinger-equation-time-dependent]
+      - id: kp3
+        can_do: Apply an operator to a wave function
+        key_prerequisites: [physics.modern.momentum-operator]
+      - id: kp4
+        can_do: Find an eigenfunction of momentum
+        key_prerequisites: [physics.modern.momentum-operator]
+  - id: physics.quantum.probability-current
+    name: Finding probability current
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.operators-in-wave-mechanics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the probability current
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+      - id: kp2
+        can_do: Find current for a plane wave
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+      - id: kp3
+        can_do: Show probability is conserved locally
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+      - id: kp4
+        can_do: Find current for a superposition of waves
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+  - id: physics.quantum.ehrenfest-theorem
+    name: Using Ehrenfest's theorem
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.operators-in-wave-mechanics
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.modern.expectation-values
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the time derivative of an expectation value
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics, physics.modern.expectation-values]
+      - id: kp2
+        can_do: Derive Ehrenfest's theorem for position
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+      - id: kp3
+        can_do: Derive it for momentum
+        key_prerequisites: [physics.quantum.operators-in-wave-mechanics]
+      - id: kp4
+        can_do: Explain when classical motion is recovered
+        key_prerequisites: [physics.modern.expectation-values]
+  - id: physics.quantum.stationary-state-expansion
+    name: Expanding states in stationary states
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.superposition-of-states
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.eigenfunction-expansions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a state in energy eigenstates
+        key_prerequisites: [physics.modern.superposition-of-states, math.pde.eigenfunction-expansions]
+      - id: kp2
+        can_do: Find expansion coefficients with integrals
+        key_prerequisites: [math.pde.eigenfunction-expansions]
+      - id: kp3
+        can_do: Find energy probabilities from coefficients
+        key_prerequisites: [physics.modern.superposition-of-states]
+      - id: kp4
+        can_do: Evolve the expansion in time
+        key_prerequisites: [physics.modern.superposition-of-states]
+  - id: physics.quantum.momentum-space-wave-functions
+    name: Finding momentum-space wave functions
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.wave-packets-for-particles
+        encompassing: 0.35
+        confidence: high
+      - topic: math.pde.fourier-transform-definition
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a momentum wave function with a Fourier transform
+        key_prerequisites: [physics.modern.wave-packets-for-particles, math.pde.fourier-transform-definition]
+      - id: kp2
+        can_do: Find momentum probabilities
+        key_prerequisites: [physics.modern.wave-packets-for-particles]
+      - id: kp3
+        can_do: Transform a Gaussian packet
+        key_prerequisites: [math.pde.fourier-transform-definition]
+      - id: kp4
+        can_do: Find the momentum spread of a well state
+        key_prerequisites: [math.pde.fourier-transform-definition]
+  - id: physics.quantum.gaussian-packet-spreading
+    name: Finding the spread of a free Gaussian packet
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.momentum-space-wave-functions
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.gaussian-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evolve a free Gaussian packet
+        key_prerequisites: [physics.quantum.momentum-space-wave-functions, math.calc3.gaussian-integral]
+      - id: kp2
+        can_do: Find width against time
+        key_prerequisites: [physics.quantum.momentum-space-wave-functions]
+      - id: kp3
+        can_do: Find spreading time for an electron
+        key_prerequisites: [physics.quantum.momentum-space-wave-functions]
+      - id: kp4
+        can_do: Explain why spreading is slow for large objects
+        key_prerequisites: [math.calc3.gaussian-integral]
+  - id: physics.quantum.delta-function-potential
+    name: Solving the delta function potential
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.finite-square-well
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.delta-function-pde
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the bound state of a delta well
+        key_prerequisites: [physics.modern.finite-square-well, math.pde.delta-function-pde]
+      - id: kp2
+        can_do: Match derivatives across a delta
+        key_prerequisites: [math.pde.delta-function-pde]
+      - id: kp3
+        can_do: Find scattering from a delta potential
+        key_prerequisites: [physics.modern.finite-square-well]
+      - id: kp4
+        can_do: Find transmission probability
+        key_prerequisites: [physics.modern.finite-square-well]
+  - id: physics.quantum.scattering-states-and-transmission
+    name: Finding transmission for wells and barriers
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.barrier-tunneling
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.probability-current
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transmission over a square well
+        key_prerequisites: [physics.modern.barrier-tunneling]
+      - id: kp2
+        can_do: Find resonant transmission
+        key_prerequisites: [physics.modern.barrier-tunneling]
+      - id: kp3
+        can_do: Use probability current for coefficients
+        key_prerequisites: [physics.quantum.probability-current]
+      - id: kp4
+        can_do: Find transmission for a rectangular barrier exactly
+        key_prerequisites: [physics.modern.barrier-tunneling, physics.quantum.probability-current]
+  - id: physics.quantum.finite-well-exact
+    name: Solving the finite well exactly
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.finite-square-well
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find even and odd bound states
+        key_prerequisites: [physics.modern.finite-square-well]
+      - id: kp2
+        can_do: Write the transcendental equations
+        key_prerequisites: [physics.modern.finite-square-well]
+      - id: kp3
+        can_do: Find the number of bound states
+        key_prerequisites: [physics.modern.finite-square-well]
+      - id: kp4
+        can_do: Find limits of shallow and deep wells
+        key_prerequisites: [physics.modern.finite-square-well]
+  - id: physics.quantum.bound-state-properties
+    name: Using general properties of one-dimensional bound states
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.finite-well-exact
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show bound states in one dimension are not degenerate
+        key_prerequisites: [physics.quantum.finite-well-exact]
+      - id: kp2
+        can_do: Relate node count to energy level
+        key_prerequisites: [physics.quantum.finite-well-exact]
+      - id: kp3
+        can_do: Show bound states can be taken real
+        key_prerequisites: [physics.quantum.finite-well-exact]
+      - id: kp4
+        can_do: Show energy exceeds the potential minimum
+        key_prerequisites: [physics.quantum.finite-well-exact]
+  - id: physics.quantum.periodic-potentials-and-bloch
+    name: Finding bands with a periodic potential
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.delta-function-potential
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.modern.band-theory
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Bloch's theorem
+        key_prerequisites: [physics.modern.band-theory]
+      - id: kp2
+        can_do: Solve a delta comb
+        key_prerequisites: [physics.quantum.delta-function-potential]
+      - id: kp3
+        can_do: Find allowed and forbidden bands
+        key_prerequisites: [physics.quantum.delta-function-potential, physics.modern.band-theory]
+      - id: kp4
+        can_do: Relate bands to conductivity
+        key_prerequisites: [physics.modern.band-theory]
+  - id: physics.quantum.hilbert-space-and-kets
+    name: Representing states as vectors in Hilbert space
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.stationary-state-expansion
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.inner-product-spaces
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Represent a state as a vector
+        key_prerequisites: [physics.quantum.stationary-state-expansion, math.linalg.inner-product-spaces]
+      - id: kp2
+        can_do: Find inner products of functions
+        key_prerequisites: [math.linalg.inner-product-spaces]
+      - id: kp3
+        can_do: Expand a state in an orthonormal basis
+        key_prerequisites: [physics.quantum.stationary-state-expansion]
+      - id: kp4
+        can_do: Find norms and orthogonality
+        key_prerequisites: [math.linalg.inner-product-spaces]
+  - id: physics.quantum.dirac-notation
+    name: Using Dirac bra-ket notation
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hilbert-space-and-kets
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write kets and bras
+        key_prerequisites: [physics.quantum.hilbert-space-and-kets]
+      - id: kp2
+        can_do: Write inner products in bra-ket form
+        key_prerequisites: [physics.quantum.hilbert-space-and-kets]
+      - id: kp3
+        can_do: Write an operator as a sum of outer products
+        key_prerequisites: [physics.quantum.hilbert-space-and-kets]
+      - id: kp4
+        can_do: Insert a complete set of states
+        key_prerequisites: [physics.quantum.hilbert-space-and-kets]
+  - id: physics.quantum.hermitian-operators-observables
+    name: Linking observables to Hermitian operators
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.dirac-notation
+        encompassing: 0.45
+        confidence: high
+      - topic: math.linalg.hermitian-intro
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the adjoint of an operator
+        key_prerequisites: [physics.quantum.dirac-notation]
+      - id: kp2
+        can_do: Test whether an operator is Hermitian
+        key_prerequisites: [physics.quantum.dirac-notation, math.linalg.hermitian-intro]
+      - id: kp3
+        can_do: Show Hermitian operators have real expectation values
+        key_prerequisites: [physics.quantum.dirac-notation]
+      - id: kp4
+        can_do: Show momentum is Hermitian
+        key_prerequisites: [physics.quantum.dirac-notation]
+  - id: physics.quantum.eigenvalues-of-observables
+    name: Finding eigenvalues and eigenvectors of observables
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hermitian-operators-observables
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: math.linalg.spectral-theorem
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find eigenvalues of a Hermitian operator
+        key_prerequisites: [physics.quantum.hermitian-operators-observables, math.linalg.spectral-theorem]
+      - id: kp2
+        can_do: Show eigenvectors with different eigenvalues are orthogonal
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp3
+        can_do: Find eigenvectors of a matrix observable
+        key_prerequisites: [math.linalg.spectral-theorem]
+      - id: kp4
+        can_do: Expand a state in eigenvectors
+        key_prerequisites: [physics.quantum.hermitian-operators-observables]
+  - id: physics.quantum.continuous-spectra
+    name: Normalizing continuous eigenstates with delta functions
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.eigenvalues-of-observables
+        encompassing: 0.4
+        confidence: high
+      - topic: math.pde.fourier-inversion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Normalize momentum eigenstates with a delta function
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables, math.pde.fourier-inversion]
+      - id: kp2
+        can_do: Normalize position eigenstates
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+      - id: kp3
+        can_do: Expand a state in a continuous basis
+        key_prerequisites: [math.pde.fourier-inversion]
+      - id: kp4
+        can_do: Find a probability density from a continuous expansion
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+  - id: physics.quantum.measurement-postulates
+    name: Applying measurement and collapse postulates
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.eigenvalues-of-observables
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find possible outcomes of a measurement
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+      - id: kp2
+        can_do: Find outcome probabilities
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+      - id: kp3
+        can_do: Find the state after a measurement
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+      - id: kp4
+        can_do: Find results of repeated measurements
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+  - id: physics.quantum.commutators
+    name: Computing commutators of operators
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hermitian-operators-observables
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.linalg.product-noncommutative
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compute a commutator of operators
+        key_prerequisites: [physics.quantum.hermitian-operators-observables]
+      - id: kp2
+        can_do: Find the position-momentum commutator
+        key_prerequisites: [physics.quantum.hermitian-operators-observables, math.linalg.product-noncommutative]
+      - id: kp3
+        can_do: Use commutator identities
+        key_prerequisites: [math.linalg.product-noncommutative]
+      - id: kp4
+        can_do: Find commutators with the Hamiltonian
+        key_prerequisites: [physics.quantum.hermitian-operators-observables]
+  - id: physics.quantum.generalized-uncertainty
+    name: Deriving the generalized uncertainty principle
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.commutators
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.measurement-postulates
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the generalized uncertainty relation
+        key_prerequisites: [physics.quantum.commutators, physics.quantum.measurement-postulates]
+      - id: kp2
+        can_do: Recover the position-momentum relation
+        key_prerequisites: [physics.quantum.commutators]
+      - id: kp3
+        can_do: Find a minimum uncertainty state
+        key_prerequisites: [physics.quantum.measurement-postulates]
+      - id: kp4
+        can_do: Find an uncertainty bound for two observables
+        key_prerequisites: [physics.quantum.commutators]
+  - id: physics.quantum.compatible-observables
+    name: Finding simultaneous eigenstates of compatible observables
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.commutators
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.eigenvalues-of-observables
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show commuting observables share eigenstates
+        key_prerequisites: [physics.quantum.commutators, physics.quantum.eigenvalues-of-observables]
+      - id: kp2
+        can_do: Find a complete set of compatible observables
+        key_prerequisites: [physics.quantum.commutators]
+      - id: kp3
+        can_do: Label states with several quantum numbers
+        key_prerequisites: [physics.quantum.eigenvalues-of-observables]
+      - id: kp4
+        can_do: Find what a measurement disturbs
+        key_prerequisites: [physics.quantum.commutators]
+  - id: physics.quantum.change-of-representation
+    name: Changing between position, momentum and energy bases
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.continuous-spectra
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.quantum.dirac-notation
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.linalg.change-of-basis
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find position wave functions from kets
+        key_prerequisites: [physics.quantum.continuous-spectra, physics.quantum.dirac-notation]
+      - id: kp2
+        can_do: Find momentum wave functions from kets
+        key_prerequisites: [physics.quantum.continuous-spectra]
+      - id: kp3
+        can_do: Write an operator in a new basis
+        key_prerequisites: [math.linalg.change-of-basis]
+      - id: kp4
+        can_do: Find the matrix that changes basis
+        key_prerequisites: [math.linalg.change-of-basis]
+  - id: physics.quantum.matrix-representations
+    name: Representing operators as matrices
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.dirac-notation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.matrix-of-transformation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find matrix elements of an operator
+        key_prerequisites: [physics.quantum.dirac-notation]
+      - id: kp2
+        can_do: Write a state as a column vector
+        key_prerequisites: [physics.quantum.dirac-notation]
+      - id: kp3
+        can_do: Find an operator matrix in a finite basis
+        key_prerequisites: [physics.quantum.dirac-notation, math.linalg.matrix-of-transformation]
+      - id: kp4
+        can_do: Find eigenvalues from a matrix
+        key_prerequisites: [math.linalg.matrix-of-transformation]
+  - id: physics.quantum.time-evolution-operator
+    name: Using the time evolution operator
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.hermitian-operators-observables
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.matrix-exponential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the time evolution operator
+        key_prerequisites: [physics.quantum.hermitian-operators-observables, math.diffeq.matrix-exponential]
+      - id: kp2
+        can_do: Show it is unitary
+        key_prerequisites: [physics.quantum.hermitian-operators-observables]
+      - id: kp3
+        can_do: Evolve a state with it
+        key_prerequisites: [math.diffeq.matrix-exponential]
+      - id: kp4
+        can_do: Find evolution for a time-independent Hamiltonian
+        key_prerequisites: [physics.quantum.hermitian-operators-observables]
+  - id: physics.quantum.heisenberg-picture
+    name: Using the Heisenberg picture
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.time-evolution-operator
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.quantum.commutators
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define operators that evolve in time
+        key_prerequisites: [physics.quantum.time-evolution-operator]
+      - id: kp2
+        can_do: Derive the Heisenberg equation of motion
+        key_prerequisites: [physics.quantum.time-evolution-operator, physics.quantum.commutators]
+      - id: kp3
+        can_do: Find position and momentum operators in time for an oscillator
+        key_prerequisites: [physics.quantum.time-evolution-operator]
+      - id: kp4
+        can_do: Compare Schrodinger and Heisenberg pictures
+        key_prerequisites: [physics.quantum.time-evolution-operator]
+  - id: physics.quantum.two-level-systems
+    name: Solving two-level systems
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.matrix-representations
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.time-evolution-operator
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a two-level Hamiltonian as a matrix
+        key_prerequisites: [physics.quantum.matrix-representations]
+      - id: kp2
+        can_do: Find energies and eigenstates
+        key_prerequisites: [physics.quantum.matrix-representations]
+      - id: kp3
+        can_do: Evolve a two-level state
+        key_prerequisites: [physics.quantum.time-evolution-operator]
+      - id: kp4
+        can_do: Find oscillation between two states
+        key_prerequisites: [physics.quantum.matrix-representations, physics.quantum.time-evolution-operator]
+  - id: physics.quantum.oscillator-series-solution
+    name: Solving the oscillator by power series
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.oscillator-energy-levels
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.series-solutions-ordinary
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the oscillator equation in a scaled variable
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+      - id: kp2
+        can_do: Factor out the large-distance behaviour
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+      - id: kp3
+        can_do: Find the recursion for series coefficients
+        key_prerequisites: [math.diffeq.series-solutions-ordinary]
+      - id: kp4
+        can_do: Show the series must end to give allowed energies
+        key_prerequisites: [physics.modern.oscillator-energy-levels, math.diffeq.series-solutions-ordinary]
+  - id: physics.quantum.hermite-polynomials
+    name: Using Hermite polynomials
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.oscillator-series-solution
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the first few Hermite polynomials
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+      - id: kp2
+        can_do: Write oscillator states with Hermite polynomials
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+      - id: kp3
+        can_do: Use a recursion relation
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+      - id: kp4
+        can_do: Use orthogonality of oscillator states
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+  - id: physics.quantum.ladder-operators-oscillator
+    name: Solving the oscillator with ladder operators
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.oscillator-series-solution
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.commutators
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define raising and lowering operators
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+      - id: kp2
+        can_do: Find their commutator
+        key_prerequisites: [physics.quantum.commutators]
+      - id: kp3
+        can_do: Find energies with ladder operators
+        key_prerequisites: [physics.quantum.oscillator-series-solution, physics.quantum.commutators]
+      - id: kp4
+        can_do: Build excited states from the ground state
+        key_prerequisites: [physics.quantum.oscillator-series-solution]
+  - id: physics.quantum.oscillator-matrix-elements
+    name: Finding oscillator matrix elements with ladder operators
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.ladder-operators-oscillator
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write position in ladder operators
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp2
+        can_do: Find matrix elements of position
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp3
+        can_do: Find average energy of a superposition
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp4
+        can_do: Find uncertainties of oscillator states
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+  - id: physics.quantum.coherent-states
+    name: Describing coherent states
+    subject: physics
+    course: physics.quantum
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.ladder-operators-oscillator
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define a coherent state as a lowering eigenstate
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp2
+        can_do: Find its average position over time
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp3
+        can_do: Show it has minimum uncertainty
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp4
+        can_do: Link coherent states to classical motion
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
