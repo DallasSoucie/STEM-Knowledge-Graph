@@ -1,0 +1,733 @@
+course: engr.software-engineering
+topics:
+  - id: engr.software-engineering.software-processes
+    name: Comparing waterfall, iterative and agile processes
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.choosing-data-structures
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare waterfall and iterative processes
+        key_prerequisites: [engr.data-structures.choosing-data-structures]
+      - id: kp2
+        can_do: Describe agile values
+        key_prerequisites: [engr.data-structures.choosing-data-structures]
+      - id: kp3
+        can_do: Choose a process for a project
+        key_prerequisites: [engr.data-structures.choosing-data-structures]
+      - id: kp4
+        can_do: Describe software life cycle phases
+        key_prerequisites: [engr.data-structures.choosing-data-structures]
+  - id: engr.software-engineering.agile-practices
+    name: Using agile practices such as sprints and stand-ups
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.software-processes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run sprints
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp2
+        can_do: Hold stand-ups and retrospectives
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp3
+        can_do: Use backlogs
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp4
+        can_do: Track progress with burndown charts
+        key_prerequisites: [engr.software-engineering.software-processes]
+  - id: engr.software-engineering.requirements-elicitation
+    name: Eliciting and writing requirements
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.software-processes
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Elicit requirements from stakeholders
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp2
+        can_do: Write functional requirements
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp3
+        can_do: Write nonfunctional requirements
+        key_prerequisites: [engr.software-engineering.software-processes]
+      - id: kp4
+        can_do: Check requirements for testability
+        key_prerequisites: [engr.software-engineering.software-processes]
+  - id: engr.software-engineering.user-stories
+    name: Writing user stories and acceptance criteria
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.requirements-elicitation
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.software-engineering.agile-practices
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write user stories
+        key_prerequisites: [engr.software-engineering.agile-practices]
+      - id: kp2
+        can_do: Write acceptance criteria
+        key_prerequisites: [engr.software-engineering.requirements-elicitation, engr.software-engineering.agile-practices]
+      - id: kp3
+        can_do: Split large stories
+        key_prerequisites: [engr.software-engineering.agile-practices]
+      - id: kp4
+        can_do: Prioritize stories
+        key_prerequisites: [engr.software-engineering.requirements-elicitation]
+  - id: engr.software-engineering.estimation-and-planning
+    name: Estimating and planning software work
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.user-stories
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate with story points
+        key_prerequisites: [engr.software-engineering.user-stories]
+      - id: kp2
+        can_do: Plan releases
+        key_prerequisites: [engr.software-engineering.user-stories]
+      - id: kp3
+        can_do: Track velocity
+        key_prerequisites: [engr.software-engineering.user-stories]
+      - id: kp4
+        can_do: Manage project risks
+        key_prerequisites: [engr.software-engineering.user-stories]
+  - id: engr.software-engineering.uml-class-diagrams
+    name: Drawing UML class diagrams
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.requirements-elicitation
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: engr.programming.inheritance
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Draw classes and associations
+        key_prerequisites: [engr.software-engineering.requirements-elicitation, engr.programming.inheritance]
+      - id: kp2
+        can_do: Show inheritance and composition
+        key_prerequisites: [engr.software-engineering.requirements-elicitation]
+      - id: kp3
+        can_do: Show multiplicity
+        key_prerequisites: [engr.software-engineering.requirements-elicitation]
+      - id: kp4
+        can_do: Derive class diagrams from requirements
+        key_prerequisites: [engr.programming.inheritance]
+  - id: engr.software-engineering.uml-behaviour-diagrams
+    name: Drawing sequence and state diagrams
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.uml-class-diagrams
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw sequence diagrams
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+      - id: kp2
+        can_do: Draw state diagrams
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+      - id: kp3
+        can_do: Draw use case diagrams
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+      - id: kp4
+        can_do: Draw activity diagrams
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+  - id: engr.software-engineering.design-principles
+    name: Applying cohesion, coupling and SOLID principles
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.uml-class-diagrams
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: engr.programming.abstract-interfaces
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply cohesion and coupling
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+      - id: kp2
+        can_do: Apply single responsibility and open-closed principles
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams, engr.programming.abstract-interfaces]
+      - id: kp3
+        can_do: Apply dependency inversion
+        key_prerequisites: [engr.programming.abstract-interfaces]
+      - id: kp4
+        can_do: Find design smells
+        key_prerequisites: [engr.software-engineering.uml-class-diagrams]
+  - id: engr.software-engineering.creational-patterns
+    name: Using creational design patterns
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use factory patterns
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp2
+        can_do: Use the builder pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp3
+        can_do: Use the singleton pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp4
+        can_do: Choose creational patterns
+        key_prerequisites: [engr.software-engineering.design-principles]
+  - id: engr.software-engineering.structural-patterns
+    name: Using structural design patterns
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the adapter pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp2
+        can_do: Use the decorator pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp3
+        can_do: Use the composite pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp4
+        can_do: Use the facade pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+  - id: engr.software-engineering.behavioural-patterns
+    name: Using behavioural design patterns
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the observer pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp2
+        can_do: Use the strategy pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp3
+        can_do: Use the command pattern
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp4
+        can_do: Use the iterator and template method patterns
+        key_prerequisites: [engr.software-engineering.design-principles]
+  - id: engr.software-engineering.software-architecture-styles
+    name: Comparing architectural styles
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.structural-patterns
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.software-engineering.behavioural-patterns
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe layered architectures
+        key_prerequisites: [engr.software-engineering.structural-patterns]
+      - id: kp2
+        can_do: Describe client-server and microservices
+        key_prerequisites: [engr.software-engineering.structural-patterns, engr.software-engineering.behavioural-patterns]
+      - id: kp3
+        can_do: Describe event-driven architectures
+        key_prerequisites: [engr.software-engineering.behavioural-patterns]
+      - id: kp4
+        can_do: Choose an architecture style
+        key_prerequisites: [engr.software-engineering.structural-patterns, engr.software-engineering.behavioural-patterns]
+  - id: engr.software-engineering.api-design
+    name: Designing APIs
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design clear interfaces
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp2
+        can_do: Design REST APIs
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp3
+        can_do: Version APIs
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp4
+        can_do: Document APIs
+        key_prerequisites: [engr.software-engineering.design-principles]
+  - id: engr.software-engineering.version-control-branching
+    name: Branching and merging with version control
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming.version-control-basics
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Create and merge branches
+        key_prerequisites: [engr.programming.version-control-basics]
+      - id: kp2
+        can_do: Resolve merge conflicts
+        key_prerequisites: [engr.programming.version-control-basics]
+      - id: kp3
+        can_do: Use pull requests
+        key_prerequisites: [engr.programming.version-control-basics]
+      - id: kp4
+        can_do: Choose branching strategies
+        key_prerequisites: [engr.programming.version-control-basics]
+  - id: engr.software-engineering.code-review
+    name: Reviewing code
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.version-control-branching
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.programming.code-style
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Review code for correctness
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+      - id: kp2
+        can_do: Review code for style
+        key_prerequisites: [engr.programming.code-style]
+      - id: kp3
+        can_do: Give useful review comments
+        key_prerequisites: [engr.software-engineering.version-control-branching, engr.programming.code-style]
+      - id: kp4
+        can_do: Respond to reviews
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+  - id: engr.software-engineering.refactoring
+    name: Refactoring code safely
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.programming.unit-test-suites
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify code smells
+        key_prerequisites: [engr.software-engineering.design-principles]
+      - id: kp2
+        can_do: Apply common refactorings
+        key_prerequisites: [engr.software-engineering.design-principles, engr.programming.unit-test-suites]
+      - id: kp3
+        can_do: Refactor with tests in place
+        key_prerequisites: [engr.programming.unit-test-suites]
+      - id: kp4
+        can_do: Refactor legacy code
+        key_prerequisites: [engr.software-engineering.design-principles, engr.programming.unit-test-suites]
+  - id: engr.software-engineering.build-and-dependency-management
+    name: Managing builds and dependencies
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.version-control-branching
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use build tools
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+      - id: kp2
+        can_do: Manage dependencies
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+      - id: kp3
+        can_do: Pin dependency versions
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+      - id: kp4
+        can_do: Automate builds
+        key_prerequisites: [engr.software-engineering.version-control-branching]
+  - id: engr.software-engineering.continuous-integration
+    name: Setting up continuous integration
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.build-and-dependency-management
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.programming.unit-test-suites
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up continuous integration
+        key_prerequisites: [engr.software-engineering.build-and-dependency-management, engr.programming.unit-test-suites]
+      - id: kp2
+        can_do: Run tests automatically
+        key_prerequisites: [engr.programming.unit-test-suites]
+      - id: kp3
+        can_do: Describe continuous delivery
+        key_prerequisites: [engr.software-engineering.build-and-dependency-management]
+      - id: kp4
+        can_do: Fix broken builds
+        key_prerequisites: [engr.software-engineering.build-and-dependency-management, engr.programming.unit-test-suites]
+  - id: engr.software-engineering.unit-testing-practice
+    name: Writing unit tests with test doubles
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming.unit-test-suites
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.software-engineering.design-principles
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write isolated unit tests
+        key_prerequisites: [engr.programming.unit-test-suites]
+      - id: kp2
+        can_do: Use test doubles
+        key_prerequisites: [engr.programming.unit-test-suites, engr.software-engineering.design-principles]
+      - id: kp3
+        can_do: Test edge cases
+        key_prerequisites: [engr.programming.unit-test-suites]
+      - id: kp4
+        can_do: Organize test suites
+        key_prerequisites: [engr.software-engineering.design-principles]
+  - id: engr.software-engineering.test-driven-development
+    name: Developing test-first
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.unit-testing-practice
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a failing test first
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp2
+        can_do: Write minimal code to pass
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp3
+        can_do: Refactor after passing
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp4
+        can_do: Grow a design by tests
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+  - id: engr.software-engineering.coverage-and-test-design
+    name: Designing tests with coverage and partitioning
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.unit-testing-practice
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find statement and branch coverage
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp2
+        can_do: Design tests by equivalence partitioning
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp3
+        can_do: Design tests by boundary values
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+      - id: kp4
+        can_do: Judge coverage limits
+        key_prerequisites: [engr.software-engineering.unit-testing-practice]
+  - id: engr.software-engineering.integration-and-system-testing
+    name: Planning integration and system tests
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.coverage-and-test-design
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plan integration tests
+        key_prerequisites: [engr.software-engineering.coverage-and-test-design]
+      - id: kp2
+        can_do: Plan system tests
+        key_prerequisites: [engr.software-engineering.coverage-and-test-design]
+      - id: kp3
+        can_do: Plan acceptance tests
+        key_prerequisites: [engr.software-engineering.coverage-and-test-design]
+      - id: kp4
+        can_do: Use regression testing
+        key_prerequisites: [engr.software-engineering.coverage-and-test-design]
+  - id: engr.software-engineering.static-analysis
+    name: Using static analysis and type checking
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.code-review
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use linters
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp2
+        can_do: Use type checkers
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp3
+        can_do: Find bugs with static analysis
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp4
+        can_do: Configure analysis rules
+        key_prerequisites: [engr.software-engineering.code-review]
+  - id: engr.software-engineering.formal-specification
+    name: Writing preconditions, postconditions and invariants
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming.docstrings-and-contracts
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.algorithms.proving-algorithm-correctness
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write preconditions and postconditions
+        key_prerequisites: [engr.programming.docstrings-and-contracts]
+      - id: kp2
+        can_do: Write class invariants
+        key_prerequisites: [engr.programming.docstrings-and-contracts]
+      - id: kp3
+        can_do: Use assertions as contracts
+        key_prerequisites: [engr.programming.docstrings-and-contracts, engr.algorithms.proving-algorithm-correctness]
+      - id: kp4
+        can_do: Reason about correctness with specifications
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+  - id: engr.software-engineering.debugging-techniques
+    name: Debugging systematically
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.integration-and-system-testing
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.programming.debugging-strategies
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reproduce bugs
+        key_prerequisites: [engr.software-engineering.integration-and-system-testing]
+      - id: kp2
+        can_do: Isolate bugs by bisection
+        key_prerequisites: [engr.software-engineering.integration-and-system-testing, engr.programming.debugging-strategies]
+      - id: kp3
+        can_do: Use debuggers effectively
+        key_prerequisites: [engr.programming.debugging-strategies]
+      - id: kp4
+        can_do: Write tests for found bugs
+        key_prerequisites: [engr.software-engineering.integration-and-system-testing]
+  - id: engr.software-engineering.software-metrics
+    name: Measuring software quality
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.static-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure code size and complexity
+        key_prerequisites: [engr.software-engineering.static-analysis]
+      - id: kp2
+        can_do: Measure defect rates
+        key_prerequisites: [engr.software-engineering.static-analysis]
+      - id: kp3
+        can_do: Use metrics for decisions
+        key_prerequisites: [engr.software-engineering.static-analysis]
+      - id: kp4
+        can_do: Explain limits of metrics
+        key_prerequisites: [engr.software-engineering.static-analysis]
+  - id: engr.software-engineering.secure-coding
+    name: Avoiding common security vulnerabilities
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.code-review
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Validate input
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp2
+        can_do: Avoid injection vulnerabilities
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp3
+        can_do: Handle secrets safely
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp4
+        can_do: Apply secure defaults
+        key_prerequisites: [engr.software-engineering.code-review]
+  - id: engr.software-engineering.performance-profiling
+    name: Profiling and optimizing performance
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.debugging-techniques
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.programming.timing-programs
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Profile programs
+        key_prerequisites: [engr.software-engineering.debugging-techniques, engr.programming.timing-programs]
+      - id: kp2
+        can_do: Find hot spots
+        key_prerequisites: [engr.software-engineering.debugging-techniques]
+      - id: kp3
+        can_do: Optimize bottlenecks
+        key_prerequisites: [engr.software-engineering.debugging-techniques, engr.programming.timing-programs]
+      - id: kp4
+        can_do: Measure improvements
+        key_prerequisites: [engr.programming.timing-programs]
+  - id: engr.software-engineering.maintenance-and-evolution
+    name: Maintaining and evolving software
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.refactoring
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.software-engineering.software-metrics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify maintenance types
+        key_prerequisites: [engr.software-engineering.software-metrics]
+      - id: kp2
+        can_do: Manage technical debt
+        key_prerequisites: [engr.software-engineering.refactoring, engr.software-engineering.software-metrics]
+      - id: kp3
+        can_do: Plan legacy migrations
+        key_prerequisites: [engr.software-engineering.refactoring]
+      - id: kp4
+        can_do: Document systems for maintenance
+        key_prerequisites: [engr.software-engineering.software-metrics]
+  - id: engr.software-engineering.team-collaboration
+    name: Coordinating software teams
+    subject: engr
+    course: engr.software-engineering
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.software-engineering.code-review
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.software-engineering.estimation-and-planning
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Coordinate team work
+        key_prerequisites: [engr.software-engineering.estimation-and-planning]
+      - id: kp2
+        can_do: Use issue trackers
+        key_prerequisites: [engr.software-engineering.estimation-and-planning]
+      - id: kp3
+        can_do: Communicate design decisions
+        key_prerequisites: [engr.software-engineering.code-review]
+      - id: kp4
+        can_do: Share code ownership
+        key_prerequisites: [engr.software-engineering.code-review, engr.software-engineering.estimation-and-planning]
