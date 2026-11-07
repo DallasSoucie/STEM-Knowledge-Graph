@@ -1,0 +1,1141 @@
+course: engr.structural-analysis
+topics:
+  - id: engr.structural-analysis.structural-loads
+    name: Estimating dead, live and environmental loads
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.distributed-load-resultants
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate dead loads from materials
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp2
+        can_do: Find live loads from occupancy tables
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp3
+        can_do: Describe snow, wind and seismic loads
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+      - id: kp4
+        can_do: Reduce live loads for large areas
+        key_prerequisites: [engr.statics.distributed-load-resultants]
+  - id: engr.structural-analysis.tributary-areas
+    name: Distributing floor loads by tributary area
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.structural-loads
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find tributary areas of beams and girders
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp2
+        can_do: Distinguish one-way and two-way floor systems
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp3
+        can_do: Find beam loads from slab loads
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp4
+        can_do: Trace load paths to foundations
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+  - id: engr.structural-analysis.load-combinations
+    name: Applying load combinations
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.structural-loads
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply strength design load combinations
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp2
+        can_do: Apply service load combinations
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp3
+        can_do: Find the governing combination
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+      - id: kp4
+        can_do: Combine gravity and lateral loads
+        key_prerequisites: [engr.structural-analysis.structural-loads]
+  - id: engr.structural-analysis.idealizing-structures
+    name: Idealizing supports and members for analysis
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.determinacy-and-constraints
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model supports as pins, rollers and fixed ends
+        key_prerequisites: [engr.statics.determinacy-and-constraints]
+      - id: kp2
+        can_do: Model joints as rigid or pinned
+        key_prerequisites: [engr.statics.determinacy-and-constraints]
+      - id: kp3
+        can_do: Draw analytical models of structures
+        key_prerequisites: [engr.statics.determinacy-and-constraints]
+      - id: kp4
+        can_do: Choose member properties for models
+        key_prerequisites: [engr.statics.determinacy-and-constraints]
+  - id: engr.structural-analysis.determinacy-and-stability
+    name: Classifying structures by determinacy and stability
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.idealizing-structures
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find degree of indeterminacy of beams
+        key_prerequisites: [engr.structural-analysis.idealizing-structures]
+      - id: kp2
+        can_do: Find indeterminacy of trusses and frames
+        key_prerequisites: [engr.structural-analysis.idealizing-structures]
+      - id: kp3
+        can_do: Identify geometrically unstable structures
+        key_prerequisites: [engr.structural-analysis.idealizing-structures]
+      - id: kp4
+        can_do: Classify structures by stability
+        key_prerequisites: [engr.structural-analysis.idealizing-structures]
+  - id: engr.structural-analysis.determinate-beam-analysis
+    name: Analyzing determinate beams
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinacy-and-stability
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.statics.shear-moment-diagrams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reactions of compound beams
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability]
+      - id: kp2
+        can_do: Find reactions of beams with hinges
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability]
+      - id: kp3
+        can_do: Draw shear and moment diagrams of compound beams
+        key_prerequisites: [engr.statics.shear-moment-diagrams]
+      - id: kp4
+        can_do: Find maximum moments
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability, engr.statics.shear-moment-diagrams]
+  - id: engr.structural-analysis.compound-trusses
+    name: Analyzing compound and complex trusses
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinacy-and-stability
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.method-of-sections
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze compound trusses
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability, engr.statics.method-of-sections]
+      - id: kp2
+        can_do: Analyze complex trusses
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability]
+      - id: kp3
+        can_do: Use sections through compound trusses
+        key_prerequisites: [engr.statics.method-of-sections]
+      - id: kp4
+        can_do: Check stability of trusses
+        key_prerequisites: [engr.structural-analysis.determinacy-and-stability]
+  - id: engr.structural-analysis.determinate-frames
+    name: Analyzing determinate frames
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinate-beam-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reactions of determinate frames
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp2
+        can_do: Find member end forces
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp3
+        can_do: Analyze three-hinged frames
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp4
+        can_do: Analyze frames with inclined members
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+  - id: engr.structural-analysis.frame-moment-diagrams
+    name: Drawing moment diagrams for frames
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinate-frames
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw moment diagrams for frame members
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp2
+        can_do: Draw axial and shear diagrams for frames
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp3
+        can_do: Find moments at joints
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp4
+        can_do: Draw diagrams on the tension side
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+  - id: engr.structural-analysis.three-hinged-arches
+    name: Analyzing three-hinged arches
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinate-frames
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reactions of three-hinged arches
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp2
+        can_do: Find internal forces in arches
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp3
+        can_do: Find the funicular shape for a load
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+      - id: kp4
+        can_do: Compare arches with beams
+        key_prerequisites: [engr.structural-analysis.determinate-frames]
+  - id: engr.structural-analysis.deflected-shapes
+    name: Sketching deflected shapes
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.frame-moment-diagrams
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.elastic-curve
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch deflected shapes of beams
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams, engr.mech-materials.elastic-curve]
+      - id: kp2
+        can_do: Sketch deflected shapes of frames
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+      - id: kp3
+        can_do: Locate inflection points
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams, engr.mech-materials.elastic-curve]
+      - id: kp4
+        can_do: Check sketches against moment diagrams
+        key_prerequisites: [engr.mech-materials.elastic-curve]
+  - id: engr.structural-analysis.conjugate-beam-method
+    name: Finding deflections by the conjugate-beam method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.deflected-shapes
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.mech-materials.moment-area-method
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build conjugate beams
+        key_prerequisites: [engr.structural-analysis.deflected-shapes]
+      - id: kp2
+        can_do: Find slopes by conjugate beams
+        key_prerequisites: [engr.structural-analysis.deflected-shapes, engr.mech-materials.moment-area-method]
+      - id: kp3
+        can_do: Find deflections by conjugate beams
+        key_prerequisites: [engr.structural-analysis.deflected-shapes, engr.mech-materials.moment-area-method]
+      - id: kp4
+        can_do: Handle hinges and supports in conjugate beams
+        key_prerequisites: [engr.mech-materials.moment-area-method]
+  - id: engr.structural-analysis.virtual-work-trusses
+    name: Finding truss deflections by virtual work
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.compound-trusses
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mech-materials.virtual-work-deflection
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find joint deflections of trusses
+        key_prerequisites: [engr.structural-analysis.compound-trusses, engr.mech-materials.virtual-work-deflection]
+      - id: kp2
+        can_do: Include temperature changes
+        key_prerequisites: [engr.mech-materials.virtual-work-deflection]
+      - id: kp3
+        can_do: Include fabrication errors
+        key_prerequisites: [engr.mech-materials.virtual-work-deflection]
+      - id: kp4
+        can_do: Find rotations of truss members
+        key_prerequisites: [engr.structural-analysis.compound-trusses]
+  - id: engr.structural-analysis.virtual-work-beams-frames
+    name: Finding beam and frame deflections by virtual work
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.virtual-work-trusses
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.frame-moment-diagrams
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find beam deflections by virtual work
+        key_prerequisites: [engr.structural-analysis.virtual-work-trusses]
+      - id: kp2
+        can_do: Find frame deflections by virtual work
+        key_prerequisites: [engr.structural-analysis.virtual-work-trusses, engr.structural-analysis.frame-moment-diagrams]
+      - id: kp3
+        can_do: Find rotations with virtual couples
+        key_prerequisites: [engr.structural-analysis.virtual-work-trusses]
+      - id: kp4
+        can_do: Include axial deformation in frames
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+  - id: engr.structural-analysis.visual-integration-tables
+    name: Evaluating virtual work integrals with tables
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.virtual-work-beams-frames
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate products of moment diagrams with tables
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+      - id: kp2
+        can_do: Split complex diagrams for tables
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+      - id: kp3
+        can_do: Find frame deflections quickly
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+      - id: kp4
+        can_do: Check integration results
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+  - id: engr.structural-analysis.castigliano-structures
+    name: Finding deflections with Castigliano's theorem for structures
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.virtual-work-beams-frames
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.mech-materials.castiglianos-theorem
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find truss deflections with Castigliano
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames, engr.mech-materials.castiglianos-theorem]
+      - id: kp2
+        can_do: Find beam deflections with Castigliano
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+      - id: kp3
+        can_do: Find frame rotations with Castigliano
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames, engr.mech-materials.castiglianos-theorem]
+      - id: kp4
+        can_do: Compare with virtual work
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+  - id: engr.structural-analysis.influence-lines-by-equilibrium
+    name: Constructing influence lines by equilibrium
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.determinate-beam-analysis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw influence lines for reactions
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp2
+        can_do: Draw influence lines for shear
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp3
+        can_do: Draw influence lines for moment
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+      - id: kp4
+        can_do: Find values from influence lines
+        key_prerequisites: [engr.structural-analysis.determinate-beam-analysis]
+  - id: engr.structural-analysis.muller-breslau
+    name: Constructing influence lines with the Muller-Breslau principle
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.influence-lines-by-equilibrium
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.deflected-shapes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch influence lines qualitatively
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium, engr.structural-analysis.deflected-shapes]
+      - id: kp2
+        can_do: Find ordinates by geometry
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+      - id: kp3
+        can_do: Sketch influence lines for compound beams
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium, engr.structural-analysis.deflected-shapes]
+      - id: kp4
+        can_do: Place loads for maximum effect
+        key_prerequisites: [engr.structural-analysis.deflected-shapes]
+  - id: engr.structural-analysis.truss-influence-lines
+    name: Constructing influence lines for trusses
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.influence-lines-by-equilibrium
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.compound-trusses
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw influence lines for truss members
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium, engr.structural-analysis.compound-trusses]
+      - id: kp2
+        can_do: Draw influence lines for panel loads
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+      - id: kp3
+        can_do: Find maximum member forces
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium, engr.structural-analysis.compound-trusses]
+      - id: kp4
+        can_do: Compare top and bottom chord loading
+        key_prerequisites: [engr.structural-analysis.compound-trusses]
+  - id: engr.structural-analysis.moving-load-maxima
+    name: Finding maximum effects of moving loads
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.influence-lines-by-equilibrium
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum effect of a single moving load
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+      - id: kp2
+        can_do: Find maximum effect of uniform live load
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+      - id: kp3
+        can_do: Find maximum shear from a series of loads
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+      - id: kp4
+        can_do: Find maximum moment at a point from a series of loads
+        key_prerequisites: [engr.structural-analysis.influence-lines-by-equilibrium]
+  - id: engr.structural-analysis.absolute-maximum-moment
+    name: Finding absolute maximum moment from a series of loads
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.moving-load-maxima
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Locate absolute maximum moment
+        key_prerequisites: [engr.structural-analysis.moving-load-maxima]
+      - id: kp2
+        can_do: Use the resultant position rule
+        key_prerequisites: [engr.structural-analysis.moving-load-maxima]
+      - id: kp3
+        can_do: Find absolute maximum shear
+        key_prerequisites: [engr.structural-analysis.moving-load-maxima]
+      - id: kp4
+        can_do: Check several load positions
+        key_prerequisites: [engr.structural-analysis.moving-load-maxima]
+  - id: engr.structural-analysis.approximate-vertical-loads
+    name: Analyzing frames approximately for vertical loads
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.frame-moment-diagrams
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assume inflection points in girders
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+      - id: kp2
+        can_do: Find approximate girder moments
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+      - id: kp3
+        can_do: Find approximate column forces
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+      - id: kp4
+        can_do: Compare approximate and exact results
+        key_prerequisites: [engr.structural-analysis.frame-moment-diagrams]
+  - id: engr.structural-analysis.portal-method
+    name: Analyzing frames for lateral loads by the portal method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.approximate-vertical-loads
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply portal method assumptions
+        key_prerequisites: [engr.structural-analysis.approximate-vertical-loads]
+      - id: kp2
+        can_do: Find column shears
+        key_prerequisites: [engr.structural-analysis.approximate-vertical-loads]
+      - id: kp3
+        can_do: Find column and girder moments
+        key_prerequisites: [engr.structural-analysis.approximate-vertical-loads]
+      - id: kp4
+        can_do: Find column axial forces
+        key_prerequisites: [engr.structural-analysis.approximate-vertical-loads]
+  - id: engr.structural-analysis.cantilever-method
+    name: Analyzing frames by the cantilever method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.portal-method
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply cantilever method assumptions
+        key_prerequisites: [engr.structural-analysis.portal-method]
+      - id: kp2
+        can_do: Find column axial forces
+        key_prerequisites: [engr.structural-analysis.portal-method]
+      - id: kp3
+        can_do: Find girder shears and moments
+        key_prerequisites: [engr.structural-analysis.portal-method]
+      - id: kp4
+        can_do: Compare portal and cantilever methods
+        key_prerequisites: [engr.structural-analysis.portal-method]
+  - id: engr.structural-analysis.force-method-beams
+    name: Analyzing indeterminate beams by the force method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.virtual-work-beams-frames
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mech-materials.indeterminate-beams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose redundants for beams
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames]
+      - id: kp2
+        can_do: Write compatibility equations
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames, engr.mech-materials.indeterminate-beams]
+      - id: kp3
+        can_do: Solve beams with one redundant
+        key_prerequisites: [engr.structural-analysis.virtual-work-beams-frames, engr.mech-materials.indeterminate-beams]
+      - id: kp4
+        can_do: Solve beams with two redundants
+        key_prerequisites: [engr.mech-materials.indeterminate-beams]
+  - id: engr.structural-analysis.force-method-frames
+    name: Analyzing indeterminate frames by the force method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-beams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose redundants for frames
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp2
+        can_do: Find flexibility coefficients for frames
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp3
+        can_do: Solve frames by the force method
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp4
+        can_do: Draw final moment diagrams
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+  - id: engr.structural-analysis.force-method-trusses
+    name: Analyzing indeterminate trusses by the force method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-beams
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.structural-analysis.virtual-work-trusses
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose redundant members
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp2
+        can_do: Find flexibility coefficients for trusses
+        key_prerequisites: [engr.structural-analysis.force-method-beams, engr.structural-analysis.virtual-work-trusses]
+      - id: kp3
+        can_do: Solve indeterminate trusses
+        key_prerequisites: [engr.structural-analysis.force-method-beams, engr.structural-analysis.virtual-work-trusses]
+      - id: kp4
+        can_do: Find member forces from superposition
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+  - id: engr.structural-analysis.maxwell-betti
+    name: Using Maxwell's reciprocal theorem
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-beams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Maxwell's reciprocal theorem
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp2
+        can_do: Use reciprocity to check flexibility matrices
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp3
+        can_do: Use the Betti-Maxwell law
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp4
+        can_do: Find deflections with reciprocity
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+  - id: engr.structural-analysis.support-settlement-effects
+    name: Finding effects of support settlement and temperature
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-frames
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find moments from support settlement
+        key_prerequisites: [engr.structural-analysis.force-method-frames]
+      - id: kp2
+        can_do: Find effects of temperature change
+        key_prerequisites: [engr.structural-analysis.force-method-frames]
+      - id: kp3
+        can_do: Combine settlement with loads
+        key_prerequisites: [engr.structural-analysis.force-method-frames]
+      - id: kp4
+        can_do: Explain why indeterminate structures resist settlement
+        key_prerequisites: [engr.structural-analysis.force-method-frames]
+  - id: engr.structural-analysis.indeterminate-influence-lines
+    name: Sketching influence lines for indeterminate beams
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.muller-breslau
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.force-method-beams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch influence lines for indeterminate beams
+        key_prerequisites: [engr.structural-analysis.muller-breslau, engr.structural-analysis.force-method-beams]
+      - id: kp2
+        can_do: Find ordinates by the force method
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp3
+        can_do: Place live loads for maximum moment
+        key_prerequisites: [engr.structural-analysis.muller-breslau]
+      - id: kp4
+        can_do: Place live loads for maximum reaction
+        key_prerequisites: [engr.structural-analysis.muller-breslau]
+  - id: engr.structural-analysis.slope-deflection-beams
+    name: Analyzing beams by slope-deflection
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-beams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write slope-deflection equations
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp2
+        can_do: Find fixed-end moments
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp3
+        can_do: Solve continuous beams
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+      - id: kp4
+        can_do: Draw final moment diagrams
+        key_prerequisites: [engr.structural-analysis.force-method-beams]
+  - id: engr.structural-analysis.slope-deflection-frames
+    name: Analyzing frames by slope-deflection
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.slope-deflection-beams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve frames without sidesway
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp2
+        can_do: Write joint equilibrium equations
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp3
+        can_do: Find member end moments
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp4
+        can_do: Find reactions from end moments
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+  - id: engr.structural-analysis.sidesway-frames
+    name: Analyzing frames with sidesway
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.slope-deflection-frames
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify frames that sway
+        key_prerequisites: [engr.structural-analysis.slope-deflection-frames]
+      - id: kp2
+        can_do: Write shear equations for sway
+        key_prerequisites: [engr.structural-analysis.slope-deflection-frames]
+      - id: kp3
+        can_do: Solve frames with sidesway
+        key_prerequisites: [engr.structural-analysis.slope-deflection-frames]
+      - id: kp4
+        can_do: Solve frames with inclined legs
+        key_prerequisites: [engr.structural-analysis.slope-deflection-frames]
+  - id: engr.structural-analysis.moment-distribution-beams
+    name: Analyzing beams by moment distribution
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.slope-deflection-beams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find distribution and carryover factors
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp2
+        can_do: Distribute moments at joints
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp3
+        can_do: Solve continuous beams by moment distribution
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+      - id: kp4
+        can_do: Use modified stiffness for pinned ends
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+  - id: engr.structural-analysis.moment-distribution-frames
+    name: Analyzing frames by moment distribution
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.moment-distribution-beams
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.sidesway-frames
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve frames without sway by moment distribution
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+      - id: kp2
+        can_do: Solve frames with sway by superposition
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams, engr.structural-analysis.sidesway-frames]
+      - id: kp3
+        can_do: Find sway corrections
+        key_prerequisites: [engr.structural-analysis.sidesway-frames]
+      - id: kp4
+        can_do: Check results with equilibrium
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+  - id: engr.structural-analysis.nonprismatic-members
+    name: Analyzing nonprismatic members
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.moment-distribution-beams
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stiffness of nonprismatic members
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+      - id: kp2
+        can_do: Find fixed-end moments of haunched beams
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+      - id: kp3
+        can_do: Use tables for nonprismatic members
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+      - id: kp4
+        can_do: Solve beams with varying sections
+        key_prerequisites: [engr.structural-analysis.moment-distribution-beams]
+  - id: engr.structural-analysis.member-stiffness-truss
+    name: Writing truss member stiffness matrices
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.force-method-trusses
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.statics.truss-matrix-solution
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write axial member stiffness
+        key_prerequisites: [engr.structural-analysis.force-method-trusses]
+      - id: kp2
+        can_do: Relate member force to displacement
+        key_prerequisites: [engr.structural-analysis.force-method-trusses, engr.statics.truss-matrix-solution]
+      - id: kp3
+        can_do: Write local stiffness matrices
+        key_prerequisites: [engr.statics.truss-matrix-solution]
+      - id: kp4
+        can_do: Find member forces from displacements
+        key_prerequisites: [engr.structural-analysis.force-method-trusses]
+  - id: engr.structural-analysis.coordinate-transformation
+    name: Transforming member stiffness to global coordinates
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.member-stiffness-truss
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.matrix-product-three-views
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write transformation matrices
+        key_prerequisites: [engr.structural-analysis.member-stiffness-truss, math.linalg.matrix-product-three-views]
+      - id: kp2
+        can_do: Transform stiffness to global coordinates
+        key_prerequisites: [engr.structural-analysis.member-stiffness-truss, math.linalg.matrix-product-three-views]
+      - id: kp3
+        can_do: Transform forces to local coordinates
+        key_prerequisites: [engr.structural-analysis.member-stiffness-truss]
+      - id: kp4
+        can_do: Find direction cosines
+        key_prerequisites: [math.linalg.matrix-product-three-views]
+  - id: engr.structural-analysis.global-stiffness-assembly
+    name: Assembling the global stiffness matrix
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.coordinate-transformation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Number degrees of freedom
+        key_prerequisites: [engr.structural-analysis.coordinate-transformation]
+      - id: kp2
+        can_do: Assemble global stiffness matrices
+        key_prerequisites: [engr.structural-analysis.coordinate-transformation]
+      - id: kp3
+        can_do: Apply boundary conditions
+        key_prerequisites: [engr.structural-analysis.coordinate-transformation]
+      - id: kp4
+        can_do: Check symmetry and singularity
+        key_prerequisites: [engr.structural-analysis.coordinate-transformation]
+  - id: engr.structural-analysis.truss-stiffness-solution
+    name: Solving trusses by the stiffness method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.global-stiffness-assembly
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve truss displacements
+        key_prerequisites: [engr.structural-analysis.global-stiffness-assembly]
+      - id: kp2
+        can_do: Find reactions from the stiffness method
+        key_prerequisites: [engr.structural-analysis.global-stiffness-assembly]
+      - id: kp3
+        can_do: Find member forces
+        key_prerequisites: [engr.structural-analysis.global-stiffness-assembly]
+      - id: kp4
+        can_do: Include support settlements in trusses
+        key_prerequisites: [engr.structural-analysis.global-stiffness-assembly]
+  - id: engr.structural-analysis.beam-stiffness-method
+    name: Solving beams by the stiffness method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.truss-stiffness-solution
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.slope-deflection-beams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write beam element stiffness
+        key_prerequisites: [engr.structural-analysis.truss-stiffness-solution]
+      - id: kp2
+        can_do: Assemble beam stiffness matrices
+        key_prerequisites: [engr.structural-analysis.truss-stiffness-solution, engr.structural-analysis.slope-deflection-beams]
+      - id: kp3
+        can_do: Solve continuous beams by stiffness
+        key_prerequisites: [engr.structural-analysis.truss-stiffness-solution, engr.structural-analysis.slope-deflection-beams]
+      - id: kp4
+        can_do: Find member end moments
+        key_prerequisites: [engr.structural-analysis.slope-deflection-beams]
+  - id: engr.structural-analysis.frame-stiffness-method
+    name: Solving plane frames by the stiffness method
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.beam-stiffness-method
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write frame element stiffness
+        key_prerequisites: [engr.structural-analysis.beam-stiffness-method]
+      - id: kp2
+        can_do: Transform frame elements
+        key_prerequisites: [engr.structural-analysis.beam-stiffness-method]
+      - id: kp3
+        can_do: Solve plane frames by stiffness
+        key_prerequisites: [engr.structural-analysis.beam-stiffness-method]
+      - id: kp4
+        can_do: Find member forces in frames
+        key_prerequisites: [engr.structural-analysis.beam-stiffness-method]
+  - id: engr.structural-analysis.member-loads-and-settlement
+    name: Including member loads and settlements in stiffness analysis
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.frame-stiffness-method
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include fixed-end forces in stiffness analysis
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+      - id: kp2
+        can_do: Include support settlement
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+      - id: kp3
+        can_do: Include temperature effects
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+      - id: kp4
+        can_do: Find final member forces
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+  - id: engr.structural-analysis.structural-software-checks
+    name: Checking computer analysis results
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.frame-stiffness-method
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.structural-analysis.portal-method
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check software results with equilibrium
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+      - id: kp2
+        can_do: Check deflections with hand estimates
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method, engr.structural-analysis.portal-method]
+      - id: kp3
+        can_do: Check moments with approximate methods
+        key_prerequisites: [engr.structural-analysis.portal-method]
+      - id: kp4
+        can_do: Find modelling errors
+        key_prerequisites: [engr.structural-analysis.frame-stiffness-method]
+  - id: engr.structural-analysis.wind-loads
+    name: Estimating wind loads
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.load-combinations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wind velocity pressure
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp2
+        can_do: Find design wind pressures on walls and roofs
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp3
+        can_do: Find story wind forces
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp4
+        can_do: Distribute wind loads to frames
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+  - id: engr.structural-analysis.seismic-equivalent-lateral-force
+    name: Estimating seismic loads by equivalent lateral force
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.load-combinations
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.dynamics.undamped-free-vibration
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find seismic weight
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp2
+        can_do: Find base shear
+        key_prerequisites: [engr.structural-analysis.load-combinations, engr.dynamics.undamped-free-vibration]
+      - id: kp3
+        can_do: Distribute base shear to stories
+        key_prerequisites: [engr.structural-analysis.load-combinations]
+      - id: kp4
+        can_do: Estimate building period
+        key_prerequisites: [engr.dynamics.undamped-free-vibration]
+  - id: engr.structural-analysis.frame-buckling-concepts
+    name: Explaining frame stability and second-order effects
+    subject: engr
+    course: engr.structural-analysis
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.structural-analysis.sidesway-frames
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mech-materials.effective-length
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain second-order effects
+        key_prerequisites: [engr.structural-analysis.sidesway-frames]
+      - id: kp2
+        can_do: Find effective length of frame columns
+        key_prerequisites: [engr.mech-materials.effective-length]
+      - id: kp3
+        can_do: Compare braced and unbraced frames
+        key_prerequisites: [engr.structural-analysis.sidesway-frames, engr.mech-materials.effective-length]
+      - id: kp4
+        can_do: Estimate P-delta amplification
+        key_prerequisites: [engr.structural-analysis.sidesway-frames]
