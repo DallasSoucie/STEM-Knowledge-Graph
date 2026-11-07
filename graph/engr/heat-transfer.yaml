@@ -1,0 +1,1362 @@
+course: engr.heat-transfer
+topics:
+  - id: engr.heat-transfer.heat-transfer-modes
+    name: Combining conduction, convection and radiation in energy balances
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.closed-system-energy-balance
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.conduction-through-layers
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify conduction, convection and radiation in a problem
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, physics.waves-thermo-optics.conduction-through-layers]
+      - id: kp2
+        can_do: Apply Newton's law of cooling
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+      - id: kp3
+        can_do: Write surface energy balances
+        key_prerequisites: [engr.thermo.closed-system-energy-balance]
+      - id: kp4
+        can_do: Combine modes in a system energy balance
+        key_prerequisites: [engr.thermo.closed-system-energy-balance, physics.waves-thermo-optics.conduction-through-layers]
+  - id: engr.heat-transfer.fourier-law-and-conductivity
+    name: Using Fourier's law and thermal conductivity
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-transfer-modes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Fourier's law in one dimension
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp2
+        can_do: Find thermal conductivity of materials
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp3
+        can_do: Find thermal diffusivity
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp4
+        can_do: Explain conductivity of gases, liquids and solids
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+  - id: engr.heat-transfer.heat-diffusion-equation
+    name: Writing the heat diffusion equation with generation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.fourier-law-and-conductivity
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc3.divergence
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the heat equation in Cartesian coordinates
+        key_prerequisites: [engr.heat-transfer.fourier-law-and-conductivity, math.calc3.divergence]
+      - id: kp2
+        can_do: Write the heat equation in cylindrical and spherical coordinates
+        key_prerequisites: [engr.heat-transfer.fourier-law-and-conductivity, math.calc3.divergence]
+      - id: kp3
+        can_do: Simplify the equation for special cases
+        key_prerequisites: [engr.heat-transfer.fourier-law-and-conductivity]
+      - id: kp4
+        can_do: Include internal heat generation
+        key_prerequisites: [engr.heat-transfer.fourier-law-and-conductivity]
+  - id: engr.heat-transfer.conduction-boundary-conditions
+    name: Writing thermal boundary conditions
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-diffusion-equation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write constant temperature conditions
+        key_prerequisites: [engr.heat-transfer.heat-diffusion-equation]
+      - id: kp2
+        can_do: Write heat flux and insulated conditions
+        key_prerequisites: [engr.heat-transfer.heat-diffusion-equation]
+      - id: kp3
+        can_do: Write convection boundary conditions
+        key_prerequisites: [engr.heat-transfer.heat-diffusion-equation]
+      - id: kp4
+        can_do: Write interface conditions
+        key_prerequisites: [engr.heat-transfer.heat-diffusion-equation]
+  - id: engr.heat-transfer.plane-wall-conduction
+    name: Solving conduction in plane walls
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.conduction-boundary-conditions
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature distribution in a plane wall
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+      - id: kp2
+        can_do: Find heat rate through a wall
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+      - id: kp3
+        can_do: Find wall temperatures with convection
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+      - id: kp4
+        can_do: Find conductivity varying with temperature
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+  - id: engr.heat-transfer.thermal-resistance-networks
+    name: Using thermal resistance networks
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.plane-wall-conduction
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find conduction and convection resistances
+        key_prerequisites: [engr.heat-transfer.plane-wall-conduction]
+      - id: kp2
+        can_do: Solve composite walls in series
+        key_prerequisites: [engr.heat-transfer.plane-wall-conduction]
+      - id: kp3
+        can_do: Solve walls with parallel paths
+        key_prerequisites: [engr.heat-transfer.plane-wall-conduction]
+      - id: kp4
+        can_do: Find overall heat transfer coefficient of walls
+        key_prerequisites: [engr.heat-transfer.plane-wall-conduction]
+  - id: engr.heat-transfer.contact-resistance
+    name: Including contact resistance
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.thermal-resistance-networks
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Include contact resistance
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp2
+        can_do: Find interface temperature drops
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp3
+        can_do: Find contact resistance from data
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp4
+        can_do: Reduce contact resistance in design
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+  - id: engr.heat-transfer.radial-systems
+    name: Solving conduction in cylinders and spheres
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.thermal-resistance-networks
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.waves-thermo-optics.radial-conduction
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature in cylindrical walls
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks, physics.waves-thermo-optics.radial-conduction]
+      - id: kp2
+        can_do: Find heat loss from insulated pipes
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp3
+        can_do: Find heat transfer through spherical shells
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks, physics.waves-thermo-optics.radial-conduction]
+      - id: kp4
+        can_do: Find resistance of cylindrical layers
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+  - id: engr.heat-transfer.critical-insulation-radius
+    name: Finding the critical radius of insulation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.radial-systems
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find critical radius of insulation
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+      - id: kp2
+        can_do: Explain why insulation can increase heat loss
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+      - id: kp3
+        can_do: Find critical radius of spheres
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+      - id: kp4
+        can_do: Choose insulation for wires
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+  - id: engr.heat-transfer.conduction-with-generation
+    name: Solving conduction with internal heat generation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.radial-systems
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: engr.heat-transfer.plane-wall-conduction
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature in walls with generation
+        key_prerequisites: [engr.heat-transfer.radial-systems, engr.heat-transfer.plane-wall-conduction]
+      - id: kp2
+        can_do: Find temperature in cylinders with generation
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+      - id: kp3
+        can_do: Find maximum temperature
+        key_prerequisites: [engr.heat-transfer.radial-systems, engr.heat-transfer.plane-wall-conduction]
+      - id: kp4
+        can_do: Find heat flux at surfaces
+        key_prerequisites: [engr.heat-transfer.plane-wall-conduction]
+  - id: engr.heat-transfer.fin-equation
+    name: Deriving the fin equation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.conduction-boundary-conditions
+        encompassing: 0.4
+        confidence: high
+      - topic: math.diffeq.constant-coefficients-real
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the fin equation
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions, math.diffeq.constant-coefficients-real]
+      - id: kp2
+        can_do: Write fin boundary conditions
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+      - id: kp3
+        can_do: Find the fin parameter
+        key_prerequisites: [engr.heat-transfer.conduction-boundary-conditions]
+      - id: kp4
+        can_do: Solve the fin equation generally
+        key_prerequisites: [math.diffeq.constant-coefficients-real]
+  - id: engr.heat-transfer.fin-solutions
+    name: Finding temperature and heat rate for fins
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.fin-equation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature in long fins
+        key_prerequisites: [engr.heat-transfer.fin-equation]
+      - id: kp2
+        can_do: Find heat rate from fins with insulated tips
+        key_prerequisites: [engr.heat-transfer.fin-equation]
+      - id: kp3
+        can_do: Find heat rate from fins with convective tips
+        key_prerequisites: [engr.heat-transfer.fin-equation]
+      - id: kp4
+        can_do: Find corrected fin length
+        key_prerequisites: [engr.heat-transfer.fin-equation]
+  - id: engr.heat-transfer.fin-efficiency
+    name: Using fin efficiency and effectiveness
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.fin-solutions
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fin efficiency
+        key_prerequisites: [engr.heat-transfer.fin-solutions]
+      - id: kp2
+        can_do: Find fin effectiveness
+        key_prerequisites: [engr.heat-transfer.fin-solutions]
+      - id: kp3
+        can_do: Use fin efficiency charts
+        key_prerequisites: [engr.heat-transfer.fin-solutions]
+      - id: kp4
+        can_do: Judge when fins are worthwhile
+        key_prerequisites: [engr.heat-transfer.fin-solutions]
+  - id: engr.heat-transfer.fin-arrays
+    name: Analyzing fin arrays
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.fin-efficiency
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.heat-transfer.thermal-resistance-networks
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat rate from fin arrays
+        key_prerequisites: [engr.heat-transfer.fin-efficiency, engr.heat-transfer.thermal-resistance-networks]
+      - id: kp2
+        can_do: Find overall surface efficiency
+        key_prerequisites: [engr.heat-transfer.fin-efficiency]
+      - id: kp3
+        can_do: Find thermal resistance of finned surfaces
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp4
+        can_do: Design heat sinks
+        key_prerequisites: [engr.heat-transfer.fin-efficiency, engr.heat-transfer.thermal-resistance-networks]
+  - id: engr.heat-transfer.shape-factors
+    name: Using conduction shape factors
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.thermal-resistance-networks
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use conduction shape factors
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp2
+        can_do: Find heat loss from buried pipes
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp3
+        can_do: Find heat loss through corners
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp4
+        can_do: Combine shape factors with resistances
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+  - id: engr.heat-transfer.finite-difference-conduction
+    name: Solving steady conduction by finite differences
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.conduction-with-generation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write nodal equations for interior nodes
+        key_prerequisites: [engr.heat-transfer.conduction-with-generation]
+      - id: kp2
+        can_do: Write nodal equations for boundary nodes
+        key_prerequisites: [engr.heat-transfer.conduction-with-generation]
+      - id: kp3
+        can_do: Solve nodal equations
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Find heat rates from nodal temperatures
+        key_prerequisites: [engr.heat-transfer.conduction-with-generation, math.linalg.gaussian-elimination]
+  - id: engr.heat-transfer.lumped-capacitance
+    name: Using the lumped capacitance method
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-transfer-modes
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.cooling-with-differential-equations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the lumped capacitance method
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes, physics.waves-thermo-optics.cooling-with-differential-equations]
+      - id: kp2
+        can_do: Find time to reach a temperature
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp3
+        can_do: Find time constant
+        key_prerequisites: [physics.waves-thermo-optics.cooling-with-differential-equations]
+      - id: kp4
+        can_do: Find heat transferred in a period
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+  - id: engr.heat-transfer.biot-number
+    name: Checking lumped capacitance with the Biot number
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.lumped-capacitance
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.heat-transfer.thermal-resistance-networks
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Biot number
+        key_prerequisites: [engr.heat-transfer.lumped-capacitance, engr.heat-transfer.thermal-resistance-networks]
+      - id: kp2
+        can_do: Judge validity of lumped analysis
+        key_prerequisites: [engr.heat-transfer.lumped-capacitance]
+      - id: kp3
+        can_do: Find Fourier number
+        key_prerequisites: [engr.heat-transfer.thermal-resistance-networks]
+      - id: kp4
+        can_do: Choose characteristic length
+        key_prerequisites: [engr.heat-transfer.lumped-capacitance]
+  - id: engr.heat-transfer.one-term-solutions
+    name: Using one-term solutions for plane walls, cylinders and spheres
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.biot-number
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use one-term solutions for plane walls
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp2
+        can_do: Use one-term solutions for cylinders and spheres
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp3
+        can_do: Find centre and surface temperatures
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp4
+        can_do: Find total energy transferred
+        key_prerequisites: [engr.heat-transfer.biot-number]
+  - id: engr.heat-transfer.semi-infinite-solids
+    name: Analyzing transient conduction in semi-infinite solids
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.biot-number
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature in semi-infinite solids
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp2
+        can_do: Find penetration depth
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp3
+        can_do: Find contact temperature
+        key_prerequisites: [engr.heat-transfer.biot-number]
+      - id: kp4
+        can_do: Find heat flux at the surface
+        key_prerequisites: [engr.heat-transfer.biot-number]
+  - id: engr.heat-transfer.multidimensional-transient
+    name: Combining one-dimensional transient solutions
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.one-term-solutions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine solutions for short cylinders
+        key_prerequisites: [engr.heat-transfer.one-term-solutions]
+      - id: kp2
+        can_do: Combine solutions for rectangular bars
+        key_prerequisites: [engr.heat-transfer.one-term-solutions]
+      - id: kp3
+        can_do: Find temperatures at corners
+        key_prerequisites: [engr.heat-transfer.one-term-solutions]
+      - id: kp4
+        can_do: Find energy transferred in two dimensions
+        key_prerequisites: [engr.heat-transfer.one-term-solutions]
+  - id: engr.heat-transfer.transient-finite-difference
+    name: Solving transient conduction by finite differences
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.finite-difference-conduction
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.heat-transfer.one-term-solutions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write explicit transient nodal equations
+        key_prerequisites: [engr.heat-transfer.finite-difference-conduction, engr.heat-transfer.one-term-solutions]
+      - id: kp2
+        can_do: Check stability criteria
+        key_prerequisites: [engr.heat-transfer.finite-difference-conduction]
+      - id: kp3
+        can_do: Use implicit methods
+        key_prerequisites: [engr.heat-transfer.finite-difference-conduction]
+      - id: kp4
+        can_do: Find transient temperatures numerically
+        key_prerequisites: [engr.heat-transfer.one-term-solutions]
+  - id: engr.heat-transfer.convection-coefficients
+    name: Defining local and average convection coefficients
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-transfer-modes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define local and average convection coefficients
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp2
+        can_do: Find heat rate from average coefficients
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp3
+        can_do: Find average from local coefficients
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp4
+        can_do: Explain factors affecting convection
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+  - id: engr.heat-transfer.thermal-boundary-layers
+    name: Describing velocity and thermal boundary layers
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-coefficients
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.fluids.boundary-layer-concepts
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe velocity and thermal boundary layers
+        key_prerequisites: [engr.heat-transfer.convection-coefficients, engr.fluids.boundary-layer-concepts]
+      - id: kp2
+        can_do: Relate boundary layers to convection
+        key_prerequisites: [engr.heat-transfer.convection-coefficients]
+      - id: kp3
+        can_do: Explain laminar and turbulent convection
+        key_prerequisites: [engr.fluids.boundary-layer-concepts]
+      - id: kp4
+        can_do: Find boundary-layer thickness ratios
+        key_prerequisites: [engr.heat-transfer.convection-coefficients]
+  - id: engr.heat-transfer.convection-dimensionless-groups
+    name: Using Nusselt, Prandtl and Reynolds numbers
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.thermal-boundary-layers
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: engr.fluids.dimensionless-numbers
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find Nusselt number
+        key_prerequisites: [engr.heat-transfer.thermal-boundary-layers]
+      - id: kp2
+        can_do: Find Prandtl number
+        key_prerequisites: [engr.heat-transfer.thermal-boundary-layers]
+      - id: kp3
+        can_do: Find Reynolds number for convection
+        key_prerequisites: [engr.heat-transfer.thermal-boundary-layers, engr.fluids.dimensionless-numbers]
+      - id: kp4
+        can_do: Interpret dimensionless correlations
+        key_prerequisites: [engr.fluids.dimensionless-numbers]
+  - id: engr.heat-transfer.reynolds-analogy
+    name: Using the Reynolds and Chilton-Colburn analogies
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-dimensionless-groups
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Reynolds analogy
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp2
+        can_do: Use the Chilton-Colburn analogy
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp3
+        can_do: Find convection from friction data
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp4
+        can_do: Find Stanton number
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+  - id: engr.heat-transfer.flat-plate-convection
+    name: Finding convection on flat plates
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-dimensionless-groups
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.fluids.flat-plate-boundary-layer
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find laminar convection on plates
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp2
+        can_do: Find turbulent convection on plates
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups, engr.fluids.flat-plate-boundary-layer]
+      - id: kp3
+        can_do: Find film temperature
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp4
+        can_do: Find heat rate from plates
+        key_prerequisites: [engr.fluids.flat-plate-boundary-layer]
+  - id: engr.heat-transfer.mixed-boundary-layer-plates
+    name: Finding convection with mixed laminar and turbulent flow
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.flat-plate-convection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find convection with mixed flow
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp2
+        can_do: Find transition location
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp3
+        can_do: Find average coefficients for mixed flow
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp4
+        can_do: Find heat rate with unheated starting length
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+  - id: engr.heat-transfer.cylinders-in-crossflow
+    name: Finding convection for cylinders in crossflow
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.flat-plate-convection
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find convection for cylinders in crossflow
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp2
+        can_do: Use the Churchill-Bernstein correlation
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp3
+        can_do: Find heat loss from pipes in wind
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+      - id: kp4
+        can_do: Find convection for noncircular cylinders
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+  - id: engr.heat-transfer.spheres-and-tube-banks
+    name: Finding convection for spheres and tube banks
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.cylinders-in-crossflow
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find convection for spheres
+        key_prerequisites: [engr.heat-transfer.cylinders-in-crossflow]
+      - id: kp2
+        can_do: Find convection for tube banks
+        key_prerequisites: [engr.heat-transfer.cylinders-in-crossflow]
+      - id: kp3
+        can_do: Find log-mean temperature in tube banks
+        key_prerequisites: [engr.heat-transfer.cylinders-in-crossflow]
+      - id: kp4
+        can_do: Find pressure drop across tube banks
+        key_prerequisites: [engr.heat-transfer.cylinders-in-crossflow]
+  - id: engr.heat-transfer.mean-temperature-energy-balance
+    name: Writing energy balances with mean fluid temperature
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-coefficients
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mean temperature
+        key_prerequisites: [engr.heat-transfer.convection-coefficients]
+      - id: kp2
+        can_do: Write energy balances for tube flow
+        key_prerequisites: [engr.heat-transfer.convection-coefficients, engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Find outlet temperature
+        key_prerequisites: [engr.heat-transfer.convection-coefficients, engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Find heat rate from mean temperatures
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.heat-transfer.constant-flux-and-temperature
+    name: Analyzing tubes with constant heat flux or surface temperature
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.mean-temperature-energy-balance
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find temperature for constant surface flux
+        key_prerequisites: [engr.heat-transfer.mean-temperature-energy-balance]
+      - id: kp2
+        can_do: Find temperature for constant surface temperature
+        key_prerequisites: [engr.heat-transfer.mean-temperature-energy-balance]
+      - id: kp3
+        can_do: Find surface temperature along tubes
+        key_prerequisites: [engr.heat-transfer.mean-temperature-energy-balance]
+      - id: kp4
+        can_do: Find required tube length
+        key_prerequisites: [engr.heat-transfer.mean-temperature-energy-balance]
+  - id: engr.heat-transfer.log-mean-temperature-difference
+    name: Using log-mean temperature difference in tubes
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.constant-flux-and-temperature
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find log-mean temperature difference in tubes
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+      - id: kp2
+        can_do: Find heat rate from LMTD
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+      - id: kp3
+        can_do: Find outlet temperature from LMTD
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+      - id: kp4
+        can_do: Use external convection with internal flow
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+  - id: engr.heat-transfer.laminar-internal-convection
+    name: Finding convection in laminar tube flow
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.constant-flux-and-temperature
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.fluids.entrance-length
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Nusselt number in fully developed laminar flow
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+      - id: kp2
+        can_do: Find convection in entry regions
+        key_prerequisites: [engr.fluids.entrance-length]
+      - id: kp3
+        can_do: Find convection in noncircular tubes
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature]
+      - id: kp4
+        can_do: Find heat transfer in laminar tubes
+        key_prerequisites: [engr.heat-transfer.constant-flux-and-temperature, engr.fluids.entrance-length]
+  - id: engr.heat-transfer.turbulent-internal-convection
+    name: Finding convection in turbulent tube flow
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.laminar-internal-convection
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Dittus-Boelter correlation
+        key_prerequisites: [engr.heat-transfer.laminar-internal-convection]
+      - id: kp2
+        can_do: Use the Gnielinski correlation
+        key_prerequisites: [engr.heat-transfer.laminar-internal-convection]
+      - id: kp3
+        can_do: Find convection in rough tubes
+        key_prerequisites: [engr.heat-transfer.laminar-internal-convection]
+      - id: kp4
+        can_do: Find heat transfer in turbulent tubes
+        key_prerequisites: [engr.heat-transfer.laminar-internal-convection]
+  - id: engr.heat-transfer.grashof-and-rayleigh
+    name: Using Grashof and Rayleigh numbers
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-dimensionless-groups
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Grashof number
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp2
+        can_do: Find Rayleigh number
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp3
+        can_do: Find buoyancy-driven flow regimes
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+      - id: kp4
+        can_do: Compare free and forced convection scales
+        key_prerequisites: [engr.heat-transfer.convection-dimensionless-groups]
+  - id: engr.heat-transfer.vertical-plate-free-convection
+    name: Finding free convection on vertical plates
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.grashof-and-rayleigh
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free convection on vertical plates
+        key_prerequisites: [engr.heat-transfer.grashof-and-rayleigh]
+      - id: kp2
+        can_do: Find laminar and turbulent free convection
+        key_prerequisites: [engr.heat-transfer.grashof-and-rayleigh]
+      - id: kp3
+        can_do: Find heat loss from walls
+        key_prerequisites: [engr.heat-transfer.grashof-and-rayleigh]
+      - id: kp4
+        can_do: Find convection from heated plates
+        key_prerequisites: [engr.heat-transfer.grashof-and-rayleigh]
+  - id: engr.heat-transfer.free-convection-other-geometries
+    name: Finding free convection on horizontal surfaces and cylinders
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.vertical-plate-free-convection
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free convection on horizontal plates
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+      - id: kp2
+        can_do: Find free convection on cylinders
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+      - id: kp3
+        can_do: Find free convection on spheres
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+      - id: kp4
+        can_do: Find free convection on inclined plates
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+  - id: engr.heat-transfer.enclosure-free-convection
+    name: Finding free convection in enclosures
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.free-convection-other-geometries
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find free convection in vertical enclosures
+        key_prerequisites: [engr.heat-transfer.free-convection-other-geometries]
+      - id: kp2
+        can_do: Find free convection in horizontal enclosures
+        key_prerequisites: [engr.heat-transfer.free-convection-other-geometries]
+      - id: kp3
+        can_do: Find effective conductivity of enclosures
+        key_prerequisites: [engr.heat-transfer.free-convection-other-geometries]
+      - id: kp4
+        can_do: Find heat loss through double windows
+        key_prerequisites: [engr.heat-transfer.free-convection-other-geometries]
+  - id: engr.heat-transfer.mixed-convection
+    name: Judging when forced and free convection combine
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.vertical-plate-free-convection
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.heat-transfer.flat-plate-convection
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Judge when mixed convection matters
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection, engr.heat-transfer.flat-plate-convection]
+      - id: kp2
+        can_do: Combine forced and free convection
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection, engr.heat-transfer.flat-plate-convection]
+      - id: kp3
+        can_do: Find assisting and opposing flows
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+      - id: kp4
+        can_do: Find heat rate in mixed convection
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
+  - id: engr.heat-transfer.boiling-curve
+    name: Describing the boiling curve
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.convection-coefficients
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: engr.thermo.phase-change-processes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe boiling regimes
+        key_prerequisites: [engr.heat-transfer.convection-coefficients]
+      - id: kp2
+        can_do: Find excess temperature
+        key_prerequisites: [engr.heat-transfer.convection-coefficients]
+      - id: kp3
+        can_do: Describe critical heat flux
+        key_prerequisites: [engr.heat-transfer.convection-coefficients, engr.thermo.phase-change-processes]
+      - id: kp4
+        can_do: Describe film boiling
+        key_prerequisites: [engr.thermo.phase-change-processes]
+  - id: engr.heat-transfer.nucleate-boiling
+    name: Finding nucleate boiling heat flux and critical heat flux
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.boiling-curve
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find nucleate boiling heat flux
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+      - id: kp2
+        can_do: Find critical heat flux
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+      - id: kp3
+        can_do: Find minimum heat flux
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+      - id: kp4
+        can_do: Find heat flux in film boiling
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+  - id: engr.heat-transfer.film-condensation
+    name: Finding heat transfer in film condensation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.boiling-curve
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.heat-transfer.vertical-plate-free-convection
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find laminar film condensation on vertical plates
+        key_prerequisites: [engr.heat-transfer.boiling-curve, engr.heat-transfer.vertical-plate-free-convection]
+      - id: kp2
+        can_do: Find condensation on tubes
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+      - id: kp3
+        can_do: Find condensation in tube banks
+        key_prerequisites: [engr.heat-transfer.boiling-curve]
+      - id: kp4
+        can_do: Find condensation rate
+        key_prerequisites: [engr.heat-transfer.vertical-plate-free-convection]
+  - id: engr.heat-transfer.heat-exchanger-types
+    name: Describing heat exchanger types
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.heat-exchanger-energy-balance
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe double-pipe exchangers
+        key_prerequisites: [engr.thermo.heat-exchanger-energy-balance]
+      - id: kp2
+        can_do: Describe shell-and-tube exchangers
+        key_prerequisites: [engr.thermo.heat-exchanger-energy-balance]
+      - id: kp3
+        can_do: Describe compact exchangers
+        key_prerequisites: [engr.thermo.heat-exchanger-energy-balance]
+      - id: kp4
+        can_do: Choose flow arrangements
+        key_prerequisites: [engr.thermo.heat-exchanger-energy-balance]
+  - id: engr.heat-transfer.overall-heat-transfer-coefficient
+    name: Finding overall heat transfer coefficients with fouling
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-exchanger-types
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.heat-transfer.radial-systems
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find overall coefficient for tubes
+        key_prerequisites: [engr.heat-transfer.heat-exchanger-types, engr.heat-transfer.radial-systems]
+      - id: kp2
+        can_do: Include fouling factors
+        key_prerequisites: [engr.heat-transfer.heat-exchanger-types]
+      - id: kp3
+        can_do: Find overall coefficient with fins
+        key_prerequisites: [engr.heat-transfer.heat-exchanger-types, engr.heat-transfer.radial-systems]
+      - id: kp4
+        can_do: Find controlling resistance
+        key_prerequisites: [engr.heat-transfer.radial-systems]
+  - id: engr.heat-transfer.lmtd-method
+    name: Sizing heat exchangers by the LMTD method
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.overall-heat-transfer-coefficient
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.heat-transfer.log-mean-temperature-difference
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find LMTD for parallel and counterflow
+        key_prerequisites: [engr.heat-transfer.log-mean-temperature-difference]
+      - id: kp2
+        can_do: Size exchangers by LMTD
+        key_prerequisites: [engr.heat-transfer.overall-heat-transfer-coefficient, engr.heat-transfer.log-mean-temperature-difference]
+      - id: kp3
+        can_do: Find heat rate by LMTD
+        key_prerequisites: [engr.heat-transfer.overall-heat-transfer-coefficient]
+      - id: kp4
+        can_do: Compare parallel and counterflow
+        key_prerequisites: [engr.heat-transfer.log-mean-temperature-difference]
+  - id: engr.heat-transfer.lmtd-correction-factors
+    name: Using LMTD correction factors
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.lmtd-method
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find correction factors for shell-and-tube
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp2
+        can_do: Find correction factors for crossflow
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp3
+        can_do: Size multipass exchangers
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp4
+        can_do: Choose configurations from correction factors
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+  - id: engr.heat-transfer.effectiveness-ntu
+    name: Rating heat exchangers by the effectiveness-NTU method
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.lmtd-method
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat capacity ratio
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp2
+        can_do: Find effectiveness from NTU
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp3
+        can_do: Find outlet temperatures by effectiveness-NTU
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+      - id: kp4
+        can_do: Find NTU for a required effectiveness
+        key_prerequisites: [engr.heat-transfer.lmtd-method]
+  - id: engr.heat-transfer.choosing-hx-method
+    name: Choosing between LMTD and effectiveness-NTU
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.effectiveness-ntu
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.heat-transfer.lmtd-correction-factors
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose LMTD for sizing problems
+        key_prerequisites: [engr.heat-transfer.lmtd-correction-factors]
+      - id: kp2
+        can_do: Choose effectiveness-NTU for rating problems
+        key_prerequisites: [engr.heat-transfer.effectiveness-ntu]
+      - id: kp3
+        can_do: Solve rating problems
+        key_prerequisites: [engr.heat-transfer.effectiveness-ntu]
+      - id: kp4
+        can_do: Solve sizing problems
+        key_prerequisites: [engr.heat-transfer.effectiveness-ntu, engr.heat-transfer.lmtd-correction-factors]
+  - id: engr.heat-transfer.blackbody-radiation
+    name: Using Planck's law and blackbody functions
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.heat-transfer-modes
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.waves-thermo-optics.radiation-exchange
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Planck's distribution
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp2
+        can_do: Use Wien's law
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes]
+      - id: kp3
+        can_do: Use blackbody radiation functions
+        key_prerequisites: [engr.heat-transfer.heat-transfer-modes, physics.waves-thermo-optics.radiation-exchange]
+      - id: kp4
+        can_do: Find emissive power
+        key_prerequisites: [physics.waves-thermo-optics.radiation-exchange]
+  - id: engr.heat-transfer.surface-radiative-properties
+    name: Using emissivity, absorptivity and reflectivity
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.blackbody-radiation
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use emissivity
+        key_prerequisites: [engr.heat-transfer.blackbody-radiation]
+      - id: kp2
+        can_do: Use absorptivity, reflectivity and transmissivity
+        key_prerequisites: [engr.heat-transfer.blackbody-radiation]
+      - id: kp3
+        can_do: Apply Kirchhoff's law
+        key_prerequisites: [engr.heat-transfer.blackbody-radiation]
+      - id: kp4
+        can_do: Use gray surface approximations
+        key_prerequisites: [engr.heat-transfer.blackbody-radiation]
+  - id: engr.heat-transfer.view-factors
+    name: Finding view factors with relations and charts
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.surface-radiative-properties
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use reciprocity and summation rules
+        key_prerequisites: [engr.heat-transfer.surface-radiative-properties]
+      - id: kp2
+        can_do: Find view factors from charts
+        key_prerequisites: [engr.heat-transfer.surface-radiative-properties]
+      - id: kp3
+        can_do: Find view factors by decomposition
+        key_prerequisites: [engr.heat-transfer.surface-radiative-properties]
+      - id: kp4
+        can_do: Find view factors of enclosures
+        key_prerequisites: [engr.heat-transfer.surface-radiative-properties]
+  - id: engr.heat-transfer.blackbody-exchange
+    name: Finding radiation exchange between black surfaces
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.view-factors
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find exchange between two black surfaces
+        key_prerequisites: [engr.heat-transfer.view-factors]
+      - id: kp2
+        can_do: Find net radiation from a surface
+        key_prerequisites: [engr.heat-transfer.view-factors]
+      - id: kp3
+        can_do: Find exchange in black enclosures
+        key_prerequisites: [engr.heat-transfer.view-factors]
+      - id: kp4
+        can_do: Find temperature of radiating surfaces
+        key_prerequisites: [engr.heat-transfer.view-factors]
+  - id: engr.heat-transfer.gray-surface-networks
+    name: Solving radiation exchange in gray enclosures
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.blackbody-exchange
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find surface and space resistances
+        key_prerequisites: [engr.heat-transfer.blackbody-exchange]
+      - id: kp2
+        can_do: Solve two-surface enclosures
+        key_prerequisites: [engr.heat-transfer.blackbody-exchange]
+      - id: kp3
+        can_do: Solve three-surface enclosures
+        key_prerequisites: [engr.heat-transfer.blackbody-exchange]
+      - id: kp4
+        can_do: Include reradiating surfaces
+        key_prerequisites: [engr.heat-transfer.blackbody-exchange]
+  - id: engr.heat-transfer.radiation-shields
+    name: Analyzing radiation shields
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.gray-surface-networks
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat transfer with shields
+        key_prerequisites: [engr.heat-transfer.gray-surface-networks]
+      - id: kp2
+        can_do: Find shield temperature
+        key_prerequisites: [engr.heat-transfer.gray-surface-networks]
+      - id: kp3
+        can_do: Find number of shields needed
+        key_prerequisites: [engr.heat-transfer.gray-surface-networks]
+      - id: kp4
+        can_do: Find effect of shield emissivity
+        key_prerequisites: [engr.heat-transfer.gray-surface-networks]
+  - id: engr.heat-transfer.combined-modes
+    name: Solving problems with combined convection and radiation
+    subject: engr
+    course: engr.heat-transfer
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.heat-transfer.radiation-shields
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.heat-transfer.flat-plate-convection
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine radiation and convection coefficients
+        key_prerequisites: [engr.heat-transfer.radiation-shields, engr.heat-transfer.flat-plate-convection]
+      - id: kp2
+        can_do: Find surface temperatures with combined modes
+        key_prerequisites: [engr.heat-transfer.radiation-shields]
+      - id: kp3
+        can_do: Find thermocouple errors from radiation
+        key_prerequisites: [engr.heat-transfer.radiation-shields, engr.heat-transfer.flat-plate-convection]
+      - id: kp4
+        can_do: Solve combined problems iteratively
+        key_prerequisites: [engr.heat-transfer.flat-plate-convection]
