@@ -1,0 +1,797 @@
+course: bio.ecology
+topics:
+  - id: bio.ecology.physiological-ecology
+    name: Relating physiology to environmental tolerance
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.thermoregulation
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how temperature limits species ranges
+        key_prerequisites: [bio.intro2.thermoregulation]
+      - id: kp2
+        can_do: Compare tolerance curves of different species
+        key_prerequisites: [bio.intro2.thermoregulation]
+      - id: kp3
+        can_do: Explain water balance limits on distribution
+        key_prerequisites: [bio.intro2.thermoregulation]
+      - id: kp4
+        can_do: Predict range limits from physiological tolerances
+        key_prerequisites: [bio.intro2.thermoregulation]
+  - id: bio.ecology.climate-drivers-of-ecology
+    name: Explaining climate drivers of ecological patterns
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.climate-and-biome-distribution
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how solar heating drives global circulation
+        key_prerequisites: [bio.intro2.climate-and-biome-distribution]
+      - id: kp2
+        can_do: Explain rain shadows and continental climate
+        key_prerequisites: [bio.intro2.climate-and-biome-distribution]
+      - id: kp3
+        can_do: Relate seasonality to latitude
+        key_prerequisites: [bio.intro2.climate-and-biome-distribution]
+      - id: kp4
+        can_do: Predict biome type from temperature and precipitation
+        key_prerequisites: [bio.intro2.climate-and-biome-distribution]
+  - id: bio.ecology.continuous-population-growth
+    name: Modelling population growth with derivatives
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.growth-model-equations
+        encompassing: 0.6
+        confidence: high
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the exponential growth differential equation
+        key_prerequisites: [bio.intro2.growth-model-equations, math.calc1.derivative-of-exponential]
+      - id: kp2
+        can_do: Write the logistic growth differential equation
+        key_prerequisites: [bio.intro2.growth-model-equations]
+      - id: kp3
+        can_do: Find the growth rate at a given population size
+        key_prerequisites: [bio.intro2.growth-model-equations, math.calc1.derivative-of-exponential]
+      - id: kp4
+        can_do: Interpret carrying capacity and the inflection point
+        key_prerequisites: [bio.intro2.growth-model-equations]
+  - id: bio.ecology.matrix-population-models
+    name: Projecting populations with matrix models
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.life-tables-and-survivorship
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.matrix-transformations
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a stage-structured projection matrix
+        key_prerequisites: [bio.intro2.life-tables-and-survivorship]
+      - id: kp2
+        can_do: Project population size with a matrix
+        key_prerequisites: [math.precalc.matrix-transformations]
+      - id: kp3
+        can_do: Interpret the dominant eigenvalue as growth rate
+        key_prerequisites: [math.precalc.matrix-transformations]
+      - id: kp4
+        can_do: Find which vital rate most affects growth
+        key_prerequisites: [bio.intro2.life-tables-and-survivorship, math.precalc.matrix-transformations]
+  - id: bio.ecology.population-regulation
+    name: Testing for density dependence
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.continuous-population-growth
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish density-dependent and independent regulation
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp2
+        can_do: Detect density dependence in time series data
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp3
+        can_do: Explain time lags and population cycles
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp4
+        can_do: Explain Allee effects
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+  - id: bio.ecology.metapopulations
+    name: Modelling metapopulations
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.continuous-population-growth
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe metapopulation structure
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp2
+        can_do: Use the Levins model for patch occupancy
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp3
+        can_do: Explain extinction and colonization balance
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp4
+        can_do: Explain source-sink dynamics
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+  - id: bio.ecology.sustainable-harvest
+    name: Finding maximum sustainable yield
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.continuous-population-growth
+        encompassing: 0.5
+        confidence: high
+      - topic: math.calc1.optimization-setup
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum sustainable yield from logistic growth
+        key_prerequisites: [bio.ecology.continuous-population-growth, math.calc1.optimization-setup]
+      - id: kp2
+        can_do: Compare harvest quotas and harvest effort
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp3
+        can_do: Explain why harvesting near maximum yield is risky
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp4
+        can_do: Find optimal harvest rates from a model
+        key_prerequisites: [math.calc1.optimization-setup]
+  - id: bio.ecology.population-viability
+    name: Assessing population viability
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.metapopulations
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.ecology.matrix-population-models
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain demographic and environmental stochasticity
+        key_prerequisites: [bio.ecology.metapopulations]
+      - id: kp2
+        can_do: Estimate extinction risk from a model
+        key_prerequisites: [bio.ecology.matrix-population-models]
+      - id: kp3
+        can_do: Find a minimum viable population size
+        key_prerequisites: [bio.ecology.metapopulations, bio.ecology.matrix-population-models]
+      - id: kp4
+        can_do: Interpret a population viability analysis
+        key_prerequisites: [bio.ecology.metapopulations, bio.ecology.matrix-population-models]
+  - id: bio.ecology.competition-isoclines
+    name: Predicting competition outcomes with isoclines
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.niches-and-competitive-exclusion
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.ecology.continuous-population-growth
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Lotka-Volterra competition equations
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp2
+        can_do: Draw zero-growth isoclines for two competitors
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp3
+        can_do: Predict competition outcomes from isocline positions
+        key_prerequisites: [bio.intro2.niches-and-competitive-exclusion, bio.ecology.continuous-population-growth]
+      - id: kp4
+        can_do: Relate coexistence to niche overlap
+        key_prerequisites: [bio.intro2.niches-and-competitive-exclusion]
+  - id: bio.ecology.predator-prey-cycles
+    name: Interpreting predator-prey cycles
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.continuous-population-growth
+        encompassing: 0.5
+        confidence: high
+      - topic: bio.intro2.interaction-outcomes
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Lotka-Volterra predator-prey equations
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp2
+        can_do: Draw predator and prey isoclines
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+      - id: kp3
+        can_do: Explain cycles in predator and prey numbers
+        key_prerequisites: [bio.ecology.continuous-population-growth, bio.intro2.interaction-outcomes]
+      - id: kp4
+        can_do: Explain how prey carrying capacity stabilizes cycles
+        key_prerequisites: [bio.ecology.continuous-population-growth]
+  - id: bio.ecology.functional-responses
+    name: Comparing predator functional responses
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.predator-prey-cycles
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare type I, II and III functional responses
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp2
+        can_do: Explain handling time in predation
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp3
+        can_do: Distinguish functional and numerical responses
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp4
+        can_do: Predict prey stability from response type
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+  - id: bio.ecology.mutualism-and-facilitation
+    name: Analyzing mutualism and facilitation
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.interaction-outcomes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify mutualisms by benefit and dependence
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp2
+        can_do: Explain costs and cheating in mutualisms
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp3
+        can_do: Explain facilitation in stressful environments
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+      - id: kp4
+        can_do: Predict when interactions shift from mutualism to competition
+        key_prerequisites: [bio.intro2.interaction-outcomes]
+  - id: bio.ecology.disease-ecology
+    name: Modelling disease spread in populations
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.predator-prey-cycles
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the susceptible-infected-recovered model
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp2
+        can_do: Calculate the basic reproduction number
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp3
+        can_do: Explain threshold host density for spread
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+      - id: kp4
+        can_do: Explain herd immunity in wildlife populations
+        key_prerequisites: [bio.ecology.predator-prey-cycles]
+  - id: bio.ecology.herbivory-ecology
+    name: Analyzing herbivory and plant responses
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.plant-defences
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain plant responses to herbivory
+        key_prerequisites: [bio.intro2.plant-defences]
+      - id: kp2
+        can_do: Compare constitutive and induced defences
+        key_prerequisites: [bio.intro2.plant-defences]
+      - id: kp3
+        can_do: Explain tolerance versus resistance
+        key_prerequisites: [bio.intro2.plant-defences]
+      - id: kp4
+        can_do: Explain herbivore effects on plant communities
+        key_prerequisites: [bio.intro2.plant-defences]
+  - id: bio.ecology.food-web-structure
+    name: Analyzing food web structure
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.keystone-species-and-trophic-cascades
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe connectance and food chain length
+        key_prerequisites: [bio.hs2.keystone-species-and-trophic-cascades]
+      - id: kp2
+        can_do: Explain top-down and bottom-up control
+        key_prerequisites: [bio.hs2.keystone-species-and-trophic-cascades]
+      - id: kp3
+        can_do: Explain omnivory and intraguild predation
+        key_prerequisites: [bio.hs2.keystone-species-and-trophic-cascades]
+      - id: kp4
+        can_do: Relate web structure to stability
+        key_prerequisites: [bio.hs2.keystone-species-and-trophic-cascades]
+  - id: bio.ecology.rarefaction
+    name: Comparing diversity with rarefaction curves
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.species-diversity-indices
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why richness depends on sampling effort
+        key_prerequisites: [bio.hs2.species-diversity-indices]
+      - id: kp2
+        can_do: Build a rarefaction curve
+        key_prerequisites: [bio.hs2.species-diversity-indices]
+      - id: kp3
+        can_do: Compare richness of unequal samples
+        key_prerequisites: [bio.hs2.species-diversity-indices]
+      - id: kp4
+        can_do: Estimate total richness from sample data
+        key_prerequisites: [bio.hs2.species-diversity-indices]
+  - id: bio.ecology.species-area-relationships
+    name: Using species-area relationships
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.island-biogeography
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the power law species-area relationship
+        key_prerequisites: [bio.intro2.island-biogeography]
+      - id: kp2
+        can_do: Find the exponent from log-log data
+        key_prerequisites: [bio.intro2.island-biogeography]
+      - id: kp3
+        can_do: Predict species loss from habitat loss
+        key_prerequisites: [bio.intro2.island-biogeography]
+      - id: kp4
+        can_do: Compare island and mainland slopes
+        key_prerequisites: [bio.intro2.island-biogeography]
+  - id: bio.ecology.succession-models
+    name: Comparing models of succession
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.diversity-and-disturbance
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare primary and secondary succession
+        key_prerequisites: [bio.intro2.diversity-and-disturbance]
+      - id: kp2
+        can_do: Compare facilitation, tolerance and inhibition models
+        key_prerequisites: [bio.intro2.diversity-and-disturbance]
+      - id: kp3
+        can_do: Explain climax and alternative stable states
+        key_prerequisites: [bio.intro2.diversity-and-disturbance]
+      - id: kp4
+        can_do: Predict successional change after disturbance
+        key_prerequisites: [bio.intro2.diversity-and-disturbance]
+  - id: bio.ecology.intermediate-disturbance
+    name: Explaining the intermediate disturbance hypothesis
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.succession-models
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the intermediate disturbance hypothesis
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp2
+        can_do: Relate disturbance frequency to diversity
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp3
+        can_do: Evaluate evidence for the hypothesis
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp4
+        can_do: Explain disturbance in managed ecosystems
+        key_prerequisites: [bio.ecology.succession-models]
+  - id: bio.ecology.community-assembly
+    name: Explaining community assembly
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.species-area-relationships
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.ecology.competition-isoclines
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain environmental filtering
+        key_prerequisites: [bio.ecology.species-area-relationships, bio.ecology.competition-isoclines]
+      - id: kp2
+        can_do: Explain limiting similarity in assembly
+        key_prerequisites: [bio.ecology.competition-isoclines]
+      - id: kp3
+        can_do: Explain dispersal and priority effects
+        key_prerequisites: [bio.ecology.species-area-relationships]
+      - id: kp4
+        can_do: Compare neutral and niche views of communities
+        key_prerequisites: [bio.ecology.species-area-relationships, bio.ecology.competition-isoclines]
+  - id: bio.ecology.productivity-controls
+    name: Explaining controls on ecosystem productivity
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.ecosystem-energy-budgets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain limits on terrestrial productivity
+        key_prerequisites: [bio.intro2.ecosystem-energy-budgets]
+      - id: kp2
+        can_do: Explain nutrient limits on aquatic productivity
+        key_prerequisites: [bio.intro2.ecosystem-energy-budgets]
+      - id: kp3
+        can_do: Calculate trophic transfer efficiencies
+        key_prerequisites: [bio.intro2.ecosystem-energy-budgets]
+      - id: kp4
+        can_do: Explain bottom-up limits on biomass
+        key_prerequisites: [bio.intro2.ecosystem-energy-budgets]
+  - id: bio.ecology.decomposition
+    name: Explaining decomposition rates and nutrient release
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro2.nitrogen-and-phosphorus-cycling
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain decomposition stages and decomposers
+        key_prerequisites: [bio.intro2.nitrogen-and-phosphorus-cycling]
+      - id: kp2
+        can_do: Explain litter quality and decomposition rate
+        key_prerequisites: [bio.intro2.nitrogen-and-phosphorus-cycling]
+      - id: kp3
+        can_do: Use exponential decay to model litter loss
+        key_prerequisites: [bio.intro2.nitrogen-and-phosphorus-cycling]
+      - id: kp4
+        can_do: Relate decomposition to nutrient release
+        key_prerequisites: [bio.intro2.nitrogen-and-phosphorus-cycling]
+  - id: bio.ecology.carbon-budgets
+    name: Calculating ecosystem carbon budgets
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.decomposition
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.intro2.climate-change-biology
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Build an ecosystem carbon budget
+        key_prerequisites: [bio.ecology.decomposition]
+      - id: kp2
+        can_do: Compare gross and net ecosystem production
+        key_prerequisites: [bio.ecology.decomposition]
+      - id: kp3
+        can_do: Explain soil carbon storage
+        key_prerequisites: [bio.ecology.decomposition]
+      - id: kp4
+        can_do: Predict carbon flux responses to warming
+        key_prerequisites: [bio.intro2.climate-change-biology]
+  - id: bio.ecology.ecosystem-services
+    name: Valuing ecosystem services
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.productivity-controls
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify ecosystem services
+        key_prerequisites: [bio.ecology.productivity-controls]
+      - id: kp2
+        can_do: Explain the link between biodiversity and function
+        key_prerequisites: [bio.ecology.productivity-controls]
+      - id: kp3
+        can_do: Explain valuation of ecosystem services
+        key_prerequisites: [bio.ecology.productivity-controls]
+      - id: kp4
+        can_do: Evaluate trade-offs among services
+        key_prerequisites: [bio.ecology.productivity-controls]
+  - id: bio.ecology.landscape-ecology
+    name: Describing landscape patterns and connectivity
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.metapopulations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe patches, corridors and matrix
+        key_prerequisites: [bio.ecology.metapopulations]
+      - id: kp2
+        can_do: Explain habitat fragmentation effects
+        key_prerequisites: [bio.ecology.metapopulations]
+      - id: kp3
+        can_do: Explain edge effects
+        key_prerequisites: [bio.ecology.metapopulations]
+      - id: kp4
+        can_do: Evaluate corridors for connectivity
+        key_prerequisites: [bio.ecology.metapopulations]
+  - id: bio.ecology.ecological-sampling
+    name: Designing ecological sampling
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.stats.sampling-methods
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose quadrat or transect sampling
+        key_prerequisites: [math.stats.sampling-methods]
+      - id: kp2
+        can_do: Design a stratified ecological sample
+        key_prerequisites: [math.stats.sampling-methods]
+      - id: kp3
+        can_do: Estimate density from plot counts
+        key_prerequisites: [math.stats.sampling-methods]
+      - id: kp4
+        can_do: Explain detection bias in field surveys
+        key_prerequisites: [math.stats.sampling-methods]
+  - id: bio.ecology.mark-recapture
+    name: Estimating population size by mark-recapture
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.ecological-sampling
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate population size with the Lincoln-Petersen method
+        key_prerequisites: [bio.ecology.ecological-sampling]
+      - id: kp2
+        can_do: State assumptions of mark-recapture
+        key_prerequisites: [bio.ecology.ecological-sampling]
+      - id: kp3
+        can_do: Explain bias when assumptions fail
+        key_prerequisites: [bio.ecology.ecological-sampling]
+      - id: kp4
+        can_do: Use repeated captures to estimate survival
+        key_prerequisites: [bio.ecology.ecological-sampling]
+  - id: bio.ecology.ecological-regression
+    name: Analyzing ecological data with regression
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.stats.least-squares-regression
+        encompassing: 0.5
+        confidence: high
+      - topic: bio.ecology.ecological-sampling
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Fit a regression to abundance data
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp2
+        can_do: Interpret slopes in ecological terms
+        key_prerequisites: [math.stats.least-squares-regression]
+      - id: kp3
+        can_do: Transform skewed ecological data
+        key_prerequisites: [math.stats.least-squares-regression, bio.ecology.ecological-sampling]
+      - id: kp4
+        can_do: Check residuals for ecological data
+        key_prerequisites: [bio.ecology.ecological-sampling]
+  - id: bio.ecology.species-distribution-models
+    name: Describing species distribution models
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.ecological-regression
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.intro2.climate-and-biome-distribution
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Relate species presence to environmental variables
+        key_prerequisites: [bio.ecology.ecological-regression]
+      - id: kp2
+        can_do: Map predicted habitat suitability
+        key_prerequisites: [bio.ecology.ecological-regression, bio.intro2.climate-and-biome-distribution]
+      - id: kp3
+        can_do: Explain limits of correlative distribution models
+        key_prerequisites: [bio.ecology.ecological-regression]
+      - id: kp4
+        can_do: Project distributions under future climates
+        key_prerequisites: [bio.intro2.climate-and-biome-distribution]
+  - id: bio.ecology.invasive-species
+    name: Analyzing invasive species
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.community-assembly
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe stages of invasion
+        key_prerequisites: [bio.ecology.community-assembly]
+      - id: kp2
+        can_do: Explain why some invaders succeed
+        key_prerequisites: [bio.ecology.community-assembly]
+      - id: kp3
+        can_do: Explain enemy release
+        key_prerequisites: [bio.ecology.community-assembly]
+      - id: kp4
+        can_do: Evaluate invasive species control options
+        key_prerequisites: [bio.ecology.community-assembly]
+  - id: bio.ecology.restoration-ecology
+    name: Planning ecological restoration
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.succession-models
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set goals for ecosystem restoration
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp2
+        can_do: Use succession in restoration plans
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp3
+        can_do: Evaluate restoration success
+        key_prerequisites: [bio.ecology.succession-models]
+      - id: kp4
+        can_do: Explain reference ecosystems
+        key_prerequisites: [bio.ecology.succession-models]
+  - id: bio.ecology.reserve-design
+    name: Designing nature reserves
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.population-viability
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.ecology.landscape-ecology
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply reserve design principles
+        key_prerequisites: [bio.ecology.landscape-ecology]
+      - id: kp2
+        can_do: Compare single large and several small reserves
+        key_prerequisites: [bio.ecology.population-viability, bio.ecology.landscape-ecology]
+      - id: kp3
+        can_do: Prioritize sites for conservation
+        key_prerequisites: [bio.ecology.population-viability]
+      - id: kp4
+        can_do: Evaluate reserve networks for connectivity
+        key_prerequisites: [bio.ecology.landscape-ecology]
+  - id: bio.ecology.climate-change-ecology
+    name: Predicting ecological responses to climate change
+    subject: bio
+    course: bio.ecology
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.ecology.carbon-budgets
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.ecology.species-distribution-models
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe range shifts under warming
+        key_prerequisites: [bio.ecology.species-distribution-models]
+      - id: kp2
+        can_do: Explain phenology mismatches
+        key_prerequisites: [bio.ecology.carbon-budgets]
+      - id: kp3
+        can_do: Predict species at risk from climate change
+        key_prerequisites: [bio.ecology.carbon-budgets, bio.ecology.species-distribution-models]
+      - id: kp4
+        can_do: Evaluate adaptation and assisted migration
+        key_prerequisites: [bio.ecology.species-distribution-models]

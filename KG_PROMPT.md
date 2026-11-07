@@ -15,11 +15,11 @@ Math Academy runs about 2,500 topics on math alone. Matching that density across
 | Math | 27 | 4,370 |
 | Physics | 12 | 1,335 |
 | Chemistry | 12 | 790 |
-| Biology | 15 | 2,310 |
+| Biology | 15 | 755 |
 | Engineering common core | 11 | 1,630 |
 | **Core graph** | **77** | **~12,000** |
 | Engineering discipline courses | 26 | 3,640 |
-| **Full graph** | **103** | **~14,100** |
+| **Full graph** | **103** | **~12,500** |
 
 At about 3.4 KPs and 5 weighted relationships per topic, the full graph holds roughly 53,000 KPs and 78,000 weights.
 
@@ -48,8 +48,8 @@ The number after each course is its topic budget. Confirm or revise this list in
 - University: gen1 55, gen2 55, org1 100, org2 80, analytical 55, inorganic 50, pchem1 50, pchem2 50
 
 **Biology**
-- School: elem 50, ms 90, hs1 180, hs2 180
-- University: intro1 190, intro2 190, cell-mol 170, genetics 170, biochem 180, ecology 140, evolution 120, micro 160, anat-phys1 180, anat-phys2 180, neuro 130
+- School: elem 30, ms 45, hs1 90, hs2 70
+- University: intro1 35, intro2 55, cell-mol 55, genetics 45, biochem 55, ecology 35, evolution 35, micro 40, anat-phys1 60, anat-phys2 60, neuro 45
 
 **Engineering common core**
 - programming 170, data-structures 170, statics 130, dynamics 140, mech-materials 150, thermo 160, fluids 150, circuits 170, materials 120, digital-logic 130, signals 140

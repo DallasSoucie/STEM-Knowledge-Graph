@@ -1,0 +1,1001 @@
+course: bio.neuro
+topics:
+  - id: bio.neuro.passive-membrane-properties
+    name: Using membrane capacitance and resistance
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.resting-membrane-potential
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model the membrane as a resistor and capacitor
+        key_prerequisites: [bio.anat-phys1.resting-membrane-potential]
+      - id: kp2
+        can_do: Calculate the membrane time constant
+        key_prerequisites: [bio.anat-phys1.resting-membrane-potential]
+      - id: kp3
+        can_do: Calculate voltage change from injected current
+        key_prerequisites: [bio.anat-phys1.resting-membrane-potential]
+      - id: kp4
+        can_do: Explain input resistance and cell size
+        key_prerequisites: [bio.anat-phys1.resting-membrane-potential]
+  - id: bio.neuro.cable-properties
+    name: Explaining length and time constants
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.passive-membrane-properties
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain passive spread along a dendrite
+        key_prerequisites: [bio.neuro.passive-membrane-properties]
+      - id: kp2
+        can_do: Calculate the length constant
+        key_prerequisites: [bio.neuro.passive-membrane-properties]
+      - id: kp3
+        can_do: Predict voltage decay with distance
+        key_prerequisites: [bio.neuro.passive-membrane-properties]
+      - id: kp4
+        can_do: Relate dendrite shape to signal attenuation
+        key_prerequisites: [bio.neuro.passive-membrane-properties]
+  - id: bio.neuro.voltage-gated-channels
+    name: Explaining voltage-gated channel gating
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.graded-and-action-potentials
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.cell-mol.goldman-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain activation and inactivation gates
+        key_prerequisites: [bio.anat-phys1.graded-and-action-potentials]
+      - id: kp2
+        can_do: Relate channel conductance to ion current
+        key_prerequisites: [bio.cell-mol.goldman-equation]
+      - id: kp3
+        can_do: Explain the sequence of currents in an action potential
+        key_prerequisites: [bio.anat-phys1.graded-and-action-potentials, bio.cell-mol.goldman-equation]
+      - id: kp4
+        can_do: Predict effects of channel blockers
+        key_prerequisites: [bio.anat-phys1.graded-and-action-potentials]
+  - id: bio.neuro.hodgkin-huxley-model
+    name: Describing the Hodgkin-Huxley model
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.voltage-gated-channels
+        encompassing: 0.6
+        confidence: high
+      - topic: bio.neuro.cable-properties
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write ionic currents as conductance times driving force
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp2
+        can_do: Interpret gating variables in the model
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp3
+        can_do: Explain how the model produces an action potential
+        key_prerequisites: [bio.neuro.voltage-gated-channels, bio.neuro.cable-properties]
+      - id: kp4
+        can_do: Use the model to explain threshold and refractoriness
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+  - id: bio.neuro.voltage-and-patch-clamp
+    name: Interpreting voltage-clamp and patch-clamp data
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.voltage-gated-channels
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the voltage clamp method
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp2
+        can_do: Separate sodium and potassium currents from clamp data
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp3
+        can_do: Compare patch clamp configurations
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp4
+        can_do: Interpret single-channel recordings
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+  - id: bio.neuro.firing-patterns
+    name: Explaining refractory periods and firing patterns
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.hodgkin-huxley-model
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare regular, bursting and fast-spiking neurons
+        key_prerequisites: [bio.neuro.hodgkin-huxley-model]
+      - id: kp2
+        can_do: Relate firing rate to injected current
+        key_prerequisites: [bio.neuro.hodgkin-huxley-model]
+      - id: kp3
+        can_do: Explain adaptation of firing
+        key_prerequisites: [bio.neuro.hodgkin-huxley-model]
+      - id: kp4
+        can_do: Relate channel types to firing patterns
+        key_prerequisites: [bio.neuro.hodgkin-huxley-model]
+  - id: bio.neuro.ion-channel-families
+    name: Comparing ion channel families
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.voltage-gated-channels
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare sodium, potassium and calcium channel families
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp2
+        can_do: Describe ligand-gated and voltage-gated channel structure
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp3
+        can_do: Explain selectivity filters
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+      - id: kp4
+        can_do: Relate channel mutations to disease
+        key_prerequisites: [bio.neuro.voltage-gated-channels]
+  - id: bio.neuro.vesicle-release-mechanisms
+    name: Explaining calcium-triggered vesicle release
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.synaptic-transmission
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.vesicle-coats-and-fusion
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain calcium-triggered vesicle fusion
+        key_prerequisites: [bio.anat-phys1.synaptic-transmission, bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp2
+        can_do: Describe SNARE proteins and synaptotagmin
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp3
+        can_do: Explain the vesicle cycle
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp4
+        can_do: Explain short-term facilitation and depression
+        key_prerequisites: [bio.anat-phys1.synaptic-transmission]
+  - id: bio.neuro.quantal-analysis
+    name: Analyzing quantal release
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.vesicle-release-mechanisms
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain quantal release of transmitter
+        key_prerequisites: [bio.neuro.vesicle-release-mechanisms]
+      - id: kp2
+        can_do: Calculate quantal content
+        key_prerequisites: [bio.neuro.vesicle-release-mechanisms]
+      - id: kp3
+        can_do: Use binomial models of release
+        key_prerequisites: [bio.neuro.vesicle-release-mechanisms]
+      - id: kp4
+        can_do: Interpret miniature potentials
+        key_prerequisites: [bio.neuro.vesicle-release-mechanisms]
+  - id: bio.neuro.ionotropic-receptors
+    name: Explaining ionotropic receptor function
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.neurotransmitters
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe nicotinic acetylcholine receptors
+        key_prerequisites: [bio.anat-phys1.neurotransmitters]
+      - id: kp2
+        can_do: Describe glutamate receptor types
+        key_prerequisites: [bio.anat-phys1.neurotransmitters]
+      - id: kp3
+        can_do: Describe GABA-A and glycine receptors
+        key_prerequisites: [bio.anat-phys1.neurotransmitters]
+      - id: kp4
+        can_do: Relate receptor ion selectivity to postsynaptic effect
+        key_prerequisites: [bio.anat-phys1.neurotransmitters]
+  - id: bio.neuro.metabotropic-receptors
+    name: Explaining metabotropic receptor signalling
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.ionotropic-receptors
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.cell-mol.gpcr-signalling
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare metabotropic and ionotropic signalling speed
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+      - id: kp2
+        can_do: Explain G protein effects on ion channels
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp3
+        can_do: Explain second messenger effects in neurons
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp4
+        can_do: Give examples of metabotropic receptors
+        key_prerequisites: [bio.neuro.ionotropic-receptors, bio.cell-mol.gpcr-signalling]
+  - id: bio.neuro.synaptic-integration
+    name: Calculating synaptic potentials and their integration
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.ionotropic-receptors
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.anat-phys1.neural-integration
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain dendritic summation of inputs
+        key_prerequisites: [bio.anat-phys1.neural-integration]
+      - id: kp2
+        can_do: Explain shunting inhibition
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+      - id: kp3
+        can_do: Explain dendritic spikes
+        key_prerequisites: [bio.neuro.ionotropic-receptors, bio.anat-phys1.neural-integration]
+      - id: kp4
+        can_do: Predict neuron output from combined inputs
+        key_prerequisites: [bio.anat-phys1.neural-integration]
+  - id: bio.neuro.neuromodulatory-systems
+    name: Describing dopamine, serotonin and other neuromodulatory systems
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.metabotropic-receptors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe dopamine pathways
+        key_prerequisites: [bio.neuro.metabotropic-receptors]
+      - id: kp2
+        can_do: Describe serotonin and norepinephrine systems
+        key_prerequisites: [bio.neuro.metabotropic-receptors]
+      - id: kp3
+        can_do: Describe acetylcholine systems in the brain
+        key_prerequisites: [bio.neuro.metabotropic-receptors]
+      - id: kp4
+        can_do: Explain neuromodulation of circuits
+        key_prerequisites: [bio.neuro.metabotropic-receptors]
+  - id: bio.neuro.synaptic-plasticity
+    name: Explaining long-term potentiation and depression
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.synaptic-integration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain long-term potentiation
+        key_prerequisites: [bio.neuro.synaptic-integration]
+      - id: kp2
+        can_do: Explain the NMDA receptor as a coincidence detector
+        key_prerequisites: [bio.neuro.synaptic-integration]
+      - id: kp3
+        can_do: Explain long-term depression
+        key_prerequisites: [bio.neuro.synaptic-integration]
+      - id: kp4
+        can_do: Explain spike-timing-dependent plasticity
+        key_prerequisites: [bio.neuro.synaptic-integration]
+  - id: bio.neuro.electrical-synapses
+    name: Describing electrical synapses
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.ionotropic-receptors
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe gap junction structure
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+      - id: kp2
+        can_do: Compare electrical and chemical synapses
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+      - id: kp3
+        can_do: Explain synchrony from electrical coupling
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+      - id: kp4
+        can_do: Give examples of electrical synapses
+        key_prerequisites: [bio.neuro.ionotropic-receptors]
+  - id: bio.neuro.neuropharmacology
+    name: Explaining drug actions at synapses
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.neuromodulatory-systems
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify drugs by synaptic target
+        key_prerequisites: [bio.neuro.neuromodulatory-systems]
+      - id: kp2
+        can_do: Explain agonists and antagonists at receptors
+        key_prerequisites: [bio.neuro.neuromodulatory-systems]
+      - id: kp3
+        can_do: Explain reuptake inhibitors
+        key_prerequisites: [bio.neuro.neuromodulatory-systems]
+      - id: kp4
+        can_do: Explain tolerance and dependence
+        key_prerequisites: [bio.neuro.neuromodulatory-systems]
+  - id: bio.neuro.sensory-coding
+    name: Explaining sensory transduction and coding
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.general-senses
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain rate and temporal coding
+        key_prerequisites: [bio.anat-phys1.general-senses]
+      - id: kp2
+        can_do: Explain labelled line coding
+        key_prerequisites: [bio.anat-phys1.general-senses]
+      - id: kp3
+        can_do: Explain receptive fields
+        key_prerequisites: [bio.anat-phys1.general-senses]
+      - id: kp4
+        can_do: Explain sensory adaptation
+        key_prerequisites: [bio.anat-phys1.general-senses]
+  - id: bio.neuro.retinal-processing
+    name: Explaining retinal processing
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.phototransduction
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe retinal cell layers
+        key_prerequisites: [bio.anat-phys1.phototransduction]
+      - id: kp2
+        can_do: Explain center-surround receptive fields
+        key_prerequisites: [bio.anat-phys1.phototransduction]
+      - id: kp3
+        can_do: Explain ON and OFF pathways
+        key_prerequisites: [bio.anat-phys1.phototransduction]
+      - id: kp4
+        can_do: Explain lateral inhibition
+        key_prerequisites: [bio.anat-phys1.phototransduction]
+  - id: bio.neuro.visual-cortex
+    name: Explaining receptive fields in visual cortex
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.retinal-processing
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace visual information to the cortex
+        key_prerequisites: [bio.neuro.retinal-processing]
+      - id: kp2
+        can_do: Explain orientation selectivity
+        key_prerequisites: [bio.neuro.retinal-processing]
+      - id: kp3
+        can_do: Explain dorsal and ventral streams
+        key_prerequisites: [bio.neuro.retinal-processing]
+      - id: kp4
+        can_do: Explain cortical columns
+        key_prerequisites: [bio.neuro.retinal-processing]
+  - id: bio.neuro.auditory-processing
+    name: Explaining cochlear tuning and auditory pathways
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.hearing-and-balance
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain tonotopy
+        key_prerequisites: [bio.anat-phys1.hearing-and-balance]
+      - id: kp2
+        can_do: Explain sound localization by timing and intensity
+        key_prerequisites: [bio.anat-phys1.hearing-and-balance]
+      - id: kp3
+        can_do: Trace the auditory pathway
+        key_prerequisites: [bio.anat-phys1.hearing-and-balance]
+      - id: kp4
+        can_do: Explain cochlear amplification
+        key_prerequisites: [bio.anat-phys1.hearing-and-balance]
+  - id: bio.neuro.somatosensory-maps
+    name: Explaining somatotopic maps
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.sensory-pathways
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the somatosensory cortex map
+        key_prerequisites: [bio.anat-phys1.sensory-pathways]
+      - id: kp2
+        can_do: Explain two-point discrimination
+        key_prerequisites: [bio.anat-phys1.sensory-pathways]
+      - id: kp3
+        can_do: Explain map plasticity
+        key_prerequisites: [bio.anat-phys1.sensory-pathways]
+      - id: kp4
+        can_do: Compare touch and pain pathways
+        key_prerequisites: [bio.anat-phys1.sensory-pathways]
+  - id: bio.neuro.pain-modulation
+    name: Explaining pain pathways and modulation
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.somatosensory-maps
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain nociceptor types
+        key_prerequisites: [bio.neuro.somatosensory-maps]
+      - id: kp2
+        can_do: Explain the gate control theory
+        key_prerequisites: [bio.neuro.somatosensory-maps]
+      - id: kp3
+        can_do: Explain descending pain modulation
+        key_prerequisites: [bio.neuro.somatosensory-maps]
+      - id: kp4
+        can_do: Explain endogenous opioids
+        key_prerequisites: [bio.neuro.somatosensory-maps]
+  - id: bio.neuro.chemosensory-coding
+    name: Explaining coding of taste and smell
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.taste-and-smell
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain odorant receptor coding
+        key_prerequisites: [bio.anat-phys1.taste-and-smell]
+      - id: kp2
+        can_do: Explain the olfactory bulb glomeruli
+        key_prerequisites: [bio.anat-phys1.taste-and-smell]
+      - id: kp3
+        can_do: Explain taste receptor coding
+        key_prerequisites: [bio.anat-phys1.taste-and-smell]
+      - id: kp4
+        can_do: Compare olfactory and taste coding
+        key_prerequisites: [bio.anat-phys1.taste-and-smell]
+  - id: bio.neuro.spinal-motor-circuits
+    name: Explaining motor units and spinal circuits
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.spinal-cord-and-reflexes
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe motor neuron pools
+        key_prerequisites: [bio.anat-phys1.spinal-cord-and-reflexes]
+      - id: kp2
+        can_do: Explain reciprocal inhibition
+        key_prerequisites: [bio.anat-phys1.spinal-cord-and-reflexes]
+      - id: kp3
+        can_do: Explain the size principle of recruitment
+        key_prerequisites: [bio.anat-phys1.spinal-cord-and-reflexes]
+      - id: kp4
+        can_do: Explain muscle spindles and Golgi tendon organs
+        key_prerequisites: [bio.anat-phys1.spinal-cord-and-reflexes]
+  - id: bio.neuro.central-pattern-generators
+    name: Describing central pattern generators
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.spinal-motor-circuits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define central pattern generators
+        key_prerequisites: [bio.neuro.spinal-motor-circuits]
+      - id: kp2
+        can_do: Explain rhythmic circuits for locomotion
+        key_prerequisites: [bio.neuro.spinal-motor-circuits]
+      - id: kp3
+        can_do: Explain half-centre oscillators
+        key_prerequisites: [bio.neuro.spinal-motor-circuits]
+      - id: kp4
+        can_do: Explain sensory feedback to pattern generators
+        key_prerequisites: [bio.neuro.spinal-motor-circuits]
+  - id: bio.neuro.motor-cortex
+    name: Explaining motor cortex and movement planning
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.motor-pathways
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the primary motor cortex map
+        key_prerequisites: [bio.anat-phys1.motor-pathways]
+      - id: kp2
+        can_do: Explain population coding of movement
+        key_prerequisites: [bio.anat-phys1.motor-pathways]
+      - id: kp3
+        can_do: Describe premotor and supplementary areas
+        key_prerequisites: [bio.anat-phys1.motor-pathways]
+      - id: kp4
+        can_do: Explain motor planning
+        key_prerequisites: [bio.anat-phys1.motor-pathways]
+  - id: bio.neuro.basal-ganglia
+    name: Explaining basal ganglia function
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.motor-cortex
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.neuro.neuromodulatory-systems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe basal ganglia structure
+        key_prerequisites: [bio.neuro.motor-cortex]
+      - id: kp2
+        can_do: Compare direct and indirect pathways
+        key_prerequisites: [bio.neuro.motor-cortex]
+      - id: kp3
+        can_do: Explain dopamine's role in the basal ganglia
+        key_prerequisites: [bio.neuro.neuromodulatory-systems]
+      - id: kp4
+        can_do: Explain action selection
+        key_prerequisites: [bio.neuro.motor-cortex, bio.neuro.neuromodulatory-systems]
+  - id: bio.neuro.cerebellum
+    name: Explaining cerebellar function
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.motor-cortex
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe cerebellar circuitry
+        key_prerequisites: [bio.neuro.motor-cortex]
+      - id: kp2
+        can_do: Explain motor learning in the cerebellum
+        key_prerequisites: [bio.neuro.motor-cortex]
+      - id: kp3
+        can_do: Explain error correction
+        key_prerequisites: [bio.neuro.motor-cortex]
+      - id: kp4
+        can_do: Predict effects of cerebellar damage
+        key_prerequisites: [bio.neuro.motor-cortex]
+  - id: bio.neuro.movement-disorders
+    name: Explaining Parkinson's disease and other movement disorders
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.basal-ganglia
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Parkinson's disease
+        key_prerequisites: [bio.neuro.basal-ganglia]
+      - id: kp2
+        can_do: Explain Huntington's disease
+        key_prerequisites: [bio.neuro.basal-ganglia]
+      - id: kp3
+        can_do: Explain treatments for movement disorders
+        key_prerequisites: [bio.neuro.basal-ganglia]
+      - id: kp4
+        can_do: Relate symptoms to circuit changes
+        key_prerequisites: [bio.neuro.basal-ganglia]
+  - id: bio.neuro.neural-induction
+    name: Explaining neural induction and patterning
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.developmental-signalling-pathways
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain neural induction
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+      - id: kp2
+        can_do: Explain formation of the neural tube
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+      - id: kp3
+        can_do: Explain patterning along body axes
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+      - id: kp4
+        can_do: Relate neural tube defects to development
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+  - id: bio.neuro.neurogenesis-and-migration
+    name: Describing neurogenesis and neuronal migration
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.neural-induction
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain neurogenesis from progenitor cells
+        key_prerequisites: [bio.neuro.neural-induction]
+      - id: kp2
+        can_do: Explain radial migration
+        key_prerequisites: [bio.neuro.neural-induction]
+      - id: kp3
+        can_do: Explain cortical layer formation
+        key_prerequisites: [bio.neuro.neural-induction]
+      - id: kp4
+        can_do: Explain adult neurogenesis
+        key_prerequisites: [bio.neuro.neural-induction]
+  - id: bio.neuro.axon-guidance
+    name: Explaining axon guidance
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.neurogenesis-and-migration
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.cell-mol.cell-migration
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain growth cone movement
+        key_prerequisites: [bio.cell-mol.cell-migration]
+      - id: kp2
+        can_do: Explain attractive and repulsive cues
+        key_prerequisites: [bio.neuro.neurogenesis-and-migration]
+      - id: kp3
+        can_do: Explain target recognition
+        key_prerequisites: [bio.neuro.neurogenesis-and-migration]
+      - id: kp4
+        can_do: Explain axon regeneration limits
+        key_prerequisites: [bio.neuro.neurogenesis-and-migration]
+  - id: bio.neuro.synapse-formation-and-pruning
+    name: Explaining synapse formation and pruning
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.axon-guidance
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.neuro.synaptic-plasticity
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain synapse formation
+        key_prerequisites: [bio.neuro.axon-guidance]
+      - id: kp2
+        can_do: Explain activity-dependent refinement
+        key_prerequisites: [bio.neuro.synaptic-plasticity]
+      - id: kp3
+        can_do: Explain synaptic pruning
+        key_prerequisites: [bio.neuro.synaptic-plasticity]
+      - id: kp4
+        can_do: Explain neurotrophic factors
+        key_prerequisites: [bio.neuro.axon-guidance]
+  - id: bio.neuro.critical-periods
+    name: Explaining critical periods
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.synapse-formation-and-pruning
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define critical periods
+        key_prerequisites: [bio.neuro.synapse-formation-and-pruning]
+      - id: kp2
+        can_do: Explain ocular dominance plasticity
+        key_prerequisites: [bio.neuro.synapse-formation-and-pruning]
+      - id: kp3
+        can_do: Explain critical periods for language
+        key_prerequisites: [bio.neuro.synapse-formation-and-pruning]
+      - id: kp4
+        can_do: Explain how critical periods close
+        key_prerequisites: [bio.neuro.synapse-formation-and-pruning]
+  - id: bio.neuro.motivation-and-the-hypothalamus
+    name: Explaining hypothalamic control of behaviour
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.hypothalamus-pituitary-axis
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain hypothalamic control of feeding
+        key_prerequisites: [bio.anat-phys1.hypothalamus-pituitary-axis]
+      - id: kp2
+        can_do: Explain thirst and fluid intake
+        key_prerequisites: [bio.anat-phys1.hypothalamus-pituitary-axis]
+      - id: kp3
+        can_do: Explain temperature regulation by the hypothalamus
+        key_prerequisites: [bio.anat-phys1.hypothalamus-pituitary-axis]
+      - id: kp4
+        can_do: Explain reward pathways in motivation
+        key_prerequisites: [bio.anat-phys1.hypothalamus-pituitary-axis]
+  - id: bio.neuro.sleep-and-circadian-rhythms
+    name: Explaining sleep and circadian rhythms
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.motivation-and-the-hypothalamus
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the suprachiasmatic nucleus clock
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp2
+        can_do: Explain molecular clock genes
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp3
+        can_do: Explain sleep stages and their regulation
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp4
+        can_do: Explain functions of sleep
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+  - id: bio.neuro.memory-systems
+    name: Explaining memory systems and the hippocampus
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.synaptic-plasticity
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.anat-phys1.higher-brain-functions
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare declarative and procedural memory
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+      - id: kp2
+        can_do: Explain hippocampus in memory formation
+        key_prerequisites: [bio.neuro.synaptic-plasticity, bio.anat-phys1.higher-brain-functions]
+      - id: kp3
+        can_do: Explain consolidation
+        key_prerequisites: [bio.neuro.synaptic-plasticity]
+      - id: kp4
+        can_do: Explain working memory
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+  - id: bio.neuro.emotion-circuits
+    name: Explaining emotion circuits and the amygdala
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.motivation-and-the-hypothalamus
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the amygdala in fear
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp2
+        can_do: Explain fear conditioning
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp3
+        can_do: Explain stress and emotion circuits
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+      - id: kp4
+        can_do: Explain mood disorders in circuit terms
+        key_prerequisites: [bio.neuro.motivation-and-the-hypothalamus]
+  - id: bio.neuro.language-and-lateralization
+    name: Explaining language areas and lateralization
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.higher-brain-functions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe language areas
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+      - id: kp2
+        can_do: Explain aphasias
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+      - id: kp3
+        can_do: Explain hemispheric lateralization
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+      - id: kp4
+        can_do: Explain split-brain findings
+        key_prerequisites: [bio.anat-phys1.higher-brain-functions]
+  - id: bio.neuro.neurodegeneration
+    name: Explaining neurodegenerative diseases
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.memory-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.ubiquitin-proteasome
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Alzheimer's disease mechanisms
+        key_prerequisites: [bio.neuro.memory-systems]
+      - id: kp2
+        can_do: Explain protein aggregation in neurodegeneration
+        key_prerequisites: [bio.cell-mol.ubiquitin-proteasome]
+      - id: kp3
+        can_do: Explain motor neuron disease
+        key_prerequisites: [bio.cell-mol.ubiquitin-proteasome]
+      - id: kp4
+        can_do: Compare neurodegenerative diseases
+        key_prerequisites: [bio.neuro.memory-systems, bio.cell-mol.ubiquitin-proteasome]
+  - id: bio.neuro.neuroimaging
+    name: Comparing EEG, MRI and PET
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.anat-phys1.brain-regions
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare MRI and functional MRI
+        key_prerequisites: [bio.anat-phys1.brain-regions]
+      - id: kp2
+        can_do: Explain EEG
+        key_prerequisites: [bio.anat-phys1.brain-regions]
+      - id: kp3
+        can_do: Explain PET imaging
+        key_prerequisites: [bio.anat-phys1.brain-regions]
+      - id: kp4
+        can_do: Choose an imaging method for a question
+        key_prerequisites: [bio.anat-phys1.brain-regions]
+  - id: bio.neuro.recording-and-optogenetics
+    name: Describing electrophysiology and optogenetics
+    subject: bio
+    course: bio.neuro
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.neuro.voltage-and-patch-clamp
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.fluorescent-protein-tagging
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain extracellular recording
+        key_prerequisites: [bio.neuro.voltage-and-patch-clamp]
+      - id: kp2
+        can_do: Explain calcium imaging
+        key_prerequisites: [bio.cell-mol.fluorescent-protein-tagging]
+      - id: kp3
+        can_do: Explain optogenetic control of neurons
+        key_prerequisites: [bio.cell-mol.fluorescent-protein-tagging]
+      - id: kp4
+        can_do: Choose a method for a circuit question
+        key_prerequisites: [bio.neuro.voltage-and-patch-clamp, bio.cell-mol.fluorescent-protein-tagging]

@@ -1,0 +1,1282 @@
+course: bio.cell-mol
+topics:
+  - id: bio.cell-mol.membrane-fluidity
+    name: Explaining membrane fluidity and lipid rafts
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.membrane-permeability
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how fatty acid saturation affects fluidity
+        key_prerequisites: [bio.hs2.membrane-permeability]
+      - id: kp2
+        can_do: Explain cholesterol's buffering of fluidity
+        key_prerequisites: [bio.hs2.membrane-permeability]
+      - id: kp3
+        can_do: Describe lipid rafts
+        key_prerequisites: [bio.hs2.membrane-permeability]
+      - id: kp4
+        can_do: Interpret fluorescence recovery experiments
+        key_prerequisites: [bio.hs2.membrane-permeability]
+  - id: bio.cell-mol.membrane-protein-topology
+    name: Predicting membrane protein topology
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.membrane-fluidity
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.hs2.side-chain-properties
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Predict transmembrane segments from hydrophobicity
+        key_prerequisites: [bio.cell-mol.membrane-fluidity, bio.hs2.side-chain-properties]
+      - id: kp2
+        can_do: Compare single-pass and multipass proteins
+        key_prerequisites: [bio.cell-mol.membrane-fluidity]
+      - id: kp3
+        can_do: Explain orientation of membrane proteins
+        key_prerequisites: [bio.cell-mol.membrane-fluidity]
+      - id: kp4
+        can_do: Read a hydropathy plot
+        key_prerequisites: [bio.hs2.side-chain-properties]
+  - id: bio.cell-mol.transporter-kinetics
+    name: Comparing transporter saturation kinetics
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.transport-proteins-compared
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.enzyme-kinetics-intro
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare transport rate against concentration for carriers and channels
+        key_prerequisites: [bio.intro1.transport-proteins-compared]
+      - id: kp2
+        can_do: Find transport maximum and affinity
+        key_prerequisites: [bio.intro1.transport-proteins-compared, chem.gen2.enzyme-kinetics-intro]
+      - id: kp3
+        can_do: Explain competitive inhibition of transport
+        key_prerequisites: [chem.gen2.enzyme-kinetics-intro]
+      - id: kp4
+        can_do: Explain glucose transporter kinetics
+        key_prerequisites: [bio.intro1.transport-proteins-compared]
+  - id: bio.cell-mol.ion-pump-energetics
+    name: Calculating energetics of ion pumps
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.electrochemical-gradients
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-nonstandard
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate free energy of moving an ion
+        key_prerequisites: [bio.intro1.electrochemical-gradients, chem.gen2.gibbs-energy-nonstandard]
+      - id: kp2
+        can_do: Include membrane potential in the calculation
+        key_prerequisites: [bio.intro1.electrochemical-gradients]
+      - id: kp3
+        can_do: Find ATP needed to drive a pump
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp4
+        can_do: Explain pump stoichiometry
+        key_prerequisites: [bio.intro1.electrochemical-gradients]
+  - id: bio.cell-mol.equilibrium-potentials
+    name: Calculating equilibrium potentials for ions
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.membrane-potential-intro
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.nernst-equation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate equilibrium potentials for potassium and sodium
+        key_prerequisites: [bio.intro1.membrane-potential-intro, chem.gen2.nernst-equation]
+      - id: kp2
+        can_do: Explain the sign of an equilibrium potential
+        key_prerequisites: [bio.intro1.membrane-potential-intro]
+      - id: kp3
+        can_do: Predict ion flow from potentials
+        key_prerequisites: [chem.gen2.nernst-equation]
+      - id: kp4
+        can_do: Explain why potentials are near potassium equilibrium
+        key_prerequisites: [bio.intro1.membrane-potential-intro]
+  - id: bio.cell-mol.goldman-equation
+    name: Calculating resting potential with the Goldman equation
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.equilibrium-potentials
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Goldman equation
+        key_prerequisites: [bio.cell-mol.equilibrium-potentials]
+      - id: kp2
+        can_do: Calculate resting potential from permeabilities
+        key_prerequisites: [bio.cell-mol.equilibrium-potentials]
+      - id: kp3
+        can_do: Predict effects of permeability changes
+        key_prerequisites: [bio.cell-mol.equilibrium-potentials]
+      - id: kp4
+        can_do: Compare Goldman and Nernst results
+        key_prerequisites: [bio.cell-mol.equilibrium-potentials]
+  - id: bio.cell-mol.secondary-active-transport
+    name: Explaining cotransport
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.ion-pump-energetics
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain sodium-coupled glucose transport
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp2
+        can_do: Calculate energy available from a sodium gradient
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp3
+        can_do: Compare symport and antiport
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp4
+        can_do: Explain intestinal glucose absorption
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+  - id: bio.cell-mol.nuclear-transport
+    name: Explaining nuclear import and export
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.protein-sorting-signals
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe nuclear pores
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp2
+        can_do: Explain nuclear localization signals
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp3
+        can_do: Explain the Ran cycle
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp4
+        can_do: Explain mRNA export
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+  - id: bio.cell-mol.er-translocation
+    name: Describing cotranslational import into the ER
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.protein-sorting-signals
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe signal recognition particle targeting
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp2
+        can_do: Explain cotranslational translocation
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp3
+        can_do: Explain signal sequence cleavage
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp4
+        can_do: Explain membrane protein insertion
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+  - id: bio.cell-mol.folding-quality-control
+    name: Describing chaperones and ER quality control
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.er-translocation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe chaperones
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp2
+        can_do: Explain the unfolded protein response
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp3
+        can_do: Explain ER-associated degradation
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp4
+        can_do: Relate misfolding to disease
+        key_prerequisites: [bio.cell-mol.er-translocation]
+  - id: bio.cell-mol.glycosylation
+    name: Describing glycosylation in the ER and Golgi
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.er-translocation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe N-linked glycosylation
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp2
+        can_do: Describe O-linked glycosylation
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp3
+        can_do: Explain glycan processing in the Golgi
+        key_prerequisites: [bio.cell-mol.er-translocation]
+      - id: kp4
+        can_do: Explain functions of glycosylation
+        key_prerequisites: [bio.cell-mol.er-translocation]
+  - id: bio.cell-mol.vesicle-coats-and-fusion
+    name: Describing coat proteins and SNAREs
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.vesicle-trafficking
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe clathrin, COPI and COPII coats
+        key_prerequisites: [bio.intro1.vesicle-trafficking]
+      - id: kp2
+        can_do: Explain Rab proteins
+        key_prerequisites: [bio.intro1.vesicle-trafficking]
+      - id: kp3
+        can_do: Explain SNARE-mediated fusion
+        key_prerequisites: [bio.intro1.vesicle-trafficking]
+      - id: kp4
+        can_do: Explain vesicle targeting specificity
+        key_prerequisites: [bio.intro1.vesicle-trafficking]
+  - id: bio.cell-mol.regulated-secretion
+    name: Comparing constitutive and regulated secretion
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.vesicle-coats-and-fusion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare constitutive and regulated secretion
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp2
+        can_do: Explain calcium-triggered exocytosis
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp3
+        can_do: Describe secretory granules
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp4
+        can_do: Give examples of regulated secretion
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+  - id: bio.cell-mol.receptor-mediated-endocytosis
+    name: Tracing receptor-mediated endocytosis
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.vesicle-coats-and-fusion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace LDL uptake
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp2
+        can_do: Describe endosome sorting
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp3
+        can_do: Explain receptor recycling
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+      - id: kp4
+        can_do: Relate endocytosis defects to disease
+        key_prerequisites: [bio.cell-mol.vesicle-coats-and-fusion]
+  - id: bio.cell-mol.lysosomes-and-autophagy
+    name: Describing lysosomes and autophagy
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.receptor-mediated-endocytosis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe lysosomal enzymes
+        key_prerequisites: [bio.cell-mol.receptor-mediated-endocytosis]
+      - id: kp2
+        can_do: Explain mannose-6-phosphate targeting
+        key_prerequisites: [bio.cell-mol.receptor-mediated-endocytosis]
+      - id: kp3
+        can_do: Describe autophagy
+        key_prerequisites: [bio.cell-mol.receptor-mediated-endocytosis]
+      - id: kp4
+        can_do: Relate lysosomal storage disorders to defects
+        key_prerequisites: [bio.cell-mol.receptor-mediated-endocytosis]
+  - id: bio.cell-mol.mitochondrial-protein-import
+    name: Explaining protein import into mitochondria and chloroplasts
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.protein-sorting-signals
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe TOM and TIM complexes
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp2
+        can_do: Explain matrix targeting sequences
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp3
+        can_do: Describe chloroplast import
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+      - id: kp4
+        can_do: Explain energy use in import
+        key_prerequisites: [bio.intro1.protein-sorting-signals]
+  - id: bio.cell-mol.peroxisomes
+    name: Describing peroxisome function
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.mitochondrial-protein-import
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe peroxisome functions
+        key_prerequisites: [bio.cell-mol.mitochondrial-protein-import]
+      - id: kp2
+        can_do: Explain peroxisomal import
+        key_prerequisites: [bio.cell-mol.mitochondrial-protein-import]
+      - id: kp3
+        can_do: Explain fatty acid oxidation in peroxisomes
+        key_prerequisites: [bio.cell-mol.mitochondrial-protein-import]
+      - id: kp4
+        can_do: Relate peroxisome defects to disease
+        key_prerequisites: [bio.cell-mol.mitochondrial-protein-import]
+  - id: bio.cell-mol.ubiquitin-proteasome
+    name: Describing ubiquitin-mediated degradation
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.folding-quality-control
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe ubiquitination
+        key_prerequisites: [bio.cell-mol.folding-quality-control]
+      - id: kp2
+        can_do: Describe the proteasome
+        key_prerequisites: [bio.cell-mol.folding-quality-control]
+      - id: kp3
+        can_do: Explain regulated protein degradation
+        key_prerequisites: [bio.cell-mol.folding-quality-control]
+      - id: kp4
+        can_do: Relate degradation to the cell cycle
+        key_prerequisites: [bio.cell-mol.folding-quality-control]
+  - id: bio.cell-mol.actin-dynamics
+    name: Explaining actin polymerization and treadmilling
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cytoskeleton-and-motor-proteins
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain actin polymerization
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp2
+        can_do: Explain treadmilling
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp3
+        can_do: Describe actin-binding proteins
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp4
+        can_do: Explain actin in cell shape
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+  - id: bio.cell-mol.microtubule-dynamics
+    name: Explaining dynamic instability of microtubules
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cytoskeleton-and-motor-proteins
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain dynamic instability
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp2
+        can_do: Describe microtubule organizing centres
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp3
+        can_do: Explain GTP caps
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp4
+        can_do: Describe drugs that target microtubules
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+  - id: bio.cell-mol.motor-protein-mechanisms
+    name: Explaining myosin, kinesin and dynein stepping
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.actin-dynamics
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.microtubule-dynamics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain myosin's power stroke
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+      - id: kp2
+        can_do: Explain kinesin stepping
+        key_prerequisites: [bio.cell-mol.microtubule-dynamics]
+      - id: kp3
+        can_do: Explain dynein function
+        key_prerequisites: [bio.cell-mol.microtubule-dynamics]
+      - id: kp4
+        can_do: Compare motor directions and tracks
+        key_prerequisites: [bio.cell-mol.actin-dynamics, bio.cell-mol.microtubule-dynamics]
+  - id: bio.cell-mol.cilia-and-flagella
+    name: Describing cilia and flagella structure
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.motor-protein-mechanisms
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: bio.cell-mol.microtubule-dynamics
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the axoneme structure
+        key_prerequisites: [bio.cell-mol.motor-protein-mechanisms, bio.cell-mol.microtubule-dynamics]
+      - id: kp2
+        can_do: Explain ciliary beating
+        key_prerequisites: [bio.cell-mol.motor-protein-mechanisms]
+      - id: kp3
+        can_do: Compare primary and motile cilia
+        key_prerequisites: [bio.cell-mol.microtubule-dynamics]
+      - id: kp4
+        can_do: Relate ciliary defects to disease
+        key_prerequisites: [bio.cell-mol.motor-protein-mechanisms]
+  - id: bio.cell-mol.cell-migration
+    name: Explaining cell migration
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.actin-dynamics
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe lamellipodia and filopodia
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+      - id: kp2
+        can_do: Explain protrusion, adhesion and retraction
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+      - id: kp3
+        can_do: Explain chemotaxis
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+      - id: kp4
+        can_do: Relate migration to metastasis
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+  - id: bio.cell-mol.intermediate-filaments
+    name: Describing intermediate filaments
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cytoskeleton-and-motor-proteins
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe intermediate filament types
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp2
+        can_do: Explain mechanical strength
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp3
+        can_do: Describe nuclear lamins
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+      - id: kp4
+        can_do: Relate defects to disease
+        key_prerequisites: [bio.intro1.cytoskeleton-and-motor-proteins]
+  - id: bio.cell-mol.receptor-ligand-binding
+    name: Analyzing receptor binding and affinity
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.receptor-types
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.equilibrium-expressions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define dissociation constant
+        key_prerequisites: [bio.intro1.receptor-types, chem.hs2.equilibrium-expressions]
+      - id: kp2
+        can_do: Interpret binding curves
+        key_prerequisites: [bio.intro1.receptor-types]
+      - id: kp3
+        can_do: Explain receptor occupancy and response
+        key_prerequisites: [bio.intro1.receptor-types]
+      - id: kp4
+        can_do: Compare agonists and antagonists
+        key_prerequisites: [chem.hs2.equilibrium-expressions]
+  - id: bio.cell-mol.gpcr-signalling
+    name: Tracing G protein-coupled receptor pathways
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.receptor-ligand-binding
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.intro1.kinase-cascades
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe G protein activation
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+      - id: kp2
+        can_do: Trace cyclic AMP signalling
+        key_prerequisites: [bio.intro1.kinase-cascades]
+      - id: kp3
+        can_do: Explain signal termination by GTP hydrolysis
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+      - id: kp4
+        can_do: Give examples of G protein-coupled receptor pathways
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding, bio.intro1.kinase-cascades]
+  - id: bio.cell-mol.rtk-and-ras-pathway
+    name: Tracing receptor tyrosine kinase and Ras pathways
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.gpcr-signalling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe receptor dimerization and autophosphorylation
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp2
+        can_do: Trace the Ras-MAP kinase pathway
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp3
+        can_do: Explain adaptor proteins
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp4
+        can_do: Relate Ras mutations to cancer
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+  - id: bio.cell-mol.calcium-and-lipid-signalling
+    name: Explaining calcium and phosphoinositide signalling
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.gpcr-signalling
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe IP3 and DAG signalling
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp2
+        can_do: Explain calcium release
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp3
+        can_do: Describe calmodulin
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp4
+        can_do: Describe PI3 kinase signalling
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+  - id: bio.cell-mol.signal-crosstalk
+    name: Explaining crosstalk between pathways
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.rtk-and-ras-pathway
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.cell-mol.calcium-and-lipid-signalling
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain crosstalk between pathways
+        key_prerequisites: [bio.cell-mol.rtk-and-ras-pathway, bio.cell-mol.calcium-and-lipid-signalling]
+      - id: kp2
+        can_do: Explain signal integration
+        key_prerequisites: [bio.cell-mol.rtk-and-ras-pathway]
+      - id: kp3
+        can_do: Explain scaffold proteins
+        key_prerequisites: [bio.cell-mol.calcium-and-lipid-signalling]
+      - id: kp4
+        can_do: Interpret pathway network diagrams
+        key_prerequisites: [bio.cell-mol.rtk-and-ras-pathway]
+  - id: bio.cell-mol.nuclear-receptors
+    name: Describing nuclear hormone receptors
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.receptor-ligand-binding
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe steroid hormone receptors
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+      - id: kp2
+        can_do: Explain direct gene regulation by receptors
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+      - id: kp3
+        can_do: Compare nuclear and surface receptors
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+      - id: kp4
+        can_do: Give examples of nuclear receptor drugs
+        key_prerequisites: [bio.cell-mol.receptor-ligand-binding]
+  - id: bio.cell-mol.signal-termination
+    name: Explaining signal termination and desensitization
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.gpcr-signalling
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain receptor desensitization
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp2
+        can_do: Explain receptor internalization
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp3
+        can_do: Explain phosphatases and GTPases in termination
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+      - id: kp4
+        can_do: Relate termination failure to disease
+        key_prerequisites: [bio.cell-mol.gpcr-signalling]
+  - id: bio.cell-mol.developmental-signalling-pathways
+    name: Describing Wnt, Notch and Hedgehog signalling
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.signal-crosstalk
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Wnt signalling
+        key_prerequisites: [bio.cell-mol.signal-crosstalk]
+      - id: kp2
+        can_do: Describe Notch signalling
+        key_prerequisites: [bio.cell-mol.signal-crosstalk]
+      - id: kp3
+        can_do: Describe Hedgehog signalling
+        key_prerequisites: [bio.cell-mol.signal-crosstalk]
+      - id: kp4
+        can_do: Relate pathways to development and cancer
+        key_prerequisites: [bio.cell-mol.signal-crosstalk]
+  - id: bio.cell-mol.cyclin-cdk-oscillations
+    name: Explaining cyclin-CDK oscillations
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cdk-control-of-the-cycle
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe cyclin synthesis and degradation
+        key_prerequisites: [bio.intro1.cdk-control-of-the-cycle]
+      - id: kp2
+        can_do: Explain CDK inhibitors
+        key_prerequisites: [bio.intro1.cdk-control-of-the-cycle]
+      - id: kp3
+        can_do: Explain the restriction point
+        key_prerequisites: [bio.intro1.cdk-control-of-the-cycle]
+      - id: kp4
+        can_do: Model cell cycle oscillations qualitatively
+        key_prerequisites: [bio.intro1.cdk-control-of-the-cycle]
+  - id: bio.cell-mol.dna-damage-checkpoints
+    name: Explaining DNA damage checkpoints and p53
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.cyclin-cdk-oscillations
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.intro1.dna-repair
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe DNA damage sensors
+        key_prerequisites: [bio.intro1.dna-repair]
+      - id: kp2
+        can_do: Explain p53 activation
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations]
+      - id: kp3
+        can_do: Explain cell cycle arrest
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations]
+      - id: kp4
+        can_do: Explain choice between repair and apoptosis
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations, bio.intro1.dna-repair]
+  - id: bio.cell-mol.spindle-mechanics
+    name: Explaining spindle assembly and chromosome segregation
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.cyclin-cdk-oscillations
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.microtubule-dynamics
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe spindle assembly
+        key_prerequisites: [bio.cell-mol.microtubule-dynamics]
+      - id: kp2
+        can_do: Explain kinetochore attachment
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations, bio.cell-mol.microtubule-dynamics]
+      - id: kp3
+        can_do: Explain the spindle checkpoint
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations]
+      - id: kp4
+        can_do: Explain chromosome segregation forces
+        key_prerequisites: [bio.cell-mol.microtubule-dynamics]
+  - id: bio.cell-mol.cytokinesis
+    name: Describing cytokinesis
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.spindle-mechanics
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.cell-mol.actin-dynamics
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the contractile ring
+        key_prerequisites: [bio.cell-mol.actin-dynamics]
+      - id: kp2
+        can_do: Explain plant cell plate formation
+        key_prerequisites: [bio.cell-mol.spindle-mechanics]
+      - id: kp3
+        can_do: Explain positioning of the cleavage furrow
+        key_prerequisites: [bio.cell-mol.spindle-mechanics]
+      - id: kp4
+        can_do: Relate cytokinesis failure to polyploidy
+        key_prerequisites: [bio.cell-mol.spindle-mechanics]
+  - id: bio.cell-mol.apoptosis-pathways
+    name: Comparing intrinsic and extrinsic apoptosis
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.apoptosis
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.cell-mol.dna-damage-checkpoints
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the intrinsic pathway
+        key_prerequisites: [bio.hs2.apoptosis, bio.cell-mol.dna-damage-checkpoints]
+      - id: kp2
+        can_do: Describe the extrinsic pathway
+        key_prerequisites: [bio.hs2.apoptosis]
+      - id: kp3
+        can_do: Explain caspases
+        key_prerequisites: [bio.hs2.apoptosis]
+      - id: kp4
+        can_do: Explain Bcl-2 family regulation
+        key_prerequisites: [bio.cell-mol.dna-damage-checkpoints]
+  - id: bio.cell-mol.cancer-cell-biology
+    name: Explaining hallmarks of cancer cells
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.oncogenes-and-tumour-suppressors
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.cell-mol.apoptosis-pathways
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.cell-mol.signal-crosstalk
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe hallmarks of cancer
+        key_prerequisites: [bio.intro1.oncogenes-and-tumour-suppressors, bio.cell-mol.apoptosis-pathways, bio.cell-mol.signal-crosstalk]
+      - id: kp2
+        can_do: Explain evasion of apoptosis
+        key_prerequisites: [bio.cell-mol.apoptosis-pathways]
+      - id: kp3
+        can_do: Explain sustained proliferative signalling
+        key_prerequisites: [bio.cell-mol.signal-crosstalk]
+      - id: kp4
+        can_do: Explain metastasis
+        key_prerequisites: [bio.intro1.oncogenes-and-tumour-suppressors]
+  - id: bio.cell-mol.transcription-machinery
+    name: Describing RNA polymerases and transcription factors
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.chromatin-structure
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe eukaryotic RNA polymerases
+        key_prerequisites: [bio.intro1.chromatin-structure]
+      - id: kp2
+        can_do: Describe general transcription factors
+        key_prerequisites: [bio.intro1.chromatin-structure]
+      - id: kp3
+        can_do: Describe promoter elements
+        key_prerequisites: [bio.intro1.chromatin-structure]
+      - id: kp4
+        can_do: Explain transcription initiation
+        key_prerequisites: [bio.intro1.chromatin-structure]
+  - id: bio.cell-mol.enhancers-and-combinatorial-control
+    name: Explaining enhancers and combinatorial control
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.transcription-machinery
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe enhancers
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp2
+        can_do: Explain DNA looping and mediators
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp3
+        can_do: Explain combinatorial control
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp4
+        can_do: Explain insulators
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+  - id: bio.cell-mol.histone-modification
+    name: Explaining chromatin remodelling and histone modification
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.transcription-machinery
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe histone acetylation
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp2
+        can_do: Describe histone methylation
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp3
+        can_do: Describe chromatin remodelling complexes
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp4
+        can_do: Explain the histone code idea
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+  - id: bio.cell-mol.splicing-mechanisms
+    name: Explaining spliceosome function and alternative splicing
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.rna-processing
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the spliceosome
+        key_prerequisites: [bio.hs2.rna-processing]
+      - id: kp2
+        can_do: Explain splice site recognition
+        key_prerequisites: [bio.hs2.rna-processing]
+      - id: kp3
+        can_do: Explain alternative splicing
+        key_prerequisites: [bio.hs2.rna-processing]
+      - id: kp4
+        can_do: Relate splicing errors to disease
+        key_prerequisites: [bio.hs2.rna-processing]
+  - id: bio.cell-mol.mrna-stability-and-localization
+    name: Explaining mRNA stability and localization
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.splicing-mechanisms
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.intro1.noncoding-rna
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain mRNA decay pathways
+        key_prerequisites: [bio.cell-mol.splicing-mechanisms]
+      - id: kp2
+        can_do: Explain microRNA effects on stability
+        key_prerequisites: [bio.intro1.noncoding-rna]
+      - id: kp3
+        can_do: Explain mRNA localization
+        key_prerequisites: [bio.cell-mol.splicing-mechanisms]
+      - id: kp4
+        can_do: Explain nonsense-mediated decay
+        key_prerequisites: [bio.cell-mol.splicing-mechanisms]
+  - id: bio.cell-mol.translational-control
+    name: Explaining translational regulation
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.mrna-stability-and-localization
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain initiation factor regulation
+        key_prerequisites: [bio.cell-mol.mrna-stability-and-localization]
+      - id: kp2
+        can_do: Explain regulation by RNA-binding proteins
+        key_prerequisites: [bio.cell-mol.mrna-stability-and-localization]
+      - id: kp3
+        can_do: Explain global translation control under stress
+        key_prerequisites: [bio.cell-mol.mrna-stability-and-localization]
+      - id: kp4
+        can_do: Give examples of translational regulation
+        key_prerequisites: [bio.cell-mol.mrna-stability-and-localization]
+  - id: bio.cell-mol.replication-licensing
+    name: Explaining replication origin licensing
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.replication-enzymes
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.cyclin-cdk-oscillations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe origin recognition
+        key_prerequisites: [bio.hs2.replication-enzymes]
+      - id: kp2
+        can_do: Explain licensing once per cycle
+        key_prerequisites: [bio.hs2.replication-enzymes, bio.cell-mol.cyclin-cdk-oscillations]
+      - id: kp3
+        can_do: Explain replication timing
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations]
+      - id: kp4
+        can_do: Relate licensing errors to genome instability
+        key_prerequisites: [bio.cell-mol.cyclin-cdk-oscillations]
+  - id: bio.cell-mol.adhesion-molecules
+    name: Describing cadherins and integrins
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cell-junctions-and-matrix
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe cadherins
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp2
+        can_do: Describe integrins
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp3
+        can_do: Explain adhesion signalling
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp4
+        can_do: Relate adhesion loss to cancer
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+  - id: bio.cell-mol.matrix-composition
+    name: Describing collagen and matrix proteins
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.cell-junctions-and-matrix
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe collagen
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp2
+        can_do: Describe proteoglycans
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp3
+        can_do: Describe fibronectin and laminin
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+      - id: kp4
+        can_do: Relate matrix defects to disease
+        key_prerequisites: [bio.intro1.cell-junctions-and-matrix]
+  - id: bio.cell-mol.stem-cell-niches
+    name: Explaining stem cell niches
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.adhesion-molecules
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.cell-mol.developmental-signalling-pathways
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe stem cell niches
+        key_prerequisites: [bio.cell-mol.adhesion-molecules]
+      - id: kp2
+        can_do: Explain niche signals
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+      - id: kp3
+        can_do: Explain asymmetric division
+        key_prerequisites: [bio.cell-mol.adhesion-molecules]
+      - id: kp4
+        can_do: Describe induced pluripotent stem cells
+        key_prerequisites: [bio.cell-mol.developmental-signalling-pathways]
+  - id: bio.cell-mol.microscopy-techniques
+    name: Comparing light, fluorescence and electron microscopy
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs1.microscopy-and-magnification
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare light and fluorescence microscopy
+        key_prerequisites: [bio.hs1.microscopy-and-magnification]
+      - id: kp2
+        can_do: Describe confocal microscopy
+        key_prerequisites: [bio.hs1.microscopy-and-magnification]
+      - id: kp3
+        can_do: Describe electron microscopy
+        key_prerequisites: [bio.hs1.microscopy-and-magnification]
+      - id: kp4
+        can_do: Choose a technique for a question
+        key_prerequisites: [bio.hs1.microscopy-and-magnification]
+  - id: bio.cell-mol.fluorescent-protein-tagging
+    name: Using fluorescent protein tags
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.microscopy-techniques
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.intro1.cloning-vectors
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe fluorescent proteins
+        key_prerequisites: [bio.cell-mol.microscopy-techniques]
+      - id: kp2
+        can_do: Design a tagged protein construct
+        key_prerequisites: [bio.intro1.cloning-vectors]
+      - id: kp3
+        can_do: Interpret localization images
+        key_prerequisites: [bio.cell-mol.microscopy-techniques]
+      - id: kp4
+        can_do: Describe live-cell imaging
+        key_prerequisites: [bio.cell-mol.microscopy-techniques]
+  - id: bio.cell-mol.cell-fractionation
+    name: Separating organelles by centrifugation
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs1.organelle-functions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe homogenization
+        key_prerequisites: [bio.hs1.organelle-functions]
+      - id: kp2
+        can_do: Explain differential centrifugation
+        key_prerequisites: [bio.hs1.organelle-functions]
+      - id: kp3
+        can_do: Explain density gradient centrifugation
+        key_prerequisites: [bio.hs1.organelle-functions]
+      - id: kp4
+        can_do: Identify fractions by markers
+        key_prerequisites: [bio.hs1.organelle-functions]
+  - id: bio.cell-mol.protein-detection-methods
+    name: Detecting proteins by western blot and immunostaining
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.cell-fractionation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe western blotting
+        key_prerequisites: [bio.cell-mol.cell-fractionation]
+      - id: kp2
+        can_do: Describe immunofluorescence
+        key_prerequisites: [bio.cell-mol.cell-fractionation]
+      - id: kp3
+        can_do: Describe immunoprecipitation
+        key_prerequisites: [bio.cell-mol.cell-fractionation]
+      - id: kp4
+        can_do: Interpret a western blot
+        key_prerequisites: [bio.cell-mol.cell-fractionation]
+  - id: bio.cell-mol.loss-of-function-methods
+    name: Using knockouts and RNA interference to test function
+    subject: bio
+    course: bio.cell-mol
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.intro1.noncoding-rna
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.intro1.model-organisms
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe gene knockouts
+        key_prerequisites: [bio.intro1.model-organisms]
+      - id: kp2
+        can_do: Describe RNA interference knockdown
+        key_prerequisites: [bio.intro1.noncoding-rna]
+      - id: kp3
+        can_do: Describe gene editing knockouts
+        key_prerequisites: [bio.intro1.model-organisms]
+      - id: kp4
+        can_do: Interpret loss-of-function results
+        key_prerequisites: [bio.intro1.noncoding-rna, bio.intro1.model-organisms]

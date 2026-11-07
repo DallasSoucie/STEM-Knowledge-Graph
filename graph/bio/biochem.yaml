@@ -1,0 +1,1265 @@
+course: bio.biochem
+topics:
+  - id: bio.biochem.amino-acid-charge-and-pi
+    name: Calculating amino acid charge and isoelectric point
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.org2.amino-acids-and-peptides
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.gen2.fractional-composition
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the net charge of an amino acid at a given pH
+        key_prerequisites: [chem.org2.amino-acids-and-peptides, chem.gen2.fractional-composition]
+      - id: kp2
+        can_do: Calculate the isoelectric point of an amino acid
+        key_prerequisites: [chem.org2.amino-acids-and-peptides, chem.gen2.fractional-composition]
+      - id: kp3
+        can_do: Estimate the net charge of a peptide
+        key_prerequisites: [chem.org2.amino-acids-and-peptides]
+      - id: kp4
+        can_do: Predict migration in an electric field from charge
+        key_prerequisites: [chem.gen2.fractional-composition]
+  - id: bio.biochem.peptide-bond-geometry
+    name: Explaining peptide bond planarity and torsion angles
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.org2.amino-acids-and-peptides
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the partial double bond character of the peptide bond
+        key_prerequisites: [chem.org2.amino-acids-and-peptides]
+      - id: kp2
+        can_do: Compare trans and cis peptide bonds
+        key_prerequisites: [chem.org2.amino-acids-and-peptides]
+      - id: kp3
+        can_do: Define phi and psi torsion angles
+        key_prerequisites: [chem.org2.amino-acids-and-peptides]
+      - id: kp4
+        can_do: Read a Ramachandran plot
+        key_prerequisites: [chem.org2.amino-acids-and-peptides]
+  - id: bio.biochem.secondary-structure
+    name: Describing alpha helices and beta sheets
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.peptide-bond-geometry
+        encompassing: 0.5
+        confidence: high
+      - topic: bio.hs2.protein-structure-levels
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe hydrogen bonding in the alpha helix
+        key_prerequisites: [bio.biochem.peptide-bond-geometry, bio.hs2.protein-structure-levels]
+      - id: kp2
+        can_do: Compare parallel and antiparallel beta sheets
+        key_prerequisites: [bio.biochem.peptide-bond-geometry]
+      - id: kp3
+        can_do: Describe turns and loops
+        key_prerequisites: [bio.hs2.protein-structure-levels]
+      - id: kp4
+        can_do: Predict helix-forming and helix-breaking residues
+        key_prerequisites: [bio.biochem.peptide-bond-geometry]
+  - id: bio.biochem.folding-forces
+    name: Explaining forces that stabilize protein folds
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.secondary-structure
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rank noncovalent forces in folded proteins
+        key_prerequisites: [bio.biochem.secondary-structure]
+      - id: kp2
+        can_do: Explain the hydrophobic effect in folding
+        key_prerequisites: [bio.biochem.secondary-structure]
+      - id: kp3
+        can_do: Explain disulfide bonds in protein stability
+        key_prerequisites: [bio.biochem.secondary-structure]
+      - id: kp4
+        can_do: Predict effects of mutations on stability
+        key_prerequisites: [bio.biochem.secondary-structure]
+  - id: bio.biochem.folding-thermodynamics
+    name: Explaining protein folding energetics
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.folding-forces
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-and-k
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate folding free energy to the folding equilibrium constant
+        key_prerequisites: [bio.biochem.folding-forces, chem.gen2.gibbs-energy-and-k]
+      - id: kp2
+        can_do: Explain enthalpy and entropy contributions to folding
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp3
+        can_do: Interpret thermal denaturation curves
+        key_prerequisites: [chem.gen2.gibbs-energy-and-k]
+      - id: kp4
+        can_do: Explain folding pathways and energy landscapes
+        key_prerequisites: [bio.biochem.folding-forces]
+  - id: bio.biochem.protein-purification
+    name: Purifying proteins by chromatography and electrophoresis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.amino-acid-charge-and-pi
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate proteins by ion exchange chromatography
+        key_prerequisites: [bio.biochem.amino-acid-charge-and-pi]
+      - id: kp2
+        can_do: Separate proteins by size exclusion and affinity chromatography
+        key_prerequisites: [bio.biochem.amino-acid-charge-and-pi]
+      - id: kp3
+        can_do: Interpret SDS-PAGE and isoelectric focusing results
+        key_prerequisites: [bio.biochem.amino-acid-charge-and-pi]
+      - id: kp4
+        can_do: Analyze a purification table for yield and specific activity
+        key_prerequisites: [bio.biochem.amino-acid-charge-and-pi]
+  - id: bio.biochem.protein-sequencing
+    name: Determining protein sequences by mass spectrometry
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.protein-purification
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Determine N-terminal residues by Edman degradation
+        key_prerequisites: [bio.biochem.protein-purification]
+      - id: kp2
+        can_do: Predict fragments from specific protease cleavage
+        key_prerequisites: [bio.biochem.protein-purification]
+      - id: kp3
+        can_do: Assemble a sequence from overlapping fragments
+        key_prerequisites: [bio.biochem.protein-purification]
+      - id: kp4
+        can_do: Interpret mass spectrometry peptide data
+        key_prerequisites: [bio.biochem.protein-purification]
+  - id: bio.biochem.structure-determination
+    name: Comparing crystallography, NMR and cryo-electron microscopy
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.folding-forces
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare X-ray crystallography, NMR and cryo-electron microscopy
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp2
+        can_do: Explain what resolution means for a structure
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp3
+        can_do: Read a protein structure file description
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp4
+        can_do: Choose a structure method for a protein
+        key_prerequisites: [bio.biochem.folding-forces]
+  - id: bio.biochem.myoglobin-and-hemoglobin
+    name: Comparing oxygen binding by myoglobin and hemoglobin
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.folding-forces
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe heme and oxygen binding
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp2
+        can_do: Compare myoglobin and hemoglobin binding curves
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp3
+        can_do: Calculate fractional saturation from oxygen pressure
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp4
+        can_do: Explain oxygen release in tissues
+        key_prerequisites: [bio.biochem.folding-forces]
+  - id: bio.biochem.allostery-and-cooperativity
+    name: Explaining cooperative binding and allostery
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.myoglobin-and-hemoglobin
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the concerted and sequential models
+        key_prerequisites: [bio.biochem.myoglobin-and-hemoglobin]
+      - id: kp2
+        can_do: Use the Hill equation to measure cooperativity
+        key_prerequisites: [bio.biochem.myoglobin-and-hemoglobin]
+      - id: kp3
+        can_do: Explain the Bohr effect and bisphosphoglycerate
+        key_prerequisites: [bio.biochem.myoglobin-and-hemoglobin]
+      - id: kp4
+        can_do: Relate sickle cell hemoglobin to structure
+        key_prerequisites: [bio.biochem.myoglobin-and-hemoglobin]
+  - id: bio.biochem.catalytic-strategies
+    name: Explaining enzyme catalytic strategies
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.active-sites-and-specificity
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.biochem.folding-forces
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe acid-base catalysis
+        key_prerequisites: [bio.hs2.active-sites-and-specificity]
+      - id: kp2
+        can_do: Describe covalent catalysis
+        key_prerequisites: [bio.hs2.active-sites-and-specificity]
+      - id: kp3
+        can_do: Describe metal ion catalysis
+        key_prerequisites: [bio.biochem.folding-forces]
+      - id: kp4
+        can_do: Explain transition state stabilization
+        key_prerequisites: [bio.hs2.active-sites-and-specificity, bio.biochem.folding-forces]
+  - id: bio.biochem.michaelis-menten
+    name: Deriving the Michaelis-Menten equation
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.steady-state-intermediates
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen2.enzyme-kinetics-intro
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Michaelis-Menten equation with the steady state
+        key_prerequisites: [chem.gen2.steady-state-intermediates]
+      - id: kp2
+        can_do: Find Vmax and Km from rate data
+        key_prerequisites: [chem.gen2.enzyme-kinetics-intro]
+      - id: kp3
+        can_do: Use Lineweaver-Burk plots
+        key_prerequisites: [chem.gen2.enzyme-kinetics-intro]
+      - id: kp4
+        can_do: Interpret Km as a measure of substrate affinity
+        key_prerequisites: [chem.gen2.steady-state-intermediates, chem.gen2.enzyme-kinetics-intro]
+  - id: bio.biochem.enzyme-inhibition
+    name: Analyzing enzyme inhibition
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.michaelis-menten
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Analyze competitive inhibition
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp2
+        can_do: Analyze uncompetitive inhibition
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp3
+        can_do: Analyze mixed and noncompetitive inhibition
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp4
+        can_do: Find inhibition constants from plots
+        key_prerequisites: [bio.biochem.michaelis-menten]
+  - id: bio.biochem.kinetic-parameters
+    name: Interpreting turnover number, Km and catalytic efficiency
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.michaelis-menten
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate turnover number from Vmax and enzyme concentration
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp2
+        can_do: Compare enzymes by catalytic efficiency
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp3
+        can_do: Explain the diffusion limit on efficiency
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp4
+        can_do: Calculate rates at given substrate concentrations
+        key_prerequisites: [bio.biochem.michaelis-menten]
+  - id: bio.biochem.multisubstrate-kinetics
+    name: Distinguishing sequential and ping-pong mechanisms
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.michaelis-menten
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare sequential and ping-pong mechanisms
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp2
+        can_do: Identify mechanisms from double reciprocal plot patterns
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp3
+        can_do: Explain ordered and random sequential binding
+        key_prerequisites: [bio.biochem.michaelis-menten]
+      - id: kp4
+        can_do: Interpret product inhibition patterns
+        key_prerequisites: [bio.biochem.michaelis-menten]
+  - id: bio.biochem.serine-protease-mechanism
+    name: Explaining the serine protease mechanism
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.catalytic-strategies
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the catalytic triad
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp2
+        can_do: Trace the acyl-enzyme mechanism
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp3
+        can_do: Explain the oxyanion hole
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp4
+        can_do: Explain specificity pockets in serine proteases
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+  - id: bio.biochem.coenzymes-and-vitamins
+    name: Describing coenzymes and vitamins
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.catalytic-strategies
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match coenzymes to their vitamin precursors
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp2
+        can_do: Classify coenzymes by the groups they carry
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp3
+        can_do: Explain coenzyme roles in redox reactions
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+      - id: kp4
+        can_do: Relate vitamin deficiencies to enzyme failure
+        key_prerequisites: [bio.biochem.catalytic-strategies]
+  - id: bio.biochem.enzyme-regulation-mechanisms
+    name: Explaining allosteric and covalent enzyme regulation
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.allostery-and-cooperativity
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.biochem.enzyme-inhibition
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain allosteric control of enzymes
+        key_prerequisites: [bio.biochem.allostery-and-cooperativity]
+      - id: kp2
+        can_do: Explain regulation by phosphorylation
+        key_prerequisites: [bio.biochem.allostery-and-cooperativity]
+      - id: kp3
+        can_do: Explain zymogen activation
+        key_prerequisites: [bio.biochem.enzyme-inhibition]
+      - id: kp4
+        can_do: Explain feedback inhibition in pathways
+        key_prerequisites: [bio.biochem.allostery-and-cooperativity, bio.biochem.enzyme-inhibition]
+  - id: bio.biochem.polysaccharides-and-glycoconjugates
+    name: Describing polysaccharides and glycoproteins
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.org2.glycosidic-bonds
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare starch, glycogen and cellulose structures
+        key_prerequisites: [chem.org2.glycosidic-bonds]
+      - id: kp2
+        can_do: Describe glycosaminoglycans
+        key_prerequisites: [chem.org2.glycosidic-bonds]
+      - id: kp3
+        can_do: Describe glycoproteins and proteoglycans
+        key_prerequisites: [chem.org2.glycosidic-bonds]
+      - id: kp4
+        can_do: Explain cell recognition by carbohydrates
+        key_prerequisites: [chem.org2.glycosidic-bonds]
+  - id: bio.biochem.membrane-lipid-classes
+    name: Classifying membrane lipids
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.org2.lipids-and-saponification
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify glycerophospholipids and sphingolipids
+        key_prerequisites: [chem.org2.lipids-and-saponification]
+      - id: kp2
+        can_do: Describe cholesterol and steroid structure
+        key_prerequisites: [chem.org2.lipids-and-saponification]
+      - id: kp3
+        can_do: Explain lipid aggregation into micelles and bilayers
+        key_prerequisites: [chem.org2.lipids-and-saponification]
+      - id: kp4
+        can_do: Describe lipids as signals
+        key_prerequisites: [chem.org2.lipids-and-saponification]
+  - id: bio.biochem.transport-thermodynamics
+    name: Calculating free energy of membrane transport
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.cell-mol.ion-pump-energetics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate free energy of transport for uncharged solutes
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp2
+        can_do: Include membrane potential for charged solutes
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp3
+        can_do: Calculate the ATP needed for active transport
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+      - id: kp4
+        can_do: Predict transport direction from gradients
+        key_prerequisites: [bio.cell-mol.ion-pump-energetics]
+  - id: bio.biochem.nucleic-acid-stability
+    name: Describing nucleic acid stability and hybridization
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.org2.nucleic-acid-structure
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain base stacking and hydrogen bonding in duplexes
+        key_prerequisites: [chem.org2.nucleic-acid-structure]
+      - id: kp2
+        can_do: Interpret DNA melting curves
+        key_prerequisites: [chem.org2.nucleic-acid-structure]
+      - id: kp3
+        can_do: Predict melting temperature from base composition
+        key_prerequisites: [chem.org2.nucleic-acid-structure]
+      - id: kp4
+        can_do: Compare A, B and Z DNA forms
+        key_prerequisites: [chem.org2.nucleic-acid-structure]
+  - id: bio.biochem.biochemical-standard-states
+    name: Using biochemical standard Gibbs energies
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: chem.gen2.gibbs-energy-nonstandard
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the biochemical standard state at pH 7
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp2
+        can_do: Convert between standard and biochemical free energies
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp3
+        can_do: Calculate free energy at cellular concentrations
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+      - id: kp4
+        can_do: Explain how unfavourable steps proceed in cells
+        key_prerequisites: [chem.gen2.gibbs-energy-nonstandard]
+  - id: bio.biochem.phosphoryl-transfer-potential
+    name: Explaining phosphoryl transfer potential
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.biochemical-standard-states
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why ATP hydrolysis releases energy
+        key_prerequisites: [bio.biochem.biochemical-standard-states]
+      - id: kp2
+        can_do: Rank compounds by phosphoryl transfer potential
+        key_prerequisites: [bio.biochem.biochemical-standard-states]
+      - id: kp3
+        can_do: Calculate free energy of coupled reactions
+        key_prerequisites: [bio.biochem.biochemical-standard-states]
+      - id: kp4
+        can_do: Explain ATP regeneration by substrate-level phosphorylation
+        key_prerequisites: [bio.biochem.biochemical-standard-states]
+  - id: bio.biochem.biological-redox-energetics
+    name: Relating reduction potential to free energy in biology
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.biochemical-standard-states
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen2.gibbs-energy-and-cell-potential
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use standard reduction potentials of biological carriers
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp2
+        can_do: Calculate free energy from a potential difference
+        key_prerequisites: [bio.biochem.biochemical-standard-states, chem.gen2.gibbs-energy-and-cell-potential]
+      - id: kp3
+        can_do: Explain NAD and FAD redox roles
+        key_prerequisites: [bio.biochem.biochemical-standard-states]
+      - id: kp4
+        can_do: Predict electron flow between carriers
+        key_prerequisites: [chem.gen2.gibbs-energy-and-cell-potential]
+  - id: bio.biochem.glycolysis-regulation
+    name: Tracing glycolysis enzymes and regulation
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.hs2.glycolysis-details
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.biochem.enzyme-regulation-mechanisms
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify the irreversible steps of glycolysis
+        key_prerequisites: [bio.hs2.glycolysis-details]
+      - id: kp2
+        can_do: Explain phosphofructokinase regulation
+        key_prerequisites: [bio.biochem.enzyme-regulation-mechanisms]
+      - id: kp3
+        can_do: Explain hexokinase and pyruvate kinase regulation
+        key_prerequisites: [bio.biochem.enzyme-regulation-mechanisms]
+      - id: kp4
+        can_do: Predict glycolytic flux under different energy states
+        key_prerequisites: [bio.hs2.glycolysis-details, bio.biochem.enzyme-regulation-mechanisms]
+  - id: bio.biochem.fates-of-pyruvate
+    name: Describing fates of pyruvate
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.glycolysis-regulation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare aerobic and anaerobic fates of pyruvate
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp2
+        can_do: Explain lactate fermentation and NAD regeneration
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp3
+        can_do: Explain alcoholic fermentation
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp4
+        can_do: Explain the Cori cycle
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+  - id: bio.biochem.gluconeogenesis
+    name: Tracing gluconeogenesis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.glycolysis-regulation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify the bypass reactions of gluconeogenesis
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp2
+        can_do: Name gluconeogenic precursors
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp3
+        can_do: Calculate the energy cost of gluconeogenesis
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp4
+        can_do: Explain where gluconeogenesis occurs
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+  - id: bio.biochem.reciprocal-regulation
+    name: Explaining reciprocal regulation of glycolysis and gluconeogenesis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.gluconeogenesis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain fructose 2,6-bisphosphate control
+        key_prerequisites: [bio.biochem.gluconeogenesis]
+      - id: kp2
+        can_do: Explain reciprocal control of glycolysis and gluconeogenesis
+        key_prerequisites: [bio.biochem.gluconeogenesis]
+      - id: kp3
+        can_do: Explain substrate cycles
+        key_prerequisites: [bio.biochem.gluconeogenesis]
+      - id: kp4
+        can_do: Predict pathway activity in fed and fasted states
+        key_prerequisites: [bio.biochem.gluconeogenesis]
+  - id: bio.biochem.glycogen-metabolism
+    name: Explaining glycogen synthesis and breakdown
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.reciprocal-regulation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe glycogen synthesis
+        key_prerequisites: [bio.biochem.reciprocal-regulation]
+      - id: kp2
+        can_do: Describe glycogen breakdown
+        key_prerequisites: [bio.biochem.reciprocal-regulation]
+      - id: kp3
+        can_do: Explain hormonal control of glycogen phosphorylase
+        key_prerequisites: [bio.biochem.reciprocal-regulation]
+      - id: kp4
+        can_do: Relate glycogen storage diseases to enzyme defects
+        key_prerequisites: [bio.biochem.reciprocal-regulation]
+  - id: bio.biochem.pentose-phosphate-pathway
+    name: Tracing the pentose phosphate pathway
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.glycolysis-regulation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the oxidative phase and NADPH production
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp2
+        can_do: Describe the nonoxidative phase
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp3
+        can_do: Explain how cell needs change the pathway's output
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+      - id: kp4
+        can_do: Relate glucose 6-phosphate dehydrogenase deficiency to red cells
+        key_prerequisites: [bio.biochem.glycolysis-regulation]
+  - id: bio.biochem.pyruvate-dehydrogenase
+    name: Explaining pyruvate dehydrogenase
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.fates-of-pyruvate
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.biochem.coenzymes-and-vitamins
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the pyruvate dehydrogenase complex
+        key_prerequisites: [bio.biochem.fates-of-pyruvate]
+      - id: kp2
+        can_do: Trace the five coenzymes in the reaction
+        key_prerequisites: [bio.biochem.coenzymes-and-vitamins]
+      - id: kp3
+        can_do: Explain regulation of the complex
+        key_prerequisites: [bio.biochem.fates-of-pyruvate]
+      - id: kp4
+        can_do: Relate thiamine deficiency to the complex
+        key_prerequisites: [bio.biochem.coenzymes-and-vitamins]
+  - id: bio.biochem.citric-acid-cycle-reactions
+    name: Tracing citric acid cycle reactions
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.pyruvate-dehydrogenase
+        encompassing: 0.6
+        confidence: high
+      - topic: bio.hs2.krebs-cycle-details
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace the reactions of the citric acid cycle
+        key_prerequisites: [bio.biochem.pyruvate-dehydrogenase, bio.hs2.krebs-cycle-details]
+      - id: kp2
+        can_do: Count reduced carriers per acetyl group
+        key_prerequisites: [bio.hs2.krebs-cycle-details]
+      - id: kp3
+        can_do: Identify the decarboxylation steps
+        key_prerequisites: [bio.biochem.pyruvate-dehydrogenase]
+      - id: kp4
+        can_do: Explain anaplerotic reactions
+        key_prerequisites: [bio.biochem.pyruvate-dehydrogenase]
+  - id: bio.biochem.citric-acid-cycle-regulation
+    name: Explaining citric acid cycle regulation
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.citric-acid-cycle-reactions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify regulated enzymes of the cycle
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp2
+        can_do: Explain control by energy charge and NADH
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp3
+        can_do: Explain product inhibition in the cycle
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp4
+        can_do: Predict cycle rate under different conditions
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+  - id: bio.biochem.respiratory-complexes
+    name: Tracing electrons through the respiratory complexes
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.citric-acid-cycle-reactions
+        encompassing: 0.35
+        confidence: high
+      - topic: bio.biochem.biological-redox-energetics
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe complexes I to IV
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp2
+        can_do: Trace electrons from NADH and FADH2 to oxygen
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions, bio.biochem.biological-redox-energetics]
+      - id: kp3
+        can_do: Count protons pumped per electron pair
+        key_prerequisites: [bio.biochem.biological-redox-energetics]
+      - id: kp4
+        can_do: Explain coenzyme Q and cytochrome c as carriers
+        key_prerequisites: [bio.biochem.biological-redox-energetics]
+  - id: bio.biochem.atp-synthase-mechanism
+    name: Explaining the ATP synthase rotary mechanism
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.respiratory-complexes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the F0 and F1 parts of ATP synthase
+        key_prerequisites: [bio.biochem.respiratory-complexes]
+      - id: kp2
+        can_do: Explain the binding change mechanism
+        key_prerequisites: [bio.biochem.respiratory-complexes]
+      - id: kp3
+        can_do: Calculate the proton-motive force
+        key_prerequisites: [bio.biochem.respiratory-complexes]
+      - id: kp4
+        can_do: Relate protons translocated to ATP made
+        key_prerequisites: [bio.biochem.respiratory-complexes]
+  - id: bio.biochem.respiratory-control-and-uncoupling
+    name: Explaining respiratory control and uncoupling
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.atp-synthase-mechanism
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain respiratory control by ADP
+        key_prerequisites: [bio.biochem.atp-synthase-mechanism]
+      - id: kp2
+        can_do: Explain uncoupling and heat production
+        key_prerequisites: [bio.biochem.atp-synthase-mechanism]
+      - id: kp3
+        can_do: Predict effects of respiratory inhibitors
+        key_prerequisites: [bio.biochem.atp-synthase-mechanism]
+      - id: kp4
+        can_do: Calculate phosphate to oxygen ratios
+        key_prerequisites: [bio.biochem.atp-synthase-mechanism]
+  - id: bio.biochem.beta-oxidation
+    name: Tracing beta-oxidation of fatty acids
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.membrane-lipid-classes
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.biochem.citric-acid-cycle-reactions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe fatty acid activation and carnitine transport
+        key_prerequisites: [bio.biochem.membrane-lipid-classes]
+      - id: kp2
+        can_do: Trace one round of beta oxidation
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp3
+        can_do: Calculate ATP yield from a fatty acid
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp4
+        can_do: Explain oxidation of unsaturated and odd-chain fatty acids
+        key_prerequisites: [bio.biochem.membrane-lipid-classes, bio.biochem.citric-acid-cycle-reactions]
+  - id: bio.biochem.ketone-bodies
+    name: Describing ketone body metabolism
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.beta-oxidation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain when ketone bodies form
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp2
+        can_do: Trace ketone body synthesis in the liver
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp3
+        can_do: Explain ketone use by other tissues
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp4
+        can_do: Relate ketoacidosis to metabolism
+        key_prerequisites: [bio.biochem.beta-oxidation]
+  - id: bio.biochem.fatty-acid-synthesis
+    name: Tracing fatty acid synthesis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.beta-oxidation
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.biochem.pentose-phosphate-pathway
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare fatty acid synthesis with beta oxidation
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp2
+        can_do: Explain acetyl-CoA carboxylase control
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp3
+        can_do: Trace the fatty acid synthase cycle
+        key_prerequisites: [bio.biochem.beta-oxidation]
+      - id: kp4
+        can_do: Identify NADPH sources for synthesis
+        key_prerequisites: [bio.biochem.pentose-phosphate-pathway]
+  - id: bio.biochem.cholesterol-metabolism
+    name: Describing cholesterol synthesis and regulation
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.fatty-acid-synthesis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Outline cholesterol synthesis from acetyl-CoA
+        key_prerequisites: [bio.biochem.fatty-acid-synthesis]
+      - id: kp2
+        can_do: Explain HMG-CoA reductase regulation
+        key_prerequisites: [bio.biochem.fatty-acid-synthesis]
+      - id: kp3
+        can_do: Describe lipoprotein transport of lipids
+        key_prerequisites: [bio.biochem.fatty-acid-synthesis]
+      - id: kp4
+        can_do: Explain how statins lower cholesterol
+        key_prerequisites: [bio.biochem.fatty-acid-synthesis]
+  - id: bio.biochem.amino-acid-degradation
+    name: Explaining transamination and deamination
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.citric-acid-cycle-reactions
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: bio.biochem.coenzymes-and-vitamins
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain transamination
+        key_prerequisites: [bio.biochem.coenzymes-and-vitamins]
+      - id: kp2
+        can_do: Explain oxidative deamination
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp3
+        can_do: Classify amino acids as glucogenic or ketogenic
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+      - id: kp4
+        can_do: Trace carbon skeletons into the citric acid cycle
+        key_prerequisites: [bio.biochem.citric-acid-cycle-reactions]
+  - id: bio.biochem.urea-cycle
+    name: Tracing the urea cycle
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.amino-acid-degradation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace the reactions of the urea cycle
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp2
+        can_do: Link the urea cycle to the citric acid cycle
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp3
+        can_do: Calculate the energy cost of urea synthesis
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp4
+        can_do: Relate urea cycle defects to ammonia toxicity
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+  - id: bio.biochem.amino-acid-biosynthesis
+    name: Describing amino acid biosynthesis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.amino-acid-degradation
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify amino acids as essential or nonessential
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp2
+        can_do: Trace amino acid families to their precursors
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp3
+        can_do: Explain nitrogen fixation and assimilation
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+      - id: kp4
+        can_do: Explain feedback control of biosynthesis
+        key_prerequisites: [bio.biochem.amino-acid-degradation]
+  - id: bio.biochem.nucleotide-metabolism
+    name: Describing nucleotide synthesis and salvage
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.amino-acid-biosynthesis
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.biochem.pentose-phosphate-pathway
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Outline purine synthesis
+        key_prerequisites: [bio.biochem.amino-acid-biosynthesis]
+      - id: kp2
+        can_do: Outline pyrimidine synthesis
+        key_prerequisites: [bio.biochem.amino-acid-biosynthesis]
+      - id: kp3
+        can_do: Explain ribonucleotide reductase
+        key_prerequisites: [bio.biochem.pentose-phosphate-pathway]
+      - id: kp4
+        can_do: Explain how nucleotide synthesis drugs act
+        key_prerequisites: [bio.biochem.amino-acid-biosynthesis, bio.biochem.pentose-phosphate-pathway]
+  - id: bio.biochem.fed-and-fasted-metabolism
+    name: Integrating metabolism in fed and fasted states
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.glycogen-metabolism
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.biochem.fatty-acid-synthesis
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.biochem.ketone-bodies
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare liver, muscle, brain and fat metabolism
+        key_prerequisites: [bio.biochem.glycogen-metabolism, bio.biochem.fatty-acid-synthesis]
+      - id: kp2
+        can_do: Trace fuel use after a meal
+        key_prerequisites: [bio.biochem.glycogen-metabolism, bio.biochem.fatty-acid-synthesis]
+      - id: kp3
+        can_do: Trace fuel use during fasting
+        key_prerequisites: [bio.biochem.glycogen-metabolism, bio.biochem.ketone-bodies]
+      - id: kp4
+        can_do: Explain metabolic changes in starvation
+        key_prerequisites: [bio.biochem.ketone-bodies]
+  - id: bio.biochem.hormonal-control-of-metabolism
+    name: Explaining insulin and glucagon signalling
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.fed-and-fasted-metabolism
+        encompassing: 0.5
+        confidence: high
+      - topic: bio.cell-mol.rtk-and-ras-pathway
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain insulin effects on metabolism
+        key_prerequisites: [bio.biochem.fed-and-fasted-metabolism, bio.cell-mol.rtk-and-ras-pathway]
+      - id: kp2
+        can_do: Explain glucagon and epinephrine effects
+        key_prerequisites: [bio.biochem.fed-and-fasted-metabolism]
+      - id: kp3
+        can_do: Explain AMP-activated kinase as an energy sensor
+        key_prerequisites: [bio.biochem.fed-and-fasted-metabolism]
+      - id: kp4
+        can_do: Relate insulin signalling to target enzymes
+        key_prerequisites: [bio.cell-mol.rtk-and-ras-pathway]
+  - id: bio.biochem.metabolic-diseases
+    name: Explaining diabetes and inborn errors of metabolism
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.hormonal-control-of-metabolism
+        encompassing: 0.45
+        confidence: high
+      - topic: bio.biochem.urea-cycle
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain diabetes in metabolic terms
+        key_prerequisites: [bio.biochem.hormonal-control-of-metabolism]
+      - id: kp2
+        can_do: Explain inborn errors of amino acid metabolism
+        key_prerequisites: [bio.biochem.urea-cycle]
+      - id: kp3
+        can_do: Relate obesity to energy balance
+        key_prerequisites: [bio.biochem.hormonal-control-of-metabolism]
+      - id: kp4
+        can_do: Predict metabolite changes from an enzyme defect
+        key_prerequisites: [bio.biochem.hormonal-control-of-metabolism, bio.biochem.urea-cycle]
+  - id: bio.biochem.polymerase-fidelity
+    name: Explaining polymerase fidelity and proofreading
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.nucleic-acid-stability
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.cell-mol.replication-licensing
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain base selection by DNA polymerase
+        key_prerequisites: [bio.biochem.nucleic-acid-stability]
+      - id: kp2
+        can_do: Explain proofreading exonuclease activity
+        key_prerequisites: [bio.cell-mol.replication-licensing]
+      - id: kp3
+        can_do: Calculate overall error rates from each step
+        key_prerequisites: [bio.biochem.nucleic-acid-stability, bio.cell-mol.replication-licensing]
+      - id: kp4
+        can_do: Compare fidelity of DNA and RNA polymerases
+        key_prerequisites: [bio.biochem.nucleic-acid-stability]
+  - id: bio.biochem.rna-polymerase-mechanism
+    name: Explaining RNA polymerase mechanism
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.nucleic-acid-stability
+        encompassing: 0.3
+        confidence: high
+      - topic: bio.cell-mol.transcription-machinery
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the two-metal-ion catalytic mechanism
+        key_prerequisites: [bio.biochem.nucleic-acid-stability]
+      - id: kp2
+        can_do: Explain promoter binding and open complex formation
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp3
+        can_do: Explain elongation and pausing
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+      - id: kp4
+        can_do: Explain termination mechanisms
+        key_prerequisites: [bio.cell-mol.transcription-machinery]
+  - id: bio.biochem.ribosome-and-trna-biochemistry
+    name: Explaining aminoacyl-tRNA synthetases and ribosome catalysis
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.rna-polymerase-mechanism
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain aminoacyl-tRNA synthetase accuracy
+        key_prerequisites: [bio.biochem.rna-polymerase-mechanism]
+      - id: kp2
+        can_do: Explain codon recognition and wobble
+        key_prerequisites: [bio.biochem.rna-polymerase-mechanism]
+      - id: kp3
+        can_do: Explain peptidyl transfer as RNA catalysis
+        key_prerequisites: [bio.biochem.rna-polymerase-mechanism]
+      - id: kp4
+        can_do: Calculate the energy cost of a peptide bond
+        key_prerequisites: [bio.biochem.rna-polymerase-mechanism]
+  - id: bio.biochem.recombinant-protein-expression
+    name: Expressing and analyzing recombinant proteins
+    subject: bio
+    course: bio.biochem
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: bio.biochem.protein-purification
+        encompassing: 0.4
+        confidence: high
+      - topic: bio.intro1.cloning-vectors
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose an expression host for a protein
+        key_prerequisites: [bio.intro1.cloning-vectors]
+      - id: kp2
+        can_do: Explain fusion tags for purification
+        key_prerequisites: [bio.biochem.protein-purification]
+      - id: kp3
+        can_do: Explain problems with insoluble proteins
+        key_prerequisites: [bio.biochem.protein-purification]
+      - id: kp4
+        can_do: Interpret an expression and purification result
+        key_prerequisites: [bio.biochem.protein-purification, bio.intro1.cloning-vectors]

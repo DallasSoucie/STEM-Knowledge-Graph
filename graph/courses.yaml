@@ -352,96 +352,105 @@ courses:
   - id: bio.elem
     subject: bio
     levels: [gk, g5]
-    budget: 50
+    budget: 30
   - id: bio.ms
     subject: bio
     levels: [g6, g8]
-    budget: 90
+    budget: 45
     follows:
       - bio.elem
+      - chem.ms
+      - math.g7
   - id: bio.hs1
     subject: bio
     levels: [g9, g11]
-    budget: 180
+    budget: 90
     follows:
       - bio.ms
+      - chem.ms
+      - math.alg1
   - id: bio.hs2
     subject: bio
     levels: [g11, g12]
-    budget: 180
+    budget: 70
     follows:
       - bio.hs1
       - chem.hs1
   - id: bio.intro1
     subject: bio
     levels: [uni-lower, uni-lower]
-    budget: 190
+    budget: 35
     follows:
-      - bio.hs1
+      - bio.hs2
   - id: bio.intro2
     subject: bio
     levels: [uni-lower, uni-lower]
-    budget: 190
+    budget: 55
     follows:
       - bio.intro1
   - id: bio.cell-mol
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 170
+    budget: 55
     follows:
       - bio.intro1
-      - chem.gen1
+      - chem.gen2
   - id: bio.genetics
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 170
+    budget: 45
     follows:
       - bio.intro1
+      - math.stats
+      - math.alg2
   - id: bio.biochem
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 180
+    budget: 55
     follows:
       - bio.cell-mol
-      - chem.org1
+      - chem.org2
   - id: bio.ecology
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 140
+    budget: 35
     follows:
       - bio.intro2
       - math.stats
+      - math.calc1
   - id: bio.evolution
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 120
+    budget: 35
     follows:
       - bio.intro2
       - bio.genetics
   - id: bio.micro
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 160
+    budget: 40
     follows:
       - bio.cell-mol
+      - bio.intro2
   - id: bio.anat-phys1
     subject: bio
     levels: [uni-lower, uni-lower]
-    budget: 180
+    budget: 60
     follows:
       - bio.intro1
   - id: bio.anat-phys2
     subject: bio
     levels: [uni-lower, uni-lower]
-    budget: 180
+    budget: 60
     follows:
       - bio.anat-phys1
   - id: bio.neuro
     subject: bio
     levels: [uni-upper, uni-upper]
-    budget: 130
+    budget: 45
     follows:
       - bio.cell-mol
+      - bio.anat-phys1
   - id: engr.programming
     subject: engr
     levels: [uni-lower, uni-lower]
