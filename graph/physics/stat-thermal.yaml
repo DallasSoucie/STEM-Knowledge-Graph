@@ -1,0 +1,1561 @@
+course: physics.stat-thermal
+topics:
+  - id: physics.stat-thermal.microstates-and-macrostates
+    name: Counting microstates of simple systems
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.microstates-and-entropy
+        encompassing: 0.35
+        confidence: high
+      - topic: math.probstat.counting-for-probability
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell microstates from macrostates
+        key_prerequisites: [physics.waves-thermo-optics.microstates-and-entropy]
+      - id: kp2
+        can_do: Count microstates of coin flips
+        key_prerequisites: [math.probstat.counting-for-probability]
+      - id: kp3
+        can_do: Find the most likely macrostate
+        key_prerequisites: [physics.waves-thermo-optics.microstates-and-entropy, math.probstat.counting-for-probability]
+      - id: kp4
+        can_do: Find the probability of a macrostate
+        key_prerequisites: [math.probstat.counting-for-probability]
+  - id: physics.stat-thermal.two-state-paramagnet-counting
+    name: Counting states of a two-state paramagnet
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.microstates-and-macrostates
+        encompassing: 0.45
+        confidence: high
+      - topic: math.probstat.bernoulli-binomial
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count spin arrangements for a given magnetization
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates, math.probstat.bernoulli-binomial]
+      - id: kp2
+        can_do: Find multiplicity against net spin
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+      - id: kp3
+        can_do: Find probability of a magnetization
+        key_prerequisites: [math.probstat.bernoulli-binomial]
+      - id: kp4
+        can_do: Find the most likely magnetization
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+  - id: physics.stat-thermal.einstein-solid-counting
+    name: Counting states of an Einstein solid
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.microstates-and-macrostates
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model a solid as identical oscillators
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+      - id: kp2
+        can_do: Count ways to share energy units
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+      - id: kp3
+        can_do: Find multiplicity for small solids
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+      - id: kp4
+        can_do: Tabulate multiplicity against energy
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+  - id: physics.stat-thermal.stirling-approximation
+    name: Using Stirling's approximation
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.microstates-and-macrostates
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.integral-test
+        encompassing: 0.3
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Approximate the log of a factorial
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates, math.calc2.integral-test]
+      - id: kp2
+        can_do: Find the error of the approximation
+        key_prerequisites: [math.calc2.integral-test]
+      - id: kp3
+        can_do: Use it for large multiplicities
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+      - id: kp4
+        can_do: Find the log of a binomial coefficient
+        key_prerequisites: [physics.stat-thermal.microstates-and-macrostates]
+  - id: physics.stat-thermal.multiplicity-sharpness
+    name: Showing multiplicity peaks sharply for large systems
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.stirling-approximation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.einstein-solid-counting
+        encompassing: 0.25
+        confidence: high
+      - topic: math.probstat.normal-approx-binomial
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find multiplicity of a large Einstein solid
+        key_prerequisites: [physics.stat-thermal.stirling-approximation, physics.stat-thermal.einstein-solid-counting]
+      - id: kp2
+        can_do: Show the peak width shrinks relative to size
+        key_prerequisites: [math.probstat.normal-approx-binomial]
+      - id: kp3
+        can_do: Find the chance of a large fluctuation
+        key_prerequisites: [physics.stat-thermal.stirling-approximation, math.probstat.normal-approx-binomial]
+      - id: kp4
+        can_do: Explain why macroscopic behaviour is predictable
+        key_prerequisites: [physics.stat-thermal.stirling-approximation]
+  - id: physics.stat-thermal.random-walks
+    name: Analyzing random walks
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.two-state-paramagnet-counting
+        encompassing: 0.4
+        confidence: high
+      - topic: math.probstat.variance-of-sums
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the distribution of a random walk
+        key_prerequisites: [physics.stat-thermal.two-state-paramagnet-counting]
+      - id: kp2
+        can_do: Find mean and spread of displacement
+        key_prerequisites: [math.probstat.variance-of-sums]
+      - id: kp3
+        can_do: Find spread after many steps
+        key_prerequisites: [physics.stat-thermal.two-state-paramagnet-counting, math.probstat.variance-of-sums]
+      - id: kp4
+        can_do: Relate walks to spin counting
+        key_prerequisites: [physics.stat-thermal.two-state-paramagnet-counting]
+  - id: physics.stat-thermal.interacting-systems-and-equilibrium
+    name: Finding the most probable split of energy
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.multiplicity-sharpness
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count combined states of two solids
+        key_prerequisites: [physics.stat-thermal.multiplicity-sharpness]
+      - id: kp2
+        can_do: Find the most probable energy split
+        key_prerequisites: [physics.stat-thermal.multiplicity-sharpness]
+      - id: kp3
+        can_do: Show energy flows toward higher multiplicity
+        key_prerequisites: [physics.stat-thermal.multiplicity-sharpness]
+      - id: kp4
+        can_do: Relate equilibrium to a maximum of multiplicity
+        key_prerequisites: [physics.stat-thermal.multiplicity-sharpness]
+  - id: physics.stat-thermal.statistical-entropy
+    name: Defining entropy as the log of multiplicity
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.interacting-systems-and-equilibrium
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.entropy-definition
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define entropy as the log of multiplicity
+        key_prerequisites: [physics.stat-thermal.interacting-systems-and-equilibrium]
+      - id: kp2
+        can_do: Find entropy of an Einstein solid
+        key_prerequisites: [physics.stat-thermal.interacting-systems-and-equilibrium]
+      - id: kp3
+        can_do: Show entropy adds for combined systems
+        key_prerequisites: [physics.stat-thermal.interacting-systems-and-equilibrium]
+      - id: kp4
+        can_do: Link statistical and thermodynamic entropy
+        key_prerequisites: [physics.stat-thermal.interacting-systems-and-equilibrium, physics.waves-thermo-optics.entropy-definition]
+  - id: physics.stat-thermal.microcanonical-ensemble
+    name: Using the microcanonical ensemble
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.statistical-entropy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the equal probability postulate
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp2
+        can_do: Define the microcanonical ensemble
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp3
+        can_do: Find probabilities of states at fixed energy
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp4
+        can_do: Find entropy from the number of accessible states
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+  - id: physics.stat-thermal.temperature-from-entropy
+    name: Defining temperature from entropy
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.statistical-entropy
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define temperature as an entropy derivative
+        key_prerequisites: [physics.stat-thermal.statistical-entropy, math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Find temperature of an Einstein solid
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp3
+        can_do: Find energy against temperature for a solid
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp4
+        can_do: Show heat flows from hot to cold
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+  - id: physics.stat-thermal.sackur-tetrode
+    name: Deriving the entropy of an ideal gas
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.statistical-entropy
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.three-dimensional-box
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.stat-thermal.stirling-approximation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Count states of an ideal gas
+        key_prerequisites: [physics.modern.three-dimensional-box]
+      - id: kp2
+        can_do: Derive the Sackur-Tetrode equation
+        key_prerequisites: [physics.stat-thermal.statistical-entropy, physics.stat-thermal.stirling-approximation]
+      - id: kp3
+        can_do: Find entropy of a monatomic gas
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp4
+        can_do: Find entropy change in an expansion
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+  - id: physics.stat-thermal.gibbs-paradox
+    name: Resolving the Gibbs paradox with entropy of mixing
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.sackur-tetrode
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of mixing for different gases
+        key_prerequisites: [physics.stat-thermal.sackur-tetrode]
+      - id: kp2
+        can_do: Show mixing identical gases changes nothing
+        key_prerequisites: [physics.stat-thermal.sackur-tetrode]
+      - id: kp3
+        can_do: Explain the role of indistinguishability
+        key_prerequisites: [physics.stat-thermal.sackur-tetrode]
+      - id: kp4
+        can_do: Find entropy of mixing for unequal amounts
+        key_prerequisites: [physics.stat-thermal.sackur-tetrode]
+  - id: physics.stat-thermal.paramagnet-thermodynamics
+    name: Finding heat capacity and magnetization of a paramagnet
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.temperature-from-entropy
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.two-state-paramagnet-counting
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of a paramagnet
+        key_prerequisites: [physics.stat-thermal.two-state-paramagnet-counting]
+      - id: kp2
+        can_do: Find temperature against energy
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp3
+        can_do: Find magnetization against field and temperature
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy, physics.stat-thermal.two-state-paramagnet-counting]
+      - id: kp4
+        can_do: Find heat capacity of a paramagnet
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+  - id: physics.stat-thermal.negative-temperature
+    name: Explaining negative temperature
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.paramagnet-thermodynamics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show temperature can be negative for a paramagnet
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp2
+        can_do: Explain why negative temperature is hotter than positive
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp3
+        can_do: Find conditions for negative temperature
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp4
+        can_do: Describe a spin system at negative temperature
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+  - id: physics.stat-thermal.pressure-and-chemical-potential
+    name: Defining pressure and chemical potential from entropy
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.temperature-from-entropy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define pressure as an entropy derivative
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp2
+        can_do: Define chemical potential as an entropy derivative
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp3
+        can_do: Find pressure of an ideal gas from entropy
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp4
+        can_do: Find chemical potential of an ideal gas
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+  - id: physics.stat-thermal.thermodynamic-identity
+    name: Using the thermodynamic identity
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.pressure-and-chemical-potential
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.entropy-change-of-ideal-gas
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the thermodynamic identity
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp2
+        can_do: Find heat for a reversible change
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp3
+        can_do: Find entropy change from the identity
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential, physics.waves-thermo-optics.entropy-change-of-ideal-gas]
+      - id: kp4
+        can_do: Apply the identity with particle exchange
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+  - id: physics.stat-thermal.third-law
+    name: Using the third law
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.temperature-from-entropy
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.heat-capacity-with-calculus
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the third law
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp2
+        can_do: Show heat capacity must vanish at absolute zero
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy, physics.waves-thermo-optics.heat-capacity-with-calculus]
+      - id: kp3
+        can_do: Explain why absolute zero cannot be reached
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp4
+        can_do: Find residual entropy
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+  - id: physics.stat-thermal.information-entropy
+    name: Linking information entropy to thermodynamic entropy
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.statistical-entropy
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define information entropy
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp2
+        can_do: Find entropy of a probability distribution
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp3
+        can_do: Relate information and thermodynamic entropy
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+      - id: kp4
+        can_do: Explain Maxwell's demon and erasure
+        key_prerequisites: [physics.stat-thermal.statistical-entropy]
+  - id: physics.stat-thermal.free-energies
+    name: Defining Helmholtz and Gibbs free energies
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.thermodynamic-identity
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.enthalpy
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define Helmholtz free energy
+        key_prerequisites: [physics.stat-thermal.thermodynamic-identity]
+      - id: kp2
+        can_do: Define Gibbs free energy
+        key_prerequisites: [physics.stat-thermal.thermodynamic-identity, physics.waves-thermo-optics.enthalpy]
+      - id: kp3
+        can_do: Find free energy changes in a process
+        key_prerequisites: [physics.stat-thermal.thermodynamic-identity]
+      - id: kp4
+        can_do: Choose the right free energy for conditions
+        key_prerequisites: [physics.stat-thermal.thermodynamic-identity]
+  - id: physics.stat-thermal.free-energy-minimum-principles
+    name: Using free energy to predict equilibrium
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.entropy-of-the-universe
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Helmholtz free energy is minimized at fixed temperature and volume
+        key_prerequisites: [physics.stat-thermal.free-energies, physics.waves-thermo-optics.entropy-of-the-universe]
+      - id: kp2
+        can_do: Show Gibbs free energy is minimized at fixed temperature and pressure
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp3
+        can_do: Find equilibrium by minimizing free energy
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Explain the balance of energy and entropy
+        key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
+  - id: physics.stat-thermal.maxwell-relations
+    name: Deriving Maxwell relations
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.clairaut-mixed-partials
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive a Maxwell relation from a free energy
+        key_prerequisites: [physics.stat-thermal.free-energies, math.calc3.clairaut-mixed-partials]
+      - id: kp2
+        can_do: Write all four Maxwell relations
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp3
+        can_do: Find entropy change with volume from measured data
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Find a derivative using a Maxwell relation
+        key_prerequisites: [math.calc3.clairaut-mixed-partials]
+  - id: physics.stat-thermal.heat-capacity-relations
+    name: Relating heat capacities and compressibilities
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.maxwell-relations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the difference of heat capacities
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+      - id: kp2
+        can_do: Relate compressibilities
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+      - id: kp3
+        can_do: Find the difference for an ideal gas
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+      - id: kp4
+        can_do: Find the difference for a solid
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+  - id: physics.stat-thermal.joule-thomson
+    name: Analyzing the Joule-Thomson process
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.maxwell-relations
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.real-gases
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show throttling keeps enthalpy constant
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+      - id: kp2
+        can_do: Derive the Joule-Thomson coefficient
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+      - id: kp3
+        can_do: Find inversion temperature for a van der Waals gas
+        key_prerequisites: [physics.waves-thermo-optics.real-gases]
+      - id: kp4
+        can_do: Explain cooling by throttling
+        key_prerequisites: [physics.stat-thermal.maxwell-relations]
+  - id: physics.stat-thermal.gibbs-duhem
+    name: Using extensivity and the Gibbs-Duhem relation
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Gibbs free energy equals chemical potential times particle number
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp2
+        can_do: Derive the Gibbs-Duhem relation
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp3
+        can_do: Find chemical potential changes with pressure
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Explain extensive and intensive quantities
+        key_prerequisites: [physics.stat-thermal.free-energies]
+  - id: physics.stat-thermal.maximum-work-from-free-energy
+    name: Finding maximum work with free energy
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.free-energy-minimum-principles
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.available-work
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum work at constant temperature
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp2
+        can_do: Find maximum non-expansion work
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp3
+        can_do: Find electrical work from a battery's free energy
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp4
+        can_do: Compare actual and maximum work
+        key_prerequisites: [physics.waves-thermo-optics.available-work]
+  - id: physics.stat-thermal.phase-equilibrium
+    name: Using chemical potential for phase equilibrium
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.free-energy-minimum-principles
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.phase-diagrams
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set equal chemical potentials for coexisting phases
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp2
+        can_do: Read a phase boundary as equal Gibbs energy
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles, physics.waves-thermo-optics.phase-diagrams]
+      - id: kp3
+        can_do: Find which phase is stable from Gibbs energy
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp4
+        can_do: Explain the triple point from chemical potentials
+        key_prerequisites: [physics.waves-thermo-optics.phase-diagrams]
+  - id: physics.stat-thermal.clausius-clapeyron
+    name: Deriving the Clausius-Clapeyron relation
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.phase-equilibrium
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Clausius-Clapeyron relation
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp2
+        can_do: Find the slope of a phase boundary
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp3
+        can_do: Find vapor pressure against temperature
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp4
+        can_do: Find latent heat from vapor pressure data
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+  - id: physics.stat-thermal.van-der-waals-transition
+    name: Finding liquid-gas transitions in the van der Waals model
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.clausius-clapeyron
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.real-gases
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find unstable regions of van der Waals isotherms
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron, physics.waves-thermo-optics.real-gases]
+      - id: kp2
+        can_do: Apply the equal area construction
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron]
+      - id: kp3
+        can_do: Find critical constants from the equation
+        key_prerequisites: [physics.waves-thermo-optics.real-gases]
+      - id: kp4
+        can_do: Find vapor pressure from the model
+        key_prerequisites: [physics.stat-thermal.clausius-clapeyron]
+  - id: physics.stat-thermal.ideal-mixtures
+    name: Analyzing ideal mixtures and solutions
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.gibbs-paradox
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find entropy of mixing for a solution
+        key_prerequisites: [physics.stat-thermal.gibbs-paradox]
+      - id: kp2
+        can_do: Find Gibbs energy of an ideal mixture
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp3
+        can_do: Find chemical potential of a component
+        key_prerequisites: [physics.stat-thermal.gibbs-paradox, physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Explain Raoult's law
+        key_prerequisites: [physics.stat-thermal.free-energies]
+  - id: physics.stat-thermal.law-of-mass-action
+    name: Deriving the law of mass action
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.ideal-mixtures
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.stat-thermal.phase-equilibrium
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Set the equilibrium condition with chemical potentials
+        key_prerequisites: [physics.stat-thermal.phase-equilibrium]
+      - id: kp2
+        can_do: Derive the law of mass action
+        key_prerequisites: [physics.stat-thermal.ideal-mixtures, physics.stat-thermal.phase-equilibrium]
+      - id: kp3
+        can_do: Find how an equilibrium shifts with temperature
+        key_prerequisites: [physics.stat-thermal.ideal-mixtures]
+      - id: kp4
+        can_do: Find ionization fraction of a hot gas
+        key_prerequisites: [physics.stat-thermal.ideal-mixtures]
+  - id: physics.stat-thermal.ising-mean-field
+    name: Solving the Ising model in mean field
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.paramagnet-thermodynamics
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.free-energy-minimum-principles
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Ising model energy
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp2
+        can_do: Replace neighbours with an average field
+        key_prerequisites: [physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp3
+        can_do: Find the self-consistency equation
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics, physics.stat-thermal.free-energy-minimum-principles]
+      - id: kp4
+        can_do: Find the critical temperature
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+  - id: physics.stat-thermal.critical-exponents
+    name: Describing critical behaviour and exponents
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.ising-mean-field
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.van-der-waals-transition
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find magnetization near the critical point
+        key_prerequisites: [physics.stat-thermal.ising-mean-field]
+      - id: kp2
+        can_do: Define critical exponents
+        key_prerequisites: [physics.stat-thermal.ising-mean-field]
+      - id: kp3
+        can_do: Compare mean field and measured exponents
+        key_prerequisites: [physics.stat-thermal.ising-mean-field, physics.stat-thermal.van-der-waals-transition]
+      - id: kp4
+        can_do: Describe universality qualitatively
+        key_prerequisites: [physics.stat-thermal.van-der-waals-transition]
+  - id: physics.stat-thermal.boltzmann-factor-derivation
+    name: Deriving the Boltzmann factor
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.temperature-from-entropy
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat a small system in contact with a reservoir
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp2
+        can_do: Expand reservoir entropy to derive the Boltzmann factor
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp3
+        can_do: Find relative probabilities of two states
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+      - id: kp4
+        can_do: Find probability of an excited state at a temperature
+        key_prerequisites: [physics.stat-thermal.temperature-from-entropy]
+  - id: physics.stat-thermal.partition-function
+    name: Computing partition functions
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.boltzmann-factor-derivation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the partition function
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp2
+        can_do: Find the partition function of a two-level system
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp3
+        can_do: Find state probabilities from the partition function
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp4
+        can_do: Find the partition function of combined independent systems
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+  - id: physics.stat-thermal.averages-from-partition-function
+    name: Finding average energy from the partition function
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.partition-function
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average energy as a derivative of the partition function
+        key_prerequisites: [physics.stat-thermal.partition-function]
+      - id: kp2
+        can_do: Find average energy of a two-level system
+        key_prerequisites: [physics.stat-thermal.partition-function]
+      - id: kp3
+        can_do: Find average of any quantity with Boltzmann weights
+        key_prerequisites: [physics.stat-thermal.partition-function]
+      - id: kp4
+        can_do: Find average spin in a field
+        key_prerequisites: [physics.stat-thermal.partition-function]
+  - id: physics.stat-thermal.energy-fluctuations
+    name: Finding energy fluctuations and heat capacity
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.averages-from-partition-function
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.probstat.variance-discrete
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy variance from the partition function
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp2
+        can_do: Relate variance to heat capacity
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, math.probstat.variance-discrete]
+      - id: kp3
+        can_do: Find relative fluctuations for large systems
+        key_prerequisites: [math.probstat.variance-discrete]
+      - id: kp4
+        can_do: Find fluctuations of a two-level system
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+  - id: physics.stat-thermal.free-energy-from-partition-function
+    name: Finding free energy from the partition function
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.averages-from-partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.free-energies
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate Helmholtz energy to the partition function
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, physics.stat-thermal.free-energies]
+      - id: kp2
+        can_do: Find entropy from the partition function
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp3
+        can_do: Find pressure from the partition function
+        key_prerequisites: [physics.stat-thermal.free-energies]
+      - id: kp4
+        can_do: Find free energy of a set of oscillators
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+  - id: physics.stat-thermal.two-level-thermal-properties
+    name: Finding thermal properties of two-level systems
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.averages-from-partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.paramagnet-thermodynamics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy of two-level systems against temperature
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp2
+        can_do: Find the heat capacity peak
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp3
+        can_do: Find entropy against temperature
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp4
+        can_do: Compare with a paramagnet
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+  - id: physics.stat-thermal.equipartition-derived
+    name: Deriving equipartition from Boltzmann statistics
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.averages-from-partition-function
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.equipartition
+        encompassing: 0.15
+        confidence: medium
+      - topic: math.calc3.gaussian-integral
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find average energy of a quadratic term
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, math.calc3.gaussian-integral]
+      - id: kp2
+        can_do: Derive equipartition from Boltzmann statistics
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, physics.waves-thermo-optics.equipartition]
+      - id: kp3
+        can_do: Explain when equipartition fails
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp4
+        can_do: Find energy of a classical oscillator
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+  - id: physics.stat-thermal.maxwell-distribution-derived
+    name: Deriving the Maxwell speed distribution
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.boltzmann-factor-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.maxwell-speed-distribution
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find velocity probability from Boltzmann factors
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp2
+        can_do: Convert to a speed distribution
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation, physics.waves-thermo-optics.maxwell-speed-distribution]
+      - id: kp3
+        can_do: Normalize the speed distribution
+        key_prerequisites: [physics.waves-thermo-optics.maxwell-speed-distribution]
+      - id: kp4
+        can_do: Check average energy against equipartition
+        key_prerequisites: [physics.waves-thermo-optics.maxwell-speed-distribution]
+  - id: physics.stat-thermal.ideal-gas-partition-function
+    name: Finding the partition function of an ideal gas
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.sackur-tetrode
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find single particle partition function in a box
+        key_prerequisites: [physics.stat-thermal.partition-function, physics.stat-thermal.sackur-tetrode]
+      - id: kp2
+        can_do: Correct for identical particles
+        key_prerequisites: [physics.stat-thermal.sackur-tetrode]
+      - id: kp3
+        can_do: Find free energy of an ideal gas
+        key_prerequisites: [physics.stat-thermal.partition-function]
+      - id: kp4
+        can_do: Recover the ideal gas law
+        key_prerequisites: [physics.stat-thermal.partition-function]
+  - id: physics.stat-thermal.molecular-heat-capacities
+    name: Finding rotational and vibrational heat capacities
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.ideal-gas-partition-function
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.modern.molecular-rotation-spectra
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.modern.molecular-vibration-spectra
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find rotational partition function
+        key_prerequisites: [physics.stat-thermal.ideal-gas-partition-function, physics.modern.molecular-rotation-spectra]
+      - id: kp2
+        can_do: Find vibrational partition function
+        key_prerequisites: [physics.stat-thermal.ideal-gas-partition-function, physics.modern.molecular-vibration-spectra]
+      - id: kp3
+        can_do: Find heat capacity against temperature for a diatomic gas
+        key_prerequisites: [physics.stat-thermal.ideal-gas-partition-function]
+      - id: kp4
+        can_do: Find temperatures where modes switch on
+        key_prerequisites: [physics.modern.molecular-rotation-spectra, physics.modern.molecular-vibration-spectra]
+  - id: physics.stat-thermal.quantum-oscillator-thermal
+    name: Finding thermal properties of a quantum oscillator
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.averages-from-partition-function
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.oscillator-energy-levels
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the partition function of a quantum oscillator
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function, physics.modern.oscillator-energy-levels]
+      - id: kp2
+        can_do: Find average energy against temperature
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp3
+        can_do: Find low and high temperature limits
+        key_prerequisites: [physics.stat-thermal.averages-from-partition-function]
+      - id: kp4
+        can_do: Find average occupation number
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+  - id: physics.stat-thermal.einstein-solid-heat-capacity
+    name: Finding the heat capacity of an Einstein solid
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.quantum-oscillator-thermal
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat capacity of an Einstein solid
+        key_prerequisites: [physics.stat-thermal.quantum-oscillator-thermal]
+      - id: kp2
+        can_do: Find the Einstein temperature from data
+        key_prerequisites: [physics.stat-thermal.quantum-oscillator-thermal]
+      - id: kp3
+        can_do: Find the low temperature behaviour
+        key_prerequisites: [physics.stat-thermal.quantum-oscillator-thermal]
+      - id: kp4
+        can_do: Compare with measured data
+        key_prerequisites: [physics.stat-thermal.quantum-oscillator-thermal]
+  - id: physics.stat-thermal.exponential-atmosphere
+    name: Explaining the exponential atmosphere with Boltzmann factors
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.boltzmann-factor-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.pressure-in-a-compressible-atmosphere
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find number density against height with Boltzmann factors
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation, physics.waves-thermo-optics.pressure-in-a-compressible-atmosphere]
+      - id: kp2
+        can_do: Find the scale height
+        key_prerequisites: [physics.waves-thermo-optics.pressure-in-a-compressible-atmosphere]
+      - id: kp3
+        can_do: Find density of a heavier gas
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp4
+        can_do: Find sedimentation in a centrifuge
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+  - id: physics.stat-thermal.grand-canonical-ensemble
+    name: Deriving the Gibbs factor and grand partition function
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.boltzmann-factor-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.pressure-and-chemical-potential
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat a system exchanging particles with a reservoir
+        key_prerequisites: [physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp2
+        can_do: Derive the Gibbs factor
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation, physics.stat-thermal.pressure-and-chemical-potential]
+      - id: kp3
+        can_do: Define the grand partition function
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp4
+        can_do: Find average particle number
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+  - id: physics.stat-thermal.fermi-dirac-distribution
+    name: Deriving the Fermi-Dirac distribution
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.grand-canonical-ensemble
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.pauli-exclusion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average occupancy of a fermion state
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble, physics.modern.pauli-exclusion]
+      - id: kp2
+        can_do: Sketch the distribution at several temperatures
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+      - id: kp3
+        can_do: Find occupancy above and below the chemical potential
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+      - id: kp4
+        can_do: Explain the step at zero temperature
+        key_prerequisites: [physics.modern.pauli-exclusion]
+  - id: physics.stat-thermal.bose-einstein-distribution
+    name: Deriving the Bose-Einstein distribution
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.grand-canonical-ensemble
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average occupancy of a boson state
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+      - id: kp2
+        can_do: Sketch the distribution
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+      - id: kp3
+        can_do: Show occupancy can exceed one
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+      - id: kp4
+        can_do: Compare with Fermi-Dirac
+        key_prerequisites: [physics.stat-thermal.grand-canonical-ensemble]
+  - id: physics.stat-thermal.classical-limit-of-quantum-statistics
+    name: Finding when quantum statistics reduce to Boltzmann
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.fermi-dirac-distribution
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.bose-einstein-distribution
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.stat-thermal.ideal-gas-partition-function
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show both distributions reduce to Boltzmann at low density
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution, physics.stat-thermal.bose-einstein-distribution]
+      - id: kp2
+        can_do: Find the quantum volume
+        key_prerequisites: [physics.stat-thermal.ideal-gas-partition-function]
+      - id: kp3
+        can_do: Find when quantum effects matter for a gas
+        key_prerequisites: [physics.stat-thermal.ideal-gas-partition-function]
+      - id: kp4
+        can_do: Find when electrons in metals are degenerate
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution]
+  - id: physics.stat-thermal.density-of-states
+    name: Finding densities of states
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.three-dimensional-box
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.triple-spherical
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count states in a three-dimensional box
+        key_prerequisites: [physics.modern.three-dimensional-box]
+      - id: kp2
+        can_do: Find density of states for massive particles
+        key_prerequisites: [physics.modern.three-dimensional-box, math.calc3.triple-spherical]
+      - id: kp3
+        can_do: Find density of states for photons
+        key_prerequisites: [math.calc3.triple-spherical]
+      - id: kp4
+        can_do: Find density of states in two dimensions
+        key_prerequisites: [physics.modern.three-dimensional-box]
+  - id: physics.stat-thermal.degenerate-fermi-gas
+    name: Analyzing a degenerate electron gas
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.fermi-dirac-distribution
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.stat-thermal.density-of-states
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.modern.fermi-energy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Fermi energy from density of states
+        key_prerequisites: [physics.stat-thermal.density-of-states, physics.modern.fermi-energy]
+      - id: kp2
+        can_do: Find total energy at zero temperature
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution, physics.stat-thermal.density-of-states]
+      - id: kp3
+        can_do: Find degeneracy pressure
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution]
+      - id: kp4
+        can_do: Find chemical potential at low temperature
+        key_prerequisites: [physics.modern.fermi-energy]
+  - id: physics.stat-thermal.electron-heat-capacity
+    name: Finding the electron heat capacity of metals
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.degenerate-fermi-gas
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate electrons excited by heating
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp2
+        can_do: Find electron heat capacity
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp3
+        can_do: Compare electron and lattice heat capacities
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp4
+        can_do: Find linear heat capacity from data
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+  - id: physics.stat-thermal.degeneracy-pressure
+    name: Finding degeneracy pressure in white dwarfs
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.degenerate-fermi-gas
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find electron pressure in a white dwarf
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp2
+        can_do: Balance pressure against gravity
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp3
+        can_do: Find white dwarf radius against mass
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp4
+        can_do: Explain the limiting mass qualitatively
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+  - id: physics.stat-thermal.semiconductor-carrier-statistics
+    name: Finding carrier densities in semiconductors
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.fermi-dirac-distribution
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.doped-semiconductors
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find carrier density in an intrinsic semiconductor
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution, physics.modern.doped-semiconductors]
+      - id: kp2
+        can_do: Find how carrier density depends on temperature
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution]
+      - id: kp3
+        can_do: Find carrier density with dopants
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp4
+        can_do: Find the chemical potential position
+        key_prerequisites: [physics.stat-thermal.fermi-dirac-distribution]
+  - id: physics.stat-thermal.photon-gas
+    name: Deriving the blackbody spectrum from photon statistics
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.bose-einstein-distribution
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.density-of-states
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.modern.blackbody-spectrum
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find photon occupancy with zero chemical potential
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution]
+      - id: kp2
+        can_do: Derive the Planck spectrum
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution, physics.stat-thermal.density-of-states]
+      - id: kp3
+        can_do: Find total energy density
+        key_prerequisites: [physics.modern.blackbody-spectrum]
+      - id: kp4
+        can_do: Find radiation pressure and entropy
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution]
+  - id: physics.stat-thermal.debye-model
+    name: Finding heat capacity of solids with the Debye model
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.photon-gas
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.einstein-solid-heat-capacity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Treat sound modes like photons
+        key_prerequisites: [physics.stat-thermal.photon-gas]
+      - id: kp2
+        can_do: Find the Debye cutoff
+        key_prerequisites: [physics.stat-thermal.photon-gas]
+      - id: kp3
+        can_do: Find heat capacity at low temperature
+        key_prerequisites: [physics.stat-thermal.photon-gas, physics.stat-thermal.einstein-solid-heat-capacity]
+      - id: kp4
+        can_do: Compare Debye and Einstein models
+        key_prerequisites: [physics.stat-thermal.einstein-solid-heat-capacity]
+  - id: physics.stat-thermal.bose-einstein-condensation
+    name: Analyzing Bose-Einstein condensation
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.bose-einstein-distribution
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.density-of-states
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the condensation temperature
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution, physics.stat-thermal.density-of-states]
+      - id: kp2
+        can_do: Find condensate fraction below it
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution]
+      - id: kp3
+        can_do: Explain why bosons pile into the ground state
+        key_prerequisites: [physics.stat-thermal.bose-einstein-distribution]
+      - id: kp4
+        can_do: Describe experimental condensates
+        key_prerequisites: [physics.stat-thermal.density-of-states]
+  - id: physics.stat-thermal.transport-coefficients
+    name: Estimating viscosity and conductivity from kinetic theory
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.mean-free-path
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.viscosity
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate thermal conductivity from kinetic theory
+        key_prerequisites: [physics.waves-thermo-optics.mean-free-path]
+      - id: kp2
+        can_do: Estimate viscosity from kinetic theory
+        key_prerequisites: [physics.waves-thermo-optics.mean-free-path, physics.waves-thermo-optics.viscosity]
+      - id: kp3
+        can_do: Estimate diffusion coefficient
+        key_prerequisites: [physics.waves-thermo-optics.mean-free-path]
+      - id: kp4
+        can_do: Find how coefficients depend on temperature
+        key_prerequisites: [physics.waves-thermo-optics.viscosity]
+  - id: physics.stat-thermal.diffusion-equation-from-random-walks
+    name: Deriving the diffusion equation from random walks
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.random-walks
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the diffusion equation from a walk
+        key_prerequisites: [physics.stat-thermal.random-walks, math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Find spreading of a released cloud
+        key_prerequisites: [physics.stat-thermal.random-walks]
+      - id: kp3
+        can_do: Find diffusion time over a distance
+        key_prerequisites: [physics.stat-thermal.random-walks]
+      - id: kp4
+        can_do: Relate step size to diffusion coefficient
+        key_prerequisites: [math.calc3.partial-derivatives-compute]
+  - id: physics.stat-thermal.brownian-motion
+    name: Using the Einstein relation for Brownian motion
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.diffusion-equation-from-random-walks
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.stat-thermal.boltzmann-factor-derivation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mean square displacement against time
+        key_prerequisites: [physics.stat-thermal.diffusion-equation-from-random-walks]
+      - id: kp2
+        can_do: Derive the Einstein relation
+        key_prerequisites: [physics.stat-thermal.diffusion-equation-from-random-walks, physics.stat-thermal.boltzmann-factor-derivation]
+      - id: kp3
+        can_do: Find Boltzmann's constant from Brownian data
+        key_prerequisites: [physics.stat-thermal.diffusion-equation-from-random-walks]
+      - id: kp4
+        can_do: Link drag and diffusion
+        key_prerequisites: [physics.stat-thermal.boltzmann-factor-derivation]
+  - id: physics.stat-thermal.throttling-and-low-temperatures
+    name: Explaining throttling and low-temperature techniques
+    subject: physics
+    course: physics.stat-thermal
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.joule-thomson
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain gas liquefaction by throttling
+        key_prerequisites: [physics.stat-thermal.joule-thomson]
+      - id: kp2
+        can_do: Describe evaporative cooling
+        key_prerequisites: [physics.stat-thermal.joule-thomson]
+      - id: kp3
+        can_do: Describe adiabatic demagnetization
+        key_prerequisites: [physics.stat-thermal.joule-thomson]
+      - id: kp4
+        can_do: Compare cooling methods
+        key_prerequisites: [physics.stat-thermal.joule-thomson]

@@ -1,0 +1,2417 @@
+course: physics.modern
+topics:
+  - id: physics.modern.michelson-morley
+    name: Explaining the Michelson-Morley null result
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.michelson-interferometer
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.relativity-postulates
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected travel times with an ether wind
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp2
+        can_do: Find the expected fringe shift
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp3
+        can_do: Interpret the null result
+        key_prerequisites: [physics.hs2.relativity-postulates]
+      - id: kp4
+        can_do: Link the result to the speed of light postulate
+        key_prerequisites: [physics.hs2.relativity-postulates]
+  - id: physics.modern.lorentz-transformation
+    name: Deriving the Lorentz transformation
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.time-dilation
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.galilean-transformations
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Require the speed of light to be the same in two frames
+        key_prerequisites: [physics.hs2.time-dilation]
+      - id: kp2
+        can_do: Derive the Lorentz transformation
+        key_prerequisites: [physics.hs2.time-dilation, physics.mechanics.galilean-transformations]
+      - id: kp3
+        can_do: Find the Lorentz factor
+        key_prerequisites: [physics.hs2.time-dilation]
+      - id: kp4
+        can_do: Show the Galilean limit at low speed
+        key_prerequisites: [physics.mechanics.galilean-transformations]
+  - id: physics.modern.lorentz-transformation-problems
+    name: Applying Lorentz transformations to events
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Transform an event's coordinates
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp2
+        can_do: Apply the inverse transformation
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp3
+        can_do: Find time dilation from the transformation
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp4
+        can_do: Find length contraction from the transformation
+        key_prerequisites: [physics.modern.lorentz-transformation]
+  - id: physics.modern.simultaneity-with-lorentz
+    name: Finding simultaneity shifts with Lorentz transformations
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation-problems
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.hs2.simultaneity
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find time difference of events in another frame
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+      - id: kp2
+        can_do: Show simultaneous events are not simultaneous elsewhere
+        key_prerequisites: [physics.hs2.simultaneity]
+      - id: kp3
+        can_do: Resolve the pole and barn puzzle
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+      - id: kp4
+        can_do: Find the frame where events are simultaneous
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+  - id: physics.modern.velocity-addition
+    name: Deriving relativistic velocity addition
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the velocity addition formula
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp2
+        can_do: Add velocities near light speed
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp3
+        can_do: Show light speed stays the same
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp4
+        can_do: Transform perpendicular velocity components
+        key_prerequisites: [physics.modern.lorentz-transformation]
+  - id: physics.modern.spacetime-diagrams
+    name: Drawing spacetime diagrams
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation-problems
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw worldlines of moving objects
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+      - id: kp2
+        can_do: Draw axes of a moving frame
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+      - id: kp3
+        can_do: Read simultaneity from a diagram
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+      - id: kp4
+        can_do: Find light cones and causal regions
+        key_prerequisites: [physics.modern.lorentz-transformation-problems]
+  - id: physics.modern.spacetime-interval
+    name: Using the invariant interval
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.spacetime-diagrams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the interval between two events
+        key_prerequisites: [physics.modern.spacetime-diagrams]
+      - id: kp2
+        can_do: Show the interval is the same in all frames
+        key_prerequisites: [physics.modern.spacetime-diagrams]
+      - id: kp3
+        can_do: Classify intervals as timelike, lightlike or spacelike
+        key_prerequisites: [physics.modern.spacetime-diagrams]
+      - id: kp4
+        can_do: Decide if one event can cause another
+        key_prerequisites: [physics.modern.spacetime-diagrams]
+  - id: physics.modern.proper-time
+    name: Finding proper time along worldlines
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.spacetime-interval
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define proper time
+        key_prerequisites: [physics.modern.spacetime-interval]
+      - id: kp2
+        can_do: Find proper time for constant speed
+        key_prerequisites: [physics.modern.spacetime-interval]
+      - id: kp3
+        can_do: Integrate proper time for changing speed
+        key_prerequisites: [physics.modern.spacetime-interval]
+      - id: kp4
+        can_do: Compare elapsed times of two travelers
+        key_prerequisites: [physics.modern.spacetime-interval]
+  - id: physics.modern.twin-paradox
+    name: Resolving the twin paradox
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.proper-time
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ages of twins after a round trip
+        key_prerequisites: [physics.modern.proper-time]
+      - id: kp2
+        can_do: Explain why the situation is not symmetric
+        key_prerequisites: [physics.modern.proper-time]
+      - id: kp3
+        can_do: Use a spacetime diagram for the trip
+        key_prerequisites: [physics.modern.proper-time]
+      - id: kp4
+        can_do: Find elapsed times with Doppler signals
+        key_prerequisites: [physics.modern.proper-time]
+  - id: physics.modern.relativistic-doppler
+    name: Deriving the relativistic Doppler effect
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.doppler-general
+        encompassing: 0.3
+        confidence: medium
+      - topic: physics.hs2.doppler-light
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the shift for a receding source
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp2
+        can_do: Find the shift for an approaching source
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp3
+        can_do: Find speed from a measured redshift
+        key_prerequisites: [physics.modern.lorentz-transformation, physics.waves-thermo-optics.doppler-general]
+      - id: kp4
+        can_do: Compare with the sound Doppler formula
+        key_prerequisites: [physics.waves-thermo-optics.doppler-general, physics.hs2.doppler-light]
+  - id: physics.modern.relativistic-momentum
+    name: Defining relativistic momentum
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.velocity-addition
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.force-as-rate-of-momentum
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show classical momentum is not conserved in all frames
+        key_prerequisites: [physics.modern.velocity-addition]
+      - id: kp2
+        can_do: Define relativistic momentum
+        key_prerequisites: [physics.modern.velocity-addition]
+      - id: kp3
+        can_do: Find momentum of a fast particle
+        key_prerequisites: [physics.modern.velocity-addition]
+      - id: kp4
+        can_do: Write force as rate of change of relativistic momentum
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+  - id: physics.modern.relativistic-energy-derivation
+    name: Deriving relativistic kinetic energy
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-momentum
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.work-energy-derivation
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.relativistic-energy
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate work to find kinetic energy
+        key_prerequisites: [physics.modern.relativistic-momentum, physics.mechanics.work-energy-derivation]
+      - id: kp2
+        can_do: Define total and rest energy
+        key_prerequisites: [physics.hs2.relativistic-energy]
+      - id: kp3
+        can_do: Show the low speed limit
+        key_prerequisites: [physics.modern.relativistic-momentum]
+      - id: kp4
+        can_do: Find speed from kinetic energy
+        key_prerequisites: [physics.modern.relativistic-momentum]
+  - id: physics.modern.energy-momentum-relation
+    name: Using the energy-momentum relation
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-energy-derivation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the energy-momentum relation
+        key_prerequisites: [physics.modern.relativistic-energy-derivation]
+      - id: kp2
+        can_do: Find energy from momentum
+        key_prerequisites: [physics.modern.relativistic-energy-derivation]
+      - id: kp3
+        can_do: Find momentum of a massless particle
+        key_prerequisites: [physics.modern.relativistic-energy-derivation]
+      - id: kp4
+        can_do: Use energy units for mass and momentum
+        key_prerequisites: [physics.modern.relativistic-energy-derivation]
+  - id: physics.modern.four-vectors
+    name: Using four-vectors
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.energy-momentum-relation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.spacetime-interval
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a position four-vector
+        key_prerequisites: [physics.modern.spacetime-interval]
+      - id: kp2
+        can_do: Write a momentum four-vector
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp3
+        can_do: Find an invariant from a four-vector
+        key_prerequisites: [physics.modern.energy-momentum-relation, physics.modern.spacetime-interval]
+      - id: kp4
+        can_do: Transform a four-vector to another frame
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+  - id: physics.modern.relativistic-collisions
+    name: Solving relativistic collisions and decays
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.four-vectors
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.modern.energy-momentum-relation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Conserve four-momentum in a collision
+        key_prerequisites: [physics.modern.four-vectors]
+      - id: kp2
+        can_do: Find the mass of a combined particle
+        key_prerequisites: [physics.modern.four-vectors, physics.modern.energy-momentum-relation]
+      - id: kp3
+        can_do: Find energies of decay products
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp4
+        can_do: Use invariants to simplify a problem
+        key_prerequisites: [physics.modern.four-vectors]
+  - id: physics.modern.threshold-energy
+    name: Finding threshold energies of reactions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-collisions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define threshold energy
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp2
+        can_do: Find threshold in the center of momentum frame
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp3
+        can_do: Find threshold for a fixed target
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp4
+        can_do: Compare fixed target and colliding beams
+        key_prerequisites: [physics.modern.relativistic-collisions]
+  - id: physics.modern.relativistic-force
+    name: Finding motion under a constant force relativistically
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-momentum
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find motion under constant force
+        key_prerequisites: [physics.modern.relativistic-momentum]
+      - id: kp2
+        can_do: Find speed against time
+        key_prerequisites: [physics.modern.relativistic-momentum]
+      - id: kp3
+        can_do: Find distance against time
+        key_prerequisites: [physics.modern.relativistic-momentum]
+      - id: kp4
+        can_do: Compare with the classical result
+        key_prerequisites: [physics.modern.relativistic-momentum]
+  - id: physics.modern.electromagnetism-and-relativity
+    name: Linking electric and magnetic fields between frames
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.lorentz-transformation
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em.field-of-moving-charge
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain magnetic force on a moving charge as electric in another frame
+        key_prerequisites: [physics.modern.lorentz-transformation, physics.em.field-of-moving-charge]
+      - id: kp2
+        can_do: Find the force on a charge near a current in two frames
+        key_prerequisites: [physics.modern.lorentz-transformation, physics.em.field-of-moving-charge]
+      - id: kp3
+        can_do: Show the forces agree after transformation
+        key_prerequisites: [physics.modern.lorentz-transformation]
+      - id: kp4
+        can_do: Describe fields as frame dependent
+        key_prerequisites: [physics.modern.lorentz-transformation]
+  - id: physics.modern.blackbody-spectrum
+    name: Using Planck's law
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.blackbody-radiation
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.waves-thermo-optics.radiation-exchange
+        encompassing: 0.25
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Write Planck's spectral formula
+        key_prerequisites: [physics.hs2.blackbody-radiation]
+      - id: kp2
+        can_do: Sketch spectra at several temperatures
+        key_prerequisites: [physics.hs2.blackbody-radiation]
+      - id: kp3
+        can_do: Find peak region from a spectrum
+        key_prerequisites: [physics.hs2.blackbody-radiation]
+      - id: kp4
+        can_do: Explain the ultraviolet catastrophe
+        key_prerequisites: [physics.waves-thermo-optics.radiation-exchange]
+  - id: physics.modern.wien-and-stefan-from-planck
+    name: Deriving Wien's and Stefan's laws from Planck's law
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.blackbody-spectrum
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the peak by setting a derivative to zero
+        key_prerequisites: [physics.modern.blackbody-spectrum]
+      - id: kp2
+        can_do: Integrate the spectrum for total power
+        key_prerequisites: [physics.modern.blackbody-spectrum, math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find a star's temperature from its peak
+        key_prerequisites: [physics.modern.blackbody-spectrum]
+      - id: kp4
+        can_do: Find power radiated at a temperature
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+  - id: physics.modern.photoelectric-analysis
+    name: Analyzing photoelectric data
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.stopping-potential
+        encompassing: 0.45
+        confidence: medium
+    encompassed:
+      - topic: physics.hs2.photoelectric-effect
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find work function from a graph
+        key_prerequisites: [physics.hs2.stopping-potential]
+      - id: kp2
+        can_do: Find Planck's constant from stopping potential data
+        key_prerequisites: [physics.hs2.stopping-potential]
+      - id: kp3
+        can_do: Find maximum electron speed
+        key_prerequisites: [physics.hs2.stopping-potential, physics.hs2.photoelectric-effect]
+      - id: kp4
+        can_do: Explain why intensity does not change stopping potential
+        key_prerequisites: [physics.hs2.photoelectric-effect]
+  - id: physics.modern.compton-derivation
+    name: Deriving the Compton shift
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.relativistic-collisions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.compton-scattering
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Conserve energy and momentum for photon scattering
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp2
+        can_do: Derive the Compton shift
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp3
+        can_do: Find electron recoil energy
+        key_prerequisites: [physics.modern.relativistic-collisions]
+      - id: kp4
+        can_do: Find scattered wavelength at an angle
+        key_prerequisites: [physics.hs2.compton-scattering]
+  - id: physics.modern.x-ray-production
+    name: Describing x-ray spectra and cutoff
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.photoelectric-analysis
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.x-ray-diffraction
+        encompassing: 0.25
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Find the shortest x-ray wavelength from voltage
+        key_prerequisites: [physics.modern.photoelectric-analysis]
+      - id: kp2
+        can_do: Describe characteristic lines
+        key_prerequisites: [physics.modern.photoelectric-analysis]
+      - id: kp3
+        can_do: Read an x-ray spectrum
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction]
+      - id: kp4
+        can_do: Find voltage needed for a wavelength
+        key_prerequisites: [physics.modern.photoelectric-analysis]
+  - id: physics.modern.pair-production-and-annihilation
+    name: Analyzing pair production and annihilation
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.energy-momentum-relation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find threshold for pair production
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp2
+        can_do: Explain why a nucleus is needed nearby
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp3
+        can_do: Find photon energies from annihilation
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp4
+        can_do: Find photon energies when the pair is moving
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+  - id: physics.modern.de-broglie-relations
+    name: Using de Broglie relations relativistically
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.de-broglie-wavelength
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.modern.energy-momentum-relation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find wavelength of a slow electron
+        key_prerequisites: [physics.hs2.de-broglie-wavelength]
+      - id: kp2
+        can_do: Find wavelength of a fast electron
+        key_prerequisites: [physics.hs2.de-broglie-wavelength, physics.modern.energy-momentum-relation]
+      - id: kp3
+        can_do: Find wavelength from accelerating voltage
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp4
+        can_do: Compare wavelengths of particles at equal energy
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+  - id: physics.modern.davisson-germer
+    name: Analyzing electron diffraction by crystals
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.de-broglie-relations
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.x-ray-diffraction
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find electron wavelength in the experiment
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp2
+        can_do: Find diffraction angle from crystal spacing
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction]
+      - id: kp3
+        can_do: Confirm de Broglie's relation from data
+        key_prerequisites: [physics.modern.de-broglie-relations, physics.waves-thermo-optics.x-ray-diffraction]
+      - id: kp4
+        can_do: Compare electron and x-ray diffraction
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction]
+  - id: physics.modern.wave-packets-for-particles
+    name: Building particles as wave packets
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.de-broglie-relations
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.group-and-phase-velocity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a particle as a packet of matter waves
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp2
+        can_do: Show group velocity equals particle speed
+        key_prerequisites: [physics.modern.de-broglie-relations, physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp3
+        can_do: Find phase velocity of matter waves
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp4
+        can_do: Explain spreading of a matter packet
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+  - id: physics.modern.uncertainty-principle-quantified
+    name: Using the position-momentum uncertainty relation
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.wave-packets-for-particles
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.uncertainty-idea
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the position-momentum uncertainty relation
+        key_prerequisites: [physics.modern.wave-packets-for-particles]
+      - id: kp2
+        can_do: Find minimum momentum spread
+        key_prerequisites: [physics.modern.wave-packets-for-particles]
+      - id: kp3
+        can_do: Estimate ground state energy from uncertainty
+        key_prerequisites: [physics.modern.wave-packets-for-particles]
+      - id: kp4
+        can_do: Explain why atoms do not collapse
+        key_prerequisites: [physics.hs2.uncertainty-idea]
+  - id: physics.modern.energy-time-uncertainty
+    name: Using energy-time uncertainty
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.uncertainty-principle-quantified
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the energy-time relation
+        key_prerequisites: [physics.modern.uncertainty-principle-quantified]
+      - id: kp2
+        can_do: Find natural linewidth from lifetime
+        key_prerequisites: [physics.modern.uncertainty-principle-quantified]
+      - id: kp3
+        can_do: Find lifetime from a linewidth
+        key_prerequisites: [physics.modern.uncertainty-principle-quantified]
+      - id: kp4
+        can_do: Estimate range of a force from a carrier mass
+        key_prerequisites: [physics.modern.uncertainty-principle-quantified]
+  - id: physics.modern.two-slit-with-particles
+    name: Interpreting two-slit experiments with single particles
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.de-broglie-relations
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.two-slit-intensity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe single-electron buildup of fringes
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp2
+        can_do: Find fringe spacing for electrons
+        key_prerequisites: [physics.modern.de-broglie-relations, physics.waves-thermo-optics.two-slit-intensity]
+      - id: kp3
+        can_do: Explain what changes when the slit is watched
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp4
+        can_do: Interpret amplitudes and probabilities
+        key_prerequisites: [physics.waves-thermo-optics.two-slit-intensity]
+  - id: physics.modern.rutherford-scattering
+    name: Analyzing Rutherford scattering
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.potential-of-point-charges-derivation
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.effective-potential-orbits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find distance of closest approach
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+      - id: kp2
+        can_do: Describe hyperbolic paths
+        key_prerequisites: [physics.mechanics.effective-potential-orbits]
+      - id: kp3
+        can_do: Read scattering against angle
+        key_prerequisites: [physics.mechanics.effective-potential-orbits]
+      - id: kp4
+        can_do: Explain why the nucleus must be small
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+  - id: physics.modern.bohr-model-derivation
+    name: Deriving Bohr energy levels
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.bohr-model
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.mechanics.circular-motion-derivation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine Coulomb force with circular motion
+        key_prerequisites: [physics.mechanics.circular-motion-derivation]
+      - id: kp2
+        can_do: Quantize angular momentum
+        key_prerequisites: [physics.hs2.bohr-model]
+      - id: kp3
+        can_do: Derive allowed radii
+        key_prerequisites: [physics.hs2.bohr-model, physics.mechanics.circular-motion-derivation]
+      - id: kp4
+        can_do: Derive allowed energies
+        key_prerequisites: [physics.hs2.bohr-model, physics.mechanics.circular-motion-derivation]
+  - id: physics.modern.hydrogen-like-ions
+    name: Finding levels of hydrogen-like ions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energies of hydrogen-like ions
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp2
+        can_do: Find radii of hydrogen-like ions
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp3
+        can_do: Find ionization energy of an ion
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp4
+        can_do: Find spectral lines of an ion
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+  - id: physics.modern.reduced-mass-correction
+    name: Correcting atomic levels for reduced mass
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.two-body-problem
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Replace electron mass with reduced mass
+        key_prerequisites: [physics.mechanics.two-body-problem]
+      - id: kp2
+        can_do: Find corrected hydrogen energies
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp3
+        can_do: Compare hydrogen and deuterium lines
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp4
+        can_do: Find levels of positronium
+        key_prerequisites: [physics.modern.bohr-model-derivation, physics.mechanics.two-body-problem]
+  - id: physics.modern.spectral-series
+    name: Finding spectral series wavelengths
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.hydrogen-spectrum
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Rydberg formula
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp2
+        can_do: Find Lyman, Balmer and Paschen lines
+        key_prerequisites: [physics.modern.bohr-model-derivation, physics.hs2.hydrogen-spectrum]
+      - id: kp3
+        can_do: Find series limits
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp4
+        can_do: Identify a transition from a wavelength
+        key_prerequisites: [physics.hs2.hydrogen-spectrum]
+  - id: physics.modern.franck-hertz
+    name: Interpreting the Franck-Hertz experiment
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.energy-level-diagrams
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the experiment
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp2
+        can_do: Read current against voltage
+        key_prerequisites: [physics.hs2.energy-level-diagrams]
+      - id: kp3
+        can_do: Find excitation energy from peaks
+        key_prerequisites: [physics.modern.bohr-model-derivation, physics.hs2.energy-level-diagrams]
+      - id: kp4
+        can_do: Link to emitted light
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+  - id: physics.modern.bohr-model-limits
+    name: Explaining limits of the Bohr model
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.uncertainty-principle-quantified
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List successes of the Bohr model
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp2
+        can_do: List failures of the Bohr model
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp3
+        can_do: Explain why orbits conflict with uncertainty
+        key_prerequisites: [physics.modern.uncertainty-principle-quantified]
+      - id: kp4
+        can_do: Explain why accelerating electrons should radiate
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+  - id: physics.modern.wave-function-and-probability
+    name: Interpreting wave functions as probability amplitudes
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.de-broglie-relations
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.probability-density-integral
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret the squared wave function as probability density
+        key_prerequisites: [physics.modern.de-broglie-relations, math.calc2.probability-density-integral]
+      - id: kp2
+        can_do: Find probability in a region by integration
+        key_prerequisites: [math.calc2.probability-density-integral]
+      - id: kp3
+        can_do: Explain why the wave function can be complex
+        key_prerequisites: [physics.modern.de-broglie-relations]
+      - id: kp4
+        can_do: Tell allowed from unphysical wave functions
+        key_prerequisites: [physics.modern.de-broglie-relations]
+  - id: physics.modern.normalization
+    name: Normalizing wave functions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.wave-function-and-probability
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc2.improper-infinite-limits
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Normalize a wave function on an interval
+        key_prerequisites: [physics.modern.wave-function-and-probability]
+      - id: kp2
+        can_do: Normalize a wave function over all space
+        key_prerequisites: [math.calc2.improper-infinite-limits]
+      - id: kp3
+        can_do: Find a normalization constant for an exponential
+        key_prerequisites: [physics.modern.wave-function-and-probability, math.calc2.improper-infinite-limits]
+      - id: kp4
+        can_do: Check that normalization persists in time
+        key_prerequisites: [physics.modern.wave-function-and-probability]
+  - id: physics.modern.schrodinger-equation-time-dependent
+    name: Writing the time-dependent Schrodinger equation
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.wave-function-and-probability
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.complex-wave-notation
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.waves-thermo-optics.wave-equation-one-dimension
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the time-dependent Schrodinger equation
+        key_prerequisites: [physics.modern.wave-function-and-probability]
+      - id: kp2
+        can_do: Check a plane wave solution
+        key_prerequisites: [physics.waves-thermo-optics.complex-wave-notation, physics.waves-thermo-optics.wave-equation-one-dimension]
+      - id: kp3
+        can_do: Find the energy of a plane wave from the equation
+        key_prerequisites: [physics.waves-thermo-optics.complex-wave-notation]
+      - id: kp4
+        can_do: Compare with the classical wave equation
+        key_prerequisites: [physics.waves-thermo-optics.wave-equation-one-dimension]
+  - id: physics.modern.separation-into-stationary-states
+    name: Separating time to get stationary states
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.schrodinger-equation-time-dependent
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate space and time variables
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp2
+        can_do: Find the time factor of a stationary state
+        key_prerequisites: [physics.modern.schrodinger-equation-time-dependent, math.calc2.separable-equations]
+      - id: kp3
+        can_do: Explain why stationary states have constant probability
+        key_prerequisites: [physics.modern.schrodinger-equation-time-dependent]
+      - id: kp4
+        can_do: Write the time-independent equation
+        key_prerequisites: [physics.modern.schrodinger-equation-time-dependent]
+  - id: physics.modern.time-independent-equation
+    name: Solving the time-independent equation for free particles
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.separation-into-stationary-states
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve for a free particle
+        key_prerequisites: [physics.modern.separation-into-stationary-states]
+      - id: kp2
+        can_do: Find energy from the wave number
+        key_prerequisites: [physics.modern.separation-into-stationary-states]
+      - id: kp3
+        can_do: Explain why free states cannot be normalized
+        key_prerequisites: [physics.modern.separation-into-stationary-states]
+      - id: kp4
+        can_do: Interpret boundary conditions on solutions
+        key_prerequisites: [physics.modern.separation-into-stationary-states]
+  - id: physics.modern.expectation-values
+    name: Finding expectation values of position
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.normalization
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find average position from a wave function
+        key_prerequisites: [physics.modern.normalization]
+      - id: kp2
+        can_do: Find average of position squared
+        key_prerequisites: [physics.modern.normalization]
+      - id: kp3
+        can_do: Find position uncertainty
+        key_prerequisites: [physics.modern.normalization]
+      - id: kp4
+        can_do: Interpret expectation values as averages of many measurements
+        key_prerequisites: [physics.modern.normalization]
+  - id: physics.modern.momentum-operator
+    name: Finding momentum expectation with an operator
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.expectation-values
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.time-independent-equation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the momentum operator
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp2
+        can_do: Find average momentum of a wave function
+        key_prerequisites: [physics.modern.expectation-values]
+      - id: kp3
+        can_do: Find momentum uncertainty
+        key_prerequisites: [physics.modern.expectation-values]
+      - id: kp4
+        can_do: Find average kinetic energy
+        key_prerequisites: [physics.modern.expectation-values, physics.modern.time-independent-equation]
+  - id: physics.modern.infinite-square-well
+    name: Solving the infinite square well
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.time-independent-equation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.modern.normalization
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.waves-thermo-optics.normal-modes-of-a-string
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply boundary conditions in a box
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp2
+        can_do: Find allowed energies
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp3
+        can_do: Normalize the states
+        key_prerequisites: [physics.modern.normalization]
+      - id: kp4
+        can_do: Compare the states with string modes
+        key_prerequisites: [physics.waves-thermo-optics.normal-modes-of-a-string]
+  - id: physics.modern.square-well-expectation-values
+    name: Finding expectation values in a square well
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.infinite-square-well
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.modern.expectation-values
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: math.calc2.integration-by-parts
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find average position in a well state
+        key_prerequisites: [physics.modern.infinite-square-well, physics.modern.expectation-values]
+      - id: kp2
+        can_do: Find probability in part of a well
+        key_prerequisites: [physics.modern.infinite-square-well, math.calc2.integration-by-parts]
+      - id: kp3
+        can_do: Find position uncertainty for a state
+        key_prerequisites: [physics.modern.expectation-values]
+      - id: kp4
+        can_do: Show average momentum is zero
+        key_prerequisites: [physics.modern.expectation-values]
+  - id: physics.modern.superposition-of-states
+    name: Evolving superpositions of stationary states
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.infinite-square-well
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.modern.separation-into-stationary-states
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a superposition of two well states
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp2
+        can_do: Find time dependence of probability density
+        key_prerequisites: [physics.modern.separation-into-stationary-states]
+      - id: kp3
+        can_do: Find energy measurement probabilities
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp4
+        can_do: Find the oscillation frequency of a superposition
+        key_prerequisites: [physics.modern.infinite-square-well, physics.modern.separation-into-stationary-states]
+  - id: physics.modern.finite-square-well
+    name: Finding bound states of a finite well graphically
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.infinite-square-well
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write solutions inside and outside the well
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp2
+        can_do: Match the solutions at the walls
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp3
+        can_do: Find bound energies graphically
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp4
+        can_do: Compare with the infinite well
+        key_prerequisites: [physics.modern.infinite-square-well]
+  - id: physics.modern.step-potential
+    name: Finding reflection at a potential step
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.time-independent-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.waves-thermo-optics.reflection-at-a-boundary
+        encompassing: 0.3
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Solve on both sides of a step
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp2
+        can_do: Find reflection for energy above the step
+        key_prerequisites: [physics.modern.time-independent-equation, physics.waves-thermo-optics.reflection-at-a-boundary]
+      - id: kp3
+        can_do: Find penetration for energy below the step
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp4
+        can_do: Compare with classical behaviour
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+  - id: physics.modern.barrier-tunneling
+    name: Finding tunneling probability through a barrier
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.step-potential
+        encompassing: 0.45
+        confidence: high
+      - topic: math.calc2.hyperbolic-definitions
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write solutions in three regions
+        key_prerequisites: [physics.modern.step-potential]
+      - id: kp2
+        can_do: Find transmission through a thick barrier
+        key_prerequisites: [physics.modern.step-potential, math.calc2.hyperbolic-definitions]
+      - id: kp3
+        can_do: Find how transmission depends on width and height
+        key_prerequisites: [physics.modern.step-potential]
+      - id: kp4
+        can_do: Find tunneling probability for an electron
+        key_prerequisites: [physics.modern.step-potential]
+  - id: physics.modern.tunneling-applications
+    name: Explaining alpha decay and tunneling microscopes
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.barrier-tunneling
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.alpha-beta-gamma
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain alpha decay as tunneling
+        key_prerequisites: [physics.modern.barrier-tunneling, physics.hs2.alpha-beta-gamma]
+      - id: kp2
+        can_do: Explain the scanning tunneling microscope
+        key_prerequisites: [physics.modern.barrier-tunneling]
+      - id: kp3
+        can_do: Find current change with tip distance
+        key_prerequisites: [physics.modern.barrier-tunneling]
+      - id: kp4
+        can_do: Explain tunneling in flash memory
+        key_prerequisites: [physics.modern.barrier-tunneling]
+  - id: physics.modern.harmonic-oscillator-ground-state
+    name: Checking the oscillator ground state
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.time-independent-equation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc3.gaussian-integral
+        encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.shm-differential-equation
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Check a Gaussian ground state
+        key_prerequisites: [physics.modern.time-independent-equation, math.calc3.gaussian-integral]
+      - id: kp2
+        can_do: Find ground state energy
+        key_prerequisites: [physics.modern.time-independent-equation]
+      - id: kp3
+        can_do: Normalize the ground state
+        key_prerequisites: [math.calc3.gaussian-integral]
+      - id: kp4
+        can_do: Compare with the classical turning points
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+  - id: physics.modern.oscillator-energy-levels
+    name: Using oscillator energy levels
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.harmonic-oscillator-ground-state
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use equally spaced oscillator levels
+        key_prerequisites: [physics.modern.harmonic-oscillator-ground-state]
+      - id: kp2
+        can_do: Find the zero-point energy
+        key_prerequisites: [physics.modern.harmonic-oscillator-ground-state]
+      - id: kp3
+        can_do: Check a first excited state
+        key_prerequisites: [physics.modern.harmonic-oscillator-ground-state]
+      - id: kp4
+        can_do: Find photon energy from a transition
+        key_prerequisites: [physics.modern.harmonic-oscillator-ground-state]
+  - id: physics.modern.three-dimensional-box
+    name: Solving the three-dimensional box and degeneracy
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.infinite-square-well
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc3.partial-derivatives-compute
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Separate the box equation into three parts
+        key_prerequisites: [physics.modern.infinite-square-well, math.calc3.partial-derivatives-compute]
+      - id: kp2
+        can_do: Find energies of a cubic box
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp3
+        can_do: Find degeneracies of levels
+        key_prerequisites: [physics.modern.infinite-square-well]
+      - id: kp4
+        can_do: Compare a cubic and an uneven box
+        key_prerequisites: [physics.modern.infinite-square-well]
+  - id: physics.modern.hydrogen-schrodinger-overview
+    name: Describing hydrogen solutions and quantum numbers
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.three-dimensional-box
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.modern.bohr-model-derivation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc3.spherical-coordinates
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Coulomb potential in the equation
+        key_prerequisites: [physics.modern.bohr-model-derivation]
+      - id: kp2
+        can_do: Name the three quantum numbers
+        key_prerequisites: [math.calc3.spherical-coordinates]
+      - id: kp3
+        can_do: Find allowed values of each quantum number
+        key_prerequisites: [physics.modern.three-dimensional-box]
+      - id: kp4
+        can_do: Find degeneracy of a level
+        key_prerequisites: [physics.modern.three-dimensional-box]
+  - id: physics.modern.hydrogen-ground-state
+    name: Checking the hydrogen ground state
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.hydrogen-schrodinger-overview
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc3.triple-spherical
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check the ground state satisfies the equation
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+      - id: kp2
+        can_do: Normalize the ground state in spherical coordinates
+        key_prerequisites: [math.calc3.triple-spherical]
+      - id: kp3
+        can_do: Find average distance in the ground state
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview, math.calc3.triple-spherical]
+      - id: kp4
+        can_do: Find ground state energy
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+  - id: physics.modern.radial-probability
+    name: Finding radial probability distributions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.hydrogen-ground-state
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define radial probability density
+        key_prerequisites: [physics.modern.hydrogen-ground-state]
+      - id: kp2
+        can_do: Find most probable radius
+        key_prerequisites: [physics.modern.hydrogen-ground-state]
+      - id: kp3
+        can_do: Sketch radial densities for low states
+        key_prerequisites: [physics.modern.hydrogen-ground-state]
+      - id: kp4
+        can_do: Count radial nodes
+        key_prerequisites: [physics.modern.hydrogen-ground-state]
+  - id: physics.modern.orbital-angular-momentum-quantization
+    name: Using quantized orbital angular momentum
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.hydrogen-schrodinger-overview
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.angular-momentum-of-a-particle
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find orbital angular momentum magnitude
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+      - id: kp2
+        can_do: Find allowed components along an axis
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+      - id: kp3
+        can_do: Explain why the full vector cannot be known
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+      - id: kp4
+        can_do: Compare with the Bohr model
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+  - id: physics.modern.zeeman-effect-normal
+    name: Finding normal Zeeman splitting
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.orbital-angular-momentum-quantization
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.torque-and-energy-of-a-loop
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy of an orbital magnetic moment in a field
+        key_prerequisites: [physics.em.torque-and-energy-of-a-loop]
+      - id: kp2
+        can_do: Find level splitting in a field
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization, physics.em.torque-and-energy-of-a-loop]
+      - id: kp3
+        can_do: Find shifted line frequencies
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+      - id: kp4
+        can_do: Find field strength from a splitting
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+  - id: physics.modern.stern-gerlach-and-spin
+    name: Interpreting Stern-Gerlach and electron spin
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.zeeman-effect-normal
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.em.magnetic-dipole-moment
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the Stern-Gerlach experiment
+        key_prerequisites: [physics.modern.zeeman-effect-normal]
+      - id: kp2
+        can_do: Explain two beams with spin one half
+        key_prerequisites: [physics.modern.zeeman-effect-normal, physics.em.magnetic-dipole-moment]
+      - id: kp3
+        can_do: Find spin magnetic moment
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+      - id: kp4
+        can_do: Find force on an atom in a field gradient
+        key_prerequisites: [physics.em.magnetic-dipole-moment]
+  - id: physics.modern.spin-orbit-overview
+    name: Describing fine structure from spin-orbit coupling
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.stern-gerlach-and-spin
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain spin-orbit interaction from the electron's frame
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp2
+        can_do: Find total angular momentum values
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp3
+        can_do: Describe fine structure splitting
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp4
+        can_do: Find the sodium doublet energy difference
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+  - id: physics.modern.pauli-exclusion
+    name: Using the exclusion principle
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.stern-gerlach-and-spin
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the exclusion principle
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp2
+        can_do: Fill states in a box with electrons
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp3
+        can_do: Count electrons per shell
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+      - id: kp4
+        can_do: Explain why matter takes up space
+        key_prerequisites: [physics.modern.stern-gerlach-and-spin]
+  - id: physics.modern.multi-electron-atoms
+    name: Explaining shell structure of many-electron atoms
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.pauli-exclusion
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.modern.hydrogen-schrodinger-overview
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Order subshells by energy
+        key_prerequisites: [physics.modern.pauli-exclusion, physics.modern.hydrogen-schrodinger-overview]
+      - id: kp2
+        can_do: Write electron configurations
+        key_prerequisites: [physics.modern.pauli-exclusion, physics.modern.hydrogen-schrodinger-overview]
+      - id: kp3
+        can_do: Explain shielding
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+      - id: kp4
+        can_do: Link shell structure to ionization energy trends
+        key_prerequisites: [physics.modern.hydrogen-schrodinger-overview]
+  - id: physics.modern.x-ray-spectra-and-moseley
+    name: Using Moseley's law for x-ray lines
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.multi-electron-atoms
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.modern.x-ray-production
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain characteristic lines from inner vacancies
+        key_prerequisites: [physics.modern.multi-electron-atoms, physics.modern.x-ray-production]
+      - id: kp2
+        can_do: Apply Moseley's law
+        key_prerequisites: [physics.modern.multi-electron-atoms]
+      - id: kp3
+        can_do: Find atomic number from a line
+        key_prerequisites: [physics.modern.multi-electron-atoms]
+      - id: kp4
+        can_do: Explain how Moseley ordered the periodic table
+        key_prerequisites: [physics.modern.multi-electron-atoms]
+  - id: physics.modern.selection-rules-and-transitions
+    name: Using selection rules for transitions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.orbital-angular-momentum-quantization
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.modern.spectral-series
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the orbital selection rule
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+      - id: kp2
+        can_do: Tell allowed from forbidden transitions
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+      - id: kp3
+        can_do: Find possible lines between levels
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization, physics.modern.spectral-series]
+      - id: kp4
+        can_do: Explain photon angular momentum
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+  - id: physics.modern.laser-principles
+    name: Explaining stimulated emission and population inversion
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.selection-rules-and-transitions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.lasers
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain stimulated emission
+        key_prerequisites: [physics.modern.selection-rules-and-transitions]
+      - id: kp2
+        can_do: Explain population inversion
+        key_prerequisites: [physics.modern.selection-rules-and-transitions]
+      - id: kp3
+        can_do: Describe a three-level laser
+        key_prerequisites: [physics.modern.selection-rules-and-transitions, physics.hs2.lasers]
+      - id: kp4
+        can_do: Explain coherence of laser light
+        key_prerequisites: [physics.hs2.lasers]
+  - id: physics.modern.molecular-rotation-spectra
+    name: Finding molecular rotational energy levels
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.orbital-angular-momentum-quantization
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.inertia-of-point-masses
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find rotational energy levels of a diatomic molecule
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization, physics.mechanics.inertia-of-point-masses]
+      - id: kp2
+        can_do: Find moment of inertia from bond length
+        key_prerequisites: [physics.mechanics.inertia-of-point-masses]
+      - id: kp3
+        can_do: Find spacing of rotational lines
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization]
+      - id: kp4
+        can_do: Find bond length from a spectrum
+        key_prerequisites: [physics.modern.orbital-angular-momentum-quantization, physics.mechanics.inertia-of-point-masses]
+  - id: physics.modern.molecular-vibration-spectra
+    name: Finding molecular vibrational levels
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.oscillator-energy-levels
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.small-oscillations-about-equilibrium
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find vibrational levels from a spring constant
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+      - id: kp2
+        can_do: Find spring constant from a bond potential
+        key_prerequisites: [physics.mechanics.small-oscillations-about-equilibrium]
+      - id: kp3
+        can_do: Find vibrational transition energy
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+      - id: kp4
+        can_do: Explain combined vibration and rotation lines
+        key_prerequisites: [physics.modern.oscillator-energy-levels]
+  - id: physics.modern.free-electron-model
+    name: Using the free electron model of metals
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.pauli-exclusion
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.modern.three-dimensional-box
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Treat conduction electrons as particles in a box
+        key_prerequisites: [physics.modern.pauli-exclusion, physics.modern.three-dimensional-box]
+      - id: kp2
+        can_do: Fill states up to the highest occupied level
+        key_prerequisites: [physics.modern.pauli-exclusion]
+      - id: kp3
+        can_do: Count states per energy range
+        key_prerequisites: [physics.modern.three-dimensional-box]
+      - id: kp4
+        can_do: Explain why only a few electrons respond to heating
+        key_prerequisites: [physics.modern.pauli-exclusion]
+  - id: physics.modern.fermi-energy
+    name: Finding the Fermi energy of metals
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.free-electron-model
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Fermi energy from electron density
+        key_prerequisites: [physics.modern.free-electron-model]
+      - id: kp2
+        can_do: Find Fermi speed and temperature
+        key_prerequisites: [physics.modern.free-electron-model]
+      - id: kp3
+        can_do: Compare Fermi energy with thermal energy
+        key_prerequisites: [physics.modern.free-electron-model]
+      - id: kp4
+        can_do: Find average electron energy
+        key_prerequisites: [physics.modern.free-electron-model]
+  - id: physics.modern.band-theory
+    name: Explaining energy bands in solids
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.free-electron-model
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.finite-square-well
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how atomic levels spread into bands
+        key_prerequisites: [physics.modern.free-electron-model]
+      - id: kp2
+        can_do: Explain band gaps from a periodic potential
+        key_prerequisites: [physics.modern.finite-square-well]
+      - id: kp3
+        can_do: Sketch bands for a simple solid
+        key_prerequisites: [physics.modern.free-electron-model]
+      - id: kp4
+        can_do: Relate gap size to light absorption
+        key_prerequisites: [physics.modern.free-electron-model]
+  - id: physics.modern.band-classification-of-solids
+    name: Telling conductors, insulators and semiconductors by bands
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.band-theory
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify a solid as conductor, insulator or semiconductor
+        key_prerequisites: [physics.modern.band-theory]
+      - id: kp2
+        can_do: Explain conduction with a partly filled band
+        key_prerequisites: [physics.modern.band-theory]
+      - id: kp3
+        can_do: Explain why semiconductors conduct more when hot
+        key_prerequisites: [physics.modern.band-theory]
+      - id: kp4
+        can_do: Find the longest absorbed wavelength from a gap
+        key_prerequisites: [physics.modern.band-theory]
+  - id: physics.modern.doped-semiconductors
+    name: Describing n-type and p-type semiconductors
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.band-classification-of-solids
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain donor impurities
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp2
+        can_do: Explain acceptor impurities
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp3
+        can_do: Find carrier type from a dopant
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp4
+        can_do: Explain how doping changes conductivity
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+  - id: physics.modern.pn-junctions
+    name: Explaining diodes from p-n junctions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.doped-semiconductors
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the depletion region
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp2
+        can_do: Explain forward and reverse bias
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp3
+        can_do: Sketch a diode current curve
+        key_prerequisites: [physics.modern.doped-semiconductors]
+      - id: kp4
+        can_do: Explain light emission in an LED
+        key_prerequisites: [physics.modern.doped-semiconductors]
+  - id: physics.modern.superconductivity-overview
+    name: Describing superconductivity
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.band-classification-of-solids
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe zero resistance below a critical temperature
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp2
+        can_do: Describe magnetic field expulsion
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp3
+        can_do: Explain electron pairing qualitatively
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+      - id: kp4
+        can_do: Name uses of superconductors
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+  - id: physics.modern.nuclear-size-and-density
+    name: Finding nuclear radius and density
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.rutherford-scattering
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.nuclear-notation
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find nuclear radius from mass number
+        key_prerequisites: [physics.modern.rutherford-scattering, physics.hs2.nuclear-notation]
+      - id: kp2
+        can_do: Find nuclear density
+        key_prerequisites: [physics.modern.rutherford-scattering]
+      - id: kp3
+        can_do: Compare nuclear and atomic sizes
+        key_prerequisites: [physics.hs2.nuclear-notation]
+      - id: kp4
+        can_do: Explain constant nuclear density
+        key_prerequisites: [physics.modern.rutherford-scattering]
+  - id: physics.modern.binding-energy-from-masses
+    name: Finding binding energy from atomic masses
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.energy-momentum-relation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.binding-energy
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mass defect from atomic masses
+        key_prerequisites: [physics.modern.energy-momentum-relation, physics.hs2.binding-energy]
+      - id: kp2
+        can_do: Convert mass defect to energy
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+      - id: kp3
+        can_do: Find binding energy per nucleon
+        key_prerequisites: [physics.hs2.binding-energy]
+      - id: kp4
+        can_do: Find separation energy of a neutron
+        key_prerequisites: [physics.modern.energy-momentum-relation]
+  - id: physics.modern.semi-empirical-mass-formula
+    name: Using the semi-empirical mass formula
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.binding-energy-from-masses
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.binding-energy-curve
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name the terms of the formula
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+      - id: kp2
+        can_do: Find binding energy from the formula
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+      - id: kp3
+        can_do: Explain the shape of the binding curve
+        key_prerequisites: [physics.modern.binding-energy-from-masses, physics.hs2.binding-energy-curve]
+      - id: kp4
+        can_do: Find the most stable isobar
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+  - id: physics.modern.decay-law-derivation
+    name: Deriving the radioactive decay law
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.half-life
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc2.exponential-growth-de
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a rate equation for decay
+        key_prerequisites: [math.calc2.exponential-growth-de]
+      - id: kp2
+        can_do: Solve for remaining nuclei
+        key_prerequisites: [physics.hs2.half-life, math.calc2.exponential-growth-de]
+      - id: kp3
+        can_do: Relate decay constant to half-life
+        key_prerequisites: [physics.hs2.half-life]
+      - id: kp4
+        can_do: Find mean lifetime
+        key_prerequisites: [math.calc2.exponential-growth-de]
+  - id: physics.modern.decay-chains-with-equations
+    name: Solving parent-daughter decay chains
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.decay-law-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.decay-chains
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for parent and daughter
+        key_prerequisites: [physics.modern.decay-law-derivation]
+      - id: kp2
+        can_do: Solve for daughter number
+        key_prerequisites: [physics.modern.decay-law-derivation]
+      - id: kp3
+        can_do: Explain secular equilibrium
+        key_prerequisites: [physics.hs2.decay-chains]
+      - id: kp4
+        can_do: Find time of greatest daughter number
+        key_prerequisites: [physics.modern.decay-law-derivation]
+  - id: physics.modern.q-values-of-decays
+    name: Finding Q values of decays
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.binding-energy-from-masses
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.decay-equations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Q value from masses
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+      - id: kp2
+        can_do: Find Q for alpha decay
+        key_prerequisites: [physics.hs2.decay-equations]
+      - id: kp3
+        can_do: Find Q for beta decays
+        key_prerequisites: [physics.hs2.decay-equations]
+      - id: kp4
+        can_do: Decide if a decay is possible
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+  - id: physics.modern.alpha-decay-energetics
+    name: Finding alpha particle energies from recoil
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.q-values-of-decays
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.momentum-of-particle-systems
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Split decay energy between alpha and daughter
+        key_prerequisites: [physics.modern.q-values-of-decays, physics.mechanics.momentum-of-particle-systems]
+      - id: kp2
+        can_do: Find alpha kinetic energy
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems]
+      - id: kp3
+        can_do: Find daughter recoil energy
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp4
+        can_do: Link alpha energy to half-life
+        key_prerequisites: [physics.modern.q-values-of-decays]
+  - id: physics.modern.beta-decay-and-neutrinos
+    name: Explaining beta spectra and neutrinos
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.q-values-of-decays
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the continuous beta spectrum
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp2
+        can_do: Find the greatest electron energy
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp3
+        can_do: Explain why the neutrino was proposed
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp4
+        can_do: Write beta decays with neutrinos
+        key_prerequisites: [physics.modern.q-values-of-decays]
+  - id: physics.modern.gamma-decay
+    name: Describing gamma transitions and isomers
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.q-values-of-decays
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain gamma emission from excited nuclei
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp2
+        can_do: Find gamma energy from levels
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp3
+        can_do: Describe metastable states
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp4
+        can_do: Find recoil of an emitting nucleus
+        key_prerequisites: [physics.modern.q-values-of-decays]
+  - id: physics.modern.nuclear-reactions-and-cross-sections
+    name: Using cross sections for nuclear reactions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.q-values-of-decays
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.threshold-energy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Balance a nuclear reaction
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp2
+        can_do: Find Q value of a reaction
+        key_prerequisites: [physics.modern.q-values-of-decays]
+      - id: kp3
+        can_do: Find threshold of an endothermic reaction
+        key_prerequisites: [physics.modern.threshold-energy]
+      - id: kp4
+        can_do: Use a cross section to find a reaction rate
+        key_prerequisites: [physics.modern.q-values-of-decays]
+  - id: physics.modern.fission-energetics
+    name: Finding energy released in fission
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.semi-empirical-mass-formula
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.fission
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy released in a fission
+        key_prerequisites: [physics.modern.semi-empirical-mass-formula]
+      - id: kp2
+        can_do: Explain energy release from the binding curve
+        key_prerequisites: [physics.modern.semi-empirical-mass-formula]
+      - id: kp3
+        can_do: Count neutrons released
+        key_prerequisites: [physics.hs2.fission]
+      - id: kp4
+        can_do: Find energy from a mass of fuel
+        key_prerequisites: [physics.modern.semi-empirical-mass-formula]
+  - id: physics.modern.chain-reactions
+    name: Using the multiplication factor in chain reactions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.fission-energetics
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.nuclear-reactors
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Define the multiplication factor
+        key_prerequisites: [physics.modern.fission-energetics]
+      - id: kp2
+        can_do: Tell subcritical, critical and supercritical states
+        key_prerequisites: [physics.modern.fission-energetics]
+      - id: kp3
+        can_do: Explain moderators and control rods
+        key_prerequisites: [physics.hs2.nuclear-reactors]
+      - id: kp4
+        can_do: Explain delayed neutrons
+        key_prerequisites: [physics.hs2.nuclear-reactors]
+  - id: physics.modern.fusion-energetics
+    name: Finding fusion energy and the Coulomb barrier
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.binding-energy-from-masses
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.potential-of-point-charges-derivation
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.fusion
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy released in a fusion reaction
+        key_prerequisites: [physics.modern.binding-energy-from-masses]
+      - id: kp2
+        can_do: Find the Coulomb barrier
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+      - id: kp3
+        can_do: Explain why high temperature is needed
+        key_prerequisites: [physics.em.potential-of-point-charges-derivation]
+      - id: kp4
+        can_do: Compare fusion and fission energy per mass
+        key_prerequisites: [physics.modern.binding-energy-from-masses, physics.hs2.fusion]
+  - id: physics.modern.radiation-attenuation
+    name: Finding attenuation of radiation in matter
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.decay-law-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.radiation-dose
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write exponential attenuation
+        key_prerequisites: [physics.modern.decay-law-derivation]
+      - id: kp2
+        can_do: Find half-value thickness
+        key_prerequisites: [physics.modern.decay-law-derivation]
+      - id: kp3
+        can_do: Compare penetration of alpha, beta and gamma
+        key_prerequisites: [physics.hs2.radiation-dose]
+      - id: kp4
+        can_do: Find shielding thickness for a reduction
+        key_prerequisites: [physics.modern.decay-law-derivation]
+  - id: physics.modern.particle-classification
+    name: Classifying leptons, hadrons and bosons
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.particles-intro
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify particles as leptons or hadrons
+        key_prerequisites: [physics.hs2.particles-intro]
+      - id: kp2
+        can_do: Tell baryons from mesons
+        key_prerequisites: [physics.hs2.particles-intro]
+      - id: kp3
+        can_do: Tell fermions from bosons
+        key_prerequisites: [physics.hs2.particles-intro]
+      - id: kp4
+        can_do: Name antiparticles
+        key_prerequisites: [physics.hs2.particles-intro]
+  - id: physics.modern.conservation-laws-in-reactions
+    name: Using conservation laws in particle reactions
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.particle-classification
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check charge conservation
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp2
+        can_do: Check baryon number conservation
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp3
+        can_do: Check lepton number conservation
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp4
+        can_do: Decide if a reaction is allowed
+        key_prerequisites: [physics.modern.particle-classification]
+  - id: physics.modern.quark-model
+    name: Building hadrons from quarks
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.particle-classification
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build protons and neutrons from quarks
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp2
+        can_do: Find charges of hadrons from quarks
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp3
+        can_do: Explain colour and confinement
+        key_prerequisites: [physics.modern.particle-classification]
+      - id: kp4
+        can_do: Find quark content of a meson
+        key_prerequisites: [physics.modern.particle-classification]
+  - id: physics.modern.fundamental-interactions
+    name: Comparing the four interactions and their carriers
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.quark-model
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.modern.energy-time-uncertainty
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare strengths of the four interactions
+        key_prerequisites: [physics.modern.quark-model]
+      - id: kp2
+        can_do: Name carriers of each interaction
+        key_prerequisites: [physics.modern.quark-model]
+      - id: kp3
+        can_do: Estimate a force's range from carrier mass
+        key_prerequisites: [physics.modern.energy-time-uncertainty]
+      - id: kp4
+        can_do: Tell which interaction causes a decay
+        key_prerequisites: [physics.modern.quark-model]
+  - id: physics.modern.feynman-diagrams-intro
+    name: Reading simple Feynman diagrams
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.fundamental-interactions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read vertices and lines of a diagram
+        key_prerequisites: [physics.modern.fundamental-interactions]
+      - id: kp2
+        can_do: Draw electron scattering
+        key_prerequisites: [physics.modern.fundamental-interactions]
+      - id: kp3
+        can_do: Draw beta decay with a W boson
+        key_prerequisites: [physics.modern.fundamental-interactions]
+      - id: kp4
+        can_do: Check conservation at each vertex
+        key_prerequisites: [physics.modern.fundamental-interactions]
+  - id: physics.modern.accelerators-and-detectors
+    name: Finding energies in accelerators and detectors
+    subject: physics
+    course: physics.modern
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.modern.threshold-energy
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.cyclotrons
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy available in a collision
+        key_prerequisites: [physics.modern.threshold-energy]
+      - id: kp2
+        can_do: Find cyclotron limits at high energy
+        key_prerequisites: [physics.em.cyclotrons]
+      - id: kp3
+        can_do: Describe synchrotrons
+        key_prerequisites: [physics.em.cyclotrons]
+      - id: kp4
+        can_do: Describe how detectors identify particles
+        key_prerequisites: [physics.modern.threshold-energy]
