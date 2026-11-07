@@ -1,0 +1,1272 @@
+course: chem.gen1
+topics:
+  - id: chem.gen1.quantum-mechanical-atom
+    name: Describing the quantum mechanical model of the atom
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.quantum-numbers
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.uncertainty-idea
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
+      - topic: physics.hs2.de-broglie-wavelength
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe electrons as standing waves around the nucleus
+        key_prerequisites: [chem.hs1.quantum-numbers, physics.hs2.de-broglie-wavelength]
+      - id: kp2
+        can_do: Explain why exact electron paths are unknown
+        key_prerequisites: [physics.hs2.uncertainty-idea]
+      - id: kp3
+        can_do: Link quantum numbers to wave function solutions
+        key_prerequisites: [chem.hs1.quantum-numbers]
+      - id: kp4
+        can_do: Interpret orbitals as probability density
+        key_prerequisites: [chem.hs1.quantum-numbers]
+  - id: chem.gen1.orbital-shapes-and-nodes
+    name: Describing orbital shapes and nodes
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.quantum-mechanical-atom
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Sketch s, p and d orbital shapes
+        key_prerequisites: [chem.gen1.quantum-mechanical-atom]
+      - id: kp2
+        can_do: Count radial and angular nodes
+        key_prerequisites: [chem.gen1.quantum-mechanical-atom]
+      - id: kp3
+        can_do: Find nodes from quantum numbers
+        key_prerequisites: [chem.gen1.quantum-mechanical-atom]
+      - id: kp4
+        can_do: Compare sizes of orbitals in different shells
+        key_prerequisites: [chem.gen1.quantum-mechanical-atom]
+  - id: chem.gen1.penetration-and-shielding
+    name: Explaining penetration and shielding with orbital plots
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.orbital-shapes-and-nodes
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.effective-nuclear-charge
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read radial probability plots of orbitals
+        key_prerequisites: [chem.gen1.orbital-shapes-and-nodes]
+      - id: kp2
+        can_do: Explain penetration of s orbitals
+        key_prerequisites: [chem.gen1.orbital-shapes-and-nodes]
+      - id: kp3
+        can_do: Explain energy ordering of sublevels
+        key_prerequisites: [chem.gen1.orbital-shapes-and-nodes, chem.hs1.effective-nuclear-charge]
+      - id: kp4
+        can_do: Explain why 4s fills before 3d
+        key_prerequisites: [chem.hs1.effective-nuclear-charge]
+  - id: chem.gen1.slaters-rules
+    name: Estimating effective nuclear charge with Slater's rules
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.penetration-and-shielding
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Group electrons for Slater's rules
+        key_prerequisites: [chem.gen1.penetration-and-shielding]
+      - id: kp2
+        can_do: Calculate shielding constants
+        key_prerequisites: [chem.gen1.penetration-and-shielding]
+      - id: kp3
+        can_do: Find effective nuclear charge for valence electrons
+        key_prerequisites: [chem.gen1.penetration-and-shielding]
+      - id: kp4
+        can_do: Compare effective charge across a period
+        key_prerequisites: [chem.gen1.penetration-and-shielding]
+  - id: chem.gen1.atomic-magnetism
+    name: Predicting paramagnetism from configurations
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.orbital-diagrams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell paramagnetic from diamagnetic atoms
+        key_prerequisites: [chem.hs1.orbital-diagrams]
+      - id: kp2
+        can_do: Count unpaired electrons in atoms and ions
+        key_prerequisites: [chem.hs1.orbital-diagrams]
+      - id: kp3
+        can_do: Predict magnetism of transition metal ions
+        key_prerequisites: [chem.hs1.orbital-diagrams]
+      - id: kp4
+        can_do: Explain magnetic measurements with configurations
+        key_prerequisites: [chem.hs1.orbital-diagrams]
+  - id: chem.gen1.electron-affinity-trend
+    name: Explaining trends in electron affinity
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.ionization-energy-trend
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.penetration-and-shielding
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define electron affinity
+        key_prerequisites: [chem.hs1.ionization-energy-trend]
+      - id: kp2
+        can_do: Explain the trend across a period
+        key_prerequisites: [chem.hs1.ionization-energy-trend, chem.gen1.penetration-and-shielding]
+      - id: kp3
+        can_do: Explain exceptions for nitrogen and noble gases
+        key_prerequisites: [chem.gen1.penetration-and-shielding]
+      - id: kp4
+        can_do: Compare electron affinity with ionization energy
+        key_prerequisites: [chem.hs1.ionization-energy-trend]
+  - id: chem.gen1.lattice-energy
+    name: Comparing lattice energies with Coulomb's law
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.ionic-solid-properties
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.coulombs-law
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define lattice energy
+        key_prerequisites: [chem.hs1.ionic-solid-properties]
+      - id: kp2
+        can_do: Rank lattice energies by charge and size
+        key_prerequisites: [chem.hs1.ionic-solid-properties, physics.hs2.coulombs-law]
+      - id: kp3
+        can_do: Explain trends in melting points with lattice energy
+        key_prerequisites: [chem.hs1.ionic-solid-properties]
+      - id: kp4
+        can_do: Relate lattice energy to Coulomb's law
+        key_prerequisites: [physics.hs2.coulombs-law]
+  - id: chem.gen1.born-haber-cycle
+    name: Calculating lattice energy with a Born-Haber cycle
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.lattice-energy
+        encompassing: 0.3
+        confidence: high
+      - topic: chem.hs2.hess-law
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen1.electron-affinity-trend
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write steps of a Born-Haber cycle
+        key_prerequisites: [chem.hs2.hess-law]
+      - id: kp2
+        can_do: Calculate lattice energy from a cycle
+        key_prerequisites: [chem.gen1.lattice-energy, chem.hs2.hess-law]
+      - id: kp3
+        can_do: Find an unknown step from a cycle
+        key_prerequisites: [chem.hs2.hess-law, chem.gen1.electron-affinity-trend]
+      - id: kp4
+        can_do: Explain why some ionic compounds do not form
+        key_prerequisites: [chem.gen1.lattice-energy]
+  - id: chem.gen1.bond-order-length-strength
+    name: Relating bond order, length and strength
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.bond-enthalpies
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.lewis-structures-multiple-bonds
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find bond order from Lewis structures
+        key_prerequisites: [chem.hs1.lewis-structures-multiple-bonds]
+      - id: kp2
+        can_do: Relate bond order to length
+        key_prerequisites: [chem.hs2.bond-enthalpies]
+      - id: kp3
+        can_do: Relate bond order to bond enthalpy
+        key_prerequisites: [chem.hs2.bond-enthalpies]
+      - id: kp4
+        can_do: Find average bond order with resonance
+        key_prerequisites: [chem.hs2.bond-enthalpies, chem.hs1.lewis-structures-multiple-bonds]
+  - id: chem.gen1.expanded-octet-shapes
+    name: Predicting shapes with expanded octets
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.vsepr-shapes
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.octet-exceptions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shapes with five electron domains
+        key_prerequisites: [chem.hs1.vsepr-shapes]
+      - id: kp2
+        can_do: Find shapes with six electron domains
+        key_prerequisites: [chem.hs1.vsepr-shapes]
+      - id: kp3
+        can_do: Place lone pairs in expanded octets
+        key_prerequisites: [chem.hs1.vsepr-shapes, chem.hs1.octet-exceptions]
+      - id: kp4
+        can_do: Predict shapes of interhalogens
+        key_prerequisites: [chem.hs1.octet-exceptions]
+  - id: chem.gen1.dipole-moments
+    name: Estimating molecular dipole moments
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.molecular-polarity
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.electric-dipoles
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define dipole moment
+        key_prerequisites: [physics.hs2.electric-dipoles]
+      - id: kp2
+        can_do: Estimate dipole moments from bond dipoles
+        key_prerequisites: [chem.hs1.molecular-polarity]
+      - id: kp3
+        can_do: Rank molecules by dipole moment
+        key_prerequisites: [chem.hs1.molecular-polarity]
+      - id: kp4
+        can_do: Relate dipole moment to boiling point
+        key_prerequisites: [chem.hs1.molecular-polarity]
+  - id: chem.gen1.valence-bond-theory
+    name: Describing bonds as orbital overlap
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.lewis-structures-simple
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.orbital-shapes-and-nodes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe bonds as overlapping orbitals
+        key_prerequisites: [chem.hs1.lewis-structures-simple, chem.gen1.orbital-shapes-and-nodes]
+      - id: kp2
+        can_do: Compare overlap in hydrogen and fluorine
+        key_prerequisites: [chem.hs1.lewis-structures-simple]
+      - id: kp3
+        can_do: Explain bond strength with overlap
+        key_prerequisites: [chem.hs1.lewis-structures-simple]
+      - id: kp4
+        can_do: Explain why simple overlap fails for methane
+        key_prerequisites: [chem.gen1.orbital-shapes-and-nodes]
+  - id: chem.gen1.hybridization
+    name: Assigning hybridization to atoms
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.valence-bond-theory
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.expanded-octet-shapes
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Assign sp, sp2 and sp3 hybridization
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+      - id: kp2
+        can_do: Assign hybridization with expanded octets
+        key_prerequisites: [chem.gen1.expanded-octet-shapes]
+      - id: kp3
+        can_do: Link hybridization to geometry
+        key_prerequisites: [chem.gen1.valence-bond-theory, chem.gen1.expanded-octet-shapes]
+      - id: kp4
+        can_do: Find hybridization of each atom in a molecule
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+  - id: chem.gen1.sigma-and-pi-bonds
+    name: Counting sigma and pi bonds
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.hybridization
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe sigma and pi bonds
+        key_prerequisites: [chem.gen1.hybridization]
+      - id: kp2
+        can_do: Count sigma and pi bonds in a molecule
+        key_prerequisites: [chem.gen1.hybridization]
+      - id: kp3
+        can_do: Explain restricted rotation about double bonds
+        key_prerequisites: [chem.gen1.hybridization]
+      - id: kp4
+        can_do: Describe bonding in ethene and ethyne
+        key_prerequisites: [chem.gen1.hybridization]
+  - id: chem.gen1.molecular-orbitals-diatomic
+    name: Drawing molecular orbital diagrams for diatomic molecules
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.valence-bond-theory
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine atomic orbitals into bonding and antibonding orbitals
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+      - id: kp2
+        can_do: Draw orbital diagrams for second-period diatomics
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+      - id: kp3
+        can_do: Explain s-p mixing
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+      - id: kp4
+        can_do: Fill molecular orbitals with electrons
+        key_prerequisites: [chem.gen1.valence-bond-theory]
+  - id: chem.gen1.bond-order-and-magnetism-from-mo
+    name: Finding bond order and magnetism from orbital diagrams
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.molecular-orbitals-diatomic
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.gen1.atomic-magnetism
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate bond order from an orbital diagram
+        key_prerequisites: [chem.gen1.molecular-orbitals-diatomic]
+      - id: kp2
+        can_do: Predict magnetism of oxygen
+        key_prerequisites: [chem.gen1.molecular-orbitals-diatomic, chem.gen1.atomic-magnetism]
+      - id: kp3
+        can_do: Predict stability of diatomic ions
+        key_prerequisites: [chem.gen1.molecular-orbitals-diatomic]
+      - id: kp4
+        can_do: Compare bond orders of diatomic species
+        key_prerequisites: [chem.gen1.molecular-orbitals-diatomic]
+  - id: chem.gen1.heteronuclear-diatomic-orbitals
+    name: Drawing orbital diagrams for heteronuclear diatomics
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.bond-order-and-magnetism-from-mo
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs1.electronegativity-trend
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw orbital diagrams for carbon monoxide
+        key_prerequisites: [chem.gen1.bond-order-and-magnetism-from-mo]
+      - id: kp2
+        can_do: Explain energy offsets from electronegativity
+        key_prerequisites: [chem.hs1.electronegativity-trend]
+      - id: kp3
+        can_do: Find bond order of heteronuclear species
+        key_prerequisites: [chem.gen1.bond-order-and-magnetism-from-mo]
+      - id: kp4
+        can_do: Locate electron density in polar bonds
+        key_prerequisites: [chem.hs1.electronegativity-trend]
+  - id: chem.gen1.delocalized-pi-bonding
+    name: Explaining delocalized pi bonding
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.sigma-and-pi-bonds
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.resonance-structures
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain delocalized pi orbitals in benzene
+        key_prerequisites: [chem.gen1.sigma-and-pi-bonds]
+      - id: kp2
+        can_do: Link delocalization to resonance
+        key_prerequisites: [chem.hs1.resonance-structures]
+      - id: kp3
+        can_do: Explain delocalization in ozone and carbonate
+        key_prerequisites: [chem.gen1.sigma-and-pi-bonds, chem.hs1.resonance-structures]
+      - id: kp4
+        can_do: Explain stability from delocalization
+        key_prerequisites: [chem.gen1.sigma-and-pi-bonds]
+  - id: chem.gen1.mole-fractions
+    name: Using mole fractions with partial pressures
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.partial-pressures
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate mole fractions
+        key_prerequisites: [chem.hs1.partial-pressures]
+      - id: kp2
+        can_do: Find partial pressure from mole fraction
+        key_prerequisites: [chem.hs1.partial-pressures]
+      - id: kp3
+        can_do: Find mole fraction from partial pressures
+        key_prerequisites: [chem.hs1.partial-pressures]
+      - id: kp4
+        can_do: Convert between mole fraction and percent by moles
+        key_prerequisites: [chem.hs1.partial-pressures]
+  - id: chem.gen1.real-gases
+    name: Using the van der Waals equation
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.real-gas-deviations
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.ideal-gas-law-with-moles
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write the van der Waals equation
+        key_prerequisites: [chem.hs2.real-gas-deviations]
+      - id: kp2
+        can_do: Interpret its two correction terms
+        key_prerequisites: [chem.hs2.real-gas-deviations]
+      - id: kp3
+        can_do: Find pressure from the van der Waals equation
+        key_prerequisites: [chem.hs2.real-gas-deviations, chem.hs1.ideal-gas-law-with-moles]
+      - id: kp4
+        can_do: Compare with ideal gas predictions
+        key_prerequisites: [chem.hs1.ideal-gas-law-with-moles]
+  - id: chem.gen1.dispersion-and-polarizability
+    name: Explaining dispersion forces with polarizability
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.intermolecular-forces
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define polarizability
+        key_prerequisites: [chem.hs1.intermolecular-forces]
+      - id: kp2
+        can_do: Explain dispersion strength with molar mass
+        key_prerequisites: [chem.hs1.intermolecular-forces]
+      - id: kp3
+        can_do: Explain dispersion strength with shape
+        key_prerequisites: [chem.hs1.intermolecular-forces]
+      - id: kp4
+        can_do: Compare dispersion and dipole forces in large molecules
+        key_prerequisites: [chem.hs1.intermolecular-forces]
+  - id: chem.gen1.surface-tension-and-viscosity-of-liquids
+    name: Linking surface tension and viscosity to intermolecular forces
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.forces-and-boiling-points
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain surface tension with intermolecular forces
+        key_prerequisites: [chem.hs1.forces-and-boiling-points]
+      - id: kp2
+        can_do: Explain viscosity with intermolecular forces
+        key_prerequisites: [chem.hs1.forces-and-boiling-points]
+      - id: kp3
+        can_do: Explain capillary action
+        key_prerequisites: [chem.hs1.forces-and-boiling-points]
+      - id: kp4
+        can_do: Rank liquids by viscosity
+        key_prerequisites: [chem.hs1.forces-and-boiling-points]
+  - id: chem.gen1.vapor-pressure-and-temperature
+    name: Using the Clausius-Clapeyron equation for vapour pressure
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.vapor-pressure-intro
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.common-natural-logs
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Clausius-Clapeyron equation
+        key_prerequisites: [chem.hs2.vapor-pressure-intro]
+      - id: kp2
+        can_do: Find vapour pressure at a new temperature
+        key_prerequisites: [chem.hs2.vapor-pressure-intro, math.alg2.common-natural-logs]
+      - id: kp3
+        can_do: Find enthalpy of vaporization from two points
+        key_prerequisites: [math.alg2.common-natural-logs]
+      - id: kp4
+        can_do: Find normal boiling point from data
+        key_prerequisites: [chem.hs2.vapor-pressure-intro, math.alg2.common-natural-logs]
+  - id: chem.gen1.phase-diagrams
+    name: Reading phase diagrams and critical points
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.real-gases
+        encompassing: 0.3
+        confidence: high
+      - topic: chem.hs1.latent-heat
+        encompassing: 0.25
+        confidence: medium
+      - topic: chem.gen1.vapor-pressure-and-temperature
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read regions of a phase diagram
+        key_prerequisites: [chem.gen1.vapor-pressure-and-temperature]
+      - id: kp2
+        can_do: Find triple and critical points
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp3
+        can_do: Read isotherms near a critical point
+        key_prerequisites: [chem.gen1.real-gases]
+      - id: kp4
+        can_do: Explain water's unusual melting line
+        key_prerequisites: [chem.hs1.latent-heat]
+  - id: chem.gen1.crystal-lattices-and-unit-cells
+    name: Describing crystal lattices and unit cells
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.comparing-solid-types
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe crystal lattices
+        key_prerequisites: [chem.hs1.comparing-solid-types]
+      - id: kp2
+        can_do: Describe simple, body-centred and face-centred cubic cells
+        key_prerequisites: [chem.hs1.comparing-solid-types]
+      - id: kp3
+        can_do: Tell crystalline from amorphous solids
+        key_prerequisites: [chem.hs1.comparing-solid-types]
+      - id: kp4
+        can_do: Identify unit cells in diagrams
+        key_prerequisites: [chem.hs1.comparing-solid-types]
+  - id: chem.gen1.atoms-per-unit-cell
+    name: Counting atoms in cubic unit cells
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.crystal-lattices-and-unit-cells
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count atoms shared at corners, edges and faces
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp2
+        can_do: Find atoms per cubic cell
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp3
+        can_do: Find coordination numbers
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp4
+        can_do: Relate cell edge to atomic radius
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+  - id: chem.gen1.density-from-unit-cell
+    name: Finding density and radius from unit cell dimensions
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.atoms-per-unit-cell
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs1.density-calculations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find density from cell dimensions
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell, chem.hs1.density-calculations]
+      - id: kp2
+        can_do: Find atomic radius from density
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp3
+        can_do: Find molar mass from density and cell type
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell, chem.hs1.density-calculations]
+      - id: kp4
+        can_do: Find Avogadro's number from crystal data
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+  - id: chem.gen1.packing-efficiency
+    name: Comparing packing efficiency of structures
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.atoms-per-unit-cell
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate packing efficiency of a cubic cell
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp2
+        can_do: Compare cubic close packing with hexagonal close packing
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp3
+        can_do: Locate holes in close-packed structures
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp4
+        can_do: Explain why metals close pack
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+  - id: chem.gen1.ionic-crystal-structures
+    name: Describing common ionic crystal structures
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.atoms-per-unit-cell
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.lattice-energy
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the sodium chloride structure
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp2
+        can_do: Describe the cesium chloride structure
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp3
+        can_do: Find formula from ions per cell
+        key_prerequisites: [chem.gen1.atoms-per-unit-cell]
+      - id: kp4
+        can_do: Relate structure to ion size ratio
+        key_prerequisites: [chem.gen1.lattice-energy]
+  - id: chem.gen1.alloys
+    name: Describing substitutional and interstitial alloys
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.crystal-lattices-and-unit-cells
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.metallic-bonding
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe substitutional alloys
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp2
+        can_do: Describe interstitial alloys
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells, chem.hs1.metallic-bonding]
+      - id: kp3
+        can_do: Explain alloy hardness
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp4
+        can_do: Explain properties of steel
+        key_prerequisites: [chem.hs1.metallic-bonding]
+  - id: chem.gen1.x-ray-crystallography-in-chemistry
+    name: Finding lattice spacing from x-ray diffraction
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.crystal-lattices-and-unit-cells
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.diffraction-gratings
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Bragg's law to crystals
+        key_prerequisites: [physics.hs2.diffraction-gratings]
+      - id: kp2
+        can_do: Find layer spacing from diffraction angles
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells, physics.hs2.diffraction-gratings]
+      - id: kp3
+        can_do: Find cell size from spacing
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+      - id: kp4
+        can_do: Describe how structures are solved from diffraction
+        key_prerequisites: [chem.gen1.crystal-lattices-and-unit-cells]
+  - id: chem.gen1.molality-and-mole-fraction
+    name: Converting among molarity, molality and mole fraction
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.molarity
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.gen1.mole-fractions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate molality
+        key_prerequisites: [chem.hs1.molarity]
+      - id: kp2
+        can_do: Convert molarity to molality
+        key_prerequisites: [chem.hs1.molarity, chem.gen1.mole-fractions]
+      - id: kp3
+        can_do: Calculate mole fraction of solute
+        key_prerequisites: [chem.gen1.mole-fractions]
+      - id: kp4
+        can_do: Explain why molality does not change with temperature
+        key_prerequisites: [chem.hs1.molarity]
+  - id: chem.gen1.henrys-law
+    name: Using Henry's law for gas solubility
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.molality-and-mole-fraction
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.partial-pressures
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use Henry's law for gas solubility
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction, chem.hs1.partial-pressures]
+      - id: kp2
+        can_do: Find dissolved gas at a new pressure
+        key_prerequisites: [chem.hs1.partial-pressures]
+      - id: kp3
+        can_do: Explain carbonated drink fizzing
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+      - id: kp4
+        can_do: Explain gas solubility and temperature
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+  - id: chem.gen1.raoults-law
+    name: Finding vapour pressure lowering with Raoult's law
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.molality-and-mole-fraction
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.colligative-properties-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate vapour pressure of a solution
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+      - id: kp2
+        can_do: Find vapour pressure lowering
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction, chem.hs2.colligative-properties-intro]
+      - id: kp3
+        can_do: Find mole fraction from vapour pressure
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+      - id: kp4
+        can_do: Explain lowering with surface particles
+        key_prerequisites: [chem.hs2.colligative-properties-intro]
+  - id: chem.gen1.boiling-and-freezing-point-changes
+    name: Calculating boiling point elevation and freezing point depression
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.molality-and-mole-fraction
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs2.colligative-properties-intro
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate boiling point elevation
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+      - id: kp2
+        can_do: Calculate freezing point depression
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction]
+      - id: kp3
+        can_do: Find molality from a freezing point change
+        key_prerequisites: [chem.gen1.molality-and-mole-fraction, chem.hs2.colligative-properties-intro]
+      - id: kp4
+        can_do: Explain antifreeze and road salt
+        key_prerequisites: [chem.hs2.colligative-properties-intro]
+  - id: chem.gen1.osmotic-pressure
+    name: Calculating osmotic pressure
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.boiling-and-freezing-point-changes
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.ideal-gas-law-with-moles
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate osmotic pressure
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes, chem.hs1.ideal-gas-law-with-moles]
+      - id: kp2
+        can_do: Find concentration from osmotic pressure
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes]
+      - id: kp3
+        can_do: Explain osmosis across membranes
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes]
+      - id: kp4
+        can_do: Explain isotonic solutions
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes]
+  - id: chem.gen1.vant-hoff-factor
+    name: Using the van't Hoff factor for electrolytes
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.boiling-and-freezing-point-changes
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs1.electrolytes
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ideal van't Hoff factors
+        key_prerequisites: [chem.hs1.electrolytes]
+      - id: kp2
+        can_do: Include the factor in colligative calculations
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes]
+      - id: kp3
+        can_do: Explain smaller measured factors
+        key_prerequisites: [chem.hs1.electrolytes]
+      - id: kp4
+        can_do: Rank solutions by boiling point
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes, chem.hs1.electrolytes]
+  - id: chem.gen1.molar-mass-from-colligative-properties
+    name: Finding molar mass from colligative properties
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.osmotic-pressure
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.gen1.boiling-and-freezing-point-changes
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find molar mass from freezing point data
+        key_prerequisites: [chem.gen1.boiling-and-freezing-point-changes]
+      - id: kp2
+        can_do: Find molar mass from osmotic pressure
+        key_prerequisites: [chem.gen1.osmotic-pressure]
+      - id: kp3
+        can_do: Choose a method for large molecules
+        key_prerequisites: [chem.gen1.osmotic-pressure]
+      - id: kp4
+        can_do: Find degree of dissociation from data
+        key_prerequisites: [chem.gen1.osmotic-pressure, chem.gen1.boiling-and-freezing-point-changes]
+  - id: chem.gen1.ideal-solutions-and-distillation
+    name: Finding vapour composition of ideal liquid mixtures
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.raoults-law
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find total vapour pressure of a liquid mixture
+        key_prerequisites: [chem.gen1.raoults-law]
+      - id: kp2
+        can_do: Find vapour composition above a mixture
+        key_prerequisites: [chem.gen1.raoults-law]
+      - id: kp3
+        can_do: Explain enrichment of the more volatile liquid
+        key_prerequisites: [chem.gen1.raoults-law]
+      - id: kp4
+        can_do: Explain deviations from ideal mixtures
+        key_prerequisites: [chem.gen1.raoults-law]
+  - id: chem.gen1.colloids
+    name: Describing colloids and their properties
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.like-dissolves-like
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe colloids
+        key_prerequisites: [chem.hs1.like-dissolves-like]
+      - id: kp2
+        can_do: Tell colloids from solutions and suspensions
+        key_prerequisites: [chem.hs1.like-dissolves-like]
+      - id: kp3
+        can_do: Explain the Tyndall effect
+        key_prerequisites: [chem.hs1.like-dissolves-like]
+      - id: kp4
+        can_do: Describe emulsions and emulsifiers
+        key_prerequisites: [chem.hs1.like-dissolves-like]
+  - id: chem.gen1.state-functions-in-chemistry
+    name: Using state functions in chemical processes
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.first-law-of-thermodynamics
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs1.enthalpy-of-reaction
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define state functions
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics]
+      - id: kp2
+        can_do: Tell state functions from path functions
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics]
+      - id: kp3
+        can_do: Apply the first law to reactions
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics, chem.hs1.enthalpy-of-reaction]
+      - id: kp4
+        can_do: Find internal energy change from heat and work
+        key_prerequisites: [physics.hs2.first-law-of-thermodynamics]
+  - id: chem.gen1.pressure-volume-work-in-reactions
+    name: Finding pressure-volume work in reactions
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.state-functions-in-chemistry
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.hs2.work-on-a-gas
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work when gas is produced
+        key_prerequisites: [chem.gen1.state-functions-in-chemistry, physics.hs2.work-on-a-gas]
+      - id: kp2
+        can_do: Find work from change in moles of gas
+        key_prerequisites: [chem.gen1.state-functions-in-chemistry, physics.hs2.work-on-a-gas]
+      - id: kp3
+        can_do: Assign signs to work done by a system
+        key_prerequisites: [chem.gen1.state-functions-in-chemistry]
+      - id: kp4
+        can_do: Find internal energy change of a reaction with work
+        key_prerequisites: [chem.gen1.state-functions-in-chemistry]
+  - id: chem.gen1.enthalpy
+    name: Using enthalpy for constant pressure processes
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.pressure-volume-work-in-reactions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define enthalpy
+        key_prerequisites: [chem.gen1.pressure-volume-work-in-reactions]
+      - id: kp2
+        can_do: Show heat at constant pressure equals enthalpy change
+        key_prerequisites: [chem.gen1.pressure-volume-work-in-reactions]
+      - id: kp3
+        can_do: Relate enthalpy change to heat in a coffee-cup calorimeter
+        key_prerequisites: [chem.gen1.pressure-volume-work-in-reactions]
+      - id: kp4
+        can_do: Use enthalpy for a phase change
+        key_prerequisites: [chem.gen1.pressure-volume-work-in-reactions]
+  - id: chem.gen1.enthalpy-and-internal-energy
+    name: Relating enthalpy and internal energy changes of reactions
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.enthalpy
+        encompassing: 0.4
+        confidence: high
+      - topic: chem.hs1.gas-stoichiometry
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate enthalpy and internal energy changes
+        key_prerequisites: [chem.gen1.enthalpy]
+      - id: kp2
+        can_do: Find the difference from moles of gas
+        key_prerequisites: [chem.gen1.enthalpy, chem.hs1.gas-stoichiometry]
+      - id: kp3
+        can_do: Decide when the difference is small
+        key_prerequisites: [chem.gen1.enthalpy]
+      - id: kp4
+        can_do: Convert between enthalpy and internal energy of combustion
+        key_prerequisites: [chem.hs1.gas-stoichiometry]
+  - id: chem.gen1.bomb-calorimetry
+    name: Finding internal energy change with a bomb calorimeter
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.enthalpy-and-internal-energy
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.hs1.reaction-calorimetry
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a bomb calorimeter
+        key_prerequisites: [chem.hs1.reaction-calorimetry]
+      - id: kp2
+        can_do: Find heat from calorimeter heat capacity
+        key_prerequisites: [chem.hs1.reaction-calorimetry]
+      - id: kp3
+        can_do: Find internal energy change of combustion
+        key_prerequisites: [chem.gen1.enthalpy-and-internal-energy]
+      - id: kp4
+        can_do: Convert to enthalpy of combustion
+        key_prerequisites: [chem.gen1.enthalpy-and-internal-energy, chem.hs1.reaction-calorimetry]
+  - id: chem.gen1.thermochemical-cycles
+    name: Building thermochemical cycles
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs2.enthalpy-of-formation
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: chem.hs2.hess-law
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Build a cycle from formation and combustion data
+        key_prerequisites: [chem.hs2.enthalpy-of-formation, chem.hs2.hess-law]
+      - id: kp2
+        can_do: Find an unknown enthalpy from a cycle
+        key_prerequisites: [chem.hs2.enthalpy-of-formation, chem.hs2.hess-law]
+      - id: kp3
+        can_do: Use a cycle for solution enthalpy
+        key_prerequisites: [chem.hs2.enthalpy-of-formation]
+      - id: kp4
+        can_do: Compare routes around a cycle
+        key_prerequisites: [chem.hs2.hess-law]
+  - id: chem.gen1.fuel-and-food-energy
+    name: Comparing energy content of fuels and foods
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.gen1.thermochemical-cycles
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Calculate energy per gram of fuels
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+      - id: kp2
+        can_do: Calculate energy content of foods
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+      - id: kp3
+        can_do: Compare fuels by energy per mass and per volume
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+      - id: kp4
+        can_do: Explain energy content from bonding
+        key_prerequisites: [chem.gen1.thermochemical-cycles]
+  - id: chem.gen1.combustion-analysis
+    name: Finding empirical formulas by combustion analysis
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.empirical-formulas
+        encompassing: 0.45
+        confidence: high
+      - topic: chem.hs1.combustion-equations
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find carbon and hydrogen from combustion products
+        key_prerequisites: [chem.hs1.empirical-formulas, chem.hs1.combustion-equations]
+      - id: kp2
+        can_do: Find oxygen by difference
+        key_prerequisites: [chem.hs1.empirical-formulas]
+      - id: kp3
+        can_do: Find an empirical formula from combustion data
+        key_prerequisites: [chem.hs1.empirical-formulas]
+      - id: kp4
+        can_do: Find molecular formula with molar mass
+        key_prerequisites: [chem.hs1.empirical-formulas]
+  - id: chem.gen1.multistep-yield
+    name: Finding overall yield of multistep processes
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.percent-yield
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find overall yield from step yields
+        key_prerequisites: [chem.hs1.percent-yield]
+      - id: kp2
+        can_do: Find starting mass for a target product
+        key_prerequisites: [chem.hs1.percent-yield]
+      - id: kp3
+        can_do: Compare routes by overall yield
+        key_prerequisites: [chem.hs1.percent-yield]
+      - id: kp4
+        can_do: Find which step limits overall yield
+        key_prerequisites: [chem.hs1.percent-yield]
+  - id: chem.gen1.back-titration
+    name: Analyzing back titrations
+    subject: chem
+    course: chem.gen1
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: chem.hs1.titration-intro
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: chem.hs1.solution-stoichiometry
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why back titration is used
+        key_prerequisites: [chem.hs1.titration-intro]
+      - id: kp2
+        can_do: Find excess reagent remaining
+        key_prerequisites: [chem.hs1.titration-intro, chem.hs1.solution-stoichiometry]
+      - id: kp3
+        can_do: Find amount of analyte from a back titration
+        key_prerequisites: [chem.hs1.titration-intro, chem.hs1.solution-stoichiometry]
+      - id: kp4
+        can_do: Find purity of a sample by back titration
+        key_prerequisites: [chem.hs1.titration-intro]
