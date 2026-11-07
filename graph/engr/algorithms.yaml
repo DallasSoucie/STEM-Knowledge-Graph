@@ -1,0 +1,1077 @@
+course: engr.algorithms
+topics:
+  - id: engr.algorithms.proving-algorithm-correctness
+    name: Proving algorithms correct with invariants and induction
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.asymptotic-analysis-of-code
+        encompassing: 0.4
+        confidence: high
+      - topic: math.discrete.loop-invariants
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove loop algorithms correct with invariants
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code, math.discrete.loop-invariants]
+      - id: kp2
+        can_do: Prove recursive algorithms correct by induction
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code]
+      - id: kp3
+        can_do: Find termination arguments
+        key_prerequisites: [math.discrete.loop-invariants]
+      - id: kp4
+        can_do: Find errors in flawed proofs
+        key_prerequisites: [engr.data-structures.asymptotic-analysis-of-code, math.discrete.loop-invariants]
+  - id: engr.algorithms.recursion-tree-method
+    name: Solving recurrences with recursion trees
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.recurrence-runtime
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw recursion trees
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+      - id: kp2
+        can_do: Sum costs level by level
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+      - id: kp3
+        can_do: Find bounds for unbalanced recursions
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+      - id: kp4
+        can_do: Guess solutions for substitution
+        key_prerequisites: [engr.data-structures.recurrence-runtime]
+  - id: engr.algorithms.substitution-method
+    name: Proving recurrence bounds by substitution
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.recursion-tree-method
+        encompassing: 0.7
+        confidence: high
+      - topic: math.discrete.induction-strong
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove upper bounds by substitution
+        key_prerequisites: [engr.algorithms.recursion-tree-method, math.discrete.induction-strong]
+      - id: kp2
+        can_do: Prove lower bounds by substitution
+        key_prerequisites: [engr.algorithms.recursion-tree-method, math.discrete.induction-strong]
+      - id: kp3
+        can_do: Strengthen hypotheses in substitution
+        key_prerequisites: [math.discrete.induction-strong]
+      - id: kp4
+        can_do: Change variables in recurrences
+        key_prerequisites: [engr.algorithms.recursion-tree-method]
+  - id: engr.algorithms.probabilistic-analysis
+    name: Analyzing expected running time
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.best-worst-average-case
+        encompassing: 0.5
+        confidence: high
+      - topic: math.probstat.expectation-discrete
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use indicator random variables
+        key_prerequisites: [engr.data-structures.best-worst-average-case, math.probstat.expectation-discrete]
+      - id: kp2
+        can_do: Find expected cost of hiring problems
+        key_prerequisites: [engr.data-structures.best-worst-average-case]
+      - id: kp3
+        can_do: Find expected comparisons
+        key_prerequisites: [math.probstat.expectation-discrete]
+      - id: kp4
+        can_do: Analyze random permutations
+        key_prerequisites: [engr.data-structures.best-worst-average-case, math.probstat.expectation-discrete]
+  - id: engr.algorithms.divide-and-conquer-design
+    name: Designing divide-and-conquer algorithms
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.recursion-tree-method
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design divide-and-conquer algorithms
+        key_prerequisites: [engr.algorithms.recursion-tree-method]
+      - id: kp2
+        can_do: Analyze divide-and-conquer running time
+        key_prerequisites: [engr.algorithms.recursion-tree-method]
+      - id: kp3
+        can_do: Find maximum subarray by divide and conquer
+        key_prerequisites: [engr.algorithms.recursion-tree-method]
+      - id: kp4
+        can_do: Combine subproblem solutions
+        key_prerequisites: [engr.algorithms.recursion-tree-method]
+  - id: engr.algorithms.counting-inversions
+    name: Counting inversions by divide and conquer
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.divide-and-conquer-design
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count inversions with merge sort
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp2
+        can_do: Prove correctness of inversion counting
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp3
+        can_do: Find running time of inversion counting
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp4
+        can_do: Apply inversions to ranking comparisons
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+  - id: engr.algorithms.closest-pair
+    name: Finding the closest pair of points
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.divide-and-conquer-design
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find closest pair of points
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp2
+        can_do: Prove the strip lemma
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp3
+        can_do: Find running time of closest pair
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp4
+        can_do: Compare with brute force
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+  - id: engr.algorithms.fast-multiplication
+    name: Multiplying integers and matrices faster
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.divide-and-conquer-design
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply integers with Karatsuba's method
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp2
+        can_do: Multiply matrices with Strassen's method
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp3
+        can_do: Find running times of fast multiplication
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp4
+        can_do: Explain crossover points
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+  - id: engr.algorithms.selection-in-linear-time
+    name: Selecting the k-th element in linear time
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.divide-and-conquer-design
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.algorithms.substitution-method
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use randomized selection
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+      - id: kp2
+        can_do: Use median-of-medians selection
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design, engr.algorithms.substitution-method]
+      - id: kp3
+        can_do: Prove linear running time
+        key_prerequisites: [engr.algorithms.substitution-method]
+      - id: kp4
+        can_do: Find order statistics
+        key_prerequisites: [engr.algorithms.divide-and-conquer-design]
+  - id: engr.algorithms.randomized-quicksort-analysis
+    name: Analyzing randomized quicksort
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.probabilistic-analysis
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.quicksort
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected comparisons of randomized quicksort
+        key_prerequisites: [engr.algorithms.probabilistic-analysis, engr.data-structures.quicksort]
+      - id: kp2
+        can_do: Explain why randomization avoids bad inputs
+        key_prerequisites: [engr.data-structures.quicksort]
+      - id: kp3
+        can_do: Analyze three-way partitioning
+        key_prerequisites: [engr.data-structures.quicksort]
+      - id: kp4
+        can_do: Compare deterministic and randomized pivots
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+  - id: engr.algorithms.greedy-exchange-arguments
+    name: Proving greedy algorithms with exchange arguments
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.proving-algorithm-correctness
+        encompassing: 0.7
+        confidence: high
+      - topic: math.discrete.greedy-algorithms
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove greedy choices with exchange arguments
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness, math.discrete.greedy-algorithms]
+      - id: kp2
+        can_do: Prove greedy stays ahead
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+      - id: kp3
+        can_do: Find counterexamples to greedy rules
+        key_prerequisites: [math.discrete.greedy-algorithms]
+      - id: kp4
+        can_do: Identify greedy choice property
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+  - id: engr.algorithms.interval-scheduling
+    name: Solving interval scheduling and partitioning
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.greedy-exchange-arguments
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve interval scheduling greedily
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+      - id: kp2
+        can_do: Prove the earliest-finish rule
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+      - id: kp3
+        can_do: Solve interval partitioning
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+      - id: kp4
+        can_do: Find lower bounds for partitioning
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+  - id: engr.algorithms.scheduling-to-minimize-lateness
+    name: Scheduling to minimize lateness
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.interval-scheduling
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Schedule to minimize maximum lateness
+        key_prerequisites: [engr.algorithms.interval-scheduling]
+      - id: kp2
+        can_do: Prove earliest-deadline-first optimal
+        key_prerequisites: [engr.algorithms.interval-scheduling]
+      - id: kp3
+        can_do: Remove inversions in schedules
+        key_prerequisites: [engr.algorithms.interval-scheduling]
+      - id: kp4
+        can_do: Find lateness of schedules
+        key_prerequisites: [engr.algorithms.interval-scheduling]
+  - id: engr.algorithms.huffman-optimality
+    name: Proving Huffman coding optimal
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.greedy-exchange-arguments
+        encompassing: 0.3
+        confidence: high
+      - topic: math.discrete.huffman-codes
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove Huffman coding optimal
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments, math.discrete.huffman-codes]
+      - id: kp2
+        can_do: Find properties of optimal prefix codes
+        key_prerequisites: [math.discrete.huffman-codes]
+      - id: kp3
+        can_do: Implement Huffman coding efficiently
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+      - id: kp4
+        can_do: Find expected code length
+        key_prerequisites: [math.discrete.huffman-codes]
+  - id: engr.algorithms.mst-correctness
+    name: Proving minimum spanning tree algorithms with the cut property
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.greedy-exchange-arguments
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.data-structures.mst-code
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove the cut property
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+      - id: kp2
+        can_do: Prove Kruskal's algorithm correct
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments, engr.data-structures.mst-code]
+      - id: kp3
+        can_do: Prove Prim's algorithm correct
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments, engr.data-structures.mst-code]
+      - id: kp4
+        can_do: Prove the cycle property
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+  - id: engr.algorithms.dp-principles
+    name: Identifying optimal substructure and overlapping subproblems
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.proving-algorithm-correctness
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.programming.memoization
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify optimal substructure
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+      - id: kp2
+        can_do: Write recurrences for subproblems
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness, engr.programming.memoization]
+      - id: kp3
+        can_do: Build tables bottom-up
+        key_prerequisites: [engr.programming.memoization]
+      - id: kp4
+        can_do: Recover solutions from tables
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness, engr.programming.memoization]
+  - id: engr.algorithms.weighted-interval-scheduling
+    name: Solving weighted interval scheduling
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.algorithms.interval-scheduling
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the weighted interval recurrence
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Solve weighted interval scheduling
+        key_prerequisites: [engr.algorithms.dp-principles, engr.algorithms.interval-scheduling]
+      - id: kp3
+        can_do: Find predecessor intervals
+        key_prerequisites: [engr.algorithms.interval-scheduling]
+      - id: kp4
+        can_do: Recover optimal schedules
+        key_prerequisites: [engr.algorithms.dp-principles]
+  - id: engr.algorithms.knapsack
+    name: Solving the knapsack problem
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve 0-1 knapsack by dynamic programming
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Recover chosen items
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp3
+        can_do: Find pseudo-polynomial running time
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Solve unbounded knapsack
+        key_prerequisites: [engr.algorithms.dp-principles]
+  - id: engr.algorithms.sequence-alignment
+    name: Solving edit distance and sequence alignment
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find edit distance
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Solve sequence alignment with gap costs
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp3
+        can_do: Recover alignments
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Find running time and space
+        key_prerequisites: [engr.algorithms.dp-principles]
+  - id: engr.algorithms.longest-common-subsequence
+    name: Finding longest common subsequences
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find longest common subsequences
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Recover subsequences
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp3
+        can_do: Find longest increasing subsequences
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Compare subsequence problems
+        key_prerequisites: [engr.algorithms.dp-principles]
+  - id: engr.algorithms.matrix-chain-and-intervals
+    name: Solving interval dynamic programs
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.longest-common-subsequence
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve matrix chain multiplication
+        key_prerequisites: [engr.algorithms.longest-common-subsequence]
+      - id: kp2
+        can_do: Solve optimal binary search trees
+        key_prerequisites: [engr.algorithms.longest-common-subsequence]
+      - id: kp3
+        can_do: Write interval recurrences
+        key_prerequisites: [engr.algorithms.longest-common-subsequence]
+      - id: kp4
+        can_do: Fill tables by interval length
+        key_prerequisites: [engr.algorithms.longest-common-subsequence]
+  - id: engr.algorithms.dp-on-trees
+    name: Solving dynamic programs on trees
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.data-structures.tree-traversal-code
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find maximum independent sets in trees
+        key_prerequisites: [engr.algorithms.dp-principles, engr.data-structures.tree-traversal-code]
+      - id: kp2
+        can_do: Solve tree problems by postorder
+        key_prerequisites: [engr.data-structures.tree-traversal-code]
+      - id: kp3
+        can_do: Find tree diameters
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Recover solutions on trees
+        key_prerequisites: [engr.algorithms.dp-principles]
+  - id: engr.algorithms.dp-space-reduction
+    name: Reducing space in dynamic programs
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.sequence-alignment
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce dynamic programs to linear space
+        key_prerequisites: [engr.algorithms.sequence-alignment]
+      - id: kp2
+        can_do: Use Hirschberg's method
+        key_prerequisites: [engr.algorithms.sequence-alignment]
+      - id: kp3
+        can_do: Trade space for time
+        key_prerequisites: [engr.algorithms.sequence-alignment]
+      - id: kp4
+        can_do: Find space needs of tables
+        key_prerequisites: [engr.algorithms.sequence-alignment]
+  - id: engr.algorithms.dfs-applications
+    name: Classifying edges and finding articulation points
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dfs-code
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify edges by DFS
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp2
+        can_do: Find articulation points
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp3
+        can_do: Find bridges
+        key_prerequisites: [engr.data-structures.dfs-code]
+      - id: kp4
+        can_do: Find biconnected components
+        key_prerequisites: [engr.data-structures.dfs-code]
+  - id: engr.algorithms.strongly-connected-components
+    name: Finding strongly connected components
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.dfs-applications
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strongly connected components
+        key_prerequisites: [engr.algorithms.dfs-applications]
+      - id: kp2
+        can_do: Build component graphs
+        key_prerequisites: [engr.algorithms.dfs-applications]
+      - id: kp3
+        can_do: Prove Kosaraju's algorithm correct
+        key_prerequisites: [engr.algorithms.dfs-applications]
+      - id: kp4
+        can_do: Apply components to dependency problems
+        key_prerequisites: [engr.algorithms.dfs-applications]
+  - id: engr.algorithms.shortest-paths-negative-edges
+    name: Finding shortest paths with Bellman-Ford
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dijkstra-code
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Bellman-Ford algorithm
+        key_prerequisites: [engr.data-structures.dijkstra-code, engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Detect negative cycles
+        key_prerequisites: [engr.data-structures.dijkstra-code]
+      - id: kp3
+        can_do: Find shortest paths with dynamic programming
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Find running time of Bellman-Ford
+        key_prerequisites: [engr.data-structures.dijkstra-code]
+  - id: engr.algorithms.all-pairs-shortest-paths
+    name: Finding all-pairs shortest paths with Floyd-Warshall
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.shortest-paths-negative-edges
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Floyd-Warshall algorithm
+        key_prerequisites: [engr.algorithms.shortest-paths-negative-edges]
+      - id: kp2
+        can_do: Find transitive closure
+        key_prerequisites: [engr.algorithms.shortest-paths-negative-edges]
+      - id: kp3
+        can_do: Use repeated Dijkstra
+        key_prerequisites: [engr.algorithms.shortest-paths-negative-edges]
+      - id: kp4
+        can_do: Compare all-pairs methods
+        key_prerequisites: [engr.algorithms.shortest-paths-negative-edges]
+  - id: engr.algorithms.dijkstra-correctness
+    name: Proving Dijkstra's algorithm correct
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.dijkstra-code
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.algorithms.greedy-exchange-arguments
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove Dijkstra's algorithm correct
+        key_prerequisites: [engr.data-structures.dijkstra-code, engr.algorithms.greedy-exchange-arguments]
+      - id: kp2
+        can_do: Find where negative edges break the proof
+        key_prerequisites: [engr.data-structures.dijkstra-code]
+      - id: kp3
+        can_do: Find running time with different heaps
+        key_prerequisites: [engr.data-structures.dijkstra-code]
+      - id: kp4
+        can_do: Compare Dijkstra and Bellman-Ford
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+  - id: engr.algorithms.dag-shortest-paths
+    name: Finding shortest paths in DAGs
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.topological-sort-code
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.algorithms.dp-principles
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find shortest paths in DAGs
+        key_prerequisites: [engr.data-structures.topological-sort-code, engr.algorithms.dp-principles]
+      - id: kp2
+        can_do: Find longest paths in DAGs
+        key_prerequisites: [engr.data-structures.topological-sort-code]
+      - id: kp3
+        can_do: Find critical paths
+        key_prerequisites: [engr.algorithms.dp-principles]
+      - id: kp4
+        can_do: Find running time in DAGs
+        key_prerequisites: [engr.data-structures.topological-sort-code]
+  - id: engr.algorithms.max-flow-ford-fulkerson
+    name: Finding maximum flow with Ford-Fulkerson
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.network-flow-intro
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.bfs-code
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build residual graphs
+        key_prerequisites: [math.discrete.network-flow-intro, engr.data-structures.bfs-code]
+      - id: kp2
+        can_do: Find augmenting paths
+        key_prerequisites: [engr.data-structures.bfs-code]
+      - id: kp3
+        can_do: Find maximum flow
+        key_prerequisites: [math.discrete.network-flow-intro, engr.data-structures.bfs-code]
+      - id: kp4
+        can_do: Find running time with integer capacities
+        key_prerequisites: [math.discrete.network-flow-intro]
+  - id: engr.algorithms.max-flow-min-cut
+    name: Using the max-flow min-cut theorem
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.max-flow-ford-fulkerson
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the max-flow min-cut theorem
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp2
+        can_do: Find minimum cuts from flows
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp3
+        can_do: Prove maximality with cuts
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp4
+        can_do: Use cuts in applications
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+  - id: engr.algorithms.edmonds-karp
+    name: Analyzing Edmonds-Karp
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.max-flow-ford-fulkerson
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose shortest augmenting paths
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp2
+        can_do: Find Edmonds-Karp running time
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp3
+        can_do: Compare flow algorithms
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+      - id: kp4
+        can_do: Describe capacity scaling
+        key_prerequisites: [engr.algorithms.max-flow-ford-fulkerson]
+  - id: engr.algorithms.bipartite-matching-flow
+    name: Solving bipartite matching with flow
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.max-flow-min-cut
+        encompassing: 0.65
+        confidence: high
+      - topic: math.discrete.matchings-hall
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce bipartite matching to flow
+        key_prerequisites: [engr.algorithms.max-flow-min-cut, math.discrete.matchings-hall]
+      - id: kp2
+        can_do: Find maximum matchings
+        key_prerequisites: [engr.algorithms.max-flow-min-cut]
+      - id: kp3
+        can_do: Find vertex covers from flows
+        key_prerequisites: [math.discrete.matchings-hall]
+      - id: kp4
+        can_do: Solve assignment problems
+        key_prerequisites: [engr.algorithms.max-flow-min-cut, math.discrete.matchings-hall]
+  - id: engr.algorithms.flow-reductions
+    name: Reducing problems to network flow
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.bipartite-matching-flow
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce disjoint paths to flow
+        key_prerequisites: [engr.algorithms.bipartite-matching-flow]
+      - id: kp2
+        can_do: Reduce circulation problems to flow
+        key_prerequisites: [engr.algorithms.bipartite-matching-flow]
+      - id: kp3
+        can_do: Reduce project selection to cuts
+        key_prerequisites: [engr.algorithms.bipartite-matching-flow]
+      - id: kp4
+        can_do: Model scheduling with flows
+        key_prerequisites: [engr.algorithms.bipartite-matching-flow]
+  - id: engr.algorithms.string-matching
+    name: Matching strings with KMP and Rabin-Karp
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.hash-functions
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.algorithms.proving-algorithm-correctness
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Match strings with the naive method
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+      - id: kp2
+        can_do: Match strings with Rabin-Karp
+        key_prerequisites: [engr.data-structures.hash-functions]
+      - id: kp3
+        can_do: Match strings with KMP
+        key_prerequisites: [engr.algorithms.proving-algorithm-correctness]
+      - id: kp4
+        can_do: Compare string matching costs
+        key_prerequisites: [engr.data-structures.hash-functions, engr.algorithms.proving-algorithm-correctness]
+  - id: engr.algorithms.universal-hashing
+    name: Analyzing universal hashing
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.data-structures.hash-maps-and-sets
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.algorithms.probabilistic-analysis
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define universal hash families
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets]
+      - id: kp2
+        can_do: Find expected collisions
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+      - id: kp3
+        can_do: Use perfect hashing
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets, engr.algorithms.probabilistic-analysis]
+      - id: kp4
+        can_do: Analyze hashing with chaining
+        key_prerequisites: [engr.data-structures.hash-maps-and-sets, engr.algorithms.probabilistic-analysis]
+  - id: engr.algorithms.polynomial-reductions
+    name: Reducing problems in polynomial time
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.flow-reductions
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Reduce problems in polynomial time
+        key_prerequisites: [engr.algorithms.flow-reductions]
+      - id: kp2
+        can_do: Prove hardness by reduction
+        key_prerequisites: [engr.algorithms.flow-reductions]
+      - id: kp3
+        can_do: Compare reductions and algorithms
+        key_prerequisites: [engr.algorithms.flow-reductions]
+      - id: kp4
+        can_do: Reduce independent set to vertex cover
+        key_prerequisites: [engr.algorithms.flow-reductions]
+  - id: engr.algorithms.p-and-np
+    name: Defining P and NP
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.polynomial-reductions
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define P and NP
+        key_prerequisites: [engr.algorithms.polynomial-reductions]
+      - id: kp2
+        can_do: Find certificates for NP problems
+        key_prerequisites: [engr.algorithms.polynomial-reductions]
+      - id: kp3
+        can_do: Describe the P versus NP question
+        key_prerequisites: [engr.algorithms.polynomial-reductions]
+      - id: kp4
+        can_do: Define NP-hard and NP-complete
+        key_prerequisites: [engr.algorithms.polynomial-reductions]
+  - id: engr.algorithms.np-completeness-proofs
+    name: Proving NP-completeness
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.p-and-np
+        encompassing: 0.8
+        confidence: high
+      - topic: math.discrete.satisfiability-intro
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove NP-completeness by reduction
+        key_prerequisites: [engr.algorithms.p-and-np, math.discrete.satisfiability-intro]
+      - id: kp2
+        can_do: Reduce 3-SAT to independent set
+        key_prerequisites: [engr.algorithms.p-and-np, math.discrete.satisfiability-intro]
+      - id: kp3
+        can_do: Reduce to Hamiltonian cycle
+        key_prerequisites: [engr.algorithms.p-and-np]
+      - id: kp4
+        can_do: Reduce to subset sum
+        key_prerequisites: [engr.algorithms.p-and-np]
+  - id: engr.algorithms.classic-np-complete-problems
+    name: Recognizing classic NP-complete problems
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.np-completeness-proofs
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize SAT, clique and vertex cover
+        key_prerequisites: [engr.algorithms.np-completeness-proofs]
+      - id: kp2
+        can_do: Recognize Hamiltonian cycle and TSP
+        key_prerequisites: [engr.algorithms.np-completeness-proofs]
+      - id: kp3
+        can_do: Recognize graph coloring
+        key_prerequisites: [engr.algorithms.np-completeness-proofs]
+      - id: kp4
+        can_do: Recognize knapsack and subset sum
+        key_prerequisites: [engr.algorithms.np-completeness-proofs]
+  - id: engr.algorithms.approximation-algorithms
+    name: Designing approximation algorithms
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.classic-np-complete-problems
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.algorithms.greedy-exchange-arguments
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find approximation ratio
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+      - id: kp2
+        can_do: Approximate vertex cover
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems, engr.algorithms.greedy-exchange-arguments]
+      - id: kp3
+        can_do: Approximate metric TSP
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+      - id: kp4
+        can_do: Approximate set cover greedily
+        key_prerequisites: [engr.algorithms.greedy-exchange-arguments]
+  - id: engr.algorithms.backtracking-and-branch-bound
+    name: Solving hard problems by backtracking and branch-and-bound
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.classic-np-complete-problems
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve problems by backtracking
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+      - id: kp2
+        can_do: Prune with branch and bound
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+      - id: kp3
+        can_do: Find bounds for pruning
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+      - id: kp4
+        can_do: Compare exact methods for hard problems
+        key_prerequisites: [engr.algorithms.classic-np-complete-problems]
+  - id: engr.algorithms.randomized-algorithms
+    name: Designing randomized algorithms
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.probabilistic-analysis
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design Las Vegas algorithms
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+      - id: kp2
+        can_do: Design Monte Carlo algorithms
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+      - id: kp3
+        can_do: Find success probability
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+      - id: kp4
+        can_do: Use randomized min-cut
+        key_prerequisites: [engr.algorithms.probabilistic-analysis]
+  - id: engr.algorithms.linear-programming-intro
+    name: Formulating problems as linear programs
+    subject: engr
+    course: engr.algorithms
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.algorithms.flow-reductions
+        encompassing: 0.65
+        confidence: high
+      - topic: math.linalg.applications-of-systems
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate linear programs
+        key_prerequisites: [engr.algorithms.flow-reductions, math.linalg.applications-of-systems]
+      - id: kp2
+        can_do: Solve small linear programs graphically
+        key_prerequisites: [math.linalg.applications-of-systems]
+      - id: kp3
+        can_do: Describe duality
+        key_prerequisites: [engr.algorithms.flow-reductions]
+      - id: kp4
+        can_do: Model flow as a linear program
+        key_prerequisites: [engr.algorithms.flow-reductions]
