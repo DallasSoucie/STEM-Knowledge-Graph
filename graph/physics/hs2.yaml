@@ -136,7 +136,7 @@ topics:
         can_do: Find net radiated power
         key_prerequisites: [physics.hs2.absolute-temperature]
   - id: physics.hs2.ideal-gas-law
-    name: Using the ideal gas law
+    name: Using the ideal gas law with particle counts
     subject: physics
     course: physics.hs2
     level: g11
@@ -145,13 +145,17 @@ topics:
       - topic: physics.hs2.absolute-temperature
         encompassing: 0.4
         confidence: high
-      - topic: physics.hs1.pressure-in-fluids
-        encompassing: 0.25
+      - topic: chem.hs1.ideal-gas-law-with-moles
+        encompassing: 0.4
         confidence: high
+    encompassed:
+      - topic: physics.hs1.pressure-in-fluids
+        encompassing: 0.15
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Relate pressure, volume, temperature and particle number
-        key_prerequisites: [physics.hs2.absolute-temperature]
+        key_prerequisites: [physics.hs2.absolute-temperature, chem.hs1.ideal-gas-law-with-moles]
       - id: kp2
         can_do: Use the law with a count of particles
         key_prerequisites: [physics.hs2.absolute-temperature]
@@ -3258,6 +3262,9 @@ topics:
       - topic: physics.hs1.centripetal-force
         encompassing: 0.25
         confidence: medium
+      - topic: chem.hs1.electron-energy-levels
+        encompassing: 0.3
+        confidence: high
     encompassed:
       - topic: physics.hs2.coulombs-law
         encompassing: 0.15
@@ -3265,7 +3272,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: State the model's assumptions
-        key_prerequisites: [physics.hs2.electron-volts]
+        key_prerequisites: [physics.hs2.electron-volts, chem.hs1.electron-energy-levels]
       - id: kp2
         can_do: Find energies of hydrogen levels
         key_prerequisites: [physics.hs2.electron-volts]
@@ -3699,6 +3706,9 @@ topics:
       - topic: math.alg2.graph-transformed-exponentials
         encompassing: 0.25
         confidence: high
+      - topic: math.alg2.solve-exponential-with-logs
+        encompassing: 0.25
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Sketch a decay curve
@@ -3712,6 +3722,9 @@ topics:
       - id: kp4
         can_do: Compare two isotopes
         key_prerequisites: [chem.hs1.half-life]
+      - id: kp5
+        can_do: Find a time from a remainder with logarithms
+        key_prerequisites: [math.alg2.solve-exponential-with-logs, chem.hs1.half-life]
   - id: physics.hs2.activity-and-dating
     name: Using decay activity and dating
     subject: physics
