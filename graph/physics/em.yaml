@@ -2049,3 +2049,997 @@ topics:
       - id: kp4
         can_do: Read a hysteresis loop
         key_prerequisites: [physics.em.amperes-law-solenoid]
+  - id: physics.em.flux-by-integration
+    name: Finding magnetic flux by integration
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.magnetic-flux
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.amperes-law-long-wire
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flux through a tilted surface
+        key_prerequisites: [physics.hs2.magnetic-flux]
+      - id: kp2
+        can_do: Set up flux with strips
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp3
+        can_do: Find flux near a long wire
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+      - id: kp4
+        can_do: Find flux through a toroid's cross section
+        key_prerequisites: [physics.em.amperes-law-long-wire]
+  - id: physics.em.faraday-with-derivatives
+    name: Using Faraday's law with derivatives
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.flux-by-integration
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.faradays-law
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate flux for emf
+        key_prerequisites: [physics.em.flux-by-integration]
+      - id: kp2
+        can_do: Find emf from a changing field
+        key_prerequisites: [physics.hs2.faradays-law]
+      - id: kp3
+        can_do: Find emf with a changing area
+        key_prerequisites: [physics.hs2.faradays-law]
+      - id: kp4
+        can_do: Find emf with a changing angle
+        key_prerequisites: [physics.hs2.faradays-law]
+  - id: physics.em.loop-near-a-wire
+    name: Finding emf in a loop near a long wire
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.faraday-with-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivative-of-log
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a log flux
+        key_prerequisites: [math.calc1.derivative-of-log]
+      - id: kp2
+        can_do: Find emf from a changing current
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp3
+        can_do: Find emf for a moving loop
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp4
+        can_do: Find an induced current's direction
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+  - id: physics.em.motional-emf-derivation
+    name: Deriving motional emf from the Lorentz force
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lorentz-force
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.motional-emf
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find force on charges in a moving rod
+        key_prerequisites: [physics.em.lorentz-force]
+      - id: kp2
+        can_do: Derive motional emf
+        key_prerequisites: [physics.em.lorentz-force, physics.hs2.motional-emf]
+      - id: kp3
+        can_do: Link to flux change
+        key_prerequisites: [physics.hs2.motional-emf]
+      - id: kp4
+        can_do: Find emf for a rotating rod
+        key_prerequisites: [physics.em.lorentz-force]
+  - id: physics.em.rod-on-rails-dynamics
+    name: Solving a rod on rails with a magnetic force
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.motional-emf-derivation
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc2.separable-equations
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.linear-drag
+        encompassing: 0.15
+        confidence: low
+    knowledge_points:
+      - id: kp1
+        can_do: Write a force on a rod
+        key_prerequisites: [physics.em.motional-emf-derivation]
+      - id: kp2
+        can_do: Find a velocity against time
+        key_prerequisites: [math.calc2.separable-equations]
+      - id: kp3
+        can_do: Find a terminal velocity on a slope
+        key_prerequisites: [physics.mechanics.linear-drag]
+      - id: kp4
+        can_do: Track energy into heat
+        key_prerequisites: [physics.em.motional-emf-derivation]
+  - id: physics.em.rotating-coil-emf
+    name: Deriving the emf of a rotating coil
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.faraday-with-derivatives
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.generators-output
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write flux against time
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp2
+        can_do: Differentiate to find emf
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp3
+        can_do: Find a peak emf
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp4
+        can_do: Find power to turn a coil
+        key_prerequisites: [physics.hs2.generators-output]
+  - id: physics.em.induced-electric-fields
+    name: Finding induced electric fields
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.faraday-with-derivatives
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.em.potential-as-a-line-integral
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Link emf to a line integral
+        key_prerequisites: [physics.em.potential-as-a-line-integral]
+      - id: kp2
+        can_do: Find a field inside a changing solenoid
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp3
+        can_do: Find a field outside a changing solenoid
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp4
+        can_do: Describe closed field loops
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+  - id: physics.em.conservative-vs-induced-fields
+    name: Telling conservative from induced fields
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.induced-electric-fields
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare static and induced fields
+        key_prerequisites: [physics.em.induced-electric-fields]
+      - id: kp2
+        can_do: Show why potential fails with induction
+        key_prerequisites: [physics.em.induced-electric-fields]
+      - id: kp3
+        can_do: Find a voltmeter's ambiguity
+        key_prerequisites: [physics.em.induced-electric-fields]
+      - id: kp4
+        can_do: Link a field's type to path dependence
+        key_prerequisites: [physics.em.induced-electric-fields]
+  - id: physics.em.mutual-inductance
+    name: Calculating mutual inductance
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.faraday-with-derivatives
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.em.flux-by-integration
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define mutual inductance
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+      - id: kp2
+        can_do: Find it for two solenoids
+        key_prerequisites: [physics.em.flux-by-integration]
+      - id: kp3
+        can_do: Find it for a loop and wire
+        key_prerequisites: [physics.em.flux-by-integration]
+      - id: kp4
+        can_do: Find emf from a changing current
+        key_prerequisites: [physics.em.faraday-with-derivatives]
+  - id: physics.em.self-inductance
+    name: Calculating self-inductance
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.mutual-inductance
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.amperes-law-solenoid
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs2.self-inductance-intro
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define self-inductance
+        key_prerequisites: [physics.em.mutual-inductance]
+      - id: kp2
+        can_do: Find a solenoid's inductance
+        key_prerequisites: [physics.em.amperes-law-solenoid]
+      - id: kp3
+        can_do: Find emf across an inductor
+        key_prerequisites: [physics.em.mutual-inductance]
+      - id: kp4
+        can_do: Set an inductor's sign in a loop
+        key_prerequisites: [physics.hs2.self-inductance-intro]
+  - id: physics.em.inductance-of-coax-and-toroid
+    name: Finding inductance of a coaxial cable and toroid
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.self-inductance
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.coaxial-cable-field
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.amperes-law-toroid
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a toroid's inductance
+        key_prerequisites: [physics.em.amperes-law-toroid]
+      - id: kp2
+        can_do: Find a coaxial cable's inductance per length
+        key_prerequisites: [physics.em.coaxial-cable-field]
+      - id: kp3
+        can_do: Use log flux in a cable
+        key_prerequisites: [physics.em.coaxial-cable-field]
+      - id: kp4
+        can_do: Compare to a solenoid
+        key_prerequisites: [physics.em.self-inductance]
+  - id: physics.em.magnetic-energy
+    name: Calculating energy stored in an inductor
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.self-inductance
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate power into an inductor
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Find stored energy
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp3
+        can_do: Find energy from a final current
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp4
+        can_do: Compare with a capacitor's energy
+        key_prerequisites: [physics.em.self-inductance]
+  - id: physics.em.magnetic-energy-density
+    name: Using energy density of the magnetic field
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.magnetic-energy
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em.energy-density-of-electric-field
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive energy per volume
+        key_prerequisites: [physics.em.magnetic-energy]
+      - id: kp2
+        can_do: Find energy in a solenoid by density
+        key_prerequisites: [physics.em.magnetic-energy]
+      - id: kp3
+        can_do: Find energy in a coaxial cable
+        key_prerequisites: [physics.em.magnetic-energy]
+      - id: kp4
+        can_do: Compare electric and magnetic density
+        key_prerequisites: [physics.em.energy-density-of-electric-field]
+  - id: physics.em.lr-rise
+    name: Solving current rise in an LR circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.self-inductance
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.rc-solving-charging
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a loop equation
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp2
+        can_do: Solve for current rise
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp3
+        can_do: Find a time constant
+        key_prerequisites: [physics.em.rc-solving-charging]
+      - id: kp4
+        can_do: Find behaviour at start and end
+        key_prerequisites: [physics.em.self-inductance]
+  - id: physics.em.lr-decay
+    name: Solving current decay in an LR circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lr-rise
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the decay equation
+        key_prerequisites: [physics.em.lr-rise]
+      - id: kp2
+        can_do: Solve for current decay
+        key_prerequisites: [physics.em.lr-rise]
+      - id: kp3
+        can_do: Find energy dissipated
+        key_prerequisites: [physics.em.lr-rise]
+      - id: kp4
+        can_do: Explain a spark on opening
+        key_prerequisites: [physics.em.lr-rise]
+  - id: physics.em.lc-oscillation
+    name: Solving oscillation in an LC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.magnetic-energy
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.capacitor-energy-integral
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a loop equation
+        key_prerequisites: [physics.em.magnetic-energy]
+      - id: kp2
+        can_do: Recognize the harmonic equation
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp3
+        can_do: Find a frequency
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Find current from charge
+        key_prerequisites: [physics.em.capacitor-energy-integral]
+  - id: physics.em.lc-energy-and-spring-analogy
+    name: Comparing LC circuits with springs
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lc-oscillation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.energy-of-shm-with-calculus
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace energy between fields
+        key_prerequisites: [physics.em.lc-oscillation]
+      - id: kp2
+        can_do: Match circuit parts with spring parts
+        key_prerequisites: [physics.mechanics.energy-of-shm-with-calculus]
+      - id: kp3
+        can_do: Find a greatest current from energy
+        key_prerequisites: [physics.em.lc-oscillation]
+      - id: kp4
+        can_do: Find a charge at a given current
+        key_prerequisites: [physics.em.lc-oscillation]
+  - id: physics.em.rlc-damped
+    name: Analyzing a damped RLC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.lc-oscillation
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.damping-regimes
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.lr-rise
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a loop equation
+        key_prerequisites: [physics.em.lr-rise]
+      - id: kp2
+        can_do: Match it with a damped oscillator
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp3
+        can_do: Find a damped frequency
+        key_prerequisites: [physics.em.lc-oscillation]
+      - id: kp4
+        can_do: Find a critical resistance
+        key_prerequisites: [physics.mechanics.damping-regimes]
+  - id: physics.em.ac-sources-and-phase
+    name: Describing alternating sources with phase
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.alternating-current
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.initial-conditions-and-phase
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a source as a sinusoid
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+      - id: kp2
+        can_do: Find effective values with an integral
+        key_prerequisites: [physics.hs2.alternating-current]
+      - id: kp3
+        can_do: Find phase between two signals
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+      - id: kp4
+        can_do: Read a two-trace display
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+  - id: physics.em.reactance-of-capacitors
+    name: Finding capacitive reactance
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.ac-sources-and-phase
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.current-as-a-derivative
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate to find capacitor current
+        key_prerequisites: [physics.em.current-as-a-derivative]
+      - id: kp2
+        can_do: Define capacitive reactance
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+      - id: kp3
+        can_do: Find a phase lead
+        key_prerequisites: [physics.em.current-as-a-derivative]
+      - id: kp4
+        can_do: Find behaviour at low and high frequency
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+  - id: physics.em.reactance-of-inductors
+    name: Finding inductive reactance
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.ac-sources-and-phase
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.self-inductance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate to find inductor voltage
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp2
+        can_do: Define inductive reactance
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+      - id: kp3
+        can_do: Find a phase lag
+        key_prerequisites: [physics.em.self-inductance]
+      - id: kp4
+        can_do: Find behaviour at low and high frequency
+        key_prerequisites: [physics.em.ac-sources-and-phase]
+  - id: physics.em.phasor-diagrams
+    name: Using phasor diagrams
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.reactance-of-capacitors
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.reactance-of-inductors
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.hs1.adding-by-components
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw a voltage phasor
+        key_prerequisites: [physics.em.reactance-of-capacitors, physics.em.reactance-of-inductors]
+      - id: kp2
+        can_do: Rotate phasors in time
+        key_prerequisites: [physics.em.reactance-of-capacitors]
+      - id: kp3
+        can_do: Add phasors
+        key_prerequisites: [physics.hs1.adding-by-components]
+      - id: kp4
+        can_do: Find a total phase
+        key_prerequisites: [physics.hs1.adding-by-components]
+  - id: physics.em.series-rlc-impedance
+    name: Finding impedance of a series RLC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.phasor-diagrams
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find impedance from a phasor triangle
+        key_prerequisites: [physics.em.phasor-diagrams]
+      - id: kp2
+        can_do: Find current amplitude
+        key_prerequisites: [physics.em.phasor-diagrams]
+      - id: kp3
+        can_do: Find a phase angle
+        key_prerequisites: [physics.em.phasor-diagrams]
+      - id: kp4
+        can_do: Find voltage on each element
+        key_prerequisites: [physics.em.phasor-diagrams]
+  - id: physics.em.ac-resonance
+    name: Finding resonance in an RLC circuit
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.series-rlc-impedance
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.rlc-damped
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.resonance-curves
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a resonant frequency
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp2
+        can_do: Find current at resonance
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp3
+        can_do: Find a resonance's width
+        key_prerequisites: [physics.em.rlc-damped]
+      - id: kp4
+        can_do: Relate a width to quality factor
+        key_prerequisites: [physics.mechanics.resonance-curves]
+  - id: physics.em.ac-power-factor
+    name: Using average power and power factor
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.series-rlc-impedance
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.power-transmission
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find average power
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp2
+        can_do: Define power factor
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp3
+        can_do: Find power at resonance
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp4
+        can_do: Explain why a utility cares about power factor
+        key_prerequisites: [physics.hs2.power-transmission]
+  - id: physics.em.filters-intro
+    name: Analyzing simple filters
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.series-rlc-impedance
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find a low-pass response
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp2
+        can_do: Find a high-pass response
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp3
+        can_do: Find a cutoff frequency
+        key_prerequisites: [physics.em.series-rlc-impedance]
+      - id: kp4
+        can_do: Name a use of a filter
+        key_prerequisites: [physics.em.series-rlc-impedance]
+  - id: physics.em.transformers-derivation
+    name: Deriving the transformer equations
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.mutual-inductance
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.transformers
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Link coils through shared flux
+        key_prerequisites: [physics.em.mutual-inductance]
+      - id: kp2
+        can_do: Derive a turns ratio
+        key_prerequisites: [physics.hs2.transformers]
+      - id: kp3
+        can_do: Find a reflected load
+        key_prerequisites: [physics.hs2.transformers]
+      - id: kp4
+        can_do: Name real transformer losses
+        key_prerequisites: [physics.em.mutual-inductance]
+  - id: physics.em.displacement-current
+    name: Using displacement current
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.amperes-law-statement
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.deriving-plate-capacitance
+        encompassing: 0.25
+        confidence: high
+    encompassed:
+      - topic: physics.em.gauss-law-statement
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a contradiction in Ampere's law
+        key_prerequisites: [physics.em.amperes-law-statement]
+      - id: kp2
+        can_do: Define displacement current
+        key_prerequisites: [physics.em.gauss-law-statement]
+      - id: kp3
+        can_do: Calculate it in a capacitor
+        key_prerequisites: [physics.em.deriving-plate-capacitance]
+      - id: kp4
+        can_do: Write the corrected law
+        key_prerequisites: [physics.em.amperes-law-statement]
+  - id: physics.em.maxwells-equations-integral
+    name: Stating Maxwell's equations in integral form
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.displacement-current
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.em.gauss-law-for-magnetism
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.em.induced-electric-fields
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the four equations
+        key_prerequisites: [physics.em.displacement-current, physics.em.gauss-law-for-magnetism, physics.em.induced-electric-fields]
+      - id: kp2
+        can_do: Give each equation's physical meaning
+        key_prerequisites: [physics.em.displacement-current]
+      - id: kp3
+        can_do: Find which applies to a situation
+        key_prerequisites: [physics.em.gauss-law-for-magnetism]
+      - id: kp4
+        can_do: Explain symmetry between fields
+        key_prerequisites: [physics.em.induced-electric-fields]
+  - id: physics.em.fields-in-a-charging-capacitor
+    name: Finding the magnetic field in a charging capacitor
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.displacement-current
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a displacement current between plates
+        key_prerequisites: [physics.em.displacement-current]
+      - id: kp2
+        can_do: Find a magnetic field inside a capacitor
+        key_prerequisites: [physics.em.displacement-current]
+      - id: kp3
+        can_do: Find a magnetic field outside a capacitor
+        key_prerequisites: [physics.em.displacement-current]
+      - id: kp4
+        can_do: Compare with a wire's field
+        key_prerequisites: [physics.em.displacement-current]
+  - id: physics.em.wave-solutions-of-maxwell
+    name: Showing Maxwell's equations predict waves
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.maxwells-equations-integral
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.electromagnetic-wave-nature
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a plane wave form
+        key_prerequisites: [physics.hs2.electromagnetic-wave-nature]
+      - id: kp2
+        can_do: Apply Faraday's law to a small loop
+        key_prerequisites: [physics.em.maxwells-equations-integral]
+      - id: kp3
+        can_do: Apply the corrected Ampere's law to a small loop
+        key_prerequisites: [physics.em.maxwells-equations-integral]
+      - id: kp4
+        can_do: Derive a wave equation qualitatively
+        key_prerequisites: [physics.em.maxwells-equations-integral]
+  - id: physics.em.speed-of-light-from-constants
+    name: Finding the speed of light from electric and magnetic constants
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.wave-solutions-of-maxwell
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive speed from two constants
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp2
+        can_do: Calculate speed
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp3
+        can_do: Relate field amplitudes
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp4
+        can_do: Explain the historic significance
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+  - id: physics.em.plane-waves
+    name: Describing plane electromagnetic waves
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.wave-solutions-of-maxwell
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a wave function for each field
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp2
+        can_do: Find a wave's direction
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp3
+        can_do: Find field directions
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+      - id: kp4
+        can_do: Find frequency and wave number
+        key_prerequisites: [physics.em.wave-solutions-of-maxwell]
+  - id: physics.em.energy-in-electromagnetic-waves
+    name: Using energy in electromagnetic waves
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.plane-waves
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.em.magnetic-energy-density
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show equal electric and magnetic energy
+        key_prerequisites: [physics.em.magnetic-energy-density]
+      - id: kp2
+        can_do: Find energy density in a wave
+        key_prerequisites: [physics.em.plane-waves, physics.em.magnetic-energy-density]
+      - id: kp3
+        can_do: Find an average over a cycle
+        key_prerequisites: [physics.em.plane-waves]
+      - id: kp4
+        can_do: Find energy passing through an area
+        key_prerequisites: [physics.em.plane-waves]
+  - id: physics.em.poynting-vector
+    name: Using the Poynting vector
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.energy-in-electromagnetic-waves
+        encompassing: 0.45
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.cross-product-in-physics
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the vector
+        key_prerequisites: [physics.em.energy-in-electromagnetic-waves]
+      - id: kp2
+        can_do: Find its direction
+        key_prerequisites: [physics.mechanics.cross-product-in-physics]
+      - id: kp3
+        can_do: Find its magnitude from fields
+        key_prerequisites: [physics.em.energy-in-electromagnetic-waves]
+      - id: kp4
+        can_do: Find energy flow into a resistor
+        key_prerequisites: [physics.em.energy-in-electromagnetic-waves]
+  - id: physics.em.wave-intensity
+    name: Finding intensity of electromagnetic waves
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.poynting-vector
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intensity from amplitudes
+        key_prerequisites: [physics.em.poynting-vector]
+      - id: kp2
+        can_do: Find amplitudes from intensity
+        key_prerequisites: [physics.em.poynting-vector]
+      - id: kp3
+        can_do: Use an inverse-square source
+        key_prerequisites: [physics.em.poynting-vector]
+      - id: kp4
+        can_do: Find a laser's field
+        key_prerequisites: [physics.em.poynting-vector]
+  - id: physics.em.radiation-pressure
+    name: Calculating radiation pressure
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.wave-intensity
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.photon-momentum
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find pressure with absorption
+        key_prerequisites: [physics.em.wave-intensity]
+      - id: kp2
+        can_do: Find pressure with reflection
+        key_prerequisites: [physics.em.wave-intensity]
+      - id: kp3
+        can_do: Link to photon momentum
+        key_prerequisites: [physics.hs2.photon-momentum]
+      - id: kp4
+        can_do: Estimate a solar sail's force
+        key_prerequisites: [physics.em.wave-intensity]
+  - id: physics.em.antennas-intro
+    name: Describing electromagnetic radiation from antennas
+    subject: physics
+    course: physics.em
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.em.plane-waves
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe radiation from accelerating charge
+        key_prerequisites: [physics.em.plane-waves]
+      - id: kp2
+        can_do: Describe a dipole antenna's pattern
+        key_prerequisites: [physics.em.plane-waves]
+      - id: kp3
+        can_do: Find a resonant antenna length
+        key_prerequisites: [physics.em.plane-waves]
+      - id: kp4
+        can_do: Explain reception by induction
+        key_prerequisites: [physics.em.plane-waves]
