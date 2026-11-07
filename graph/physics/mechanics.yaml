@@ -1566,3 +1566,397 @@ topics:
       - id: kp4
         can_do: Find a car's top speed with drag
         key_prerequisites: [physics.mechanics.power-as-a-derivative]
+  - id: physics.mechanics.impulse-as-an-integral
+    name: Calculating impulse as an integral
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.force-as-rate-of-momentum
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.impulse-from-a-graph
+        encompassing: 0.2
+        confidence: high
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write impulse as an integral
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum, math.calc1.ftc-part-2]
+      - id: kp2
+        can_do: Integrate a time-varying force
+        key_prerequisites: [math.calc1.ftc-part-2]
+      - id: kp3
+        can_do: Find a final velocity from an impulse
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+      - id: kp4
+        can_do: Compare with a graph area
+        key_prerequisites: [physics.hs1.impulse-from-a-graph]
+  - id: physics.mechanics.momentum-of-particle-systems
+    name: Writing total momentum of a system
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.force-as-rate-of-momentum
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.momentum-of-a-system
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write total momentum as a sum
+        key_prerequisites: [physics.hs1.momentum-of-a-system]
+      - id: kp2
+        can_do: Write total force on a system
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+      - id: kp3
+        can_do: Differentiate total momentum
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+      - id: kp4
+        can_do: Find a system's momentum as a vector
+        key_prerequisites: [physics.hs1.momentum-of-a-system]
+  - id: physics.mechanics.internal-and-external-forces
+    name: Deriving momentum conservation from internal forces
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.momentum-of-particle-systems
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.conserving-momentum
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show that internal forces cancel
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems]
+      - id: kp2
+        can_do: Derive momentum conservation
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems, physics.hs1.conserving-momentum]
+      - id: kp3
+        can_do: Find when one component is conserved
+        key_prerequisites: [physics.hs1.conserving-momentum]
+      - id: kp4
+        can_do: Solve a system with an external force
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems]
+  - id: physics.mechanics.center-of-mass-in-space
+    name: Finding center of mass in three dimensions
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.position-vectors
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.center-of-mass
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a center of mass in three dimensions
+        key_prerequisites: [physics.mechanics.position-vectors, physics.hs1.center-of-mass]
+      - id: kp2
+        can_do: Find one with a vector sum
+        key_prerequisites: [physics.mechanics.position-vectors]
+      - id: kp3
+        can_do: Find one for a composite body
+        key_prerequisites: [physics.hs1.center-of-mass]
+      - id: kp4
+        can_do: Find one with a removed piece
+        key_prerequisites: [physics.hs1.center-of-mass]
+  - id: physics.mechanics.center-of-mass-by-integration
+    name: Finding center of mass of a rod by integration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.center-of-mass-in-space
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a mass element
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Find the center of a uniform rod
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space]
+      - id: kp3
+        can_do: Find the center of a rod with varying density
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space, math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Find a rod's total mass by integration
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: physics.mechanics.center-of-mass-of-a-shape
+    name: Finding center of mass of a plate by integration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.center-of-mass-by-integration
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.area-between-curves-x
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write a strip mass element
+        key_prerequisites: [physics.mechanics.center-of-mass-by-integration]
+      - id: kp2
+        can_do: Find the center of a triangle
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp3
+        can_do: Find the center of a region under a curve
+        key_prerequisites: [math.calc1.area-between-curves-x]
+      - id: kp4
+        can_do: Find the center of a semicircle
+        key_prerequisites: [physics.mechanics.center-of-mass-by-integration]
+  - id: physics.mechanics.center-of-mass-motion
+    name: Deriving the motion of the center of mass
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.center-of-mass-in-space
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.momentum-of-particle-systems
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.motion-of-center-of-mass
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive velocity of the center of mass
+        key_prerequisites: [physics.mechanics.center-of-mass-in-space]
+      - id: kp2
+        can_do: Derive acceleration of the center of mass
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems]
+      - id: kp3
+        can_do: Solve an exploding projectile
+        key_prerequisites: [physics.hs1.motion-of-center-of-mass]
+      - id: kp4
+        can_do: Solve two skaters on a rope
+        key_prerequisites: [physics.mechanics.momentum-of-particle-systems]
+  - id: physics.mechanics.kinetic-energy-of-a-system
+    name: Splitting kinetic energy of a system
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.center-of-mass-motion
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.work-energy-derivation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Split kinetic energy into two parts
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+      - id: kp2
+        can_do: Find energy relative to a center of mass
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+      - id: kp3
+        can_do: Find an available energy in a collision
+        key_prerequisites: [physics.mechanics.work-energy-derivation]
+      - id: kp4
+        can_do: Find an internal energy change
+        key_prerequisites: [physics.mechanics.work-energy-derivation]
+  - id: physics.mechanics.elastic-collision-formulas
+    name: Deriving elastic collision formulas
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.internal-and-external-forces
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.elastic-collisions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Combine momentum and energy algebraically
+        key_prerequisites: [physics.mechanics.internal-and-external-forces, physics.hs1.elastic-collisions]
+      - id: kp2
+        can_do: Derive final velocities
+        key_prerequisites: [physics.mechanics.internal-and-external-forces]
+      - id: kp3
+        can_do: Show relative speed reverses
+        key_prerequisites: [physics.hs1.elastic-collisions]
+      - id: kp4
+        can_do: Find special cases of mass ratios
+        key_prerequisites: [physics.mechanics.internal-and-external-forces]
+  - id: physics.mechanics.collisions-in-center-of-mass-frame
+    name: Solving collisions in the center-of-mass frame
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.center-of-mass-motion
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.elastic-collision-formulas
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.mechanics.galilean-transformations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a center-of-mass velocity
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+      - id: kp2
+        can_do: Transform velocities into the frame
+        key_prerequisites: [physics.mechanics.galilean-transformations]
+      - id: kp3
+        can_do: Solve a collision in the frame
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+      - id: kp4
+        can_do: Transform back
+        key_prerequisites: [physics.mechanics.galilean-transformations]
+  - id: physics.mechanics.elastic-collisions-in-a-plane
+    name: Solving elastic collisions in a plane
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.elastic-collision-formulas
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.collisions-in-two-dimensions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write three equations for two dimensions
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas, physics.hs1.collisions-in-two-dimensions]
+      - id: kp2
+        can_do: Show equal masses scatter at a right angle
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+      - id: kp3
+        can_do: Find scatter angles
+        key_prerequisites: [physics.hs1.collisions-in-two-dimensions]
+      - id: kp4
+        can_do: Find a speed after a glancing collision
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+  - id: physics.mechanics.coefficient-of-restitution
+    name: Using the coefficient of restitution
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.elastic-collision-formulas
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define the coefficient
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+      - id: kp2
+        can_do: Find it from a bounce height
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+      - id: kp3
+        can_do: Find heights of repeated bounces
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+      - id: kp4
+        can_do: Solve a partly elastic collision
+        key_prerequisites: [physics.mechanics.elastic-collision-formulas]
+  - id: physics.mechanics.rocket-thrust
+    name: Finding rocket thrust
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.internal-and-external-forces
+        encompassing: 0.4
+        confidence: high
+    encompassed:
+      - topic: physics.mechanics.force-as-rate-of-momentum
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive thrust from exhaust momentum
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+      - id: kp2
+        can_do: Calculate thrust
+        key_prerequisites: [physics.mechanics.internal-and-external-forces]
+      - id: kp3
+        can_do: Find initial acceleration
+        key_prerequisites: [physics.mechanics.force-as-rate-of-momentum]
+      - id: kp4
+        can_do: Find a needed fuel burn rate
+        key_prerequisites: [physics.mechanics.internal-and-external-forces]
+  - id: physics.mechanics.rocket-equation
+    name: Deriving the rocket equation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.rocket-thrust
+        encompassing: 0.35
+        confidence: high
+      - topic: math.calc1.substitution-with-exp-log
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the rocket's momentum balance
+        key_prerequisites: [physics.mechanics.rocket-thrust]
+      - id: kp2
+        can_do: Integrate for velocity with a log
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp3
+        can_do: Find a speed change from a mass ratio
+        key_prerequisites: [math.calc1.substitution-with-exp-log]
+      - id: kp4
+        can_do: Include gravity during a burn
+        key_prerequisites: [physics.mechanics.rocket-thrust]
+  - id: physics.mechanics.variable-mass-systems
+    name: Solving variable-mass systems
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.rocket-thrust
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Solve a chain falling on a scale
+        key_prerequisites: [physics.mechanics.rocket-thrust]
+      - id: kp2
+        can_do: Solve sand dropping on a conveyor
+        key_prerequisites: [physics.mechanics.rocket-thrust]
+      - id: kp3
+        can_do: Solve a raindrop gathering mass
+        key_prerequisites: [physics.mechanics.rocket-thrust]
+      - id: kp4
+        can_do: Find a force to keep a speed
+        key_prerequisites: [physics.mechanics.rocket-thrust]
