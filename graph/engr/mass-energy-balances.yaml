@@ -1,0 +1,887 @@
+course: engr.mass-energy-balances
+topics:
+  - id: engr.mass-energy-balances.process-units-and-conversions
+    name: Converting process units including gauge and absolute pressure
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.thermo.systems-and-properties
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert process units with dimensional analysis
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp2
+        can_do: Convert gauge and absolute pressure
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp3
+        can_do: Convert temperature scales and intervals
+        key_prerequisites: [engr.thermo.systems-and-properties]
+      - id: kp4
+        can_do: Check dimensional consistency of equations
+        key_prerequisites: [engr.thermo.systems-and-properties]
+  - id: engr.mass-energy-balances.flow-rates-and-composition
+    name: Converting mass, molar and volumetric flow rates
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-units-and-conversions
+        encompassing: 0.55
+        confidence: high
+      - topic: chem.gen1.mole-fractions
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert mass, molar and volumetric flow rates
+        key_prerequisites: [engr.mass-energy-balances.process-units-and-conversions]
+      - id: kp2
+        can_do: Convert mass and mole fractions
+        key_prerequisites: [chem.gen1.mole-fractions]
+      - id: kp3
+        can_do: Find average molar mass of mixtures
+        key_prerequisites: [chem.gen1.mole-fractions]
+      - id: kp4
+        can_do: Convert concentrations in process streams
+        key_prerequisites: [engr.mass-energy-balances.process-units-and-conversions, chem.gen1.mole-fractions]
+  - id: engr.mass-energy-balances.process-flowsheets
+    name: Reading process flowsheets and labelling streams
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.flow-rates-and-composition
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw process flowsheets
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+      - id: kp2
+        can_do: Label streams with variables
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+      - id: kp3
+        can_do: Choose a basis of calculation
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+      - id: kp4
+        can_do: Scale flowsheets
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+  - id: engr.mass-energy-balances.general-balance-equation
+    name: Writing the general balance equation
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-flowsheets
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the general balance equation
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp2
+        can_do: Simplify balances for steady state
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp3
+        can_do: Tell differential from integral balances
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp4
+        can_do: Write balances for species and totals
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+  - id: engr.mass-energy-balances.degrees-of-freedom
+    name: Doing degree-of-freedom analysis
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.general-balance-equation
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count unknowns and equations
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+      - id: kp2
+        can_do: Find degrees of freedom of units
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+      - id: kp3
+        can_do: Find degrees of freedom of processes
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+      - id: kp4
+        can_do: Choose a solution order
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+  - id: engr.mass-energy-balances.single-unit-balances
+    name: Solving single-unit material balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.degrees-of-freedom
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve mixer and splitter balances
+        key_prerequisites: [engr.mass-energy-balances.degrees-of-freedom]
+      - id: kp2
+        can_do: Solve separator balances
+        key_prerequisites: [engr.mass-energy-balances.degrees-of-freedom]
+      - id: kp3
+        can_do: Solve dilution and concentration balances
+        key_prerequisites: [engr.mass-energy-balances.degrees-of-freedom]
+      - id: kp4
+        can_do: Check balances for consistency
+        key_prerequisites: [engr.mass-energy-balances.degrees-of-freedom]
+  - id: engr.mass-energy-balances.multiple-unit-balances
+    name: Solving multiple-unit material balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.single-unit-balances
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose subsystems for balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp2
+        can_do: Solve sequential units
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp3
+        can_do: Solve processes with several units
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp4
+        can_do: Check overall balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+  - id: engr.mass-energy-balances.recycle-and-bypass
+    name: Solving balances with recycle and bypass
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.multiple-unit-balances
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve balances with recycle
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances]
+      - id: kp2
+        can_do: Solve balances with bypass
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances]
+      - id: kp3
+        can_do: Find recycle ratio
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances]
+      - id: kp4
+        can_do: Explain reasons for recycle
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances]
+  - id: engr.mass-energy-balances.balances-as-linear-systems
+    name: Solving material balances as linear systems
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.multiple-unit-balances
+        encompassing: 0.4
+        confidence: high
+      - topic: math.linalg.gaussian-elimination
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write balances as matrix equations
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances, math.linalg.gaussian-elimination]
+      - id: kp2
+        can_do: Solve balances with software
+        key_prerequisites: [math.linalg.gaussian-elimination]
+      - id: kp3
+        can_do: Find singular systems
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances, math.linalg.gaussian-elimination]
+      - id: kp4
+        can_do: Solve large flowsheets
+        key_prerequisites: [engr.mass-energy-balances.multiple-unit-balances]
+  - id: engr.mass-energy-balances.extent-of-reaction
+    name: Using extent of reaction
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.single-unit-balances
+        encompassing: 0.5
+        confidence: high
+      - topic: chem.gen1.multistep-yield
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find limiting and excess reactants
+        key_prerequisites: [chem.gen1.multistep-yield]
+      - id: kp2
+        can_do: Write balances with extent of reaction
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp3
+        can_do: Find product composition from extent
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances, chem.gen1.multistep-yield]
+      - id: kp4
+        can_do: Find extent from measured data
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+  - id: engr.mass-energy-balances.conversion-yield-selectivity
+    name: Finding conversion, yield and selectivity
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.extent-of-reaction
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fractional conversion
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp2
+        can_do: Find yield
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp3
+        can_do: Find selectivity
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp4
+        can_do: Find these in multiple reactions
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+  - id: engr.mass-energy-balances.atomic-species-balances
+    name: Solving reactive systems with atomic balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.extent-of-reaction
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write atomic balances
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp2
+        can_do: Solve reactive systems with atomic balances
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp3
+        can_do: Count degrees of freedom for atomic balances
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp4
+        can_do: Compare methods for reactive balances
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+  - id: engr.mass-energy-balances.reactive-recycle-and-purge
+    name: Solving reactive systems with recycle and purge
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.conversion-yield-selectivity
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mass-energy-balances.recycle-and-bypass
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find single-pass and overall conversion
+        key_prerequisites: [engr.mass-energy-balances.conversion-yield-selectivity]
+      - id: kp2
+        can_do: Solve recycle with reaction
+        key_prerequisites: [engr.mass-energy-balances.conversion-yield-selectivity, engr.mass-energy-balances.recycle-and-bypass]
+      - id: kp3
+        can_do: Find purge rate for inerts
+        key_prerequisites: [engr.mass-energy-balances.recycle-and-bypass]
+      - id: kp4
+        can_do: Find recycle and purge flows
+        key_prerequisites: [engr.mass-energy-balances.conversion-yield-selectivity, engr.mass-energy-balances.recycle-and-bypass]
+  - id: engr.mass-energy-balances.combustion-balances
+    name: Solving combustion material balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.atomic-species-balances
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.thermo.combustion-stoichiometry
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find theoretical and excess air
+        key_prerequisites: [engr.thermo.combustion-stoichiometry]
+      - id: kp2
+        can_do: Find product composition on wet and dry basis
+        key_prerequisites: [engr.mass-energy-balances.atomic-species-balances]
+      - id: kp3
+        can_do: Find excess air from flue gas analysis
+        key_prerequisites: [engr.mass-energy-balances.atomic-species-balances, engr.thermo.combustion-stoichiometry]
+      - id: kp4
+        can_do: Solve incomplete combustion
+        key_prerequisites: [engr.mass-energy-balances.atomic-species-balances]
+  - id: engr.mass-energy-balances.reaction-equilibrium-balances
+    name: Combining material balances with reaction equilibrium
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.extent-of-reaction
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.pchem1.gibbs-energy-and-extent-of-reaction
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equilibrium extent
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction, chem.pchem1.gibbs-energy-and-extent-of-reaction]
+      - id: kp2
+        can_do: Find equilibrium composition
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction, chem.pchem1.gibbs-energy-and-extent-of-reaction]
+      - id: kp3
+        can_do: Combine equilibrium with recycle
+        key_prerequisites: [engr.mass-energy-balances.extent-of-reaction]
+      - id: kp4
+        can_do: Find equilibrium conversion at conditions
+        key_prerequisites: [chem.pchem1.gibbs-energy-and-extent-of-reaction]
+  - id: engr.mass-energy-balances.vapor-pressure-correlations
+    name: Using the Antoine equation
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.flow-rates-and-composition
+        encompassing: 0.65
+        confidence: high
+      - topic: chem.gen1.vapor-pressure-and-temperature
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the Antoine equation
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+      - id: kp2
+        can_do: Find boiling point at a pressure
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition, chem.gen1.vapor-pressure-and-temperature]
+      - id: kp3
+        can_do: Use Cox charts
+        key_prerequisites: [chem.gen1.vapor-pressure-and-temperature]
+      - id: kp4
+        can_do: Find vapor pressure from data
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+  - id: engr.mass-energy-balances.single-condensable-systems
+    name: Solving balances with one condensable species
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.vapor-pressure-correlations
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find saturation conditions of gases
+        key_prerequisites: [engr.mass-energy-balances.vapor-pressure-correlations]
+      - id: kp2
+        can_do: Find condensation by cooling or compression
+        key_prerequisites: [engr.mass-energy-balances.vapor-pressure-correlations]
+      - id: kp3
+        can_do: Find dew point of gas streams
+        key_prerequisites: [engr.mass-energy-balances.vapor-pressure-correlations]
+      - id: kp4
+        can_do: Solve condenser balances
+        key_prerequisites: [engr.mass-energy-balances.vapor-pressure-correlations]
+  - id: engr.mass-energy-balances.saturation-and-humidity-balances
+    name: Using relative and absolute saturation in balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.single-condensable-systems
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.thermo.humidity-measures
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find relative and absolute saturation
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems, engr.thermo.humidity-measures]
+      - id: kp2
+        can_do: Find humidity in balances
+        key_prerequisites: [engr.thermo.humidity-measures]
+      - id: kp3
+        can_do: Solve drying and humidification balances
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems]
+      - id: kp4
+        can_do: Find water removed by condensation
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems, engr.thermo.humidity-measures]
+  - id: engr.mass-energy-balances.raoults-law-balances
+    name: Solving vapor-liquid balances with Raoult's law
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.single-condensable-systems
+        encompassing: 0.6
+        confidence: high
+      - topic: chem.gen1.raoults-law
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bubble and dew points with Raoult's law
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems, chem.gen1.raoults-law]
+      - id: kp2
+        can_do: Solve flash vaporization balances
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems]
+      - id: kp3
+        can_do: Find vapor composition
+        key_prerequisites: [chem.gen1.raoults-law]
+      - id: kp4
+        can_do: Solve distillation balances with equilibrium
+        key_prerequisites: [engr.mass-energy-balances.single-condensable-systems, chem.gen1.raoults-law]
+  - id: engr.mass-energy-balances.gas-liquid-solubility-balances
+    name: Solving absorption balances with Henry's law
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.raoults-law-balances
+        encompassing: 0.35
+        confidence: high
+      - topic: chem.gen1.henrys-law
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gas solubility with Henry's law
+        key_prerequisites: [chem.gen1.henrys-law]
+      - id: kp2
+        can_do: Solve absorption balances
+        key_prerequisites: [engr.mass-energy-balances.raoults-law-balances]
+      - id: kp3
+        can_do: Solve stripping balances
+        key_prerequisites: [engr.mass-energy-balances.raoults-law-balances, chem.gen1.henrys-law]
+      - id: kp4
+        can_do: Find solvent rates
+        key_prerequisites: [engr.mass-energy-balances.raoults-law-balances]
+  - id: engr.mass-energy-balances.solid-liquid-balances
+    name: Solving crystallization and dissolution balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.single-unit-balances
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use solubility data in balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp2
+        can_do: Solve crystallization balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp3
+        can_do: Solve hydrated crystal balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+      - id: kp4
+        can_do: Solve leaching balances
+        key_prerequisites: [engr.mass-energy-balances.single-unit-balances]
+  - id: engr.mass-energy-balances.energy-balance-forms
+    name: Choosing closed or open system energy balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.general-balance-equation
+        encompassing: 0.55
+        confidence: high
+      - topic: engr.thermo.steady-flow-energy-balance
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write closed-system energy balances
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+      - id: kp2
+        can_do: Write open-system energy balances
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+      - id: kp3
+        can_do: Choose energy balance simplifications
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation, engr.thermo.steady-flow-energy-balance]
+      - id: kp4
+        can_do: Find shaft work and heat in processes
+        key_prerequisites: [engr.thermo.steady-flow-energy-balance]
+  - id: engr.mass-energy-balances.reference-states-and-enthalpy
+    name: Choosing reference states and finding enthalpy changes
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.energy-balance-forms
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.thermo.table-interpolation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose reference states
+        key_prerequisites: [engr.mass-energy-balances.energy-balance-forms]
+      - id: kp2
+        can_do: Find enthalpy from tables
+        key_prerequisites: [engr.thermo.table-interpolation]
+      - id: kp3
+        can_do: Build inlet-outlet enthalpy tables
+        key_prerequisites: [engr.mass-energy-balances.energy-balance-forms, engr.thermo.table-interpolation]
+      - id: kp4
+        can_do: Use hypothetical process paths
+        key_prerequisites: [engr.mass-energy-balances.energy-balance-forms]
+  - id: engr.mass-energy-balances.heat-capacity-polynomials
+    name: Finding sensible heat with heat capacity polynomials
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.reference-states-and-enthalpy
+        encompassing: 0.7
+        confidence: high
+      - topic: chem.pchem1.kirchhoff-law
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find sensible heat with heat capacity polynomials
+        key_prerequisites: [engr.mass-energy-balances.reference-states-and-enthalpy]
+      - id: kp2
+        can_do: Find mean heat capacities
+        key_prerequisites: [engr.mass-energy-balances.reference-states-and-enthalpy]
+      - id: kp3
+        can_do: Estimate heat capacities of mixtures
+        key_prerequisites: [engr.mass-energy-balances.reference-states-and-enthalpy, chem.pchem1.kirchhoff-law]
+      - id: kp4
+        can_do: Use heat capacity data from tables
+        key_prerequisites: [chem.pchem1.kirchhoff-law]
+  - id: engr.mass-energy-balances.phase-change-enthalpy
+    name: Including latent heats in energy balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.heat-capacity-polynomials
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find latent heats from tables
+        key_prerequisites: [engr.mass-energy-balances.heat-capacity-polynomials]
+      - id: kp2
+        can_do: Estimate latent heats with correlations
+        key_prerequisites: [engr.mass-energy-balances.heat-capacity-polynomials]
+      - id: kp3
+        can_do: Find enthalpy changes across phase changes
+        key_prerequisites: [engr.mass-energy-balances.heat-capacity-polynomials]
+      - id: kp4
+        can_do: Find latent heat at other temperatures
+        key_prerequisites: [engr.mass-energy-balances.heat-capacity-polynomials]
+  - id: engr.mass-energy-balances.nonreactive-energy-balances
+    name: Solving nonreactive energy balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.phase-change-enthalpy
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve heating and cooling balances
+        key_prerequisites: [engr.mass-energy-balances.phase-change-enthalpy]
+      - id: kp2
+        can_do: Solve vaporization balances
+        key_prerequisites: [engr.mass-energy-balances.phase-change-enthalpy]
+      - id: kp3
+        can_do: Solve adiabatic mixing balances
+        key_prerequisites: [engr.mass-energy-balances.phase-change-enthalpy]
+      - id: kp4
+        can_do: Find heat duties of units
+        key_prerequisites: [engr.mass-energy-balances.phase-change-enthalpy]
+  - id: engr.mass-energy-balances.mixing-and-solution-enthalpy
+    name: Using heats of mixing and solution
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heats of solution
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp2
+        can_do: Use enthalpy-concentration charts
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Find temperature rise on mixing
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp4
+        can_do: Solve dilution energy balances
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+  - id: engr.mass-energy-balances.psychrometric-balances
+    name: Solving humidification balances with the psychrometric chart
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.thermo.psychrometric-chart
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve humidifier balances with the chart
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances, engr.thermo.psychrometric-chart]
+      - id: kp2
+        can_do: Solve dryer energy balances
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Find adiabatic saturation temperature
+        key_prerequisites: [engr.thermo.psychrometric-chart]
+      - id: kp4
+        can_do: Solve cooling and dehumidification balances
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances, engr.thermo.psychrometric-chart]
+  - id: engr.mass-energy-balances.heat-of-reaction-method
+    name: Solving reactive energy balances by the heat of reaction method
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.thermo.enthalpy-of-formation
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find standard heat of reaction
+        key_prerequisites: [engr.thermo.enthalpy-of-formation]
+      - id: kp2
+        can_do: Correct heat of reaction to temperature
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Solve reactive balances by heat of reaction
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances, engr.thermo.enthalpy-of-formation]
+      - id: kp4
+        can_do: Find heat duty of reactors
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+  - id: engr.mass-energy-balances.heat-of-formation-method
+    name: Solving reactive energy balances by the heat of formation method
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.heat-of-reaction-method
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use heats of formation in balances
+        key_prerequisites: [engr.mass-energy-balances.heat-of-reaction-method]
+      - id: kp2
+        can_do: Solve reactive balances by heat of formation
+        key_prerequisites: [engr.mass-energy-balances.heat-of-reaction-method]
+      - id: kp3
+        can_do: Handle multiple reactions
+        key_prerequisites: [engr.mass-energy-balances.heat-of-reaction-method]
+      - id: kp4
+        can_do: Find heat released in combustion
+        key_prerequisites: [engr.mass-energy-balances.heat-of-reaction-method]
+  - id: engr.mass-energy-balances.adiabatic-reactors
+    name: Finding adiabatic reaction temperature
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.heat-of-formation-method
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.thermo.adiabatic-flame-temperature
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find adiabatic reaction temperature
+        key_prerequisites: [engr.mass-energy-balances.heat-of-formation-method, engr.thermo.adiabatic-flame-temperature]
+      - id: kp2
+        can_do: Find temperature with incomplete conversion
+        key_prerequisites: [engr.mass-energy-balances.heat-of-formation-method]
+      - id: kp3
+        can_do: Find required feed temperature
+        key_prerequisites: [engr.mass-energy-balances.heat-of-formation-method]
+      - id: kp4
+        can_do: Compare with adiabatic flame temperature
+        key_prerequisites: [engr.thermo.adiabatic-flame-temperature]
+  - id: engr.mass-energy-balances.simultaneous-material-energy
+    name: Solving simultaneous material and energy balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.adiabatic-reactors
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.mass-energy-balances.reactive-recycle-and-purge
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve material and energy balances together
+        key_prerequisites: [engr.mass-energy-balances.adiabatic-reactors, engr.mass-energy-balances.reactive-recycle-and-purge]
+      - id: kp2
+        can_do: Solve problems needing iteration
+        key_prerequisites: [engr.mass-energy-balances.adiabatic-reactors]
+      - id: kp3
+        can_do: Find conversion from energy limits
+        key_prerequisites: [engr.mass-energy-balances.adiabatic-reactors, engr.mass-energy-balances.reactive-recycle-and-purge]
+      - id: kp4
+        can_do: Solve reactor-separator processes
+        key_prerequisites: [engr.mass-energy-balances.reactive-recycle-and-purge]
+  - id: engr.mass-energy-balances.transient-material-balances
+    name: Solving transient material balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.general-balance-equation
+        encompassing: 0.6
+        confidence: high
+      - topic: math.diffeq.linear-first-order
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write transient material balances
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation, math.diffeq.linear-first-order]
+      - id: kp2
+        can_do: Solve tank draining and filling
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation, math.diffeq.linear-first-order]
+      - id: kp3
+        can_do: Solve transient mixing problems
+        key_prerequisites: [engr.mass-energy-balances.general-balance-equation]
+      - id: kp4
+        can_do: Find time to reach a concentration
+        key_prerequisites: [math.diffeq.linear-first-order]
+  - id: engr.mass-energy-balances.transient-energy-balances
+    name: Solving transient energy balances
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.transient-material-balances
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write transient energy balances
+        key_prerequisites: [engr.mass-energy-balances.transient-material-balances, engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp2
+        can_do: Find heating time of batch tanks
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Find temperature of stirred tanks over time
+        key_prerequisites: [engr.mass-energy-balances.transient-material-balances, engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp4
+        can_do: Solve transient heating with heat transfer
+        key_prerequisites: [engr.mass-energy-balances.transient-material-balances]
+  - id: engr.mass-energy-balances.process-simulation-sequential
+    name: Solving flowsheets by sequential modular simulation
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.simultaneous-material-energy
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe sequential modular simulation
+        key_prerequisites: [engr.mass-energy-balances.simultaneous-material-energy]
+      - id: kp2
+        can_do: Choose tear streams
+        key_prerequisites: [engr.mass-energy-balances.simultaneous-material-energy]
+      - id: kp3
+        can_do: Converge recycle loops
+        key_prerequisites: [engr.mass-energy-balances.simultaneous-material-energy]
+      - id: kp4
+        can_do: Compare equation-oriented simulation
+        key_prerequisites: [engr.mass-energy-balances.simultaneous-material-energy]
+  - id: engr.mass-energy-balances.process-safety-basics
+    name: Identifying process hazards
+    subject: engr
+    course: engr.mass-energy-balances
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-flowsheets
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read safety data sheets
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp2
+        can_do: Identify flammability and toxicity hazards
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp3
+        can_do: Describe hazard analysis methods
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp4
+        can_do: Describe relief and protection systems
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
