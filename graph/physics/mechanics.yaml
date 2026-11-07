@@ -2718,3 +2718,749 @@ topics:
       - id: kp4
         can_do: Name a material's limit
         key_prerequisites: [physics.mechanics.stress-and-strain]
+  - id: physics.mechanics.gravitation-in-vector-form
+    name: Writing gravitation in vector form
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.unit-vector-notation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs1.universal-gravitation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write gravity with a unit vector
+        key_prerequisites: [physics.mechanics.unit-vector-notation, physics.hs1.universal-gravitation]
+      - id: kp2
+        can_do: Add forces from several masses
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp3
+        can_do: Find a net field at a point
+        key_prerequisites: [physics.mechanics.unit-vector-notation]
+      - id: kp4
+        can_do: Find a balance point between two masses
+        key_prerequisites: [physics.hs1.universal-gravitation]
+  - id: physics.mechanics.gravitation-of-extended-bodies
+    name: Finding gravity of extended bodies by integration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.gravitation-in-vector-form
+        encompassing: 0.3
+        confidence: high
+      - topic: math.calc1.definite-integral-definition
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a gravity integral for a rod
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp2
+        can_do: Find force from a rod on a point mass
+        key_prerequisites: [physics.mechanics.gravitation-in-vector-form, math.calc1.definite-integral-definition]
+      - id: kp3
+        can_do: Find force from a ring on its axis
+        key_prerequisites: [math.calc1.definite-integral-definition]
+      - id: kp4
+        can_do: Find force from a disk on its axis
+        key_prerequisites: [math.calc1.definite-integral-definition]
+  - id: physics.mechanics.shell-theorem
+    name: Using the shell theorem
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.gravitation-of-extended-bodies
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the theorem for outside a shell
+        key_prerequisites: [physics.mechanics.gravitation-of-extended-bodies]
+      - id: kp2
+        can_do: State the theorem for inside a shell
+        key_prerequisites: [physics.mechanics.gravitation-of-extended-bodies]
+      - id: kp3
+        can_do: Use the theorem for a planet
+        key_prerequisites: [physics.mechanics.gravitation-of-extended-bodies]
+      - id: kp4
+        can_do: Sketch the proof for a shell
+        key_prerequisites: [physics.mechanics.gravitation-of-extended-bodies]
+  - id: physics.mechanics.gravity-inside-a-planet
+    name: Finding gravity inside a uniform planet
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.shell-theorem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find gravity inside a uniform planet
+        key_prerequisites: [physics.mechanics.shell-theorem]
+      - id: kp2
+        can_do: Sketch gravity against distance
+        key_prerequisites: [physics.mechanics.shell-theorem]
+      - id: kp3
+        can_do: Solve a tunnel through a planet
+        key_prerequisites: [physics.mechanics.shell-theorem]
+      - id: kp4
+        can_do: Find a depth with a given gravity
+        key_prerequisites: [physics.mechanics.shell-theorem]
+  - id: physics.mechanics.gravitational-potential-by-integration
+    name: Deriving gravitational potential energy by integration
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.potential-from-force
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.gravitation-in-vector-form
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs1.gravitational-energy-at-a-distance
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Integrate gravity from infinity
+        key_prerequisites: [physics.mechanics.potential-from-force, physics.mechanics.gravitation-in-vector-form]
+      - id: kp2
+        can_do: Explain the negative sign
+        key_prerequisites: [physics.hs1.gravitational-energy-at-a-distance]
+      - id: kp3
+        can_do: Find the potential energy of two masses
+        key_prerequisites: [physics.mechanics.gravitation-in-vector-form]
+      - id: kp4
+        can_do: Find a planet's self-energy roughly
+        key_prerequisites: [physics.mechanics.potential-from-force]
+  - id: physics.mechanics.energy-of-an-orbit
+    name: Finding total energy of an orbit
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.gravitational-potential-by-integration
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.circular-orbits
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find kinetic energy of an orbit
+        key_prerequisites: [physics.hs1.circular-orbits]
+      - id: kp2
+        can_do: Find total energy of an orbit
+        key_prerequisites: [physics.mechanics.gravitational-potential-by-integration, physics.hs1.circular-orbits]
+      - id: kp3
+        can_do: Show total energy is half potential
+        key_prerequisites: [physics.mechanics.gravitational-potential-by-integration]
+      - id: kp4
+        can_do: Find energy to change a circular orbit
+        key_prerequisites: [physics.mechanics.gravitational-potential-by-integration]
+  - id: physics.mechanics.keplers-second-law-derivation
+    name: Deriving Kepler's second law from angular momentum
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.angular-momentum-of-a-particle
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.keplers-third-law
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show gravity gives no torque
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp2
+        can_do: Derive equal areas
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp3
+        can_do: Use angular momentum at two points
+        key_prerequisites: [physics.mechanics.angular-momentum-of-a-particle]
+      - id: kp4
+        can_do: Find a speed at the far point
+        key_prerequisites: [physics.hs1.keplers-third-law]
+  - id: physics.mechanics.elliptical-orbits
+    name: Analyzing elliptical orbits
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.energy-of-an-orbit
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.keplers-second-law-derivation
+        encompassing: 0.25
+        confidence: high
+      - topic: math.precalc.conic-applications
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Name orbit parts of an ellipse
+        key_prerequisites: [math.precalc.conic-applications]
+      - id: kp2
+        can_do: Use energy and momentum at two points
+        key_prerequisites: [physics.mechanics.energy-of-an-orbit, physics.mechanics.keplers-second-law-derivation]
+      - id: kp3
+        can_do: Find a speed at any distance
+        key_prerequisites: [physics.mechanics.energy-of-an-orbit]
+      - id: kp4
+        can_do: Find a period from a long axis
+        key_prerequisites: [math.precalc.conic-applications]
+  - id: physics.mechanics.transfer-orbits
+    name: Calculating a transfer orbit
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.elliptical-orbits
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe a two-burn transfer
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+      - id: kp2
+        can_do: Find a transfer's speeds
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+      - id: kp3
+        can_do: Find speed changes for each burn
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+      - id: kp4
+        can_do: Find a time of flight
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+  - id: physics.mechanics.two-body-problem
+    name: Solving the two-body problem with reduced mass
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.elliptical-orbits
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.center-of-mass-motion
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define reduced mass
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+      - id: kp2
+        can_do: Find motion about a shared center
+        key_prerequisites: [physics.mechanics.center-of-mass-motion]
+      - id: kp3
+        can_do: Find a double-star period
+        key_prerequisites: [physics.mechanics.elliptical-orbits, physics.mechanics.center-of-mass-motion]
+      - id: kp4
+        can_do: Correct a planet's orbit for its star's motion
+        key_prerequisites: [physics.mechanics.elliptical-orbits]
+  - id: physics.mechanics.effective-potential-orbits
+    name: Using effective potential for orbits
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.energy-diagrams-with-calculus
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.mechanics.keplers-second-law-derivation
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write an effective potential
+        key_prerequisites: [physics.mechanics.energy-diagrams-with-calculus]
+      - id: kp2
+        can_do: Find a circular orbit from a minimum
+        key_prerequisites: [physics.mechanics.energy-diagrams-with-calculus]
+      - id: kp3
+        can_do: Find allowed distances from energy
+        key_prerequisites: [physics.mechanics.keplers-second-law-derivation]
+      - id: kp4
+        can_do: Sketch a diagram for bound and unbound orbits
+        key_prerequisites: [physics.mechanics.energy-diagrams-with-calculus]
+  - id: physics.mechanics.shm-differential-equation
+    name: Writing the equation of simple harmonic motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs1.simple-harmonic-conditions
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.mechanics.acceleration-as-derivative
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write force as proportional to position
+        key_prerequisites: [physics.hs1.simple-harmonic-conditions]
+      - id: kp2
+        can_do: Write the motion equation with a second derivative
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+      - id: kp3
+        can_do: Find angular frequency from the equation
+        key_prerequisites: [physics.mechanics.acceleration-as-derivative]
+      - id: kp4
+        can_do: Recognize the equation in other settings
+        key_prerequisites: [physics.hs1.simple-harmonic-conditions]
+  - id: physics.mechanics.sinusoidal-solutions
+    name: Checking sinusoidal solutions of the motion equation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.shm-differential-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: math.calc1.derivatives-of-sine-cosine
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check a cosine as a solution
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine]
+      - id: kp2
+        can_do: Check a sum of sine and cosine
+        key_prerequisites: [math.calc1.derivatives-of-sine-cosine]
+      - id: kp3
+        can_do: Find a frequency from a substitution
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+      - id: kp4
+        can_do: Explain why two constants are needed
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+  - id: physics.mechanics.initial-conditions-and-phase
+    name: Finding amplitude and phase from initial conditions
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.4
+        confidence: high
+      - topic: math.alg2.compare-sine-cosine-forms
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use a starting position and velocity
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp2
+        can_do: Find amplitude from initial conditions
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp3
+        can_do: Find phase from initial conditions
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Convert between forms
+        key_prerequisites: [math.alg2.compare-sine-cosine-forms]
+  - id: physics.mechanics.velocity-and-acceleration-of-shm
+    name: Finding velocity and acceleration in simple harmonic motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Differentiate for velocity
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp2
+        can_do: Differentiate for acceleration
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp3
+        can_do: Find greatest values
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Find values at a phase
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+  - id: physics.mechanics.energy-of-shm-with-calculus
+    name: Showing energy is constant in simple harmonic motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.velocity-and-acceleration-of-shm
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.force-from-potential
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write kinetic and potential energy against time
+        key_prerequisites: [physics.mechanics.velocity-and-acceleration-of-shm]
+      - id: kp2
+        can_do: Show total energy is constant
+        key_prerequisites: [physics.mechanics.velocity-and-acceleration-of-shm]
+      - id: kp3
+        can_do: Derive the equation of motion from energy
+        key_prerequisites: [physics.mechanics.force-from-potential]
+      - id: kp4
+        can_do: Find average kinetic energy over a period
+        key_prerequisites: [physics.mechanics.velocity-and-acceleration-of-shm]
+  - id: physics.mechanics.vertical-springs
+    name: Solving vertical springs and shifted equilibrium
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.initial-conditions-and-phase
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.mass-on-a-spring
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a shifted equilibrium
+        key_prerequisites: [physics.hs1.mass-on-a-spring]
+      - id: kp2
+        can_do: Show the motion remains simple harmonic
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+      - id: kp3
+        can_do: Find amplitude for a dropped mass
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+      - id: kp4
+        can_do: Find when a mass leaves a spring
+        key_prerequisites: [physics.mechanics.initial-conditions-and-phase]
+  - id: physics.mechanics.small-angle-approximation
+    name: Using the small-angle approximation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.25
+        confidence: high
+      - topic: math.calc1.linear-approximation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare sine and its angle
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp2
+        can_do: Estimate the error in the approximation
+        key_prerequisites: [math.calc1.linear-approximation]
+      - id: kp3
+        can_do: Use the approximation in an equation
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Apply it for cosine as well
+        key_prerequisites: [math.calc1.linear-approximation]
+  - id: physics.mechanics.pendulum-derivation
+    name: Deriving the period of a pendulum
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.small-angle-approximation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.fixed-axis-dynamics
+        encompassing: 0.25
+        confidence: high
+      - topic: physics.hs1.simple-pendulum
+        encompassing: 0.15
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write torque on a pendulum
+        key_prerequisites: [physics.mechanics.fixed-axis-dynamics]
+      - id: kp2
+        can_do: Reduce to the harmonic equation
+        key_prerequisites: [physics.mechanics.small-angle-approximation]
+      - id: kp3
+        can_do: Derive the period
+        key_prerequisites: [physics.mechanics.small-angle-approximation]
+      - id: kp4
+        can_do: Find a large-angle correction qualitatively
+        key_prerequisites: [physics.hs1.simple-pendulum]
+  - id: physics.mechanics.physical-pendulum
+    name: Finding the period of a physical pendulum
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.pendulum-derivation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.parallel-axis-theorem
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the equation for a rigid body
+        key_prerequisites: [physics.mechanics.pendulum-derivation]
+      - id: kp2
+        can_do: Find a period for a rod
+        key_prerequisites: [physics.mechanics.pendulum-derivation, physics.mechanics.parallel-axis-theorem]
+      - id: kp3
+        can_do: Find a period for a disk
+        key_prerequisites: [physics.mechanics.pendulum-derivation, physics.mechanics.parallel-axis-theorem]
+      - id: kp4
+        can_do: Find a pivot for the shortest period
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+  - id: physics.mechanics.torsion-pendulum
+    name: Finding the period of a torsion pendulum
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.pendulum-derivation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define a torsion constant
+        key_prerequisites: [physics.mechanics.pendulum-derivation]
+      - id: kp2
+        can_do: Write the motion equation
+        key_prerequisites: [physics.mechanics.pendulum-derivation]
+      - id: kp3
+        can_do: Find a period
+        key_prerequisites: [physics.mechanics.pendulum-derivation]
+      - id: kp4
+        can_do: Find a moment of inertia from a period
+        key_prerequisites: [physics.mechanics.pendulum-derivation]
+  - id: physics.mechanics.small-oscillations-about-equilibrium
+    name: Finding small oscillations about a stable equilibrium
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.equilibrium-from-potential
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand a potential near a minimum
+        key_prerequisites: [physics.mechanics.equilibrium-from-potential]
+      - id: kp2
+        can_do: Find an effective spring constant
+        key_prerequisites: [physics.mechanics.equilibrium-from-potential]
+      - id: kp3
+        can_do: Find a period about a stable point
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Find an oscillation in a molecular potential
+        key_prerequisites: [physics.mechanics.equilibrium-from-potential]
+  - id: physics.mechanics.circular-motion-link
+    name: Linking simple harmonic motion with circular motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.circular-motion-derivation
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Show a projection of circular motion
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions, physics.mechanics.circular-motion-derivation]
+      - id: kp2
+        can_do: Link angular frequency with rotation rate
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp3
+        can_do: Sketch a reference circle
+        key_prerequisites: [physics.mechanics.circular-motion-derivation]
+      - id: kp4
+        can_do: Find phase from a reference circle
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+  - id: physics.mechanics.damped-oscillator-equation
+    name: Writing the damped oscillator equation
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.shm-differential-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.mechanics.linear-drag
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add a drag term
+        key_prerequisites: [physics.mechanics.linear-drag]
+      - id: kp2
+        can_do: Check an exponential envelope solution
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+      - id: kp3
+        can_do: Find a damped frequency
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+      - id: kp4
+        can_do: Sketch damped motion
+        key_prerequisites: [physics.mechanics.shm-differential-equation]
+  - id: physics.mechanics.damping-regimes
+    name: Comparing underdamped, overdamped and critically damped motion
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.damped-oscillator-equation
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: math.calc1.derivative-of-exponential
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Tell regimes from constants
+        key_prerequisites: [physics.mechanics.damped-oscillator-equation]
+      - id: kp2
+        can_do: Find critical damping
+        key_prerequisites: [physics.mechanics.damped-oscillator-equation]
+      - id: kp3
+        can_do: Sketch all three regimes
+        key_prerequisites: [math.calc1.derivative-of-exponential]
+      - id: kp4
+        can_do: Choose a damping for a door closer
+        key_prerequisites: [physics.mechanics.damped-oscillator-equation]
+  - id: physics.mechanics.energy-decay-and-quality
+    name: Finding energy decay and quality factor
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.damping-regimes
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy against time
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp2
+        can_do: Define quality factor
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp3
+        can_do: Find a quality factor from decay
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp4
+        can_do: Find cycles until energy falls to a fraction
+        key_prerequisites: [physics.mechanics.damping-regimes]
+  - id: physics.mechanics.driven-oscillator
+    name: Finding the response of a driven oscillator
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.damping-regimes
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs1.damping-and-resonance
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add a driving force
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp2
+        can_do: Check a steady-state solution
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp3
+        can_do: Find amplitude against driving frequency
+        key_prerequisites: [physics.mechanics.damping-regimes]
+      - id: kp4
+        can_do: Find phase against driving frequency
+        key_prerequisites: [physics.hs1.damping-and-resonance]
+  - id: physics.mechanics.resonance-curves
+    name: Reading resonance curves
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.driven-oscillator
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.mechanics.energy-decay-and-quality
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find a resonance peak
+        key_prerequisites: [physics.mechanics.driven-oscillator]
+      - id: kp2
+        can_do: Find a peak's width
+        key_prerequisites: [physics.mechanics.energy-decay-and-quality]
+      - id: kp3
+        can_do: Relate width to quality factor
+        key_prerequisites: [physics.mechanics.energy-decay-and-quality]
+      - id: kp4
+        can_do: Explain bridge and tuning examples
+        key_prerequisites: [physics.mechanics.driven-oscillator]
+  - id: physics.mechanics.coupled-oscillators
+    name: Describing coupled oscillators and normal modes
+    subject: physics
+    course: physics.mechanics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.mechanics.sinusoidal-solutions
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.systems-with-constraints
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations for two coupled masses
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions, physics.mechanics.systems-with-constraints]
+      - id: kp2
+        can_do: Find two normal modes
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp3
+        can_do: Find a mode's frequency
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+      - id: kp4
+        can_do: Describe energy moving between masses
+        key_prerequisites: [physics.mechanics.systems-with-constraints]
