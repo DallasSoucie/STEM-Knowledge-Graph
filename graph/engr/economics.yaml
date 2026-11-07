@@ -1,0 +1,821 @@
+course: engr.economics
+topics:
+  - id: engr.economics.cash-flow-diagrams
+    name: Drawing cash flow diagrams
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.alg2.compound-interest-periods
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw cash flow diagrams
+        key_prerequisites: [math.alg2.compound-interest-periods]
+      - id: kp2
+        can_do: Use end-of-period conventions
+        key_prerequisites: [math.alg2.compound-interest-periods]
+      - id: kp3
+        can_do: Tell receipts from disbursements
+        key_prerequisites: [math.alg2.compound-interest-periods]
+      - id: kp4
+        can_do: Draw diagrams from word problems
+        key_prerequisites: [math.alg2.compound-interest-periods]
+  - id: engr.economics.simple-and-compound-interest
+    name: Comparing simple and compound interest
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cash-flow-diagrams
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find simple interest
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp2
+        can_do: Find compound interest
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp3
+        can_do: Compare simple and compound growth
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp4
+        can_do: Find time to double money
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+  - id: engr.economics.single-payment-factors
+    name: Using single-payment factors
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.simple-and-compound-interest
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find future worth of a present amount
+        key_prerequisites: [engr.economics.simple-and-compound-interest]
+      - id: kp2
+        can_do: Find present worth of a future amount
+        key_prerequisites: [engr.economics.simple-and-compound-interest]
+      - id: kp3
+        can_do: Use factor notation and tables
+        key_prerequisites: [engr.economics.simple-and-compound-interest]
+      - id: kp4
+        can_do: Solve for an unknown rate or time
+        key_prerequisites: [engr.economics.simple-and-compound-interest]
+  - id: engr.economics.uniform-series-factors
+    name: Using uniform series factors
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.single-payment-factors
+        encompassing: 0.6
+        confidence: high
+      - topic: math.precalc.annuities-loan-series
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find present worth of a uniform series
+        key_prerequisites: [engr.economics.single-payment-factors, math.precalc.annuities-loan-series]
+      - id: kp2
+        can_do: Find future worth of a uniform series
+        key_prerequisites: [engr.economics.single-payment-factors]
+      - id: kp3
+        can_do: Find a uniform series from a present amount
+        key_prerequisites: [engr.economics.single-payment-factors, math.precalc.annuities-loan-series]
+      - id: kp4
+        can_do: Find sinking fund payments
+        key_prerequisites: [engr.economics.single-payment-factors]
+  - id: engr.economics.gradient-series
+    name: Using arithmetic and geometric gradients
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.uniform-series-factors
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.alg2.geometric-series-finite
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find present worth of arithmetic gradients
+        key_prerequisites: [engr.economics.uniform-series-factors]
+      - id: kp2
+        can_do: Find present worth of geometric gradients
+        key_prerequisites: [engr.economics.uniform-series-factors, math.alg2.geometric-series-finite]
+      - id: kp3
+        can_do: Convert gradients to uniform series
+        key_prerequisites: [engr.economics.uniform-series-factors]
+      - id: kp4
+        can_do: Combine gradients with base amounts
+        key_prerequisites: [engr.economics.uniform-series-factors]
+  - id: engr.economics.nominal-and-effective-rates
+    name: Converting nominal and effective rates
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.single-payment-factors
+        encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.effective-annual-rate
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert nominal to effective rates
+        key_prerequisites: [engr.economics.single-payment-factors, math.alg2.effective-annual-rate]
+      - id: kp2
+        can_do: Match compounding and payment periods
+        key_prerequisites: [engr.economics.single-payment-factors]
+      - id: kp3
+        can_do: Use effective rates per payment period
+        key_prerequisites: [engr.economics.single-payment-factors, math.alg2.effective-annual-rate]
+      - id: kp4
+        can_do: Compare loans with different compounding
+        key_prerequisites: [math.alg2.effective-annual-rate]
+  - id: engr.economics.continuous-compounding-factors
+    name: Using continuous compounding factors
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.nominal-and-effective-rates
+        encompassing: 0.45
+        confidence: high
+      - topic: math.alg2.continuous-compounding
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective rates for continuous compounding
+        key_prerequisites: [engr.economics.nominal-and-effective-rates, math.alg2.continuous-compounding]
+      - id: kp2
+        can_do: Use continuous compounding factors
+        key_prerequisites: [math.alg2.continuous-compounding]
+      - id: kp3
+        can_do: Compare continuous and discrete compounding
+        key_prerequisites: [engr.economics.nominal-and-effective-rates]
+      - id: kp4
+        can_do: Solve problems with continuous flows
+        key_prerequisites: [math.alg2.continuous-compounding]
+  - id: engr.economics.shifted-cash-flows
+    name: Finding equivalence for shifted cash flows
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.gradient-series
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find equivalence for deferred series
+        key_prerequisites: [engr.economics.gradient-series]
+      - id: kp2
+        can_do: Find equivalence for series ending early
+        key_prerequisites: [engr.economics.gradient-series]
+      - id: kp3
+        can_do: Combine shifted series and single amounts
+        key_prerequisites: [engr.economics.gradient-series]
+      - id: kp4
+        can_do: Solve for an unknown amount in equivalence
+        key_prerequisites: [engr.economics.gradient-series]
+  - id: engr.economics.loans-and-amortization
+    name: Building loan amortization schedules
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.uniform-series-factors
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find loan payments
+        key_prerequisites: [engr.economics.uniform-series-factors]
+      - id: kp2
+        can_do: Build amortization schedules
+        key_prerequisites: [engr.economics.uniform-series-factors]
+      - id: kp3
+        can_do: Find remaining balance
+        key_prerequisites: [engr.economics.uniform-series-factors]
+      - id: kp4
+        can_do: Split payments into interest and principal
+        key_prerequisites: [engr.economics.uniform-series-factors]
+  - id: engr.economics.present-worth
+    name: Comparing alternatives by present worth
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.shifted-cash-flows
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find present worth of an alternative
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp2
+        can_do: Compare equal-life alternatives
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp3
+        can_do: Choose between mutually exclusive alternatives
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp4
+        can_do: Include salvage values
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+  - id: engr.economics.unequal-lives
+    name: Comparing alternatives with unequal lives
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare by least common multiple of lives
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Compare with a study period
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Handle repeatability assumptions
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp4
+        can_do: Choose a comparison method
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.future-and-annual-worth
+    name: Comparing by future and annual worth
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find annual worth of an alternative
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Find capital recovery cost
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Compare by future worth
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp4
+        can_do: Compare by annual worth
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.capitalized-cost
+    name: Finding capitalized cost
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.future-and-annual-worth
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find capitalized cost of perpetual projects
+        key_prerequisites: [engr.economics.future-and-annual-worth]
+      - id: kp2
+        can_do: Include periodic replacements
+        key_prerequisites: [engr.economics.future-and-annual-worth]
+      - id: kp3
+        can_do: Compare long-lived alternatives
+        key_prerequisites: [engr.economics.future-and-annual-worth]
+      - id: kp4
+        can_do: Find annual worth of perpetual projects
+        key_prerequisites: [engr.economics.future-and-annual-worth]
+  - id: engr.economics.rate-of-return
+    name: Finding an internal rate of return
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.6
+        confidence: high
+      - topic: math.alg1.solving-by-table-technology
+        encompassing: 0.2
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the rate of return equation
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Solve for rate of return by trial
+        key_prerequisites: [engr.economics.present-worth, math.alg1.solving-by-table-technology]
+      - id: kp3
+        can_do: Interpret rate of return
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp4
+        can_do: Recognize multiple rates of return
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.incremental-rate-of-return
+    name: Comparing alternatives by incremental rate of return
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.rate-of-return
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find incremental cash flows
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp2
+        can_do: Find incremental rate of return
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp3
+        can_do: Compare several alternatives incrementally
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp4
+        can_do: Explain why overall rates mislead
+        key_prerequisites: [engr.economics.rate-of-return]
+  - id: engr.economics.benefit-cost-ratio
+    name: Using benefit-cost ratios
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find benefit-cost ratios
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Handle disbenefits
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Compare alternatives incrementally by benefit-cost
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp4
+        can_do: Evaluate public projects
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.payback-period
+    name: Finding payback periods
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.shifted-cash-flows
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find simple payback period
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp2
+        can_do: Find discounted payback period
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp3
+        can_do: Explain limits of payback
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+      - id: kp4
+        can_do: Compare projects by payback
+        key_prerequisites: [engr.economics.shifted-cash-flows]
+  - id: engr.economics.minimum-attractive-rate
+    name: Choosing a minimum attractive rate of return
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.rate-of-return
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose a minimum attractive rate of return
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp2
+        can_do: Relate it to cost of capital
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp3
+        can_do: Include risk in the rate
+        key_prerequisites: [engr.economics.rate-of-return]
+      - id: kp4
+        can_do: Test decisions at different rates
+        key_prerequisites: [engr.economics.rate-of-return]
+  - id: engr.economics.cost-types
+    name: Classifying fixed, variable, sunk and incremental costs
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cash-flow-diagrams
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify fixed and variable costs
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp2
+        can_do: Identify sunk and opportunity costs
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp3
+        can_do: Find incremental costs
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp4
+        can_do: Find average and marginal costs
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+  - id: engr.economics.break-even-analysis
+    name: Finding break-even points
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cost-types
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find break-even quantity
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp2
+        can_do: Find break-even between alternatives
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp3
+        can_do: Find profit at a given output
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp4
+        can_do: Plot cost and revenue lines
+        key_prerequisites: [engr.economics.cost-types]
+  - id: engr.economics.replacement-analysis
+    name: Deciding when to replace equipment
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.future-and-annual-worth
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.cost-types
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up defender and challenger comparisons
+        key_prerequisites: [engr.economics.future-and-annual-worth, engr.economics.cost-types]
+      - id: kp2
+        can_do: Ignore sunk costs in replacement
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp3
+        can_do: Compare by annual worth
+        key_prerequisites: [engr.economics.future-and-annual-worth]
+      - id: kp4
+        can_do: Decide when to replace
+        key_prerequisites: [engr.economics.future-and-annual-worth, engr.economics.cost-types]
+  - id: engr.economics.economic-life
+    name: Finding the economic service life
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.replacement-analysis
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find economic service life
+        key_prerequisites: [engr.economics.replacement-analysis]
+      - id: kp2
+        can_do: Find marginal costs by year
+        key_prerequisites: [engr.economics.replacement-analysis]
+      - id: kp3
+        can_do: Plot total annual cost against life
+        key_prerequisites: [engr.economics.replacement-analysis]
+      - id: kp4
+        can_do: Include rising operating costs
+        key_prerequisites: [engr.economics.replacement-analysis]
+  - id: engr.economics.make-or-buy
+    name: Analyzing make-or-buy and lease-or-buy decisions
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.cost-types
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare making and buying a part
+        key_prerequisites: [engr.economics.present-worth, engr.economics.cost-types]
+      - id: kp2
+        can_do: Compare leasing and buying
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Include intangible factors
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp4
+        can_do: Find indifference volume
+        key_prerequisites: [engr.economics.present-worth, engr.economics.cost-types]
+  - id: engr.economics.cost-estimation
+    name: Estimating costs with indices and scaling
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cost-types
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Estimate costs with unit methods
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp2
+        can_do: Scale costs with capacity exponents
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp3
+        can_do: Update costs with cost indices
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp4
+        can_do: Estimate costs with learning curves
+        key_prerequisites: [engr.economics.cost-types]
+  - id: engr.economics.life-cycle-cost
+    name: Finding life-cycle cost
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.economics.cost-estimation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List life-cycle cost phases
+        key_prerequisites: [engr.economics.cost-estimation]
+      - id: kp2
+        can_do: Find life-cycle cost by present worth
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Compare designs by life-cycle cost
+        key_prerequisites: [engr.economics.present-worth, engr.economics.cost-estimation]
+      - id: kp4
+        can_do: Include disposal costs
+        key_prerequisites: [engr.economics.cost-estimation]
+  - id: engr.economics.depreciation-methods
+    name: Finding depreciation by straight-line and declining balance
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cost-types
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find straight-line depreciation
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp2
+        can_do: Find declining-balance depreciation
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp3
+        can_do: Find tax depreciation from schedules
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp4
+        can_do: Find book value
+        key_prerequisites: [engr.economics.cost-types]
+  - id: engr.economics.after-tax-cash-flows
+    name: Building after-tax cash flows
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.depreciation-methods
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.present-worth
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find taxable income
+        key_prerequisites: [engr.economics.depreciation-methods]
+      - id: kp2
+        can_do: Build after-tax cash flows
+        key_prerequisites: [engr.economics.depreciation-methods, engr.economics.present-worth]
+      - id: kp3
+        can_do: Include depreciation tax shields
+        key_prerequisites: [engr.economics.depreciation-methods]
+      - id: kp4
+        can_do: Compare alternatives after tax
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.inflation
+    name: Adjusting cash flows for inflation
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.nominal-and-effective-rates
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert between actual and constant dollars
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Find inflation-adjusted interest rates
+        key_prerequisites: [engr.economics.nominal-and-effective-rates]
+      - id: kp3
+        can_do: Compare alternatives with inflation
+        key_prerequisites: [engr.economics.present-worth, engr.economics.nominal-and-effective-rates]
+      - id: kp4
+        can_do: Include inflation in present worth
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.sensitivity-analysis
+    name: Testing sensitivity of a decision
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Vary one parameter at a time
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp2
+        can_do: Find break-even values of parameters
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Draw spider plots
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp4
+        can_do: Identify decisive parameters
+        key_prerequisites: [engr.economics.present-worth]
+  - id: engr.economics.expected-value-decisions
+    name: Making decisions with expected value
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.present-worth
+        encompassing: 0.45
+        confidence: high
+      - topic: math.stats.random-variables
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected present worth
+        key_prerequisites: [engr.economics.present-worth, math.stats.random-variables]
+      - id: kp2
+        can_do: Choose alternatives by expected value
+        key_prerequisites: [engr.economics.present-worth]
+      - id: kp3
+        can_do: Find variance of outcomes
+        key_prerequisites: [math.stats.random-variables]
+      - id: kp4
+        can_do: Weigh risk against expected value
+        key_prerequisites: [engr.economics.present-worth, math.stats.random-variables]
+  - id: engr.economics.decision-trees
+    name: Analyzing decisions with decision trees
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.expected-value-decisions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw decision trees
+        key_prerequisites: [engr.economics.expected-value-decisions]
+      - id: kp2
+        can_do: Roll back expected values
+        key_prerequisites: [engr.economics.expected-value-decisions]
+      - id: kp3
+        can_do: Find value of information
+        key_prerequisites: [engr.economics.expected-value-decisions]
+      - id: kp4
+        can_do: Choose decisions over several stages
+        key_prerequisites: [engr.economics.expected-value-decisions]
+  - id: engr.economics.critical-path-method
+    name: Scheduling with the critical path method
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cash-flow-diagrams
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw activity networks
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp2
+        can_do: Find early and late start times
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp3
+        can_do: Find the critical path
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+      - id: kp4
+        can_do: Find project duration
+        key_prerequisites: [engr.economics.cash-flow-diagrams]
+  - id: engr.economics.float-and-crashing
+    name: Finding float and crashing a schedule
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.critical-path-method
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find total and free float
+        key_prerequisites: [engr.economics.critical-path-method]
+      - id: kp2
+        can_do: Crash activities to shorten a project
+        key_prerequisites: [engr.economics.critical-path-method]
+      - id: kp3
+        can_do: Find the cheapest crashing plan
+        key_prerequisites: [engr.economics.critical-path-method]
+      - id: kp4
+        can_do: Level resources
+        key_prerequisites: [engr.economics.critical-path-method]
+  - id: engr.economics.earned-value
+    name: Tracking projects with earned value
+    subject: engr
+    course: engr.economics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.economics.critical-path-method
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.cost-estimation
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find planned, earned and actual value
+        key_prerequisites: [engr.economics.critical-path-method]
+      - id: kp2
+        can_do: Find cost and schedule variances
+        key_prerequisites: [engr.economics.critical-path-method, engr.economics.cost-estimation]
+      - id: kp3
+        can_do: Find performance indices
+        key_prerequisites: [engr.economics.critical-path-method, engr.economics.cost-estimation]
+      - id: kp4
+        can_do: Forecast cost at completion
+        key_prerequisites: [engr.economics.cost-estimation]
