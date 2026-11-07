@@ -2181,3 +2181,696 @@ topics:
       - id: kp4
         can_do: Compare actual and maximum work
         key_prerequisites: [physics.waves-thermo-optics.entropy-of-the-universe]
+  - id: physics.waves-thermo-optics.fermat-principle
+    name: Deriving reflection and refraction from least time
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.calc1.optimization-distance-time
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write travel time across a boundary
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Minimize time to derive Snell's law
+        key_prerequisites: [physics.hs2.snells-law, math.calc1.optimization-distance-time]
+      - id: kp3
+        can_do: Derive the law of reflection from least time
+        key_prerequisites: [math.calc1.optimization-distance-time]
+      - id: kp4
+        can_do: Explain mirages with varying index
+        key_prerequisites: [physics.hs2.snells-law]
+  - id: physics.waves-thermo-optics.mirror-equation-derivation
+    name: Deriving the mirror equation with small angles
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.mirror-equation
+        encompassing: 0.35
+        confidence: medium
+      - topic: physics.mechanics.small-angle-approximation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace rays from a point to a spherical mirror
+        key_prerequisites: [physics.hs2.mirror-equation]
+      - id: kp2
+        can_do: Apply small-angle approximations
+        key_prerequisites: [physics.mechanics.small-angle-approximation]
+      - id: kp3
+        can_do: Derive the mirror equation
+        key_prerequisites: [physics.hs2.mirror-equation, physics.mechanics.small-angle-approximation]
+      - id: kp4
+        can_do: Relate focal length to radius
+        key_prerequisites: [physics.hs2.mirror-equation]
+  - id: physics.waves-thermo-optics.refraction-at-a-spherical-surface
+    name: Finding images from one refracting surface
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.4
+        confidence: medium
+      - topic: physics.mechanics.small-angle-approximation
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Trace refraction at a curved surface
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Apply small angles to refraction
+        key_prerequisites: [physics.mechanics.small-angle-approximation]
+      - id: kp3
+        can_do: Derive the single-surface equation
+        key_prerequisites: [physics.hs2.snells-law, physics.mechanics.small-angle-approximation]
+      - id: kp4
+        can_do: Find apparent depth below a curved surface
+        key_prerequisites: [physics.hs2.snells-law]
+  - id: physics.waves-thermo-optics.lensmaker-equation
+    name: Deriving the lensmaker's equation
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.refraction-at-a-spherical-surface
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.hs2.thin-lens-equation
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Treat a thin lens as two surfaces
+        key_prerequisites: [physics.waves-thermo-optics.refraction-at-a-spherical-surface]
+      - id: kp2
+        can_do: Derive the lensmaker's equation
+        key_prerequisites: [physics.waves-thermo-optics.refraction-at-a-spherical-surface]
+      - id: kp3
+        can_do: Find focal length from radii and index
+        key_prerequisites: [physics.waves-thermo-optics.refraction-at-a-spherical-surface, physics.hs2.thin-lens-equation]
+      - id: kp4
+        can_do: Find how focal length changes in water
+        key_prerequisites: [physics.waves-thermo-optics.refraction-at-a-spherical-surface]
+  - id: physics.waves-thermo-optics.multiple-lens-systems
+    name: Tracing images through multi-lens systems
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.lensmaker-equation
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.lens-combinations
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the first image as the second object
+        key_prerequisites: [physics.hs2.lens-combinations]
+      - id: kp2
+        can_do: Handle virtual objects
+        key_prerequisites: [physics.waves-thermo-optics.lensmaker-equation]
+      - id: kp3
+        can_do: Find overall magnification
+        key_prerequisites: [physics.hs2.lens-combinations]
+      - id: kp4
+        can_do: Find the effective focal length of two thin lenses
+        key_prerequisites: [physics.waves-thermo-optics.lensmaker-equation]
+  - id: physics.waves-thermo-optics.ray-transfer-matrices
+    name: Using ray transfer matrices
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.multiple-lens-systems
+        encompassing: 0.4
+        confidence: high
+      - topic: math.precalc.matrix-transformations
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write matrices for travel and a thin lens
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems, math.precalc.matrix-transformations]
+      - id: kp2
+        can_do: Multiply matrices for a system
+        key_prerequisites: [math.precalc.matrix-transformations]
+      - id: kp3
+        can_do: Find focal length from a system matrix
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp4
+        can_do: Find image location from a system matrix
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+  - id: physics.waves-thermo-optics.aberrations
+    name: Describing spherical and chromatic aberration
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.lensmaker-equation
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.dispersion-and-prisms
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Describe spherical aberration
+        key_prerequisites: [physics.waves-thermo-optics.lensmaker-equation]
+      - id: kp2
+        can_do: Describe chromatic aberration
+        key_prerequisites: [physics.hs2.dispersion-and-prisms]
+      - id: kp3
+        can_do: Explain how an achromatic doublet works
+        key_prerequisites: [physics.waves-thermo-optics.lensmaker-equation, physics.hs2.dispersion-and-prisms]
+      - id: kp4
+        can_do: Explain how apertures reduce aberrations
+        key_prerequisites: [physics.waves-thermo-optics.lensmaker-equation]
+  - id: physics.waves-thermo-optics.magnifiers-and-microscopes
+    name: Finding magnification of magnifiers and microscopes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.multiple-lens-systems
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.optical-instruments
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular magnification of a magnifier
+        key_prerequisites: [physics.hs2.optical-instruments]
+      - id: kp2
+        can_do: Find microscope magnification from two lenses
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp3
+        can_do: Find tube length for a given magnification
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp4
+        can_do: Compare magnifier settings for a relaxed eye
+        key_prerequisites: [physics.hs2.optical-instruments]
+  - id: physics.waves-thermo-optics.telescopes
+    name: Finding angular magnification of telescopes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.multiple-lens-systems
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find angular magnification of a refracting telescope
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp2
+        can_do: Find telescope length
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp3
+        can_do: Explain why the image is inverted
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+      - id: kp4
+        can_do: Compare refracting and reflecting telescopes
+        key_prerequisites: [physics.waves-thermo-optics.multiple-lens-systems]
+  - id: physics.waves-thermo-optics.prism-minimum-deviation
+    name: Finding minimum deviation in a prism
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.dispersion-and-prisms
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: physics.hs2.snells-law
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find deviation through a prism
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Find the minimum deviation condition
+        key_prerequisites: [physics.hs2.dispersion-and-prisms]
+      - id: kp3
+        can_do: Find index from minimum deviation
+        key_prerequisites: [physics.hs2.dispersion-and-prisms, physics.hs2.snells-law]
+      - id: kp4
+        can_do: Find dispersion of colours by a prism
+        key_prerequisites: [physics.hs2.dispersion-and-prisms]
+  - id: physics.waves-thermo-optics.fiber-acceptance-angle
+    name: Finding acceptance angle and modal spread in fibers
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.hs2.optical-fibres
+        encompassing: 0.4
+        confidence: medium
+    encompassed:
+      - topic: physics.hs2.total-internal-reflection
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the critical angle at the core boundary
+        key_prerequisites: [physics.hs2.total-internal-reflection]
+      - id: kp2
+        can_do: Find the acceptance angle
+        key_prerequisites: [physics.hs2.optical-fibres, physics.hs2.total-internal-reflection]
+      - id: kp3
+        can_do: Find numerical aperture
+        key_prerequisites: [physics.hs2.optical-fibres]
+      - id: kp4
+        can_do: Find path length spread between rays
+        key_prerequisites: [physics.hs2.optical-fibres]
+  - id: physics.waves-thermo-optics.huygens-principle
+    name: Using Huygens' principle
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.waves-in-two-and-three-dimensions
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.light-as-a-wave-evidence
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Build a new wavefront from wavelets
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp2
+        can_do: Derive reflection from wavelets
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp3
+        can_do: Derive refraction from wavelets
+        key_prerequisites: [physics.waves-thermo-optics.waves-in-two-and-three-dimensions]
+      - id: kp4
+        can_do: Explain spreading through an opening
+        key_prerequisites: [physics.hs2.light-as-a-wave-evidence]
+  - id: physics.waves-thermo-optics.two-slit-intensity
+    name: Deriving two-slit intensity
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.double-slit
+        encompassing: 0.35
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the phase difference from path difference
+        key_prerequisites: [physics.hs2.double-slit]
+      - id: kp2
+        can_do: Add the two waves for intensity
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp3
+        can_do: Find intensity at a screen position
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves, physics.hs2.double-slit]
+      - id: kp4
+        can_do: Find fringe spacing
+        key_prerequisites: [physics.hs2.double-slit]
+  - id: physics.waves-thermo-optics.phasor-addition-of-light
+    name: Adding light waves with phasors
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.two-slit-intensity
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.waves-thermo-optics.complex-wave-notation
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw phasors for two waves
+        key_prerequisites: [physics.waves-thermo-optics.two-slit-intensity]
+      - id: kp2
+        can_do: Add phasors for three slits
+        key_prerequisites: [physics.waves-thermo-optics.two-slit-intensity]
+      - id: kp3
+        can_do: Find resulting amplitude geometrically
+        key_prerequisites: [physics.waves-thermo-optics.complex-wave-notation]
+      - id: kp4
+        can_do: Find positions of zero intensity
+        key_prerequisites: [physics.waves-thermo-optics.two-slit-intensity]
+  - id: physics.waves-thermo-optics.multi-slit-intensity
+    name: Finding intensity from many slits
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.phasor-addition-of-light
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.diffraction-gratings
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Add phasors for many slits
+        key_prerequisites: [physics.waves-thermo-optics.phasor-addition-of-light]
+      - id: kp2
+        can_do: Find principal maxima
+        key_prerequisites: [physics.hs2.diffraction-gratings]
+      - id: kp3
+        can_do: Find secondary maxima and minima
+        key_prerequisites: [physics.waves-thermo-optics.phasor-addition-of-light]
+      - id: kp4
+        can_do: Find how peak width shrinks with more slits
+        key_prerequisites: [physics.waves-thermo-optics.phasor-addition-of-light]
+  - id: physics.waves-thermo-optics.grating-resolving-power
+    name: Finding resolving power of gratings
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.multi-slit-intensity
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define resolving power
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp2
+        can_do: Find resolving power from order and slit number
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp3
+        can_do: Find whether two lines are resolved
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp4
+        can_do: Find grating dispersion
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+  - id: physics.waves-thermo-optics.single-slit-intensity
+    name: Deriving single-slit intensity by integration
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.phasor-addition-of-light
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.huygens-principle
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.hs2.single-slit
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Divide a slit into many sources
+        key_prerequisites: [physics.waves-thermo-optics.huygens-principle]
+      - id: kp2
+        can_do: Integrate phasors across the slit
+        key_prerequisites: [physics.waves-thermo-optics.phasor-addition-of-light]
+      - id: kp3
+        can_do: Find the intensity pattern
+        key_prerequisites: [physics.waves-thermo-optics.phasor-addition-of-light, physics.waves-thermo-optics.huygens-principle]
+      - id: kp4
+        can_do: Find the width of the central maximum
+        key_prerequisites: [physics.hs2.single-slit]
+  - id: physics.waves-thermo-optics.combined-slit-patterns
+    name: Combining diffraction and interference patterns
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.single-slit-intensity
+        encompassing: 0.5
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.two-slit-intensity
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Multiply interference and diffraction patterns
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity, physics.waves-thermo-optics.two-slit-intensity]
+      - id: kp2
+        can_do: Find missing orders
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity, physics.waves-thermo-optics.two-slit-intensity]
+      - id: kp3
+        can_do: Count fringes inside the central peak
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity]
+      - id: kp4
+        can_do: Find slit width from missing orders
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity]
+  - id: physics.waves-thermo-optics.circular-aperture-and-rayleigh
+    name: Using the Rayleigh criterion
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.single-slit-intensity
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.resolution-limit
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the angle of the first dark ring
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity]
+      - id: kp2
+        can_do: Apply the Rayleigh criterion
+        key_prerequisites: [physics.hs2.resolution-limit]
+      - id: kp3
+        can_do: Find resolution of a telescope
+        key_prerequisites: [physics.waves-thermo-optics.single-slit-intensity]
+      - id: kp4
+        can_do: Find resolution of the eye
+        key_prerequisites: [physics.hs2.resolution-limit]
+  - id: physics.waves-thermo-optics.thin-films-with-phase-shifts
+    name: Analyzing thin films with phase changes
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.reflection-at-a-boundary
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.thin-film-interference
+        encompassing: 0.4
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find phase shifts on reflection
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary]
+      - id: kp2
+        can_do: Find path difference in a film
+        key_prerequisites: [physics.hs2.thin-film-interference]
+      - id: kp3
+        can_do: Find film thickness for constructive reflection
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary, physics.hs2.thin-film-interference]
+      - id: kp4
+        can_do: Design an antireflection coating
+        key_prerequisites: [physics.waves-thermo-optics.reflection-at-a-boundary, physics.hs2.thin-film-interference]
+  - id: physics.waves-thermo-optics.michelson-interferometer
+    name: Using the Michelson interferometer
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.thin-films-with-phase-shifts
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find path difference between the arms
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp2
+        can_do: Count fringes as a mirror moves
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp3
+        can_do: Find a wavelength from fringe counts
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp4
+        can_do: Find index of a gas from fringe shifts
+        key_prerequisites: [physics.waves-thermo-optics.thin-films-with-phase-shifts]
+  - id: physics.waves-thermo-optics.coherence
+    name: Describing coherence length and time
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-packets
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.michelson-interferometer
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define coherence length
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets]
+      - id: kp2
+        can_do: Relate coherence length to bandwidth
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets]
+      - id: kp3
+        can_do: Find when fringes vanish in an interferometer
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp4
+        can_do: Compare coherence of lasers and lamps
+        key_prerequisites: [physics.waves-thermo-optics.wave-packets]
+  - id: physics.waves-thermo-optics.x-ray-diffraction
+    name: Using Bragg's law for crystal diffraction
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.multi-slit-intensity
+        encompassing: 0.5
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Bragg's law
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp2
+        can_do: Find plane spacing from a diffraction angle
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp3
+        can_do: Find allowed orders
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+      - id: kp4
+        can_do: Find a wavelength from a crystal pattern
+        key_prerequisites: [physics.waves-thermo-optics.multi-slit-intensity]
+  - id: physics.waves-thermo-optics.polarization-states
+    name: Describing linear, circular and elliptical polarization
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.superposing-sinusoidal-waves
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.hs2.polarization
+        encompassing: 0.25
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write linear polarization as two components
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp2
+        can_do: Write circular polarization with a phase shift
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp3
+        can_do: Describe elliptical polarization
+        key_prerequisites: [physics.waves-thermo-optics.superposing-sinusoidal-waves]
+      - id: kp4
+        can_do: Find the state from two components
+        key_prerequisites: [physics.hs2.polarization]
+  - id: physics.waves-thermo-optics.malus-law-and-polarizers
+    name: Using Malus's law with several polarizers
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.polarization-states
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply Malus's law
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp2
+        can_do: Find intensity through several polarizers
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp3
+        can_do: Find intensity for unpolarized light
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp4
+        can_do: Find polarizer angles for a given output
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+  - id: physics.waves-thermo-optics.brewster-angle
+    name: Finding Brewster's angle
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.polarization-states
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.hs2.snells-law
+        encompassing: 0.3
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find Brewster's angle from indices
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp2
+        can_do: Explain polarization by reflection
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp3
+        can_do: Find the refraction angle at Brewster's angle
+        key_prerequisites: [physics.hs2.snells-law]
+      - id: kp4
+        can_do: Explain polarized sunglasses
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+  - id: physics.waves-thermo-optics.wave-plates
+    name: Using quarter-wave and half-wave plates
+    subject: physics
+    course: physics.waves-thermo-optics
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.polarization-states
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find phase shift of a quarter-wave plate
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp2
+        can_do: Turn linear into circular polarization
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp3
+        can_do: Rotate polarization with a half-wave plate
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
+      - id: kp4
+        can_do: Find plate thickness for a wavelength
+        key_prerequisites: [physics.waves-thermo-optics.polarization-states]
