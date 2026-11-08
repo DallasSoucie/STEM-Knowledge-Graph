@@ -1,0 +1,1114 @@
+course: physics.optics
+topics:
+  - id: physics.optics.jones-calculus
+    name: Using Jones vectors and matrices
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.wave-plates
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.polarization-of-em-waves
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write Jones vectors for polarization states
+        key_prerequisites: [physics.em-theory.polarization-of-em-waves]
+      - id: kp2
+        can_do: Write Jones matrices for polarizers and wave plates
+        key_prerequisites: [physics.waves-thermo-optics.wave-plates]
+      - id: kp3
+        can_do: Find output polarization through a series of elements
+        key_prerequisites: [physics.waves-thermo-optics.wave-plates, physics.em-theory.polarization-of-em-waves]
+      - id: kp4
+        can_do: Find transmitted intensity with Jones calculus
+        key_prerequisites: [physics.waves-thermo-optics.wave-plates, physics.em-theory.polarization-of-em-waves]
+  - id: physics.optics.eigenpolarizations
+    name: Finding eigenpolarizations of optical elements
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.jones-calculus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find eigenpolarizations of optical elements
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp2
+        can_do: Find phase delays from eigenvalues
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp3
+        can_do: Find Jones matrices of rotated elements
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp4
+        can_do: Design an element for a given eigenpolarization
+        key_prerequisites: [physics.optics.jones-calculus]
+  - id: physics.optics.stokes-parameters
+    name: Using Stokes parameters and the Poincare sphere
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.jones-calculus
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Stokes parameters of polarized light
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp2
+        can_do: Measure Stokes parameters with a polarizer and wave plate
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp3
+        can_do: Use the Poincare sphere
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp4
+        can_do: Use Mueller matrices
+        key_prerequisites: [physics.optics.jones-calculus]
+  - id: physics.optics.partial-polarization
+    name: Describing partially polarized light
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.stokes-parameters
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find degrees of polarization
+        key_prerequisites: [physics.optics.stokes-parameters]
+      - id: kp2
+        can_do: Split light into polarized and unpolarized parts
+        key_prerequisites: [physics.optics.stokes-parameters]
+      - id: kp3
+        can_do: Find degrees of polarization after elements
+        key_prerequisites: [physics.optics.stokes-parameters]
+      - id: kp4
+        can_do: Explain depolarization
+        key_prerequisites: [physics.optics.stokes-parameters]
+  - id: physics.optics.birefringence
+    name: Propagating light in uniaxial crystals
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-linear-media
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe uniaxial crystals
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp2
+        can_do: Find ordinary and extraordinary indices
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp3
+        can_do: Find walk-off of extraordinary beams
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+      - id: kp4
+        can_do: Design wave plates from crystal indices
+        key_prerequisites: [physics.em-theory.waves-in-linear-media]
+  - id: physics.optics.optical-activity
+    name: Using optical activity and Faraday rotation
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.jones-calculus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe optical rotation
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp2
+        can_do: Model rotation with circular birefringence
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp3
+        can_do: Find rotation angles from specific rotation
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp4
+        can_do: Compare optical activity with Faraday rotation
+        key_prerequisites: [physics.optics.jones-calculus]
+  - id: physics.optics.electro-optic-modulators
+    name: Designing electro-optic modulators
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.birefringence
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.optics.jones-calculus
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the Pockels effect
+        key_prerequisites: [physics.optics.birefringence]
+      - id: kp2
+        can_do: Find half-wave voltages
+        key_prerequisites: [physics.optics.birefringence, physics.optics.jones-calculus]
+      - id: kp3
+        can_do: Design amplitude modulators
+        key_prerequisites: [physics.optics.jones-calculus]
+      - id: kp4
+        can_do: Design phase modulators
+        key_prerequisites: [physics.optics.birefringence]
+  - id: physics.optics.interferometers
+    name: Analyzing amplitude-splitting interferometers
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.michelson-interferometer
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare Michelson and Mach-Zehnder interferometers
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp2
+        can_do: Find fringe shifts from path changes
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp3
+        can_do: Measure refractive indices with interferometers
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+      - id: kp4
+        can_do: Explain Sagnac interferometers
+        key_prerequisites: [physics.waves-thermo-optics.michelson-interferometer]
+  - id: physics.optics.fabry-perot
+    name: Analyzing multiple-beam interference in a Fabry-Perot
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.interferometers
+        encompassing: 0.65
+        confidence: high
+      - topic: physics.em-theory.normal-incidence-reflection
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find transmission of a Fabry-Perot cavity
+        key_prerequisites: [physics.optics.interferometers, physics.em-theory.normal-incidence-reflection]
+      - id: kp2
+        can_do: Find the coefficient of finesse
+        key_prerequisites: [physics.em-theory.normal-incidence-reflection]
+      - id: kp3
+        can_do: Find free spectral ranges
+        key_prerequisites: [physics.optics.interferometers]
+      - id: kp4
+        can_do: Find transmission peak widths
+        key_prerequisites: [physics.optics.interferometers, physics.em-theory.normal-incidence-reflection]
+  - id: physics.optics.etalon-resolution
+    name: Finding finesse and resolving power of etalons
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.fabry-perot
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the finesse of an etalon
+        key_prerequisites: [physics.optics.fabry-perot]
+      - id: kp2
+        can_do: Find resolving power of an etalon
+        key_prerequisites: [physics.optics.fabry-perot]
+      - id: kp3
+        can_do: Compare etalons and gratings
+        key_prerequisites: [physics.optics.fabry-perot]
+      - id: kp4
+        can_do: Choose etalon spacing for a measurement
+        key_prerequisites: [physics.optics.fabry-perot]
+  - id: physics.optics.thin-film-matrices
+    name: Designing coatings with characteristic matrices
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.thin-films-with-phase-shifts
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.em-theory.fresnel-equations
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write characteristic matrices of layers
+        key_prerequisites: [physics.waves-thermo-optics.thin-films-with-phase-shifts, physics.em-theory.fresnel-equations]
+      - id: kp2
+        can_do: Find reflectance of multilayers
+        key_prerequisites: [physics.em-theory.fresnel-equations]
+      - id: kp3
+        can_do: Design antireflection coatings
+        key_prerequisites: [physics.waves-thermo-optics.thin-films-with-phase-shifts]
+      - id: kp4
+        can_do: Design dielectric mirrors
+        key_prerequisites: [physics.waves-thermo-optics.thin-films-with-phase-shifts, physics.em-theory.fresnel-equations]
+  - id: physics.optics.fourier-spectroscopy
+    name: Using Fourier transform spectroscopy
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.interferometers
+        encompassing: 0.7
+        confidence: high
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate interferograms to spectra
+        key_prerequisites: [physics.optics.interferometers, math.pde.fourier-transform-properties]
+      - id: kp2
+        can_do: Find spectral resolution from path range
+        key_prerequisites: [physics.optics.interferometers]
+      - id: kp3
+        can_do: Find sampling requirements
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp4
+        can_do: Compare Fourier and grating spectrometers
+        key_prerequisites: [physics.optics.interferometers]
+  - id: physics.optics.temporal-coherence
+    name: Finding temporal coherence from spectra
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.coherence
+        encompassing: 0.7
+        confidence: high
+      - topic: physics.optics.fourier-spectroscopy
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coherence times and lengths
+        key_prerequisites: [physics.waves-thermo-optics.coherence]
+      - id: kp2
+        can_do: Relate coherence time to bandwidth
+        key_prerequisites: [physics.waves-thermo-optics.coherence, physics.optics.fourier-spectroscopy]
+      - id: kp3
+        can_do: Find the degree of temporal coherence
+        key_prerequisites: [physics.optics.fourier-spectroscopy]
+      - id: kp4
+        can_do: Find coherence lengths of sources
+        key_prerequisites: [physics.waves-thermo-optics.coherence]
+  - id: physics.optics.fringe-visibility
+    name: Using fringe visibility
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.temporal-coherence
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fringe visibility
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp2
+        can_do: Relate visibility to coherence
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp3
+        can_do: Find visibility with unequal intensities
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp4
+        can_do: Measure coherence lengths from visibility
+        key_prerequisites: [physics.optics.temporal-coherence]
+  - id: physics.optics.spatial-coherence
+    name: Finding spatial coherence of extended sources
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.temporal-coherence
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find spatial coherence of extended sources
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp2
+        can_do: Use the van Cittert-Zernike theorem
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp3
+        can_do: Find coherence areas
+        key_prerequisites: [physics.optics.temporal-coherence]
+      - id: kp4
+        can_do: Find fringe loss with source size
+        key_prerequisites: [physics.optics.temporal-coherence]
+  - id: physics.optics.stellar-interferometry
+    name: Measuring source sizes by interferometry
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.spatial-coherence
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe Michelson stellar interferometry
+        key_prerequisites: [physics.optics.spatial-coherence]
+      - id: kp2
+        can_do: Find angular sizes of stars from fringe data
+        key_prerequisites: [physics.optics.spatial-coherence]
+      - id: kp3
+        can_do: Describe intensity interferometry
+        key_prerequisites: [physics.optics.spatial-coherence]
+      - id: kp4
+        can_do: Compare interferometer and telescope resolution
+        key_prerequisites: [physics.optics.spatial-coherence]
+  - id: physics.optics.kirchhoff-integral
+    name: Using the Fresnel-Kirchhoff diffraction integral
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.huygens-principle
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Fresnel-Kirchhoff diffraction integral
+        key_prerequisites: [physics.waves-thermo-optics.huygens-principle]
+      - id: kp2
+        can_do: Explain the obliquity factor
+        key_prerequisites: [physics.waves-thermo-optics.huygens-principle]
+      - id: kp3
+        can_do: Find conditions for Fresnel and Fraunhofer regimes
+        key_prerequisites: [physics.waves-thermo-optics.huygens-principle]
+      - id: kp4
+        can_do: Use the Fresnel number
+        key_prerequisites: [physics.waves-thermo-optics.huygens-principle]
+  - id: physics.optics.fraunhofer-fourier
+    name: Finding Fraunhofer patterns as Fourier transforms
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.kirchhoff-integral
+        encompassing: 0.7
+        confidence: high
+      - topic: math.pde.fourier-transform-properties
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show Fraunhofer patterns are Fourier transforms
+        key_prerequisites: [physics.optics.kirchhoff-integral, math.pde.fourier-transform-properties]
+      - id: kp2
+        can_do: Find patterns with the convolution theorem
+        key_prerequisites: [math.pde.fourier-transform-properties]
+      - id: kp3
+        can_do: Find patterns of arrays of apertures
+        key_prerequisites: [physics.optics.kirchhoff-integral, math.pde.fourier-transform-properties]
+      - id: kp4
+        can_do: Use Babinet's principle
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+  - id: physics.optics.aperture-patterns
+    name: Finding Fraunhofer patterns of apertures and arrays
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.fraunhofer-fourier
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find patterns of rectangular apertures
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp2
+        can_do: Find patterns of circular apertures
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp3
+        can_do: Find patterns of multiple slits
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp4
+        can_do: Find patterns of apodized apertures
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+  - id: physics.optics.fresnel-zones
+    name: Using Fresnel zones and zone plates
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.kirchhoff-integral
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Construct Fresnel zones
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp2
+        can_do: Find zone radii
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp3
+        can_do: Explain the bright spot behind a disk
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp4
+        can_do: Design zone plates
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+  - id: physics.optics.fresnel-edge-diffraction
+    name: Finding Fresnel diffraction from edges and slits
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.fresnel-zones
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Fresnel integrals
+        key_prerequisites: [physics.optics.fresnel-zones]
+      - id: kp2
+        can_do: Use the Cornu spiral
+        key_prerequisites: [physics.optics.fresnel-zones]
+      - id: kp3
+        can_do: Find edge diffraction patterns
+        key_prerequisites: [physics.optics.fresnel-zones]
+      - id: kp4
+        can_do: Find slit patterns in the Fresnel regime
+        key_prerequisites: [physics.optics.fresnel-zones]
+  - id: physics.optics.grating-spectrometers
+    name: Analyzing grating spectrometers
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.aperture-patterns
+        encompassing: 0.7
+        confidence: high
+      - topic: physics.waves-thermo-optics.grating-resolving-power
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find grating efficiency with blazing
+        key_prerequisites: [physics.optics.aperture-patterns]
+      - id: kp2
+        can_do: Find angular dispersion of gratings
+        key_prerequisites: [physics.waves-thermo-optics.grating-resolving-power]
+      - id: kp3
+        can_do: Find free spectral ranges of gratings
+        key_prerequisites: [physics.optics.aperture-patterns, physics.waves-thermo-optics.grating-resolving-power]
+      - id: kp4
+        can_do: Design a grating spectrometer
+        key_prerequisites: [physics.optics.aperture-patterns, physics.waves-thermo-optics.grating-resolving-power]
+  - id: physics.optics.lens-fourier-transform
+    name: Showing a lens performs a Fourier transform
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.fraunhofer-fourier
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show a lens forms a Fourier transform
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp2
+        can_do: Find the Fourier plane of a lens
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp3
+        can_do: Find scale factors of the transform
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+      - id: kp4
+        can_do: Describe the 4f system
+        key_prerequisites: [physics.optics.fraunhofer-fourier]
+  - id: physics.optics.spatial-filtering
+    name: Using spatial filtering in 4f systems
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.lens-fourier-transform
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use low-pass and high-pass spatial filters
+        key_prerequisites: [physics.optics.lens-fourier-transform]
+      - id: kp2
+        can_do: Remove noise with spatial filters
+        key_prerequisites: [physics.optics.lens-fourier-transform]
+      - id: kp3
+        can_do: Clean laser beams with pinholes
+        key_prerequisites: [physics.optics.lens-fourier-transform]
+      - id: kp4
+        can_do: Describe dark-field imaging
+        key_prerequisites: [physics.optics.lens-fourier-transform]
+  - id: physics.optics.coherent-transfer-function
+    name: Finding coherent transfer functions
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.spatial-filtering
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coherent transfer functions of pupils
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp2
+        can_do: Find cutoff frequencies in coherent imaging
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp3
+        can_do: Find images of gratings in coherent light
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp4
+        can_do: Explain ringing at edges
+        key_prerequisites: [physics.optics.spatial-filtering]
+  - id: physics.optics.optical-transfer-function
+    name: Finding optical transfer functions for incoherent imaging
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.coherent-transfer-function
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find optical transfer functions for incoherent imaging
+        key_prerequisites: [physics.optics.coherent-transfer-function]
+      - id: kp2
+        can_do: Find modulation transfer functions
+        key_prerequisites: [physics.optics.coherent-transfer-function]
+      - id: kp3
+        can_do: Compare coherent and incoherent cutoffs
+        key_prerequisites: [physics.optics.coherent-transfer-function]
+      - id: kp4
+        can_do: Measure MTF from images
+        key_prerequisites: [physics.optics.coherent-transfer-function]
+  - id: physics.optics.imaging-resolution
+    name: Finding resolution limits of imaging systems
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.optical-transfer-function
+        encompassing: 0.35
+        confidence: high
+      - topic: physics.waves-thermo-optics.circular-aperture-and-rayleigh
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find resolution limits from transfer functions
+        key_prerequisites: [physics.optics.optical-transfer-function, physics.waves-thermo-optics.circular-aperture-and-rayleigh]
+      - id: kp2
+        can_do: Compare resolution criteria
+        key_prerequisites: [physics.waves-thermo-optics.circular-aperture-and-rayleigh]
+      - id: kp3
+        can_do: Explain the effect of aberrations on MTF
+        key_prerequisites: [physics.optics.optical-transfer-function]
+      - id: kp4
+        can_do: Explain super-resolution methods qualitatively
+        key_prerequisites: [physics.optics.optical-transfer-function, physics.waves-thermo-optics.circular-aperture-and-rayleigh]
+  - id: physics.optics.holography
+    name: Explaining holography
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.spatial-filtering
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.optics.fringe-visibility
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Record holograms by interference
+        key_prerequisites: [physics.optics.fringe-visibility]
+      - id: kp2
+        can_do: Reconstruct images from holograms
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp3
+        can_do: Find twin images
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp4
+        can_do: Explain off-axis holography
+        key_prerequisites: [physics.optics.spatial-filtering, physics.optics.fringe-visibility]
+  - id: physics.optics.phase-contrast
+    name: Explaining phase-contrast imaging
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.spatial-filtering
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why phase objects are invisible
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp2
+        can_do: Describe Zernike phase contrast
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp3
+        can_do: Find image contrast with phase plates
+        key_prerequisites: [physics.optics.spatial-filtering]
+      - id: kp4
+        can_do: Compare phase contrast and dark field
+        key_prerequisites: [physics.optics.spatial-filtering]
+  - id: physics.optics.gaussian-beams
+    name: Describing Gaussian beams
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.kirchhoff-integral
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the Gaussian beam field
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp2
+        can_do: Find beam waist, Rayleigh range and divergence
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp3
+        can_do: Find wavefront curvature and Gouy phase
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+      - id: kp4
+        can_do: Find beam size at a distance
+        key_prerequisites: [physics.optics.kirchhoff-integral]
+  - id: physics.optics.gaussian-abcd
+    name: Propagating Gaussian beams with ABCD matrices
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.gaussian-beams
+        encompassing: 0.7
+        confidence: high
+      - topic: physics.waves-thermo-optics.ray-transfer-matrices
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the complex beam parameter
+        key_prerequisites: [physics.optics.gaussian-beams]
+      - id: kp2
+        can_do: Propagate Gaussian beams with ABCD matrices
+        key_prerequisites: [physics.optics.gaussian-beams, physics.waves-thermo-optics.ray-transfer-matrices]
+      - id: kp3
+        can_do: Find focused waist sizes
+        key_prerequisites: [physics.optics.gaussian-beams, physics.waves-thermo-optics.ray-transfer-matrices]
+      - id: kp4
+        can_do: Design beam expanders
+        key_prerequisites: [physics.waves-thermo-optics.ray-transfer-matrices]
+  - id: physics.optics.resonator-stability
+    name: Finding stability of optical resonators
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.gaussian-abcd
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stability conditions of two-mirror resonators
+        key_prerequisites: [physics.optics.gaussian-abcd]
+      - id: kp2
+        can_do: Use the stability diagram
+        key_prerequisites: [physics.optics.gaussian-abcd]
+      - id: kp3
+        can_do: Find mode waists of resonators
+        key_prerequisites: [physics.optics.gaussian-abcd]
+      - id: kp4
+        can_do: Compare confocal and plane-parallel resonators
+        key_prerequisites: [physics.optics.gaussian-abcd]
+  - id: physics.optics.resonator-modes
+    name: Finding longitudinal and transverse modes of resonators
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.resonator-stability
+        encompassing: 0.55
+        confidence: high
+      - topic: physics.optics.fabry-perot
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe transverse modes
+        key_prerequisites: [physics.optics.resonator-stability]
+      - id: kp2
+        can_do: Find longitudinal mode spacings
+        key_prerequisites: [physics.optics.fabry-perot]
+      - id: kp3
+        can_do: Find mode frequencies with Gouy phase
+        key_prerequisites: [physics.optics.resonator-stability]
+      - id: kp4
+        can_do: Find cavity photon lifetimes and Q factors
+        key_prerequisites: [physics.optics.fabry-perot]
+  - id: physics.optics.einstein-coefficients
+    name: Using Einstein coefficients
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.laser-principles
+        encompassing: 0.8
+        confidence: high
+      - topic: physics.stat-thermal.photon-gas
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Relate A and B coefficients
+        key_prerequisites: [physics.modern.laser-principles, physics.stat-thermal.photon-gas]
+      - id: kp2
+        can_do: Find spontaneous emission rates
+        key_prerequisites: [physics.modern.laser-principles]
+      - id: kp3
+        can_do: Find conditions for population inversion
+        key_prerequisites: [physics.modern.laser-principles]
+      - id: kp4
+        can_do: Find gain coefficients
+        key_prerequisites: [physics.modern.laser-principles, physics.stat-thermal.photon-gas]
+  - id: physics.optics.line-broadening
+    name: Describing homogeneous and inhomogeneous broadening
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.einstein-coefficients
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find natural line widths
+        key_prerequisites: [physics.optics.einstein-coefficients]
+      - id: kp2
+        can_do: Find Doppler widths
+        key_prerequisites: [physics.optics.einstein-coefficients]
+      - id: kp3
+        can_do: Find pressure broadening
+        key_prerequisites: [physics.optics.einstein-coefficients]
+      - id: kp4
+        can_do: Compare homogeneous and inhomogeneous broadening
+        key_prerequisites: [physics.optics.einstein-coefficients]
+  - id: physics.optics.laser-threshold
+    name: Finding laser gain and threshold
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.line-broadening
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.optics.resonator-modes
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find threshold gain
+        key_prerequisites: [physics.optics.resonator-modes]
+      - id: kp2
+        can_do: Find threshold inversion
+        key_prerequisites: [physics.optics.line-broadening, physics.optics.resonator-modes]
+      - id: kp3
+        can_do: Find output coupling losses
+        key_prerequisites: [physics.optics.resonator-modes]
+      - id: kp4
+        can_do: Find the number of lasing modes
+        key_prerequisites: [physics.optics.line-broadening, physics.optics.resonator-modes]
+  - id: physics.optics.laser-rate-equations
+    name: Using laser rate equations
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.laser-threshold
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write rate equations for three- and four-level lasers
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp2
+        can_do: Find steady-state inversion
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp3
+        can_do: Find output power above threshold
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp4
+        can_do: Explain gain saturation
+        key_prerequisites: [physics.optics.laser-threshold]
+  - id: physics.optics.pulsed-lasers
+    name: Explaining Q-switching and mode locking
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.laser-rate-equations
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Q-switching
+        key_prerequisites: [physics.optics.laser-rate-equations]
+      - id: kp2
+        can_do: Explain mode locking
+        key_prerequisites: [physics.optics.laser-rate-equations]
+      - id: kp3
+        can_do: Find pulse widths from bandwidth
+        key_prerequisites: [physics.optics.laser-rate-equations]
+      - id: kp4
+        can_do: Find peak powers of pulses
+        key_prerequisites: [physics.optics.laser-rate-equations]
+  - id: physics.optics.laser-types
+    name: Comparing laser types
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.laser-threshold
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare gas, solid-state and dye lasers
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp2
+        can_do: Describe semiconductor lasers
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp3
+        can_do: Describe fiber lasers
+        key_prerequisites: [physics.optics.laser-threshold]
+      - id: kp4
+        can_do: Choose a laser for an application
+        key_prerequisites: [physics.optics.laser-threshold]
+  - id: physics.optics.slab-waveguide
+    name: Finding modes of a slab waveguide
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.brewster-and-evanescent-waves
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find guided modes of a slab waveguide
+        key_prerequisites: [physics.em-theory.brewster-and-evanescent-waves]
+      - id: kp2
+        can_do: Find cutoff conditions
+        key_prerequisites: [physics.em-theory.brewster-and-evanescent-waves]
+      - id: kp3
+        can_do: Find the number of modes
+        key_prerequisites: [physics.em-theory.brewster-and-evanescent-waves]
+      - id: kp4
+        can_do: Find evanescent penetration depths
+        key_prerequisites: [physics.em-theory.brewster-and-evanescent-waves]
+  - id: physics.optics.fiber-modes
+    name: Finding modes of step-index fibers
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.slab-waveguide
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.waves-thermo-optics.fiber-acceptance-angle
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the V number of a fiber
+        key_prerequisites: [physics.optics.slab-waveguide, physics.waves-thermo-optics.fiber-acceptance-angle]
+      - id: kp2
+        can_do: Find the single-mode condition
+        key_prerequisites: [physics.optics.slab-waveguide]
+      - id: kp3
+        can_do: Compare step-index and graded-index fibers
+        key_prerequisites: [physics.waves-thermo-optics.fiber-acceptance-angle]
+      - id: kp4
+        can_do: Find modal dispersion
+        key_prerequisites: [physics.optics.slab-waveguide, physics.waves-thermo-optics.fiber-acceptance-angle]
+  - id: physics.optics.pulse-dispersion
+    name: Finding pulse spreading from dispersion
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.group-and-phase-velocity
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.em-theory.dispersion-in-dielectrics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find group delay dispersion
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity, physics.em-theory.dispersion-in-dielectrics]
+      - id: kp2
+        can_do: Find pulse spreading in fibers
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+      - id: kp3
+        can_do: Explain chirp
+        key_prerequisites: [physics.waves-thermo-optics.group-and-phase-velocity]
+      - id: kp4
+        can_do: Find zero-dispersion wavelengths
+        key_prerequisites: [physics.em-theory.dispersion-in-dielectrics]
+  - id: physics.optics.second-harmonic
+    name: Explaining second-harmonic generation
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.polarization-and-bound-charge
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe nonlinear polarization
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp2
+        can_do: Find second-harmonic fields in weak conversion
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp3
+        can_do: Explain sum and difference frequency generation
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+      - id: kp4
+        can_do: Identify materials without second-order nonlinearity
+        key_prerequisites: [physics.em-theory.polarization-and-bound-charge]
+  - id: physics.optics.phase-matching
+    name: Using phase matching
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.second-harmonic
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.optics.birefringence
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coherence lengths for nonlinear conversion
+        key_prerequisites: [physics.optics.second-harmonic]
+      - id: kp2
+        can_do: Use birefringent phase matching
+        key_prerequisites: [physics.optics.second-harmonic, physics.optics.birefringence]
+      - id: kp3
+        can_do: Find phase-matching angles
+        key_prerequisites: [physics.optics.birefringence]
+      - id: kp4
+        can_do: Explain quasi-phase matching
+        key_prerequisites: [physics.optics.second-harmonic]
+  - id: physics.optics.kerr-effect
+    name: Describing the Kerr effect and self-focusing
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.optics.second-harmonic
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the optical Kerr effect
+        key_prerequisites: [physics.optics.second-harmonic]
+      - id: kp2
+        can_do: Find intensity-dependent indices
+        key_prerequisites: [physics.optics.second-harmonic]
+      - id: kp3
+        can_do: Explain self-focusing
+        key_prerequisites: [physics.optics.second-harmonic]
+      - id: kp4
+        can_do: Explain self-phase modulation
+        key_prerequisites: [physics.optics.second-harmonic]
+  - id: physics.optics.photon-statistics
+    name: Describing photon statistics of light sources
+    subject: physics
+    course: physics.optics
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.coherent-states
+        encompassing: 0.5
+        confidence: high
+      - topic: math.probstat.poisson
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find photon number distributions of laser light
+        key_prerequisites: [physics.quantum.coherent-states, math.probstat.poisson]
+      - id: kp2
+        can_do: Find photon statistics of thermal light
+        key_prerequisites: [math.probstat.poisson]
+      - id: kp3
+        can_do: Use the second-order correlation function
+        key_prerequisites: [physics.quantum.coherent-states]
+      - id: kp4
+        can_do: Distinguish bunched, antibunched and random light
+        key_prerequisites: [physics.quantum.coherent-states]
