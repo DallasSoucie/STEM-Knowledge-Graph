@@ -736,13 +736,17 @@ topics:
       - topic: math.proofs.induction-proofs
         encompassing: 0.65
         confidence: high
+      - topic: math.discrete.induction-divisibility
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.induction-divisibility
         encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove a power divisibility
-        key_prerequisites: [math.proofs.induction-proofs, math.precalc.induction-divisibility]
+        key_prerequisites: [math.proofs.induction-proofs, math.precalc.induction-divisibility, math.discrete.induction-divisibility]
       - id: kp2
         can_do: Split a term in the step
         key_prerequisites: [math.proofs.induction-proofs]
@@ -789,10 +793,13 @@ topics:
       - topic: math.proofs.strong-induction-proofs
         encompassing: 0.6
         confidence: high
+      - topic: math.discrete.well-ordering
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: State the well-ordering principle
-        key_prerequisites: [math.proofs.strong-induction-proofs]
+        key_prerequisites: [math.proofs.strong-induction-proofs, math.discrete.well-ordering]
       - id: kp2
         can_do: Use a smallest counterexample
         key_prerequisites: [math.proofs.strong-induction-proofs]
@@ -1008,10 +1015,13 @@ topics:
       - topic: math.proofs.cases-proofs
         encompassing: 0.25
         confidence: high
+      - topic: math.discrete.set-proofs-elementwise
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove a distributive law
-        key_prerequisites: [math.proofs.set-equality-proofs]
+        key_prerequisites: [math.proofs.set-equality-proofs, math.discrete.set-proofs-elementwise]
       - id: kp2
         can_do: Prove a union subset fact
         key_prerequisites: [math.proofs.cases-proofs]
@@ -1176,6 +1186,9 @@ topics:
       - topic: math.proofs.cartesian-products
         encompassing: 0.5
         confidence: high
+      - topic: math.discrete.relations-definition
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write a relation as pairs
@@ -1185,7 +1198,7 @@ topics:
         key_prerequisites: [math.proofs.cartesian-products]
       - id: kp3
         can_do: Find an inverse relation
-        key_prerequisites: [math.proofs.cartesian-products]
+        key_prerequisites: [math.proofs.cartesian-products, math.discrete.relations-definition]
       - id: kp4
         can_do: Compose relations
         key_prerequisites: [math.proofs.cartesian-products]
@@ -1272,6 +1285,9 @@ topics:
       - topic: math.proofs.equivalence-classes
         encompassing: 0.5
         confidence: high
+      - topic: math.discrete.partitions
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define a partition
@@ -1281,7 +1297,7 @@ topics:
         key_prerequisites: [math.proofs.equivalence-classes]
       - id: kp3
         can_do: Build a relation from a partition
-        key_prerequisites: [math.proofs.equivalence-classes]
+        key_prerequisites: [math.proofs.equivalence-classes, math.discrete.partitions]
       - id: kp4
         can_do: Connect the two constructions
         key_prerequisites: [math.proofs.equivalence-classes]
@@ -1522,6 +1538,9 @@ topics:
       - topic: math.proofs.testing-functions
         encompassing: 0.4
         confidence: high
+      - topic: math.discrete.images-preimages-discrete
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.proofs.functions-as-relations
         encompassing: 0.1
@@ -1529,7 +1548,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find an image of a set
-        key_prerequisites: [math.proofs.testing-functions]
+        key_prerequisites: [math.proofs.testing-functions, math.discrete.images-preimages-discrete]
       - id: kp2
         can_do: Find a preimage of a set
         key_prerequisites: [math.proofs.testing-functions]

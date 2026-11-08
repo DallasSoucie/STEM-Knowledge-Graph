@@ -108,6 +108,9 @@ topics:
       - topic: math.diffeq.order-linearity-identify
         encompassing: 0.5
         confidence: high
+      - topic: math.calc2.verify-de-solutions
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.diffeq.classify-odes
         encompassing: 0.15
@@ -121,7 +124,7 @@ topics:
         key_prerequisites: [math.diffeq.order-linearity-identify]
       - id: kp3
         can_do: Check a family with a constant
-        key_prerequisites: [math.diffeq.order-linearity-identify]
+        key_prerequisites: [math.diffeq.order-linearity-identify, math.calc2.verify-de-solutions]
       - id: kp4
         can_do: Find constants that make a form a solution
         key_prerequisites: [math.diffeq.classify-odes]
@@ -1795,10 +1798,13 @@ topics:
       - topic: math.diffeq.second-order-intro
         encompassing: 0.45
         confidence: high
+      - topic: math.calc2.work-springs
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a spring constant in newtons per metre
-        key_prerequisites: [math.diffeq.second-order-intro]
+        key_prerequisites: [math.diffeq.second-order-intro, math.calc2.work-springs]
       - id: kp2
         can_do: Write an equation from mass and damping
         key_prerequisites: [math.diffeq.second-order-intro]
@@ -2340,13 +2346,17 @@ topics:
       - topic: math.diffeq.inverse-laplace
         encompassing: 0.35
         confidence: high
+      - topic: math.calc2.partial-fractions-quadratic-integral
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.partial-fractions-quadratic
         encompassing: 0.35
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find constants for a quadratic factor
-        key_prerequisites: [math.precalc.partial-fractions-quadratic]
+        key_prerequisites: [math.precalc.partial-fractions-quadratic, math.calc2.partial-fractions-quadratic-integral]
       - id: kp2
         can_do: Invert a linear and quadratic product
         key_prerequisites: [math.diffeq.inverse-laplace]

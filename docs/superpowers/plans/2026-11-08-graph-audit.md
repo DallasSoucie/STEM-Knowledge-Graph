@@ -18,7 +18,17 @@ Validation: 0 errors; the only warning is the long-standing budget variance on `
 
 **Identical knowledge-point text across courses (379 strings).** Most repeat a generic phrase whose meaning comes from the topic ("say what it means in context", "check by substitution"), or repeat a skill at a larger scale in a later grade on a linked topic. Neither needs a change. The 90 pairs below are different: the two topics overlap in name and wording **and neither is an ancestor of the other**, so the graph teaches the same skill twice with no review credit between them.
 
-## Overlaps needing a decision
+## Overlaps: resolved by linking both copies
+
+Decision (2026-11-08): keep both copies and link them so review credit flows.
+
+- Five `follows` entries were added so parallel courses come in a fixed order: `math.stats` follows `math.alg2`, `math.alg2` follows `math.geom`, `math.proofs` follows `math.discrete`, `physics.quantum` follows `physics.classical`, and `bio.anat-phys1` follows `bio.intro2`.
+- 63 edges now run from the earlier copy to the later copy, each cited by the later topic's matching knowledge point. Ten older direct edges these made redundant became encompassed entries.
+- 24 overlaps stay unlinked on purpose. They are generic wording shared by unrelated tracks (for example "split into real and imaginary parts" in complex analysis and differential equations), or tracks that are parallel by design, such as the cross product in first-year physics mechanics (which follows calc1) and in calc3.
+
+The list below is the original set of 90 pairs, kept for reference.
+
+## Original overlap list
 
 Three kinds of overlap appear:
 

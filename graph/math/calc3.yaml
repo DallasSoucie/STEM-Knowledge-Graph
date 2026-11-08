@@ -1616,6 +1616,9 @@ topics:
       - topic: math.calc3.limit-does-not-exist-paths
         encompassing: 0.25
         confidence: high
+      - topic: math.calc1.continuity-of-compositions
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.multivariable-limits
         encompassing: 0.15
@@ -1632,7 +1635,7 @@ topics:
         key_prerequisites: [math.calc3.multivariable-limit-polar, math.calc3.limit-does-not-exist-paths]
       - id: kp4
         can_do: Find where a composition is continuous
-        key_prerequisites: [math.calc3.multivariable-limits]
+        key_prerequisites: [math.calc3.multivariable-limits, math.calc1.continuity-of-compositions]
   - id: math.calc3.partials-from-contours
     name: Estimating partial derivatives from contours
     subject: math
@@ -1826,6 +1829,9 @@ topics:
       - topic: math.calc3.partials-three-variables
         encompassing: 0.45
         confidence: high
+      - topic: math.calc2.parametric-second-derivative
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.partial-derivatives-compute
         encompassing: 0.15
@@ -1839,7 +1845,7 @@ topics:
         key_prerequisites: [math.calc3.partials-three-variables]
       - id: kp3
         can_do: Evaluate at a point
-        key_prerequisites: [math.calc3.partials-three-variables]
+        key_prerequisites: [math.calc3.partials-three-variables, math.calc2.parametric-second-derivative]
       - id: kp4
         can_do: Find a partial in a three-variable equation
         key_prerequisites: [math.calc3.partials-three-variables, math.calc3.partial-derivatives-compute]
@@ -2403,6 +2409,9 @@ topics:
       - topic: math.calc3.double-riemann-sum
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.double-integral-definition
         encompassing: 0.15
@@ -2416,7 +2425,7 @@ topics:
         key_prerequisites: [math.calc3.double-riemann-sum]
       - id: kp3
         can_do: Evaluate with exponentials and trig
-        key_prerequisites: [math.calc3.double-riemann-sum]
+        key_prerequisites: [math.calc3.double-riemann-sum, math.calc1.ftc-part-2]
       - id: kp4
         can_do: Find a volume over a rectangle
         key_prerequisites: [math.calc3.double-integral-definition]
@@ -2728,10 +2737,13 @@ topics:
       - topic: math.calc3.tangent-planes
         encompassing: 0.3
         confidence: high
+      - topic: math.calc2.surface-of-revolution
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Derive the area element
-        key_prerequisites: [math.calc3.tangent-planes]
+        key_prerequisites: [math.calc3.tangent-planes, math.calc2.surface-of-revolution]
       - id: kp2
         can_do: Find the area of a plane piece
         key_prerequisites: [math.calc3.tangent-planes]

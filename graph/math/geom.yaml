@@ -1221,13 +1221,16 @@ topics:
       - topic: math.g8.coordinate-dilations
         encompassing: 0.5
         confidence: high
+      - topic: math.g8.dilation-scale-below-one
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Dilate from a center that is not the origin
         key_prerequisites: [math.g8.coordinate-dilations]
       - id: kp2
         can_do: Dilate with a scale below 1
-        key_prerequisites: [math.g8.coordinate-dilations]
+        key_prerequisites: [math.g8.coordinate-dilations, math.g8.dilation-scale-below-one]
       - id: kp3
         can_do: Find a dilation's center
         key_prerequisites: [math.g8.coordinate-dilations]
@@ -1457,13 +1460,16 @@ topics:
       - topic: math.geom.triangle-angle-sum-proof
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.angle-sum-exterior
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove the exterior angle theorem
         key_prerequisites: [math.geom.triangle-angle-sum-proof]
       - id: kp2
         can_do: Find an exterior angle
-        key_prerequisites: [math.geom.triangle-angle-sum-proof]
+        key_prerequisites: [math.geom.triangle-angle-sum-proof, math.g8.angle-sum-exterior]
       - id: kp3
         can_do: Write an equation with exterior angles
         key_prerequisites: [math.geom.triangle-angle-sum-proof]
@@ -2463,10 +2469,13 @@ topics:
       - topic: math.g7.proportional-stories
         encompassing: 0.3
         confidence: medium
+      - topic: math.g8.solve-similar-figures
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a height using shadows
-        key_prerequisites: [math.geom.sss-sas-similarity]
+        key_prerequisites: [math.geom.sss-sas-similarity, math.g8.solve-similar-figures]
       - id: kp2
         can_do: Find a width across a river
         key_prerequisites: [math.g7.proportional-stories]
@@ -3050,6 +3059,9 @@ topics:
       - topic: math.geom.trig-two-triangles
         encompassing: 0.35
         confidence: medium
+      - topic: math.g8.pythagorean-stories
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.geom.elevation-depression
         encompassing: 0.65
@@ -3060,7 +3072,7 @@ topics:
         key_prerequisites: [math.geom.elevation-depression, math.geom.solve-right-triangle-complete]
       - id: kp2
         can_do: Solve a ladder story
-        key_prerequisites: [math.geom.elevation-depression]
+        key_prerequisites: [math.geom.elevation-depression, math.g8.pythagorean-stories]
       - id: kp3
         can_do: Solve a two-step story
         key_prerequisites: [math.geom.elevation-depression, math.geom.trig-two-triangles]

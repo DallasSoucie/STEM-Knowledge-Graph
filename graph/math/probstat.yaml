@@ -475,6 +475,12 @@ topics:
       - topic: math.probstat.axioms-of-probability
         encompassing: 0.5
         confidence: high
+      - topic: math.stats.random-variables
+        encompassing: 0.3
+        confidence: medium
+      - topic: math.stats.variable-types
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define a random variable as a function
@@ -484,7 +490,7 @@ topics:
         key_prerequisites: [math.probstat.axioms-of-probability]
       - id: kp3
         can_do: Tell discrete from continuous
-        key_prerequisites: [math.probstat.axioms-of-probability]
+        key_prerequisites: [math.probstat.axioms-of-probability, math.stats.random-variables, math.stats.variable-types]
       - id: kp4
         can_do: Find an event from a value
         key_prerequisites: [math.probstat.axioms-of-probability]
@@ -548,10 +554,13 @@ topics:
       - topic: math.probstat.pmf
         encompassing: 0.6
         confidence: high
+      - topic: math.alg2.expected-value-intro
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find an expected value from a table
-        key_prerequisites: [math.probstat.pmf]
+        key_prerequisites: [math.probstat.pmf, math.alg2.expected-value-intro]
       - id: kp2
         can_do: Find one from a formula
         key_prerequisites: [math.probstat.pmf]
@@ -799,6 +808,10 @@ topics:
       - topic: math.stats.binomial-mean-sd
         encompassing: 0.25
         confidence: high
+    encompassed:
+      - topic: math.alg2.binomial-at-least
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Recognize Bernoulli trials
@@ -808,7 +821,7 @@ topics:
         key_prerequisites: [math.probstat.variance-discrete]
       - id: kp3
         can_do: Find an at-least probability
-        key_prerequisites: [math.probstat.variance-discrete]
+        key_prerequisites: [math.probstat.variance-discrete, math.alg2.binomial-at-least]
       - id: kp4
         can_do: Find a binomial's most likely count
         key_prerequisites: [math.probstat.variance-discrete]
@@ -1486,10 +1499,13 @@ topics:
       - topic: math.probstat.standardizing
         encompassing: 0.5
         confidence: high
+      - topic: math.stats.standard-normal-table
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Read a standard normal table
-        key_prerequisites: [math.probstat.standardizing]
+        key_prerequisites: [math.probstat.standardizing, math.stats.standard-normal-table]
       - id: kp2
         can_do: Use symmetry for negative values
         key_prerequisites: [math.probstat.standardizing]
@@ -1781,6 +1797,9 @@ topics:
       - topic: math.probstat.conditional-probability-definition
         encompassing: 0.25
         confidence: high
+      - topic: math.stats.conditional-independence
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a conditional from a table
@@ -1790,7 +1809,7 @@ topics:
         key_prerequisites: [math.probstat.marginal-distributions]
       - id: kp3
         can_do: Find a conditional probability
-        key_prerequisites: [math.probstat.conditional-probability-definition]
+        key_prerequisites: [math.probstat.conditional-probability-definition, math.stats.conditional-independence]
       - id: kp4
         can_do: Find a conditional on a triangle
         key_prerequisites: [math.probstat.marginal-distributions]
@@ -2412,10 +2431,13 @@ topics:
       - topic: math.probstat.convergence-in-distribution
         encompassing: 0.3
         confidence: high
+      - topic: math.stats.central-limit-theorem
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: State the central limit theorem
-        key_prerequisites: [math.probstat.convergence-in-distribution]
+        key_prerequisites: [math.probstat.convergence-in-distribution, math.stats.central-limit-theorem]
       - id: kp2
         can_do: Sketch the generating function proof
         key_prerequisites: [math.probstat.mgf-for-sums]
@@ -2507,9 +2529,6 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: math.stats.sampling-mean
-        encompassing: 0.25
-        confidence: high
       - topic: math.probstat.normal-linear-combinations
         encompassing: 0.25
         confidence: high
@@ -2519,6 +2538,9 @@ topics:
     encompassed:
       - topic: math.probstat.central-limit-theorem-formal
         encompassing: 0.15
+        confidence: high
+      - topic: math.stats.sampling-mean
+        encompassing: 0.25
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3203,6 +3225,9 @@ topics:
       - topic: math.probstat.ci-small-sample-t
         encompassing: 0.4
         confidence: high
+      - topic: math.stats.one-mean-t-test
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Run a known-variance test
@@ -3212,7 +3237,7 @@ topics:
         key_prerequisites: [math.probstat.ci-small-sample-t]
       - id: kp3
         can_do: Find a p-value
-        key_prerequisites: [math.probstat.ci-small-sample-t]
+        key_prerequisites: [math.probstat.ci-small-sample-t, math.stats.one-mean-t-test]
       - id: kp4
         can_do: Check conditions
         key_prerequisites: [math.probstat.ci-small-sample-t]
@@ -3376,10 +3401,13 @@ topics:
       - topic: math.probstat.goodness-of-fit
         encompassing: 0.6
         confidence: high
+      - topic: math.stats.chi-square-independence
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find expected counts in a table
-        key_prerequisites: [math.probstat.goodness-of-fit]
+        key_prerequisites: [math.probstat.goodness-of-fit, math.stats.chi-square-independence]
       - id: kp2
         can_do: Find a chi-square statistic
         key_prerequisites: [math.probstat.goodness-of-fit]
@@ -4038,10 +4066,13 @@ topics:
       - topic: math.probstat.regression-diagnostics
         encompassing: 0.6
         confidence: high
+      - topic: math.stats.transform-to-linearity
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Use a log transform
-        key_prerequisites: [math.probstat.regression-diagnostics]
+        key_prerequisites: [math.probstat.regression-diagnostics, math.stats.transform-to-linearity]
       - id: kp2
         can_do: Use a power transform
         key_prerequisites: [math.probstat.regression-diagnostics]
