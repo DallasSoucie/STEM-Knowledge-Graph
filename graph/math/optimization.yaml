@@ -1,0 +1,1211 @@
+course: math.optimization
+topics:
+  - id: math.optimization.lp-formulation
+    name: Formulating linear programs
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.linalg.column-space
+        encompassing: 0.45
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Identify decision variables, objective and constraints
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp2
+        can_do: Formulate production and blending problems
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp3
+        can_do: Formulate diet and scheduling problems
+        key_prerequisites: [math.linalg.column-space]
+      - id: kp4
+        can_do: Write linear programs in matrix form
+        key_prerequisites: [math.linalg.column-space]
+  - id: math.optimization.lp-graphical
+    name: Solving two-variable linear programs graphically
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-formulation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw feasible regions of two-variable programs
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp2
+        can_do: Find optimal vertices with objective lines
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp3
+        can_do: Identify unbounded and infeasible programs graphically
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp4
+        can_do: Find multiple optimal solutions graphically
+        key_prerequisites: [math.optimization.lp-formulation]
+  - id: math.optimization.lp-standard-form
+    name: Converting linear programs to standard form
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-formulation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add slack and surplus variables
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp2
+        can_do: Replace free variables with nonnegative ones
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp3
+        can_do: Convert maximization to minimization
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp4
+        can_do: Write standard form in matrix notation
+        key_prerequisites: [math.optimization.lp-formulation]
+  - id: math.optimization.polyhedra
+    name: Describing convex polyhedra
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-standard-form
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe polyhedra by inequalities
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp2
+        can_do: Identify extreme points of polyhedra
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp3
+        can_do: Prove polyhedra are convex
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp4
+        can_do: Find directions of unboundedness
+        key_prerequisites: [math.optimization.lp-standard-form]
+  - id: math.optimization.basic-feasible-solutions
+    name: Finding basic feasible solutions
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.polyhedra
+        encompassing: 0.5
+        confidence: high
+      - topic: math.linalg.basis-of-column-space
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find basic solutions by choosing basis columns
+        key_prerequisites: [math.optimization.polyhedra, math.linalg.basis-of-column-space]
+      - id: kp2
+        can_do: Test basic solutions for feasibility
+        key_prerequisites: [math.optimization.polyhedra]
+      - id: kp3
+        can_do: Count basic solutions of a system
+        key_prerequisites: [math.linalg.basis-of-column-space]
+      - id: kp4
+        can_do: Relate basic feasible solutions to extreme points
+        key_prerequisites: [math.optimization.polyhedra]
+  - id: math.optimization.vertex-optimality
+    name: Proving optima occur at vertices
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.basic-feasible-solutions
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a bounded program has an optimal vertex
+        key_prerequisites: [math.optimization.basic-feasible-solutions]
+      - id: kp2
+        can_do: Find optimal solutions by enumerating vertices
+        key_prerequisites: [math.optimization.basic-feasible-solutions]
+      - id: kp3
+        can_do: Explain why enumeration is impractical
+        key_prerequisites: [math.optimization.basic-feasible-solutions]
+      - id: kp4
+        can_do: Relate adjacent vertices to basis changes
+        key_prerequisites: [math.optimization.basic-feasible-solutions]
+  - id: math.optimization.simplex-tableau
+    name: Running the simplex method with tableaux
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.vertex-optimality
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up an initial simplex tableau
+        key_prerequisites: [math.optimization.vertex-optimality]
+      - id: kp2
+        can_do: Perform a pivot
+        key_prerequisites: [math.optimization.vertex-optimality]
+      - id: kp3
+        can_do: Read the current solution from a tableau
+        key_prerequisites: [math.optimization.vertex-optimality]
+      - id: kp4
+        can_do: Solve small programs with the simplex method
+        key_prerequisites: [math.optimization.vertex-optimality]
+  - id: math.optimization.pivot-rules
+    name: Choosing entering and leaving variables
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.simplex-tableau
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose entering variables by reduced costs
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp2
+        can_do: Choose leaving variables by the ratio test
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp3
+        can_do: Use Bland's rule
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp4
+        can_do: Compare pivot rules
+        key_prerequisites: [math.optimization.simplex-tableau]
+  - id: math.optimization.two-phase-simplex
+    name: Finding starting solutions with two-phase simplex
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.simplex-tableau
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add artificial variables
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp2
+        can_do: Solve the phase one problem
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp3
+        can_do: Move from phase one to phase two
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp4
+        can_do: Detect infeasibility in phase one
+        key_prerequisites: [math.optimization.simplex-tableau]
+  - id: math.optimization.big-m
+    name: Using the big-M method
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.two-phase-simplex
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the big-M objective
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp2
+        can_do: Solve programs with the big-M method
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp3
+        can_do: Detect infeasibility with big-M
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp4
+        can_do: Compare big-M with two-phase simplex
+        key_prerequisites: [math.optimization.two-phase-simplex]
+  - id: math.optimization.degeneracy-cycling
+    name: Handling degeneracy and cycling
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.pivot-rules
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify degenerate pivots
+        key_prerequisites: [math.optimization.pivot-rules]
+      - id: kp2
+        can_do: Find an example of cycling
+        key_prerequisites: [math.optimization.pivot-rules]
+      - id: kp3
+        can_do: Prevent cycling with Bland's rule
+        key_prerequisites: [math.optimization.pivot-rules]
+      - id: kp4
+        can_do: Explain the effect of degeneracy on running time
+        key_prerequisites: [math.optimization.pivot-rules]
+  - id: math.optimization.unbounded-infeasible
+    name: Detecting unbounded and infeasible programs
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.two-phase-simplex
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Detect unboundedness in a tableau
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp2
+        can_do: Find a direction of unboundedness
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp3
+        can_do: Detect infeasibility from phase one
+        key_prerequisites: [math.optimization.two-phase-simplex]
+      - id: kp4
+        can_do: Interpret unbounded and infeasible models
+        key_prerequisites: [math.optimization.two-phase-simplex]
+  - id: math.optimization.revised-simplex
+    name: Using the revised simplex method
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.simplex-tableau
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Track the basis inverse
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp2
+        can_do: Compute reduced costs with simplex multipliers
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp3
+        can_do: Update the basis inverse after a pivot
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp4
+        can_do: Compare revised and tableau simplex work
+        key_prerequisites: [math.optimization.simplex-tableau]
+  - id: math.optimization.lp-duality
+    name: Writing the dual of a linear program
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-standard-form
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write the dual of a standard form program
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp2
+        can_do: Write duals of programs with mixed constraints
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp3
+        can_do: Interpret dual variables in applications
+        key_prerequisites: [math.optimization.lp-standard-form]
+      - id: kp4
+        can_do: Show the dual of the dual is the primal
+        key_prerequisites: [math.optimization.lp-standard-form]
+  - id: math.optimization.duality-theorems
+    name: Proving weak and strong duality
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-duality
+        encompassing: 0.6
+        confidence: high
+      - topic: math.optimization.vertex-optimality
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove weak duality
+        key_prerequisites: [math.optimization.lp-duality]
+      - id: kp2
+        can_do: Bound optimal values with feasible duals
+        key_prerequisites: [math.optimization.lp-duality]
+      - id: kp3
+        can_do: State and use strong duality
+        key_prerequisites: [math.optimization.lp-duality, math.optimization.vertex-optimality]
+      - id: kp4
+        can_do: Classify primal and dual outcomes
+        key_prerequisites: [math.optimization.vertex-optimality]
+  - id: math.optimization.complementary-slackness
+    name: Using complementary slackness
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State complementary slackness conditions
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp2
+        can_do: Check optimality with complementary slackness
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Find dual solutions from primal solutions
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp4
+        can_do: Use slackness to interpret binding constraints
+        key_prerequisites: [math.optimization.duality-theorems]
+  - id: math.optimization.shadow-prices
+    name: Interpreting dual variables as shadow prices
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.complementary-slackness
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret dual values as shadow prices
+        key_prerequisites: [math.optimization.complementary-slackness]
+      - id: kp2
+        can_do: Read shadow prices from final tableaux
+        key_prerequisites: [math.optimization.complementary-slackness]
+      - id: kp3
+        can_do: Decide whether to buy more of a resource
+        key_prerequisites: [math.optimization.complementary-slackness]
+      - id: kp4
+        can_do: Interpret reduced costs economically
+        key_prerequisites: [math.optimization.complementary-slackness]
+  - id: math.optimization.dual-simplex
+    name: Using the dual simplex method
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.complementary-slackness
+        encompassing: 0.5
+        confidence: high
+      - topic: math.optimization.simplex-tableau
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Recognize dual feasible tableaux
+        key_prerequisites: [math.optimization.complementary-slackness]
+      - id: kp2
+        can_do: Pivot with the dual simplex method
+        key_prerequisites: [math.optimization.complementary-slackness, math.optimization.simplex-tableau]
+      - id: kp3
+        can_do: Reoptimize after adding a constraint
+        key_prerequisites: [math.optimization.simplex-tableau]
+      - id: kp4
+        can_do: Compare primal and dual simplex
+        key_prerequisites: [math.optimization.complementary-slackness, math.optimization.simplex-tableau]
+  - id: math.optimization.sensitivity-costs
+    name: Finding ranges for cost coefficients
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.shadow-prices
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the range of a basic cost coefficient
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp2
+        can_do: Find the range of a nonbasic cost coefficient
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp3
+        can_do: Decide whether the basis stays optimal
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp4
+        can_do: Read cost ranges from solver output
+        key_prerequisites: [math.optimization.shadow-prices]
+  - id: math.optimization.sensitivity-rhs
+    name: Finding ranges for right-hand sides
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.shadow-prices
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the range of a right-hand side
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp2
+        can_do: Predict objective changes within the range
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp3
+        can_do: Reoptimize when the range is exceeded
+        key_prerequisites: [math.optimization.shadow-prices]
+      - id: kp4
+        can_do: Read right-hand side ranges from solver output
+        key_prerequisites: [math.optimization.shadow-prices]
+  - id: math.optimization.farkas-lemma
+    name: Using Farkas's lemma
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Farkas's lemma
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp2
+        can_do: Prove infeasibility with a Farkas certificate
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Prove Farkas's lemma from duality
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp4
+        can_do: Use theorems of alternatives
+        key_prerequisites: [math.optimization.duality-theorems]
+  - id: math.optimization.interior-point-intro
+    name: Describing interior-point methods
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the central path
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp2
+        can_do: Compare interior-point and simplex methods
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Explain the barrier idea for linear programs
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp4
+        can_do: Interpret duality gaps in interior-point output
+        key_prerequisites: [math.optimization.duality-theorems]
+  - id: math.optimization.transportation-problem
+    name: Solving transportation problems
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.dual-simplex
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.optimization.lp-formulation
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate transportation problems
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp2
+        can_do: Find initial solutions by northwest corner and least cost
+        key_prerequisites: [math.optimization.dual-simplex]
+      - id: kp3
+        can_do: Improve solutions with the stepping-stone method
+        key_prerequisites: [math.optimization.dual-simplex, math.optimization.lp-formulation]
+      - id: kp4
+        can_do: Balance unbalanced problems
+        key_prerequisites: [math.optimization.lp-formulation]
+  - id: math.optimization.assignment-problem
+    name: Solving assignment problems with the Hungarian method
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.transportation-problem
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate assignment problems
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp2
+        can_do: Solve assignment problems with the Hungarian method
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp3
+        can_do: Handle maximization assignment problems
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp4
+        can_do: Handle unbalanced assignment problems
+        key_prerequisites: [math.optimization.transportation-problem]
+  - id: math.optimization.min-cost-flow
+    name: Formulating minimum-cost network flows
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.transportation-problem
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate minimum-cost flow problems on networks
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp2
+        can_do: Write flow conservation constraints
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp3
+        can_do: Model shortest paths as flows
+        key_prerequisites: [math.optimization.transportation-problem]
+      - id: kp4
+        can_do: Model transshipment problems as flows
+        key_prerequisites: [math.optimization.transportation-problem]
+  - id: math.optimization.max-flow-min-cut
+    name: Proving max-flow min-cut with LP duality
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.min-cost-flow
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate maximum flow as a linear program
+        key_prerequisites: [math.optimization.min-cost-flow]
+      - id: kp2
+        can_do: Write the dual of maximum flow
+        key_prerequisites: [math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Prove max-flow min-cut from duality
+        key_prerequisites: [math.optimization.min-cost-flow, math.optimization.duality-theorems]
+      - id: kp4
+        can_do: Find minimum cuts from optimal duals
+        key_prerequisites: [math.optimization.duality-theorems]
+  - id: math.optimization.total-unimodularity
+    name: Using total unimodularity
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.max-flow-min-cut
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether a matrix is totally unimodular
+        key_prerequisites: [math.optimization.max-flow-min-cut]
+      - id: kp2
+        can_do: Prove network matrices are totally unimodular
+        key_prerequisites: [math.optimization.max-flow-min-cut]
+      - id: kp3
+        can_do: Explain why integer solutions follow
+        key_prerequisites: [math.optimization.max-flow-min-cut]
+      - id: kp4
+        can_do: Identify integer-friendly program structures
+        key_prerequisites: [math.optimization.max-flow-min-cut]
+  - id: math.optimization.ip-formulation
+    name: Formulating integer programs with binary variables
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-formulation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use binary variables for yes-no decisions
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp2
+        can_do: Formulate fixed-charge problems
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp3
+        can_do: Formulate facility location problems
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp4
+        can_do: Formulate set covering problems
+        key_prerequisites: [math.optimization.lp-formulation]
+  - id: math.optimization.logical-constraints
+    name: Modelling logical constraints with binary variables
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.ip-formulation
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model either-or constraints
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp2
+        can_do: Model if-then constraints
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp3
+        can_do: Use big-M constants carefully
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp4
+        can_do: Model at-most-k choices
+        key_prerequisites: [math.optimization.ip-formulation]
+  - id: math.optimization.lp-relaxation
+    name: Bounding integer programs with relaxations
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.ip-formulation
+        encompassing: 0.7
+        confidence: high
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the LP relaxation of an integer program
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp2
+        can_do: Bound integer optima with relaxations
+        key_prerequisites: [math.optimization.ip-formulation, math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Compare strong and weak formulations
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp4
+        can_do: Find rounding errors from relaxations
+        key_prerequisites: [math.optimization.duality-theorems]
+  - id: math.optimization.branch-and-bound
+    name: Solving integer programs by branch and bound
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.lp-relaxation
+        encompassing: 0.5
+        confidence: high
+      - topic: math.optimization.dual-simplex
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Branch on fractional variables
+        key_prerequisites: [math.optimization.lp-relaxation]
+      - id: kp2
+        can_do: Prune nodes with bounds
+        key_prerequisites: [math.optimization.lp-relaxation]
+      - id: kp3
+        can_do: Solve small integer programs by branch and bound
+        key_prerequisites: [math.optimization.lp-relaxation, math.optimization.dual-simplex]
+      - id: kp4
+        can_do: Reoptimize child nodes with dual simplex
+        key_prerequisites: [math.optimization.dual-simplex]
+  - id: math.optimization.cutting-planes
+    name: Using cutting planes
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.branch-and-bound
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Gomory cuts from tableaux
+        key_prerequisites: [math.optimization.branch-and-bound]
+      - id: kp2
+        can_do: Add cuts to tighten relaxations
+        key_prerequisites: [math.optimization.branch-and-bound]
+      - id: kp3
+        can_do: Combine cuts with branch and bound
+        key_prerequisites: [math.optimization.branch-and-bound]
+      - id: kp4
+        can_do: Find valid inequalities for knapsack constraints
+        key_prerequisites: [math.optimization.branch-and-bound]
+  - id: math.optimization.knapsack-dp
+    name: Solving knapsack problems by dynamic programming
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.ip-formulation
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Formulate the knapsack recursion
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp2
+        can_do: Solve knapsack problems with tables
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp3
+        can_do: Recover optimal choices from tables
+        key_prerequisites: [math.optimization.ip-formulation]
+      - id: kp4
+        can_do: Compare dynamic programming with branch and bound
+        key_prerequisites: [math.optimization.ip-formulation]
+  - id: math.optimization.dynamic-programming-opt
+    name: Using dynamic programming for staged decisions
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.knapsack-dp
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify stages, states and decisions
+        key_prerequisites: [math.optimization.knapsack-dp]
+      - id: kp2
+        can_do: Write Bellman recursions
+        key_prerequisites: [math.optimization.knapsack-dp]
+      - id: kp3
+        can_do: Solve resource allocation problems by stages
+        key_prerequisites: [math.optimization.knapsack-dp]
+      - id: kp4
+        can_do: Solve shortest path problems by stages
+        key_prerequisites: [math.optimization.knapsack-dp]
+  - id: math.optimization.convex-sets
+    name: Identifying convex sets
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.polyhedra
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test set convexity using the line segment definition
+        key_prerequisites: [math.optimization.polyhedra]
+      - id: kp2
+        can_do: Determine convexity of intersections and unions
+        key_prerequisites: [math.optimization.polyhedra]
+      - id: kp3
+        can_do: Prove convexity is preserved under affine images and preimages
+        key_prerequisites: [math.optimization.polyhedra]
+      - id: kp4
+        can_do: Describe convex hulls using convex combinations and linear inequalities
+        key_prerequisites: [math.optimization.polyhedra]
+  - id: math.optimization.convex-functions
+    name: Testing convexity of functions
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.convex-sets
+        encompassing: 0.7
+        confidence: high
+      - topic: math.linalg.positive-definite
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test convexity using the defining inequality
+        key_prerequisites: [math.optimization.convex-sets]
+      - id: kp2
+        can_do: Test twice-differentiable functions using Hessian semidefiniteness
+        key_prerequisites: [math.linalg.positive-definite]
+      - id: kp3
+        can_do: Preserve convexity through sums and affine composition
+        key_prerequisites: [math.optimization.convex-sets]
+      - id: kp4
+        can_do: Determine parameter ranges ensuring convexity on specified domains
+        key_prerequisites: [math.optimization.convex-sets, math.linalg.positive-definite]
+  - id: math.optimization.unconstrained-conditions
+    name: Using optimality conditions without constraints
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.convex-functions
+        encompassing: 0.55
+        confidence: high
+      - topic: math.calc3.second-derivatives-test-two
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find stationary points of smooth multivariable objectives
+        key_prerequisites: [math.calc3.second-derivatives-test-two]
+      - id: kp2
+        can_do: Check second-order necessary conditions at candidate minima
+        key_prerequisites: [math.calc3.second-derivatives-test-two]
+      - id: kp3
+        can_do: Certify strict local minima using positive definite Hessians
+        key_prerequisites: [math.optimization.convex-functions, math.calc3.second-derivatives-test-two]
+      - id: kp4
+        can_do: Resolve inconclusive Hessian tests using convexity and directional restrictions
+        key_prerequisites: [math.optimization.convex-functions, math.calc3.second-derivatives-test-two]
+  - id: math.optimization.convex-global
+    name: Proving local minima of convex functions are global
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.convex-functions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove local minima are global on convex domains
+        key_prerequisites: [math.optimization.convex-functions]
+      - id: kp2
+        can_do: Certify global minimizers using first-order convexity inequalities
+        key_prerequisites: [math.optimization.convex-functions]
+      - id: kp3
+        can_do: Prove minimizer uniqueness under strict convexity
+        key_prerequisites: [math.optimization.convex-functions]
+      - id: kp4
+        can_do: Establish unique minimizers using continuity, coercivity, and strict convexity
+        key_prerequisites: [math.optimization.convex-functions]
+  - id: math.optimization.line-search
+    name: Using line searches
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.optimization-gradient-descent
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute exact line search steps for quadratic objectives
+        key_prerequisites: [math.numerical.optimization-gradient-descent]
+      - id: kp2
+        can_do: Check Armijo sufficient decrease for candidate steps
+        key_prerequisites: [math.numerical.optimization-gradient-descent]
+      - id: kp3
+        can_do: Find acceptable steps using backtracking line search
+        key_prerequisites: [math.numerical.optimization-gradient-descent]
+      - id: kp4
+        can_do: Select steps satisfying both Wolfe conditions
+        key_prerequisites: [math.numerical.optimization-gradient-descent]
+  - id: math.optimization.gradient-descent-convergence
+    name: Analyzing convergence of gradient descent
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.line-search
+        encompassing: 0.8
+        confidence: high
+      - topic: math.optimization.convex-global
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound objective decrease using Lipschitz gradient inequalities
+        key_prerequisites: [math.optimization.line-search]
+      - id: kp2
+        can_do: Derive gradient descent error bounds for smooth convex objectives
+        key_prerequisites: [math.optimization.line-search, math.optimization.convex-global]
+      - id: kp3
+        can_do: Prove linear convergence under strong convexity
+        key_prerequisites: [math.optimization.line-search, math.optimization.convex-global]
+      - id: kp4
+        can_do: Estimate iteration counts from curvature bounds and line search guarantees
+        key_prerequisites: [math.optimization.line-search, math.optimization.convex-global]
+  - id: math.optimization.quasi-newton
+    name: Using Newton and quasi-Newton methods
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.numerical.newton-for-optimization
+        encompassing: 0.85
+        confidence: high
+      - topic: math.optimization.line-search
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute damped Newton steps using descent checks and line searches
+        key_prerequisites: [math.numerical.newton-for-optimization, math.optimization.line-search]
+      - id: kp2
+        can_do: Form quasi-Newton approximations satisfying the secant equation
+        key_prerequisites: [math.numerical.newton-for-optimization]
+      - id: kp3
+        can_do: Apply BFGS updates and check positive definiteness
+        key_prerequisites: [math.numerical.newton-for-optimization]
+      - id: kp4
+        can_do: Combine BFGS directions with Wolfe line searches
+        key_prerequisites: [math.numerical.newton-for-optimization, math.optimization.line-search]
+  - id: math.optimization.least-squares-opt
+    name: Solving least squares as an optimization problem
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.unconstrained-conditions
+        encompassing: 0.65
+        confidence: high
+      - topic: math.linalg.least-squares-normal
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive least squares gradients, Hessians, and normal equations
+        key_prerequisites: [math.optimization.unconstrained-conditions, math.linalg.least-squares-normal]
+      - id: kp2
+        can_do: Certify unique minimizers using full column rank
+        key_prerequisites: [math.optimization.unconstrained-conditions, math.linalg.least-squares-normal]
+      - id: kp3
+        can_do: Characterize all minimizers for rank-deficient linear least squares
+        key_prerequisites: [math.optimization.unconstrained-conditions, math.linalg.least-squares-normal]
+      - id: kp4
+        can_do: Compute Gauss-Newton steps for nonlinear least squares objectives
+        key_prerequisites: [math.optimization.unconstrained-conditions, math.linalg.least-squares-normal]
+  - id: math.optimization.equality-constrained
+    name: Using Lagrange conditions for equality constraints
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.calc3.lagrange-two-constraints
+        encompassing: 0.8
+        confidence: high
+      - topic: math.optimization.unconstrained-conditions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form Lagrange stationarity systems for multiple equality constraints
+        key_prerequisites: [math.calc3.lagrange-two-constraints]
+      - id: kp2
+        can_do: Find feasible tangent directions from constraint Jacobians
+        key_prerequisites: [math.calc3.lagrange-two-constraints]
+      - id: kp3
+        can_do: Check second-order necessity on feasible tangent directions
+        key_prerequisites: [math.calc3.lagrange-two-constraints, math.optimization.unconstrained-conditions]
+      - id: kp4
+        can_do: Certify strict constrained minima using reduced Hessians
+        key_prerequisites: [math.calc3.lagrange-two-constraints, math.optimization.unconstrained-conditions]
+  - id: math.optimization.kkt-conditions
+    name: Using the KKT conditions
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.equality-constrained
+        encompassing: 0.75
+        confidence: high
+      - topic: math.optimization.complementary-slackness
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form KKT systems with consistent multiplier sign conventions
+        key_prerequisites: [math.optimization.equality-constrained, math.optimization.complementary-slackness]
+      - id: kp2
+        can_do: Identify active constraints and complementary multiplier patterns
+        key_prerequisites: [math.optimization.complementary-slackness]
+      - id: kp3
+        can_do: Solve nonlinear KKT systems by enumerating active sets
+        key_prerequisites: [math.optimization.equality-constrained, math.optimization.complementary-slackness]
+      - id: kp4
+        can_do: Certify convex optima using feasible KKT solutions
+        key_prerequisites: [math.optimization.equality-constrained, math.optimization.complementary-slackness]
+  - id: math.optimization.constraint-qualifications
+    name: Checking constraint qualifications
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.kkt-conditions
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Check linear independence of active constraint gradients
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp2
+        can_do: Test Mangasarian-Fromovitz conditions using gradients and strict feasible directions
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp3
+        can_do: Verify Slater's condition with convex inequalities and affine equalities
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp4
+        can_do: Identify optima lacking KKT multipliers when constraint qualifications fail
+        key_prerequisites: [math.optimization.kkt-conditions]
+  - id: math.optimization.lagrangian-duality
+    name: Using Lagrangian duality
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.kkt-conditions
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: math.optimization.duality-theorems
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compute dual functions by minimizing Lagrangians over primal variables
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp2
+        can_do: Form dual problems and bound primal optima
+        key_prerequisites: [math.optimization.kkt-conditions, math.optimization.duality-theorems]
+      - id: kp3
+        can_do: Establish strong duality using appropriate convexity and feasibility conditions
+        key_prerequisites: [math.optimization.kkt-conditions, math.optimization.duality-theorems]
+      - id: kp4
+        can_do: Recover primal solutions using dual optimality and complementary slackness
+        key_prerequisites: [math.optimization.kkt-conditions, math.optimization.duality-theorems]
+  - id: math.optimization.quadratic-programs
+    name: Solving quadratic programs
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.kkt-conditions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify quadratic objectives using Hessian eigenvalues
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp2
+        can_do: Solve equality-constrained quadratic programs through block linear systems
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp3
+        can_do: Find inequality-constrained optima by solving active-set KKT systems
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp4
+        can_do: Verify optimality and uniqueness using curvature and active constraints
+        key_prerequisites: [math.optimization.kkt-conditions]
+  - id: math.optimization.penalty-barrier
+    name: Using penalty and barrier methods
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.kkt-conditions
+        encompassing: 0.6
+        confidence: high
+      - topic: math.optimization.line-search
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Form quadratic penalties for equality and inequality violations
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp2
+        can_do: Construct logarithmic barriers for strict inequality feasibility
+        key_prerequisites: [math.optimization.kkt-conditions]
+      - id: kp3
+        can_do: Compute line-search steps for penalty and barrier subproblems
+        key_prerequisites: [math.optimization.line-search]
+      - id: kp4
+        can_do: Assess KKT residuals as penalty and barrier parameters change
+        key_prerequisites: [math.optimization.kkt-conditions]
+  - id: math.optimization.projected-gradient
+    name: Using projected gradient methods
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.gradient-descent-convergence
+        encompassing: 0.7
+        confidence: high
+    encompassed:
+      - topic: math.optimization.convex-sets
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compute Euclidean projections onto boxes, balls, and halfspaces
+        key_prerequisites: [math.optimization.convex-sets]
+      - id: kp2
+        can_do: Form projected gradient iterations for convex feasible sets
+        key_prerequisites: [math.optimization.gradient-descent-convergence, math.optimization.convex-sets]
+      - id: kp3
+        can_do: Test constrained stationarity using projection fixed points
+        key_prerequisites: [math.optimization.gradient-descent-convergence, math.optimization.convex-sets]
+      - id: kp4
+        can_do: Bound convergence rates under smoothness and strong convexity
+        key_prerequisites: [math.optimization.gradient-descent-convergence, math.optimization.convex-sets]
+  - id: math.optimization.multiobjective
+    name: Solving multiobjective problems with weights
+    subject: math
+    course: math.optimization
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.optimization.convex-sets
+        encompassing: 0.55
+        confidence: high
+    encompassed:
+      - topic: math.optimization.lp-formulation
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Identify dominated and Pareto-efficient feasible objective vectors
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp2
+        can_do: Find efficient solutions using strictly positive objective weights
+        key_prerequisites: [math.optimization.lp-formulation]
+      - id: kp3
+        can_do: Recover supporting weights from convex objective-set geometry
+        key_prerequisites: [math.optimization.convex-sets]
+      - id: kp4
+        can_do: Identify unsupported Pareto points in nonconvex objective sets
+        key_prerequisites: [math.optimization.convex-sets]

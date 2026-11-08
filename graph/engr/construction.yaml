@@ -1,0 +1,731 @@
+course: engr.construction
+topics:
+  - id: engr.construction.project-delivery
+    name: Comparing project delivery methods
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.economics.cost-types
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare design-bid-build, design-build and CM at risk
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp2
+        can_do: Identify roles of owner, designer and contractor
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp3
+        can_do: Choose a delivery method for a project
+        key_prerequisites: [engr.economics.cost-types]
+      - id: kp4
+        can_do: Relate delivery method to risk sharing
+        key_prerequisites: [engr.economics.cost-types]
+  - id: engr.construction.contract-types
+    name: Comparing construction contract types
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.project-delivery
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare lump-sum, unit-price and cost-plus contracts
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp2
+        can_do: Find payments under each contract type
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp3
+        can_do: Match contract types to project uncertainty
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp4
+        can_do: Explain guaranteed maximum price contracts
+        key_prerequisites: [engr.construction.project-delivery]
+  - id: engr.construction.contract-documents
+    name: Reading contract documents and specifications
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.contract-types
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify parts of a contract package
+        key_prerequisites: [engr.construction.contract-types]
+      - id: kp2
+        can_do: Interpret specification sections
+        key_prerequisites: [engr.construction.contract-types]
+      - id: kp3
+        can_do: Resolve conflicts with order of precedence
+        key_prerequisites: [engr.construction.contract-types]
+      - id: kp4
+        can_do: Explain bonds and insurance
+        key_prerequisites: [engr.construction.contract-types]
+  - id: engr.construction.construction-drawings
+    name: Interpreting construction drawings
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.construction-staking
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read plan, elevation and section views
+        key_prerequisites: [engr.surveying.construction-staking]
+      - id: kp2
+        can_do: Read site and grading plans
+        key_prerequisites: [engr.surveying.construction-staking]
+      - id: kp3
+        can_do: Read structural and reinforcing drawings
+        key_prerequisites: [engr.surveying.construction-staking]
+      - id: kp4
+        can_do: Find dimensions from scaled drawings
+        key_prerequisites: [engr.surveying.construction-staking]
+  - id: engr.construction.quantity-takeoff
+    name: Taking off quantities
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.construction-drawings
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.surveying.cross-sections-and-earthwork
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find concrete quantities
+        key_prerequisites: [engr.construction.construction-drawings]
+      - id: kp2
+        can_do: Find reinforcing steel quantities
+        key_prerequisites: [engr.construction.construction-drawings]
+      - id: kp3
+        can_do: Find excavation quantities
+        key_prerequisites: [engr.surveying.cross-sections-and-earthwork]
+      - id: kp4
+        can_do: Organize takeoffs by work item
+        key_prerequisites: [engr.construction.construction-drawings]
+  - id: engr.construction.unit-price-estimates
+    name: Building unit-price estimates
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.quantity-takeoff
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.cost-estimation
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find costs with unit prices
+        key_prerequisites: [engr.construction.quantity-takeoff, engr.economics.cost-estimation]
+      - id: kp2
+        can_do: Adjust unit costs for location and time
+        key_prerequisites: [engr.economics.cost-estimation]
+      - id: kp3
+        can_do: Build a work item estimate
+        key_prerequisites: [engr.construction.quantity-takeoff]
+      - id: kp4
+        can_do: Compare estimate types by project stage
+        key_prerequisites: [engr.economics.cost-estimation]
+  - id: engr.construction.labor-equipment-costs
+    name: Estimating labor and equipment costs
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.unit-price-estimates
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find crew costs per hour
+        key_prerequisites: [engr.construction.unit-price-estimates]
+      - id: kp2
+        can_do: Find labor burden
+        key_prerequisites: [engr.construction.unit-price-estimates]
+      - id: kp3
+        can_do: Find unit costs from crew productivity
+        key_prerequisites: [engr.construction.unit-price-estimates]
+      - id: kp4
+        can_do: Compare crew options
+        key_prerequisites: [engr.construction.unit-price-estimates]
+  - id: engr.construction.bid-pricing
+    name: Adding overhead, contingency and markup
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.labor-equipment-costs
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add overhead and profit to estimates
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp2
+        can_do: Find markup percentages
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp3
+        can_do: Unbalance bids and explain risks
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp4
+        can_do: Decide bid prices with competition
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+  - id: engr.construction.equipment-costs
+    name: Finding owning and operating costs of equipment
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.economics.depreciation-methods
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find ownership costs of equipment
+        key_prerequisites: [engr.economics.depreciation-methods]
+      - id: kp2
+        can_do: Find operating costs
+        key_prerequisites: [engr.economics.depreciation-methods]
+      - id: kp3
+        can_do: Compare owning and renting
+        key_prerequisites: [engr.economics.depreciation-methods]
+      - id: kp4
+        can_do: Find hourly equipment rates
+        key_prerequisites: [engr.economics.depreciation-methods]
+  - id: engr.construction.work-breakdown
+    name: Building work breakdown structures
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.project-delivery
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build a work breakdown structure
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp2
+        can_do: Define activities from work packages
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp3
+        can_do: Assign durations to activities
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp4
+        can_do: Code activities for tracking
+        key_prerequisites: [engr.construction.project-delivery]
+  - id: engr.construction.precedence-diagrams
+    name: Scheduling with precedence diagrams and lags
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.work-breakdown
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.economics.critical-path-method
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw precedence networks with lags
+        key_prerequisites: [engr.economics.critical-path-method]
+      - id: kp2
+        can_do: Use start-to-start and finish-to-finish links
+        key_prerequisites: [engr.construction.work-breakdown]
+      - id: kp3
+        can_do: Find early and late dates with lags
+        key_prerequisites: [engr.construction.work-breakdown, engr.economics.critical-path-method]
+      - id: kp4
+        can_do: Find critical paths in precedence networks
+        key_prerequisites: [engr.economics.critical-path-method]
+  - id: engr.construction.pert
+    name: Estimating schedule risk with PERT
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.precedence-diagrams
+        encompassing: 0.7
+        confidence: high
+      - topic: math.probstat.normal-linear-combinations
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find expected durations from three estimates
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp2
+        can_do: Find project duration variance
+        key_prerequisites: [engr.construction.precedence-diagrams, math.probstat.normal-linear-combinations]
+      - id: kp3
+        can_do: Find probability of meeting a deadline
+        key_prerequisites: [math.probstat.normal-linear-combinations]
+      - id: kp4
+        can_do: Explain limits of PERT
+        key_prerequisites: [engr.construction.precedence-diagrams]
+  - id: engr.construction.resource-leveling
+    name: Leveling resources
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.precedence-diagrams
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.economics.float-and-crashing
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw resource histograms
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp2
+        can_do: Level resources with float
+        key_prerequisites: [engr.construction.precedence-diagrams, engr.economics.float-and-crashing]
+      - id: kp3
+        can_do: Find leveled schedules
+        key_prerequisites: [engr.economics.float-and-crashing]
+      - id: kp4
+        can_do: Compare leveling and smoothing
+        key_prerequisites: [engr.construction.precedence-diagrams]
+  - id: engr.construction.time-cost-tradeoff
+    name: Finding least-cost schedules by crashing
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.economics.float-and-crashing
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.construction.labor-equipment-costs
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find crash costs per day
+        key_prerequisites: [engr.economics.float-and-crashing, engr.construction.labor-equipment-costs]
+      - id: kp2
+        can_do: Crash activities on the critical path
+        key_prerequisites: [engr.economics.float-and-crashing]
+      - id: kp3
+        can_do: Find least-cost durations
+        key_prerequisites: [engr.economics.float-and-crashing, engr.construction.labor-equipment-costs]
+      - id: kp4
+        can_do: Account for indirect costs
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+  - id: engr.construction.linear-scheduling
+    name: Scheduling repetitive work with linear scheduling
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.precedence-diagrams
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw linear schedules
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp2
+        can_do: Find buffers between crews
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp3
+        can_do: Schedule repetitive projects
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp4
+        can_do: Compare linear and network schedules
+        key_prerequisites: [engr.construction.precedence-diagrams]
+  - id: engr.construction.cash-flow-curves
+    name: Building cost-loaded schedules and cash flow curves
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.precedence-diagrams
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.construction.bid-pricing
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw cost-loaded S-curves
+        key_prerequisites: [engr.construction.precedence-diagrams]
+      - id: kp2
+        can_do: Find contractor cash flow with retainage
+        key_prerequisites: [engr.construction.bid-pricing]
+      - id: kp3
+        can_do: Find financing needs
+        key_prerequisites: [engr.construction.precedence-diagrams, engr.construction.bid-pricing]
+      - id: kp4
+        can_do: Compare early and late start curves
+        key_prerequisites: [engr.construction.precedence-diagrams]
+  - id: engr.construction.earned-value-forecasts
+    name: Forecasting cost and schedule with earned value
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.economics.earned-value
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.construction.cash-flow-curves
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find estimates at completion
+        key_prerequisites: [engr.economics.earned-value, engr.construction.cash-flow-curves]
+      - id: kp2
+        can_do: Find to-complete performance indexes
+        key_prerequisites: [engr.economics.earned-value]
+      - id: kp3
+        can_do: Forecast finish dates
+        key_prerequisites: [engr.construction.cash-flow-curves]
+      - id: kp4
+        can_do: Interpret earned value trends
+        key_prerequisites: [engr.economics.earned-value, engr.construction.cash-flow-curves]
+  - id: engr.construction.change-orders
+    name: Managing change orders and delay claims
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.contract-documents
+        encompassing: 0.5
+        confidence: high
+      - topic: engr.construction.earned-value-forecasts
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify changes and claims
+        key_prerequisites: [engr.construction.contract-documents]
+      - id: kp2
+        can_do: Price change orders
+        key_prerequisites: [engr.construction.earned-value-forecasts]
+      - id: kp3
+        can_do: Analyze delays
+        key_prerequisites: [engr.construction.earned-value-forecasts]
+      - id: kp4
+        can_do: Explain dispute resolution
+        key_prerequisites: [engr.construction.contract-documents]
+  - id: engr.construction.equipment-productivity
+    name: Finding equipment productivity
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.labor-equipment-costs
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cycle times of equipment
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp2
+        can_do: Find hourly production
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp3
+        can_do: Apply efficiency factors
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp4
+        can_do: Find unit costs from production
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+  - id: engr.construction.soil-swell-shrink
+    name: Finding bank, loose and compacted volumes for hauling
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.soil-mechanics.phase-relations
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find bank, loose and compacted volumes
+        key_prerequisites: [engr.soil-mechanics.phase-relations]
+      - id: kp2
+        can_do: Find load factors
+        key_prerequisites: [engr.soil-mechanics.phase-relations]
+      - id: kp3
+        can_do: Find truck loads for a job
+        key_prerequisites: [engr.soil-mechanics.phase-relations]
+      - id: kp4
+        can_do: Find borrow needed for fill
+        key_prerequisites: [engr.soil-mechanics.phase-relations]
+  - id: engr.construction.earthmoving-operations
+    name: Planning earthmoving operations
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.equipment-productivity
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.construction.soil-swell-shrink
+        encompassing: 0.25
+        confidence: high
+      - topic: engr.surveying.mass-haul-diagrams
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find scraper production
+        key_prerequisites: [engr.construction.equipment-productivity, engr.construction.soil-swell-shrink]
+      - id: kp2
+        can_do: Find excavator and truck production
+        key_prerequisites: [engr.construction.equipment-productivity, engr.construction.soil-swell-shrink]
+      - id: kp3
+        can_do: Plan haul operations from mass diagrams
+        key_prerequisites: [engr.surveying.mass-haul-diagrams]
+      - id: kp4
+        can_do: Find costs of earthmoving operations
+        key_prerequisites: [engr.construction.equipment-productivity]
+  - id: engr.construction.fleet-balancing
+    name: Balancing hauling and loading fleets
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.earthmoving-operations
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the number of trucks per loader
+        key_prerequisites: [engr.construction.earthmoving-operations]
+      - id: kp2
+        can_do: Balance pusher and scraper fleets
+        key_prerequisites: [engr.construction.earthmoving-operations]
+      - id: kp3
+        can_do: Find fleet production
+        key_prerequisites: [engr.construction.earthmoving-operations]
+      - id: kp4
+        can_do: Find costs of under- and over-trucking
+        key_prerequisites: [engr.construction.earthmoving-operations]
+  - id: engr.construction.labor-productivity
+    name: Measuring labor productivity
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.labor-equipment-costs
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find productivity factors
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp2
+        can_do: Explain learning curves on repetitive work
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp3
+        can_do: Find effects of overtime
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+      - id: kp4
+        can_do: Measure productivity with work sampling
+        key_prerequisites: [engr.construction.labor-equipment-costs]
+  - id: engr.construction.formwork-pressure
+    name: Designing formwork for concrete pressure
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mech-materials.flexure-formula
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find lateral concrete pressure on forms
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp2
+        can_do: Design sheathing for bending
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp3
+        can_do: Find tie spacing
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+      - id: kp4
+        can_do: Find shore loads
+        key_prerequisites: [engr.mech-materials.flexure-formula]
+  - id: engr.construction.concrete-operations
+    name: Planning concrete placement
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.formwork-pressure
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plan concrete placement rates
+        key_prerequisites: [engr.construction.formwork-pressure]
+      - id: kp2
+        can_do: Choose placement methods
+        key_prerequisites: [engr.construction.formwork-pressure]
+      - id: kp3
+        can_do: Explain curing and protection
+        key_prerequisites: [engr.construction.formwork-pressure]
+      - id: kp4
+        can_do: Plan pours with cold joints
+        key_prerequisites: [engr.construction.formwork-pressure]
+  - id: engr.construction.crane-lifts
+    name: Planning crane lifts
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.statics.moment-about-an-axis
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find load charts capacities
+        key_prerequisites: [engr.statics.moment-about-an-axis]
+      - id: kp2
+        can_do: Find radius and boom angles
+        key_prerequisites: [engr.statics.moment-about-an-axis]
+      - id: kp3
+        can_do: Check lifts against charts
+        key_prerequisites: [engr.statics.moment-about-an-axis]
+      - id: kp4
+        can_do: Plan rigging for loads
+        key_prerequisites: [engr.statics.moment-about-an-axis]
+  - id: engr.construction.construction-safety
+    name: Applying construction safety regulations
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.project-delivery
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify common site hazards
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp2
+        can_do: Explain fall protection
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp3
+        can_do: Find incident rates
+        key_prerequisites: [engr.construction.project-delivery]
+      - id: kp4
+        can_do: Build a job hazard analysis
+        key_prerequisites: [engr.construction.project-delivery]
+  - id: engr.construction.trench-safety
+    name: Analyzing excavation and trench safety
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.construction-safety
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.soil-mechanics.rankine-earth-pressure
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify soils for trenching
+        key_prerequisites: [engr.soil-mechanics.rankine-earth-pressure]
+      - id: kp2
+        can_do: Choose sloping, benching or shoring
+        key_prerequisites: [engr.construction.construction-safety, engr.soil-mechanics.rankine-earth-pressure]
+      - id: kp3
+        can_do: Find earth pressure on trench shoring
+        key_prerequisites: [engr.soil-mechanics.rankine-earth-pressure]
+      - id: kp4
+        can_do: Explain trench entry rules
+        key_prerequisites: [engr.construction.construction-safety]
+  - id: engr.construction.erosion-control
+    name: Planning temporary erosion and sediment control
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.contouring
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose erosion control measures
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp2
+        can_do: Find sediment basin sizes
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp3
+        can_do: Plan stormwater controls on site
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp4
+        can_do: Relate slopes to erosion risk
+        key_prerequisites: [engr.surveying.contouring]
+  - id: engr.construction.construction-quality-control
+    name: Applying quality control sampling
+    subject: engr
+    course: engr.construction
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.construction.contract-documents
+        encompassing: 0.7
+        confidence: high
+      - topic: math.stats.standard-deviation-calc
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Plan inspections and tests
+        key_prerequisites: [engr.construction.contract-documents]
+      - id: kp2
+        can_do: Find statistics of test results
+        key_prerequisites: [math.stats.standard-deviation-calc]
+      - id: kp3
+        can_do: Use acceptance criteria for concrete
+        key_prerequisites: [engr.construction.contract-documents, math.stats.standard-deviation-calc]
+      - id: kp4
+        can_do: Explain submittals and inspections
+        key_prerequisites: [engr.construction.contract-documents]

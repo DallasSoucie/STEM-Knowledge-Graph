@@ -1,0 +1,1500 @@
+course: physics.solid-state
+topics:
+  - id: physics.solid-state.bravais-lattices
+    name: Describing Bravais lattices
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.waves-thermo-optics.x-ray-diffraction
+        encompassing: 0.35
+        confidence: medium
+      - topic: math.linalg.basis-of-column-space
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify lattice points and translation vectors
+        key_prerequisites: [math.linalg.basis-of-column-space]
+      - id: kp2
+        can_do: Classify the fourteen Bravais lattices by symmetry
+        key_prerequisites: [math.linalg.basis-of-column-space]
+      - id: kp3
+        can_do: Distinguish a lattice from a crystal with a basis
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction]
+      - id: kp4
+        can_do: Find lattice vectors of cubic and hexagonal lattices
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction, math.linalg.basis-of-column-space]
+  - id: physics.solid-state.primitive-cells
+    name: Finding primitive and Wigner-Seitz cells
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bravais-lattices
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find primitive vectors of common lattices
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp2
+        can_do: Construct Wigner-Seitz cells
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp3
+        can_do: Compare primitive and conventional cells
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp4
+        can_do: Count lattice points per conventional cell
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+  - id: physics.solid-state.crystal-structures
+    name: Describing common crystal structures
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bravais-lattices
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe simple cubic, bcc and fcc structures
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp2
+        can_do: Describe diamond and zinc blende structures
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp3
+        can_do: Describe hexagonal close-packed structures
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp4
+        can_do: Find coordination numbers and nearest-neighbor distances
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+  - id: physics.solid-state.packing-fractions
+    name: Finding packing fractions and coordination numbers
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.crystal-structures
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find packing fractions of cubic structures
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp2
+        can_do: Find densities from lattice constants
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp3
+        can_do: Find lattice constants from densities
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp4
+        can_do: Compare close-packed structures
+        key_prerequisites: [physics.solid-state.crystal-structures]
+  - id: physics.solid-state.miller-indices
+    name: Using Miller indices
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bravais-lattices
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Miller indices of lattice planes
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp2
+        can_do: Find directions with bracket notation
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp3
+        can_do: Find spacings between planes in cubic crystals
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+      - id: kp4
+        can_do: Identify families of equivalent planes
+        key_prerequisites: [physics.solid-state.bravais-lattices]
+  - id: physics.solid-state.crystal-bonding
+    name: Classifying bonding in crystals
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.crystal-structures
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare ionic, covalent, metallic and van der Waals bonding
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp2
+        can_do: Model van der Waals crystals with the Lennard-Jones potential
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp3
+        can_do: Find equilibrium spacings and cohesive energies
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp4
+        can_do: Relate bonding to crystal properties
+        key_prerequisites: [physics.solid-state.crystal-structures]
+  - id: physics.solid-state.madelung-energy
+    name: Finding cohesive energy of ionic crystals
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.crystal-bonding
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the Madelung constant of a one-dimensional ion chain
+        key_prerequisites: [physics.solid-state.crystal-bonding]
+      - id: kp2
+        can_do: Find cohesive energies of ionic crystals
+        key_prerequisites: [physics.solid-state.crystal-bonding]
+      - id: kp3
+        can_do: Find equilibrium spacings with repulsive terms
+        key_prerequisites: [physics.solid-state.crystal-bonding]
+      - id: kp4
+        can_do: Compare predicted and measured lattice energies
+        key_prerequisites: [physics.solid-state.crystal-bonding]
+  - id: physics.solid-state.crystal-defects
+    name: Describing point defects and dislocations
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.crystal-structures
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify point, line and planar defects
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp2
+        can_do: Find vacancy concentrations with Boltzmann factors
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp3
+        can_do: Describe edge and screw dislocations
+        key_prerequisites: [physics.solid-state.crystal-structures]
+      - id: kp4
+        can_do: Relate dislocations to plastic deformation
+        key_prerequisites: [physics.solid-state.crystal-structures]
+  - id: physics.solid-state.reciprocal-lattice
+    name: Building the reciprocal lattice
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.miller-indices
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reciprocal lattice vectors
+        key_prerequisites: [physics.solid-state.miller-indices]
+      - id: kp2
+        can_do: Find reciprocal lattices of cubic lattices
+        key_prerequisites: [physics.solid-state.miller-indices]
+      - id: kp3
+        can_do: Relate reciprocal vectors to lattice planes
+        key_prerequisites: [physics.solid-state.miller-indices]
+      - id: kp4
+        can_do: Find plane spacings from reciprocal vectors
+        key_prerequisites: [physics.solid-state.miller-indices]
+  - id: physics.solid-state.brillouin-zones
+    name: Constructing Brillouin zones
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.reciprocal-lattice
+        encompassing: 0.85
+        confidence: high
+      - topic: physics.solid-state.primitive-cells
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Construct the first Brillouin zone in one and two dimensions
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp2
+        can_do: Find Brillouin zones of cubic lattices
+        key_prerequisites: [physics.solid-state.reciprocal-lattice, physics.solid-state.primitive-cells]
+      - id: kp3
+        can_do: Label high-symmetry points
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp4
+        can_do: Find higher Brillouin zones
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+  - id: physics.solid-state.laue-condition
+    name: Using the Laue condition for diffraction
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.reciprocal-lattice
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: physics.waves-thermo-optics.x-ray-diffraction
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: State the Laue condition
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp2
+        can_do: Show the Laue and Bragg conditions are equivalent
+        key_prerequisites: [physics.solid-state.reciprocal-lattice, physics.waves-thermo-optics.x-ray-diffraction]
+      - id: kp3
+        can_do: Find allowed scattering vectors
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp4
+        can_do: Find diffraction angles for given planes
+        key_prerequisites: [physics.waves-thermo-optics.x-ray-diffraction]
+  - id: physics.solid-state.ewald-construction
+    name: Using the Ewald construction
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.laue-condition
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw the Ewald sphere
+        key_prerequisites: [physics.solid-state.laue-condition]
+      - id: kp2
+        can_do: Find diffracted beams with the Ewald construction
+        key_prerequisites: [physics.solid-state.laue-condition]
+      - id: kp3
+        can_do: Explain rotating-crystal and powder methods
+        key_prerequisites: [physics.solid-state.laue-condition]
+      - id: kp4
+        can_do: Index a powder diffraction pattern
+        key_prerequisites: [physics.solid-state.laue-condition]
+  - id: physics.solid-state.structure-factor
+    name: Computing structure factors and systematic absences
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.laue-condition
+        encompassing: 0.85
+        confidence: high
+      - topic: physics.solid-state.crystal-structures
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find structure factors of a basis
+        key_prerequisites: [physics.solid-state.laue-condition]
+      - id: kp2
+        can_do: Find systematic absences of bcc and fcc lattices
+        key_prerequisites: [physics.solid-state.laue-condition, physics.solid-state.crystal-structures]
+      - id: kp3
+        can_do: Use atomic form factors
+        key_prerequisites: [physics.solid-state.laue-condition]
+      - id: kp4
+        can_do: Identify a cubic lattice from its absences
+        key_prerequisites: [physics.solid-state.laue-condition, physics.solid-state.crystal-structures]
+  - id: physics.solid-state.diffraction-probes
+    name: Comparing x-ray, electron and neutron diffraction
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.structure-factor
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare X-ray, electron and neutron diffraction
+        key_prerequisites: [physics.solid-state.structure-factor]
+      - id: kp2
+        can_do: Choose a probe for a given material
+        key_prerequisites: [physics.solid-state.structure-factor]
+      - id: kp3
+        can_do: Find wavelengths for diffraction probes
+        key_prerequisites: [physics.solid-state.structure-factor]
+      - id: kp4
+        can_do: Explain why neutrons probe magnetic order
+        key_prerequisites: [physics.solid-state.structure-factor]
+  - id: physics.solid-state.monatomic-chain
+    name: Finding dispersion of a monatomic chain
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.brillouin-zones
+        encompassing: 0.65
+        confidence: high
+      - topic: physics.classical.normal-modes-by-eigenvalues
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write equations of motion for a chain of atoms
+        key_prerequisites: [physics.classical.normal-modes-by-eigenvalues]
+      - id: kp2
+        can_do: Find the dispersion relation of a monatomic chain
+        key_prerequisites: [physics.solid-state.brillouin-zones, physics.classical.normal-modes-by-eigenvalues]
+      - id: kp3
+        can_do: Find group velocities and the sound speed
+        key_prerequisites: [physics.solid-state.brillouin-zones]
+      - id: kp4
+        can_do: Restrict wavevectors to the first Brillouin zone
+        key_prerequisites: [physics.solid-state.brillouin-zones]
+  - id: physics.solid-state.diatomic-chain
+    name: Finding acoustic and optical branches
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.monatomic-chain
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the dispersion of a diatomic chain
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+      - id: kp2
+        can_do: Identify acoustic and optical branches
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+      - id: kp3
+        can_do: Find the gap between branches
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+      - id: kp4
+        can_do: Describe atomic motion in each branch
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+  - id: physics.solid-state.phonons
+    name: Quantizing lattice vibrations as phonons
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.monatomic-chain
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.quantum.ladder-operators-oscillator
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Quantize lattice vibrations as phonons
+        key_prerequisites: [physics.quantum.ladder-operators-oscillator]
+      - id: kp2
+        can_do: Find phonon energies and momenta
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+      - id: kp3
+        can_do: Count phonon modes in three dimensions
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+      - id: kp4
+        can_do: Find phonon occupation with Bose-Einstein statistics
+        key_prerequisites: [physics.solid-state.monatomic-chain, physics.quantum.ladder-operators-oscillator]
+  - id: physics.solid-state.phonon-density-of-states
+    name: Finding phonon densities of states
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.phonons
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.stat-thermal.density-of-states
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the phonon density of states of a chain
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp2
+        can_do: Find the Debye density of states
+        key_prerequisites: [physics.stat-thermal.density-of-states]
+      - id: kp3
+        can_do: Identify van Hove singularities
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp4
+        can_do: Compare Debye and real densities of states
+        key_prerequisites: [physics.solid-state.phonons, physics.stat-thermal.density-of-states]
+  - id: physics.solid-state.lattice-heat-capacity
+    name: Finding lattice heat capacity from phonons
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.phonon-density-of-states
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.stat-thermal.debye-model
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find heat capacity from the phonon density of states
+        key_prerequisites: [physics.solid-state.phonon-density-of-states]
+      - id: kp2
+        can_do: Derive the Debye T-cubed law
+        key_prerequisites: [physics.stat-thermal.debye-model]
+      - id: kp3
+        can_do: Compare Einstein and Debye models with data
+        key_prerequisites: [physics.solid-state.phonon-density-of-states, physics.stat-thermal.debye-model]
+      - id: kp4
+        can_do: Find Debye temperatures from data
+        key_prerequisites: [physics.stat-thermal.debye-model]
+  - id: physics.solid-state.phonon-thermal-conductivity
+    name: Finding thermal conductivity from phonons
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.lattice-heat-capacity
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.stat-thermal.transport-coefficients
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Model thermal conductivity with a phonon gas
+        key_prerequisites: [physics.solid-state.lattice-heat-capacity, physics.stat-thermal.transport-coefficients]
+      - id: kp2
+        can_do: Find mean free paths of phonons
+        key_prerequisites: [physics.solid-state.lattice-heat-capacity]
+      - id: kp3
+        can_do: Explain umklapp scattering
+        key_prerequisites: [physics.solid-state.lattice-heat-capacity]
+      - id: kp4
+        can_do: Explain the temperature dependence of conductivity
+        key_prerequisites: [physics.stat-thermal.transport-coefficients]
+  - id: physics.solid-state.anharmonic-effects
+    name: Explaining thermal expansion from anharmonicity
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.phonons
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain thermal expansion with anharmonic potentials
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp2
+        can_do: Find expansion coefficients from simple models
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp3
+        can_do: Explain why harmonic crystals do not expand
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp4
+        can_do: Relate anharmonicity to phonon scattering
+        key_prerequisites: [physics.solid-state.phonons]
+  - id: physics.solid-state.phonon-scattering-measurement
+    name: Measuring phonons by inelastic scattering
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.phonons
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.solid-state.diffraction-probes
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain inelastic neutron scattering
+        key_prerequisites: [physics.solid-state.phonons, physics.solid-state.diffraction-probes]
+      - id: kp2
+        can_do: Find phonon energies from scattering data
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp3
+        can_do: Explain Raman and Brillouin scattering
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp4
+        can_do: Map dispersion curves from measurements
+        key_prerequisites: [physics.solid-state.phonons, physics.solid-state.diffraction-probes]
+  - id: physics.solid-state.drude-model
+    name: Using the Drude model of conduction
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive conductivity from the Drude model
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp2
+        can_do: Find relaxation times from conductivity
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp3
+        can_do: Find AC conductivity with the Drude model
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp4
+        can_do: List the failures of the Drude model
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+  - id: physics.solid-state.hall-effect
+    name: Finding Hall coefficients
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.drude-model
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the Hall coefficient
+        key_prerequisites: [physics.solid-state.drude-model]
+      - id: kp2
+        can_do: Find carrier densities from Hall data
+        key_prerequisites: [physics.solid-state.drude-model]
+      - id: kp3
+        can_do: Find the sign of charge carriers
+        key_prerequisites: [physics.solid-state.drude-model]
+      - id: kp4
+        can_do: Find magnetoresistance in the Drude model
+        key_prerequisites: [physics.solid-state.drude-model]
+  - id: physics.solid-state.sommerfeld-model
+    name: Finding metal properties with the Sommerfeld model
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.drude-model
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.stat-thermal.degenerate-fermi-gas
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find Fermi energies and wavevectors of metals
+        key_prerequisites: [physics.solid-state.drude-model, physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp2
+        can_do: Find the free electron density of states
+        key_prerequisites: [physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp3
+        can_do: Explain why few electrons conduct heat
+        key_prerequisites: [physics.solid-state.drude-model, physics.stat-thermal.degenerate-fermi-gas]
+      - id: kp4
+        can_do: Compare Drude and Sommerfeld predictions
+        key_prerequisites: [physics.solid-state.drude-model]
+  - id: physics.solid-state.wiedemann-franz
+    name: Using the Wiedemann-Franz law
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.sommerfeld-model
+        encompassing: 0.6
+        confidence: high
+      - topic: physics.stat-thermal.electron-heat-capacity
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Wiedemann-Franz law
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+      - id: kp2
+        can_do: Find the Lorenz number
+        key_prerequisites: [physics.solid-state.sommerfeld-model, physics.stat-thermal.electron-heat-capacity]
+      - id: kp3
+        can_do: Find electronic heat capacity coefficients
+        key_prerequisites: [physics.stat-thermal.electron-heat-capacity]
+      - id: kp4
+        can_do: Compare predictions with metal data
+        key_prerequisites: [physics.solid-state.sommerfeld-model, physics.stat-thermal.electron-heat-capacity]
+  - id: physics.solid-state.thermionic-emission
+    name: Finding work functions and thermionic emission
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.sommerfeld-model
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find work functions of metals
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+      - id: kp2
+        can_do: Derive the Richardson-Dushman equation
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+      - id: kp3
+        can_do: Find emission currents at given temperatures
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+      - id: kp4
+        can_do: Explain field emission qualitatively
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+  - id: physics.solid-state.bloch-theorem-3d
+    name: Applying Bloch's theorem in three dimensions
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.reciprocal-lattice
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.periodic-potentials-and-bloch
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Bloch's theorem in three dimensions
+        key_prerequisites: [physics.quantum.periodic-potentials-and-bloch]
+      - id: kp2
+        can_do: Restrict wavevectors to the Brillouin zone
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp3
+        can_do: Find allowed wavevectors with periodic boundary conditions
+        key_prerequisites: [physics.solid-state.reciprocal-lattice]
+      - id: kp4
+        can_do: Write Bloch functions as plane wave sums
+        key_prerequisites: [physics.solid-state.reciprocal-lattice, physics.quantum.periodic-potentials-and-bloch]
+  - id: physics.solid-state.nearly-free-electron
+    name: Finding band gaps with the nearly free electron model
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bloch-theorem-3d
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.solid-state.brillouin-zones
+        encompassing: 0.3
+        confidence: high
+      - topic: physics.quantum.degenerate-perturbation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find band gaps at zone boundaries
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d, physics.quantum.degenerate-perturbation]
+      - id: kp2
+        can_do: Find gap sizes from Fourier components of the potential
+        key_prerequisites: [physics.quantum.degenerate-perturbation]
+      - id: kp3
+        can_do: Draw bands in the reduced zone scheme
+        key_prerequisites: [physics.solid-state.brillouin-zones]
+      - id: kp4
+        can_do: Find standing waves at zone boundaries
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+  - id: physics.solid-state.tight-binding
+    name: Using the tight-binding model
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bloch-theorem-3d
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the tight-binding model in one dimension
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+      - id: kp2
+        can_do: Find band energies of a chain
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+      - id: kp3
+        can_do: Find tight-binding bands of square and cubic lattices
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+      - id: kp4
+        can_do: Relate band widths to overlap integrals
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+  - id: physics.solid-state.states-per-band
+    name: Counting states in a band
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bloch-theorem-3d
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.solid-state.brillouin-zones
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count states in a band
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d, physics.solid-state.brillouin-zones]
+      - id: kp2
+        can_do: Show each band holds two electrons per primitive cell
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+      - id: kp3
+        can_do: Count states with spin
+        key_prerequisites: [physics.solid-state.bloch-theorem-3d]
+      - id: kp4
+        can_do: Relate band counting to the number of cells
+        key_prerequisites: [physics.solid-state.brillouin-zones]
+  - id: physics.solid-state.band-filling
+    name: Classifying solids by band filling
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.states-per-band
+        encompassing: 0.75
+        confidence: high
+      - topic: physics.modern.band-classification-of-solids
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Classify materials as metals or insulators by filling
+        key_prerequisites: [physics.solid-state.states-per-band, physics.modern.band-classification-of-solids]
+      - id: kp2
+        can_do: Explain divalent metals with band overlap
+        key_prerequisites: [physics.solid-state.states-per-band]
+      - id: kp3
+        can_do: Find band fillings from valence electrons
+        key_prerequisites: [physics.solid-state.states-per-band]
+      - id: kp4
+        can_do: Explain semimetals
+        key_prerequisites: [physics.modern.band-classification-of-solids]
+  - id: physics.solid-state.fermi-surfaces
+    name: Constructing Fermi surfaces
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.nearly-free-electron
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.solid-state.band-filling
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw free electron Fermi surfaces in two dimensions
+        key_prerequisites: [physics.solid-state.band-filling]
+      - id: kp2
+        can_do: Draw Fermi surfaces in extended and reduced zones
+        key_prerequisites: [physics.solid-state.nearly-free-electron, physics.solid-state.band-filling]
+      - id: kp3
+        can_do: Relate Fermi surfaces to band gaps
+        key_prerequisites: [physics.solid-state.nearly-free-electron]
+      - id: kp4
+        can_do: Identify electron and hole pockets
+        key_prerequisites: [physics.solid-state.nearly-free-electron, physics.solid-state.band-filling]
+  - id: physics.solid-state.effective-mass
+    name: Using effective mass
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.tight-binding
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find effective masses from band curvature
+        key_prerequisites: [physics.solid-state.tight-binding]
+      - id: kp2
+        can_do: Find effective mass tensors
+        key_prerequisites: [physics.solid-state.tight-binding]
+      - id: kp3
+        can_do: Find effective masses near band edges
+        key_prerequisites: [physics.solid-state.tight-binding]
+      - id: kp4
+        can_do: Relate effective masses to band widths
+        key_prerequisites: [physics.solid-state.tight-binding]
+  - id: physics.solid-state.holes
+    name: Describing holes
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.effective-mass
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain holes as missing electrons
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp2
+        can_do: Find hole charge, mass and wavevector
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp3
+        can_do: Explain positive Hall coefficients with holes
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp4
+        can_do: Find hole velocities from band structures
+        key_prerequisites: [physics.solid-state.effective-mass]
+  - id: physics.solid-state.semiclassical-dynamics
+    name: Finding electron motion in applied fields
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.effective-mass
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use the semiclassical equation of motion
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp2
+        can_do: Explain Bloch oscillations
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp3
+        can_do: Explain why filled bands do not conduct
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp4
+        can_do: Find orbits in magnetic fields
+        key_prerequisites: [physics.solid-state.effective-mass]
+  - id: physics.solid-state.cyclotron-resonance
+    name: Explaining cyclotron resonance and quantum oscillations
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.semiclassical-dynamics
+        encompassing: 0.65
+        confidence: high
+      - topic: physics.solid-state.fermi-surfaces
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cyclotron frequencies with effective masses
+        key_prerequisites: [physics.solid-state.semiclassical-dynamics]
+      - id: kp2
+        can_do: Find effective masses from resonance data
+        key_prerequisites: [physics.solid-state.semiclassical-dynamics, physics.solid-state.fermi-surfaces]
+      - id: kp3
+        can_do: Explain de Haas-van Alphen oscillations
+        key_prerequisites: [physics.solid-state.fermi-surfaces]
+      - id: kp4
+        can_do: Find Fermi surface areas from oscillation periods
+        key_prerequisites: [physics.solid-state.fermi-surfaces]
+  - id: physics.solid-state.intrinsic-carriers
+    name: Finding intrinsic carrier concentrations
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.holes
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.stat-thermal.semiconductor-carrier-statistics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find intrinsic carrier concentrations
+        key_prerequisites: [physics.solid-state.holes, physics.stat-thermal.semiconductor-carrier-statistics]
+      - id: kp2
+        can_do: Find the intrinsic Fermi level
+        key_prerequisites: [physics.stat-thermal.semiconductor-carrier-statistics]
+      - id: kp3
+        can_do: Find band gaps from temperature data
+        key_prerequisites: [physics.solid-state.holes, physics.stat-thermal.semiconductor-carrier-statistics]
+      - id: kp4
+        can_do: Compare intrinsic concentrations of silicon and germanium
+        key_prerequisites: [physics.solid-state.holes]
+  - id: physics.solid-state.doped-carriers
+    name: Finding carrier concentrations in doped semiconductors
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.intrinsic-carriers
+        encompassing: 0.9
+        confidence: high
+    encompassed:
+      - topic: physics.modern.doped-semiconductors
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find donor and acceptor ionization energies with a hydrogen model
+        key_prerequisites: [physics.solid-state.intrinsic-carriers]
+      - id: kp2
+        can_do: Find carrier concentrations in doped semiconductors
+        key_prerequisites: [physics.solid-state.intrinsic-carriers, physics.modern.doped-semiconductors]
+      - id: kp3
+        can_do: Find Fermi levels in doped semiconductors
+        key_prerequisites: [physics.solid-state.intrinsic-carriers]
+      - id: kp4
+        can_do: Explain freeze-out, extrinsic and intrinsic regimes
+        key_prerequisites: [physics.solid-state.intrinsic-carriers, physics.modern.doped-semiconductors]
+  - id: physics.solid-state.semiconductor-mobility
+    name: Finding mobility and conductivity of semiconductors
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.doped-carriers
+        encompassing: 0.65
+        confidence: high
+      - topic: physics.solid-state.drude-model
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find mobilities from conductivity
+        key_prerequisites: [physics.solid-state.doped-carriers, physics.solid-state.drude-model]
+      - id: kp2
+        can_do: Compare electron and hole mobilities
+        key_prerequisites: [physics.solid-state.doped-carriers]
+      - id: kp3
+        can_do: Explain lattice and impurity scattering
+        key_prerequisites: [physics.solid-state.drude-model]
+      - id: kp4
+        can_do: Find the temperature dependence of mobility
+        key_prerequisites: [physics.solid-state.drude-model]
+  - id: physics.solid-state.drift-diffusion
+    name: Deriving drift and diffusion currents from carrier transport
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.semiconductor-mobility
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write drift and diffusion currents
+        key_prerequisites: [physics.solid-state.semiconductor-mobility]
+      - id: kp2
+        can_do: Use the Einstein relation
+        key_prerequisites: [physics.solid-state.semiconductor-mobility]
+      - id: kp3
+        can_do: Write the continuity equation for carriers
+        key_prerequisites: [physics.solid-state.semiconductor-mobility]
+      - id: kp4
+        can_do: Find diffusion lengths of minority carriers
+        key_prerequisites: [physics.solid-state.semiconductor-mobility]
+  - id: physics.solid-state.pn-junction-electrostatics
+    name: Finding fields and widths of p-n junctions
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.doped-carriers
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.modern.pn-junctions
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find built-in potentials of junctions
+        key_prerequisites: [physics.solid-state.doped-carriers, physics.modern.pn-junctions]
+      - id: kp2
+        can_do: Find depletion widths
+        key_prerequisites: [physics.solid-state.doped-carriers]
+      - id: kp3
+        can_do: Find fields and potentials in the depletion region
+        key_prerequisites: [physics.solid-state.doped-carriers]
+      - id: kp4
+        can_do: Find junction capacitance
+        key_prerequisites: [physics.modern.pn-junctions]
+  - id: physics.solid-state.diode-equation
+    name: Deriving the ideal diode equation from carrier injection
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.pn-junction-electrostatics
+        encompassing: 0.5
+        confidence: high
+      - topic: physics.solid-state.drift-diffusion
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the ideal diode equation
+        key_prerequisites: [physics.solid-state.pn-junction-electrostatics, physics.solid-state.drift-diffusion]
+      - id: kp2
+        can_do: Find saturation currents
+        key_prerequisites: [physics.solid-state.drift-diffusion]
+      - id: kp3
+        can_do: Explain reverse breakdown
+        key_prerequisites: [physics.solid-state.pn-junction-electrostatics]
+      - id: kp4
+        can_do: Compare ideal and real diode curves
+        key_prerequisites: [physics.solid-state.pn-junction-electrostatics, physics.solid-state.drift-diffusion]
+  - id: physics.solid-state.direct-indirect-gaps
+    name: Telling direct from indirect band gaps
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.effective-mass
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Distinguish direct and indirect gaps
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp2
+        can_do: Explain phonon-assisted absorption
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp3
+        can_do: Find gaps from absorption edges
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp4
+        can_do: Choose materials for light emitters
+        key_prerequisites: [physics.solid-state.effective-mass]
+  - id: physics.solid-state.semiconductor-optics
+    name: Describing optical absorption and emission in semiconductors
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.direct-indirect-gaps
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find absorption edges of semiconductors
+        key_prerequisites: [physics.solid-state.direct-indirect-gaps]
+      - id: kp2
+        can_do: Explain excitons
+        key_prerequisites: [physics.solid-state.direct-indirect-gaps]
+      - id: kp3
+        can_do: Explain photoconductivity
+        key_prerequisites: [physics.solid-state.direct-indirect-gaps]
+      - id: kp4
+        can_do: Explain light-emitting diodes and solar cells
+        key_prerequisites: [physics.solid-state.direct-indirect-gaps]
+  - id: physics.solid-state.quantum-wells
+    name: Describing quantum wells and low-dimensional systems
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.effective-mass
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.quantum.finite-well-exact
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find energy levels in semiconductor quantum wells
+        key_prerequisites: [physics.solid-state.effective-mass, physics.quantum.finite-well-exact]
+      - id: kp2
+        can_do: Find subband densities of states
+        key_prerequisites: [physics.solid-state.effective-mass]
+      - id: kp3
+        can_do: Find transition energies in quantum wells
+        key_prerequisites: [physics.quantum.finite-well-exact]
+      - id: kp4
+        can_do: Compare wells, wires and dots
+        key_prerequisites: [physics.solid-state.effective-mass]
+  - id: physics.solid-state.plasma-frequency
+    name: Finding the plasma frequency of metals
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.drude-model
+        encompassing: 0.65
+        confidence: high
+      - topic: physics.em-theory.dispersion-in-dielectrics
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find plasma frequencies of metals
+        key_prerequisites: [physics.solid-state.drude-model]
+      - id: kp2
+        can_do: Explain reflection below the plasma frequency
+        key_prerequisites: [physics.solid-state.drude-model, physics.em-theory.dispersion-in-dielectrics]
+      - id: kp3
+        can_do: Find dielectric functions from the Drude model
+        key_prerequisites: [physics.solid-state.drude-model, physics.em-theory.dispersion-in-dielectrics]
+      - id: kp4
+        can_do: Explain plasmons
+        key_prerequisites: [physics.solid-state.drude-model]
+  - id: physics.solid-state.local-field
+    name: Finding local fields in dielectrics
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.clausius-mossotti
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the local field in a dielectric
+        key_prerequisites: [physics.em-theory.clausius-mossotti]
+      - id: kp2
+        can_do: Relate polarizability to the dielectric constant
+        key_prerequisites: [physics.em-theory.clausius-mossotti]
+      - id: kp3
+        can_do: Compare electronic, ionic and orientational polarizability
+        key_prerequisites: [physics.em-theory.clausius-mossotti]
+      - id: kp4
+        can_do: Find dielectric constants from polarizabilities
+        key_prerequisites: [physics.em-theory.clausius-mossotti]
+  - id: physics.solid-state.ferroelectrics
+    name: Describing ferroelectrics
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.local-field
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe spontaneous polarization
+        key_prerequisites: [physics.solid-state.local-field]
+      - id: kp2
+        can_do: Explain the polarization catastrophe
+        key_prerequisites: [physics.solid-state.local-field]
+      - id: kp3
+        can_do: Use a Landau model of ferroelectric transitions
+        key_prerequisites: [physics.solid-state.local-field]
+      - id: kp4
+        can_do: Describe hysteresis in ferroelectrics
+        key_prerequisites: [physics.solid-state.local-field]
+  - id: physics.solid-state.diamagnetism
+    name: Explaining diamagnetism
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.em-theory.magnetization-and-bound-currents
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find diamagnetic susceptibilities with Larmor's model
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+      - id: kp2
+        can_do: Estimate diamagnetic susceptibility magnitudes
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+      - id: kp3
+        can_do: Compare diamagnetic and paramagnetic materials
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+      - id: kp4
+        can_do: Explain why diamagnetism is universal
+        key_prerequisites: [physics.em-theory.magnetization-and-bound-currents]
+  - id: physics.solid-state.curie-paramagnetism
+    name: Explaining paramagnetism with Curie's law
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.stat-thermal.paramagnet-thermodynamics
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find magnetization with the Brillouin function
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp2
+        can_do: Derive Curie's law
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp3
+        can_do: Find effective moments from Hund's rules
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+      - id: kp4
+        can_do: Find moments from susceptibility data
+        key_prerequisites: [physics.stat-thermal.paramagnet-thermodynamics]
+  - id: physics.solid-state.pauli-paramagnetism
+    name: Explaining Pauli paramagnetism of metals
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.sommerfeld-model
+        encompassing: 0.4
+        confidence: high
+      - topic: physics.solid-state.curie-paramagnetism
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive Pauli paramagnetism
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+      - id: kp2
+        can_do: Explain why it is temperature independent
+        key_prerequisites: [physics.solid-state.sommerfeld-model, physics.solid-state.curie-paramagnetism]
+      - id: kp3
+        can_do: Compare Pauli and Curie susceptibilities
+        key_prerequisites: [physics.solid-state.curie-paramagnetism]
+      - id: kp4
+        can_do: Find Pauli susceptibilities of metals
+        key_prerequisites: [physics.solid-state.sommerfeld-model]
+  - id: physics.solid-state.exchange-ferromagnetism
+    name: Explaining ferromagnetic order from exchange
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.quantum.exchange-force
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain exchange interactions
+        key_prerequisites: [physics.quantum.exchange-force]
+      - id: kp2
+        can_do: Write the Heisenberg model
+        key_prerequisites: [physics.quantum.exchange-force]
+      - id: kp3
+        can_do: Find ground states of ferromagnetic chains
+        key_prerequisites: [physics.quantum.exchange-force]
+      - id: kp4
+        can_do: Compare exchange and dipolar energies
+        key_prerequisites: [physics.quantum.exchange-force]
+  - id: physics.solid-state.mean-field-ferromagnet
+    name: Finding the Curie temperature in mean field theory
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.exchange-ferromagnetism
+        encompassing: 0.7
+        confidence: high
+      - topic: physics.stat-thermal.ising-mean-field
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up the Weiss molecular field
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism, physics.stat-thermal.ising-mean-field]
+      - id: kp2
+        can_do: Find Curie temperatures
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism, physics.stat-thermal.ising-mean-field]
+      - id: kp3
+        can_do: Derive the Curie-Weiss law
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp4
+        can_do: Find magnetization near the transition
+        key_prerequisites: [physics.stat-thermal.ising-mean-field]
+  - id: physics.solid-state.antiferromagnetism
+    name: Describing antiferromagnetism and ferrimagnetism
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.mean-field-ferromagnet
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe antiferromagnetic order with sublattices
+        key_prerequisites: [physics.solid-state.mean-field-ferromagnet]
+      - id: kp2
+        can_do: Find Neel temperatures in mean field
+        key_prerequisites: [physics.solid-state.mean-field-ferromagnet]
+      - id: kp3
+        can_do: Derive the susceptibility of antiferromagnets
+        key_prerequisites: [physics.solid-state.mean-field-ferromagnet]
+      - id: kp4
+        can_do: Describe ferrimagnetism
+        key_prerequisites: [physics.solid-state.mean-field-ferromagnet]
+  - id: physics.solid-state.spin-waves
+    name: Finding spin wave dispersion
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.exchange-ferromagnetism
+        encompassing: 0.45
+        confidence: high
+      - topic: physics.solid-state.monatomic-chain
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe spin waves in a chain
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp2
+        can_do: Find magnon dispersion relations
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism, physics.solid-state.monatomic-chain]
+      - id: kp3
+        can_do: Derive the Bloch T to the 3/2 law
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp4
+        can_do: Compare magnons and phonons
+        key_prerequisites: [physics.solid-state.monatomic-chain]
+  - id: physics.solid-state.magnetic-domains
+    name: Explaining domains and hysteresis
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.exchange-ferromagnetism
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain why domains form
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp2
+        can_do: Describe domain walls
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp3
+        can_do: Explain hysteresis loops with domains
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+      - id: kp4
+        can_do: Compare hard and soft magnets
+        key_prerequisites: [physics.solid-state.exchange-ferromagnetism]
+  - id: physics.solid-state.meissner-effect
+    name: Describing the Meissner effect and critical fields
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.modern.superconductivity-overview
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe zero resistance and the Meissner effect
+        key_prerequisites: [physics.modern.superconductivity-overview]
+      - id: kp2
+        can_do: Distinguish type I and type II superconductors
+        key_prerequisites: [physics.modern.superconductivity-overview]
+      - id: kp3
+        can_do: Find critical fields and temperatures
+        key_prerequisites: [physics.modern.superconductivity-overview]
+      - id: kp4
+        can_do: Explain the isotope effect
+        key_prerequisites: [physics.modern.superconductivity-overview]
+  - id: physics.solid-state.london-equations
+    name: Using the London equations
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.meissner-effect
+        encompassing: 0.75
+        confidence: high
+      - topic: physics.em-theory.waves-in-conductors
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Derive the London equations
+        key_prerequisites: [physics.solid-state.meissner-effect]
+      - id: kp2
+        can_do: Find the London penetration depth
+        key_prerequisites: [physics.solid-state.meissner-effect, physics.em-theory.waves-in-conductors]
+      - id: kp3
+        can_do: Find field decay inside a superconductor
+        key_prerequisites: [physics.em-theory.waves-in-conductors]
+      - id: kp4
+        can_do: Explain flux quantization
+        key_prerequisites: [physics.solid-state.meissner-effect]
+  - id: physics.solid-state.bcs-theory
+    name: Describing BCS theory qualitatively
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.london-equations
+        encompassing: 0.7
+        confidence: high
+      - topic: physics.solid-state.phonons
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain Cooper pairs
+        key_prerequisites: [physics.solid-state.london-equations, physics.solid-state.phonons]
+      - id: kp2
+        can_do: Relate the energy gap to the critical temperature
+        key_prerequisites: [physics.solid-state.london-equations]
+      - id: kp3
+        can_do: Explain the role of phonons in pairing
+        key_prerequisites: [physics.solid-state.phonons]
+      - id: kp4
+        can_do: Find gaps from tunneling data
+        key_prerequisites: [physics.solid-state.london-equations]
+  - id: physics.solid-state.josephson-effects
+    name: Explaining flux quantization and Josephson effects
+    subject: physics
+    course: physics.solid-state
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: physics.solid-state.bcs-theory
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe the DC Josephson effect
+        key_prerequisites: [physics.solid-state.bcs-theory]
+      - id: kp2
+        can_do: Describe the AC Josephson effect
+        key_prerequisites: [physics.solid-state.bcs-theory]
+      - id: kp3
+        can_do: Explain SQUIDs
+        key_prerequisites: [physics.solid-state.bcs-theory]
+      - id: kp4
+        can_do: Find frequencies from Josephson voltages
+        key_prerequisites: [physics.solid-state.bcs-theory]

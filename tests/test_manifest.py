@@ -16,19 +16,19 @@ def _courses():
     return list(load_graph(GRAPH).courses.values())
 
 
-def test_manifest_has_103_courses():
-    assert len(_courses()) == 110
+def test_manifest_has_125_courses():
+    assert len(_courses()) == 125
 
 
-def test_budgets_total_9350():
-    assert sum(c.budget for c in _courses()) == 9350
+def test_budgets_total_10125():
+    assert sum(c.budget for c in _courses()) == 10125
 
 
 def test_subject_totals():
     totals = Counter()
     for c in _courses():
         totals[c.subject] += c.budget
-    assert totals == {"math": 4370, "physics": 1335, "chem": 790, "bio": 755, "engr": 2100}
+    assert totals == {"math": 4645, "physics": 1505, "chem": 790, "bio": 935, "engr": 2250}
 
 
 def test_ids_follows_and_levels_are_consistent():

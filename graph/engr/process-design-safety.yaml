@@ -1,0 +1,717 @@
+course: engr.process-design-safety
+topics:
+  - id: engr.process-design-safety.flowsheet-synthesis
+    name: Developing flowsheets from reaction routes
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.complex-reaction-networks
+        encompassing: 0.35
+        confidence: high
+    encompassed:
+      - topic: engr.mass-energy-balances.process-flowsheets
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Choose batch or continuous operation
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+      - id: kp2
+        can_do: Build input-output structures
+        key_prerequisites: [engr.reactors.complex-reaction-networks, engr.mass-energy-balances.process-flowsheets]
+      - id: kp3
+        can_do: Find reactor and separation needs
+        key_prerequisites: [engr.reactors.complex-reaction-networks]
+      - id: kp4
+        can_do: Draw a base-case flowsheet
+        key_prerequisites: [engr.mass-energy-balances.process-flowsheets]
+  - id: engr.process-design-safety.design-hierarchy
+    name: Using the design hierarchy
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flowsheet-synthesis
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Order design decisions by level
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp2
+        can_do: Find economic potential at each level
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp3
+        can_do: Screen alternatives early
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp4
+        can_do: Explain when to stop screening
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+  - id: engr.process-design-safety.recycle-structure
+    name: Choosing recycle and purge structure
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.design-hierarchy
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.mass-energy-balances.reactive-recycle-and-purge
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose recycle and purge streams
+        key_prerequisites: [engr.mass-energy-balances.reactive-recycle-and-purge]
+      - id: kp2
+        can_do: Find recycle flows
+        key_prerequisites: [engr.mass-energy-balances.reactive-recycle-and-purge]
+      - id: kp3
+        can_do: Find optimum conversion
+        key_prerequisites: [engr.process-design-safety.design-hierarchy]
+      - id: kp4
+        can_do: Decide on excess reactants
+        key_prerequisites: [engr.process-design-safety.design-hierarchy]
+  - id: engr.process-design-safety.column-sequencing
+    name: Sequencing distillation columns
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.design-hierarchy
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.separations.key-components
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count possible column sequences
+        key_prerequisites: [engr.process-design-safety.design-hierarchy]
+      - id: kp2
+        can_do: Use sequencing heuristics
+        key_prerequisites: [engr.separations.key-components]
+      - id: kp3
+        can_do: Compare sequences by cost
+        key_prerequisites: [engr.process-design-safety.design-hierarchy, engr.separations.key-components]
+      - id: kp4
+        can_do: Choose sequences for azeotropic systems
+        key_prerequisites: [engr.separations.key-components]
+  - id: engr.process-design-safety.pinch-analysis
+    name: Finding minimum utilities by pinch analysis
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.nonreactive-energy-balances
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build composite curves
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp2
+        can_do: Find the pinch temperature
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp3
+        can_do: Find minimum utility targets
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+      - id: kp4
+        can_do: Use the problem table method
+        key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]
+  - id: engr.process-design-safety.heat-exchanger-networks
+    name: Designing heat exchanger networks
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.pinch-analysis
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design networks above and below the pinch
+        key_prerequisites: [engr.process-design-safety.pinch-analysis]
+      - id: kp2
+        can_do: Match streams with pinch rules
+        key_prerequisites: [engr.process-design-safety.pinch-analysis]
+      - id: kp3
+        can_do: Find minimum number of units
+        key_prerequisites: [engr.process-design-safety.pinch-analysis]
+      - id: kp4
+        can_do: Trade energy against capital
+        key_prerequisites: [engr.process-design-safety.pinch-analysis]
+  - id: engr.process-design-safety.process-simulators
+    name: Using process simulators
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-simulation-sequential
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a flowsheet in a simulator
+        key_prerequisites: [engr.mass-energy-balances.process-simulation-sequential]
+      - id: kp2
+        can_do: Choose tear streams
+        key_prerequisites: [engr.mass-energy-balances.process-simulation-sequential]
+      - id: kp3
+        can_do: Diagnose convergence failures
+        key_prerequisites: [engr.mass-energy-balances.process-simulation-sequential]
+      - id: kp4
+        can_do: Check simulator results by hand
+        key_prerequisites: [engr.mass-energy-balances.process-simulation-sequential]
+  - id: engr.process-design-safety.simulation-thermo-models
+    name: Choosing thermodynamic models in simulation
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.process-simulators
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.cheme-thermo.activity-coefficients
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose property methods
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp2
+        can_do: Compare activity and equation-of-state models
+        key_prerequisites: [engr.cheme-thermo.activity-coefficients]
+      - id: kp3
+        can_do: Check models against data
+        key_prerequisites: [engr.process-design-safety.process-simulators, engr.cheme-thermo.activity-coefficients]
+      - id: kp4
+        can_do: Explain errors from wrong models
+        key_prerequisites: [engr.process-design-safety.process-simulators]
+  - id: engr.process-design-safety.equipment-sizing
+    name: Sizing equipment for cost estimates
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flowsheet-synthesis
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Size vessels and drums
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp2
+        can_do: Size heat exchangers
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp3
+        can_do: Size columns
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp4
+        can_do: Size pumps and compressors
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+  - id: engr.process-design-safety.capital-cost-estimation
+    name: Estimating capital cost with factored methods
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.equipment-sizing
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.economics.cost-estimation
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find purchased costs from correlations
+        key_prerequisites: [engr.process-design-safety.equipment-sizing]
+      - id: kp2
+        can_do: Use cost indices
+        key_prerequisites: [engr.economics.cost-estimation]
+      - id: kp3
+        can_do: Use installation factors
+        key_prerequisites: [engr.process-design-safety.equipment-sizing, engr.economics.cost-estimation]
+      - id: kp4
+        can_do: Find total capital investment
+        key_prerequisites: [engr.economics.cost-estimation]
+  - id: engr.process-design-safety.operating-costs
+    name: Estimating operating costs
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.capital-cost-estimation
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find raw material costs
+        key_prerequisites: [engr.process-design-safety.capital-cost-estimation]
+      - id: kp2
+        can_do: Find utility costs
+        key_prerequisites: [engr.process-design-safety.capital-cost-estimation]
+      - id: kp3
+        can_do: Find labor and maintenance costs
+        key_prerequisites: [engr.process-design-safety.capital-cost-estimation]
+      - id: kp4
+        can_do: Find total operating costs
+        key_prerequisites: [engr.process-design-safety.capital-cost-estimation]
+  - id: engr.process-design-safety.process-profitability
+    name: Evaluating process profitability
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.operating-costs
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.economics.after-tax-cash-flows
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find net present value of a plant
+        key_prerequisites: [engr.process-design-safety.operating-costs, engr.economics.after-tax-cash-flows]
+      - id: kp2
+        can_do: Find payback and return on investment
+        key_prerequisites: [engr.process-design-safety.operating-costs]
+      - id: kp3
+        can_do: Find break-even prices
+        key_prerequisites: [engr.economics.after-tax-cash-flows]
+      - id: kp4
+        can_do: Rank process alternatives
+        key_prerequisites: [engr.process-design-safety.operating-costs, engr.economics.after-tax-cash-flows]
+  - id: engr.process-design-safety.design-optimization
+    name: Optimizing design variables economically
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.process-profitability
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.separations.optimum-feed-and-reflux
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify design variables
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+      - id: kp2
+        can_do: Find optimum reflux ratios
+        key_prerequisites: [engr.separations.optimum-feed-and-reflux]
+      - id: kp3
+        can_do: Optimize recycle conversion
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+      - id: kp4
+        can_do: Run sensitivity studies
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+  - id: engr.process-design-safety.process-environmental-impact
+    name: Assessing environmental impact of processes
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.process-profitability
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find emissions from processes
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+      - id: kp2
+        can_do: Rank waste streams
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+      - id: kp3
+        can_do: Include environmental costs
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+      - id: kp4
+        can_do: Use life cycle thinking
+        key_prerequisites: [engr.process-design-safety.process-profitability]
+  - id: engr.process-design-safety.green-metrics
+    name: Calculating atom economy and E-factors for processes
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flowsheet-synthesis
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find atom economy
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp2
+        can_do: Find E-factors
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp3
+        can_do: Compare routes by green metrics
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp4
+        can_do: Apply green chemistry principles
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+  - id: engr.process-design-safety.flammability-limits
+    name: Finding flammability limits of mixtures
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-safety-basics
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find flammability limits of mixtures
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp2
+        can_do: Use the limiting oxygen concentration
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp3
+        can_do: Find flash points
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp4
+        can_do: Draw flammability diagrams
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+  - id: engr.process-design-safety.inerting-purging
+    name: Designing inerting and purging
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flammability-limits
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find purge gas needs
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp2
+        can_do: Compare pressure and vacuum purging
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp3
+        can_do: Find inerting concentrations
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp4
+        can_do: Plan purging operations
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+  - id: engr.process-design-safety.toxic-exposure
+    name: Estimating toxic exposure against limits
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.mass-energy-balances.process-safety-basics
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use exposure limits
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp2
+        can_do: Find time-weighted averages
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp3
+        can_do: Use dose-response relationships
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp4
+        can_do: Find ventilation needs
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+  - id: engr.process-design-safety.source-models
+    name: Modeling release rates
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.toxic-exposure
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find liquid release rates through holes
+        key_prerequisites: [engr.process-design-safety.toxic-exposure]
+      - id: kp2
+        can_do: Find gas release rates
+        key_prerequisites: [engr.process-design-safety.toxic-exposure]
+      - id: kp3
+        can_do: Find flashing fractions
+        key_prerequisites: [engr.process-design-safety.toxic-exposure]
+      - id: kp4
+        can_do: Find evaporation rates from pools
+        key_prerequisites: [engr.process-design-safety.toxic-exposure]
+  - id: engr.process-design-safety.dispersion-models
+    name: Modeling dispersion of releases
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.source-models
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use Gaussian plume models
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp2
+        can_do: Choose stability classes
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp3
+        can_do: Find downwind concentrations
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp4
+        can_do: Find hazard zones
+        key_prerequisites: [engr.process-design-safety.source-models]
+  - id: engr.process-design-safety.fire-explosion
+    name: Estimating fire and explosion consequences
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flammability-limits
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find fire radiation
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp2
+        can_do: Find explosion overpressure with TNT equivalence
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp3
+        can_do: Explain BLEVEs and vapor cloud explosions
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+      - id: kp4
+        can_do: Explain dust explosions
+        key_prerequisites: [engr.process-design-safety.flammability-limits]
+  - id: engr.process-design-safety.relief-sizing
+    name: Sizing pressure relief devices
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.source-models
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Choose relief devices
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp2
+        can_do: Find relief scenarios
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp3
+        can_do: Size relief valves for vapor
+        key_prerequisites: [engr.process-design-safety.source-models]
+      - id: kp4
+        can_do: Size relief for liquid
+        key_prerequisites: [engr.process-design-safety.source-models]
+  - id: engr.process-design-safety.reactive-hazards
+    name: Assessing reactive hazards with calorimetry
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.reactors.runaway-reactions
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find adiabatic temperature rise
+        key_prerequisites: [engr.reactors.runaway-reactions]
+      - id: kp2
+        can_do: Use calorimetry data
+        key_prerequisites: [engr.reactors.runaway-reactions]
+      - id: kp3
+        can_do: Find time to maximum rate
+        key_prerequisites: [engr.reactors.runaway-reactions]
+      - id: kp4
+        can_do: Choose safeguards for reactive systems
+        key_prerequisites: [engr.reactors.runaway-reactions]
+  - id: engr.process-design-safety.hazop
+    name: Conducting HAZOP studies
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.flowsheet-synthesis
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.mass-energy-balances.process-safety-basics
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use guide words
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+      - id: kp2
+        can_do: Run a HAZOP on a process section
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis, engr.mass-energy-balances.process-safety-basics]
+      - id: kp3
+        can_do: Find causes and consequences
+        key_prerequisites: [engr.mass-energy-balances.process-safety-basics]
+      - id: kp4
+        can_do: Record safeguards and actions
+        key_prerequisites: [engr.process-design-safety.flowsheet-synthesis]
+  - id: engr.process-design-safety.fault-trees
+    name: Building fault trees
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.hazop
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build fault trees
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp2
+        can_do: Use AND and OR gates
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp3
+        can_do: Find minimal cut sets
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp4
+        can_do: Find top event probabilities
+        key_prerequisites: [engr.process-design-safety.hazop]
+  - id: engr.process-design-safety.event-trees
+    name: Building event trees
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.fault-trees
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Build event trees
+        key_prerequisites: [engr.process-design-safety.fault-trees]
+      - id: kp2
+        can_do: Find outcome frequencies
+        key_prerequisites: [engr.process-design-safety.fault-trees]
+      - id: kp3
+        can_do: Combine fault and event trees
+        key_prerequisites: [engr.process-design-safety.fault-trees]
+      - id: kp4
+        can_do: Use bow-tie diagrams
+        key_prerequisites: [engr.process-design-safety.fault-trees]
+  - id: engr.process-design-safety.lopa
+    name: Using layers of protection analysis
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.event-trees
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find initiating event frequencies
+        key_prerequisites: [engr.process-design-safety.event-trees]
+      - id: kp2
+        can_do: Credit independent protection layers
+        key_prerequisites: [engr.process-design-safety.event-trees]
+      - id: kp3
+        can_do: Find mitigated frequencies
+        key_prerequisites: [engr.process-design-safety.event-trees]
+      - id: kp4
+        can_do: Compare with risk targets
+        key_prerequisites: [engr.process-design-safety.event-trees]
+  - id: engr.process-design-safety.risk-calculation
+    name: Calculating individual and societal risk
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.lopa
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find individual risk
+        key_prerequisites: [engr.process-design-safety.lopa]
+      - id: kp2
+        can_do: Find societal risk
+        key_prerequisites: [engr.process-design-safety.lopa]
+      - id: kp3
+        can_do: Use risk matrices
+        key_prerequisites: [engr.process-design-safety.lopa]
+      - id: kp4
+        can_do: Decide on risk reduction
+        key_prerequisites: [engr.process-design-safety.lopa]
+  - id: engr.process-design-safety.inherently-safer-design
+    name: Applying inherently safer design
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.hazop
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Apply minimize, substitute, moderate and simplify
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp2
+        can_do: Compare inherently safer alternatives
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp3
+        can_do: Find inventory reductions
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp4
+        can_do: Rank design options by hazard
+        key_prerequisites: [engr.process-design-safety.hazop]
+  - id: engr.process-design-safety.process-safety-management
+    name: Applying process safety management
+    subject: engr
+    course: engr.process-design-safety
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.process-design-safety.hazop
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List process safety management elements
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp2
+        can_do: Explain management of change
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp3
+        can_do: Explain incident investigation
+        key_prerequisites: [engr.process-design-safety.hazop]
+      - id: kp4
+        can_do: Explain safety culture
+        key_prerequisites: [engr.process-design-safety.hazop]
