@@ -1,0 +1,959 @@
+course: engr.programming-languages
+topics:
+  - id: engr.programming-languages.programming-paradigms
+    name: Comparing programming paradigms
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming.functions-as-values
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Compare imperative, functional, object-oriented and logic styles
+        key_prerequisites: [engr.programming.functions-as-values]
+      - id: kp2
+        can_do: Identify paradigm features in a language
+        key_prerequisites: [engr.programming.functions-as-values]
+      - id: kp3
+        can_do: Rewrite a loop in functional style
+        key_prerequisites: [engr.programming.functions-as-values]
+      - id: kp4
+        can_do: Choose a paradigm for a problem
+        key_prerequisites: [engr.programming.functions-as-values]
+  - id: engr.programming-languages.bnf-syntax
+    name: Describing syntax with BNF
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.context-free-grammars
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read BNF and EBNF grammars
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp2
+        can_do: Write grammars for small languages
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp3
+        can_do: Derive programs from a grammar
+        key_prerequisites: [engr.theory.context-free-grammars]
+      - id: kp4
+        can_do: Find ambiguities in expression grammars
+        key_prerequisites: [engr.theory.context-free-grammars]
+  - id: engr.programming-languages.lexical-analysis
+    name: Tokenizing source code
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.theory.regular-expressions
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.theory.dfa
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define tokens with regular expressions
+        key_prerequisites: [engr.theory.regular-expressions]
+      - id: kp2
+        can_do: Build a lexer from token definitions
+        key_prerequisites: [engr.theory.regular-expressions, engr.theory.dfa]
+      - id: kp3
+        can_do: Handle longest match and keyword rules
+        key_prerequisites: [engr.theory.dfa]
+      - id: kp4
+        can_do: Report lexical errors
+        key_prerequisites: [engr.theory.regular-expressions]
+  - id: engr.programming-languages.recursive-descent-parsing
+    name: Writing recursive-descent parsers
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.bnf-syntax
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.theory.parse-trees-and-ambiguity
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write parsing functions for grammar rules
+        key_prerequisites: [engr.programming-languages.bnf-syntax]
+      - id: kp2
+        can_do: Remove left recursion
+        key_prerequisites: [engr.programming-languages.bnf-syntax, engr.theory.parse-trees-and-ambiguity]
+      - id: kp3
+        can_do: Use lookahead to choose productions
+        key_prerequisites: [engr.programming-languages.bnf-syntax]
+      - id: kp4
+        can_do: Report syntax errors
+        key_prerequisites: [engr.theory.parse-trees-and-ambiguity]
+  - id: engr.programming-languages.precedence-associativity
+    name: Handling precedence and associativity
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.recursive-descent-parsing
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode precedence in grammar levels
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp2
+        can_do: Encode left and right associativity
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp3
+        can_do: Parse expressions with precedence climbing
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp4
+        can_do: Find parse trees for mixed operators
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+  - id: engr.programming-languages.abstract-syntax-trees
+    name: Building abstract syntax trees
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.recursive-descent-parsing
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Design AST node types
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp2
+        can_do: Build ASTs while parsing
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp3
+        can_do: Compare parse trees and ASTs
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+      - id: kp4
+        can_do: Traverse ASTs recursively
+        key_prerequisites: [engr.programming-languages.recursive-descent-parsing]
+  - id: engr.programming-languages.macros
+    name: Using macros and metaprogramming
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.abstract-syntax-trees
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand textual macros
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp2
+        can_do: Explain hygiene problems
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp3
+        can_do: Write syntactic macros
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp4
+        can_do: Compare macros and functions
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+  - id: engr.programming-languages.expression-interpreter
+    name: Writing an expression interpreter
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.abstract-syntax-trees
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate arithmetic ASTs
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp2
+        can_do: Add conditionals to an interpreter
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp3
+        can_do: Report runtime errors
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp4
+        can_do: Test an interpreter with examples
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+  - id: engr.programming-languages.environments
+    name: Binding variables with environments
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.expression-interpreter
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent environments as maps
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp2
+        can_do: Add let bindings to an interpreter
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp3
+        can_do: Look up variables in nested environments
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp4
+        can_do: Explain shadowing
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+  - id: engr.programming-languages.static-dynamic-scope
+    name: Comparing static and dynamic scope
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.environments
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.programming.local-and-global-scope
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare static and dynamic scope
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp2
+        can_do: Find values of variables under each rule
+        key_prerequisites: [engr.programming-languages.environments, engr.programming.local-and-global-scope]
+      - id: kp3
+        can_do: Implement static scope in an interpreter
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp4
+        can_do: Explain why most languages use static scope
+        key_prerequisites: [engr.programming.local-and-global-scope]
+  - id: engr.programming-languages.closures
+    name: Implementing closures
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.static-dynamic-scope
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Represent closures as code with environments
+        key_prerequisites: [engr.programming-languages.static-dynamic-scope]
+      - id: kp2
+        can_do: Evaluate functions that capture variables
+        key_prerequisites: [engr.programming-languages.static-dynamic-scope]
+      - id: kp3
+        can_do: Explain closure lifetimes
+        key_prerequisites: [engr.programming-languages.static-dynamic-scope]
+      - id: kp4
+        can_do: Use closures to build counters and generators
+        key_prerequisites: [engr.programming-languages.static-dynamic-scope]
+  - id: engr.programming-languages.first-class-functions-interpreter
+    name: Adding first-class functions to an interpreter
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.closures
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add function values to an interpreter
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp2
+        can_do: Apply functions with arguments
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp3
+        can_do: Support recursion in an interpreter
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp4
+        can_do: Implement higher-order functions
+        key_prerequisites: [engr.programming-languages.closures]
+  - id: engr.programming-languages.parameter-passing
+    name: Comparing parameter passing modes
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.environments
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare call by value, reference and name
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp2
+        can_do: Find results under each passing mode
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp3
+        can_do: Explain aliasing
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp4
+        can_do: Implement call by reference in an interpreter
+        key_prerequisites: [engr.programming-languages.environments]
+  - id: engr.programming-languages.stores-and-mutation
+    name: Implementing mutable state with stores
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.environments
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Separate environments from stores
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp2
+        can_do: Add assignment to an interpreter
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp3
+        can_do: Explain mutable boxes
+        key_prerequisites: [engr.programming-languages.environments]
+      - id: kp4
+        can_do: Trace store changes
+        key_prerequisites: [engr.programming-languages.environments]
+  - id: engr.programming-languages.operational-semantics
+    name: Writing operational semantics
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.expression-interpreter
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read inference rules
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp2
+        can_do: Write big-step rules for expressions
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp3
+        can_do: Write small-step rules
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+      - id: kp4
+        can_do: Derive evaluations with rules
+        key_prerequisites: [engr.programming-languages.expression-interpreter]
+  - id: engr.programming-languages.lambda-calculus
+    name: Evaluating lambda calculus terms
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.operational-semantics
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.programming.lambda-expressions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write lambda terms
+        key_prerequisites: [engr.programming.lambda-expressions]
+      - id: kp2
+        can_do: Find free and bound variables
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+      - id: kp3
+        can_do: Perform beta reduction with substitution
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+      - id: kp4
+        can_do: Use alpha conversion to avoid capture
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+  - id: engr.programming-languages.church-encodings
+    name: Encoding data in the lambda calculus
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.lambda-calculus
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Encode booleans as functions
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp2
+        can_do: Encode numerals and arithmetic
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp3
+        can_do: Encode pairs
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp4
+        can_do: Write recursion with fixed-point combinators
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+  - id: engr.programming-languages.evaluation-strategies
+    name: Comparing evaluation strategies
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.lambda-calculus
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare normal and applicative order
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp2
+        can_do: Find terms that diverge under one order
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp3
+        can_do: Compare call by need and call by name
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+      - id: kp4
+        can_do: Relate strategies to languages
+        key_prerequisites: [engr.programming-languages.lambda-calculus]
+  - id: engr.programming-languages.continuations
+    name: Implementing exceptions and continuations
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.first-class-functions-interpreter
+        encompassing: 0.6
+        confidence: high
+      - topic: engr.programming.exceptions
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain continuations
+        key_prerequisites: [engr.programming-languages.first-class-functions-interpreter]
+      - id: kp2
+        can_do: Convert functions to continuation-passing style
+        key_prerequisites: [engr.programming-languages.first-class-functions-interpreter]
+      - id: kp3
+        can_do: Implement exceptions with continuations
+        key_prerequisites: [engr.programming.exceptions]
+      - id: kp4
+        can_do: Implement early exit with continuations
+        key_prerequisites: [engr.programming-languages.first-class-functions-interpreter, engr.programming.exceptions]
+  - id: engr.programming-languages.pure-functional-programming
+    name: Writing pure functional programs
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.programming-paradigms
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.programming.recursion-on-lists
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain referential transparency
+        key_prerequisites: [engr.programming-languages.programming-paradigms]
+      - id: kp2
+        can_do: Write recursive functions on lists
+        key_prerequisites: [engr.programming.recursion-on-lists]
+      - id: kp3
+        can_do: Avoid mutation with new values
+        key_prerequisites: [engr.programming-languages.programming-paradigms]
+      - id: kp4
+        can_do: Reason about functions with equations
+        key_prerequisites: [engr.programming-languages.programming-paradigms, engr.programming.recursion-on-lists]
+  - id: engr.programming-languages.map-filter-fold
+    name: Using map, filter and fold
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.pure-functional-programming
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use map, filter and fold
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp2
+        can_do: Write fold-based versions of functions
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp3
+        can_do: Compare left and right folds
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp4
+        can_do: Compose list transformations
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+  - id: engr.programming-languages.algebraic-data-types
+    name: Using algebraic data types and pattern matching
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.pure-functional-programming
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Define sum and product types
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp2
+        can_do: Write functions with pattern matching
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp3
+        can_do: Check exhaustiveness of matches
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp4
+        can_do: Represent trees with algebraic types
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+  - id: engr.programming-languages.tail-recursion
+    name: Writing tail-recursive functions
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.pure-functional-programming
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.programming.recursion-vs-iteration
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Identify tail calls
+        key_prerequisites: [engr.programming-languages.pure-functional-programming]
+      - id: kp2
+        can_do: Convert recursion with accumulators
+        key_prerequisites: [engr.programming-languages.pure-functional-programming, engr.programming.recursion-vs-iteration]
+      - id: kp3
+        can_do: Explain tail call optimization
+        key_prerequisites: [engr.programming.recursion-vs-iteration]
+      - id: kp4
+        can_do: Compare stack use of recursive forms
+        key_prerequisites: [engr.programming.recursion-vs-iteration]
+  - id: engr.programming-languages.lazy-evaluation
+    name: Using lazy evaluation
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.evaluation-strategies
+        encompassing: 0.4
+        confidence: high
+      - topic: engr.programming-languages.map-filter-fold
+        encompassing: 0.2
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain lazy evaluation
+        key_prerequisites: [engr.programming-languages.evaluation-strategies]
+      - id: kp2
+        can_do: Use infinite lists
+        key_prerequisites: [engr.programming-languages.map-filter-fold]
+      - id: kp3
+        can_do: Explain space leaks
+        key_prerequisites: [engr.programming-languages.evaluation-strategies]
+      - id: kp4
+        can_do: Compare lazy and strict evaluation
+        key_prerequisites: [engr.programming-languages.evaluation-strategies]
+  - id: engr.programming-languages.type-rules
+    name: Writing type rules
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.operational-semantics
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Read typing rules
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+      - id: kp2
+        can_do: Derive types of expressions with rules
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+      - id: kp3
+        can_do: Write rules for new constructs
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+      - id: kp4
+        can_do: Find ill-typed expressions
+        key_prerequisites: [engr.programming-languages.operational-semantics]
+  - id: engr.programming-languages.type-checking
+    name: Type checking expressions
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.type-rules
+        encompassing: 0.65
+        confidence: high
+    encompassed:
+      - topic: engr.programming-languages.abstract-syntax-trees
+        encompassing: 0.15
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Write a type checker for expressions
+        key_prerequisites: [engr.programming-languages.type-rules, engr.programming-languages.abstract-syntax-trees]
+      - id: kp2
+        can_do: Check function types
+        key_prerequisites: [engr.programming-languages.type-rules]
+      - id: kp3
+        can_do: Report type errors
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp4
+        can_do: Check let and conditional expressions
+        key_prerequisites: [engr.programming-languages.type-rules]
+  - id: engr.programming-languages.type-safety
+    name: Proving type safety by progress and preservation
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.type-checking
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State progress and preservation
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp2
+        can_do: Explain what type safety guarantees
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp3
+        can_do: Find unsafe features in languages
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp4
+        can_do: Prove safety cases for small languages
+        key_prerequisites: [engr.programming-languages.type-checking]
+  - id: engr.programming-languages.parametric-polymorphism
+    name: Using parametric polymorphism
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.type-checking
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write generic functions
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp2
+        can_do: Read polymorphic type signatures
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp3
+        can_do: Instantiate type variables
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp4
+        can_do: Compare generics and templates
+        key_prerequisites: [engr.programming-languages.type-checking]
+  - id: engr.programming-languages.type-inference
+    name: Inferring types by unification
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.parametric-polymorphism
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Generate type constraints
+        key_prerequisites: [engr.programming-languages.parametric-polymorphism]
+      - id: kp2
+        can_do: Solve constraints by unification
+        key_prerequisites: [engr.programming-languages.parametric-polymorphism]
+      - id: kp3
+        can_do: Infer types of functions
+        key_prerequisites: [engr.programming-languages.parametric-polymorphism]
+      - id: kp4
+        can_do: Explain let-polymorphism
+        key_prerequisites: [engr.programming-languages.parametric-polymorphism]
+  - id: engr.programming-languages.subtyping
+    name: Using subtyping
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.type-checking
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the subsumption rule
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp2
+        can_do: Find subtypes of record types
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp3
+        can_do: Explain function subtyping variance
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp4
+        can_do: Explain array variance problems
+        key_prerequisites: [engr.programming-languages.type-checking]
+  - id: engr.programming-languages.static-vs-dynamic-typing
+    name: Comparing static and dynamic typing
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.type-checking
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare static and dynamic checking
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp2
+        can_do: Explain gradual typing
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp3
+        can_do: Find errors each approach catches
+        key_prerequisites: [engr.programming-languages.type-checking]
+      - id: kp4
+        can_do: Choose a typing discipline for a project
+        key_prerequisites: [engr.programming-languages.type-checking]
+  - id: engr.programming-languages.nominal-structural-typing
+    name: Comparing nominal and structural typing
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.subtyping
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare nominal and structural typing
+        key_prerequisites: [engr.programming-languages.subtyping]
+      - id: kp2
+        can_do: Find structural subtypes
+        key_prerequisites: [engr.programming-languages.subtyping]
+      - id: kp3
+        can_do: Explain duck typing
+        key_prerequisites: [engr.programming-languages.subtyping]
+      - id: kp4
+        can_do: Compare interface systems
+        key_prerequisites: [engr.programming-languages.subtyping]
+  - id: engr.programming-languages.dynamic-dispatch
+    name: Implementing objects and dynamic dispatch
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.subtyping
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.programming.inheritance
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain dynamic dispatch
+        key_prerequisites: [engr.programming-languages.subtyping]
+      - id: kp2
+        can_do: Trace method calls through vtables
+        key_prerequisites: [engr.programming-languages.subtyping, engr.programming.inheritance]
+      - id: kp3
+        can_do: Compare static and dynamic binding
+        key_prerequisites: [engr.programming-languages.subtyping]
+      - id: kp4
+        can_do: Explain the role of self
+        key_prerequisites: [engr.programming.inheritance]
+  - id: engr.programming-languages.inheritance-mixins
+    name: Comparing inheritance, composition and mixins
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.dynamic-dispatch
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare single and multiple inheritance
+        key_prerequisites: [engr.programming-languages.dynamic-dispatch]
+      - id: kp2
+        can_do: Explain the diamond problem
+        key_prerequisites: [engr.programming-languages.dynamic-dispatch]
+      - id: kp3
+        can_do: Use mixins and traits
+        key_prerequisites: [engr.programming-languages.dynamic-dispatch]
+      - id: kp4
+        can_do: Compare inheritance and composition
+        key_prerequisites: [engr.programming-languages.dynamic-dispatch]
+  - id: engr.programming-languages.garbage-collection
+    name: Describing garbage collection
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.stores-and-mutation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain reachability
+        key_prerequisites: [engr.programming-languages.stores-and-mutation]
+      - id: kp2
+        can_do: Trace mark and sweep
+        key_prerequisites: [engr.programming-languages.stores-and-mutation]
+      - id: kp3
+        can_do: Explain copying collection
+        key_prerequisites: [engr.programming-languages.stores-and-mutation]
+      - id: kp4
+        can_do: Explain generational collection
+        key_prerequisites: [engr.programming-languages.stores-and-mutation]
+  - id: engr.programming-languages.ownership-refcounting
+    name: Comparing ownership and reference counting
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.garbage-collection
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain reference counting
+        key_prerequisites: [engr.programming-languages.garbage-collection]
+      - id: kp2
+        can_do: Find reference cycles
+        key_prerequisites: [engr.programming-languages.garbage-collection]
+      - id: kp3
+        can_do: Explain ownership and borrowing
+        key_prerequisites: [engr.programming-languages.garbage-collection]
+      - id: kp4
+        can_do: Compare memory management strategies
+        key_prerequisites: [engr.programming-languages.garbage-collection]
+  - id: engr.programming-languages.logic-programming
+    name: Writing logic programs
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.programming-paradigms
+        encompassing: 0.3
+        confidence: high
+      - topic: engr.programming-languages.type-inference
+        encompassing: 0.4
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write facts and rules
+        key_prerequisites: [engr.programming-languages.programming-paradigms]
+      - id: kp2
+        can_do: Trace query resolution
+        key_prerequisites: [engr.programming-languages.type-inference]
+      - id: kp3
+        can_do: Explain backtracking
+        key_prerequisites: [engr.programming-languages.programming-paradigms]
+      - id: kp4
+        can_do: Use unification in queries
+        key_prerequisites: [engr.programming-languages.type-inference]
+  - id: engr.programming-languages.language-concurrency
+    name: Comparing concurrency models in languages
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.closures
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare threads, actors and async
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp2
+        can_do: Explain futures and promises
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp3
+        can_do: Explain message passing
+        key_prerequisites: [engr.programming-languages.closures]
+      - id: kp4
+        can_do: Compare shared memory and message passing
+        key_prerequisites: [engr.programming-languages.closures]
+  - id: engr.programming-languages.compilation-pipeline
+    name: Comparing compilation and interpretation
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.abstract-syntax-trees
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Name the phases of a compiler
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp2
+        can_do: Compare compilers and interpreters
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp3
+        can_do: Explain intermediate representations
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+      - id: kp4
+        can_do: Explain bytecode and virtual machines
+        key_prerequisites: [engr.programming-languages.abstract-syntax-trees]
+  - id: engr.programming-languages.stack-code-generation
+    name: Compiling expressions to stack machine code
+    subject: engr
+    course: engr.programming-languages
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: engr.programming-languages.compilation-pipeline
+        encompassing: 0.35
+        confidence: high
+      - topic: engr.data-structures.stacks
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Generate stack code for expressions
+        key_prerequisites: [engr.programming-languages.compilation-pipeline, engr.data-structures.stacks]
+      - id: kp2
+        can_do: Generate code for conditionals
+        key_prerequisites: [engr.programming-languages.compilation-pipeline]
+      - id: kp3
+        can_do: Generate code for function calls
+        key_prerequisites: [engr.data-structures.stacks]
+      - id: kp4
+        can_do: Run stack code by hand
+        key_prerequisites: [engr.data-structures.stacks]
