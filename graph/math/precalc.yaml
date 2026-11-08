@@ -40,7 +40,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write an inequality in interval notation
-        key_prerequisites: [math.alg1.compound-or-inequalities]
+        key_prerequisites: [math.alg1.compound-or-inequalities, math.alg1.inequality-notation-forms]
       - id: kp2
         can_do: Write a union of intervals
         key_prerequisites: [math.alg1.compound-or-inequalities]
@@ -87,7 +87,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a domain in interval notation
-        key_prerequisites: [math.precalc.interval-notation, math.alg1.domain-and-range]
+        key_prerequisites: [math.precalc.interval-notation, math.alg1.domain-and-range, math.precalc.set-builder-notation]
       - id: kp2
         can_do: Write a range in interval notation
         key_prerequisites: [math.precalc.interval-notation, math.alg1.domain-and-range]
@@ -142,13 +142,13 @@ topics:
         key_prerequisites: [math.alg1.average-rate-of-change]
       - id: kp2
         can_do: Find it for a linear function
-        key_prerequisites: [math.alg1.average-rate-of-change]
+        key_prerequisites: [math.alg1.average-rate-of-change, math.alg1.evaluate-for-expressions]
       - id: kp3
         can_do: Say what it means on a graph
         key_prerequisites: [math.alg1.average-rate-of-change]
       - id: kp4
         can_do: Simplify for a function given by a table
-        key_prerequisites: [math.alg1.average-rate-of-change]
+        key_prerequisites: [math.alg1.average-rate-of-change, math.alg2.simplify-rational-expressions]
   - id: math.precalc.difference-quotient-quadratic
     name: Finding difference quotients of quadratics
     subject: math
@@ -191,10 +191,10 @@ topics:
         key_prerequisites: [math.precalc.difference-quotient]
       - id: kp2
         can_do: Find it for a square root using a conjugate
-        key_prerequisites: [math.precalc.difference-quotient]
+        key_prerequisites: [math.precalc.difference-quotient, math.alg2.radical-conjugate]
       - id: kp3
         can_do: Simplify carefully
-        key_prerequisites: [math.precalc.difference-quotient]
+        key_prerequisites: [math.precalc.difference-quotient, math.alg2.complex-fractions]
   - id: math.precalc.secant-line
     name: Finding a secant line
     subject: math
@@ -442,7 +442,7 @@ topics:
         key_prerequisites: [math.precalc.transformations-combined]
       - id: kp3
         can_do: Find where a reciprocal has asymptotes
-        key_prerequisites: [math.alg2.graph-rational-functions]
+        key_prerequisites: [math.alg2.graph-rational-functions, math.precalc.reflection-order]
   - id: math.precalc.graph-of-f-of-abs-x
     name: Graphing a function of an absolute value
     subject: math
@@ -453,9 +453,6 @@ topics:
       - topic: math.precalc.transform-reciprocal-abs
         encompassing: 0.6
         confidence: medium
-      - topic: math.precalc.horizontal-vertical-stretches-compare
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Graph f(|x|) from a graph of f
@@ -485,7 +482,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find the domain of a composition with a root
-        key_prerequisites: [math.alg2.domain-of-composition, math.precalc.domain-range-interval]
+        key_prerequisites: [math.alg2.domain-of-composition, math.precalc.domain-range-interval, math.alg2.decompose-function]
       - id: kp2
         can_do: Find the domain of a composition with a fraction
         key_prerequisites: [math.alg2.domain-of-composition]
@@ -520,7 +517,7 @@ topics:
         key_prerequisites: [math.alg2.restrict-domain-inverse]
       - id: kp4
         can_do: Find two inverses for different restrictions
-        key_prerequisites: [math.alg2.restrict-domain-inverse]
+        key_prerequisites: [math.alg2.restrict-domain-inverse, math.alg2.inverse-of-rational]
   - id: math.precalc.end-behavior-limits-intro
     name: Describing end behavior informally
     subject: math
@@ -593,7 +590,7 @@ topics:
         key_prerequisites: [math.alg2.vertical-asymptotes]
       - id: kp3
         can_do: Decide if a piecewise function is continuous
-        key_prerequisites: [math.alg2.piecewise-advanced]
+        key_prerequisites: [math.alg2.piecewise-advanced, math.precalc.piecewise-domain-range, math.alg2.piecewise-continuity-check]
   - id: math.precalc.limit-intuition
     name: Estimating limits from tables and graphs
     subject: math
@@ -663,10 +660,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Estimate a rate at a point from a table
-        key_prerequisites: [math.precalc.difference-quotient, math.precalc.limit-intuition]
+        key_prerequisites: [math.precalc.difference-quotient, math.precalc.limit-intuition, math.precalc.difference-quotient-quadratic]
       - id: kp2
         can_do: Estimate a rate from a graph
-        key_prerequisites: [math.precalc.limit-intuition]
+        key_prerequisites: [math.precalc.limit-intuition, math.precalc.difference-quotient-rational-root]
       - id: kp3
         can_do: Say what it means in context
         key_prerequisites: [math.precalc.difference-quotient]
@@ -690,7 +687,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Draw an estimated tangent line
-        key_prerequisites: [math.precalc.secant-line]
+        key_prerequisites: [math.precalc.secant-line, math.precalc.rate-of-change-intuition]
       - id: kp2
         can_do: Estimate its slope from secants
         key_prerequisites: [math.precalc.secant-line, math.precalc.limit-intuition]
@@ -799,7 +796,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find all features of a polynomial
-        key_prerequisites: [math.alg2.polynomial-models]
+        key_prerequisites: [math.alg2.polynomial-models, math.precalc.sketch-from-derivative-free-features, math.precalc.local-global-extrema]
       - id: kp2
         can_do: Sketch by hand and check with technology
         key_prerequisites: [math.alg2.polynomial-models]
@@ -808,7 +805,7 @@ topics:
         key_prerequisites: [math.alg2.polynomial-models]
       - id: kp4
         can_do: Find a polynomial's intervals of increase
-        key_prerequisites: [math.alg2.polynomial-models]
+        key_prerequisites: [math.alg2.polynomial-models, math.precalc.bounds-on-zeros]
   - id: math.precalc.polynomial-from-graph
     name: Writing a polynomial from a graph
     subject: math
@@ -920,7 +917,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find all features of a rational function
-        key_prerequisites: [math.alg2.graph-rational-functions]
+        key_prerequisites: [math.alg2.graph-rational-functions, math.precalc.polynomial-end-behaviour-limits]
       - id: kp2
         can_do: Sketch with an oblique asymptote
         key_prerequisites: [math.precalc.oblique-asymptotes]
@@ -990,7 +987,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a limit by substitution
-        key_prerequisites: [math.precalc.limit-intuition]
+        key_prerequisites: [math.precalc.limit-intuition, math.precalc.rational-holes-limits]
       - id: kp2
         can_do: Find a limit by factoring
         key_prerequisites: [math.precalc.limit-intuition]
@@ -1017,7 +1014,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Check the three conditions for continuity
-        key_prerequisites: [math.precalc.one-sided-limits]
+        key_prerequisites: [math.precalc.one-sided-limits, math.precalc.limits-algebraic-simple]
       - id: kp2
         can_do: Find a value that makes a function continuous
         key_prerequisites: [math.precalc.one-sided-limits]
@@ -1046,7 +1043,7 @@ topics:
         key_prerequisites: [math.precalc.continuity-from-limits]
       - id: kp2
         can_do: Use it to find a zero's location
-        key_prerequisites: [math.precalc.continuity-from-limits]
+        key_prerequisites: [math.precalc.continuity-from-limits, math.alg2.intermediate-value-informal]
       - id: kp3
         can_do: Say why continuity is needed
         key_prerequisites: [math.precalc.continuity-from-limits]
@@ -1090,7 +1087,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Graph a rational with a cubic numerator
-        key_prerequisites: [math.precalc.polynomial-analysis, math.precalc.rational-analysis]
+        key_prerequisites: [math.precalc.polynomial-analysis, math.precalc.rational-analysis, math.precalc.rational-from-features]
       - id: kp2
         can_do: Solve a mixed problem
         key_prerequisites: [math.precalc.polynomial-analysis, math.precalc.rational-analysis]
@@ -1156,7 +1153,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Decompose with an irreducible quadratic
-        key_prerequisites: [math.precalc.partial-fractions]
+        key_prerequisites: [math.precalc.partial-fractions, math.precalc.complex-zeros-factorization]
       - id: kp2
         can_do: Set up with a linear numerator
         key_prerequisites: [math.precalc.partial-fractions]
@@ -1188,7 +1185,7 @@ topics:
         key_prerequisites: [math.alg2.rational-inequalities]
       - id: kp4
         can_do: Solve with an excluded value and a repeated factor
-        key_prerequisites: [math.alg2.rational-inequalities]
+        key_prerequisites: [math.alg2.rational-inequalities, math.precalc.sign-charts]
   - id: math.precalc.exponential-function-analysis
     name: Analyzing exponential functions fully
     subject: math
@@ -1244,7 +1241,7 @@ topics:
         key_prerequisites: [math.alg2.log-graphs]
       - id: kp4
         can_do: Compare two log bases on one graph
-        key_prerequisites: [math.alg2.log-graphs]
+        key_prerequisites: [math.alg2.log-graphs, math.alg2.transform-log-graphs]
   - id: math.precalc.log-transformations-graph-sketch
     name: Sketching transformed logs
     subject: math
@@ -1282,7 +1279,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a log function from a graph
-        key_prerequisites: [math.precalc.log-function-analysis]
+        key_prerequisites: [math.precalc.log-function-analysis, math.precalc.log-transformations-graph-sketch]
       - id: kp2
         can_do: Find a scale from a point
         key_prerequisites: [math.precalc.log-function-analysis]
@@ -1305,7 +1302,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a domain of log of a quadratic
-        key_prerequisites: [math.precalc.log-function-analysis]
+        key_prerequisites: [math.precalc.log-function-analysis, math.precalc.composition-domains]
       - id: kp2
         can_do: Find a domain of a root of a log
         key_prerequisites: [math.precalc.log-function-analysis]
@@ -1351,16 +1348,13 @@ topics:
       - topic: math.alg1.quadratic-regression-intro
         encompassing: 0.25
         confidence: medium
-      - topic: math.precalc.exponential-compare-growth-rates
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Choose a family from a scatter plot
         key_prerequisites: [math.precalc.function-families-review]
       - id: kp2
         can_do: Fit a model with technology
-        key_prerequisites: [math.alg2.exponential-regression]
+        key_prerequisites: [math.alg2.exponential-regression, math.alg1.quadratic-regression-intro]
       - id: kp3
         can_do: Judge a fit in context
         key_prerequisites: [math.alg2.exponential-regression]
@@ -1480,9 +1474,6 @@ topics:
       - topic: math.precalc.exponential-equation-quadratic-form
         encompassing: 0.1
         confidence: low
-      - topic: math.precalc.log-equations-with-different-bases
-        encompassing: 0.1
-        confidence: low
     encompassed:
       - topic: math.precalc.exponential-log-equations-mixed
         encompassing: 0.55
@@ -1490,7 +1481,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve an exponential inequality
-        key_prerequisites: [math.precalc.exponential-log-equations-mixed]
+        key_prerequisites: [math.precalc.exponential-log-equations-mixed, math.precalc.exponential-equation-quadratic-form]
       - id: kp2
         can_do: Solve a log inequality
         key_prerequisites: [math.precalc.exponential-log-equations-mixed]
@@ -1559,7 +1550,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Plot data on a semi-log scale
-        key_prerequisites: [math.alg2.log-scales]
+        key_prerequisites: [math.alg2.log-scales, math.alg2.linearize-with-logs]
       - id: kp2
         can_do: Read an exponential as a line
         key_prerequisites: [math.precalc.exponential-function-analysis]
@@ -1755,7 +1746,7 @@ topics:
         key_prerequisites: [math.precalc.unit-circle-fluency]
       - id: kp4
         can_do: Find exact values in any quadrant
-        key_prerequisites: [math.precalc.unit-circle-fluency]
+        key_prerequisites: [math.precalc.unit-circle-fluency, math.precalc.exact-values-beyond-first]
   - id: math.precalc.trig-values-from-info
     name: Finding all trig values from one value
     subject: math
@@ -1775,7 +1766,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find all values from one value and a quadrant
-        key_prerequisites: [math.precalc.reciprocal-trig, math.alg2.trig-from-point]
+        key_prerequisites: [math.precalc.reciprocal-trig, math.alg2.trig-from-point, math.alg2.pythagorean-find-value]
       - id: kp2
         can_do: Find all values from a point
         key_prerequisites: [math.alg2.trig-from-point]
@@ -1807,7 +1798,7 @@ topics:
         key_prerequisites: [math.precalc.reciprocal-trig]
       - id: kp3
         can_do: Graph cotangent from tangent
-        key_prerequisites: [math.alg2.graph-tangent]
+        key_prerequisites: [math.alg2.graph-tangent, math.precalc.tangent-from-slope]
       - id: kp4
         can_do: Write an equation from a graph
         key_prerequisites: [math.precalc.reciprocal-trig]
@@ -1851,13 +1842,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a sinusoid from a graph
-        key_prerequisites: [math.alg2.phase-vertical-shift]
+        key_prerequisites: [math.alg2.phase-vertical-shift, math.precalc.graph-tangent-transform]
       - id: kp2
         can_do: Find each parameter
         key_prerequisites: [math.alg2.phase-vertical-shift]
       - id: kp3
         can_do: Rewrite to see a phase shift
-        key_prerequisites: [math.alg2.phase-vertical-shift]
+        key_prerequisites: [math.alg2.phase-vertical-shift, math.alg2.compare-sine-cosine-forms]
       - id: kp4
         can_do: Find an equation from a max and a min
         key_prerequisites: [math.alg2.phase-vertical-shift]
@@ -1924,10 +1915,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Model a Ferris wheel
-        key_prerequisites: [math.precalc.general-sinusoid]
+        key_prerequisites: [math.precalc.general-sinusoid, math.precalc.horizontal-stretch-period]
       - id: kp2
         can_do: Model daylight hours
-        key_prerequisites: [math.alg2.sinusoidal-models]
+        key_prerequisites: [math.alg2.sinusoidal-models, math.precalc.sinusoid-from-table]
       - id: kp3
         can_do: Find when a value is reached
         key_prerequisites: [math.precalc.general-sinusoid]
@@ -1977,7 +1968,7 @@ topics:
         key_prerequisites: [math.alg2.radian-measure]
       - id: kp2
         can_do: Find linear speed
-        key_prerequisites: [math.alg2.radian-measure, math.g6.constant-speed]
+        key_prerequisites: [math.alg2.radian-measure, math.g6.constant-speed, math.alg2.sector-with-radians]
       - id: kp3
         can_do: Solve a wheel or pulley story
         key_prerequisites: [math.g6.constant-speed]
@@ -2020,7 +2011,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Say why the domain is restricted
-        key_prerequisites: [math.precalc.inverse-with-restricted-domains]
+        key_prerequisites: [math.precalc.inverse-with-restricted-domains, math.precalc.trig-domain-range]
       - id: kp2
         can_do: Find exact inverse values
         key_prerequisites: [math.alg2.basic-trig-equations]
@@ -2110,7 +2101,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find sin of inverse sin
-        key_prerequisites: [math.precalc.inverse-trig-functions]
+        key_prerequisites: [math.precalc.inverse-trig-functions, math.precalc.inverse-trig-domain, math.precalc.inverse-trig-exact]
       - id: kp2
         can_do: Find inverse sin of sin with an adjustment
         key_prerequisites: [math.precalc.inverse-trig-functions]
@@ -2166,7 +2157,7 @@ topics:
         key_prerequisites: [math.alg2.pythagorean-identity]
       - id: kp3
         can_do: Find a value with an identity
-        key_prerequisites: [math.alg2.pythagorean-identity, math.precalc.reciprocal-trig]
+        key_prerequisites: [math.alg2.pythagorean-identity, math.precalc.reciprocal-trig, math.precalc.trig-values-from-info]
       - id: kp4
         can_do: Simplify using several identities at once
         key_prerequisites: [math.alg2.pythagorean-identity]
@@ -2226,7 +2217,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use cofunction identities
-        key_prerequisites: [math.precalc.fundamental-identities]
+        key_prerequisites: [math.precalc.fundamental-identities, math.geom.sine-cosine-complementary]
       - id: kp2
         can_do: Use even and odd identities
         key_prerequisites: [math.precalc.fundamental-identities]
@@ -2256,10 +2247,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Simplify with one identity
-        key_prerequisites: [math.precalc.fundamental-identities]
+        key_prerequisites: [math.precalc.fundamental-identities, math.precalc.pythagorean-identities-variants]
       - id: kp2
         can_do: Simplify by factoring
-        key_prerequisites: [math.precalc.fundamental-identities]
+        key_prerequisites: [math.precalc.fundamental-identities, math.precalc.quotient-reciprocal-identities]
       - id: kp3
         can_do: Simplify with a common denominator
         key_prerequisites: [math.alg2.add-subtract-rational]
@@ -2303,7 +2294,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Work on one side only
-        key_prerequisites: [math.precalc.simplify-trig-expressions]
+        key_prerequisites: [math.precalc.simplify-trig-expressions, math.precalc.factor-trig-expressions]
       - id: kp2
         can_do: Convert to sine and cosine
         key_prerequisites: [math.precalc.simplify-trig-expressions]
@@ -2379,7 +2370,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use the sine sum identity
-        key_prerequisites: [math.precalc.verify-identities]
+        key_prerequisites: [math.precalc.verify-identities, math.precalc.cofunction-even-odd-identities]
       - id: kp2
         can_do: Use the cosine sum identity
         key_prerequisites: [math.precalc.verify-identities]
@@ -2388,7 +2379,7 @@ topics:
         key_prerequisites: [math.precalc.verify-identities]
       - id: kp4
         can_do: Derive the cosine difference identity from distances
-        key_prerequisites: [math.precalc.verify-identities]
+        key_prerequisites: [math.precalc.verify-identities, math.precalc.verify-identity-common-denominator, math.precalc.verify-identity-conjugates]
   - id: math.precalc.exact-with-sum-identities
     name: Finding exact values with sum identities
     subject: math
@@ -2455,7 +2446,7 @@ topics:
         key_prerequisites: [math.precalc.sum-difference-identities]
       - id: kp4
         can_do: Find a triple-angle identity from a sum
-        key_prerequisites: [math.precalc.sum-difference-identities]
+        key_prerequisites: [math.precalc.sum-difference-identities, math.precalc.exact-with-sum-identities]
   - id: math.precalc.double-angle-from-info
     name: Finding double-angle values from one value
     subject: math
@@ -2516,13 +2507,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use half-angle identities
-        key_prerequisites: [math.precalc.double-angle-identities]
+        key_prerequisites: [math.precalc.double-angle-identities, math.precalc.reduce-powers]
       - id: kp2
         can_do: Choose the correct sign
         key_prerequisites: [math.precalc.double-angle-identities]
       - id: kp3
         can_do: Find an exact half-angle value
-        key_prerequisites: [math.precalc.double-angle-identities]
+        key_prerequisites: [math.precalc.double-angle-identities, math.precalc.double-angle-from-info]
       - id: kp4
         can_do: Derive one from a double-angle identity
         key_prerequisites: [math.precalc.double-angle-identities]
@@ -2583,7 +2574,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a linear equation in sine
-        key_prerequisites: [math.alg2.basic-trig-equations]
+        key_prerequisites: [math.alg2.basic-trig-equations, math.alg2.trig-equation-all-solutions]
       - id: kp2
         can_do: Solve in degrees and radians
         key_prerequisites: [math.alg2.basic-trig-equations]
@@ -2679,7 +2670,7 @@ topics:
         key_prerequisites: [math.alg1.choose-quadratic-method]
       - id: kp3
         can_do: Reject impossible values
-        key_prerequisites: [math.precalc.linear-trig-equations]
+        key_prerequisites: [math.precalc.linear-trig-equations, math.precalc.trig-equations-interval]
       - id: kp4
         can_do: Solve with a tangent or secant
         key_prerequisites: [math.precalc.linear-trig-equations]
@@ -2723,7 +2714,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use a Pythagorean identity first
-        key_prerequisites: [math.precalc.quadratic-trig-equations]
+        key_prerequisites: [math.precalc.quadratic-trig-equations, math.precalc.factor-trig-equations]
       - id: kp2
         can_do: Use a double-angle identity first
         key_prerequisites: [math.precalc.double-angle-identities]
@@ -2772,7 +2763,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find when a tide reaches a height
-        key_prerequisites: [math.precalc.trig-equations-multiple-angles, math.precalc.sinusoid-applications]
+        key_prerequisites: [math.precalc.trig-equations-multiple-angles, math.precalc.sinusoid-applications, math.precalc.trig-equations-technology]
       - id: kp2
         can_do: Find when a wheel reaches a height
         key_prerequisites: [math.precalc.sinusoid-applications]
@@ -2818,7 +2809,7 @@ topics:
         key_prerequisites: [math.geom.law-of-cosines]
       - id: kp2
         can_do: Find an area from three sides
-        key_prerequisites: [math.geom.law-of-cosines]
+        key_prerequisites: [math.geom.law-of-cosines, math.geom.area-kites-rhombi]
       - id: kp3
         can_do: Compare with the sine formula
         key_prerequisites: [math.geom.law-of-cosines]
@@ -2838,7 +2829,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Name a vector's magnitude and direction
-        key_prerequisites: [math.geom.translation-definition]
+        key_prerequisites: [math.geom.translation-definition, math.g8.find-hypotenuse]
       - id: kp2
         can_do: Draw and add vectors tip-to-tail
         key_prerequisites: [math.geom.translation-definition]
@@ -2951,7 +2942,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Add vectors by components
-        key_prerequisites: [math.precalc.vector-components]
+        key_prerequisites: [math.precalc.vector-components, math.precalc.vector-from-magnitude-direction]
       - id: kp2
         can_do: Subtract vectors
         key_prerequisites: [math.precalc.vector-components]
@@ -3084,7 +3075,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a dot product from components
-        key_prerequisites: [math.precalc.vector-components]
+        key_prerequisites: [math.precalc.vector-components, math.precalc.unit-vectors]
       - id: kp2
         can_do: Find a dot product from lengths and an angle
         key_prerequisites: [math.precalc.unit-circle-fluency]
@@ -3176,7 +3167,7 @@ topics:
         key_prerequisites: [math.precalc.angle-between-vectors]
       - id: kp2
         can_do: Split a vector into two parts
-        key_prerequisites: [math.precalc.angle-between-vectors]
+        key_prerequisites: [math.precalc.angle-between-vectors, math.precalc.orthogonal-vectors]
       - id: kp3
         can_do: Solve a ramp problem
         key_prerequisites: [math.precalc.angle-between-vectors]
@@ -3187,18 +3178,12 @@ topics:
     level: g12
     status: draft
     prerequisites:
-      - topic: math.geom.medians-centroid
-        encompassing: 0.1
-        confidence: low
       - topic: math.precalc.direction-angle
         encompassing: 0.3
         confidence: medium
       - topic: math.precalc.resultant-force
         encompassing: 0.4
         confidence: medium
-      - topic: math.precalc.work-as-dot-product
-        encompassing: 0.15
-        confidence: low
     encompassed:
       - topic: math.precalc.vector-magnitude-direction
         encompassing: 0.5
@@ -3209,10 +3194,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a boat in a current
-        key_prerequisites: [math.precalc.vector-add-subtract, math.precalc.vector-magnitude-direction]
+        key_prerequisites: [math.precalc.vector-add-subtract, math.precalc.vector-magnitude-direction, math.precalc.direction-angle]
       - id: kp2
         can_do: Solve a plane in wind
-        key_prerequisites: [math.precalc.vector-add-subtract, math.precalc.vector-magnitude-direction]
+        key_prerequisites: [math.precalc.vector-add-subtract, math.precalc.vector-magnitude-direction, math.precalc.resultant-force]
       - id: kp3
         can_do: Solve a two-rope tension problem
         key_prerequisites: [math.precalc.vector-add-subtract]
@@ -3278,7 +3263,7 @@ topics:
         key_prerequisites: [math.precalc.matrix-basics]
       - id: kp3
         can_do: Multiply a matrix by a scalar
-        key_prerequisites: [math.precalc.matrix-basics]
+        key_prerequisites: [math.precalc.matrix-basics, math.precalc.matrix-dimensions]
       - id: kp4
         can_do: Solve a matrix equation with a scalar
         key_prerequisites: [math.precalc.matrix-basics]
@@ -3408,7 +3393,7 @@ topics:
         key_prerequisites: [math.precalc.determinants-2x2]
       - id: kp2
         can_do: Solve a 3 by 3 system
-        key_prerequisites: [math.precalc.determinants-2x2]
+        key_prerequisites: [math.precalc.determinants-2x2, math.precalc.determinants-3x3]
       - id: kp3
         can_do: Say when it fails
         key_prerequisites: [math.precalc.determinants-2x2]
@@ -3437,7 +3422,7 @@ topics:
         key_prerequisites: [math.precalc.determinants-2x2]
       - id: kp4
         can_do: Solve for a matrix in AX = B
-        key_prerequisites: [math.precalc.determinants-2x2]
+        key_prerequisites: [math.precalc.determinants-2x2, math.precalc.identity-matrix]
   - id: math.precalc.row-reduce-augmented
     name: Solving with row reduction
     subject: math
@@ -3471,9 +3456,6 @@ topics:
       - topic: math.precalc.inverse-matrix-2x2
         encompassing: 0.6
         confidence: high
-      - topic: math.precalc.row-reduce-augmented
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write a system as a matrix equation
@@ -3497,9 +3479,6 @@ topics:
       - topic: math.geom.compose-transformations
         encompassing: 0.4
         confidence: medium
-      - topic: math.geom.preimage-from-image
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Apply a matrix to points
@@ -3648,7 +3627,7 @@ topics:
         key_prerequisites: [math.precalc.polar-rectangular-conversion]
       - id: kp4
         can_do: Find a polar curve's maximum r
-        key_prerequisites: [math.precalc.polar-rectangular-conversion]
+        key_prerequisites: [math.precalc.polar-rectangular-conversion, math.precalc.polar-multiple-representations]
   - id: math.precalc.polar-symmetry
     name: Testing polar graphs for symmetry
     subject: math
@@ -3689,10 +3668,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Recognize roses
-        key_prerequisites: [math.precalc.polar-equations]
+        key_prerequisites: [math.precalc.polar-equations, math.precalc.polar-symmetry]
       - id: kp2
         can_do: Recognize limacons and cardioids
-        key_prerequisites: [math.precalc.polar-equations]
+        key_prerequisites: [math.precalc.polar-equations, math.precalc.convert-polar-equations]
       - id: kp3
         can_do: Recognize lemniscates
         key_prerequisites: [math.precalc.polar-equations]
@@ -3779,7 +3758,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Plot a complex number
-        key_prerequisites: [math.alg2.complex-add-subtract]
+        key_prerequisites: [math.alg2.complex-add-subtract, math.alg2.complex-plane-intro]
       - id: kp2
         can_do: Show addition on the plane
         key_prerequisites: [math.alg2.complex-add-subtract]
@@ -3876,7 +3855,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Convert to polar form
-        key_prerequisites: [math.precalc.complex-modulus, math.precalc.polar-rectangular-conversion]
+        key_prerequisites: [math.precalc.complex-modulus, math.precalc.polar-rectangular-conversion, math.precalc.argument-of-complex]
       - id: kp2
         can_do: Convert from polar form
         key_prerequisites: [math.precalc.polar-rectangular-conversion]
@@ -3896,9 +3875,6 @@ topics:
       - topic: math.precalc.polar-form-complex
         encompassing: 0.65
         confidence: high
-      - topic: math.precalc.complex-conjugate-geometry
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Multiply in polar form
@@ -4041,7 +4017,7 @@ topics:
         key_prerequisites: [math.precalc.parametric-basics, math.alg1.literal-equations]
       - id: kp2
         can_do: Eliminate with a trig identity
-        key_prerequisites: [math.precalc.parametric-basics]
+        key_prerequisites: [math.precalc.parametric-basics, math.precalc.parametric-trig-curves]
       - id: kp3
         can_do: State the domain of the result
         key_prerequisites: [math.precalc.parametric-basics]
@@ -4088,7 +4064,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Model motion along a line
-        key_prerequisites: [math.precalc.parametric-eliminate]
+        key_prerequisites: [math.precalc.parametric-eliminate, math.precalc.parametric-direction, math.precalc.parametric-from-rectangular]
       - id: kp2
         can_do: Find when two objects meet
         key_prerequisites: [math.precalc.parametric-eliminate]
@@ -4264,7 +4240,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find axes from standard form
-        key_prerequisites: [math.precalc.conic-overview]
+        key_prerequisites: [math.precalc.conic-overview, math.precalc.complete-square-conic-setup]
       - id: kp2
         can_do: Graph an ellipse
         key_prerequisites: [math.precalc.conic-overview, math.precalc.circles-general-form]
@@ -4334,7 +4310,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Read eccentricity from a polar form
-        key_prerequisites: [math.precalc.polar-curves, math.precalc.conic-overview]
+        key_prerequisites: [math.precalc.polar-curves, math.precalc.conic-overview, math.precalc.eccentricity]
       - id: kp2
         can_do: Name the conic
         key_prerequisites: [math.precalc.conic-overview]
@@ -4444,7 +4420,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Classify from the x and y squared terms
-        key_prerequisites: [math.precalc.hyperbola-asymptotes, math.precalc.parabola-conic]
+        key_prerequisites: [math.precalc.hyperbola-asymptotes, math.precalc.parabola-conic, math.precalc.horizontal-parabolas]
       - id: kp2
         can_do: Classify from a general equation
         key_prerequisites: [math.precalc.hyperbola-asymptotes]
@@ -4491,7 +4467,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a line and conic system
-        key_prerequisites: [math.precalc.classify-general-conic, math.alg2.nonlinear-systems]
+        key_prerequisites: [math.precalc.classify-general-conic, math.alg2.nonlinear-systems, math.alg2.circle-line-systems]
       - id: kp2
         can_do: Solve two conics
         key_prerequisites: [math.precalc.classify-general-conic]
@@ -4508,14 +4484,8 @@ topics:
       - topic: math.precalc.classify-general-conic
         encompassing: 0.5
         confidence: high
-      - topic: math.geom.circle-tangent-line-equation
-        encompassing: 0.1
-        confidence: low
       - topic: math.precalc.write-ellipse-equation
         encompassing: 0.25
-        confidence: medium
-      - topic: math.precalc.write-hyperbola-equation
-        encompassing: 0.2
         confidence: medium
     knowledge_points:
       - id: kp1
@@ -4523,7 +4493,7 @@ topics:
         key_prerequisites: [math.precalc.classify-general-conic]
       - id: kp2
         can_do: Solve a planet orbit problem
-        key_prerequisites: [math.precalc.classify-general-conic]
+        key_prerequisites: [math.precalc.classify-general-conic, math.precalc.write-ellipse-equation]
       - id: kp3
         can_do: Solve an arch problem
         key_prerequisites: [math.precalc.classify-general-conic]
@@ -4543,7 +4513,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use a parabola's reflective property
-        key_prerequisites: [math.precalc.conic-applications]
+        key_prerequisites: [math.precalc.conic-applications, math.precalc.vertex-focus-directrix-from-equation]
       - id: kp2
         can_do: Use an ellipse's reflective property
         key_prerequisites: [math.precalc.conic-applications]
@@ -4570,7 +4540,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Test a geometric series
-        key_prerequisites: [math.alg2.infinite-geometric-series, math.precalc.end-behavior-limits-intro]
+        key_prerequisites: [math.alg2.infinite-geometric-series, math.precalc.end-behavior-limits-intro, math.alg2.repeating-decimals-geometric]
       - id: kp2
         can_do: Find a sum to infinity
         key_prerequisites: [math.alg2.infinite-geometric-series]
@@ -4725,7 +4695,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove a sum formula
-        key_prerequisites: [math.precalc.mathematical-induction]
+        key_prerequisites: [math.precalc.mathematical-induction, math.precalc.sum-of-powers-formula]
       - id: kp2
         can_do: Prove a sum of squares
         key_prerequisites: [math.precalc.mathematical-induction]
@@ -4794,7 +4764,7 @@ topics:
         key_prerequisites: [math.alg2.binomial-theorem]
       - id: kp3
         can_do: Use it in probability
-        key_prerequisites: [math.alg2.binomial-theorem]
+        key_prerequisites: [math.alg2.binomial-theorem, math.precalc.counting-principles-review]
   - id: math.precalc.annuities-loan-series
     name: Modelling annuities and loans with series
     subject: math

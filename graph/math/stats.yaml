@@ -125,7 +125,7 @@ topics:
         key_prerequisites: [math.stats.histograms-shape]
       - id: kp2
         can_do: Make a box plot
-        key_prerequisites: [math.stats.histograms-shape]
+        key_prerequisites: [math.stats.histograms-shape, math.stats.stem-leaf-plots]
       - id: kp3
         can_do: Compare two box plots
         key_prerequisites: [math.stats.histograms-shape]
@@ -217,7 +217,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Choose mean and SD for a symmetric set
-        key_prerequisites: [math.stats.standard-deviation-calc]
+        key_prerequisites: [math.stats.standard-deviation-calc, math.alg1.choose-center-and-spread]
       - id: kp2
         can_do: Choose median and IQR for a skewed set
         key_prerequisites: [math.stats.outlier-rule]
@@ -267,7 +267,7 @@ topics:
         key_prerequisites: [math.stats.choose-summary-stats]
       - id: kp3
         can_do: Write a comparison with numbers
-        key_prerequisites: [math.stats.choose-summary-stats]
+        key_prerequisites: [math.stats.choose-summary-stats, math.stats.describe-distribution-socs]
   - id: math.stats.quartiles-and-boxplot-compare
     name: Comparing distributions with box plots
     subject: math
@@ -312,7 +312,7 @@ topics:
         key_prerequisites: [math.stats.standard-deviation-calc]
       - id: kp2
         can_do: Find a z-score
-        key_prerequisites: [math.stats.standard-deviation-calc]
+        key_prerequisites: [math.stats.standard-deviation-calc, math.stats.transform-data-effects]
       - id: kp3
         can_do: Compare two people with z-scores
         key_prerequisites: [math.stats.standard-deviation-calc]
@@ -399,7 +399,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a value for a percentile
-        key_prerequisites: [math.stats.normal-calculations]
+        key_prerequisites: [math.stats.normal-calculations, math.stats.standard-normal-table]
       - id: kp2
         can_do: Find a cut-off for a top percent
         key_prerequisites: [math.stats.normal-calculations]
@@ -451,7 +451,7 @@ topics:
         key_prerequisites: [math.stats.normal-calculations]
       - id: kp2
         can_do: Say whether a shape fits
-        key_prerequisites: [math.stats.histograms-shape]
+        key_prerequisites: [math.stats.histograms-shape, math.stats.empirical-rule]
       - id: kp3
         can_do: Say what to do when it does not
         key_prerequisites: [math.stats.normal-calculations]
@@ -518,7 +518,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a line from means, SDs and r
-        key_prerequisites: [math.stats.scatter-association, math.stats.standard-deviation-calc]
+        key_prerequisites: [math.stats.scatter-association, math.stats.standard-deviation-calc, math.stats.correlation-properties]
       - id: kp2
         can_do: Find a line with technology
         key_prerequisites: [math.stats.scatter-association]
@@ -573,7 +573,7 @@ topics:
         key_prerequisites: [math.stats.interpret-regression]
       - id: kp3
         can_do: Avoid extrapolation
-        key_prerequisites: [math.stats.interpret-regression]
+        key_prerequisites: [math.stats.interpret-regression, math.alg1.interpolation-extrapolation]
   - id: math.stats.residual-analysis
     name: Analyzing residuals
     subject: math
@@ -597,7 +597,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Read a residual plot
-        key_prerequisites: [math.stats.interpret-regression, math.alg1.residuals]
+        key_prerequisites: [math.stats.interpret-regression, math.alg1.residuals, math.alg1.residual-plot-read, math.stats.regression-prediction]
       - id: kp2
         can_do: Say if a linear model is suitable
         key_prerequisites: [math.stats.interpret-regression]
@@ -673,7 +673,7 @@ topics:
         key_prerequisites: [math.stats.residual-analysis]
       - id: kp3
         can_do: Back-transform a prediction
-        key_prerequisites: [math.stats.residual-analysis]
+        key_prerequisites: [math.stats.residual-analysis, math.alg1.identify-model-from-table]
   - id: math.stats.two-way-association
     name: Analyzing association in two-way tables
     subject: math
@@ -1012,10 +1012,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Say who a result applies to
-        key_prerequisites: [math.stats.simple-random-sample]
+        key_prerequisites: [math.stats.simple-random-sample, math.stats.stratified-cluster-samples, math.stats.question-wording-bias]
       - id: kp2
         can_do: Say whether a result shows cause
-        key_prerequisites: [math.stats.randomization-control-replication]
+        key_prerequisites: [math.stats.randomization-control-replication, math.stats.confounding]
       - id: kp3
         can_do: Combine both for a study
         key_prerequisites: [math.stats.randomization-control-replication, math.stats.simple-random-sample]
@@ -1029,9 +1029,6 @@ topics:
       - topic: math.stats.scope-of-inference
         encompassing: 0.4
         confidence: low
-      - topic: math.stats.ethics-in-studies
-        encompassing: 0.15
-        confidence: low
       - topic: math.stats.double-blind-placebo
         encompassing: 0.2
         confidence: medium
@@ -1041,7 +1038,7 @@ topics:
         key_prerequisites: [math.stats.scope-of-inference]
       - id: kp2
         can_do: Plan a study from a hypothesis
-        key_prerequisites: [math.stats.scope-of-inference]
+        key_prerequisites: [math.stats.scope-of-inference, math.stats.double-blind-placebo]
       - id: kp3
         can_do: Say what a result would and would not show
         key_prerequisites: [math.stats.scope-of-inference]
@@ -1148,7 +1145,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use the general multiplication rule
-        key_prerequisites: [math.stats.conditional-independence]
+        key_prerequisites: [math.stats.conditional-independence, math.stats.disjoint-vs-independent]
       - id: kp2
         can_do: Draw a tree
         key_prerequisites: [math.stats.conditional-independence]
@@ -1191,7 +1188,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Design a simulation
-        key_prerequisites: [math.stats.probability-rules-basic]
+        key_prerequisites: [math.stats.probability-rules-basic, math.g7.simulate-compound-events]
       - id: kp2
         can_do: Run one and estimate
         key_prerequisites: [math.stats.probability-rules-basic]
@@ -1317,9 +1314,6 @@ topics:
       - topic: math.stats.probability-distribution-tables
         encompassing: 0.4
         confidence: medium
-      - topic: math.stats.geometric-distribution
-        encompassing: 0.05
-        confidence: low
     encompassed:
       - topic: math.stats.random-variables
         encompassing: 0.6
@@ -1327,7 +1321,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a mean of a random variable
-        key_prerequisites: [math.stats.random-variables]
+        key_prerequisites: [math.stats.random-variables, math.stats.probability-distribution-tables]
       - id: kp2
         can_do: Find a variance and SD
         key_prerequisites: [math.stats.standard-deviation-calc]
@@ -1478,7 +1472,7 @@ topics:
         key_prerequisites: [math.stats.normal-calculations]
       - id: kp3
         can_do: Say how n changes spread
-        key_prerequisites: [math.stats.sampling-distribution-idea]
+        key_prerequisites: [math.stats.sampling-distribution-idea, math.stats.inverse-normal]
   - id: math.stats.central-limit-theorem
     name: Using the central limit theorem
     subject: math
@@ -1625,7 +1619,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Check conditions
-        key_prerequisites: [math.stats.ci-idea]
+        key_prerequisites: [math.stats.ci-idea, math.stats.central-limit-theorem]
       - id: kp2
         can_do: Find a one-sample t interval
         key_prerequisites: [math.stats.sampling-mean]
@@ -1655,7 +1649,7 @@ topics:
         key_prerequisites: [math.stats.ci-idea]
       - id: kp3
         can_do: Say why a low probability is evidence
-        key_prerequisites: [math.stats.ci-idea]
+        key_prerequisites: [math.stats.ci-idea, math.stats.margin-of-error-sample-size]
   - id: math.stats.null-alternative
     name: Writing hypotheses
     subject: math
@@ -1766,7 +1760,7 @@ topics:
         key_prerequisites: [math.stats.one-proportion-test]
       - id: kp2
         can_do: Test a difference of two proportions
-        key_prerequisites: [math.stats.one-proportion-test]
+        key_prerequisites: [math.stats.one-proportion-test, math.stats.test-conditions]
       - id: kp3
         can_do: Write a conclusion
         key_prerequisites: [math.stats.one-proportion-test]
@@ -1812,7 +1806,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a t statistic
-        key_prerequisites: [math.stats.p-value-meaning, math.stats.t-distribution]
+        key_prerequisites: [math.stats.p-value-meaning, math.stats.t-distribution, math.stats.ci-mean-t]
       - id: kp2
         can_do: Find a p-value
         key_prerequisites: [math.stats.t-distribution]
@@ -1821,7 +1815,7 @@ topics:
         key_prerequisites: [math.stats.p-value-meaning]
       - id: kp4
         can_do: Use a t test when data is slightly skewed
-        key_prerequisites: [math.stats.p-value-meaning, math.stats.t-distribution]
+        key_prerequisites: [math.stats.p-value-meaning, math.stats.t-distribution, math.stats.normal-assess]
   - id: math.stats.two-mean-t-test
     name: Comparing two means
     subject: math
@@ -1838,7 +1832,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Test a difference of two means
-        key_prerequisites: [math.stats.one-mean-t-test]
+        key_prerequisites: [math.stats.one-mean-t-test, math.stats.combine-random-variables]
       - id: kp2
         can_do: Check the conditions
         key_prerequisites: [math.stats.one-mean-t-test]
@@ -1934,7 +1928,7 @@ topics:
         key_prerequisites: [math.stats.p-value-meaning]
       - id: kp3
         can_do: Say what a large sample can do
-        key_prerequisites: [math.stats.p-value-meaning]
+        key_prerequisites: [math.stats.p-value-meaning, math.stats.errors-and-power]
   - id: math.stats.ci-test-connection
     name: Connecting intervals and tests
     subject: math
@@ -1958,7 +1952,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use an interval to decide a two-sided test
-        key_prerequisites: [math.stats.one-proportion-test, math.stats.ci-interpret]
+        key_prerequisites: [math.stats.one-proportion-test, math.stats.ci-interpret, math.stats.ci-difference-proportions, math.stats.ci-difference-of-means]
       - id: kp2
         can_do: Say how levels match
         key_prerequisites: [math.stats.ci-interpret]
@@ -2028,9 +2022,6 @@ topics:
       - topic: math.stats.influential-points
         encompassing: 0.15
         confidence: low
-      - topic: math.stats.transform-to-linearity
-        encompassing: 0.1
-        confidence: low
     encompassed:
       - topic: math.stats.residual-analysis
         encompassing: 0.5
@@ -2038,13 +2029,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Check conditions for the slope
-        key_prerequisites: [math.stats.residual-analysis]
+        key_prerequisites: [math.stats.residual-analysis, math.stats.influential-points]
       - id: kp2
         can_do: Find an interval or test for the slope
         key_prerequisites: [math.stats.one-mean-t-test]
       - id: kp3
         can_do: Read software output
-        key_prerequisites: [math.stats.residual-analysis]
+        key_prerequisites: [math.stats.residual-analysis, math.stats.r-squared]
   - id: math.stats.randomization-tests
     name: Using randomization tests
     subject: math
@@ -2093,7 +2084,7 @@ topics:
         key_prerequisites: [math.stats.regression-inference]
       - id: kp2
         can_do: Read output for a t test
-        key_prerequisites: [math.stats.two-mean-t-test]
+        key_prerequisites: [math.stats.two-mean-t-test, math.stats.paired-t-test, math.stats.chi-square-independence]
       - id: kp3
         can_do: Find key values in output
         key_prerequisites: [math.stats.regression-inference, math.stats.two-mean-t-test]
@@ -2113,16 +2104,13 @@ topics:
       - topic: math.stats.simpsons-paradox
         encompassing: 0.1
         confidence: low
-      - topic: math.stats.randomization-tests
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Write a result for a general reader
         key_prerequisites: [math.stats.software-in-statistics]
       - id: kp2
         can_do: Say what a study does not show
-        key_prerequisites: [math.stats.software-in-statistics]
+        key_prerequisites: [math.stats.software-in-statistics, math.stats.simpsons-paradox]
       - id: kp3
         can_do: Choose a graph for a report
-        key_prerequisites: [math.stats.software-in-statistics]
+        key_prerequisites: [math.stats.software-in-statistics, math.stats.quartiles-and-boxplot-compare]
