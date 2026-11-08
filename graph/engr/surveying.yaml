@@ -1,0 +1,727 @@
+course: engr.surveying
+topics:
+  - id: engr.surveying.survey-fundamentals
+    name: Classifying surveys, datums and units
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: math.precalc.law-sines-review-applications
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Classify plane and geodetic surveys
+        key_prerequisites: [math.precalc.law-sines-review-applications]
+      - id: kp2
+        can_do: Distinguish systematic, random and blunder errors
+        key_prerequisites: [math.precalc.law-sines-review-applications]
+      - id: kp3
+        can_do: Distinguish precision and accuracy
+        key_prerequisites: [math.precalc.law-sines-review-applications]
+      - id: kp4
+        can_do: Round measured values with significant figures
+        key_prerequisites: [math.precalc.law-sines-review-applications]
+  - id: engr.surveying.survey-error-propagation
+    name: Propagating errors in survey measurements
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-fundamentals
+        encompassing: 0.25
+        confidence: high
+      - topic: math.stats.combine-random-variables
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find standard errors of measured quantities
+        key_prerequisites: [math.stats.combine-random-variables]
+      - id: kp2
+        can_do: Propagate errors through sums and products
+        key_prerequisites: [math.stats.combine-random-variables]
+      - id: kp3
+        can_do: Find error in a series of measurements
+        key_prerequisites: [engr.surveying.survey-fundamentals, math.stats.combine-random-variables]
+      - id: kp4
+        can_do: Find the number of repetitions for a target precision
+        key_prerequisites: [engr.surveying.survey-fundamentals, math.stats.combine-random-variables]
+  - id: engr.surveying.weighted-observations
+    name: Weighting and adjusting repeated observations
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-error-propagation
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find weights from standard errors
+        key_prerequisites: [engr.surveying.survey-error-propagation]
+      - id: kp2
+        can_do: Find weighted means
+        key_prerequisites: [engr.surveying.survey-error-propagation]
+      - id: kp3
+        can_do: Find standard errors of weighted means
+        key_prerequisites: [engr.surveying.survey-error-propagation]
+      - id: kp4
+        can_do: Adjust angles with weighted observations
+        key_prerequisites: [engr.surveying.survey-error-propagation]
+  - id: engr.surveying.taping-corrections
+    name: Correcting taped distances
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-fundamentals
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Correct taped distances for temperature
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp2
+        can_do: Correct for tension and sag
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp3
+        can_do: Correct for slope
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp4
+        can_do: Find true lengths from combined corrections
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+  - id: engr.surveying.edm
+    name: Measuring distances electronically
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.taping-corrections
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain how phase-shift distance meters work
+        key_prerequisites: [engr.surveying.taping-corrections]
+      - id: kp2
+        can_do: Correct distances for atmospheric conditions
+        key_prerequisites: [engr.surveying.taping-corrections]
+      - id: kp3
+        can_do: Reduce slope distances to horizontal
+        key_prerequisites: [engr.surveying.taping-corrections]
+      - id: kp4
+        can_do: Find prism constant corrections
+        key_prerequisites: [engr.surveying.taping-corrections]
+  - id: engr.surveying.survey-leveling
+    name: Finding elevations by differential leveling
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-fundamentals
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find elevations with differential leveling
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp2
+        can_do: Book leveling notes with height of instrument
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp3
+        can_do: Check arithmetic in level notes
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp4
+        can_do: Balance backsight and foresight distances
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+  - id: engr.surveying.level-circuit-adjustment
+    name: Adjusting level circuits
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-leveling
+        encompassing: 0.45
+        confidence: high
+      - topic: engr.surveying.weighted-observations
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find misclosures of level circuits
+        key_prerequisites: [engr.surveying.survey-leveling]
+      - id: kp2
+        can_do: Distribute misclosure by distance
+        key_prerequisites: [engr.surveying.survey-leveling, engr.surveying.weighted-observations]
+      - id: kp3
+        can_do: Adjust networks with weighted routes
+        key_prerequisites: [engr.surveying.weighted-observations]
+      - id: kp4
+        can_do: Check misclosure against allowable limits
+        key_prerequisites: [engr.surveying.survey-leveling]
+  - id: engr.surveying.profile-leveling
+    name: Running profile and cross-section leveling
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-leveling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run profile levels along a route
+        key_prerequisites: [engr.surveying.survey-leveling]
+      - id: kp2
+        can_do: Plot profiles
+        key_prerequisites: [engr.surveying.survey-leveling]
+      - id: kp3
+        can_do: Find grades between stations
+        key_prerequisites: [engr.surveying.survey-leveling]
+      - id: kp4
+        can_do: Find elevations of intermediate points
+        key_prerequisites: [engr.surveying.survey-leveling]
+  - id: engr.surveying.trigonometric-leveling
+    name: Finding elevations by trigonometric leveling
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-leveling
+        encompassing: 0.7
+        confidence: high
+      - topic: engr.surveying.edm
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find elevation differences from zenith angles
+        key_prerequisites: [engr.surveying.survey-leveling, engr.surveying.edm]
+      - id: kp2
+        can_do: Find elevations with total station data
+        key_prerequisites: [engr.surveying.edm]
+      - id: kp3
+        can_do: Find heights of inaccessible objects
+        key_prerequisites: [engr.surveying.survey-leveling]
+      - id: kp4
+        can_do: Compare trigonometric and differential leveling
+        key_prerequisites: [engr.surveying.survey-leveling]
+  - id: engr.surveying.curvature-refraction
+    name: Correcting for curvature and refraction
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.trigonometric-leveling
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find curvature and refraction corrections
+        key_prerequisites: [engr.surveying.trigonometric-leveling]
+      - id: kp2
+        can_do: Apply corrections to long sights
+        key_prerequisites: [engr.surveying.trigonometric-leveling]
+      - id: kp3
+        can_do: Use reciprocal observations
+        key_prerequisites: [engr.surveying.trigonometric-leveling]
+      - id: kp4
+        can_do: Find sight distances where corrections matter
+        key_prerequisites: [engr.surveying.trigonometric-leveling]
+  - id: engr.surveying.angles-and-directions
+    name: Measuring horizontal and vertical angles
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.survey-fundamentals
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Measure horizontal angles by repetition
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp2
+        can_do: Find zenith and vertical angles
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp3
+        can_do: Close angles around a point
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+      - id: kp4
+        can_do: Find interior angle sums of traverses
+        key_prerequisites: [engr.surveying.survey-fundamentals]
+  - id: engr.surveying.total-station-surveys
+    name: Collecting data with total stations
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.edm
+        encompassing: 0.65
+        confidence: high
+      - topic: engr.surveying.angles-and-directions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Set up a total station
+        key_prerequisites: [engr.surveying.edm]
+      - id: kp2
+        can_do: Find coordinates from angle and distance
+        key_prerequisites: [engr.surveying.edm, engr.surveying.angles-and-directions]
+      - id: kp3
+        can_do: Run radial surveys
+        key_prerequisites: [engr.surveying.edm, engr.surveying.angles-and-directions]
+      - id: kp4
+        can_do: Record data for later processing
+        key_prerequisites: [engr.surveying.angles-and-directions]
+  - id: engr.surveying.bearings-azimuths
+    name: Converting bearings and azimuths
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.angles-and-directions
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Convert between bearings and azimuths
+        key_prerequisites: [engr.surveying.angles-and-directions]
+      - id: kp2
+        can_do: Find azimuths of traverse lines
+        key_prerequisites: [engr.surveying.angles-and-directions]
+      - id: kp3
+        can_do: Find bearings from interior angles
+        key_prerequisites: [engr.surveying.angles-and-directions]
+      - id: kp4
+        can_do: Correct for magnetic declination
+        key_prerequisites: [engr.surveying.angles-and-directions]
+  - id: engr.surveying.latitudes-departures
+    name: Computing traverse latitudes and departures
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.bearings-azimuths
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find latitudes and departures of lines
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp2
+        can_do: Find line lengths from latitudes and departures
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp3
+        can_do: Find bearings from latitudes and departures
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp4
+        can_do: Tabulate traverse computations
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+  - id: engr.surveying.traverse-misclosure
+    name: Finding traverse misclosure and precision
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.latitudes-departures
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find linear misclosure
+        key_prerequisites: [engr.surveying.latitudes-departures]
+      - id: kp2
+        can_do: Find relative precision of traverses
+        key_prerequisites: [engr.surveying.latitudes-departures]
+      - id: kp3
+        can_do: Check angular misclosure
+        key_prerequisites: [engr.surveying.latitudes-departures]
+      - id: kp4
+        can_do: Compare misclosure with accuracy standards
+        key_prerequisites: [engr.surveying.latitudes-departures]
+  - id: engr.surveying.compass-rule
+    name: Adjusting traverses by the compass rule
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.traverse-misclosure
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Adjust latitudes and departures with the compass rule
+        key_prerequisites: [engr.surveying.traverse-misclosure]
+      - id: kp2
+        can_do: Adjust with the transit rule
+        key_prerequisites: [engr.surveying.traverse-misclosure]
+      - id: kp3
+        can_do: Find adjusted lengths and bearings
+        key_prerequisites: [engr.surveying.traverse-misclosure]
+      - id: kp4
+        can_do: Compare adjustment methods
+        key_prerequisites: [engr.surveying.traverse-misclosure]
+  - id: engr.surveying.traverse-coordinates
+    name: Computing coordinates from adjusted traverses
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.compass-rule
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find coordinates of traverse stations
+        key_prerequisites: [engr.surveying.compass-rule]
+      - id: kp2
+        can_do: Find inverse distances and bearings
+        key_prerequisites: [engr.surveying.compass-rule]
+      - id: kp3
+        can_do: Close traverses on known points
+        key_prerequisites: [engr.surveying.compass-rule]
+      - id: kp4
+        can_do: Check coordinate computations
+        key_prerequisites: [engr.surveying.compass-rule]
+  - id: engr.surveying.coordinate-geometry-survey
+    name: Solving inverse and intersection problems
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.traverse-coordinates
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find line intersections from bearings
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp2
+        can_do: Find intersections of lines and circles
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp3
+        can_do: Find perpendicular offsets to lines
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp4
+        can_do: Find missing courses of traverses
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+  - id: engr.surveying.property-descriptions
+    name: Reading metes-and-bounds property descriptions
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.bearings-azimuths
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpret metes and bounds descriptions
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp2
+        can_do: Plot parcels from descriptions
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp3
+        can_do: Identify errors in descriptions
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+      - id: kp4
+        can_do: Compare metes and bounds with rectangular systems
+        key_prerequisites: [engr.surveying.bearings-azimuths]
+  - id: engr.surveying.area-by-coordinates
+    name: Computing areas by coordinates
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.traverse-coordinates
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find areas by the coordinate method
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp2
+        can_do: Find areas with double meridian distances
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp3
+        can_do: Find areas of curved boundaries
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp4
+        can_do: Compare area methods
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+  - id: engr.surveying.irregular-areas
+    name: Computing areas of irregular boundaries
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.area-by-coordinates
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find areas with the trapezoidal rule
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp2
+        can_do: Find areas with Simpson's rule
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp3
+        can_do: Find areas with offsets from a baseline
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp4
+        can_do: Compare accuracy of area rules
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+  - id: engr.surveying.area-partitioning
+    name: Partitioning land areas
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.area-by-coordinates
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Partition parcels by a line from a point
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp2
+        can_do: Partition parcels with a line in a given direction
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp3
+        can_do: Find areas cut off by lines
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+      - id: kp4
+        can_do: Find dividing lines for given areas
+        key_prerequisites: [engr.surveying.area-by-coordinates]
+  - id: engr.surveying.contouring
+    name: Drawing contours from spot elevations
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.profile-leveling
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Interpolate contours from spot elevations
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp2
+        can_do: Read terrain features from contours
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp3
+        can_do: Find slopes from contour maps
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp4
+        can_do: Find grid elevations for contouring
+        key_prerequisites: [engr.surveying.profile-leveling]
+  - id: engr.surveying.cross-sections-and-earthwork
+    name: Computing earthwork volumes
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.profile-leveling
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find cross-section areas of cut and fill
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp2
+        can_do: Find volumes with average end areas
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp3
+        can_do: Find volumes with the prismoidal formula
+        key_prerequisites: [engr.surveying.profile-leveling]
+      - id: kp4
+        can_do: Correct for swell and shrinkage
+        key_prerequisites: [engr.surveying.profile-leveling]
+  - id: engr.surveying.mass-haul-diagrams
+    name: Using mass haul diagrams
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.cross-sections-and-earthwork
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw mass diagrams from earthwork volumes
+        key_prerequisites: [engr.surveying.cross-sections-and-earthwork]
+      - id: kp2
+        can_do: Find balance points
+        key_prerequisites: [engr.surveying.cross-sections-and-earthwork]
+      - id: kp3
+        can_do: Find free haul and overhaul
+        key_prerequisites: [engr.surveying.cross-sections-and-earthwork]
+      - id: kp4
+        can_do: Choose borrow and waste locations
+        key_prerequisites: [engr.surveying.cross-sections-and-earthwork]
+  - id: engr.surveying.borrow-pit-volumes
+    name: Computing borrow-pit volumes
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.contouring
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find volumes of borrow pits with grids
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp2
+        can_do: Find volumes with unit areas
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp3
+        can_do: Find volumes from contours
+        key_prerequisites: [engr.surveying.contouring]
+      - id: kp4
+        can_do: Compare volume methods
+        key_prerequisites: [engr.surveying.contouring]
+  - id: engr.surveying.map-projections-coordinates
+    name: Using state plane and UTM coordinates
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.traverse-coordinates
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compare map projection types
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp2
+        can_do: Use state plane and UTM coordinates
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp3
+        can_do: Find scale and elevation factors
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+      - id: kp4
+        can_do: Convert ground distances to grid distances
+        key_prerequisites: [engr.surveying.traverse-coordinates]
+  - id: engr.surveying.geodetic-coordinates
+    name: Converting latitude and longitude
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.map-projections-coordinates
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe datums and ellipsoids
+        key_prerequisites: [engr.surveying.map-projections-coordinates]
+      - id: kp2
+        can_do: Convert between geodetic and Cartesian coordinates
+        key_prerequisites: [engr.surveying.map-projections-coordinates]
+      - id: kp3
+        can_do: Distinguish ellipsoid and orthometric heights
+        key_prerequisites: [engr.surveying.map-projections-coordinates]
+      - id: kp4
+        can_do: Use geoid models
+        key_prerequisites: [engr.surveying.map-projections-coordinates]
+  - id: engr.surveying.gnss-positioning
+    name: Positioning with GNSS
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.geodetic-coordinates
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain satellite positioning
+        key_prerequisites: [engr.surveying.geodetic-coordinates]
+      - id: kp2
+        can_do: Compare static and real-time kinematic methods
+        key_prerequisites: [engr.surveying.geodetic-coordinates]
+      - id: kp3
+        can_do: Explain sources of GNSS error
+        key_prerequisites: [engr.surveying.geodetic-coordinates]
+      - id: kp4
+        can_do: Explain dilution of precision
+        key_prerequisites: [engr.surveying.geodetic-coordinates]
+  - id: engr.surveying.remote-sensing-survey
+    name: Describing lidar and photogrammetry
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.gnss-positioning
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Describe aerial photogrammetry
+        key_prerequisites: [engr.surveying.gnss-positioning]
+      - id: kp2
+        can_do: Find photo scales
+        key_prerequisites: [engr.surveying.gnss-positioning]
+      - id: kp3
+        can_do: Describe lidar surveys
+        key_prerequisites: [engr.surveying.gnss-positioning]
+      - id: kp4
+        can_do: Compare remote sensing and ground surveys
+        key_prerequisites: [engr.surveying.gnss-positioning]
+  - id: engr.surveying.construction-staking
+    name: Staking out construction layout
+    subject: engr
+    course: engr.surveying
+    level: uni-lower
+    status: draft
+    prerequisites:
+      - topic: engr.surveying.coordinate-geometry-survey
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Stake building corners
+        key_prerequisites: [engr.surveying.coordinate-geometry-survey]
+      - id: kp2
+        can_do: Set offset stakes
+        key_prerequisites: [engr.surveying.coordinate-geometry-survey]
+      - id: kp3
+        can_do: Set grade stakes with cut and fill
+        key_prerequisites: [engr.surveying.coordinate-geometry-survey]
+      - id: kp4
+        can_do: Lay out curves in the field
+        key_prerequisites: [engr.surveying.coordinate-geometry-survey]
