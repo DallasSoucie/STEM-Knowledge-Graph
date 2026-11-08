@@ -1026,16 +1026,20 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: chem.gen2.coordination-compound-structure
-        encompassing: 0.45
-        confidence: high
       - topic: chem.hs1.vsepr-shapes
         encompassing: 0.3
+        confidence: high
+      - topic: chem.gen2.naming-coordination-compounds
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: chem.gen2.coordination-compound-structure
+        encompassing: 0.45
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Identify cis and trans isomers
-        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.vsepr-shapes]
+        key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.vsepr-shapes, chem.gen2.naming-coordination-compounds]
       - id: kp2
         can_do: Identify fac and mer isomers
         key_prerequisites: [chem.gen2.coordination-compound-structure, chem.hs1.vsepr-shapes]
@@ -1211,6 +1215,9 @@ topics:
       - topic: chem.hs2.oxidation-numbers
         encompassing: 0.45
         confidence: high
+      - topic: chem.ms.element-families
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: chem.hs1.electronegativity-trend
         encompassing: 0.15
@@ -1221,7 +1228,7 @@ topics:
         key_prerequisites: [chem.hs2.oxidation-numbers]
       - id: kp2
         can_do: Explain halogen reactivity trends
-        key_prerequisites: [chem.hs2.oxidation-numbers, chem.hs1.electronegativity-trend]
+        key_prerequisites: [chem.hs2.oxidation-numbers, chem.hs1.electronegativity-trend, chem.ms.element-families]
       - id: kp3
         can_do: Describe interhalogens and oxyacids
         key_prerequisites: [chem.hs2.oxidation-numbers]

@@ -108,6 +108,9 @@ topics:
       - topic: math.diffeq.order-linearity-identify
         encompassing: 0.5
         confidence: high
+      - topic: math.calc2.verify-de-solutions
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.diffeq.classify-odes
         encompassing: 0.15
@@ -121,7 +124,7 @@ topics:
         key_prerequisites: [math.diffeq.order-linearity-identify]
       - id: kp3
         can_do: Check a family with a constant
-        key_prerequisites: [math.diffeq.order-linearity-identify]
+        key_prerequisites: [math.diffeq.order-linearity-identify, math.calc2.verify-de-solutions]
       - id: kp4
         can_do: Find constants that make a form a solution
         key_prerequisites: [math.diffeq.classify-odes]
@@ -1109,6 +1112,7 @@ topics:
       - topic: math.diffeq.second-order-intro
         encompassing: 0.4
         confidence: high
+    encompassed:
       - topic: math.alg1.choose-quadratic-method
         encompassing: 0.3
         confidence: high
@@ -1794,10 +1798,13 @@ topics:
       - topic: math.diffeq.second-order-intro
         encompassing: 0.45
         confidence: high
+      - topic: math.calc2.work-springs
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a spring constant in newtons per metre
-        key_prerequisites: [math.diffeq.second-order-intro]
+        key_prerequisites: [math.diffeq.second-order-intro, math.calc2.work-springs]
       - id: kp2
         can_do: Write an equation from mass and damping
         key_prerequisites: [math.diffeq.second-order-intro]
@@ -2233,6 +2240,9 @@ topics:
       - topic: math.diffeq.laplace-properties
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.step-function-applications
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.alg1.piecewise-intro
         encompassing: 0.25
@@ -2240,7 +2250,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a unit step
-        key_prerequisites: [math.alg1.piecewise-intro]
+        key_prerequisites: [math.alg1.piecewise-intro, math.alg2.step-function-applications]
       - id: kp2
         can_do: Graph a shifted step
         key_prerequisites: [math.diffeq.laplace-properties]
@@ -2283,11 +2293,12 @@ topics:
       - topic: math.diffeq.inverse-laplace
         encompassing: 0.25
         confidence: high
-      - topic: math.alg1.complete-the-square-expression
-        encompassing: 0.25
-        confidence: high
       - topic: math.diffeq.laplace-first-shift
         encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.alg1.complete-the-square-expression
+        encompassing: 0.25
         confidence: high
     knowledge_points:
       - id: kp1
@@ -2335,13 +2346,17 @@ topics:
       - topic: math.diffeq.inverse-laplace
         encompassing: 0.35
         confidence: high
+      - topic: math.calc2.partial-fractions-quadratic-integral
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
       - topic: math.precalc.partial-fractions-quadratic
         encompassing: 0.35
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find constants for a quadratic factor
-        key_prerequisites: [math.precalc.partial-fractions-quadratic]
+        key_prerequisites: [math.precalc.partial-fractions-quadratic, math.calc2.partial-fractions-quadratic-integral]
       - id: kp2
         can_do: Invert a linear and quadratic product
         key_prerequisites: [math.diffeq.inverse-laplace]
@@ -3123,6 +3138,9 @@ topics:
       - topic: math.diffeq.phase-portraits-real
         encompassing: 0.25
         confidence: high
+      - topic: math.linalg.rotation-scaling-form
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Draw a center
@@ -3132,7 +3150,7 @@ topics:
         key_prerequisites: [math.diffeq.eigen-solutions-complex]
       - id: kp3
         can_do: Find a rotation direction
-        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+        key_prerequisites: [math.diffeq.eigen-solutions-complex, math.linalg.rotation-scaling-form]
       - id: kp4
         can_do: Compare to a real-eigenvalue portrait
         key_prerequisites: [math.diffeq.phase-portraits-real]
@@ -3561,7 +3579,7 @@ topics:
         key_prerequisites: [math.diffeq.trace-determinant-plane]
       - id: kp4
         can_do: Tell when linearization is inconclusive
-        key_prerequisites: [math.diffeq.trace-determinant-plane]
+        key_prerequisites: [math.diffeq.trace-determinant-plane, math.diffeq.nullclines]
   - id: math.diffeq.predator-prey
     name: Modelling predator and prey
     subject: math

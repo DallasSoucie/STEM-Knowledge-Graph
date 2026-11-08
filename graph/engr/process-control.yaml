@@ -39,13 +39,16 @@ topics:
       - topic: engr.controls.linearization-for-control
         encompassing: 0.5
         confidence: high
+      - topic: math.diffeq.transfer-functions
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write models in deviation variables
         key_prerequisites: [engr.process-control.process-dynamic-models]
       - id: kp2
         can_do: Find transfer functions of process models
-        key_prerequisites: [engr.process-control.process-dynamic-models, engr.controls.linearization-for-control]
+        key_prerequisites: [engr.process-control.process-dynamic-models, engr.controls.linearization-for-control, math.diffeq.transfer-functions]
       - id: kp3
         can_do: Find process gain and time constant
         key_prerequisites: [engr.process-control.process-dynamic-models]
@@ -482,6 +485,9 @@ topics:
       - topic: engr.process-control.cascade-control
         encompassing: 0.9
         confidence: high
+      - topic: engr.controls.integrator-windup
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Design override control
@@ -494,7 +500,7 @@ topics:
         key_prerequisites: [engr.process-control.cascade-control]
       - id: kp4
         can_do: Prevent windup in override schemes
-        key_prerequisites: [engr.process-control.cascade-control]
+        key_prerequisites: [engr.process-control.cascade-control, engr.controls.integrator-windup]
   - id: engr.process-control.smith-predictor
     name: Compensating dead time with a Smith predictor
     subject: engr

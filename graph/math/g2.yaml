@@ -59,7 +59,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Say the hundreds, tens and ones shown by bundles
-        key_prerequisites: [math.g2.multiples-of-100-as-hundreds, math.g1.two-digit-as-tens-and-ones]
+        key_prerequisites: [math.g2.multiples-of-100-as-hundreds, math.g1.two-digit-as-tens-and-ones, math.g1.write-number-from-tens-and-ones]
       - id: kp2
         can_do: Say what each digit of a three-digit number stands for
         key_prerequisites: [math.g1.two-digit-as-tens-and-ones]
@@ -166,7 +166,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Read a three-digit numeral with no zeros
-        key_prerequisites: [math.g2.three-digit-place-value]
+        key_prerequisites: [math.g2.three-digit-place-value, math.g2.count-aloud-to-1000]
       - id: kp2
         can_do: Read a three-digit numeral with a zero
         key_prerequisites: [math.g2.three-digit-place-value]
@@ -705,7 +705,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Show a difference as jumps back on a number line
-        key_prerequisites: [math.g2.number-line]
+        key_prerequisites: [math.g2.number-line, math.g2.add-on-number-line]
       - id: kp2
         can_do: Jump back by tens and then ones on a number line
         key_prerequisites: [math.g2.subtract-tens-from-two-digit]
@@ -798,9 +798,6 @@ topics:
       - topic: math.g1.add-take-stories-within-20
         encompassing: 0.5
         confidence: high
-      - topic: math.g2.check-subtraction-with-addition
-        encompassing: 0.15
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Solve a story where objects join a group, up to 100
@@ -873,7 +870,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a story where more objects are added twice
-        key_prerequisites: [math.g2.add-take-stories-within-100]
+        key_prerequisites: [math.g2.add-take-stories-within-100, math.g1.three-number-stories]
       - id: kp2
         can_do: Say which step to do first in a two-step story
       - id: kp3
@@ -901,7 +898,7 @@ topics:
         key_prerequisites: [math.g2.two-step-addition-stories]
       - id: kp3
         can_do: Solve a two-step story that asks how many fewer
-        key_prerequisites: [math.g2.two-step-addition-stories]
+        key_prerequisites: [math.g2.two-step-addition-stories, math.g2.unknown-stories-within-100]
   - id: math.g2.spot-increasing-patterns
     name: Spotting increasing patterns
     subject: math
@@ -925,7 +922,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Say how a growing pattern of objects changes at each step
-        key_prerequisites: [math.g1.continue-longer-patterns]
+        key_prerequisites: [math.g1.continue-longer-patterns, math.g1.patterns-with-two-attributes, math.g1.pattern-in-another-form]
       - id: kp2
         can_do: Say what is added each time in a number pattern
         key_prerequisites: [math.g1.count-by-2s]
@@ -1039,7 +1036,7 @@ topics:
         key_prerequisites: [math.g2.three-digit-place-value]
       - id: kp3
         can_do: Say 10 or 100 more or less without counting
-        key_prerequisites: [math.g2.three-digit-place-value]
+        key_prerequisites: [math.g2.three-digit-place-value, math.g2.count-by-10s-and-100s]
   - id: math.g2.add-multiples-of-10-and-100
     name: Adding multiples of 10 and 100
     subject: math
@@ -1076,15 +1073,19 @@ topics:
       - topic: math.g2.add-multiples-of-10-and-100
         encompassing: 0.55
         confidence: high
+      - topic: math.g1.add-two-digit-without-new-ten
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Add hundreds, tens and ones using bundles
         key_prerequisites: [math.g2.add-multiples-of-10-and-100]
       - id: kp2
         can_do: Add three-digit numbers in a drawing
-        key_prerequisites: [math.g2.add-multiples-of-10-and-100]
+        key_prerequisites: [math.g2.add-multiples-of-10-and-100, math.g2.ten-or-hundred-more-less]
       - id: kp3
         can_do: Record the addition with a written method
+        key_prerequisites: [math.g1.add-two-digit-without-new-ten]
   - id: math.g2.add-three-digit-new-ten
     name: Adding three-digit numbers with a new ten
     subject: math
@@ -1190,7 +1191,7 @@ topics:
         key_prerequisites: [math.g2.subtract-multiples-of-10-and-100]
       - id: kp2
         can_do: Subtract three-digit numbers in a drawing
-        key_prerequisites: [math.g2.subtract-multiples-of-10-and-100]
+        key_prerequisites: [math.g2.subtract-multiples-of-10-and-100, math.g2.ten-or-hundred-more-less]
       - id: kp3
         can_do: Record the subtraction with a written method
   - id: math.g2.subtract-three-digit-breaking-ten
@@ -1764,7 +1765,7 @@ topics:
         can_do: Count the edges and corners of a cube
       - id: kp3
         can_do: Describe a solid shape by its faces, edges and corners
-        key_prerequisites: [math.g1.compare-flat-and-solid]
+        key_prerequisites: [math.g1.compare-flat-and-solid, math.g1.composite-solids]
   - id: math.g2.sort-by-several-attributes
     name: Sorting shapes by several attributes
     subject: math
@@ -1830,7 +1831,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Split a rectangle into three equal shares
-        key_prerequisites: [math.g1.halves]
+        key_prerequisites: [math.g1.halves, math.g1.more-shares-smaller]
       - id: kp2
         can_do: Split a circle into three equal shares
         key_prerequisites: [math.g1.fourths]

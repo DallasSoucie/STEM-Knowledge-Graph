@@ -1,0 +1,182 @@
+# Graph audit: uncited prerequisites, dead ends and overlaps
+
+Audit run on 2026-11-08 against the full graph (110 courses, 8,446 topics), on branch `audit`.
+
+## What was fixed
+
+| Check | Before | After | How |
+|---|---|---|---|
+| Direct prerequisites no knowledge point cites | 750 | 0 | 709 cited by the knowledge point that uses them (458 matched by text, the rest reviewed by hand); 41 links nothing used were dropped. 22 planned drops were kept as citations because other knowledge points rely on the ancestor path they carry. |
+| Topics nothing depends on | 1,765 | 1,670 | 655 name-matched candidates reviewed by hand; 83 edges added where a later knowledge point genuinely uses the earlier topic, plus 20 hand-picked links from the engineering core to the discipline courses. 23 older direct edges made redundant by the new links became encompassed entries. |
+| New validation warning | none | `uncited-prerequisite` | Fires when no knowledge point cites a direct prerequisite, so the first check stays fixed. Documented in CLAUDE.md and covered by tests. |
+
+Validation: 0 errors; the only warning is the long-standing budget variance on `math.stats` (92 topics against a budget of 120). All 266 tests pass.
+
+## What remains
+
+**Dead ends (1,670).** About 495 are in end-of-sequence courses and are expected. Most of the rest are application or synthesis topics (stories, design problems, "choose a method" topics) that are natural endpoints. Name matching only finds dependencies whose names overlap, so the remaining real gaps need a semantic review: the planned per-course review against the saved syllabi, or the standards coverage tool.
+
+**Identical knowledge-point text across courses (379 strings).** Most repeat a generic phrase whose meaning comes from the topic ("say what it means in context", "check by substitution"), or repeat a skill at a larger scale in a later grade on a linked topic. Neither needs a change. The 90 pairs below are different: the two topics overlap in name and wording **and neither is an ancestor of the other**, so the graph teaches the same skill twice with no review credit between them.
+
+## Overlaps: resolved by linking both copies
+
+Decision (2026-11-08): keep both copies and link them so review credit flows.
+
+- Five `follows` entries were added so parallel courses come in a fixed order: `math.stats` follows `math.alg2`, `math.alg2` follows `math.geom`, `math.proofs` follows `math.discrete`, `physics.quantum` follows `physics.classical`, and `bio.anat-phys1` follows `bio.intro2`.
+- 63 edges now run from the earlier copy to the later copy, each cited by the later topic's matching knowledge point. Ten older direct edges these made redundant became encompassed entries.
+- 24 overlaps stay unlinked on purpose. They are generic wording shared by unrelated tracks (for example "split into real and imaginary parts" in complex analysis and differential equations), or tracks that are parallel by design, such as the cross product in first-year physics mechanics (which follows calc1) and in calc3.
+
+The list below is the original set of 90 pairs, kept for reference.
+
+## Original overlap list
+
+Three kinds of overlap appear:
+
+1. **Parallel courses teaching the same skill.** `math.stats` re-teaches introductory probability from `math.alg2`; `math.probstat` re-teaches AP statistics from `math.stats`; `math.proofs` and `math.discrete` both teach induction, set proofs, images and preimages. Fixing these means choosing one home per skill and linking or removing the other copy. That changes course structure, so it needs approval. A light option is to keep both copies and add edges so review credit flows; a fuller option is to make one course follow the other and drop its copies.
+2. **School sequences where a later course re-teaches without a link** (`g4`/`g5`, `g6`/`g7`, `g8`/`geom`). These can simply get an edge and, where the later topic is an extension, a reworded knowledge point.
+3. **Cross-subject or engineering pairs** (circuits/electronics, vibrations/classical mechanics, gen1/hs1 chemistry). Mostly a missing edge.
+
+### math.probstat / math.stats (8)
+- Using the central limit theorem (`math.probstat.central-limit-theorem-formal`) / Using the central limit theorem (`math.stats.central-limit-theorem`)
+- Finding conditional distributions (`math.probstat.conditional-distributions`) / Finding conditional probability and independence (`math.stats.conditional-independence`)
+- Testing independence in contingency tables (`math.probstat.independence-contingency`) / Using chi-square tests for independence (`math.stats.chi-square-independence`)
+- Using normal tables (`math.probstat.normal-tables`) / Using the standard normal table (`math.stats.standard-normal-table`)
+- Defining random variables (`math.probstat.random-variable-definition`) / Understanding random variables (`math.stats.random-variables`)
+- Defining random variables (`math.probstat.random-variable-definition`) / Telling categorical from quantitative variables (`math.stats.variable-types`)
+- Testing a mean (`math.probstat.test-for-mean`) / Testing a mean (`math.stats.one-mean-t-test`)
+- Transforming variables in regression (`math.probstat.transforming-for-regression`) / Transforming data to achieve linearity (`math.stats.transform-to-linearity`)
+### math.discrete / math.proofs (6)
+- Finding images and preimages (`math.discrete.images-preimages-discrete`) / Working with images and preimages (`math.proofs.image-preimage`)
+- Proving divisibility by induction (`math.discrete.induction-divisibility`) / Proving divisibility by induction (`math.proofs.induction-divisibility-proofs`)
+- Using partitions (`math.discrete.partitions`) / Proving partitions and equivalence relations correspond (`math.proofs.partition-theorem`)
+- Defining relations (`math.discrete.relations-definition`) / Treating relations as sets (`math.proofs.relations-as-sets`)
+- Proving set identities by elements (`math.discrete.set-proofs-elementwise`) / Proving facts about unions and intersections (`math.proofs.union-intersection-proofs`)
+- Using the well-ordering principle (`math.discrete.well-ordering`) / Proving with well-ordering (`math.proofs.well-ordering-proofs`)
+### math.g8 / math.geom (4)
+- Using triangle angle sum and exterior angles (`math.g8.angle-sum-exterior`) / Using the exterior angle theorem (`math.geom.exterior-angle-theorem`)
+- Dilating with a scale below 1 (`math.g8.dilation-scale-below-one`) / Dilating from any center (`math.geom.dilation-from-center`)
+- Solving Pythagorean stories (`math.g8.pythagorean-stories`) / Solving right triangle stories (`math.geom.right-triangle-stories`)
+- Finding lengths in similar figures (`math.g8.solve-similar-figures`) / Measuring indirectly with similar triangles (`math.geom.similar-triangle-indirect-measure`)
+### math.alg2 / math.stats (4)
+- Finding binomial probabilities (`math.alg2.binomial-probability`) / Calculating binomial probabilities (`math.stats.binomial-calculations`)
+- Recognizing mutually exclusive events (`math.alg2.mutually-exclusive`) / Telling disjoint from independent events (`math.stats.disjoint-vs-independent`)
+- Telling surveys, experiments and observational studies (`math.alg2.surveys-experiments-observational`) / Telling observational studies from experiments (`math.stats.observational-vs-experiment`)
+- Finding z-scores (`math.alg2.z-scores-intro`) / Using percentiles and z-scores (`math.stats.percentiles-and-z`)
+### math.g4 / math.g5 (3)
+- Comparing fractions by finding a common denominator (`math.g4.compare-common-denominator`) / Finding common denominators (`math.g5.common-denominators`)
+- Solving decimal adding and subtracting stories (`math.g4.decimal-add-subtract-stories`) / Solving decimal adding and subtracting stories (`math.g5.decimal-add-subtract-stories`)
+- Dividing a four-digit number by a one-digit number (`math.g4.four-digit-divide`) / Dividing a four-digit number by a two-digit number (`math.g5.four-digit-by-two-digit`)
+### math.g6 / math.g7 (3)
+- Writing equivalent expressions with properties (`math.g6.properties-for-equivalent`) / Using properties to simplify rational calculations (`math.g7.properties-for-rational-calculation`)
+- Solving equations of the form x / p = q (`math.g6.solve-divide-equations`) / Solving two-step equations with integers (`math.g7.two-step-integer-equations`)
+- Solving equations of the form x - p = q (`math.g6.solve-subtract-equations`) / Solving two-step equations with integers (`math.g7.two-step-integer-equations`)
+### math.calc2 / math.diffeq (3)
+- Integrating with quadratic factors (`math.calc2.partial-fractions-quadratic-integral`) / Inverting with quadratic factors (`math.diffeq.laplace-quadratic-factors`)
+- Checking a solution of a differential equation (`math.calc2.verify-de-solutions`) / Checking solutions of differential equations (`math.diffeq.solution-checking`)
+- Finding work done by a spring (`math.calc2.work-springs`) / Setting up spring-mass equations (`math.diffeq.spring-setup`)
+### math.g7 / math.g8 (2)
+- Solving two-step equation stories (`math.g7.two-step-equation-stories`) / Solving linear equation stories (`math.g8.linear-equation-stories`)
+- Finding a missing dimension from a volume (`math.g7.volume-missing-dimension`) / Finding a missing dimension of a cone (`math.g8.volume-cone-reverse`)
+### math.alg2 / math.geom (2)
+- Using the focus and directrix of a parabola (`math.alg2.parabola-focus-form`) / Deriving a parabola from focus and directrix (`math.geom.parabola-focus-directrix`)
+- Finding trig values from a point (`math.alg2.trig-from-point`) / Testing whether a point is on a circle (`math.geom.point-on-circle-test`)
+### math.alg2 / math.precalc (2)
+- Graphing absolute value transformations (`math.alg2.absolute-value-transformations`) / Graphing reciprocal trig functions (`math.precalc.graph-reciprocal-trig`)
+- Graphing absolute value transformations (`math.alg2.absolute-value-transformations`) / Applying combined transformations (`math.precalc.transformations-combined`)
+### math.alg2 / math.probstat (2)
+- Finding at-least binomial probabilities (`math.alg2.binomial-at-least`) / Using Bernoulli and binomial distributions (`math.probstat.bernoulli-binomial`)
+- Finding expected value (`math.alg2.expected-value-intro`) / Finding expected value (`math.probstat.expectation-discrete`)
+### math.analysis / math.precalc (2)
+- Proving the intermediate value theorem (`math.analysis.intermediate-value-proof`) / Using the intermediate value theorem (`math.precalc.intermediate-value-theorem`)
+- Proving inverse functions are continuous (`math.analysis.inverse-continuous`) / Finding domains of inverse trig functions (`math.precalc.inverse-trig-domain`)
+### math.calc1 / math.calc3 (2)
+- Using continuity of compositions (`math.calc1.continuity-of-compositions`) / Testing continuity in several variables (`math.calc3.multivariable-continuity`)
+- Using the fundamental theorem to evaluate integrals (`math.calc1.ftc-part-2`) / Evaluating iterated integrals over rectangles (`math.calc3.iterated-rectangles`)
+### math.calc2 / math.calc3 (2)
+- Finding second derivatives of parametric curves (`math.calc2.parametric-second-derivative`) / Finding implicit partial derivatives (`math.calc3.implicit-partial`)
+- Finding the area of a surface of revolution (`math.calc2.surface-of-revolution`) / Finding the area of a surface (`math.calc3.surface-area-double`)
+### math.calc3 / physics.mechanics (2)
+- Finding the cross product (`math.calc3.cross-product`) / Using the cross product in physics (`physics.mechanics.cross-product-in-physics`)
+- Finding moments of inertia (`math.calc3.moments-of-inertia`) / Calculating moment of inertia of point masses (`physics.mechanics.inertia-of-point-masses`)
+### engr.vibrations / physics.classical (2)
+- Finding response to periodic forcing with Fourier series (`engr.vibrations.periodic-forcing`) / Driving oscillators with periodic forces by Fourier series (`physics.classical.fourier-series-driving`)
+- Writing equations of motion for two degrees of freedom (`engr.vibrations.two-dof-equations`) / Writing coupled oscillators in matrix form (`physics.classical.coupled-oscillator-matrices`)
+### physics.classical / physics.quantum (2)
+- Finding hard-sphere cross sections (`physics.classical.hard-sphere-scattering`) / Relating scattering amplitude to cross section (`physics.quantum.scattering-amplitude`)
+- Defining differential cross sections (`physics.classical.scattering-cross-sections`) / Relating scattering amplitude to cross section (`physics.quantum.scattering-amplitude`)
+### chem.gen1 / chem.hs1 (2)
+- Explaining trends in electron affinity (`chem.gen1.electron-affinity-trend`) / Explaining trends in electronegativity (`chem.hs1.electronegativity-trend`)
+- Explaining trends in electron affinity (`chem.gen1.electron-affinity-trend`) / Explaining trends in metallic character (`chem.hs1.metallic-character-trend`)
+### engr.circuits / engr.electronics (2)
+- Analyzing cascaded op-amp circuits (`engr.circuits.cascaded-op-amps`) / Analyzing common-source and common-emitter amplifiers (`engr.electronics.common-source-and-emitter`)
+- Analyzing cascaded op-amp circuits (`engr.circuits.cascaded-op-amps`) / Analyzing cascaded amplifier stages (`engr.electronics.multistage-amplifiers`)
+### math.g1 / math.g3 (1)
+- Using fact families (`math.g1.fact-families`) / Using multiplication and division fact families (`math.g3.times-divide-fact-families`)
+### math.g1 / math.g2 (1)
+- Adding two-digit numbers without a new ten (`math.g1.add-two-digit-without-new-ten`) / Adding three-digit numbers without a new ten (`math.g2.add-three-digit-without-new-ten`)
+### math.g3 / math.g4 (1)
+- Estimating sums and differences (`math.g3.estimate-sums-differences`) / Estimating products (`math.g4.estimate-products`)
+### math.g4 / math.g7 (1)
+- Estimating large sums and differences (`math.g4.estimate-large-sums`) / Estimating rational calculations (`math.g7.estimate-rational-calculations`)
+### math.g4 / math.g6 (1)
+- Comparing mixed numbers (`math.g4.compare-mixed-numbers`) / Converting improper fractions and mixed numbers fluently (`math.g6.improper-mixed-fluency`)
+### math.alg1 / math.alg2 (1)
+- Combining functions in context (`math.alg1.function-operations-context`) / Using composition in context (`math.alg2.composition-in-context`)
+### math.alg2 / math.discrete (1)
+- Using log product and quotient rules (`math.alg2.log-product-quotient`) / Using sum and product rules (`math.discrete.sum-product-rules`)
+### math.alg2 / physics.hs1 (1)
+- Finding arc length with radians (`math.alg2.arc-length-radians`) / Measuring rotation in radians (`physics.hs1.angles-in-radians-physics`)
+### math.alg2 / math.calc2 (1)
+- Using factorials (`math.alg2.factorial-notation`) / Comparing powers and factorials in sequences (`math.calc2.sequences-powers-factorials`)
+### math.precalc / physics.hs1 (1)
+- Solving quadratic trig equations (`math.precalc.quadratic-trig-equations`) / Solving for time with the quadratic formula (`physics.hs1.time-from-a-quadratic`)
+### math.calc3 / math.linalg (1)
+- Using the dot product in space (`math.calc3.dot-product-space`) / Using the inner product in n-space (`math.linalg.inner-product-rn`)
+### math.linalg / math.proofs (1)
+- Treating a matrix as a transformation (`math.linalg.matrix-as-transformation`) / Treating functions as relations (`math.proofs.functions-as-relations`)
+### math.discrete / math.linalg (1)
+- Using Fermat's little theorem (`math.discrete.fermat-little`) / Using the Cayley-Hamilton theorem (`math.linalg.cayley-hamilton`)
+### math.analysis / math.linalg (1)
+- Using the triangle inequality (`math.analysis.triangle-inequality`) / Using the Cauchy-Schwarz and triangle inequalities (`math.linalg.cauchy-schwarz-triangle`)
+### math.diffeq / math.pde (1)
+- Finding fundamental solution sets (`math.diffeq.fundamental-solution-sets`) / Using d'Alembert's solution (`math.pde.dalembert`)
+### math.diffeq / math.discrete (1)
+- Solving with repeated roots (`math.diffeq.constant-coefficients-repeated`) / Solving recurrences with repeated roots (`math.discrete.recurrence-repeated-roots`)
+### math.complex / math.diffeq (1)
+- Using complex sequences and series (`math.complex.complex-sequences-series`) / Solving with complex eigenvalues (`math.diffeq.eigen-solutions-complex`)
+### math.discrete / math.probstat (1)
+- Finding discrete probabilities by counting (`math.discrete.discrete-probability-counting`) / Finding probabilities by counting (`math.probstat.equally-likely-counting`)
+### engr.programming / math.probstat (1)
+- Estimating quantities by random sampling (`engr.programming.monte-carlo-estimates`) / Simulating random variables (`math.probstat.simulation-random-variables`)
+### math.analysis / math.proofs (1)
+- Proving recursive sequences converge (`math.analysis.recursive-sequence-proofs`) / Proving recursive facts by induction (`math.proofs.induction-recursive`)
+### math.abstract / math.analysis (1)
+- Using Cauchy's theorem (`math.abstract.cauchy-theorem-groups`) / Using the Heine-Borel theorem (`math.analysis.heine-borel`)
+### math.analysis / math.complex (1)
+- Proving monotonicity from the derivative (`math.analysis.monotone-from-derivative`) / Proving conditions that force an analytic function to be constant (`math.complex.constant-analytic`)
+### math.complex / physics.classical (1)
+- Using Liouville's theorem (`math.complex.liouville`) / Using phase space and Liouville's theorem (`physics.classical.phase-space-and-liouville`)
+### engr.fluids / math.complex (1)
+- Superposing elementary potential flows (`engr.fluids.potential-flow`) / Applying conformal maps to flows (`math.complex.conformal-flows`)
+### chem.hs2 / physics.hs2 (1)
+- Calculating products of electrolysis (`chem.hs2.electrolysis-calculations`) / Calculating current from charge flow (`physics.hs2.current-as-charge-flow`)
+### chem.hs1 / physics.modern (1)
+- Using quantum numbers to label electrons (`chem.hs1.quantum-numbers`) / Describing hydrogen solutions and quantum numbers (`physics.modern.hydrogen-schrodinger-overview`)
+### engr.fluids / physics.em-theory (1)
+- Deriving the differential continuity equation (`engr.fluids.continuity-equation`) / Deriving charge conservation in differential form (`physics.em-theory.continuity-equation-charge`)
+### engr.mass-energy-balances / engr.mass-transfer (1)
+- Solving transient material balances (`engr.mass-energy-balances.transient-material-balances`) / Analyzing transient diffusion (`engr.mass-transfer.transient-diffusion`)
+### chem.inorganic / chem.pchem2 (1)
+- Finding term symbols of d-electron ions (`chem.inorganic.d-electron-term-symbols`) / Assigning atomic term symbols (`chem.pchem2.atomic-term-symbols`)
+### chem.pchem1 / engr.materials (1)
+- Reading solid-liquid phase diagrams with eutectics (`chem.pchem1.solid-liquid-diagrams`) / Reading eutectic phase diagrams (`engr.materials.eutectic-diagrams`)
+### bio.hs2 / bio.ms (1)
+- Describing digestion and absorption (`bio.hs2.digestive-system`) / Describing how digestion breaks down food (`bio.ms.digestion-intro`)
+### bio.evolution / bio.ms (1)
+- Dating fossils and reading the fossil record (`bio.evolution.fossil-dating`) / Reading patterns in the fossil record (`bio.ms.fossil-record`)
+### bio.anat-phys1 / bio.intro2 (1)
+- Describing skeletal muscle structure (`bio.anat-phys1.skeletal-muscle-structure`) / Explaining muscle contraction with sliding filaments (`bio.intro2.sliding-filament-model`)
+### engr.fluids / engr.mass-energy-balances (1)
+- Measuring pressure with manometers (`engr.fluids.manometers`) / Converting process units including gauge and absolute pressure (`engr.mass-energy-balances.process-units-and-conversions`)
+### engr.environmental / engr.mass-energy-balances (1)
+- Finding gas solubility with Henry's law (`engr.environmental.gas-transfer-and-henry`) / Solving absorption balances with Henry's law (`engr.mass-energy-balances.gas-liquid-solubility-balances`)

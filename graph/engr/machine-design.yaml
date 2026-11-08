@@ -13,13 +13,16 @@ topics:
       - topic: math.probstat.normal-distribution-pdf
         encompassing: 0.45
         confidence: high
+      - topic: engr.materials.property-variability
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose design factors
         key_prerequisites: [engr.mech-materials.allowable-stress-design]
       - id: kp2
         can_do: Find reliability from normal distributions
-        key_prerequisites: [math.probstat.normal-distribution-pdf]
+        key_prerequisites: [math.probstat.normal-distribution-pdf, engr.materials.property-variability]
       - id: kp3
         can_do: Find interference of stress and strength
         key_prerequisites: [engr.mech-materials.allowable-stress-design, math.probstat.normal-distribution-pdf]
@@ -36,10 +39,13 @@ topics:
       - topic: engr.mech-materials.failure-theories-intro
         encompassing: 0.7
         confidence: high
+      - topic: engr.mech-materials.three-d-mohrs-circle
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Apply maximum shear stress theory
-        key_prerequisites: [engr.mech-materials.failure-theories-intro]
+        key_prerequisites: [engr.mech-materials.failure-theories-intro, engr.mech-materials.three-d-mohrs-circle]
       - id: kp2
         can_do: Apply distortion energy theory
         key_prerequisites: [engr.mech-materials.failure-theories-intro]
@@ -1003,6 +1009,10 @@ topics:
       - topic: engr.dynamics.linkage-acceleration-analysis
         encompassing: 0.65
         confidence: high
+      - topic: engr.dynamics.connected-rigid-bodies
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: engr.dynamics.general-plane-motion-kinetics
         encompassing: 0.4
         confidence: high
@@ -1012,7 +1022,7 @@ topics:
         key_prerequisites: [engr.dynamics.linkage-acceleration-analysis, engr.dynamics.general-plane-motion-kinetics]
       - id: kp2
         can_do: Find joint forces in moving linkages
-        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics]
+        key_prerequisites: [engr.dynamics.general-plane-motion-kinetics, engr.dynamics.connected-rigid-bodies]
       - id: kp3
         can_do: Find input torque of mechanisms
         key_prerequisites: [engr.dynamics.linkage-acceleration-analysis, engr.dynamics.general-plane-motion-kinetics]

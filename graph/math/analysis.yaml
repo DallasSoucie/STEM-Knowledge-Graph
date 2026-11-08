@@ -39,13 +39,17 @@ topics:
       - topic: math.proofs.absolute-value-proofs
         encompassing: 0.45
         confidence: high
+    encompassed:
+      - topic: math.alg1.absolute-value-inequalities
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define absolute value on an ordered field
         key_prerequisites: [math.analysis.axioms-of-reals]
       - id: kp2
         can_do: Rewrite an inequality as a two-sided bound
-        key_prerequisites: [math.proofs.absolute-value-proofs]
+        key_prerequisites: [math.proofs.absolute-value-proofs, math.alg1.absolute-value-inequalities]
       - id: kp3
         can_do: Prove a product rule
         key_prerequisites: [math.proofs.absolute-value-proofs]
@@ -594,9 +598,6 @@ topics:
     level: uni-upper
     status: draft
     prerequisites:
-      - topic: math.analysis.uniqueness-of-limits
-        encompassing: 0.1
-        confidence: low
       - topic: math.analysis.bounded-convergent
         encompassing: 0.3
         confidence: high
@@ -673,13 +674,16 @@ topics:
       - topic: math.analysis.monotone-convergence
         encompassing: 0.65
         confidence: high
+      - topic: math.proofs.induction-recursive
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove bounds by induction
         key_prerequisites: [math.analysis.monotone-convergence]
       - id: kp2
         can_do: Prove monotonicity by induction
-        key_prerequisites: [math.analysis.monotone-convergence]
+        key_prerequisites: [math.analysis.monotone-convergence, math.proofs.induction-recursive]
       - id: kp3
         can_do: Find the limit from a fixed-point equation
         key_prerequisites: [math.analysis.monotone-convergence]
@@ -768,9 +772,6 @@ topics:
       - topic: math.analysis.monotone-convergence
         encompassing: 0.3
         confidence: high
-      - topic: math.analysis.divergence-to-infinity
-        encompassing: 0.1
-        confidence: low
       - topic: math.analysis.subsequential-limits
         encompassing: 0.3
         confidence: high
@@ -1039,7 +1040,7 @@ topics:
         key_prerequisites: [math.analysis.monotone-convergence]
       - id: kp4
         can_do: Prove the p-series result
-        key_prerequisites: [math.analysis.series-convergence-formal]
+        key_prerequisites: [math.analysis.series-convergence-formal, math.analysis.term-test-proof]
   - id: math.analysis.ratio-root-proofs
     name: Proving ratio and root tests
     subject: math
@@ -1883,6 +1884,9 @@ topics:
       - topic: math.analysis.continuous-image-connected
         encompassing: 0.35
         confidence: high
+      - topic: math.precalc.intermediate-value-theorem
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.analysis.continuity-definition-analysis
         encompassing: 0.15
@@ -1893,7 +1897,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: State the intermediate value theorem
-        key_prerequisites: [math.analysis.continuous-image-connected]
+        key_prerequisites: [math.analysis.continuous-image-connected, math.precalc.intermediate-value-theorem]
       - id: kp2
         can_do: Prove with the connectedness result
         key_prerequisites: [math.analysis.connected-sets]
@@ -1936,6 +1940,9 @@ topics:
       - topic: math.analysis.intermediate-value-proof
         encompassing: 0.5
         confidence: high
+      - topic: math.precalc.inverse-trig-domain
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Show continuous injections are strictly monotone
@@ -1945,7 +1952,7 @@ topics:
         key_prerequisites: [math.analysis.intermediate-value-proof]
       - id: kp3
         can_do: Find an inverse's domain
-        key_prerequisites: [math.analysis.intermediate-value-proof]
+        key_prerequisites: [math.analysis.intermediate-value-proof, math.precalc.inverse-trig-domain]
       - id: kp4
         can_do: Conclude root functions are continuous
         key_prerequisites: [math.analysis.intermediate-value-proof]
@@ -2304,6 +2311,9 @@ topics:
       - topic: math.analysis.cauchy-mvt
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.lhopital-powers
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.analysis.mvt-proof
         encompassing: 0.1
@@ -2311,7 +2321,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove the zero over zero case
-        key_prerequisites: [math.analysis.cauchy-mvt]
+        key_prerequisites: [math.analysis.cauchy-mvt, math.calc1.lhopital-powers]
       - id: kp2
         can_do: Prove a limit at infinity case
         key_prerequisites: [math.analysis.cauchy-mvt]
@@ -2479,10 +2489,13 @@ topics:
       - topic: math.analysis.riemann-integrable-definition
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.riemann-from-tables
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define Riemann sums with tags
-        key_prerequisites: [math.analysis.riemann-integrable-definition]
+        key_prerequisites: [math.analysis.riemann-integrable-definition, math.calc1.riemann-from-tables]
       - id: kp2
         can_do: Bound a Riemann sum by Darboux sums
         key_prerequisites: [math.analysis.riemann-integrable-definition]
@@ -2654,10 +2667,13 @@ topics:
       - topic: math.analysis.intermediate-value-proof
         encompassing: 0.35
         confidence: high
+      - topic: math.calc1.mvt-for-integrals
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: State the mean value theorem for integrals
-        key_prerequisites: [math.analysis.integral-properties-proofs]
+        key_prerequisites: [math.analysis.integral-properties-proofs, math.calc1.mvt-for-integrals]
       - id: kp2
         can_do: Bound by max and min
         key_prerequisites: [math.analysis.integral-properties-proofs]
@@ -2736,13 +2752,16 @@ topics:
       - topic: math.analysis.comparison-proofs
         encompassing: 0.3
         confidence: high
+      - topic: math.calc2.comparison-improper
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define convergence with limits
         key_prerequisites: [math.analysis.ftc-proofs]
       - id: kp2
         can_do: Prove comparison
-        key_prerequisites: [math.analysis.comparison-proofs]
+        key_prerequisites: [math.analysis.comparison-proofs, math.calc2.comparison-improper]
       - id: kp3
         can_do: Compare with a series
         key_prerequisites: [math.analysis.comparison-proofs]

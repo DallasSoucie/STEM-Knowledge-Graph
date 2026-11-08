@@ -318,7 +318,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a plane from a point and a normal
-        key_prerequisites: [math.calc3.dot-product-space]
+        key_prerequisites: [math.calc3.dot-product-space, math.calc3.cross-product]
       - id: kp2
         can_do: Rewrite a plane in standard form
         key_prerequisites: [math.calc3.dot-product-space]
@@ -704,9 +704,6 @@ topics:
       - topic: math.calc3.traces-of-surfaces
         encompassing: 0.4
         confidence: high
-      - topic: math.calc3.cylinders-as-surfaces
-        encompassing: 0.1
-        confidence: low
     encompassed:
       - topic: math.precalc.classify-general-conic
         encompassing: 0.15
@@ -806,9 +803,6 @@ topics:
     level: uni-lower
     status: draft
     prerequisites:
-      - topic: math.calc2.parametric-derivatives
-        encompassing: 0.1
-        confidence: low
       - topic: math.calc3.domain-of-vector-function
         encompassing: 0.4
         confidence: high
@@ -1045,10 +1039,13 @@ topics:
       - topic: math.calc3.vector-functions-space-curves
         encompassing: 0.6
         confidence: high
+      - topic: math.calc3.line-plane-intersection
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find where a curve meets a plane
-        key_prerequisites: [math.calc3.vector-functions-space-curves]
+        key_prerequisites: [math.calc3.vector-functions-space-curves, math.calc3.line-plane-intersection]
       - id: kp2
         can_do: Find where a curve meets a sphere
         key_prerequisites: [math.calc3.vector-functions-space-curves]
@@ -1619,6 +1616,9 @@ topics:
       - topic: math.calc3.limit-does-not-exist-paths
         encompassing: 0.25
         confidence: high
+      - topic: math.calc1.continuity-of-compositions
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.multivariable-limits
         encompassing: 0.15
@@ -1635,7 +1635,7 @@ topics:
         key_prerequisites: [math.calc3.multivariable-limit-polar, math.calc3.limit-does-not-exist-paths]
       - id: kp4
         can_do: Find where a composition is continuous
-        key_prerequisites: [math.calc3.multivariable-limits]
+        key_prerequisites: [math.calc3.multivariable-limits, math.calc1.continuity-of-compositions]
   - id: math.calc3.partials-from-contours
     name: Estimating partial derivatives from contours
     subject: math
@@ -1829,6 +1829,9 @@ topics:
       - topic: math.calc3.partials-three-variables
         encompassing: 0.45
         confidence: high
+      - topic: math.calc2.parametric-second-derivative
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.partial-derivatives-compute
         encompassing: 0.15
@@ -1842,7 +1845,7 @@ topics:
         key_prerequisites: [math.calc3.partials-three-variables]
       - id: kp3
         can_do: Evaluate at a point
-        key_prerequisites: [math.calc3.partials-three-variables]
+        key_prerequisites: [math.calc3.partials-three-variables, math.calc2.parametric-second-derivative]
       - id: kp4
         can_do: Find a partial in a three-variable equation
         key_prerequisites: [math.calc3.partials-three-variables, math.calc3.partial-derivatives-compute]
@@ -2380,6 +2383,9 @@ topics:
       - topic: math.calc3.double-integral-definition
         encompassing: 0.65
         confidence: high
+      - topic: math.calc1.riemann-from-tables
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Estimate with corners
@@ -2389,7 +2395,7 @@ topics:
         key_prerequisites: [math.calc3.double-integral-definition]
       - id: kp3
         can_do: Estimate from a table
-        key_prerequisites: [math.calc3.double-integral-definition]
+        key_prerequisites: [math.calc3.double-integral-definition, math.calc1.riemann-from-tables]
       - id: kp4
         can_do: Estimate from contour values
         key_prerequisites: [math.calc3.double-integral-definition]
@@ -2403,6 +2409,9 @@ topics:
       - topic: math.calc3.double-riemann-sum
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.ftc-part-2
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.calc3.double-integral-definition
         encompassing: 0.15
@@ -2416,7 +2425,7 @@ topics:
         key_prerequisites: [math.calc3.double-riemann-sum]
       - id: kp3
         can_do: Evaluate with exponentials and trig
-        key_prerequisites: [math.calc3.double-riemann-sum]
+        key_prerequisites: [math.calc3.double-riemann-sum, math.calc1.ftc-part-2]
       - id: kp4
         can_do: Find a volume over a rectangle
         key_prerequisites: [math.calc3.double-integral-definition]
@@ -2728,10 +2737,13 @@ topics:
       - topic: math.calc3.tangent-planes
         encompassing: 0.3
         confidence: high
+      - topic: math.calc2.surface-of-revolution
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Derive the area element
-        key_prerequisites: [math.calc3.tangent-planes]
+        key_prerequisites: [math.calc3.tangent-planes, math.calc2.surface-of-revolution]
       - id: kp2
         can_do: Find the area of a plane piece
         key_prerequisites: [math.calc3.tangent-planes]
@@ -3854,7 +3866,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: State the divergence theorem
-        key_prerequisites: [math.calc3.flux-integrals, math.calc3.divergence]
+        key_prerequisites: [math.calc3.flux-integrals, math.calc3.divergence, math.calc3.divergence-as-expansion]
       - id: kp2
         can_do: Find a flux over a cube
         key_prerequisites: [math.calc3.triple-spherical]

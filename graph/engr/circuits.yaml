@@ -748,10 +748,13 @@ topics:
       - topic: engr.circuits.second-order-natural-response
         encompassing: 0.7
         confidence: high
+      - topic: math.diffeq.rlc-forced
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find step response of series RLC
-        key_prerequisites: [engr.circuits.second-order-natural-response]
+        key_prerequisites: [engr.circuits.second-order-natural-response, math.diffeq.rlc-forced]
       - id: kp2
         can_do: Find step response of parallel RLC
         key_prerequisites: [engr.circuits.second-order-natural-response]
@@ -1000,10 +1003,13 @@ topics:
       - topic: engr.circuits.ac-thevenin
         encompassing: 0.45
         confidence: high
+      - topic: engr.circuits.maximum-power-transfer-circuits
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find the load for maximum average power
-        key_prerequisites: [engr.circuits.complex-power, engr.circuits.ac-thevenin]
+        key_prerequisites: [engr.circuits.complex-power, engr.circuits.ac-thevenin, engr.circuits.maximum-power-transfer-circuits]
       - id: kp2
         can_do: Find maximum average power
         key_prerequisites: [engr.circuits.complex-power, engr.circuits.ac-thevenin]
@@ -1046,13 +1052,16 @@ topics:
       - topic: engr.circuits.three-phase-sources
         encompassing: 0.7
         confidence: high
+      - topic: engr.circuits.wye-delta-transformation
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Analyze balanced wye-wye systems
         key_prerequisites: [engr.circuits.three-phase-sources]
       - id: kp2
         can_do: Analyze wye-delta and delta-delta systems
-        key_prerequisites: [engr.circuits.three-phase-sources]
+        key_prerequisites: [engr.circuits.three-phase-sources, engr.circuits.wye-delta-transformation]
       - id: kp3
         can_do: Convert delta loads to wye
         key_prerequisites: [engr.circuits.three-phase-sources]

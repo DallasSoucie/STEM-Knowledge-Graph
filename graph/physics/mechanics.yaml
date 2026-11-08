@@ -245,6 +245,9 @@ topics:
       - topic: physics.hs1.translating-motion-graphs
         encompassing: 0.25
         confidence: high
+      - topic: math.calc1.graphs-of-f-fprime-fdoubleprime
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: physics.mechanics.acceleration-as-derivative
         encompassing: 0.15
@@ -258,7 +261,7 @@ topics:
         key_prerequisites: [physics.mechanics.position-from-velocity-integral]
       - id: kp3
         can_do: Sketch all graphs for a given function
-        key_prerequisites: [physics.mechanics.position-from-velocity-integral, physics.mechanics.acceleration-as-derivative]
+        key_prerequisites: [physics.mechanics.position-from-velocity-integral, physics.mechanics.acceleration-as-derivative, math.calc1.graphs-of-f-fprime-fdoubleprime]
       - id: kp4
         can_do: Find when an object speeds up
         key_prerequisites: [physics.hs1.translating-motion-graphs]
@@ -272,6 +275,13 @@ topics:
       - topic: physics.mechanics.velocity-as-derivative
         encompassing: 0.25
         confidence: high
+      - topic: math.calc1.related-rates-pythagorean
+        encompassing: 0.2
+        confidence: medium
+      - topic: math.calc1.related-rates-trig
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.calc1.related-rates-setup
         encompassing: 0.4
         confidence: medium
@@ -281,13 +291,13 @@ topics:
         key_prerequisites: [math.calc1.related-rates-setup]
       - id: kp2
         can_do: Find a rate of changing distance between objects
-        key_prerequisites: [physics.mechanics.velocity-as-derivative]
+        key_prerequisites: [physics.mechanics.velocity-as-derivative, math.calc1.related-rates-pythagorean]
       - id: kp3
         can_do: Find a shadow's speed
         key_prerequisites: [math.calc1.related-rates-setup]
       - id: kp4
         can_do: Find a rate of a changing angle
-        key_prerequisites: [math.calc1.related-rates-setup]
+        key_prerequisites: [math.calc1.related-rates-setup, math.calc1.related-rates-trig]
   - id: physics.mechanics.dimensional-analysis
     name: Predicting formulas with dimensional analysis
     subject: physics
@@ -555,13 +565,17 @@ topics:
       - topic: physics.mechanics.integrating-vector-motion
         encompassing: 0.35
         confidence: high
+      - topic: physics.hs1.projectile-graphs
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: physics.hs1.range-and-peak
         encompassing: 0.3
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Derive velocity components
-        key_prerequisites: [physics.mechanics.integrating-vector-motion]
+        key_prerequisites: [physics.mechanics.integrating-vector-motion, physics.hs1.projectile-graphs]
       - id: kp2
         can_do: Derive a trajectory equation
         key_prerequisites: [physics.mechanics.integrating-vector-motion]
@@ -610,6 +624,9 @@ topics:
       - topic: physics.hs1.relative-velocity-plane
         encompassing: 0.3
         confidence: high
+      - topic: math.precalc.vector-applications
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write a relative position vector
@@ -622,7 +639,7 @@ topics:
         key_prerequisites: [physics.hs1.relative-velocity-plane]
       - id: kp4
         can_do: Find an interception course
-        key_prerequisites: [physics.hs1.relative-velocity-plane]
+        key_prerequisites: [physics.hs1.relative-velocity-plane, math.precalc.vector-applications]
   - id: physics.mechanics.galilean-transformations
     name: Using Galilean transformations
     subject: physics
@@ -688,10 +705,13 @@ topics:
       - topic: physics.mechanics.tangential-and-normal-parts
         encompassing: 0.4
         confidence: high
+      - topic: physics.hs1.circular-motion-in-angular-form
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find tangential acceleration from speed change
-        key_prerequisites: [physics.mechanics.tangential-and-normal-parts]
+        key_prerequisites: [physics.mechanics.tangential-and-normal-parts, physics.hs1.circular-motion-in-angular-form]
       - id: kp2
         can_do: Find total acceleration
         key_prerequisites: [physics.mechanics.circular-motion-derivation, physics.mechanics.tangential-and-normal-parts]
@@ -854,7 +874,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write the motion equation with linear drag
-        key_prerequisites: [physics.mechanics.newtons-laws-in-vector-form]
+        key_prerequisites: [physics.mechanics.newtons-laws-in-vector-form, physics.hs1.drag-and-terminal-velocity]
       - id: kp2
         can_do: Solve for velocity against time
         key_prerequisites: [physics.mechanics.velocity-dependent-acceleration]
@@ -2228,6 +2248,9 @@ topics:
       - topic: physics.mechanics.parallel-axis-theorem
         encompassing: 0.6
         confidence: high
+      - topic: physics.mechanics.inertia-of-spheres
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Add parts about the same axis
@@ -2237,7 +2260,7 @@ topics:
         key_prerequisites: [physics.mechanics.parallel-axis-theorem]
       - id: kp3
         can_do: Find inertia of a rod and sphere
-        key_prerequisites: [physics.mechanics.parallel-axis-theorem]
+        key_prerequisites: [physics.mechanics.parallel-axis-theorem, physics.mechanics.inertia-of-spheres]
       - id: kp4
         can_do: Find inertia of a wheel with spokes
         key_prerequisites: [physics.mechanics.parallel-axis-theorem]
@@ -3297,13 +3320,16 @@ topics:
       - topic: physics.mechanics.circular-motion-derivation
         encompassing: 0.25
         confidence: medium
+      - topic: physics.hs1.circular-motion-in-angular-form
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Show a projection of circular motion
         key_prerequisites: [physics.mechanics.sinusoidal-solutions, physics.mechanics.circular-motion-derivation]
       - id: kp2
         can_do: Link angular frequency with rotation rate
-        key_prerequisites: [physics.mechanics.sinusoidal-solutions]
+        key_prerequisites: [physics.mechanics.sinusoidal-solutions, physics.hs1.circular-motion-in-angular-form]
       - id: kp3
         can_do: Sketch a reference circle
         key_prerequisites: [physics.mechanics.circular-motion-derivation]

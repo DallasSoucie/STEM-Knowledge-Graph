@@ -57,6 +57,18 @@ def congested_topic(kg: KnowledgeGraph, index: GraphIndex):
             yield issue("congested-topic", "every knowledge point has 3+ key prerequisites", tid)
 
 
+@rule("uncited-prerequisite", "warning")
+def uncited_prerequisite(kg: KnowledgeGraph, index: GraphIndex):
+    """A direct prerequisite that no knowledge point leans on is either a wrong edge or a missing citation."""
+    for tid, t in kg.topics.items():
+        if t.is_stub or not t.knowledge_points:
+            continue
+        cited = {k for kp in t.knowledge_points for k in kp.key_prerequisites}
+        for e in t.prerequisites:
+            if e.topic not in cited:
+                yield issue("uncited-prerequisite", f"no knowledge point cites prerequisite {e.topic}", tid)
+
+
 @rule("no-prereq-above-gk", "warning")
 def no_prereq_above_gk(kg: KnowledgeGraph, index: GraphIndex):
     for tid, t in kg.topics.items():

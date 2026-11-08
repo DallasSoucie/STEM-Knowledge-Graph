@@ -517,7 +517,7 @@ topics:
         key_prerequisites: [math.numerical.secant-method]
       - id: kp2
         can_do: Fall back on bisection
-        key_prerequisites: [math.numerical.bisection]
+        key_prerequisites: [math.numerical.bisection, math.numerical.bisection-error-bound]
       - id: kp3
         can_do: Trace Brent-style logic
         key_prerequisites: [math.numerical.secant-method]
@@ -1351,10 +1351,13 @@ topics:
       - topic: math.numerical.condition-number
         encompassing: 0.3
         confidence: high
+      - topic: math.linalg.least-squares-line-fit
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Set up a tall system
-        key_prerequisites: [math.linalg.least-squares-qr]
+        key_prerequisites: [math.linalg.least-squares-qr, math.linalg.least-squares-line-fit]
       - id: kp2
         can_do: Solve through QR
         key_prerequisites: [math.linalg.least-squares-qr]

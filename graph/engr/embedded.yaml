@@ -112,10 +112,13 @@ topics:
       - topic: engr.embedded.gpio
         encompassing: 0.5
         confidence: high
+      - topic: engr.digital-logic.asynchronous-inputs
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Explain switch bounce
-        key_prerequisites: [engr.embedded.gpio]
+        key_prerequisites: [engr.embedded.gpio, engr.digital-logic.asynchronous-inputs]
       - id: kp2
         can_do: Debounce in software
         key_prerequisites: [engr.embedded.gpio]
@@ -211,10 +214,13 @@ topics:
       - topic: engr.embedded.interrupt-service-routines
         encompassing: 0.85
         confidence: high
+      - topic: engr.digital-logic.counters
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Configure timer prescalers
-        key_prerequisites: [engr.embedded.interrupt-service-routines]
+        key_prerequisites: [engr.embedded.interrupt-service-routines, engr.digital-logic.counters]
       - id: kp2
         can_do: Generate periodic interrupts
         key_prerequisites: [engr.embedded.interrupt-service-routines]
@@ -359,6 +365,9 @@ topics:
       - topic: engr.embedded.interrupt-service-routines
         encompassing: 0.45
         confidence: high
+      - topic: engr.data-structures.circular-buffers
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Configure UART baud rate
@@ -368,7 +377,7 @@ topics:
         key_prerequisites: [engr.embedded.interrupt-service-routines]
       - id: kp3
         can_do: Use UART interrupts and buffers
-        key_prerequisites: [engr.embedded.interrupt-service-routines]
+        key_prerequisites: [engr.embedded.interrupt-service-routines, engr.data-structures.circular-buffers]
       - id: kp4
         can_do: Describe UART framing
         key_prerequisites: [engr.embedded.interrupt-service-routines]

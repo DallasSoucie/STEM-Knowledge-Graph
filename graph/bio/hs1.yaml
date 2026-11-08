@@ -1526,11 +1526,15 @@ topics:
     level: g10
     status: draft
     prerequisites:
-      - topic: bio.ms.natural-selection-intro
-        encompassing: 0.4
-        confidence: high
       - topic: bio.hs1.mutation-types
         encompassing: 0.25
+        confidence: high
+      - topic: bio.ms.artificial-selection
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: bio.ms.natural-selection-intro
+        encompassing: 0.4
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1538,7 +1542,7 @@ topics:
         key_prerequisites: [bio.ms.natural-selection-intro]
       - id: kp2
         can_do: Explain adaptation
-        key_prerequisites: [bio.ms.natural-selection-intro]
+        key_prerequisites: [bio.ms.natural-selection-intro, bio.ms.artificial-selection]
       - id: kp3
         can_do: Link mutations to new variation
         key_prerequisites: [bio.hs1.mutation-types]

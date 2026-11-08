@@ -58,7 +58,7 @@ topics:
         key_prerequisites: [math.geom.undefined-terms]
       - id: kp2
         can_do: Tell a segment, a ray and a line apart
-        key_prerequisites: [math.geom.undefined-terms]
+        key_prerequisites: [math.geom.undefined-terms, math.geom.collinear-coplanar]
       - id: kp3
         can_do: Say which rays are opposite
         key_prerequisites: [math.geom.undefined-terms]
@@ -360,7 +360,7 @@ topics:
         key_prerequisites: [math.geom.conditional-statements]
       - id: kp4
         can_do: Say which forms are logically the same
-        key_prerequisites: [math.geom.conditional-statements]
+        key_prerequisites: [math.geom.conditional-statements, math.geom.truth-values]
   - id: math.geom.biconditionals
     name: Using biconditional statements
     subject: math
@@ -447,7 +447,7 @@ topics:
         key_prerequisites: [math.geom.conditional-statements]
       - id: kp4
         can_do: Find an invalid argument
-        key_prerequisites: [math.geom.conditional-statements]
+        key_prerequisites: [math.geom.conditional-statements, math.geom.counterexamples]
       - id: kp5
         can_do: Tell deductive from inductive reasoning
         key_prerequisites: [math.geom.conditional-statements]
@@ -514,7 +514,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Fill in missing reasons in a proof
-        key_prerequisites: [math.geom.deductive-reasoning, math.alg1.explain-solution-steps]
+        key_prerequisites: [math.geom.deductive-reasoning, math.alg1.explain-solution-steps, math.geom.algebraic-proofs]
       - id: kp2
         can_do: Write a short two-column proof
         key_prerequisites: [math.geom.deductive-reasoning]
@@ -577,9 +577,6 @@ topics:
       - topic: math.geom.two-column-proofs
         encompassing: 0.5
         confidence: medium
-      - topic: math.geom.biconditionals
-        encompassing: 0.15
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Assume the opposite of a conclusion
@@ -672,7 +669,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write an equation with corresponding angles
-        key_prerequisites: [math.geom.transversal-relationships]
+        key_prerequisites: [math.geom.transversal-relationships, math.g8.angles-find-with-equations]
       - id: kp2
         can_do: Find angles with two transversals
         key_prerequisites: [math.geom.transversal-relationships]
@@ -719,7 +716,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove corresponding angles congruent from a postulate
-        key_prerequisites: [math.geom.transversal-relationships, math.geom.two-column-proofs]
+        key_prerequisites: [math.geom.transversal-relationships, math.geom.two-column-proofs, math.geom.linear-pair-postulates]
       - id: kp2
         can_do: Prove co-interior angles supplementary
         key_prerequisites: [math.geom.transversal-relationships, math.geom.two-column-proofs]
@@ -771,7 +768,7 @@ topics:
         key_prerequisites: [math.geom.parallel-line-angle-proofs]
       - id: kp4
         can_do: Prove lines parallel with a transversal and an equation
-        key_prerequisites: [math.geom.parallel-line-angle-proofs]
+        key_prerequisites: [math.geom.parallel-line-angle-proofs, math.geom.lines-with-equations-angle]
   - id: math.geom.perpendicular-transversal
     name: Using perpendicular transversals
     subject: math
@@ -857,7 +854,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove lines parallel using slope
-        key_prerequisites: [math.alg1.perpendicular-lines]
+        key_prerequisites: [math.alg1.perpendicular-lines, math.alg1.parallel-perpendicular-identify]
       - id: kp2
         can_do: Prove lines perpendicular using slope
         key_prerequisites: [math.alg1.perpendicular-lines]
@@ -946,7 +943,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Reflect across y = x and y = -x
-        key_prerequisites: [math.geom.reflection-definition]
+        key_prerequisites: [math.geom.reflection-definition, math.g8.reflection-other-lines]
       - id: kp2
         can_do: Reflect across x = a and y = b
         key_prerequisites: [math.geom.reflection-definition]
@@ -995,7 +992,7 @@ topics:
         key_prerequisites: [math.geom.rotation-definition]
       - id: kp2
         can_do: Rotate 90 degrees with coordinates
-        key_prerequisites: [math.geom.rotation-definition]
+        key_prerequisites: [math.geom.rotation-definition, math.g8.rotation-direction-angles]
       - id: kp3
         can_do: Rotate by 60 degrees with construction tools
         key_prerequisites: [math.geom.rotation-definition]
@@ -1031,10 +1028,10 @@ topics:
         key_prerequisites: [math.alg1.function-notation]
       - id: kp2
         can_do: Tell a rigid function from a stretch
-        key_prerequisites: [math.geom.translation-definition, math.geom.reflection-definition, math.geom.rotation-definition]
+        key_prerequisites: [math.geom.translation-definition, math.geom.reflect-across-any-line, math.geom.rotate-about-any-point]
       - id: kp3
         can_do: Write a rule for a composite move
-        key_prerequisites: [math.geom.translation-definition, math.geom.reflection-definition, math.geom.rotation-definition]
+        key_prerequisites: [math.geom.translation-definition, math.geom.reflect-across-any-line, math.geom.rotate-about-any-point]
   - id: math.geom.map-points-under-transformation
     name: Finding images of points under a rule
     subject: math
@@ -1160,7 +1157,7 @@ topics:
         key_prerequisites: [math.geom.transformation-functions]
       - id: kp3
         can_do: Tell when order matters
-        key_prerequisites: [math.geom.transformation-functions]
+        key_prerequisites: [math.geom.transformation-functions, math.g8.order-of-transformations]
       - id: kp4
         can_do: Describe a glide reflection
         key_prerequisites: [math.geom.transformation-functions]
@@ -1207,10 +1204,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Define congruence by rigid motions
-        key_prerequisites: [math.geom.compose-transformations]
+        key_prerequisites: [math.geom.compose-transformations, math.geom.rigid-preserves-distance]
       - id: kp2
         can_do: Find rigid motions between congruent figures
-        key_prerequisites: [math.geom.compose-transformations]
+        key_prerequisites: [math.geom.compose-transformations, math.geom.describe-glide-reflections]
       - id: kp3
         can_do: Say why matching corresponding parts follows
         key_prerequisites: [math.geom.compose-transformations]
@@ -1224,13 +1221,16 @@ topics:
       - topic: math.g8.coordinate-dilations
         encompassing: 0.5
         confidence: high
+      - topic: math.g8.dilation-scale-below-one
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Dilate from a center that is not the origin
         key_prerequisites: [math.g8.coordinate-dilations]
       - id: kp2
         can_do: Dilate with a scale below 1
-        key_prerequisites: [math.g8.coordinate-dilations]
+        key_prerequisites: [math.g8.coordinate-dilations, math.g8.dilation-scale-below-one]
       - id: kp3
         can_do: Find a dilation's center
         key_prerequisites: [math.g8.coordinate-dilations]
@@ -1362,7 +1362,7 @@ topics:
         key_prerequisites: [math.geom.transversal-relationships]
       - id: kp2
         can_do: Construct a parallel using perpendiculars
-        key_prerequisites: [math.geom.construct-perpendiculars]
+        key_prerequisites: [math.geom.construct-perpendiculars, math.geom.perpendicular-transversal]
       - id: kp3
         can_do: Say why the lines are parallel
         key_prerequisites: [math.geom.transversal-relationships]
@@ -1426,7 +1426,7 @@ topics:
         key_prerequisites: [math.geom.parallel-line-angle-proofs]
       - id: kp2
         can_do: Find angles with an equation
-        key_prerequisites: [math.geom.parallel-line-angle-proofs]
+        key_prerequisites: [math.geom.parallel-line-angle-proofs, math.geom.alternate-interior-proofs]
       - id: kp3
         can_do: Say why a triangle has at most one obtuse angle
         key_prerequisites: [math.geom.parallel-line-angle-proofs]
@@ -1460,13 +1460,16 @@ topics:
       - topic: math.geom.triangle-angle-sum-proof
         encompassing: 0.6
         confidence: high
+      - topic: math.g8.angle-sum-exterior
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove the exterior angle theorem
         key_prerequisites: [math.geom.triangle-angle-sum-proof]
       - id: kp2
         can_do: Find an exterior angle
-        key_prerequisites: [math.geom.triangle-angle-sum-proof]
+        key_prerequisites: [math.geom.triangle-angle-sum-proof, math.g8.angle-sum-exterior]
       - id: kp3
         can_do: Write an equation with exterior angles
         key_prerequisites: [math.geom.triangle-angle-sum-proof]
@@ -1489,10 +1492,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Name corresponding parts
-        key_prerequisites: [math.geom.congruence-as-rigid-motion]
+        key_prerequisites: [math.geom.congruence-as-rigid-motion, math.geom.triangle-vocabulary]
       - id: kp2
         can_do: Find a missing part from a congruence
-        key_prerequisites: [math.geom.congruence-as-rigid-motion]
+        key_prerequisites: [math.geom.congruence-as-rigid-motion, math.geom.congruent-segments-angles]
       - id: kp3
         can_do: Tell which rigid motion matches two triangles
         key_prerequisites: [math.geom.congruence-as-rigid-motion]
@@ -1542,16 +1545,16 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove triangles congruent with SSS
-        key_prerequisites: [math.geom.congruent-triangles-definition, math.geom.two-column-proofs]
+        key_prerequisites: [math.geom.congruent-triangles-definition, math.geom.two-column-proofs, math.geom.geometric-proof-setup]
       - id: kp2
         can_do: Prove triangles congruent with SAS
-        key_prerequisites: [math.geom.congruent-triangles-definition, math.geom.two-column-proofs]
+        key_prerequisites: [math.geom.congruent-triangles-definition, math.geom.two-column-proofs, math.geom.congruence-statement-correspondence]
       - id: kp3
         can_do: Find what extra information is needed
         key_prerequisites: [math.geom.congruent-triangles-definition]
       - id: kp4
         can_do: Say why SSA does not work
-        key_prerequisites: [math.geom.congruent-triangles-definition]
+        key_prerequisites: [math.geom.congruent-triangles-definition, math.g7.unique-triangles]
       - id: kp5
         can_do: Decide which criterion applies with a shared side
         key_prerequisites: [math.geom.congruent-triangles-definition, math.geom.two-column-proofs]
@@ -1592,7 +1595,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove triangles congruent with ASA
-        key_prerequisites: [math.geom.sss-and-sas]
+        key_prerequisites: [math.geom.sss-and-sas, math.geom.congruence-from-transformations]
       - id: kp2
         can_do: Prove triangles congruent with AAS
         key_prerequisites: [math.geom.sss-and-sas]
@@ -1668,10 +1671,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove parts congruent after proving triangles congruent
-        key_prerequisites: [math.geom.asa-and-aas]
+        key_prerequisites: [math.geom.asa-and-aas, math.geom.choose-congruence-criterion]
       - id: kp2
         can_do: Use this for a longer proof
-        key_prerequisites: [math.geom.asa-and-aas]
+        key_prerequisites: [math.geom.asa-and-aas, math.geom.paragraph-flow-proofs]
       - id: kp3
         can_do: Use this to find a missing length
         key_prerequisites: [math.geom.asa-and-aas]
@@ -1763,7 +1766,7 @@ topics:
         key_prerequisites: [math.geom.isosceles-triangle-theorem]
       - id: kp3
         can_do: Find a length with an equation
-        key_prerequisites: [math.geom.isosceles-triangle-theorem]
+        key_prerequisites: [math.geom.isosceles-triangle-theorem, math.geom.find-lengths-with-congruence]
   - id: math.geom.midsegment-theorem
     name: Using the midsegment theorem
     subject: math
@@ -1790,7 +1793,7 @@ topics:
         key_prerequisites: [math.geom.cpctc-proofs]
       - id: kp3
         can_do: Prove the theorem with coordinates
-        key_prerequisites: [math.geom.midpoint-formula]
+        key_prerequisites: [math.geom.midpoint-formula, math.geom.midpoint-reverse]
   - id: math.geom.midsegment-coordinate
     name: Using midsegments with coordinates
     subject: math
@@ -1856,10 +1859,10 @@ topics:
         key_prerequisites: [math.geom.triangle-centers]
       - id: kp2
         can_do: Use the incenter to find a distance
-        key_prerequisites: [math.geom.triangle-centers]
+        key_prerequisites: [math.geom.triangle-centers, math.geom.angle-bisector-theorem]
       - id: kp3
         can_do: Solve a real location problem
-        key_prerequisites: [math.geom.triangle-centers]
+        key_prerequisites: [math.geom.triangle-centers, math.geom.construct-circumcenter-incenter]
   - id: math.geom.orthocenter-altitudes
     name: Using altitudes and the orthocenter
     subject: math
@@ -1969,10 +1972,10 @@ topics:
         key_prerequisites: [math.geom.triangle-inequalities]
       - id: kp2
         can_do: Use its converse
-        key_prerequisites: [math.geom.triangle-inequalities]
+        key_prerequisites: [math.geom.triangle-inequalities, math.geom.indirect-proof]
       - id: kp3
         can_do: Solve for a range with algebra
-        key_prerequisites: [math.geom.triangle-inequalities]
+        key_prerequisites: [math.geom.triangle-inequalities, math.geom.third-side-range]
   - id: math.geom.polygon-angle-sums
     name: Finding polygon angle sums
     subject: math
@@ -2012,7 +2015,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Say that exterior angles sum to 360
-        key_prerequisites: [math.geom.polygon-angle-sums]
+        key_prerequisites: [math.geom.polygon-angle-sums, math.g8.polygon-exterior-angles-intro]
       - id: kp2
         can_do: Find a missing exterior angle
         key_prerequisites: [math.geom.polygon-angle-sums]
@@ -2039,7 +2042,7 @@ topics:
         key_prerequisites: [math.geom.polygon-angle-sums]
       - id: kp2
         can_do: Find an exterior angle of a regular polygon
-        key_prerequisites: [math.geom.polygon-angle-sums]
+        key_prerequisites: [math.geom.polygon-angle-sums, math.geom.exterior-angle-polygon]
       - id: kp3
         can_do: Find the number of sides from an angle
         key_prerequisites: [math.geom.polygon-angle-sums]
@@ -2072,7 +2075,7 @@ topics:
         key_prerequisites: [math.geom.parallel-line-angle-proofs]
       - id: kp4
         can_do: Prove a parallelogram property with congruent triangles
-        key_prerequisites: [math.geom.cpctc-proofs]
+        key_prerequisites: [math.geom.cpctc-proofs, math.geom.overlapping-triangles]
   - id: math.geom.prove-parallelogram
     name: Proving a quadrilateral is a parallelogram
     subject: math
@@ -2187,7 +2190,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove a parallelogram with coordinates
-        key_prerequisites: [math.geom.distance-formula, math.geom.slopes-parallel-perpendicular-proofs]
+        key_prerequisites: [math.geom.distance-formula, math.geom.slopes-parallel-perpendicular-proofs, math.geom.midsegment-coordinate]
       - id: kp2
         can_do: Prove a rectangle or rhombus with coordinates
         key_prerequisites: [math.geom.distance-formula, math.geom.slopes-parallel-perpendicular-proofs, math.geom.prove-special-parallelograms]
@@ -2214,7 +2217,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a polygon's perimeter from coordinates
-        key_prerequisites: [math.geom.distance-formula]
+        key_prerequisites: [math.geom.distance-formula, math.geom.distance-on-coordinate]
       - id: kp2
         can_do: Find a polygon's area from coordinates
         key_prerequisites: [math.g6.area-on-the-grid]
@@ -2264,10 +2267,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Define similarity by dilations and rigid motions
-        key_prerequisites: [math.geom.dilation-properties, math.geom.congruence-as-rigid-motion]
+        key_prerequisites: [math.geom.dilation-properties, math.geom.congruence-as-rigid-motion, math.g8.sequence-for-similarity]
       - id: kp2
         can_do: Find a sequence between two similar figures
-        key_prerequisites: [math.geom.dilation-properties]
+        key_prerequisites: [math.geom.dilation-properties, math.geom.dilation-center-scale-from-images]
       - id: kp3
         can_do: Tell what stays the same
         key_prerequisites: [math.geom.congruence-as-rigid-motion]
@@ -2287,7 +2290,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a scale factor of similar polygons
-        key_prerequisites: [math.geom.similarity-by-dilation]
+        key_prerequisites: [math.geom.similarity-by-dilation, math.g8.solve-similar-figures]
       - id: kp2
         can_do: Find a missing side
         key_prerequisites: [math.geom.similarity-by-dilation]
@@ -2426,13 +2429,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find lengths with three parallel lines
-        key_prerequisites: [math.geom.triangle-proportionality]
+        key_prerequisites: [math.geom.triangle-proportionality, math.geom.triangle-proportionality-converse]
       - id: kp2
         can_do: Find a length with many parallel lines
         key_prerequisites: [math.geom.triangle-proportionality]
       - id: kp3
         can_do: Divide a segment into equal parts
-        key_prerequisites: [math.geom.triangle-proportionality]
+        key_prerequisites: [math.geom.triangle-proportionality, math.geom.partition-a-segment]
   - id: math.geom.angle-bisector-proportion
     name: Using the triangle angle bisector proportion
     subject: math
@@ -2466,13 +2469,13 @@ topics:
       - topic: math.g7.proportional-stories
         encompassing: 0.3
         confidence: medium
-      - topic: math.geom.angle-bisector-proportion
-        encompassing: 0.1
-        confidence: low
+      - topic: math.g8.solve-similar-figures
+        encompassing: 0.3
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a height using shadows
-        key_prerequisites: [math.geom.sss-sas-similarity]
+        key_prerequisites: [math.geom.sss-sas-similarity, math.g8.solve-similar-figures]
       - id: kp2
         can_do: Find a width across a river
         key_prerequisites: [math.g7.proportional-stories]
@@ -2556,7 +2559,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove the theorem with similar triangles
-        key_prerequisites: [math.geom.right-triangle-altitude-geometric-mean]
+        key_prerequisites: [math.geom.right-triangle-altitude-geometric-mean, math.geom.geometric-mean]
       - id: kp2
         can_do: Show each step
         key_prerequisites: [math.geom.right-triangle-altitude-geometric-mean]
@@ -2628,7 +2631,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find an actual length from a scale model
-        key_prerequisites: [math.g7.scale-area]
+        key_prerequisites: [math.g7.scale-area, math.geom.similar-polygons-identify]
       - id: kp2
         can_do: Find an actual area from a scale model
         key_prerequisites: [math.geom.perimeter-area-ratios]
@@ -2703,7 +2706,7 @@ topics:
         key_prerequisites: [math.geom.special-right-45]
       - id: kp4
         can_do: Find an equilateral triangle's height
-        key_prerequisites: [math.geom.special-right-45]
+        key_prerequisites: [math.geom.special-right-45, math.geom.equilateral-triangles]
   - id: math.geom.special-right-area
     name: Finding areas with special right triangles
     subject: math
@@ -2741,7 +2744,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Recognize triples
-        key_prerequisites: [math.g8.pythagorean-converse]
+        key_prerequisites: [math.g8.pythagorean-converse, math.g8.pythagorean-triples-intro]
       - id: kp2
         can_do: Scale a triple
         key_prerequisites: [math.g8.pythagorean-converse]
@@ -2883,7 +2886,7 @@ topics:
         key_prerequisites: [math.alg1.literal-equations]
       - id: kp3
         can_do: Choose the ratio
-        key_prerequisites: [math.geom.sine-cosine-tangent]
+        key_prerequisites: [math.geom.sine-cosine-tangent, math.geom.soh-cah-toa-labels]
       - id: kp4
         can_do: Find a side in a figure with two steps
         key_prerequisites: [math.geom.sine-cosine-tangent]
@@ -2906,7 +2909,7 @@ topics:
         key_prerequisites: [math.geom.trig-find-side]
       - id: kp2
         can_do: Choose an inverse trig function
-        key_prerequisites: [math.geom.trig-find-side]
+        key_prerequisites: [math.geom.trig-find-side, math.geom.trig-with-calculator]
       - id: kp3
         can_do: Round an angle sensibly
         key_prerequisites: [math.geom.trig-find-side]
@@ -2956,7 +2959,7 @@ topics:
         key_prerequisites: [math.geom.trig-find-angle]
       - id: kp3
         can_do: Solve from two sides
-        key_prerequisites: [math.geom.trig-find-angle]
+        key_prerequisites: [math.geom.trig-find-angle, math.geom.inverse-trig-notation]
   - id: math.geom.sine-cosine-complementary
     name: Relating sine and cosine of complementary angles
     subject: math
@@ -2996,7 +2999,7 @@ topics:
         key_prerequisites: [math.geom.trig-find-angle]
       - id: kp2
         can_do: Find a height from an angle of elevation
-        key_prerequisites: [math.geom.trig-find-angle]
+        key_prerequisites: [math.geom.trig-find-angle, math.geom.indirect-shadow-mirror]
       - id: kp3
         can_do: Use an angle of depression
         key_prerequisites: [math.geom.trig-find-angle]
@@ -3056,6 +3059,9 @@ topics:
       - topic: math.geom.trig-two-triangles
         encompassing: 0.35
         confidence: medium
+      - topic: math.g8.pythagorean-stories
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.geom.elevation-depression
         encompassing: 0.65
@@ -3063,13 +3069,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a ramp story
-        key_prerequisites: [math.geom.elevation-depression]
+        key_prerequisites: [math.geom.elevation-depression, math.geom.solve-right-triangle-complete]
       - id: kp2
         can_do: Solve a ladder story
-        key_prerequisites: [math.geom.elevation-depression]
+        key_prerequisites: [math.geom.elevation-depression, math.g8.pythagorean-stories]
       - id: kp3
         can_do: Solve a two-step story
-        key_prerequisites: [math.geom.elevation-depression]
+        key_prerequisites: [math.geom.elevation-depression, math.geom.trig-two-triangles]
   - id: math.geom.area-with-sine
     name: Finding a triangle's area with sine
     subject: math
@@ -3115,7 +3121,7 @@ topics:
         key_prerequisites: [math.geom.area-with-sine]
       - id: kp4
         can_do: Use it in a story with a drawing
-        key_prerequisites: [math.geom.area-with-sine]
+        key_prerequisites: [math.geom.area-with-sine, math.geom.right-triangle-stories]
   - id: math.geom.law-of-sines-setup
     name: Choosing which ratio to use in the law of sines
     subject: math
@@ -3245,10 +3251,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a surveying story
-        key_prerequisites: [math.geom.law-of-cosines]
+        key_prerequisites: [math.geom.law-of-cosines, math.geom.choose-law-sines-or-cosines]
       - id: kp2
         can_do: Solve a navigation story
-        key_prerequisites: [math.geom.law-of-cosines]
+        key_prerequisites: [math.geom.law-of-cosines, math.geom.bearing-problems]
       - id: kp3
         can_do: Solve a story with two possible answers
         key_prerequisites: [math.geom.ambiguous-case]
@@ -3394,9 +3400,6 @@ topics:
       - topic: math.geom.construct-perpendiculars
         encompassing: 0.45
         confidence: medium
-      - topic: math.geom.incenter-circumcenter-facts
-        encompassing: 0.15
-        confidence: low
       - topic: math.geom.inscribed-right-angle
         encompassing: 0.2
         confidence: low
@@ -3413,7 +3416,7 @@ topics:
         key_prerequisites: [math.geom.construct-perpendiculars, math.geom.circle-terms]
       - id: kp3
         can_do: Say why the tangent meets the radius at a right angle
-        key_prerequisites: [math.geom.circle-terms]
+        key_prerequisites: [math.geom.circle-terms, math.geom.inscribed-right-angle]
   - id: math.geom.inscribed-quadrilaterals
     name: Using inscribed quadrilaterals
     subject: math
@@ -3552,10 +3555,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find an angle on a circle formed by a tangent
-        key_prerequisites: [math.geom.tangent-properties]
+        key_prerequisites: [math.geom.tangent-properties, math.geom.tangent-segments-equal]
       - id: kp2
         can_do: Find an angle from arcs
-        key_prerequisites: [math.geom.chords-and-arcs]
+        key_prerequisites: [math.geom.chords-and-arcs, math.geom.intercepted-arcs, math.geom.inscribed-angle-find]
       - id: kp3
         can_do: Solve for an arc
         key_prerequisites: [math.geom.tangent-properties, math.geom.chords-and-arcs]
@@ -3625,10 +3628,10 @@ topics:
         key_prerequisites: [math.geom.secant-tangent-angles]
       - id: kp2
         can_do: Prove a relationship with similar triangles
-        key_prerequisites: [math.geom.aa-similarity-proof]
+        key_prerequisites: [math.geom.aa-similarity-proof, math.geom.interior-angle-chords]
       - id: kp3
         can_do: Find a segment with an equation
-        key_prerequisites: [math.geom.secant-tangent-angles]
+        key_prerequisites: [math.geom.secant-tangent-angles, math.geom.exterior-angle-secants]
   - id: math.geom.intersecting-chords
     name: Using intersecting chords
     subject: math
@@ -3682,9 +3685,6 @@ topics:
       - topic: math.g7.sectors-informal
         encompassing: 0.3
         confidence: medium
-      - topic: math.geom.similar-circles
-        encompassing: 0.2
-        confidence: medium
     encompassed:
       - topic: math.g7.circumference
         encompassing: 0.5
@@ -3692,7 +3692,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find an arc from a central angle
-        key_prerequisites: [math.g7.circumference, math.geom.central-inscribed-angles]
+        key_prerequisites: [math.g7.circumference, math.geom.central-inscribed-angles, math.g7.sectors-informal]
       - id: kp2
         can_do: Find a central angle from an arc
         key_prerequisites: [math.g7.circumference]
@@ -3815,7 +3815,7 @@ topics:
         key_prerequisites: [math.geom.area-with-sine]
       - id: kp3
         can_do: Solve a shaded area story
-        key_prerequisites: [math.geom.sector-area]
+        key_prerequisites: [math.geom.sector-area, math.geom.sector-stories]
   - id: math.geom.equation-of-circle
     name: Writing the equation of a circle
     subject: math
@@ -3905,10 +3905,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a radius's slope
-        key_prerequisites: [math.geom.equation-of-circle]
+        key_prerequisites: [math.geom.equation-of-circle, math.geom.perpendicular-chord]
       - id: kp2
         can_do: Write a tangent line's equation
-        key_prerequisites: [math.geom.equation-of-circle, math.alg1.perpendicular-lines]
+        key_prerequisites: [math.geom.equation-of-circle, math.alg1.perpendicular-lines, math.alg1.distance-from-point-to-line-intro]
       - id: kp3
         can_do: Find where a line is tangent
         key_prerequisites: [math.alg1.perpendicular-lines]
@@ -3935,7 +3935,7 @@ topics:
         key_prerequisites: [math.alg1.complete-the-square-expression]
       - id: kp2
         can_do: Read a center and radius
-        key_prerequisites: [math.geom.equation-of-circle]
+        key_prerequisites: [math.geom.equation-of-circle, math.geom.circle-from-center-radius]
       - id: kp3
         can_do: Handle a coefficient on x squared
         key_prerequisites: [math.alg1.complete-the-square-expression]
@@ -3985,10 +3985,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove a point lies on a circle
-        key_prerequisites: [math.geom.equation-of-circle]
+        key_prerequisites: [math.geom.equation-of-circle, math.geom.point-on-circle-test, math.geom.coordinate-proofs-quadrilaterals]
       - id: kp2
         can_do: Prove a triangle inscribed in a circle is right
-        key_prerequisites: [math.geom.equation-of-circle]
+        key_prerequisites: [math.geom.equation-of-circle, math.geom.inscribed-quadrilaterals]
       - id: kp3
         can_do: Prove a tangent relationship
         key_prerequisites: [math.geom.equation-of-circle]
@@ -4012,7 +4012,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Justify a triangle's area formula
-        key_prerequisites: [math.g6.area-of-trapezoids, math.geom.two-column-proofs]
+        key_prerequisites: [math.g6.area-of-trapezoids, math.geom.two-column-proofs, math.geom.orthocenter-altitudes]
       - id: kp2
         can_do: Justify a trapezoid's area formula
         key_prerequisites: [math.g6.area-of-trapezoids]
@@ -4035,7 +4035,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a kite's area from its diagonals
-        key_prerequisites: [math.geom.area-formulas-justify]
+        key_prerequisites: [math.geom.area-formulas-justify, math.geom.trapezoid-kite-properties]
       - id: kp2
         can_do: Find a rhombus's area from its diagonals
         key_prerequisites: [math.geom.area-formulas-justify]
@@ -4062,7 +4062,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find an area of a regular hexagon
-        key_prerequisites: [math.geom.special-right-30, math.geom.regular-polygon-angles]
+        key_prerequisites: [math.geom.special-right-30, math.geom.regular-polygon-angles, math.geom.special-right-area]
       - id: kp2
         can_do: Use the apothem and perimeter
         key_prerequisites: [math.geom.regular-polygon-angles]
@@ -4175,7 +4175,7 @@ topics:
         key_prerequisites: [math.geom.volume-prisms-cylinders-justify]
       - id: kp2
         can_do: Find a pyramid's volume
-        key_prerequisites: [math.geom.volume-prisms-cylinders-justify, math.g7.volume-right-prisms]
+        key_prerequisites: [math.geom.volume-prisms-cylinders-justify, math.g7.volume-right-prisms, math.geom.volume-oblique-solids]
       - id: kp3
         can_do: Find a cone's volume
         key_prerequisites: [math.geom.volume-prisms-cylinders-justify]
@@ -4251,13 +4251,13 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a cone's surface area
-        key_prerequisites: [math.g8.surface-area-spheres-cones]
+        key_prerequisites: [math.g8.surface-area-spheres-cones, math.g8.surface-area-pyramids-slant]
       - id: kp2
         can_do: Find a pyramid's surface area
-        key_prerequisites: [math.g6.surface-area-pyramids]
+        key_prerequisites: [math.g6.surface-area-pyramids, math.g8.pythagorean-3d]
       - id: kp3
         can_do: Find a sphere's surface area
-        key_prerequisites: [math.g8.surface-area-spheres-cones]
+        key_prerequisites: [math.g8.surface-area-spheres-cones, math.geom.volume-spheres-justify]
       - id: kp4
         can_do: Say which formula applies
         key_prerequisites: [math.g8.surface-area-spheres-cones, math.g6.surface-area-pyramids]
@@ -4310,7 +4310,7 @@ topics:
         key_prerequisites: [math.g7.cross-sections, math.geom.undefined-terms]
       - id: kp4
         can_do: Find the area of a cross section
-        key_prerequisites: [math.g7.cross-sections, math.geom.undefined-terms]
+        key_prerequisites: [math.g7.cross-sections, math.geom.undefined-terms, math.g8.construct-3d-objects]
   - id: math.geom.solids-of-revolution
     name: Picturing solids of revolution
     subject: math
@@ -4350,7 +4350,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find a mass from a volume and density
-        key_prerequisites: [math.g8.solid-stories, math.g7.rates-with-fractions]
+        key_prerequisites: [math.g8.solid-stories, math.g7.rates-with-fractions, math.geom.scale-effect-on-surface-volume]
       - id: kp2
         can_do: Find a density
         key_prerequisites: [math.g7.rates-with-fractions]
@@ -4391,12 +4391,6 @@ topics:
       - topic: math.geom.area-formulas-justify
         encompassing: 0.3
         confidence: medium
-      - topic: math.geom.composite-area-with-coordinates
-        encompassing: 0.15
-        confidence: low
-      - topic: math.geom.frustum-volume
-        encompassing: 0.2
-        confidence: low
       - topic: math.geom.surface-area-composite-solids
         encompassing: 0.25
         confidence: medium
@@ -4406,7 +4400,7 @@ topics:
         key_prerequisites: [math.geom.density-modelling, math.geom.area-formulas-justify]
       - id: kp2
         can_do: Find the shape that uses the least material
-        key_prerequisites: [math.geom.density-modelling]
+        key_prerequisites: [math.geom.density-modelling, math.geom.surface-area-composite-solids]
       - id: kp3
         can_do: Choose a design from two options
         key_prerequisites: [math.geom.area-formulas-justify]

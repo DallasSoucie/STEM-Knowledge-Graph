@@ -1598,7 +1598,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Use the product rule with a chain inside
-        key_prerequisites: [math.calc1.quotient-rule-derivative]
+        key_prerequisites: [math.calc1.quotient-rule-derivative, math.calc1.rules-with-table-values]
       - id: kp2
         can_do: Use the quotient rule with a chain inside
         key_prerequisites: [math.calc1.quotient-rule-derivative]
@@ -2008,6 +2008,9 @@ topics:
       - topic: math.calc1.rates-in-science-economics
         encompassing: 0.65
         confidence: high
+      - topic: math.alg1.linear-cost-revenue
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a marginal cost
@@ -2020,7 +2023,7 @@ topics:
         key_prerequisites: [math.calc1.rates-in-science-economics]
       - id: kp4
         can_do: Interpret marginal values against an exact change
-        key_prerequisites: [math.calc1.rates-in-science-economics]
+        key_prerequisites: [math.calc1.rates-in-science-economics, math.alg1.linear-cost-revenue]
   - id: math.calc1.related-rates-setup
     name: Setting up a related rates problem
     subject: math
@@ -2608,7 +2611,7 @@ topics:
         key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule]
       - id: kp4
         can_do: Apply the rule more than once
-        key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule]
+        key_prerequisites: [math.calc1.indeterminate-forms, math.calc1.choose-a-rule, math.calc1.mean-value-theorem]
   - id: math.calc1.lhopital-products-differences
     name: Using L'Hopital's rule with products and differences
     subject: math
@@ -3258,7 +3261,7 @@ topics:
         key_prerequisites: [math.calc1.chain-rule-general, math.calc1.basic-integral-rules]
       - id: kp4
         can_do: Back-substitute to the original variable
-        key_prerequisites: [math.calc1.chain-rule-general]
+        key_prerequisites: [math.calc1.chain-rule-general, math.calc1.integrate-after-rewriting]
   - id: math.calc1.substitution-adjusting-constants
     name: Adjusting constants in a substitution
     subject: math
@@ -3482,9 +3485,6 @@ topics:
       - topic: math.calc1.ftc-part-2
         encompassing: 0.5
         confidence: high
-      - topic: math.calc1.chain-rule-general
-        encompassing: 0.1
-        confidence: low
     knowledge_points:
       - id: kp1
         can_do: Differentiate an integral with variable upper limit

@@ -238,7 +238,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write an expression for a number plus or minus a variable
-        key_prerequisites: [math.g5.pattern-rules-with-variables]
+        key_prerequisites: [math.g5.pattern-rules-with-variables, math.g5.words-to-expressions]
       - id: kp2
         can_do: Write an expression for a number times a variable
         key_prerequisites: [math.g5.pattern-rules-with-variables]
@@ -450,7 +450,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Read a decimal to thousandths
-        key_prerequisites: [math.g4.decimal-hundredths]
+        key_prerequisites: [math.g4.decimal-hundredths, math.g5.decimal-place-names]
       - id: kp2
         can_do: Write a fraction with denominator 1000 as a decimal
         key_prerequisites: [math.g4.decimal-hundredths]
@@ -497,7 +497,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a decimal in expanded form with decimals
-        key_prerequisites: [math.g5.read-write-thousandths]
+        key_prerequisites: [math.g5.read-write-thousandths, math.g5.decimals-in-words]
       - id: kp2
         can_do: Write a decimal in expanded form with fractions
         key_prerequisites: [math.g5.read-write-thousandths]
@@ -553,7 +553,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Compare decimals with the same number of places
-        key_prerequisites: [math.g4.compare-decimals]
+        key_prerequisites: [math.g4.compare-decimals, math.g5.expanded-form-decimals, math.g5.thousandths-on-number-line]
       - id: kp2
         can_do: Compare decimals with different numbers of places
         key_prerequisites: [math.g5.read-write-thousandths]
@@ -562,7 +562,7 @@ topics:
         key_prerequisites: [math.g4.compare-decimals]
       - id: kp4
         can_do: Put a mix of whole numbers and decimals in order
-        key_prerequisites: [math.g5.read-write-thousandths, math.g4.compare-decimals]
+        key_prerequisites: [math.g5.read-write-thousandths, math.g4.compare-decimals, math.g4.order-large-numbers]
   - id: math.g5.order-decimals
     name: Ordering decimals
     subject: math
@@ -625,7 +625,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Round a decimal to the nearest tenth
-        key_prerequisites: [math.g5.round-to-whole-number]
+        key_prerequisites: [math.g5.round-to-whole-number, math.g5.read-write-thousandths]
       - id: kp2
         can_do: Round a decimal to the nearest hundredth
         key_prerequisites: [math.g5.round-to-whole-number]
@@ -663,7 +663,7 @@ topics:
         key_prerequisites: [math.g4.compare-with-benchmark]
       - id: kp4
         can_do: Put fractions and decimals in order using benchmarks
-        key_prerequisites: [math.g5.compare-thousandths, math.g4.compare-with-benchmark]
+        key_prerequisites: [math.g5.compare-thousandths, math.g4.compare-with-benchmark, math.g4.compare-mixed-numbers]
   - id: math.g5.fractions-to-decimals
     name: Writing fractions as decimals by scaling the denominator
     subject: math
@@ -800,7 +800,7 @@ topics:
         key_prerequisites: [math.g5.three-by-two-area-model]
       - id: kp4
         can_do: Multiply when the top number has a zero
-        key_prerequisites: [math.g5.multiply-with-algorithm]
+        key_prerequisites: [math.g5.multiply-with-algorithm, math.g5.multiply-ending-in-zeros]
   - id: math.g5.multi-digit-multiply
     name: Multiplying larger numbers
     subject: math
@@ -817,7 +817,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Multiply a four-digit number by a two-digit number
-        key_prerequisites: [math.g5.three-by-two-multiply]
+        key_prerequisites: [math.g5.three-by-two-multiply, math.g4.four-digit-times-one]
       - id: kp2
         can_do: Multiply two three-digit numbers
         key_prerequisites: [math.g5.three-by-two-multiply]
@@ -955,7 +955,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Divide a three-digit number with a two-digit quotient
-        key_prerequisites: [math.g5.one-digit-quotient]
+        key_prerequisites: [math.g5.one-digit-quotient, math.g5.partial-quotients-two-digit]
       - id: kp2
         can_do: Bring down digits in the written method
         key_prerequisites: [math.g4.three-digit-divide]
@@ -1021,6 +1021,9 @@ topics:
       - topic: math.g5.adjust-quotient-digit
         encompassing: 0.4
         confidence: medium
+      - topic: math.g4.four-digit-divide
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.g5.two-digit-divisor
         encompassing: 0.75
@@ -1028,10 +1031,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Divide a four-digit number with a two-digit quotient
-        key_prerequisites: [math.g5.two-digit-divisor]
+        key_prerequisites: [math.g5.two-digit-divisor, math.g5.adjust-quotient-digit]
       - id: kp2
         can_do: Divide a four-digit number with a three-digit quotient
-        key_prerequisites: [math.g5.two-digit-divisor]
+        key_prerequisites: [math.g5.two-digit-divisor, math.g4.four-digit-divide]
       - id: kp3
         can_do: Divide a four-digit number with a remainder
         key_prerequisites: [math.g5.two-digit-divisor]
@@ -1100,7 +1103,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Check a long division by multiplying
-        key_prerequisites: [math.g5.multiply-with-algorithm]
+        key_prerequisites: [math.g5.multiply-with-algorithm, math.g5.divide-with-area-models]
       - id: kp2
         can_do: Check a long division with a remainder
         key_prerequisites: [math.g5.multiply-with-algorithm]
@@ -1130,7 +1133,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a story multiplying large numbers
-        key_prerequisites: [math.g5.multi-digit-multiply]
+        key_prerequisites: [math.g5.multi-digit-multiply, math.g5.estimate-large-products]
       - id: kp2
         can_do: Solve a story dividing by a two-digit number
         key_prerequisites: [math.g5.four-digit-by-two-digit]
@@ -1293,6 +1296,9 @@ topics:
       - topic: math.g5.subtract-different-places
         encompassing: 0.3
         confidence: medium
+      - topic: math.g4.decimal-add-subtract-stories
+        encompassing: 0.3
+        confidence: medium
     encompassed:
       - topic: math.g5.add-thousandths
         encompassing: 0.5
@@ -1303,10 +1309,10 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a story adding decimals
-        key_prerequisites: [math.g5.add-thousandths]
+        key_prerequisites: [math.g5.add-thousandths, math.g5.add-different-places, math.g4.decimal-add-subtract-stories]
       - id: kp2
         can_do: Solve a story subtracting decimals
-        key_prerequisites: [math.g5.subtract-thousandths]
+        key_prerequisites: [math.g5.subtract-thousandths, math.g5.subtract-different-places]
       - id: kp3
         can_do: Solve a two-step decimal story
         key_prerequisites: [math.g5.add-thousandths, math.g5.subtract-thousandths]
@@ -1530,7 +1536,7 @@ topics:
         key_prerequisites: [math.g5.decimal-point-shift]
       - id: kp3
         can_do: Divide a decimal by a tenths decimal
-        key_prerequisites: [math.g5.decimal-point-shift]
+        key_prerequisites: [math.g5.decimal-point-shift, math.g5.zeros-in-decimal-division]
   - id: math.g5.decimal-divide-by-decimal
     name: Dividing by a decimal
     subject: math
@@ -1639,7 +1645,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a two-step story adding and multiplying decimals
-        key_prerequisites: [math.g5.decimal-add-subtract-stories, math.g5.decimal-multiply-stories]
+        key_prerequisites: [math.g5.decimal-add-subtract-stories, math.g5.decimal-multiply-stories, math.g5.place-point-by-estimating]
       - id: kp2
         can_do: Solve a two-step story dividing and subtracting decimals
         key_prerequisites: [math.g5.decimal-divide-stories]
@@ -1679,11 +1685,15 @@ topics:
     level: g5
     status: draft
     prerequisites:
-      - topic: math.g4.equivalent-fractions-multiply
-        encompassing: 0.6
-        confidence: high
       - topic: math.g4.multiples-of-a-number
         encompassing: 0.45
+        confidence: high
+      - topic: math.g4.compare-common-denominator
+        encompassing: 0.3
+        confidence: medium
+    encompassed:
+      - topic: math.g4.equivalent-fractions-multiply
+        encompassing: 0.6
         confidence: high
     knowledge_points:
       - id: kp1
@@ -1691,7 +1701,7 @@ topics:
         key_prerequisites: [math.g4.multiples-of-a-number]
       - id: kp2
         can_do: Rewrite two fractions with a common denominator
-        key_prerequisites: [math.g4.equivalent-fractions-multiply]
+        key_prerequisites: [math.g4.equivalent-fractions-multiply, math.g4.compare-common-denominator]
       - id: kp3
         can_do: Choose a common denominator from the product or a smaller multiple
         key_prerequisites: [math.g4.equivalent-fractions-multiply, math.g4.multiples-of-a-number]
@@ -1784,7 +1794,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Add fractions with no shared factor in their denominators
-        key_prerequisites: [math.g4.add-like-fractions]
+        key_prerequisites: [math.g4.add-like-fractions, math.g5.least-common-denominator]
       - id: kp2
         can_do: Add fractions with a shared factor in their denominators
         key_prerequisites: [math.g5.one-denominator-multiple]
@@ -1793,7 +1803,7 @@ topics:
         key_prerequisites: [math.g4.add-like-fractions]
       - id: kp4
         can_do: Add unlike fractions and simplify the result
-        key_prerequisites: [math.g5.one-denominator-multiple, math.g4.simplify-fractions]
+        key_prerequisites: [math.g5.one-denominator-multiple, math.g4.simplify-fractions, math.g5.unlike-with-models]
   - id: math.g5.subtract-unlike-fractions
     name: Subtracting fractions with unlike denominators
     subject: math
@@ -1823,7 +1833,7 @@ topics:
         key_prerequisites: [math.g5.one-denominator-multiple]
       - id: kp3
         can_do: Find an unknown addend with unlike fractions
-        key_prerequisites: [math.g4.subtract-like-fractions]
+        key_prerequisites: [math.g4.subtract-like-fractions, math.g5.unlike-with-models]
       - id: kp4
         can_do: Subtract unlike fractions and simplify the result
         key_prerequisites: [math.g5.one-denominator-multiple, math.g4.simplify-fractions]
@@ -1900,7 +1910,7 @@ topics:
         key_prerequisites: [math.g5.add-unlike-fractions]
       - id: kp4
         can_do: Add mixed numbers and simplify the fraction part
-        key_prerequisites: [math.g5.add-unlike-fractions, math.g4.add-mixed-like]
+        key_prerequisites: [math.g5.add-unlike-fractions, math.g4.add-mixed-like, math.g5.simplify-answers]
   - id: math.g5.subtract-mixed-unlike
     name: Subtracting mixed numbers with unlike denominators
     subject: math
@@ -2003,16 +2013,16 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a story adding unlike fractions
-        key_prerequisites: [math.g5.add-mixed-unlike]
+        key_prerequisites: [math.g5.add-mixed-unlike, math.g5.add-three-fractions, math.g5.estimate-fraction-sums]
       - id: kp2
         can_do: Solve a story subtracting unlike fractions
-        key_prerequisites: [math.g5.subtract-mixed-unlike]
+        key_prerequisites: [math.g5.subtract-mixed-unlike, math.g5.subtract-unlike-mixed-regrouping]
       - id: kp3
         can_do: Solve a two-step unlike fraction story
         key_prerequisites: [math.g5.add-mixed-unlike, math.g5.subtract-mixed-unlike]
       - id: kp4
         can_do: Find an unknown part in a story with unlike fractions
-        key_prerequisites: [math.g5.add-mixed-unlike, math.g5.subtract-mixed-unlike]
+        key_prerequisites: [math.g5.add-mixed-unlike, math.g5.subtract-mixed-unlike, math.g4.like-fraction-stories]
   - id: math.g5.fraction-as-division
     name: Seeing a fraction as division
     subject: math
@@ -2029,7 +2039,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Share wholes equally to show a fraction as division
-        key_prerequisites: [math.g3.fractions-of-a-set]
+        key_prerequisites: [math.g3.fractions-of-a-set, math.g4.remainders]
       - id: kp2
         can_do: Write a division as a fraction
         key_prerequisites: [math.g3.fractions-of-a-set]
@@ -2085,7 +2095,7 @@ topics:
         key_prerequisites: [math.g4.whole-times-fraction]
       - id: kp3
         can_do: Find a fraction of a whole number with a mixed answer
-        key_prerequisites: [math.g4.whole-times-fraction]
+        key_prerequisites: [math.g4.whole-times-fraction, math.g5.division-stories-fraction-answers]
       - id: kp4
         can_do: Solve a story finding a fraction of a whole number
         key_prerequisites: [math.g5.fraction-as-division, math.g4.whole-times-fraction]
@@ -2280,7 +2290,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Multiply a mixed number by a fraction
-        key_prerequisites: [math.g5.fraction-times-fraction, math.g4.improper-and-mixed]
+        key_prerequisites: [math.g5.fraction-times-fraction, math.g4.improper-and-mixed, math.g5.simplify-before-multiplying, math.g5.mixed-times-whole]
       - id: kp2
         can_do: Multiply two mixed numbers
         key_prerequisites: [math.g4.improper-and-mixed]
@@ -2566,7 +2576,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Convert a fraction of a metric unit to a smaller unit
-        key_prerequisites: [math.g5.convert-metric]
+        key_prerequisites: [math.g5.convert-metric, math.g4.conversion-tables]
       - id: kp2
         can_do: Convert a fraction of an imperial unit to a smaller unit
         key_prerequisites: [math.g5.convert-imperial]
@@ -2602,7 +2612,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a multi-step metric story with a conversion
-        key_prerequisites: [math.g5.convert-metric]
+        key_prerequisites: [math.g5.convert-metric, math.g4.distance-time-stories, math.g4.mass-capacity-money-stories, math.g5.convert-with-fractions]
       - id: kp2
         can_do: Solve a multi-step imperial story with a conversion
         key_prerequisites: [math.g5.convert-imperial]
@@ -2649,7 +2659,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find the total of values on a line plot
-        key_prerequisites: [math.g4.line-plot-fractions]
+        key_prerequisites: [math.g4.line-plot-fractions, math.g5.line-plot-eighths]
       - id: kp2
         can_do: Share a total from a line plot equally
         key_prerequisites: [math.g5.fraction-times-fraction]
@@ -2672,7 +2682,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find the duration across midnight
-        key_prerequisites: [math.g4.relative-time-units]
+        key_prerequisites: [math.g4.relative-time-units, math.g4.twelve-and-24-hour-clocks]
       - id: kp2
         can_do: Find the duration across several days
         key_prerequisites: [math.g4.relative-time-units]
@@ -2864,7 +2874,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Find how many cubes are in one layer
-        key_prerequisites: [math.g4.area-perimeter-formulas]
+        key_prerequisites: [math.g4.area-perimeter-formulas, math.g5.cubic-units]
       - id: kp2
         can_do: Multiply a layer by the number of layers
         key_prerequisites: [math.g5.measure-volume-by-counting]
@@ -2939,7 +2949,7 @@ topics:
         key_prerequisites: [math.g5.volume-formulas]
       - id: kp2
         can_do: Find a missing edge from a volume and base area
-        key_prerequisites: [math.g5.one-step-equations-variables]
+        key_prerequisites: [math.g5.one-step-equations-variables, math.g4.missing-side-from-area]
       - id: kp3
         can_do: Write an equation for a missing edge
         key_prerequisites: [math.g5.one-step-equations-variables]
@@ -2985,7 +2995,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a story finding a volume
-        key_prerequisites: [math.g5.volume-adds]
+        key_prerequisites: [math.g5.volume-adds, math.g5.volume-unknown-edge]
       - id: kp2
         can_do: Solve a story comparing two volumes
         key_prerequisites: [math.g5.volume-adds]
@@ -3140,7 +3150,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Solve a problem by plotting points in context
-        key_prerequisites: [math.g5.plot-points]
+        key_prerequisites: [math.g5.plot-points, math.g5.points-in-context]
       - id: kp2
         can_do: Interpret coordinates to answer a question
         key_prerequisites: [math.g5.plot-points]
@@ -3208,7 +3218,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Place quadrilaterals in a hierarchy
-        key_prerequisites: [math.g5.shape-attribute-inheritance]
+        key_prerequisites: [math.g5.shape-attribute-inheritance, math.g4.classify-quadrilaterals]
       - id: kp2
         can_do: Say whether a statement such as all rectangles are parallelograms is true
         key_prerequisites: [math.g5.shape-attribute-inheritance]
@@ -3231,7 +3241,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Draw a diagram of a hierarchy of polygons
-        key_prerequisites: [math.g5.quadrilateral-hierarchy]
+        key_prerequisites: [math.g5.quadrilateral-hierarchy, math.g4.regular-irregular-polygons]
       - id: kp2
         can_do: Place a shape in the correct place in a hierarchy
         key_prerequisites: [math.g5.quadrilateral-hierarchy]

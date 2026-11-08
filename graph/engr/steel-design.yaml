@@ -180,13 +180,20 @@ topics:
       - topic: engr.steel-design.lrfd-and-asd
         encompassing: 0.5
         confidence: high
+      - topic: engr.mech-materials.column-design
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: engr.mech-materials.effective-length
         encompassing: 0.5
         confidence: high
+      - topic: engr.statics.radius-of-gyration
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find slenderness of columns
-        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.mech-materials.effective-length]
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.mech-materials.effective-length, engr.statics.radius-of-gyration]
       - id: kp2
         can_do: Find elastic buckling stress
         key_prerequisites: [engr.mech-materials.effective-length]
@@ -195,7 +202,7 @@ topics:
         key_prerequisites: [engr.steel-design.lrfd-and-asd]
       - id: kp4
         can_do: Find design compressive strength
-        key_prerequisites: [engr.steel-design.lrfd-and-asd]
+        key_prerequisites: [engr.steel-design.lrfd-and-asd, engr.mech-materials.column-design]
   - id: engr.steel-design.local-buckling-classification
     name: Classifying sections for local buckling
     subject: engr
@@ -428,10 +435,13 @@ topics:
       - topic: engr.steel-design.beam-deflection-limits
         encompassing: 0.4
         confidence: high
+      - topic: engr.mech-materials.beam-section-design
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Select beams for moment
-        key_prerequisites: [engr.steel-design.moment-gradient-factor]
+        key_prerequisites: [engr.steel-design.moment-gradient-factor, engr.mech-materials.beam-section-design]
       - id: kp2
         can_do: Check beams for shear
         key_prerequisites: [engr.steel-design.beam-shear-steel]
