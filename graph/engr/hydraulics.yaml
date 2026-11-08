@@ -735,13 +735,16 @@ topics:
       - topic: engr.hydraulics.water-demand
         encompassing: 0.35
         confidence: high
+      - topic: engr.fluids.pump-cavitation
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find design flows for pump stations
         key_prerequisites: [engr.hydraulics.water-demand]
       - id: kp2
         can_do: Select pumps for systems
-        key_prerequisites: [engr.fluids.pumps-in-series-parallel]
+        key_prerequisites: [engr.fluids.pumps-in-series-parallel, engr.fluids.pump-cavitation]
       - id: kp3
         can_do: Choose pump arrangements
         key_prerequisites: [engr.fluids.pumps-in-series-parallel]

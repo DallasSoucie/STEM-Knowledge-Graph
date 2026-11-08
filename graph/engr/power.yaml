@@ -7,6 +7,10 @@ topics:
     level: uni-upper
     status: draft
     prerequisites:
+      - topic: engr.circuits.power-factor-correction
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: engr.circuits.complex-power
         encompassing: 0.6
         confidence: high
@@ -22,7 +26,7 @@ topics:
         key_prerequisites: [engr.circuits.complex-power]
       - id: kp4
         can_do: Correct power factor of a plant
-        key_prerequisites: [engr.circuits.complex-power]
+        key_prerequisites: [engr.circuits.complex-power, engr.circuits.power-factor-correction]
   - id: engr.power.balanced-three-phase-analysis
     name: Analyzing balanced three-phase systems by per-phase equivalents
     subject: engr

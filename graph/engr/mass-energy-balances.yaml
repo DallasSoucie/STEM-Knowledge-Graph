@@ -324,6 +324,10 @@ topics:
       - topic: engr.mass-energy-balances.atomic-species-balances
         encompassing: 0.35
         confidence: high
+      - topic: engr.thermo.air-fuel-ratio-and-dew-point
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: engr.thermo.combustion-stoichiometry
         encompassing: 0.4
         confidence: high
@@ -333,7 +337,7 @@ topics:
         key_prerequisites: [engr.thermo.combustion-stoichiometry]
       - id: kp2
         can_do: Find product composition on wet and dry basis
-        key_prerequisites: [engr.mass-energy-balances.atomic-species-balances]
+        key_prerequisites: [engr.mass-energy-balances.atomic-species-balances, engr.thermo.air-fuel-ratio-and-dew-point]
       - id: kp3
         can_do: Find excess air from flue gas analysis
         key_prerequisites: [engr.mass-energy-balances.atomic-species-balances, engr.thermo.combustion-stoichiometry]
@@ -376,13 +380,17 @@ topics:
       - topic: engr.mass-energy-balances.flow-rates-and-composition
         encompassing: 0.65
         confidence: high
+      - topic: engr.thermo.clapeyron-equation
+        encompassing: 0.25
+        confidence: medium
+    encompassed:
       - topic: chem.gen1.vapor-pressure-and-temperature
         encompassing: 0.5
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Use the Antoine equation
-        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition]
+        key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition, engr.thermo.clapeyron-equation]
       - id: kp2
         can_do: Find boiling point at a pressure
         key_prerequisites: [engr.mass-energy-balances.flow-rates-and-composition, chem.gen1.vapor-pressure-and-temperature]
@@ -829,10 +837,13 @@ topics:
       - topic: engr.mass-energy-balances.nonreactive-energy-balances
         encompassing: 0.4
         confidence: high
+      - topic: engr.thermo.transient-filling-and-emptying
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Write transient energy balances
-        key_prerequisites: [engr.mass-energy-balances.transient-material-balances, engr.mass-energy-balances.nonreactive-energy-balances]
+        key_prerequisites: [engr.mass-energy-balances.transient-material-balances, engr.mass-energy-balances.nonreactive-energy-balances, engr.thermo.transient-filling-and-emptying]
       - id: kp2
         can_do: Find heating time of batch tanks
         key_prerequisites: [engr.mass-energy-balances.nonreactive-energy-balances]

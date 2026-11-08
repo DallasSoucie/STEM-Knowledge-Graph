@@ -485,6 +485,9 @@ topics:
       - topic: engr.process-control.cascade-control
         encompassing: 0.9
         confidence: high
+      - topic: engr.controls.integrator-windup
+        encompassing: 0.25
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Design override control
@@ -497,7 +500,7 @@ topics:
         key_prerequisites: [engr.process-control.cascade-control]
       - id: kp4
         can_do: Prevent windup in override schemes
-        key_prerequisites: [engr.process-control.cascade-control]
+        key_prerequisites: [engr.process-control.cascade-control, engr.controls.integrator-windup]
   - id: engr.process-control.smith-predictor
     name: Compensating dead time with a Smith predictor
     subject: engr
