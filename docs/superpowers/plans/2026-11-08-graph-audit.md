@@ -10,7 +10,7 @@ Audit run on 2026-11-08 against the full graph (110 courses, 8,446 topics), on b
 | Topics nothing depends on | 1,765 | 1,670 | 655 name-matched candidates reviewed by hand; 83 edges added where a later knowledge point genuinely uses the earlier topic, plus 20 hand-picked links from the engineering core to the discipline courses. 23 older direct edges made redundant by the new links became encompassed entries. |
 | New validation warning | none | `uncited-prerequisite` | Fires when no knowledge point cites a direct prerequisite, so the first check stays fixed. Documented in CLAUDE.md and covered by tests. |
 
-Validation: 0 errors; the only warning is the old budget variance on `physics.mechanics`-sized course (92 topics against 120). All 266 tests pass.
+Validation: 0 errors; the only warning is the long-standing budget variance on `math.stats` (92 topics against a budget of 120). All 266 tests pass.
 
 ## What remains
 
