@@ -37,11 +37,11 @@ The number after each course is its topic budget. Confirm or revise this list in
 **Math**
 - Grades: k 60, g1 80, g2 100, g3 120, g4 150, g5 160, g6 170, g7 180, g8 200
 - High school: alg1 240, geom 200, alg2 240, precalc 260, stats 120
-- University: calc1 180, calc2 180, calc3 180, linalg 180, diffeq 190, discrete 170, probstat 190, proofs 110, analysis 160, abstract 160, numerical 130, pde 140, complex 120
+- University: calc1 180, calc2 180, calc3 180, linalg 180, diffeq 190, discrete 170, probstat 190, proofs 110, analysis 160, abstract 160, numerical 130, pde 140, complex 120, number-theory 75, topology 80, geometry 65, optimization 55
 
 **Physics**
 - School: elem 40, ms 80, hs1 200, hs2 165
-- University: mechanics 140, em 140, waves-thermo-optics 115, modern 100, classical 95, em-theory 100, quantum 95, stat-thermal 65
+- University: mechanics 140, em 140, waves-thermo-optics 115, modern 100, classical 95, em-theory 100, quantum 95, stat-thermal 65, solid-state 65, nuclear-particle 55, optics 50
 
 **Chemistry**
 - School: elem 25, ms 55, hs1 125, hs2 90
@@ -49,18 +49,18 @@ The number after each course is its topic budget. Confirm or revise this list in
 
 **Biology**
 - School: elem 30, ms 45, hs1 90, hs2 70
-- University: intro1 35, intro2 55, cell-mol 55, genetics 45, biochem 55, ecology 35, evolution 35, micro 40, anat-phys1 60, anat-phys2 60, neuro 45
+- University: intro1 35, intro2 55, cell-mol 55, genetics 45, biochem 55, ecology 35, evolution 35, micro 40, anat-phys1 60, anat-phys2 60, neuro 45, molecular-biology 50, immunology 45, developmental 40, plant 45
 
 **Engineering common core**
 - programming 100, data-structures 60, statics 65, dynamics 50, mech-materials 60, thermo 80, fluids 65, circuits 70, materials 65, digital-logic 50, signals 50, economics 40
 - Shared upper course: controls 50 (mechanical, electrical and chemical)
 
 **Engineering discipline courses** (built after the core graph)
-- Civil: structural-analysis 55, soil-mechanics 60, hydraulics 45, steel-design 35, concrete-design 40, transportation 40, environmental 35
-- Chemical: mass-energy-balances 40, cheme-thermo 40, mass-transfer 30, separations 40, reactors 40, process-control 30
+- Civil: structural-analysis 55, soil-mechanics 60, hydraulics 45, steel-design 35, concrete-design 40, transportation 40, environmental 35, surveying 35, construction 35
+- Chemical: mass-energy-balances 40, cheme-thermo 40, mass-transfer 30, separations 40, reactors 40, process-control 30, process-design-safety 35
 - Mechanical: heat-transfer 65, machine-design 55, vibrations 35, manufacturing 35, measurements 25
 - Electrical: electronics 65, em-fields 40, power 50, communications 45, dsp 40
-- Computer/software: algorithms 50, architecture 45, operating-systems 50, databases 40, networks 35, software-engineering 35, embedded 25, theory 30
+- Computer/software: algorithms 50, architecture 45, operating-systems 50, databases 40, networks 35, software-engineering 35, embedded 25, theory 30, programming-languages 45
 
 Each topic has exactly one home course, where it is first taught. Vectors live in math, and "resolving forces into components" lives in physics with a prerequisite on math vectors. Courses that repackage existing material (AP Calculus, for example) are views in the manifest that list existing topic IDs. They add no new topics.
 
