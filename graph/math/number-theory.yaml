@@ -1,0 +1,1631 @@
+course: math.number-theory
+topics:
+  - id: math.number-theory.divisibility-linear-combinations
+    name: Proving divisibility facts with linear combinations
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.bezout-proofs
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove a divides b and c implies a divides bx + cy
+        key_prerequisites: [math.proofs.bezout-proofs]
+      - id: kp2
+        can_do: Prove gcd facts with linear combinations
+        key_prerequisites: [math.proofs.bezout-proofs]
+      - id: kp3
+        can_do: Prove coprimality from a linear combination equal to 1
+        key_prerequisites: [math.proofs.bezout-proofs]
+      - id: kp4
+        can_do: Prove divisibility results combining several facts
+        key_prerequisites: [math.proofs.bezout-proofs]
+  - id: math.number-theory.linear-diophantine
+    name: Solving linear Diophantine equations
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.divisibility-linear-combinations
+        encompassing: 0.65
+        confidence: high
+      - topic: math.discrete.euclidean-algorithm
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Decide whether ax + by = c has integer solutions
+        key_prerequisites: [math.number-theory.divisibility-linear-combinations]
+      - id: kp2
+        can_do: Find one solution with the extended Euclidean algorithm
+        key_prerequisites: [math.discrete.euclidean-algorithm]
+      - id: kp3
+        can_do: Write the general solution of ax + by = c
+        key_prerequisites: [math.number-theory.divisibility-linear-combinations, math.discrete.euclidean-algorithm]
+      - id: kp4
+        can_do: Solve word problems with linear Diophantine equations
+        key_prerequisites: [math.number-theory.divisibility-linear-combinations, math.discrete.euclidean-algorithm]
+  - id: math.number-theory.nonnegative-diophantine
+    name: Finding nonnegative solutions and the coin problem
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.linear-diophantine
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find nonnegative solutions of ax + by = c
+        key_prerequisites: [math.number-theory.linear-diophantine]
+      - id: kp2
+        can_do: Count nonnegative solutions in a range
+        key_prerequisites: [math.number-theory.linear-diophantine]
+      - id: kp3
+        can_do: Find the largest amount not representable with two coins
+        key_prerequisites: [math.number-theory.linear-diophantine]
+      - id: kp4
+        can_do: Solve stamp and coin problems
+        key_prerequisites: [math.number-theory.linear-diophantine]
+  - id: math.number-theory.divisor-functions
+    name: Counting and summing divisors
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.primes-fundamental-theorem
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count divisors from a prime factorization
+        key_prerequisites: [math.discrete.primes-fundamental-theorem]
+      - id: kp2
+        can_do: Find the sum of divisors from a prime factorization
+        key_prerequisites: [math.discrete.primes-fundamental-theorem]
+      - id: kp3
+        can_do: Find numbers with a given number of divisors
+        key_prerequisites: [math.discrete.primes-fundamental-theorem]
+      - id: kp4
+        can_do: Compare divisor counts and sums across numbers
+        key_prerequisites: [math.discrete.primes-fundamental-theorem]
+  - id: math.number-theory.perfect-numbers
+    name: Finding perfect numbers and Mersenne primes
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.divisor-functions
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether a number is perfect, abundant or deficient
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp2
+        can_do: Build even perfect numbers from Mersenne primes
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp3
+        can_do: Prove the Euclid-Euler form of even perfect numbers
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp4
+        can_do: Test small Mersenne numbers for primality
+        key_prerequisites: [math.number-theory.divisor-functions]
+  - id: math.number-theory.multiplicative-functions
+    name: Using multiplicative functions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.divisor-functions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether a function is multiplicative
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp2
+        can_do: Prove divisor count and sum are multiplicative
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp3
+        can_do: Evaluate multiplicative functions from prime powers
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp4
+        can_do: Build new multiplicative functions from known ones
+        key_prerequisites: [math.number-theory.divisor-functions]
+  - id: math.number-theory.euler-phi
+    name: Computing Euler's phi function
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.multiplicative-functions
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute phi of a prime power
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp2
+        can_do: Compute phi from a prime factorization
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp3
+        can_do: Solve equations involving phi
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp4
+        can_do: Prove properties of phi using multiplicativity
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+  - id: math.number-theory.phi-divisor-sum
+    name: Proving Gauss's divisor sum for phi
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.euler-phi
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Verify the divisor sum of phi for small n
+        key_prerequisites: [math.number-theory.euler-phi]
+      - id: kp2
+        can_do: Prove the sum of phi over divisors equals n
+        key_prerequisites: [math.number-theory.euler-phi]
+      - id: kp3
+        can_do: Count fractions in lowest terms using the divisor sum
+        key_prerequisites: [math.number-theory.euler-phi]
+      - id: kp4
+        can_do: Use the divisor sum to find phi values
+        key_prerequisites: [math.number-theory.euler-phi]
+  - id: math.number-theory.mobius-function
+    name: Using the Mobius function
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.multiplicative-functions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute the Mobius function of an integer
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp2
+        can_do: Prove the Mobius function is multiplicative
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp3
+        can_do: Prove the sum of mu over divisors is zero for n > 1
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+      - id: kp4
+        can_do: Use the Mobius function to count squarefree numbers
+        key_prerequisites: [math.number-theory.multiplicative-functions]
+  - id: math.number-theory.mobius-inversion
+    name: Applying Mobius inversion
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.mobius-function
+        encompassing: 0.6
+        confidence: high
+      - topic: math.number-theory.phi-divisor-sum
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the Mobius inversion formula
+        key_prerequisites: [math.number-theory.mobius-function]
+      - id: kp2
+        can_do: Recover phi from its divisor sum by inversion
+        key_prerequisites: [math.number-theory.phi-divisor-sum]
+      - id: kp3
+        can_do: Invert divisor sums of other arithmetic functions
+        key_prerequisites: [math.number-theory.mobius-function]
+      - id: kp4
+        can_do: Apply inversion to counting problems
+        key_prerequisites: [math.number-theory.mobius-function, math.number-theory.phi-divisor-sum]
+  - id: math.number-theory.dirichlet-convolution
+    name: Using Dirichlet convolution
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.mobius-inversion
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute Dirichlet convolutions of arithmetic functions
+        key_prerequisites: [math.number-theory.mobius-inversion]
+      - id: kp2
+        can_do: Prove convolution is commutative and associative
+        key_prerequisites: [math.number-theory.mobius-inversion]
+      - id: kp3
+        can_do: Write Mobius inversion as convolution with the unit function
+        key_prerequisites: [math.number-theory.mobius-inversion]
+      - id: kp4
+        can_do: Find Dirichlet inverses of multiplicative functions
+        key_prerequisites: [math.number-theory.mobius-inversion]
+  - id: math.number-theory.floor-function-counting
+    name: Counting with the floor function
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.division-algorithm-proofs
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Use properties of the floor function
+        key_prerequisites: [math.proofs.division-algorithm-proofs]
+      - id: kp2
+        can_do: Count multiples of d up to n with the floor function
+        key_prerequisites: [math.proofs.division-algorithm-proofs]
+      - id: kp3
+        can_do: Count lattice points under a line
+        key_prerequisites: [math.proofs.division-algorithm-proofs]
+      - id: kp4
+        can_do: Prove identities involving floor sums
+        key_prerequisites: [math.proofs.division-algorithm-proofs]
+  - id: math.number-theory.legendre-formula
+    name: Finding prime powers dividing factorials
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.floor-function-counting
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the exponent of a prime in n factorial
+        key_prerequisites: [math.number-theory.floor-function-counting]
+      - id: kp2
+        can_do: Find the number of trailing zeros of n factorial
+        key_prerequisites: [math.number-theory.floor-function-counting]
+      - id: kp3
+        can_do: Find prime exponents in binomial coefficients
+        key_prerequisites: [math.number-theory.floor-function-counting]
+      - id: kp4
+        can_do: Prove divisibility of binomial coefficients by primes
+        key_prerequisites: [math.number-theory.floor-function-counting]
+  - id: math.number-theory.p-adic-valuations
+    name: Using p-adic valuations
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.legendre-formula
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute p-adic valuations of integers and rationals
+        key_prerequisites: [math.number-theory.legendre-formula]
+      - id: kp2
+        can_do: Use valuations of products and sums
+        key_prerequisites: [math.number-theory.legendre-formula]
+      - id: kp3
+        can_do: Prove irrationality results with valuations
+        key_prerequisites: [math.number-theory.legendre-formula]
+      - id: kp4
+        can_do: Solve divisibility problems with valuations
+        key_prerequisites: [math.number-theory.legendre-formula]
+  - id: math.number-theory.average-orders
+    name: Finding average orders of arithmetic functions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.divisor-functions
+        encompassing: 0.6
+        confidence: medium
+      - topic: math.number-theory.floor-function-counting
+        encompassing: 0.6
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Find the average number of divisors up to n
+        key_prerequisites: [math.number-theory.divisor-functions, math.number-theory.floor-function-counting]
+      - id: kp2
+        can_do: Estimate the sum of divisor counts with the floor function
+        key_prerequisites: [math.number-theory.floor-function-counting]
+      - id: kp3
+        can_do: Find the average order of the sum of divisors
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp4
+        can_do: Compare average orders with individual values
+        key_prerequisites: [math.number-theory.divisor-functions, math.number-theory.floor-function-counting]
+  - id: math.number-theory.general-crt
+    name: Solving congruence systems with non-coprime moduli
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.chinese-remainder
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether congruences with non-coprime moduli are consistent
+        key_prerequisites: [math.discrete.chinese-remainder]
+      - id: kp2
+        can_do: Solve two congruences with non-coprime moduli
+        key_prerequisites: [math.discrete.chinese-remainder]
+      - id: kp3
+        can_do: Solve systems of several congruences
+        key_prerequisites: [math.discrete.chinese-remainder]
+      - id: kp4
+        can_do: Apply the general Chinese remainder theorem to puzzles
+        key_prerequisites: [math.discrete.chinese-remainder]
+  - id: math.number-theory.wilson-theorem
+    name: Using Wilson's theorem
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.fermat-little
+        encompassing: 0.65
+        confidence: high
+      - topic: math.discrete.modular-inverses
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State and verify Wilson's theorem
+        key_prerequisites: [math.discrete.fermat-little]
+      - id: kp2
+        can_do: Prove Wilson's theorem by pairing inverses
+        key_prerequisites: [math.discrete.modular-inverses]
+      - id: kp3
+        can_do: Use Wilson's theorem to test primality
+        key_prerequisites: [math.discrete.fermat-little]
+      - id: kp4
+        can_do: Compute factorials modulo primes with Wilson's theorem
+        key_prerequisites: [math.discrete.fermat-little, math.discrete.modular-inverses]
+  - id: math.number-theory.euler-theorem-residues
+    name: Proving Euler's theorem with reduced residue systems
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.euler-phi
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.fermat-little
+        encompassing: 0.55
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find reduced residue systems
+        key_prerequisites: [math.number-theory.euler-phi]
+      - id: kp2
+        can_do: Prove Euler's theorem with reduced residues
+        key_prerequisites: [math.number-theory.euler-phi, math.discrete.fermat-little]
+      - id: kp3
+        can_do: Reduce large powers modulo n with Euler's theorem
+        key_prerequisites: [math.number-theory.euler-phi]
+      - id: kp4
+        can_do: Compare Euler's theorem with Fermat's little theorem
+        key_prerequisites: [math.discrete.fermat-little]
+  - id: math.number-theory.pseudoprimes
+    name: Testing primality with Fermat tests and pseudoprimes
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.euler-theorem-residues
+        encompassing: 0.6
+        confidence: high
+    encompassed:
+      - topic: math.discrete.modular-exponentiation
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Apply the Fermat primality test
+        key_prerequisites: [math.number-theory.euler-theorem-residues, math.discrete.modular-exponentiation]
+      - id: kp2
+        can_do: Find Fermat pseudoprimes to a given base
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+      - id: kp3
+        can_do: Explain why the Fermat test can fail
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+      - id: kp4
+        can_do: Compute test powers by fast exponentiation
+        key_prerequisites: [math.discrete.modular-exponentiation]
+  - id: math.number-theory.carmichael-numbers
+    name: Finding Carmichael numbers
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.pseudoprimes
+        encompassing: 0.8
+        confidence: high
+      - topic: math.number-theory.general-crt
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Verify a number is a Carmichael number
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp2
+        can_do: Use Korselt's criterion
+        key_prerequisites: [math.number-theory.pseudoprimes, math.number-theory.general-crt]
+      - id: kp3
+        can_do: Build Carmichael numbers from primes
+        key_prerequisites: [math.number-theory.general-crt]
+      - id: kp4
+        can_do: Explain why Carmichael numbers defeat Fermat tests
+        key_prerequisites: [math.number-theory.pseudoprimes]
+  - id: math.number-theory.miller-rabin
+    name: Testing primality with Miller-Rabin
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.pseudoprimes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find strong pseudoprimes to a base
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp2
+        can_do: Run the Miller-Rabin test
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp3
+        can_do: Bound the error probability of repeated tests
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp4
+        can_do: Compare Miller-Rabin with the Fermat test
+        key_prerequisites: [math.number-theory.pseudoprimes]
+  - id: math.number-theory.polynomial-congruences-prime
+    name: Solving polynomial congruences modulo a prime
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.linear-congruences
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve polynomial congruences by trial modulo small primes
+        key_prerequisites: [math.discrete.linear-congruences]
+      - id: kp2
+        can_do: Reduce polynomial congruences using Fermat's little theorem
+        key_prerequisites: [math.discrete.linear-congruences]
+      - id: kp3
+        can_do: Count solutions of polynomial congruences
+        key_prerequisites: [math.discrete.linear-congruences]
+      - id: kp4
+        can_do: Factor polynomials modulo a prime
+        key_prerequisites: [math.discrete.linear-congruences]
+  - id: math.number-theory.lagrange-roots-mod-p
+    name: Bounding roots of polynomials modulo a prime
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.polynomial-congruences-prime
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound roots of a polynomial modulo a prime
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp2
+        can_do: Prove Lagrange's theorem on polynomial roots
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp3
+        can_do: Use x^(p-1) - 1 to factor modulo p
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp4
+        can_do: Show the bound fails for composite moduli
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+  - id: math.number-theory.hensel-lemma
+    name: Lifting solutions with Hensel's lemma
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.polynomial-congruences-prime
+        encompassing: 0.8
+        confidence: high
+      - topic: math.number-theory.general-crt
+        encompassing: 0.45
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Lift a root modulo p to modulo p squared
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp2
+        can_do: Apply Hensel's lemma for simple roots
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp3
+        can_do: Handle singular roots when lifting
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime]
+      - id: kp4
+        can_do: Solve congruences modulo composites by lifting and combining
+        key_prerequisites: [math.number-theory.polynomial-congruences-prime, math.number-theory.general-crt]
+  - id: math.number-theory.multiplicative-order
+    name: Finding multiplicative orders modulo n
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.euler-theorem-residues
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the order of an element modulo n
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+      - id: kp2
+        can_do: Prove the order divides phi of n
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+      - id: kp3
+        can_do: Find orders of powers of an element
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+      - id: kp4
+        can_do: Use orders to solve congruences
+        key_prerequisites: [math.number-theory.euler-theorem-residues]
+  - id: math.number-theory.repeating-decimals
+    name: Finding periods of repeating decimals
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.multiplicative-order
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the period of a repeating decimal
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp2
+        can_do: Relate decimal periods to multiplicative order
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp3
+        can_do: Convert repeating decimals to fractions
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp4
+        can_do: Find periods in other bases
+        key_prerequisites: [math.number-theory.multiplicative-order]
+  - id: math.number-theory.primitive-roots-prime
+    name: Finding primitive roots modulo a prime
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.multiplicative-order
+        encompassing: 0.7
+        confidence: high
+      - topic: math.number-theory.lagrange-roots-mod-p
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Test whether an element is a primitive root
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp2
+        can_do: Find a primitive root modulo a prime
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp3
+        can_do: Count primitive roots modulo a prime
+        key_prerequisites: [math.number-theory.multiplicative-order, math.number-theory.lagrange-roots-mod-p]
+      - id: kp4
+        can_do: Prove every prime has a primitive root
+        key_prerequisites: [math.number-theory.lagrange-roots-mod-p]
+  - id: math.number-theory.primitive-root-existence
+    name: Deciding which moduli have primitive roots
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.primitive-roots-prime
+        encompassing: 0.7
+        confidence: high
+      - topic: math.number-theory.hensel-lemma
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find primitive roots modulo prime powers
+        key_prerequisites: [math.number-theory.primitive-roots-prime, math.number-theory.hensel-lemma]
+      - id: kp2
+        can_do: Show which moduli have primitive roots
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp3
+        can_do: Show moduli without primitive roots
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp4
+        can_do: Find primitive roots modulo twice a prime power
+        key_prerequisites: [math.number-theory.hensel-lemma]
+  - id: math.number-theory.discrete-logarithms
+    name: Using discrete logarithms
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.primitive-roots-prime
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute discrete logarithms in small groups
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp2
+        can_do: Use index rules for products and powers
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp3
+        can_do: Build index tables
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp4
+        can_do: Explain why discrete logarithms are hard to compute
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+  - id: math.number-theory.power-congruences
+    name: Solving power congruences with indices
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.discrete-logarithms
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve x^k congruent to a modulo a prime with indices
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+      - id: kp2
+        can_do: Count solutions of power congruences
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+      - id: kp3
+        can_do: Decide when a is a k-th power residue
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+      - id: kp4
+        can_do: Solve exponential congruences with indices
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+  - id: math.number-theory.diffie-hellman-elgamal
+    name: Applying Diffie-Hellman and ElGamal
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.discrete-logarithms
+        encompassing: 0.6
+        confidence: high
+      - topic: math.discrete.rsa-cryptography
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run a Diffie-Hellman key exchange
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+      - id: kp2
+        can_do: Encrypt and decrypt with ElGamal
+        key_prerequisites: [math.number-theory.discrete-logarithms]
+      - id: kp3
+        can_do: Compare ElGamal with RSA
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp4
+        can_do: Explain the security assumptions of both
+        key_prerequisites: [math.number-theory.discrete-logarithms, math.discrete.rsa-cryptography]
+  - id: math.number-theory.lucas-lehmer
+    name: Testing Mersenne numbers with Lucas-Lehmer
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.perfect-numbers
+        encompassing: 0.45
+        confidence: high
+      - topic: math.number-theory.multiplicative-order
+        encompassing: 0.35
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Run the Lucas-Lehmer test on small Mersenne numbers
+        key_prerequisites: [math.number-theory.perfect-numbers]
+      - id: kp2
+        can_do: Find possible prime factors of Mersenne numbers with orders
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp3
+        can_do: Explain why Mersenne exponents must be prime
+        key_prerequisites: [math.number-theory.perfect-numbers]
+      - id: kp4
+        can_do: Combine tests to settle small Mersenne numbers
+        key_prerequisites: [math.number-theory.perfect-numbers, math.number-theory.multiplicative-order]
+  - id: math.number-theory.quadratic-residues
+    name: Identifying quadratic residues
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.primitive-roots-prime
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: List quadratic residues modulo a prime
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp2
+        can_do: Count quadratic residues modulo an odd prime
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp3
+        can_do: Use primitive roots to identify residues
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+      - id: kp4
+        can_do: Multiply residues and nonresidues
+        key_prerequisites: [math.number-theory.primitive-roots-prime]
+  - id: math.number-theory.euler-criterion
+    name: Using Euler's criterion
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-residues
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Euler's criterion
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp2
+        can_do: Test residues with Euler's criterion
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp3
+        can_do: Prove Euler's criterion with primitive roots
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp4
+        can_do: Solve x^2 congruent to a for primes 3 mod 4
+        key_prerequisites: [math.number-theory.quadratic-residues]
+  - id: math.number-theory.legendre-symbol
+    name: Computing Legendre symbols
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.euler-criterion
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute Legendre symbols directly
+        key_prerequisites: [math.number-theory.euler-criterion]
+      - id: kp2
+        can_do: Use multiplicativity of the Legendre symbol
+        key_prerequisites: [math.number-theory.euler-criterion]
+      - id: kp3
+        can_do: Reduce Legendre symbols modulo p
+        key_prerequisites: [math.number-theory.euler-criterion]
+      - id: kp4
+        can_do: Evaluate Legendre symbols of products
+        key_prerequisites: [math.number-theory.euler-criterion]
+  - id: math.number-theory.gauss-lemma
+    name: Using Gauss's lemma
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.legendre-symbol
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Gauss's lemma
+        key_prerequisites: [math.number-theory.legendre-symbol]
+      - id: kp2
+        can_do: Count negative least residues
+        key_prerequisites: [math.number-theory.legendre-symbol]
+      - id: kp3
+        can_do: Apply Gauss's lemma to small cases
+        key_prerequisites: [math.number-theory.legendre-symbol]
+      - id: kp4
+        can_do: Prove Gauss's lemma
+        key_prerequisites: [math.number-theory.legendre-symbol]
+  - id: math.number-theory.supplementary-laws
+    name: Finding when -1 and 2 are quadratic residues
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.gauss-lemma
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find when -1 is a quadratic residue
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp2
+        can_do: Find when 2 is a quadratic residue
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp3
+        can_do: Prove the law for 2 with Gauss's lemma
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp4
+        can_do: Combine supplementary laws with multiplicativity
+        key_prerequisites: [math.number-theory.gauss-lemma]
+  - id: math.number-theory.quadratic-reciprocity-proof
+    name: Proving quadratic reciprocity
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.gauss-lemma
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the law of quadratic reciprocity
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp2
+        can_do: Prove reciprocity by counting lattice points
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp3
+        can_do: Check reciprocity numerically
+        key_prerequisites: [math.number-theory.gauss-lemma]
+      - id: kp4
+        can_do: Explain the role of Eisenstein's lemma
+        key_prerequisites: [math.number-theory.gauss-lemma]
+  - id: math.number-theory.quadratic-reciprocity-applications
+    name: Applying quadratic reciprocity
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-reciprocity-proof
+        encompassing: 0.65
+        confidence: high
+      - topic: math.number-theory.supplementary-laws
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Evaluate Legendre symbols with reciprocity
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-proof]
+      - id: kp2
+        can_do: Find primes for which 3 or 5 is a residue
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-proof, math.number-theory.supplementary-laws]
+      - id: kp3
+        can_do: Decide solvability of quadratic congruences
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-proof, math.number-theory.supplementary-laws]
+      - id: kp4
+        can_do: Characterize residues in terms of congruence classes
+        key_prerequisites: [math.number-theory.supplementary-laws]
+  - id: math.number-theory.jacobi-symbol
+    name: Computing Jacobi symbols
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-reciprocity-applications
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute Jacobi symbols
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+      - id: kp2
+        can_do: Use reciprocity for Jacobi symbols
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+      - id: kp3
+        can_do: Explain why the Jacobi symbol does not detect residues
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+      - id: kp4
+        can_do: Evaluate Legendre symbols quickly through Jacobi symbols
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+  - id: math.number-theory.quadratic-congruences-composite
+    name: Solving quadratic congruences modulo composites
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-reciprocity-applications
+        encompassing: 0.45
+        confidence: high
+      - topic: math.number-theory.hensel-lemma
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Solve quadratic congruences modulo prime powers
+        key_prerequisites: [math.number-theory.hensel-lemma]
+      - id: kp2
+        can_do: Solve quadratic congruences modulo composites
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications, math.number-theory.hensel-lemma]
+      - id: kp3
+        can_do: Count square roots modulo composites
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+      - id: kp4
+        can_do: Complete the square in quadratic congruences
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+  - id: math.number-theory.pythagorean-triples
+    name: Parametrizing primitive Pythagorean triples
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.proofs.gcd-proofs
+        encompassing: 0.6
+        confidence: high
+      - topic: math.geom.pythagorean-triples
+        encompassing: 0.25
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Generate triples from parameters
+        key_prerequisites: [math.geom.pythagorean-triples]
+      - id: kp2
+        can_do: Prove the parametrization of primitive triples
+        key_prerequisites: [math.proofs.gcd-proofs]
+      - id: kp3
+        can_do: Find all triples with a given leg
+        key_prerequisites: [math.proofs.gcd-proofs, math.geom.pythagorean-triples]
+      - id: kp4
+        can_do: Find triples with given properties
+        key_prerequisites: [math.proofs.gcd-proofs]
+  - id: math.number-theory.infinite-descent
+    name: Proving impossibility by infinite descent
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.pythagorean-triples
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Explain the method of infinite descent
+        key_prerequisites: [math.number-theory.pythagorean-triples]
+      - id: kp2
+        can_do: Prove x^4 + y^4 = z^2 has no positive solutions
+        key_prerequisites: [math.number-theory.pythagorean-triples]
+      - id: kp3
+        can_do: Prove Fermat's last theorem for n = 4
+        key_prerequisites: [math.number-theory.pythagorean-triples]
+      - id: kp4
+        can_do: Use descent in other equations
+        key_prerequisites: [math.number-theory.pythagorean-triples]
+  - id: math.number-theory.congruence-obstructions
+    name: Ruling out solutions with congruences
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-residues
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Rule out solutions of equations modulo small numbers
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp2
+        can_do: Choose a good modulus for an obstruction
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp3
+        can_do: Prove sums of three squares miss numbers 7 mod 8
+        key_prerequisites: [math.number-theory.quadratic-residues]
+      - id: kp4
+        can_do: Combine several moduli to rule out solutions
+        key_prerequisites: [math.number-theory.quadratic-residues]
+  - id: math.number-theory.sums-of-two-squares
+    name: Writing primes as sums of two squares
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.supplementary-laws
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write primes 1 mod 4 as sums of two squares
+        key_prerequisites: [math.number-theory.supplementary-laws]
+      - id: kp2
+        can_do: Prove primes 3 mod 4 are not sums of two squares
+        key_prerequisites: [math.number-theory.supplementary-laws]
+      - id: kp3
+        can_do: Prove Fermat's two-square theorem
+        key_prerequisites: [math.number-theory.supplementary-laws]
+      - id: kp4
+        can_do: Find representations by descent
+        key_prerequisites: [math.number-theory.supplementary-laws]
+  - id: math.number-theory.two-squares-characterization
+    name: Deciding which integers are sums of two squares
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.sums-of-two-squares
+        encompassing: 0.9
+        confidence: high
+    encompassed:
+      - topic: math.number-theory.divisor-functions
+        encompassing: 0.1
+        confidence: medium
+    knowledge_points:
+      - id: kp1
+        can_do: Use the identity for products of sums of two squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp2
+        can_do: Decide whether an integer is a sum of two squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp3
+        can_do: Count representations as sums of two squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares, math.number-theory.divisor-functions]
+      - id: kp4
+        can_do: Prove the characterization by prime factorization
+        key_prerequisites: [math.number-theory.sums-of-two-squares, math.number-theory.divisor-functions]
+  - id: math.number-theory.four-squares
+    name: Using Lagrange's four-square theorem
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.sums-of-two-squares
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Write integers as sums of four squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp2
+        can_do: Use the four-square identity
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp3
+        can_do: Prove every prime is a sum of four squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp4
+        can_do: Find which numbers need four squares
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+  - id: math.number-theory.gaussian-integer-factorization
+    name: Factoring in the Gaussian integers
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.sums-of-two-squares
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute norms in the Gaussian integers
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp2
+        can_do: Divide with remainder in the Gaussian integers
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp3
+        can_do: Find Gaussian primes
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+      - id: kp4
+        can_do: Factor integers in the Gaussian integers
+        key_prerequisites: [math.number-theory.sums-of-two-squares]
+  - id: math.number-theory.quadratic-integer-rings
+    name: Finding units and primes in quadratic integer rings
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.gaussian-integer-factorization
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find norms in quadratic integer rings
+        key_prerequisites: [math.number-theory.gaussian-integer-factorization]
+      - id: kp2
+        can_do: Find units in quadratic integer rings
+        key_prerequisites: [math.number-theory.gaussian-integer-factorization]
+      - id: kp3
+        can_do: Identify irreducible elements
+        key_prerequisites: [math.number-theory.gaussian-integer-factorization]
+      - id: kp4
+        can_do: Compare irreducible and prime elements
+        key_prerequisites: [math.number-theory.gaussian-integer-factorization]
+  - id: math.number-theory.factorization-failure
+    name: Showing unique factorization can fail
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.quadratic-integer-rings
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find two factorizations in Z[sqrt(-5)]
+        key_prerequisites: [math.number-theory.quadratic-integer-rings]
+      - id: kp2
+        can_do: Prove the factors are irreducible
+        key_prerequisites: [math.number-theory.quadratic-integer-rings]
+      - id: kp3
+        can_do: Explain why unique factorization fails
+        key_prerequisites: [math.number-theory.quadratic-integer-rings]
+      - id: kp4
+        can_do: Describe how ideals restore unique factorization
+        key_prerequisites: [math.number-theory.quadratic-integer-rings]
+  - id: math.number-theory.finite-continued-fractions
+    name: Computing finite continued fractions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.euclidean-algorithm
+        encompassing: 0.7
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand rationals as continued fractions
+        key_prerequisites: [math.discrete.euclidean-algorithm]
+      - id: kp2
+        can_do: Relate continued fractions to the Euclidean algorithm
+        key_prerequisites: [math.discrete.euclidean-algorithm]
+      - id: kp3
+        can_do: Evaluate finite continued fractions
+        key_prerequisites: [math.discrete.euclidean-algorithm]
+      - id: kp4
+        can_do: Prove finite continued fractions are rational
+        key_prerequisites: [math.discrete.euclidean-algorithm]
+  - id: math.number-theory.convergents
+    name: Using convergents and their recursions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.finite-continued-fractions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute convergents with recurrences
+        key_prerequisites: [math.number-theory.finite-continued-fractions]
+      - id: kp2
+        can_do: Prove the determinant identity for convergents
+        key_prerequisites: [math.number-theory.finite-continued-fractions]
+      - id: kp3
+        can_do: Solve linear Diophantine equations with convergents
+        key_prerequisites: [math.number-theory.finite-continued-fractions]
+      - id: kp4
+        can_do: Show convergents alternate around the value
+        key_prerequisites: [math.number-theory.finite-continued-fractions]
+  - id: math.number-theory.infinite-continued-fractions
+    name: Expanding irrationals as continued fractions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.convergents
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Expand irrationals as continued fractions
+        key_prerequisites: [math.number-theory.convergents]
+      - id: kp2
+        can_do: Prove convergents converge to the value
+        key_prerequisites: [math.number-theory.convergents]
+      - id: kp3
+        can_do: Prove irrationals have unique infinite expansions
+        key_prerequisites: [math.number-theory.convergents]
+      - id: kp4
+        can_do: Find continued fractions of e and square roots
+        key_prerequisites: [math.number-theory.convergents]
+  - id: math.number-theory.periodic-continued-fractions
+    name: Finding periodic continued fractions of quadratic irrationals
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.infinite-continued-fractions
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find continued fractions of quadratic irrationals
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp2
+        can_do: Convert periodic expansions to quadratic irrationals
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp3
+        can_do: State Lagrange's theorem on periodic expansions
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp4
+        can_do: Find periods of square roots
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+  - id: math.number-theory.best-approximations
+    name: Finding best rational approximations
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.infinite-continued-fractions
+        encompassing: 0.9
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound the error of convergents
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp2
+        can_do: Find best rational approximations
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp3
+        can_do: Use semiconvergents
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+      - id: kp4
+        can_do: Approximate pi and other constants
+        key_prerequisites: [math.number-theory.infinite-continued-fractions]
+  - id: math.number-theory.dirichlet-approximation
+    name: Using Dirichlet's approximation theorem
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.best-approximations
+        encompassing: 0.6
+        confidence: high
+      - topic: math.proofs.pigeonhole-proofs
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State Dirichlet's approximation theorem
+        key_prerequisites: [math.number-theory.best-approximations]
+      - id: kp2
+        can_do: Prove Dirichlet's theorem with the pigeonhole principle
+        key_prerequisites: [math.proofs.pigeonhole-proofs]
+      - id: kp3
+        can_do: Show there are infinitely many good approximations
+        key_prerequisites: [math.number-theory.best-approximations]
+      - id: kp4
+        can_do: Compare Dirichlet's bound with convergents
+        key_prerequisites: [math.number-theory.best-approximations, math.proofs.pigeonhole-proofs]
+  - id: math.number-theory.pell-equation
+    name: Solving Pell's equation
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.periodic-continued-fractions
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find the fundamental solution of Pell's equation
+        key_prerequisites: [math.number-theory.periodic-continued-fractions]
+      - id: kp2
+        can_do: Generate all solutions from the fundamental solution
+        key_prerequisites: [math.number-theory.periodic-continued-fractions]
+      - id: kp3
+        can_do: Solve negative Pell equations
+        key_prerequisites: [math.number-theory.periodic-continued-fractions]
+      - id: kp4
+        can_do: Solve problems that reduce to Pell's equation
+        key_prerequisites: [math.number-theory.periodic-continued-fractions]
+  - id: math.number-theory.prime-counting-function
+    name: Estimating the prime counting function
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.discrete.infinitely-many-primes
+        encompassing: 0.85
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Compute the prime counting function for small n
+        key_prerequisites: [math.discrete.infinitely-many-primes]
+      - id: kp2
+        can_do: Compare pi(n) with n over log n
+        key_prerequisites: [math.discrete.infinitely-many-primes]
+      - id: kp3
+        can_do: Use prime gaps of any length
+        key_prerequisites: [math.discrete.infinitely-many-primes]
+      - id: kp4
+        can_do: Estimate pi(n) from tables
+        key_prerequisites: [math.discrete.infinitely-many-primes]
+  - id: math.number-theory.prime-reciprocals
+    name: Proving the sum of prime reciprocals diverges
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.prime-counting-function
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Show the harmonic series diverges through primes
+        key_prerequisites: [math.number-theory.prime-counting-function]
+      - id: kp2
+        can_do: Prove the sum of prime reciprocals diverges
+        key_prerequisites: [math.number-theory.prime-counting-function]
+      - id: kp3
+        can_do: Compare growth of prime reciprocal sums with log log n
+        key_prerequisites: [math.number-theory.prime-counting-function]
+      - id: kp4
+        can_do: Use the Euler product idea
+        key_prerequisites: [math.number-theory.prime-counting-function]
+  - id: math.number-theory.chebyshev-bounds
+    name: Proving Chebyshev's bounds on primes
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.prime-counting-function
+        encompassing: 0.4
+        confidence: high
+      - topic: math.number-theory.legendre-formula
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Bound the central binomial coefficient
+        key_prerequisites: [math.number-theory.legendre-formula]
+      - id: kp2
+        can_do: Prove a lower Chebyshev bound
+        key_prerequisites: [math.number-theory.prime-counting-function, math.number-theory.legendre-formula]
+      - id: kp3
+        can_do: Prove an upper Chebyshev bound
+        key_prerequisites: [math.number-theory.prime-counting-function, math.number-theory.legendre-formula]
+      - id: kp4
+        can_do: Use Chebyshev bounds to prove Bertrand's postulate
+        key_prerequisites: [math.number-theory.prime-counting-function]
+  - id: math.number-theory.prime-number-theorem
+    name: Using the prime number theorem
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.chebyshev-bounds
+        encompassing: 0.6
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: State the prime number theorem
+        key_prerequisites: [math.number-theory.chebyshev-bounds]
+      - id: kp2
+        can_do: Estimate the nth prime
+        key_prerequisites: [math.number-theory.chebyshev-bounds]
+      - id: kp3
+        can_do: Use the logarithmic integral as an approximation
+        key_prerequisites: [math.number-theory.chebyshev-bounds]
+      - id: kp4
+        can_do: Find the density of primes near a given size
+        key_prerequisites: [math.number-theory.chebyshev-bounds]
+  - id: math.number-theory.primes-in-progressions
+    name: Proving special cases of primes in progressions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.prime-number-theorem
+        encompassing: 0.7
+        confidence: high
+      - topic: math.number-theory.quadratic-reciprocity-applications
+        encompassing: 0.3
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Prove infinitely many primes 3 mod 4
+        key_prerequisites: [math.number-theory.prime-number-theorem]
+      - id: kp2
+        can_do: Prove infinitely many primes 1 mod 4
+        key_prerequisites: [math.number-theory.quadratic-reciprocity-applications]
+      - id: kp3
+        can_do: State Dirichlet's theorem on primes in progressions
+        key_prerequisites: [math.number-theory.prime-number-theorem]
+      - id: kp4
+        can_do: Find densities of primes in residue classes
+        key_prerequisites: [math.number-theory.prime-number-theorem]
+  - id: math.number-theory.partitions
+    name: Counting partitions with generating functions
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.divisor-functions
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Count partitions of small integers
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp2
+        can_do: Write the generating function for partitions
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp3
+        can_do: Count partitions with restricted parts
+        key_prerequisites: [math.number-theory.divisor-functions]
+      - id: kp4
+        can_do: Use generating functions to find partition counts
+        key_prerequisites: [math.number-theory.divisor-functions]
+  - id: math.number-theory.partition-bijections
+    name: Proving partition identities with bijections
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.partitions
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Draw Ferrers diagrams and conjugates
+        key_prerequisites: [math.number-theory.partitions]
+      - id: kp2
+        can_do: Prove odd parts equal distinct parts
+        key_prerequisites: [math.number-theory.partitions]
+      - id: kp3
+        can_do: Prove partition identities by bijection
+        key_prerequisites: [math.number-theory.partitions]
+      - id: kp4
+        can_do: Use generating functions to confirm bijections
+        key_prerequisites: [math.number-theory.partitions]
+  - id: math.number-theory.factoring-algorithms
+    name: Factoring with Pollard's rho and p-1 methods
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.pseudoprimes
+        encompassing: 0.65
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor with Fermat's method
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp2
+        can_do: Factor with Pollard's rho method
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp3
+        can_do: Factor with Pollard's p-1 method
+        key_prerequisites: [math.number-theory.pseudoprimes]
+      - id: kp4
+        can_do: Compare factoring methods
+        key_prerequisites: [math.number-theory.pseudoprimes]
+  - id: math.number-theory.rsa-attacks
+    name: Breaking RSA with weak parameters
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.best-approximations
+        encompassing: 0.5
+        confidence: high
+      - topic: math.discrete.rsa-cryptography
+        encompassing: 0.75
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Factor RSA moduli with close primes
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp2
+        can_do: Attack small exponents
+        key_prerequisites: [math.discrete.rsa-cryptography]
+      - id: kp3
+        can_do: Break small private exponents with continued fractions
+        key_prerequisites: [math.number-theory.best-approximations]
+      - id: kp4
+        can_do: Choose safe RSA parameters
+        key_prerequisites: [math.number-theory.best-approximations, math.discrete.rsa-cryptography]
+  - id: math.number-theory.elliptic-curve-group-law
+    name: Adding points on elliptic curves
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.multiplicative-order
+        encompassing: 0.8
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Add points on an elliptic curve geometrically
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp2
+        can_do: Add points with formulas
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp3
+        can_do: Double points on an elliptic curve
+        key_prerequisites: [math.number-theory.multiplicative-order]
+      - id: kp4
+        can_do: Find the order of a point
+        key_prerequisites: [math.number-theory.multiplicative-order]
+  - id: math.number-theory.elliptic-curves-mod-p
+    name: Counting points on elliptic curves modulo p
+    subject: math
+    course: math.number-theory
+    level: uni-upper
+    status: draft
+    prerequisites:
+      - topic: math.number-theory.elliptic-curve-group-law
+        encompassing: 0.7
+        confidence: high
+      - topic: math.number-theory.legendre-symbol
+        encompassing: 0.5
+        confidence: high
+    knowledge_points:
+      - id: kp1
+        can_do: Find points on elliptic curves modulo p
+        key_prerequisites: [math.number-theory.elliptic-curve-group-law, math.number-theory.legendre-symbol]
+      - id: kp2
+        can_do: Count points with Legendre symbols
+        key_prerequisites: [math.number-theory.legendre-symbol]
+      - id: kp3
+        can_do: State Hasse's bound
+        key_prerequisites: [math.number-theory.elliptic-curve-group-law]
+      - id: kp4
+        can_do: Use elliptic curves in key exchange
+        key_prerequisites: [math.number-theory.elliptic-curve-group-law]
