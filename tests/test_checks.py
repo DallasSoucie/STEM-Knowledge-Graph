@@ -148,6 +148,14 @@ def congested_topic():
     return kg
 
 
+def uncited_prerequisite():
+    kg = valid_graph()
+    (s,) = _stubs(kg, 1)
+    t = kg.topics["math.a.three"]
+    _replace(kg, "math.a.three", prerequisites=[*t.prerequisites, edge(s)])
+    return kg
+
+
 def no_prereq_above_gk():
     kg = valid_graph()
     _replace(kg, "math.a.one", level="g4")
@@ -197,6 +205,7 @@ CASES = [
     ("redundant-edge", redundant_edge),
     ("prereq-above-level", prereq_above_level),
     ("congested-topic", congested_topic),
+    ("uncited-prerequisite", uncited_prerequisite),
     ("no-prereq-above-gk", no_prereq_above_gk),
     ("weight-clustering", weight_clustering),
     ("budget-variance", budget_variance),
@@ -238,6 +247,7 @@ def test_severities_match_the_spec():
         "redundant-edge",
         "prereq-above-level",
         "congested-topic",
+        "uncited-prerequisite",
         "no-prereq-above-gk",
         "weight-clustering",
         "budget-variance",
