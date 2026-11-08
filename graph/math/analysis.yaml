@@ -39,13 +39,17 @@ topics:
       - topic: math.proofs.absolute-value-proofs
         encompassing: 0.45
         confidence: high
+    encompassed:
+      - topic: math.alg1.absolute-value-inequalities
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define absolute value on an ordered field
         key_prerequisites: [math.analysis.axioms-of-reals]
       - id: kp2
         can_do: Rewrite an inequality as a two-sided bound
-        key_prerequisites: [math.proofs.absolute-value-proofs]
+        key_prerequisites: [math.proofs.absolute-value-proofs, math.alg1.absolute-value-inequalities]
       - id: kp3
         can_do: Prove a product rule
         key_prerequisites: [math.proofs.absolute-value-proofs]
@@ -2298,6 +2302,9 @@ topics:
       - topic: math.analysis.cauchy-mvt
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.lhopital-powers
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.analysis.mvt-proof
         encompassing: 0.1
@@ -2305,7 +2312,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Prove the zero over zero case
-        key_prerequisites: [math.analysis.cauchy-mvt]
+        key_prerequisites: [math.analysis.cauchy-mvt, math.calc1.lhopital-powers]
       - id: kp2
         can_do: Prove a limit at infinity case
         key_prerequisites: [math.analysis.cauchy-mvt]
@@ -2473,10 +2480,13 @@ topics:
       - topic: math.analysis.riemann-integrable-definition
         encompassing: 0.5
         confidence: high
+      - topic: math.calc1.riemann-from-tables
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define Riemann sums with tags
-        key_prerequisites: [math.analysis.riemann-integrable-definition]
+        key_prerequisites: [math.analysis.riemann-integrable-definition, math.calc1.riemann-from-tables]
       - id: kp2
         can_do: Bound a Riemann sum by Darboux sums
         key_prerequisites: [math.analysis.riemann-integrable-definition]
@@ -2648,10 +2658,13 @@ topics:
       - topic: math.analysis.intermediate-value-proof
         encompassing: 0.35
         confidence: high
+      - topic: math.calc1.mvt-for-integrals
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: State the mean value theorem for integrals
-        key_prerequisites: [math.analysis.integral-properties-proofs]
+        key_prerequisites: [math.analysis.integral-properties-proofs, math.calc1.mvt-for-integrals]
       - id: kp2
         can_do: Bound by max and min
         key_prerequisites: [math.analysis.integral-properties-proofs]
@@ -2730,13 +2743,16 @@ topics:
       - topic: math.analysis.comparison-proofs
         encompassing: 0.3
         confidence: high
+      - topic: math.calc2.comparison-improper
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Define convergence with limits
         key_prerequisites: [math.analysis.ftc-proofs]
       - id: kp2
         can_do: Prove comparison
-        key_prerequisites: [math.analysis.comparison-proofs]
+        key_prerequisites: [math.analysis.comparison-proofs, math.calc2.comparison-improper]
       - id: kp3
         can_do: Compare with a series
         key_prerequisites: [math.analysis.comparison-proofs]

@@ -88,6 +88,10 @@ topics:
       - topic: physics.mechanics.conservative-forces
         encompassing: 0.4
         confidence: high
+      - topic: math.calc3.potential-three-variables
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.calc3.conservative-test
         encompassing: 0.3
         confidence: high
@@ -97,7 +101,7 @@ topics:
         key_prerequisites: [math.calc3.conservative-test]
       - id: kp2
         can_do: Find a potential from a conservative force
-        key_prerequisites: [physics.mechanics.conservative-forces, math.calc3.conservative-test]
+        key_prerequisites: [physics.mechanics.conservative-forces, math.calc3.conservative-test, math.calc3.potential-three-variables]
       - id: kp3
         can_do: Find force from a potential with the gradient
         key_prerequisites: [physics.mechanics.conservative-forces]
@@ -744,10 +748,13 @@ topics:
       - topic: physics.classical.constrained-variations
         encompassing: 0.3
         confidence: high
+      - topic: math.calc3.lagrange-two-constraints
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Add constraints with multipliers in Lagrange's equations
-        key_prerequisites: [physics.classical.lagranges-equations, physics.classical.constrained-variations]
+        key_prerequisites: [physics.classical.lagranges-equations, physics.classical.constrained-variations, math.calc3.lagrange-two-constraints]
       - id: kp2
         can_do: Find normal force on a bead
         key_prerequisites: [physics.classical.lagranges-equations]
@@ -1377,13 +1384,17 @@ topics:
       - topic: physics.classical.inertia-tensor
         encompassing: 0.45
         confidence: high
+      - topic: math.linalg.principal-axes
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.linalg.spectral-theorem
         encompassing: 0.35
         confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find principal moments as eigenvalues
-        key_prerequisites: [physics.classical.inertia-tensor, math.linalg.spectral-theorem]
+        key_prerequisites: [physics.classical.inertia-tensor, math.linalg.spectral-theorem, math.linalg.principal-axes]
       - id: kp2
         can_do: Find principal axes as eigenvectors
         key_prerequisites: [math.linalg.spectral-theorem]

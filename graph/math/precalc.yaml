@@ -429,6 +429,9 @@ topics:
       - topic: math.precalc.reflection-order
         encompassing: 0.25
         confidence: medium
+      - topic: math.alg2.absolute-value-transformations
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.precalc.transformations-combined
         encompassing: 0.5
@@ -439,7 +442,7 @@ topics:
         key_prerequisites: [math.precalc.transformations-combined, math.alg2.graph-rational-functions]
       - id: kp2
         can_do: Graph the absolute value of a function
-        key_prerequisites: [math.precalc.transformations-combined]
+        key_prerequisites: [math.precalc.transformations-combined, math.alg2.absolute-value-transformations]
       - id: kp3
         can_do: Find where a reciprocal has asymptotes
         key_prerequisites: [math.alg2.graph-rational-functions, math.precalc.reflection-order]
@@ -453,13 +456,17 @@ topics:
       - topic: math.precalc.transform-reciprocal-abs
         encompassing: 0.6
         confidence: medium
+    encompassed:
+      - topic: math.alg2.absolute-value-transformations
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Graph f(|x|) from a graph of f
         key_prerequisites: [math.precalc.transform-reciprocal-abs]
       - id: kp2
         can_do: Tell it from |f(x)|
-        key_prerequisites: [math.precalc.transform-reciprocal-abs]
+        key_prerequisites: [math.precalc.transform-reciprocal-abs, math.alg2.absolute-value-transformations]
       - id: kp3
         can_do: Find its symmetry
         key_prerequisites: [math.precalc.transform-reciprocal-abs]
@@ -908,12 +915,16 @@ topics:
       - topic: math.precalc.oblique-asymptotes
         encompassing: 0.6
         confidence: high
-      - topic: math.alg2.graph-rational-functions
-        encompassing: 0.5
-        confidence: high
       - topic: math.precalc.polynomial-end-behaviour-limits
         encompassing: 0.15
         confidence: low
+      - topic: math.alg2.rational-models
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
+      - topic: math.alg2.graph-rational-functions
+        encompassing: 0.5
+        confidence: high
     knowledge_points:
       - id: kp1
         can_do: Find all features of a rational function
@@ -926,7 +937,7 @@ topics:
         key_prerequisites: [math.alg2.graph-rational-functions]
       - id: kp4
         can_do: Answer a context question
-        key_prerequisites: [math.alg2.graph-rational-functions]
+        key_prerequisites: [math.alg2.graph-rational-functions, math.alg2.rational-models]
   - id: math.precalc.rational-from-features
     name: Writing a rational function from features
     subject: math
@@ -1627,10 +1638,13 @@ topics:
       - topic: math.alg2.unit-circle-special-angles
         encompassing: 0.65
         confidence: high
+      - topic: math.geom.trig-exact-special
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find all exact values quickly
-        key_prerequisites: [math.alg2.unit-circle-special-angles]
+        key_prerequisites: [math.alg2.unit-circle-special-angles, math.geom.trig-exact-special]
       - id: kp2
         can_do: Find values for angles beyond 2 pi
         key_prerequisites: [math.alg2.unit-circle-special-angles]
@@ -1862,10 +1876,13 @@ topics:
       - topic: math.precalc.general-sinusoid
         encompassing: 0.6
         confidence: medium
+      - topic: math.precalc.horizontal-vertical-stretches-compare
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a period from a factor
-        key_prerequisites: [math.precalc.general-sinusoid]
+        key_prerequisites: [math.precalc.general-sinusoid, math.precalc.horizontal-vertical-stretches-compare]
       - id: kp2
         can_do: Factor to see the phase shift
         key_prerequisites: [math.precalc.general-sinusoid]
@@ -2051,10 +2068,14 @@ topics:
       - topic: math.precalc.inverse-trig-functions
         encompassing: 0.65
         confidence: medium
+    encompassed:
+      - topic: math.geom.trig-exact-special
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find exact values of inverse sine and cosine
-        key_prerequisites: [math.precalc.inverse-trig-functions]
+        key_prerequisites: [math.precalc.inverse-trig-functions, math.geom.trig-exact-special]
       - id: kp2
         can_do: Find exact values of inverse tangent
         key_prerequisites: [math.precalc.inverse-trig-functions]
@@ -4190,13 +4211,16 @@ topics:
       - topic: math.precalc.parabola-conic
         encompassing: 0.65
         confidence: medium
+      - topic: math.geom.parabola-focus-directrix
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find each feature from an equation
         key_prerequisites: [math.precalc.parabola-conic]
       - id: kp2
         can_do: Write an equation from features
-        key_prerequisites: [math.precalc.parabola-conic]
+        key_prerequisites: [math.precalc.parabola-conic, math.geom.parabola-focus-directrix]
       - id: kp3
         can_do: Solve a reflector story
         key_prerequisites: [math.precalc.parabola-conic]

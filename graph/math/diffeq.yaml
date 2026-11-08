@@ -1109,6 +1109,7 @@ topics:
       - topic: math.diffeq.second-order-intro
         encompassing: 0.4
         confidence: high
+    encompassed:
       - topic: math.alg1.choose-quadratic-method
         encompassing: 0.3
         confidence: high
@@ -2233,6 +2234,9 @@ topics:
       - topic: math.diffeq.laplace-properties
         encompassing: 0.4
         confidence: high
+      - topic: math.alg2.step-function-applications
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.alg1.piecewise-intro
         encompassing: 0.25
@@ -2240,7 +2244,7 @@ topics:
     knowledge_points:
       - id: kp1
         can_do: Write a unit step
-        key_prerequisites: [math.alg1.piecewise-intro]
+        key_prerequisites: [math.alg1.piecewise-intro, math.alg2.step-function-applications]
       - id: kp2
         can_do: Graph a shifted step
         key_prerequisites: [math.diffeq.laplace-properties]
@@ -2283,11 +2287,12 @@ topics:
       - topic: math.diffeq.inverse-laplace
         encompassing: 0.25
         confidence: high
-      - topic: math.alg1.complete-the-square-expression
-        encompassing: 0.25
-        confidence: high
       - topic: math.diffeq.laplace-first-shift
         encompassing: 0.3
+        confidence: high
+    encompassed:
+      - topic: math.alg1.complete-the-square-expression
+        encompassing: 0.25
         confidence: high
     knowledge_points:
       - id: kp1
@@ -3123,6 +3128,9 @@ topics:
       - topic: math.diffeq.phase-portraits-real
         encompassing: 0.25
         confidence: high
+      - topic: math.linalg.rotation-scaling-form
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Draw a center
@@ -3132,7 +3140,7 @@ topics:
         key_prerequisites: [math.diffeq.eigen-solutions-complex]
       - id: kp3
         can_do: Find a rotation direction
-        key_prerequisites: [math.diffeq.eigen-solutions-complex]
+        key_prerequisites: [math.diffeq.eigen-solutions-complex, math.linalg.rotation-scaling-form]
       - id: kp4
         can_do: Compare to a real-eigenvalue portrait
         key_prerequisites: [math.diffeq.phase-portraits-real]

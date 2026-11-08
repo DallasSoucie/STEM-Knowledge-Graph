@@ -1293,6 +1293,10 @@ topics:
       - topic: physics.hs2.emf-and-internal-resistance
         encompassing: 0.35
         confidence: high
+      - topic: physics.mechanics.optimizing-power
+        encompassing: 0.2
+        confidence: medium
+    encompassed:
       - topic: math.calc1.optimization-setup
         encompassing: 0.3
         confidence: high
@@ -1302,7 +1306,7 @@ topics:
         key_prerequisites: [physics.hs2.emf-and-internal-resistance]
       - id: kp2
         can_do: Find a greatest power with a derivative
-        key_prerequisites: [math.calc1.optimization-setup]
+        key_prerequisites: [math.calc1.optimization-setup, physics.mechanics.optimizing-power]
       - id: kp3
         can_do: Show load matches internal resistance
         key_prerequisites: [math.calc1.optimization-setup]
@@ -1814,6 +1818,9 @@ topics:
       - topic: physics.em.force-on-curved-wires
         encompassing: 0.4
         confidence: high
+      - topic: physics.hs2.force-between-wires
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Find a field from one wire
@@ -1823,7 +1830,7 @@ topics:
         key_prerequisites: [physics.em.force-on-curved-wires]
       - id: kp3
         can_do: Derive force per length
-        key_prerequisites: [physics.em.biot-savart-straight-wire, physics.em.force-on-curved-wires]
+        key_prerequisites: [physics.em.biot-savart-straight-wire, physics.em.force-on-curved-wires, physics.hs2.force-between-wires]
       - id: kp4
         can_do: Find a direction for each case
         key_prerequisites: [physics.em.force-on-curved-wires]
@@ -1961,6 +1968,9 @@ topics:
       - topic: physics.em.amperes-law-statement
         encompassing: 0.6
         confidence: high
+      - topic: physics.em.field-of-an-infinite-sheet
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Choose a rectangular loop
@@ -1973,7 +1983,7 @@ topics:
         key_prerequisites: [physics.em.amperes-law-statement]
       - id: kp4
         can_do: Compare with a charged sheet
-        key_prerequisites: [physics.em.amperes-law-statement]
+        key_prerequisites: [physics.em.amperes-law-statement, physics.em.field-of-an-infinite-sheet]
   - id: physics.em.coaxial-cable-field
     name: Finding the field of a coaxial cable
     subject: physics

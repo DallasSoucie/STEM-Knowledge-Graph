@@ -604,6 +604,9 @@ topics:
       - topic: math.proofs.wlog-cases
         encompassing: 0.25
         confidence: high
+      - topic: math.alg1.absolute-value-inequalities
+        encompassing: 0.2
+        confidence: medium
     encompassed:
       - topic: math.proofs.cases-proofs
         encompassing: 0.2
@@ -620,7 +623,7 @@ topics:
         key_prerequisites: [math.proofs.proofs-with-inequalities]
       - id: kp4
         can_do: Rewrite an inequality between two bounds
-        key_prerequisites: [math.proofs.wlog-cases]
+        key_prerequisites: [math.proofs.wlog-cases, math.alg1.absolute-value-inequalities]
   - id: math.proofs.direct-or-contrapositive
     name: Choosing between direct and contrapositive proof
     subject: math
@@ -733,10 +736,13 @@ topics:
       - topic: math.proofs.induction-proofs
         encompassing: 0.65
         confidence: high
+      - topic: math.precalc.induction-divisibility
+        encompassing: 0.2
+        confidence: medium
     knowledge_points:
       - id: kp1
         can_do: Prove a power divisibility
-        key_prerequisites: [math.proofs.induction-proofs]
+        key_prerequisites: [math.proofs.induction-proofs, math.precalc.induction-divisibility]
       - id: kp2
         can_do: Split a term in the step
         key_prerequisites: [math.proofs.induction-proofs]
